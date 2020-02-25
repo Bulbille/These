@@ -1,0 +1,32 @@
+%\section{Mixing Glauber and Kawasaki}
+
+\begin{landscape}
+
+\begin{figure}
+\vspace{-2cm}
+  \begin{subfigure}[t]{0.7\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{kawglau/J02H005.pdf}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[t]{0.7\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{kawglau/J02H00005.pdf}
+  \end{subfigure}
+
+
+
+  \begin{subfigure}[t]{0.7\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{kawglau/J1H005.pdf}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[t]{0.7\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{kawglau/J1H00005.pdf}
+  \end{subfigure}
+  \caption*{First line : $J=0.2$ \\ Second line : $J=1$ \\ First column : $B=0.05$ \\ Second column : $B=0.005$}
+\end{figure}
+
+
+\end{landscape}

@@ -1,0 +1,373 @@
+\chapter{A+B POP model : la totale}
+\label{chap-article-dean}
+
+Précédement, nous avons vu que le cisaillement injectée de l'énergie dans l'interface ne peut y être dissipée par des mécanismes d'évaporation, augmentant ainsi la largeur moyenne de l'interface. Nous avons également utilisé la présence de plusieurs types de particules afin de briser l'invariance par translation dans un repère galiléen par rapport à la vitesse moyenne induite par le cisaillement uniforme afin d'étudier les statistiques hors-équilibre.
+
+Grâce à l'approche par la fonctionnelle de densité stochastique (SDFT) \cite{dean1996}, nous étudions dans ce chapitre la possibilité de dispersion de l'énergie injectée par le cisaillement, et nous expliquons analytiquement pourquoi l'interface devient plus rigide.
+Afin de simplifier un peu les équations, nous allons supposer deux champs suivant le modèle C (selon la classification de Hohenberg et Halperin\cite{hohenberg_theory_1977}). D'un côté nous avons les colloïdes, représentés par un champs possèdant une dynamique conservée et se déplaçant à vitesse constante. De l'autre côté nous avons un couplage avec un réservoir d'un solvant. 
+
+    \section{Le modèle C=A+B}
+    
+Soient deux champs scalaires $\psi$ et $\phi$ représentant les valeurs moyennes mésoscopiques de deux types de particules différentes. On suppose que le système possède deux phases stables avec une concentration moyenne du champ $\phi(\vec{x})$ données par $\psi_1$ et  $\psi_2$, la différence du paramètre d'ordre entre les deux phases étant $\Delta\psi= \psi_2 -\psi_1\greater 0$. On suppose également que $\phi(\vec{x},z\rightarrow -\infty)=\psi_2$ et $\phi(\vec{x},z\rightarrow \infty)=\psi_1$. On décompose l'hamiltonien deux parties, 
+\begin{align}
+    H[\psi,\phi] = H_1[\psi] +H_2[\psi,\phi]
+\end{align}
+Le premier Hamiltonien $H_1$, de la forme Landau-Ginzburg, correspond à l'énergie total du système
+\begin{align}
+    H_1[\psi]=\int d\vec{x}\left[\frac{\kappa}{2}[\nabla\psi(\vec{x})]^2 + V(\psi(\vec{x}))- gz \psi(\vec{x})\right].
+\end{align}
+où le premier terme représente la tension de surface et le troisième terme représente l'énergie due à la gravité. Ce même terme permet d'introduire une longueur de corrélation finie entre les deux phases. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{pop/ab-phi.pdf}
+    \caption{Schéma d'un cisaillement uniforme parallèle à l'interface dépendant de la phase. Ici, on prend l'approximation \ref{ab-interface} avec $\phi(\vec{x})=\psi_2$ en dessous de linterface et $\phi(\vec{x})=\psi_1$ au dessus. }
+\end{figure}
+
+Le second Hamitlonien $H_2$ est pris pour un couplage quadratique entre les deux champs
+\begin{equation}
+H_2 =\int d\vec{x} \frac{\lambda}{2}(1-\psi(\vec{x})-\phi(\vec{x}))^2,
+\end{equation}
+où l'on considère la conservation du volume totale des fractions des phases. Le champ $\phi$ peut se comprendre comme la fraction volumique locale d'un solvant d'un système de colloïdes. L'objectif de ce champ est de proposer des particules qui ne sont pas concernées par le cisaillement, peut-être parce qu'elles bougent à une échelle de temps bien plus longue. La présence de ce champ ne change cependant rien aux propriétés à l'équilibre du champ de colloïdes $\psi$. 
+L'ajout de ce champ couplé permet de supprimer l'invariance galiléenne par rapport à la vitesse moyenne provoquée par le cisaillement. 
+
+La fonction de partition s'écrit 
+\begin{equation}
+Z = \int d[\phi]d[\psi]\exp(-\beta H_1[\psi]- \beta H_2[\psi,\phi]) = CZ_{eff},
+\end{equation}
+{\color{red} expliciter l'étape d'intégration}
+où $Z_{eff}$ est une fonction de partition effective ne dépendant que du champ $\psi$.
+is the effective partition function for the field $\psi$, after we have integrated out the degrees of freedom corresponding to the field $\phi$,
+and $C$ is a constant term resulting from this integration. The effective partition function is thus simply given by
+
+La nouvelle fonction de partition est alors 
+\begin{equation}
+    Z_{eff} = \int d[\psi]\exp(-\beta H_1[\psi]),
+\end{equation}
+Comme expliqué plus haut, on voit que le champ $\phi$ n'a plus aucun effet sur les propriétés statistiques à l'équilibre du champ $\psi$.
+
+
+On considère maintenant la dynamique de schamps. On prend la modèle de diffusivité local (modèle B selon la classification d'Hohenberg et Halpering) pour le champ $\psi$ tandis que l'on prend un modèle non conservé (modèle A) pour le solvant $\phi$.
+\begin{align}
+    \frac{\partial \psi(\vec{x},t)}{\partial t} +\vec{v}\cdot \vec{ \nabla}\psi(\vec{x},t)&= D\nabla^2\frac{\delta H}{\delta \psi(\vec{x})}+ \sqrt{2D T}\nabla \cdot {\bm \eta}_1(\vec{x},t) \\
+    \frac{\partial \phi(\vec{x},t)}{\partial t} &= -\alpha\frac{\delta H}{\delta \phi(\vec{x})}+ \sqrt{2\alpha T}{ \eta}_2(\vec{x},t).
+\end{align}
+La première équation correspond à une diffusivitié locale $D$ et un terme d'advection par une champ de vitesse contstant $\vec{v}$ . La seconde équation correspond juste à l'équation du modèle A, avec un coefficient cinétique $\alpha$ correspondant au temps de relaxation du système vers l'équilibre. 
+
+
+The second equation has no advection term and is simple model A dynamics. In principle we can also treat the case where the dynamics of the field $\phi$ is also diffusive and thus of model $B$ type, the analysis given here can be extended to this case but the analysis of the resulting equations is considerably more complicated. The use of model A dynamics for the solvent is justified by assuming that its dynamics is faster than that of the colloids and that the volume fraction can vary due to local conformational changes rather than  diffusive transport.
+
+The noise terms above 
+are uncorrelated and Gaussian with zero mean, their correlation functions are given by
+\begin{eqnarray}
+\langle \eta_{1i}(\vec{x},t) \eta_{1j}(\vec{x}',t)\rangle&=& \delta_{ij}\delta(t-t') \delta(\vec{x}-\vec{x}') \\
+\langle \eta_{2}(\vec{x},t) \eta_{2}(\vec{x}',t)\rangle&=& \delta(t-t') \delta(\vec{x}-\vec{x}') ,
+\end{eqnarray}
+and $T$ is the temperature in units where $k_B=1$.
+These dynamical equations  are thus explicitly given by
+\begin{equation}
+\frac{\partial \psi(\vec{x},t)}{\partial t} +\vec{v}\cdot { \nabla}\psi(\vec{x},t)= D\nabla^2[\frac{\delta H_1}{\delta \psi(\vec{x})}+\lambda(\phi(\vec{x},t) + \psi(\vec{x},t))]+ \sqrt{2D T}\nabla \cdot {\boldsymbol \eta}_1(\vec{x},t)
+\end{equation}
+and
+\begin{equation}
+\frac{\partial \phi(\vec{x},t)}{\partial t} = -\alpha\lambda[\phi(\vec{x},t) + \psi(\vec{x},t)]+ \sqrt{2\alpha T}{ \eta}_2(\vec{x},t).
+\end{equation}
+Taking the temporal Fourier transform, defined with the convention
+\begin{equation}
+\tilde F(\vec{x}, \omega) = \int_{-\infty}^\infty dt \exp(-i\omega t)F(\vec{x}, t),
+\end{equation}
+we can eliminate the field $\tilde \phi$ which is given by
+\begin{equation}
+\tilde \phi(\vec{x},\omega) = \frac{-\alpha\lambda \tilde \psi(\vec{x},\omega)+\sqrt{2\alpha T}\tilde \eta_2(\vec{x},\omega)}{i\omega +\alpha \lambda},
+\end{equation}
+this then gives the closed equation for $\tilde \psi$:
+\begin{equation}
+\left[1-\frac{\lambda D \nabla^2}{i\omega+\alpha\lambda}\right]i\omega \tilde\psi(\vec{x}, \omega) +\vec{v}\cdot\nabla\tilde\psi(\vec{x}, \omega)
+= D\nabla^2 \tilde \mu(\vec{x},\omega) +  \tilde \zeta(\vec{x},\omega),
+\end{equation}
+where 
+\begin{equation}
+\mu(\vec{x},t)=\frac{\delta H_1}{\delta \psi(\vec{x},t)}
+\end{equation}
+is the effective chemical potential associated with the field $\psi$ and the noise term is given by
+\begin{equation}
+\tilde \zeta(\vec{x},\omega) = \frac{\sqrt{2\alpha T}D\lambda}{i\omega + \alpha\lambda}\nabla^2\tilde \eta_2(\vec{x},\omega) +
+\sqrt{2DT}\nabla\cdot\tilde {\bm \eta}_1(\vec{x},\omega).
+\end{equation}
+Inverting the temporal Fourier transform then gives the effective evolution equation
+\begin{equation}
+\frac{\partial \psi(\vec{x},t)}{\partial t} -\lambda D\nabla^2\int_{-\infty}^t dt'
+\exp(-\alpha\lambda(t-t')) \frac{\partial \psi(\vec{x},t')}{\partial t}+\vec{v}\cdot\nabla\psi(\vec{x}, t)=D\nabla^2  \mu(\vec{x},t') +  \zeta(\vec{x},t).\label{dyn1}
+\end{equation}
+\section{Effective interface dynamics}
+We now follow the method of \cite{bray2001,bray2002} to derive the dynamical equation  for the interface between the two phases. It is assumed that the driving is in the ${\bf r}=(x,y)$ plane and that the system varies from phase $1$ to phase $2$ in the $z$ direction. The dynamical evolution for the field $\psi$ in Eq. (\ref{dyn1}) is first written as
+\begin{equation}
+\nabla^{-2}\left[\frac{\partial \psi(\vec{x},t)}{\partial t}+\vec{v}\cdot\nabla\psi(\vec{x}, t)\right] -\lambda D\int_{-\infty}^t dt'
+\exp(-\alpha\lambda(t-t')) \frac{\partial \psi(\vec{x},t')}{\partial t'}=D  \mu(\vec{x},t') + \nabla^{-2} \zeta(\vec{x},t).\label{eqpsi}
+\end{equation}
+We now assume that the field $\psi$ can be written in the form
+\begin{equation}
+\psi(\vec{x},t) = f(z-h({\bf r},t)),
+\end{equation}
+and $f(z)\to \psi_2$ as $z\to -\infty$ and $f(z)\to \psi_2$ as  $z\to \infty$.
+We now note the following results
+\begin{eqnarray}
+\frac{\partial f(z-h({\bf r},t))}{\partial t} &=& -f'(z-h({\bf r},t))\frac{h({\bf r},t)}{\partial t}\\
+\nabla f(z-h({\bf r},t) )&=& [{\bf e}_z -\nabla h({\bf r},t)]f'(z-h({\bf r},t))]\\
+\nabla^2 f(z-h({\bf r},t)) &=& f''(z-h({\bf r},t)[1 + [\nabla h({\bf r},t)]^2] -\nabla^2 h({\bf r},t)f'(z-h({\bf r},t)),
+\end{eqnarray}
+and thus we find
+\begin{equation}
+\mu(\vec{x},t)= -\kappa\left(f''(z-h({\bf r},t)[1 + \nabla^2 h({\bf r},t)] -\nabla^2 h({\bf r},t)f'(z-h({\bf r},t))\right) + V'(f(z-h({\bf r},t)) - gz .
+\end{equation}
+Multiplying both sides of the above by $f'(z-h({\bf r},t))$ yields
+\begin{eqnarray}
+&&f'(z-h({\bf r},t))\mu(\vec{x},t)=\nonumber \\
+ &&-\kappa\left(f'(z-h({\bf r},t)f''(z-h({\bf r},t)[1 + \nabla^2 h({\bf r},t)] -\nabla^2 h({\bf r},t)f'(z-h({\bf r},t))^2\right) + V'(f(z-h({\bf r},t))f'(z-h({\bf r},t))\nonumber \\
+ &&- gz f'(z-h({\bf r},t)) \nonumber
+\end{eqnarray}
+and then integrating over $z$ we obtain
+\begin{eqnarray}
+\int_{-\infty}^\infty dz f'(z-h({\bf r},t)\mu(\vec{x},t)&=& \kappa \nabla^2 h({\bf r},t)\int_{-\infty}^\infty dz\ f'(z-h({\bf r},t))^2 - \int_{-\infty}^\infty dz gz f'(z-h({\bf r},t))\nonumber \\&=&
+\kappa\nabla^2 h({\bf r},t)\int_{-\infty}^\infty dz'\ f'(z')^2 - \int_{-\infty}^\infty dz' g(z' +h({\bf r},t)) f'(z')\nonumber \\
+&=& \kappa\nabla^2 h({\bf r},t)\int_{-\infty}^\infty dz' \ f'(z')^2 -\Delta\psi g h({\bf r},t).
+\end{eqnarray}
+In the above we have assumed that $\int_{-\infty}^\infty dz' z'f'(z')=0$ by symmetry (this is also consistent with the approximation made later on in Eq. (\ref{eqdelta})). Furthermore one can show that \cite{bray2001,bray2002}
+\begin{equation}
+\kappa\int_{-\infty}^\infty dz' \ f'(z')^2 = \sigma,\label{mfsig}
+\end{equation}
+where $\sigma$ is the mean-field equilibrium Cahn-Hilliard estimate of the surface tension, obtained by  assuming that $f(z)=\psi_{MF}(z)$ is the equilibrium mean field profile of the field 
+$\psi$. We thus find
+\begin{equation}
+\int_{-\infty}^\infty dz f'(z-h({\bf r},t)\mu(\vec{x},t) = \sigma[\nabla^2 h({\bf r},t)-m^2 h({\bf r},t)]
+\end{equation}
+where $m^2 = \Delta\psi g /\sigma$. We now carry out the same operation on the left hand side of Eq. (\ref{eqpsi}). First we have
+\begin{eqnarray}
+\nabla^{-2}\frac{\partial \psi(\vec{x},t)}{\partial t}&+&\vec{v}\cdot\nabla \psi(\vec{x},t) +\lambda D\int_{-\infty}^t dt'
+\exp(-\alpha\lambda(t-t')) \frac{\partial \psi(\vec{x},t')}{\partial t'} = \nonumber \\ 
+&-&\nabla^{-2}f'(z-h({\bf r},t))[\frac{\partial h({\bf r},t)}{\partial t} +\vec{v}\cdot\nabla h({\bf r},t)]  +\lambda D\int_{-\infty}^t dt'
+\exp(-\alpha\lambda(t-t')) f'(z-h({\bf r},t'))\frac{\partial h({\bf r},t')}{\partial t'}\nonumber \\
+&\approx& -\nabla^{-2}f'(z) [\frac{\partial h({\bf r},t)}{\partial t} +\vec{v}\cdot\nabla h({\bf r},t)] +\lambda D\int_{-\infty}^t dt'
+\exp(-\alpha\lambda(t-t')) f'(z)\frac{\partial h({\bf r},t')}{\partial t'},\end{eqnarray}
+where in the last line above we have neglected terms quadratic in $h$. 
+Note that the neglecting of these additional terms is not strictly justified, they could potentially induce non-perturbative effects which render the surface fluctuations non-Gaussian. However we see here that the first order computation we carry out tends to reduce fluctuations with respect to equilibrium or non-driven interfaces and so if the equilibrium theory can be described by an equation which is linear in height fluctuations, it seems physically reasonable to assume that the the approximation also holds for the driven interface. 
+Again, we multiply the above by $f'(z)$ and integrate over $z$. In the first term we make use of the approximation
+\begin{equation}
+f'(z)=\Delta\psi \delta(z)\label{eqdelta}
+\end{equation}
+and in the second we use the relation in Eq. (\ref{mfsig}). Putting this all together we obtain
+\begin{equation}
+\Delta\psi^2 \int d{\bf r} G(0,{\bf r}-{\bf r}') [\frac{\partial h({\bf r},t)}{\partial t} +\vec{v}\cdot\nabla h({\bf r},t)] +\frac{\sigma\lambda D}{\kappa}\int_{-\infty}^t dt'
+\exp(-\alpha\lambda(t-t'))\frac{\partial h({\bf r},t')}{\partial t'}
+= \sigma[\nabla^2 h({\bf r},t)-m^2 h({\bf r},t)] + \xi({\bf r},t),\label{em}
+\end{equation}
+where $G= -\nabla^{-2}$, or more explicitly
+\begin{equation}
+\nabla^2 G(z-z',{\bf r}-{\bf r}') = -\delta(z-z') \delta({\bf r}-{\bf r'}).
+\end{equation}
+The noise term $\xi$ is given by
+\begin{equation}
+\xi({\bf r},t) = \int_{-\infty}^{\infty} dz f'(z-h({\bf r},t)) \nabla^{-2} \zeta(\vec{x},t).
+\end{equation}
+Now, as the equations of motion have been derived to first order in $h$ and we wish to recover the correct equilibrium statistics for the non-driven system, we ignore the $h$ dependence in the noise and make the approximation
+\begin{equation}
+\xi({\bf r},t) \approx \int_{-\infty}^{\infty} dz f'(z) \nabla^{-2} \zeta(\vec{x},t).
+\end{equation}
+The correlation function of this noise is most easily evaluated in terms of its Fourier transform with respect to  space and time  defined by
+\begin{equation}
+\hat F({\bf q},\omega)=\int dt d{\bf r}\exp(-i\omega t -i{\bf q}\cdot{\bf r}) F({\bf r},t).
+\end{equation}
+Using the relations Eqs. (\ref{mfsig}) and (\ref{eqdelta}) one  can show that
+\begin{equation}
+\langle \hat \xi({\bf q},\omega)\hat \xi({\bf q}',\omega')\rangle 
+=2T(2\pi)^d \delta(\omega +\omega') \delta({\bf q}+{\bf q}') \left[
+\frac{\sigma}{\kappa}\frac{\alpha D^2\lambda^2}{\omega^2 +\alpha^2\lambda^2} + \frac{D\Delta\psi^2}{2q}\right].
+\end{equation}
+In full Fourier space the equation of motion for the field $\psi$ then reads
+\begin{equation}
+\left[i(\omega+{\bf q}\cdot\vec{v})\frac{\Delta\psi^2}{2q} + \frac{D\sigma\lambda}{\kappa} \frac{i\omega}{\alpha\lambda+i\omega}\right] \hat h({\bf q},\omega)= -D\sigma(q^2+m^2)\hat h({\bf q},\omega)+ \hat\xi({\bf q},\omega).\label{dyn}
+\end{equation}
+
+From this, the full Fourier transform of the correlation function of the interface height is given by
+\begin{equation}
+\hat C({\bf q},\omega)  = 2TD \frac{\left[ \frac{\Delta\psi^2}{2q}(\omega^2+\alpha^2 \lambda^2) + \frac{\sigma\alpha D\lambda^2}{\kappa}\right]}{\left|i[\frac{\alpha\lambda\Delta\psi^2}{2 q}(\omega + {\bf q}\cdot\vec{v}) + \frac{\lambda \sigma D}{\kappa}\omega + D\sigma(q^2+m^2)\omega]
++[\alpha\lambda D\sigma(q^2+m^2) -\frac{\Delta\psi^2}{2q}\omega(\omega+{\bf q}\cdot\vec{v})]\right|^2}.
+\end{equation}
+Using the above we can extract the equal time height-height correlation function in the steady states. Its spatial Fourier transform can shown to be given by
+\begin{eqnarray}
+\tilde C_s({\bf q}) &=& \frac{1}{2\pi} \int d\omega \hat C({\bf q}, \omega)\nonumber\\
+&=&T \frac{\left(2 D\sigma q(\kappa[q^2+m^2]+\lambda)+\alpha\kappa\lambda\Delta\psi^2\right)^2 +\kappa^2 \Delta\psi^4 ({\bf q}\cdot\vec{v})^2}{\sigma[q^2+m^2]\left(2D q\sigma (\kappa[q^2+m^2]+\lambda)+\alpha \kappa\lambda \Delta\psi^2\right)^2 + \kappa\left(\kappa\sigma[q^2+m^2] + \lambda\sigma\right)\Delta\psi^4({\bf q}\cdot\vec{v})^2}.\label{eqmaind}
+\end{eqnarray}
+An outline of the derivation of this result is given in the Appendix to the paper.
+In the absence of driving, {\em i.e.} when $\vec{v}={\bf 0}$ we recover the equilibrium correlation function
+\begin{equation}
+\tilde C_s({\bf q})= \tilde C_{eq}({\bf q})= \frac{T}{\sigma[q^2+m^2]},
+\end{equation} 
+here we see that  $1/m= \xi_{eq}$ is the so called capillary length, which is the equilibrium correlation length of the height fluctuations. We also notice that the correlation function for wave vectors perpendicular to the driving direction is simply the equilibrium one.
+
+If we write $C_s({\bf q})= T/H_s({\bf q})$ we can interpret $H_s({\bf q})$ as an effective quadratic Hamiltonian for the height fluctuations, it is thus given by
+\begin{equation}
+H_s({\bf q}) = \sigma[q^2+m^2] + \frac{\kappa\lambda\sigma \Delta\psi^4 ({\bf q}\cdot\vec{v})^2}{\left(2 D\sigma q(\kappa[q^2+m^2]+\lambda)+\alpha\kappa\lambda\Delta\psi^2\right)^2 +\kappa^2 \Delta\psi^4 ({\bf q}\cdot\vec{v})^2}
+\end{equation}
+For small $q$ we find 
+\begin{equation}
+H_s({\bf q}) = \sigma m^2 + \sigma q^2(1+ \frac{v^2\cos^2(\theta)}{\alpha^2\lambda\kappa}),
+\end{equation}
+where $\theta$ is the angle between the wave vector ${\bf q}$ and the direction of the driving. 
+This thus gives a direction dependent surface tension 
+\begin{equation}
+\sigma_s(\theta) = \sigma(1+ \frac{v^2\cos^2(\theta)}{v^2_0}),
+\end{equation}
+where we have introduced the intrinsic velocity $v_0 = \sqrt{\alpha^2\lambda\kappa}$ which depends on the microscopic {\em dynamical} quantity $\alpha$ associated with the model A dynamics of the field $\phi$, as well as the microscopic static quantities $\kappa$ (which generates the surface tension) and $\lambda$ the coupling between the field $\psi$ and $\phi$. This appearance of dynamical and static quantities that are otherwise hidden in equal time correlation functions in equilibrium is already implicit in the works of Onsager \cite{hem1996} where it is used to compute the conductivity of Brownian electrolytes and the explicit expressions were derived using stochastic density functional theory in \cite{dem2016}. We also note that the universal thermal Casimir effect between model Brownian electrolyte systems  driven by an electric field 
+exhibits similar features, developing a dependency on both additional static and dynamical variables with respect to the equilibrium case \cite{dean2016}
+
+
+However for this small $q$ expansion we see that the microscopic 
+quantities $D$, the diffusion constant of the field $\phi$, and the order parameter jump
+$\Delta\psi$ do not appear. 
+
+From the above, we see that  in the direction of the driving the surface tension increases and the fluctuations of the surface are thus suppressed. We may also write 
+\begin{equation}
+H_s({\bf q}) = \sigma_s(\theta) [q^2 + m^2_e(\theta)],
+\end{equation}
+with 
+\begin{equation}
+m^2_s(\theta) =\frac{ m^2}{1+ \frac{v^2\cos^2(\theta)}{v_0^2}},
+\end{equation}
+this corresponds to a correlation length 
+\begin{equation}
+\xi_s = \xi_{eq}\sqrt{1+ \frac{v^2\cos^2(\theta)}{v_0^2}},
+\end{equation}
+and we see that it is increased in the direction of the driving. 
+
+As we have just remarked  that the above results appear to be independent of the order parameter jump $\Delta \psi$ and the diffusion constant $D$, however the next order correction to $H_s$ for small $q$ is given by
+\begin{equation}
+H_s({\bf q}) = \sigma_s(\theta) [q^2 + m^2_e(\theta)] - \frac{4Dq \sigma^2(\lambda+\kappa m^2)( {\bf q}\cdot\vec{v})^2 }{\alpha^3 \kappa^2 \lambda^2 \Delta\psi^2},
+\end{equation}
+and so the small ${\bf q}$ expansion  breaks down at $\Delta\psi=0$, indeed one can see that the system has exactly the equilibrium correlation function when  $\Delta\psi=0$. 
+
+In the limit of large $q$ we see that the effective Hamiltonian is given, to leading order, by the original equilibrium Hamiltonian and so the out of equilibrium driving has no effect on the most energetic modes of the system.
+
+The results here predict that for unconfined surfaces the long range height fluctuations are described by an isotropic form of capillary wave theory with 
+an anisotropic surface tension which is largest in the direction of driving. Numerical simulations of driven lattice gases in two dimensions \cite{leun1993} show a more drastic change upon driving and find $C_s(q)\sim  1/q^{.66}$ and thus a strong deviation from capillary wave theory.  
+\section{A model of active interfaces}
+We can apply the results derived in the previous section to analyse a simple model for
+surfaces formed between two phases of active colloids. Activity is modelled by assuming that the colloidal field $\psi$ has a temperature different to that of  the solvent field $\phi$. This models the effect that activity leads to enhanced colloidal diffusivity over and
+above the Brownian motion of particles due to thermal fluctuations \cite{gros2015}.
+
+In the absence of any driving the dynamical equations for the field $\psi$ and $\phi$ become 
+\begin{eqnarray}
+\frac{\partial \psi(\vec{x},t)}{\partial t} &=& D\nabla^2\frac{\delta H}{\delta \psi(\vec{x})}+ \sqrt{2D T_1}\nabla \cdot {\bm \eta}_1(\vec{x},t) \\
+\frac{\partial \phi(\vec{x},t)}{\partial t} &=& -\alpha\frac{\delta H}{\delta \phi(\vec{x})}+ \sqrt{2\alpha T_2}{ \eta}_2(\vec{x},t).
+\end{eqnarray}
+Following the same arguments as above we find that
+\begin{equation}
+\hat C({\bf q},\omega)  = 2D \frac{\left[ T_1\frac{\Delta\psi^2}{2q}(\omega^2+\alpha^2 \lambda^2) + T_2\frac{\sigma\alpha D\lambda^2}{\kappa}\right]}{\left|i\omega[\frac{\alpha\lambda\Delta\psi^2}{2 q} +  \frac{\lambda \sigma D}{\kappa} + D\sigma(q^2+m^2)]
++[\alpha\lambda D\sigma(q^2+m^2) -\frac{\Delta\psi^2}{2q}\omega^2]\right|^2}.
+\end{equation}
+The equal time steady state height fluctuations thus have correlation function
+\begin{equation}
+\tilde C_s(q) = \frac{T_1}{\sigma (q^2 + m^2)}\left[ 1 -(1-\frac{T_2}{T_1})\frac{\lambda\sigma } {\kappa }\frac{1}{\frac{\alpha\lambda \Delta \psi^2}{2Dq}+ \frac{\lambda\sigma }{\kappa} + \sigma(q^2+m^2)}\right].
+\end{equation}
+We see, again, that the inclusion of a non-equilibrium driving changes the statistics of height fluctuations and leads to a steady state that depends on both dynamical variables
+$D$ and $\alpha$ as well as static ones $\Delta\psi,\ \lambda$ and $\kappa$ that remain hidden in the equilibrium case. This phenomenon is again seen in the behavior of the universal thermal  Casimir force between Brownian conductors held at different temperatures \cite{lu2015}.
+
+If we assume strong activity we can take the limit $T_1\gg T_2$, in this case we find
+\begin{equation}
+\tilde C_s(q) = \frac{T_1}{\sigma (q^2 + m^2)}\frac{\frac{\alpha\lambda \Delta \psi^2}{2Dq}+
+\sigma(q^2+m^2)}{\frac{\alpha\lambda \Delta \psi^2}{2Dq}+ \frac{\lambda\sigma }{\kappa} + \sigma(q^2+m^2)}.
+\end{equation}
+Interpreted in terms of an effective Hamiltonian for an equilibrium system at the temperature $T_1$ the above gives
+\begin{equation}
+H_s(q) = \sigma (q^2 + m^2)\left[1+\frac{\lambda\sigma }{\kappa}\frac{q}{\frac{\alpha\lambda \Delta \psi^2}{2D}+
+q\sigma(q^2+m^2)}\right].
+\end{equation}
+In the case of an unconfined interface (where there is no gravitational effect
+on the surface fluctuations) {\em i.e.} $m=0$ we see that for small $q$
+\begin{equation}
+H_s(q) \approx \sigma q^2 +\frac{2D\sigma^2 }{\kappa\alpha \Delta\psi^2}q^3 .
+\end{equation}
+We see that the effective surface tension is not modified but a reduction of fluctuations due to the presence of the term in $q^3$ arises.  As in the case of a driven system, we see that the large $q$ behavior of the effective Hamiltonian is given by the equilibrium case where $T=T_1=T_2$. 
+
+In the case where the interface is confined, we see that for small $q$ one obtains
+\begin{equation}
+H_s(q) \approx \sigma m^2 \left[ 1+ \frac{2D\sigma }{\kappa\alpha \Delta\psi^2}q\right],
+\end{equation}
+and thus at the largest length scales of the problem there is a qualitative departure from capillary wave behavior, and the correlation length of height fluctuations at the largest length scales is given by
+\begin{equation}
+\xi_s = \frac{2D\sigma }{\kappa\alpha \Delta\psi^2}.
+\end{equation}
+The above result should be compared with that obtained in \cite{zia1991} for 
+systems with anisotropic thermal white noise, which breaks detailed balance and mimics random driving of the system parallel to the interface; for free interfaces it was found that $C_s(q)\sim 1/q$.
+\section{Conclusions}
+We have presented a model to analyse the effect of uniform driving on the dynamics of the interface in a two phase system. In order to generate a non-equilibrium state a second {\em hidden} order parameter was introduced. This models the behaviour of a local or solvent degree of freedom which is not influenced by the driving field. In this way, we obtain out of equilibrium interface fluctuations which are described by Gaussian statistics as found in the experimental study of \cite{derks2006}. The agreement with this experimental study also extends to qualitative agreement with the increase of the effective surface tension in the direction of driving and also an increase in the correlation length of the height fluctuations with respect to a non-driven equilibrium interface. However, we  note that numerical simulations of a sheared Ising interface \cite{smith2008,smith2010} also reveal a reduction of interface fluctuations but the lateral correlation length is found to be reduced.
+
+The basic idea underlying this study would be interesting to apply to a number of possible variants of this model, for instance both the dynamics
+of the main field $\phi$ and the solvent field $\phi$ could be varied. To make a direct link with driven colloidal interfaces one should study model H type dynamics for the main field $\phi$ and other variants for the dynamics of the 
+solvent field $\phi$ could also be considered. 
+
+As mentioned above, in lattice based models driving induces non-equilibrium states even in the simple Ising lattice gas. A model analogous to that studied here can be formulated in a lattice based systems using the Hamiltonian 
+\begin{equation}
+H = -J\sum_{(ij)}S_i S_j (1+ \sigma_{(ij)}),
+\end{equation}
+where $S_i=\pm1$ are Ising spins at the lattice sites $i$, and $\sigma_{(ij)}=\pm 1$ are Ising like dynamical solvent variables associated with the lattice links $(ij)$. The static partition function is given by
+\begin{equation}
+Z = {\rm Tr}_{\sigma_{ij},S_i} \exp\left[\beta J\sum_{(ij)}S_i S_j (1+ \sigma_{(ij)})\right],
+\end{equation}
+and the trace over the solvent variables can be trivially carried out to give
+\begin{equation}
+Z = {\rm Tr}_{S_i}\left( \exp\left[\beta J\sum_{(ij)}S_i S_j \right]\prod_{(ij)}2\cosh(\beta JS_iS_j)\right )= [2\cosh(\beta J)]^L{\rm Tr}_{S_i}\exp(\beta J\sum_{(ij)}S_i S_j ),
+\end{equation}
+where $L$ is the number of links on the lattice of the model. We thus see that the underlying effective static model is precisely the zero field Ising model. 
+
+This model can then be driven in a number of ways, for instance using conserved Kawasaki dynamics for the Ising spins to model diffusive dynamics in the presence of a uniform driving field parallel to the surface between the two phases at a temperature below the ferromagnetic ordering temperature $T_c$. The dynamics of the Ising spins on the lattice links can  be given by non-conservative single spin flip, for instance Glauber, dynamics to keep the analogy with the continuum model discussed in the paper but diffusive dynamics or indeed a mixture of diffusive and non-conserved dynamics 
+could be implemented. It would be interesting to see to what extent this modification of the driven lattice gas model affects the non-equilibrium driven states that arise. 
+
+It is also clear that this lattice model can be used to simulate the effect of activity where the Ising spins $S_1$ corresponding to the colloid field undergo  Kawasaki dynamics at the temperature $T_1$ where as the link variables $\sigma_{(ij)}$ undergo single spin flip non-conserved dynamics
+at the temperature $T_2$.
+
+\section{Acknowledgements}
+The authors acknowledge support from the ANR (France) Grant FISICS \\
+\appendix
+\section{Evaluating Fourier integrals}
+Here we outline how the Fourier integration leading to Eq. (\ref{eqmaind}) is carried out. Defining
+\begin{equation}
+I(f(\omega)) = \int \frac{d\omega}{2\pi} \frac{f(\omega)}{\left|i(A\omega + B) + (C-D\omega-E \omega^2)\right|}
+\end{equation}
+we see that the integral we need to evaluate can be written in the form
+\begin{equation}
+I = a I(\omega^2) + b I(1).
+\end{equation}
+The calculation leading to Eq. (\ref{dyn}) can be carried out in the presence of a forcing term on the height profile in order to compute the response function for the surface which has a denominator of the form
+\begin{equation}
+{\rm Den} = i(A\omega + B) + (C-D\omega-E \omega^2),
+\end{equation}
+and due to causality the above only has poles in the upper complex plane (due to the convention of Fourier transforms used here). Consequently we find that
+\begin{equation}
+\int \frac{d\omega}{2\pi} \frac{1}{i(A\omega + B) + (C-D\omega-E \omega^2)} = 0,\label{key}
+\end{equation}
+as one may close the integration contour in the lower half of the complex plane. Taking the real and imaginary part of Eq. (\ref{key}) leads to
+\begin{eqnarray}
+C I(1) -D I(\omega) - E I(\omega^2) = 0 \\
+AI(\omega) + B I(1) = 0.
+\end{eqnarray}
+Using this we can express $I(\omega^2)$ as a function of $I(1)$, and explicitly we have 
+\begin{equation}
+I(\omega^2) = \frac{I(1)}{E}[C+ \frac{DB}{A}].
+\end{equation}
+
+To evaluate $I(1)$ we now use
+\begin{equation}
+I(1) = -{\rm Im} \int \frac{d\omega}{2\pi}\frac{1}{A\omega +B} \frac{1}{i(A\omega + B) + (C-D\omega-E \omega^2)}.
+\end{equation}
+The integrand above has no poles in the lower half of the complex plane but has a {\em half pole} at $\omega=-B/A$ on the real axis, thus using standard complex analysis we find
+\begin{equation}
+I(1) = \frac{1}{2(CA + BD - \frac{EB^2}{A})}.
+\end{equation}
+Then after some laborious, but straightforward algebra, the results Eq. (\ref{eqmaind}) is obtained.
+
+
+
+
+The dynamics of discrete particle systems is however affected by uniform driving of identical particles. The study of driven lattice gases has revealed a wide range of intriguing physical phenomena and indeed shown how driving can even lead to phase separation \cite{katz1984,zia1991,leun1993,schm1995,schm1998}. The discrete nature of the dynamics of these systems, both in space and time, means that no Galilean transformation to an equilibrium state exists. Analytical studies of these systems require a phase ordering kinetics description in terms of a continuum order parameter. In order to break Galilean invariance the local mobility of the particles can be taken to be dependent on the local order parameter, this is then sufficient to induce non-trivial steady states under driving \cite{katz1984,leun1993,schm1995,schm1998}. Interfaces between the separated phases in uniformly driven systems have non capillary behaviors which are, even today, not fully understood \cite{leun1993}.
+Taking random driving in a given direction also leads to non-equilibrium steady states, if the noise is Gaussian and white, the fluctuation dissipation theorem is violated and novel interface fluctuations are induced which, again, are  not of  the capillary type \cite{zia1991}. 

@@ -1,0 +1,35 @@
+\chapter{Modèle Particle-Over-Particle }
+
+
+
+	\section{Particules indiscernables}
+	Différence dans la fonction de partition en général
+
+
+	\section{Avec le SOS}
+	Le modèle Solid-On-Solid est l'approximation standard du modèle d'Ising car elle est étudiable analytiquement via sa matrice de transfert. 	Tout comme lorsque l'on déforme un flan seules les particules à l'interface flan-air peuvent bouger, dans le modèle SOS les particules loin de l'interface entre les deux phases ne peuvent bouger via l'agitation thermique. 
+	Nous proposons alors un modèle un peu plus physique, dans lequel chaque particule a le droit de bouger. Au lieu de ne considérer que la hauteur $h_i$ au site $i$, nous considérons qu'il existe $h_i$ particules empilées les unes sur les autres. Lors d'un déplacement, nous prenons une particule au hasard pour la déplacer vers le haut de la pile, puis vers un autre site $j$. 
+	Ainsi la fonction de partition devient
+	
+\begin{equation}
+	Z = \sum_{h_1 h_2 ... h_L} e^{- \beta \sum_{i} H(i,i+1)} \frac{N!}{\prod_i n_i!} = N! \sum_{h_1 h_2 ... h_L} e^{- \beta \sum_{i} H(i,i+1) -\sum_i \ln(n_i!)}
+\end{equation}
+
+La matrice de transfert symétrisée devient donc
+\begin{equation}
+	T(h,h') = e^{-J |h-h'| - \frac{1}{2}(\ln(h!)-\ln(h'!)}
+\end{equation}
+où les termes $\ln(h)$ proviennent de l'entropie générée par la présence des particules au sein même des sites. À notre connaissance, ce modèle n'a pas été aussi étudié que le modèle SOS bien qu'il soit physiquement plus proche du modèle d'Ising initial. Le fait que la matrice de transfert ne soit pas résolvable analytiquement en est peut-être la cause. 
+		\subsection{Modifications de l'algorithme Metropolis}
+		au lieu de choisir un site, on choisit une particule, càd un site avec une proba pondérée.
+
+
+
+	\section{Résultats modèle A}
+	comment implémenter modèle A sur POP ? Différences avec SOS ?
+	\section{Résultats modèle B}
+	différences pour même hauteur moyenne, donner la distribution de hauteurs 
+	on en déduit quoi ? 
+	Mettre courbes de l'effet casimir, c'est pas mal
+	\section{Résultats modèle A+B}
+		certaines particules soumises à A, certaines à B. 

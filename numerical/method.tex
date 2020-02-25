@@ -1,0 +1,109 @@
+\chapter{Simulations}
+
+Les simulations numériques permettent de calculer propriétés des systèmes là où la diagonalisation directe des hamiltoniens est trop difficile. Elle permet également de faire varier facilement les géométries et les potentiels dans les systèmes. Les algorithmes mis en jeu sont en général lents et peu efficients car ils essaient de calculer la fonction de partition complète du système. Les modèles 1D que nous étudions dans cette thèse ont l'avantage d'être rapides à calculer et donne une pléthore d'informations qui peut être extrapolée aux modèles 2D et 3D à basse température. 
+
+\section{Algorithme de Metropolis}
+
+Les systèmes à l'équilibre sont, en présence d'une température non-nulle, définis par les moyennes statistiques des grandeurs observables. La moyenne statistique de l'observable $A$ est définie vis-à-vis de la fonction de partition
+\begin{align}
+	<A> = \sum_\mu e^{-\beta \mH(\mu)}
+\end{align}
+où $\sum_\mu$ désigne la somme sur tous les micro-états $\mu$ possibles du système. Tandis qu'une diagonalisation de la fonction de partition nécessiterait de connaître tous les micro-états possibles, on observe que certains états sont plus probables que d'autres car d'énergie moindre, et donc contribuent plus aux moyennes statistiques que le reste. 
+Les algorithmes de Monte Carlo ont pour objectif d'explorer l'espace des phases de manière aléatoire afin de découvrir quels micro-états sont les plus probables. En prenant suffisement de micro-états au hasard de manière à satisfaire au bilan détaillé, l'algorithme de Monte Carlo espère converger vers la valeur limite $<A>(t=\infty) = <A>$.
+Une littérature extensive\cite{barkema} existe sur le sujet. Nous nous contenterons ici d'expliquer le minimum. 
+
+Soit $\mu$ un micro-état de notre système d'énergie $E(\mu)$. À l'équilibre\cite{gibbs}, la probabilité d'occupation du système est
+\begin{align}
+	p_\mu = \frac{1}{\mZ} e^{-\beta E(\mu)}
+\end{align}
+qui définit la fonction de partition $\mZ$. Dans un algorithme de Metropolis, on met à jour notre micro-état en prenant un site $i$ au hasard\footnote{L'utilisation d'un générateur de nombre aléatoire (\textit{pRNG}) efficace est primordial. Il est déconseillé d'utiliser le générateur standard \textit{default\_random\_engine} de la librairie C++ \textit{rand} et conseillé d'opter pour des générateurs \textit{sfc64} ou \textit{xoroshiro}. Pour un pRNG booléen performant, voir \url{https://martin.ankerl.com/2018/12/08/fast-random-bool/}. Pour accélérer encore plus les calculs, ne pas oublier d'utiliser le flag d'optimisation \textit{-O3}  sur \textit{gcc} si vous codez en C/C++.} et en le changeant légèrement vers un état $\nu$. La différence d'énergie notée $\Delta E(\mu \rightarrow \nu)$ donne la probabilité de transition entre les deux. Si l'état final $\nu$ a une énergie inférieure à l'état initial, alors il est forcément plus probable, et nous acceptons le changement. La probabilité d'acceptation de transition de Metropolis est 
+\begin{align}
+	p(\mu \rightarrow \nu) = min(1,e^{-\beta \Delta E(\mu \rightarrow \nu)})
+\end{align}
+De cette manière on parcoure l'espace des phases en restant dans les micro-états les plus probables. Cette manière de procéder satisfait aux conditions du bilan détaillé pour une marche markovienne satisfaisant l'état d'équilibre de Boltzmann
+\begin{align}
+\frac{p(\mu \rightarrow \nu)}{p(\nu \rightarrow \mu)} = e^{-\Delta Ep(\nu \rightarrow \mu)}
+\end{align}
+
+\footnote{La librairire OpenMP pour paralléliser le code est simple d'utilisation mais gère très mal - de sa nature de mémoire partagée - les pRNG. Je conseille vivement l'utilisation de la librairie MPI qui, bien que plus difficile d'accès, assure une étanchéité au niveau des pRNG entre chaque thread.}
+
+Une étape de Monte Carlo est achevée lorsque $L$ tentatives de transition ont été faites. L'erreur obtenue à la fin sur notre observable $<A>$ est 
+\begin{align}
+	\sigma(A) = \sqrt{\frac{2 \tau}{t_max} (<A^2>-<A>^2)}
+\end{align}
+Cette variance dépend du temps de corrélation $\tau$ puisque deux micro-états très proches dans le temps étant fortement corrélés, l'observable n'aura pas eu le temps de bouger. 
+\begin{align}
+\mC(t) = <A(t')A(t+t')>-\langle A \rangle^2 = \frac{1}{T_{max}}\int_0^{T_{max}}A(t')A(t+t')-<A>^2 dt'
+\end{align}
+Aux temps longs, la fonction $\mC(t)$ décroît de manière exponentielle. Néanmoins, il existe plusieurs temps de corrélation dans un système qui font que la fonction de corrélation aux temps courts est une somme de plusieurs exponentielles\cite{wanslebenlandau1991_3disingmodel}. Dans cette thèse nous ne sommes intéressés que par l'ordre de grandeur de ce temps de corrélation afin d'avoir une estimation de l'erreur de nos observables. En négligeant les termes provenant des temps de corrélation inférieurs, le calcul de l'intégrale\footnote{Numériquement, elle peut se faire précisément via la méthode de Simpson.}  nous donne directement
+\begin{align}
+	\tau = \int_0^{\infty} \mC(t)/\mC(0) dt
+	\label{tau_cor}
+\end{align}
+Nous pouvons de la même manière calculer la fonction de corrélation spatiale moyennée sur le temps, avec une longueur de corrélation qui se calcule avec l'équation \ref{tau_cor}
+\begin{align}
+\mC(x) = \frac{1}{L} \sum_{x'}^L A(x')A(x+x')-<A>^2 
+\end{align}
+
+	\subsection{Ensemble grand-canonique : algorithme de Glauber}
+Le dépôt de particules provenant d'un réservoir permet de faire grandir un cristal à partir d'un substrat. Ce genre de systèmes est défini par le potentiel chimique $\mu$ des particules, dans le solvant et appartient à l'ensemble grand-canonique. Dans ce cas, on choisit au hasard de manière uniforme une colonne $h_i$ dans laquelle on décide de mettre ou d'enlever une particule avec une probabilité de 50\%, en respectant les conditions aux bords en $y$ (c'est-à-dire si l'on désire par exemple une géométrie rectangulaire d'hauteur $L$, il faut que $0<h_i<L$ ). En essayant d'aller du micro-état $\mu$ vers le micro-état $\nu$ où on a fait la transformation $h_i \rightarrow h_i + \alpha$ où $\alpha=\pm 1$, on obtient que la différence d'énergie est
+\begin{align}
+	\Delta E &= |h_{i-1}-(h_i \pm 1)| + |h_{i+1}-(h_i \pm 1)| - |h_{i-1}-h_i| - |h_{i+1}-h_i|  \\
+		&= 2 \left( (h_i \leq h_{i-1}) + (h_i \geq h_{i+1}) -1 \right )
+\end{align}
+où $(h_i \leq h_{i-1})$ est un booléen valant $1$ si la condition est vraie, $0$ sinon.
+Le changement de magnétisation quand à lui est juste $\Delta M = \alpha$. La largeur de l'interface, quand à elle, définie par $\sigma = \sum_i (h_i-h_{i+1})^2$ change comme
+\begin{align}
+	\Delta \sigma = 2 \alpha (h_{i+1}-h_i) + 2
+\end{align}
+On n'a donc pas besoin, à chaque pas de temps, de recalculer ces deux grandeurs, il suffit de les mettre à jour dans une variable pour avoir les observables à tout instant $t$.
+
+
+
+Afin d'accélérer le processus d'équilibrage du système, il est recommandé de commencer directementa avec la valeur moyenne de magnétisation calculée directement à partir de la matrice de transfert. On regarde ensuite le temps d'équilibrage par la courbe $E(t)$, en attendant d'atteindre la valeur à l'équilibre. 
+À l'équilibre, le taux d'évaporation des particules doit être égal au temps de dépôt sur notre système. Cependant, en l'absence d'un potentiel qui contraint l'interface, l'interface est délocalisée, l'empêchant d'atteindre l'équilibre thermodynamique. C'est pour ça qu'une simulation numérique dans une dynamique de Glauber se doit de toujours avoir un potentiel permettant d'obtenir la localisation d'une interface. 
+
+Temps de corrélation sur un SOS, longueur de correl. 
+Effet de la taille 
+	\subsection{Ensemble canonique : algorithme de Kasawaki}
+	
+La diffusion des particules - par exemple un polymère dans un solvant - est une dynamique locale qui conserve le paramètre d'ordre du notre système, nommément la magnétisation $m$. Dans ce cas, on choisit au hasard de manière uniforme deux colonnes $h_i$ et $h_{i+1}$ dans lesquelles on va essayer d'échanger une particule entre les deux. Afin de respecter le bilan détaillé, il faut que la probabilité de choisir le mouvement $h_i \rightarrow h_{i+1}$ soit égale à $h_{i+1} \rightarrow h_i$. On peut juste définir à nouveau "l'ajout" d'une colonne vers ou à partir de l'autre via la transformation $h_i \rightarrow h_i + \alpha$ et $h_{i+1} \rightarrow h_{i+1} - \alpha$ (avec $\alpha=\pm 1$), en respectant toujours les conditions aux bords en $y$. Cette fois-ci il existe trois termes dans l'énergie qui sont modifiées\footnote{Comme précédement, il existe une version booléenne de l'équation, mais sa longueur n'offre aucun avantage en terme d'implémentation dans le code.}
+\begin{align}
+	\Delta E = &|h_{i-1}-(h_i \pm 1)| + |h_{i+1} \pm 1 -(h_i \pm 1)| + |h_{i+1}\pm 1-(h_{i+2} )| \\
+	- &|h_{i-1}-h_i| - |h_{i+1}-h_i| - |h_{i+1}-h_{i+2}|
+\end{align}
+
+La magnétisation totale est cette fois-ci conservée, tandis que la largeur de l'interface $\sigma$ se calcule par
+\begin{align}
+	\Delta \sigma = 2 \alpha  + 1
+\end{align}
+
+	\subsection{Dynamique hors-équilibre}
+L'ensemble grand-canonique ne nous permet d'avoir un système qu'à l'équilibre, puisqu'il est traduit par une dynamique non-locale. Seule une dynamique locale comme la dynamique de Kawasaki peut nous donner un tel résultat. L'implémentation la plus simple est d'introduire un terme de cisaillement dans notre modèle lorsque l'on décide de bouger une particule. Ce cisaillement diminue l'énergie du micro-état lorsque la particule bouge dans un sens et l'augmente sinon, ce qui brise le bilan détaillé. Les systèmes présentant un cisaillement perpendiculaire à l'interface ont tendance à la détruire, puisque l'on introduit un flux qui empêche toute stabilité\cite{}. Néanmoins de nombreux travaux sur les systèmes hors-équilibre dans le modèle d'Ising ont été produits \cite{smith_interfaces_2008} présentant la diminution de la largeur de l'interface lorsque le cisaillement est produit de manière parallèle. 
+On peut définir deux espèces de cisaillement parallèles.. 
+Le cisaillement aux bords dans un liquide non-visqueux ne permet de bouger que les particules aux bords du système : il n'est donc pas adaptable à un système infini ou semi-infini. Pour un système de taille $L$ et pour un module de cisaillement de $f$, la différence d'énergie supplémentaire est 
+\begin{align}
+	\Delta E_{bord} = f [ (h_i == 1 || h_{i+1} == L-1) - (h_i == L-1 || h_{i+1} == 0)  ]
+\end{align}
+Dans le cas d'un fluide permettant un transport visqueux, le cisaillement aux bords entraîne un cisaillement plus faible proportionnel à la distance\cite{}. En supposant que le cisaillement est nul au niveau de l'interface et que les particules vont à gauche dans la partie basse du système (et à droite dans la partice haute du système), on obtient alors
+\begin{align}
+	\Delta E_{prop} = f h_i
+\end{align}
+Cependant, pour des raisons de facilité de calcul plus tard afin de comparer les simulations numériques aux résultats analytiques, on utilise un cisaillement uniforme qui pousse les particules dans un sens. Ce genre de système correspond à un flux laminaire, par exemple dû à la gravité face à une interface verticale qui tire les particules vers le bas\cite{}. La différence d'énergie devient
+\begin{align}
+	\Delta E_{uni} = \alpha f
+\end{align}
+où $\alpha = 1$ si la particule va vers la droite, $-1$ sinon. 
+		
+	\subsection{Modèle POP}		
+
+Dans le modèle POP, le modèle n'est plus structuré en fonction des sites $i$ mais bien des particules $\sigma_(n) = i$, la hauteur d'un site\footnote{Cette hauteur est mise à jour à chaque étape mouvement d'une particule dans un second tableau.} devenant alors
+\begin{align}
+	h_i = \sum_{n=0}^N \delta_{\sigma_n,i}
+\end{align}
+
+Lors d'une dynamique de Kawasaki, à chaque étape, on choisit au hasard une particule parmi les $N$ présentes dans le système pour la déplacer d'une colonne. 
+
+Il est également possible de donner des constantes de diffusion différentes à chaque particule\footnote{Grâce à la construction d'un générateur via \textit{random::discrete\_distribution} où chaque particule a une probabilité différente d'être sélectionnée. }  afin d'émuler différents types de particules. 
+
+La question est plus délicate lorsqu'il s'agit d'une dynamique de Glauber. Puisque chaque particule a une probabilité d'être sélectionnée pour être détruite, comment choisir la probabilité d'ajouter une particule au système ? Nous laissons aux suivants le soin de répondre à cette question. 

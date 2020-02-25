@@ -1,0 +1,225 @@
+\begin{thebibliography}{10}
+
+\bibitem{hohenberg_theory_1977}
+P.~C. Hohenberg and B.~I. Halperin.
+\newblock Theory of dynamic critical phenomena.
+\newblock {\em Reviews of Modern Physics}, 49(3):435--479, July 1977.
+
+\bibitem{bray_theory_1994}
+A.~J. Bray.
+\newblock Theory of phase-ordering kinetics.
+\newblock {\em Advances in Physics}, 43(3):357--459, June 1994.
+
+\bibitem{krapivsky_kinetic_2010}
+Pavel~L Krapivsky, Sidney Redner, and Eli Ben-Naim.
+\newblock {\em A {Kinetic} {View} of {Statistical} {Physics}.}
+\newblock Cambridge University Press, Leiden, 2010.
+\newblock OCLC: 669127014.
+
+\bibitem{halpin-healy_kinetic_1995}
+Timothy Halpin-Healy and Yi-Cheng Zhang.
+\newblock Kinetic roughening phenomena, stochastic growth, directed polymers
+  and all that. {Aspects} of multidisciplinary statistical mechanics.
+\newblock {\em Physics Reports}, 254(4-6):215--414, March 1995.
+
+\bibitem{l_landau_physique_1990}
+{L. Landau} and {E. Lifchitz}.
+\newblock {\em Physique théorique - {T9} {Physique} {Statistique}}.
+\newblock Éditions {Mir} {Moscou}. 1990.
+
+\bibitem{pelissetto_critical_2002}
+Andrea Pelissetto and Ettore Vicari.
+\newblock Critical {Phenomena} and {Renormalization}-{Group} {Theory}.
+\newblock {\em Physics Reports}, 368(6):549--727, October 2002.
+\newblock arXiv: cond-mat/0012164.
+
+\bibitem{cahn_free_nodate}
+John~W Cahn and John~E Hilliard.
+\newblock Free {Energy} of a {Nonuniform} {System}. {I}. {Interfacial} {Free}
+  {Energy}.
+\newblock page~11.
+
+\bibitem{langer_new_1975}
+J.~S. Langer, M.~Bar-on, and Harold~D. Miller.
+\newblock New computational method in the theory of spinodal decomposition.
+\newblock {\em Physical Review A}, 11(4):1417--1429, April 1975.
+
+\bibitem{kawasaki_growth_1978}
+Kyozi Kawasaki, Mehmet~C. Yalabik, and J.~D. Gunton.
+\newblock Growth of fluctuations in quenched time-dependent {Ginzburg}-{Landau}
+  model systems.
+\newblock {\em Physical Review A}, 17(1):455--470, January 1978.
+
+\bibitem{cardozo_finite_2015}
+David~Lopes Cardozo and Peter Holdsworth.
+\newblock {\em Finite size scaling et force de {Casimir} critique: aimants
+  d'{Ising} et fluides binaires}.
+\newblock PhD thesis, Ecole normale supérieure de lyon-ENS LYON, 2015.
+
+\bibitem{h_b_g_casimir_attraction_1948}
+H.~B.~G. Casimir.
+\newblock On the attraction between two perfectly conducting plates.
+\newblock {\em Royal Netherlands Academy of Arts and Sciences,},
+  51(7):793--498, 1948.
+
+\bibitem{nikolic_is_2017}
+Hrvoje Nikolić.
+\newblock Is zero-point energy physical? {A} toy model for {Casimir}-like
+  effect.
+\newblock {\em Annals of Physics}, 383, 2017.
+
+\bibitem{nguyen_controlling_2013}
+Van~Duc Nguyen, Suzanne Faber, Zhibing Hu, Gerard~H. Wegdam, and Peter Schall.
+\newblock Controlling colloidal phase transitions with critical {Casimir}
+  forces.
+\newblock {\em Nature Communications}, 4(1), June 2013.
+
+\bibitem{bray_interface_2001}
+Alan~J. Bray, Andrea Cavagna, and Rui D.~M. Travasso.
+\newblock Interface fluctuations, {Burgers} equations, and coarsening under
+  shear.
+\newblock {\em Physical Review E}, 65(1):016104, December 2001.
+
+\bibitem{edwards_surface_1982}
+S.~F. Edwards and D.~R. Wilkinson.
+\newblock The {Surface} {Statistics} of a {Granular} {Aggregate}.
+\newblock {\em Proceedings of the Royal Society of London. Series A,
+  Mathematical and Physical Sciences}, 381(1780):17--31, 1982.
+
+\bibitem{kardar_dynamic_1986}
+Mehran Kardar, Giorgio Parisi, and Yi-Cheng Zhang.
+\newblock Dynamic {Scaling} of {Growing} {Interfaces}.
+\newblock {\em Physical Review Letters}, 56(9):889--892, March 1986.
+
+\bibitem{miettinen_experimental_2005}
+L.~Miettinen, M.~Myllys, J.~Merikoski, and J.~Timonen.
+\newblock Experimental determination of {KPZ} height-fluctuation distributions.
+\newblock {\em The European Physical Journal B}, 46(1):55--60, July 2005.
+
+\bibitem{assis_dynamic_2015}
+T.~A.~de Assis and F.~D. A.~Aarão Reis.
+\newblock Dynamic scaling and temperature effects in thin film roughening.
+\newblock {\em Journal of Statistical Mechanics: Theory and Experiment},
+  2015(6):P06023, 2015.
+
+\bibitem{g_foltin_width_1994}
+{G. FOltin}, {K. Oerding}, {Z. Rácz}, {R.L. Workman}, and {R.K.P. Zia}.
+\newblock Width distribution for random-walk interfaces.
+\newblock {\em Physical Review E}, 50(2), 1994.
+
+\bibitem{antal_dynamic_1996}
+Tibor Antal and Zoltán Rácz.
+\newblock Dynamic scaling of the width distribution in {Edwards}-{Wilkinson}
+  type models of interface dynamics.
+\newblock {\em Physical Review E}, 54(3):2256--2260, September 1996.
+
+\bibitem{majumdar_airy_2005}
+Satya~N. Majumdar and Alain Comtet.
+\newblock Airy {Distribution} {Function}: {From} the {Area} {Under} a
+  {Brownian} {Excursion} to the {Maximal} {Height} of {Fluctuating}
+  {Interfaces}.
+\newblock {\em Journal of Statistical Physics}, 119(3-4):777--826, May 2005.
+
+\bibitem{kawasaki_diffusion_1966}
+Kyozi Kawasaki.
+\newblock Diffusion {Constants} near the {Critical} {Point} for
+  {Time}-{Dependent} {Ising} {Models}. {I}.
+\newblock {\em Physical Review}, 145(1):224--230, May 1966.
+
+\bibitem{kawasaki_correlation-function_1966}
+Kyozi Kawasaki.
+\newblock Correlation-{Function} {Approach} to the {Transport} {Coefficients}
+  near the {Critical} {Point}. {I}.
+\newblock {\em Physical Review}, 150(1):291--306, October 1966.
+
+\bibitem{villain_continuum_1991}
+J.~Villain.
+\newblock Continuum models of crystal growth from atomic beams with and without
+  desorption.
+\newblock {\em Journal de Physique I}, 1(1):19--42, January 1991.
+
+\bibitem{lai_kinetic_1991}
+Z.-W. Lai and S.~Das~Sarma.
+\newblock Kinetic growth with surface relaxation: {Continuum} versus atomistic
+  models.
+\newblock {\em Physical Review Letters}, 66(18):2348--2351, May 1991.
+
+\bibitem{kim_conserved_1994}
+Yup Kim, D.~K. Park, and Jin~Min Kim.
+\newblock Conserved growth in a restricted solid-on-solid model.
+\newblock {\em Journal of Physics A: Mathematical and General}, 27(15):L533,
+  1994.
+
+\bibitem{oliveira_maximal-_2008}
+T.~J. Oliveira and F.~D.~A. Aarão~Reis.
+\newblock Maximal- and minimal-height distributions of fluctuating interfaces.
+\newblock {\em Physical Review E}, 77(4), April 2008.
+
+\bibitem{singha_renormalization_2016}
+Tapas Singha and Malay~K Nandy.
+\newblock A renormalization scheme and skewness of height fluctuations in (1 +
+  1)-dimensional {VLDS} dynamics.
+\newblock {\em Journal of Statistical Mechanics: Theory and Experiment},
+  2016(2):023205, February 2016.
+
+\bibitem{bray_interface_2001-1}
+Alan~J. Bray, Andrea Cavagna, and Rui D.~M. Travasso.
+\newblock Interface fluctuations under shear.
+\newblock {\em Physical Review E}, 64(1):012102, June 2001.
+
+\bibitem{derks_suppression_2006}
+Didi Derks, Dirk G. A.~L. Aarts, Daniel Bonn, Henk N.~W. Lekkerkerker, and
+  Arnout Imhof.
+\newblock Suppression of {Thermally} {Excited} {Capillary} {Waves} by {Shear}
+  {Flow}.
+\newblock {\em Physical Review Letters}, 97(3), July 2006.
+
+\bibitem{leung_field_1986}
+Kwan-tai Leung and John~L. Cardy.
+\newblock Field theory of critical behavior in a driven diffusive system.
+\newblock {\em Journal of Statistical Physics}, 44(3-4):567--588, August 1986.
+
+\bibitem{rikvold_microstructure_2002}
+Per~Arne Rikvold and M.~Kolesik.
+\newblock Microstructure and velocity of field-driven solid-on-solid
+  interfaces: {Analytic} approximations and numerical results.
+\newblock {\em Physical Review E}, 66(6):066116, December 2002.
+
+\bibitem{gonnella_nonequilibrium_2009}
+G.~Gonnella, A.~Pelizzola, L.~Rondoni, and G.~P. Saracco.
+\newblock Nonequilibrium work fluctuations in a driven {Ising} model.
+\newblock {\em Physica A: Statistical Mechanics and its Applications},
+  388(14):2815--2820, July 2009.
+
+\bibitem{smith_driven_2010}
+Thomas~HR Smith.
+\newblock {\em Driven interfaces in the {Ising} model}.
+\newblock PhD thesis, University of Bristol, 2010.
+
+\bibitem{smith_interfaces_2008}
+Thomas H~R Smith, Oleg Vasilyev, Douglas~B Abraham, Anna Maciołek, and
+  Matthias Schmidt.
+\newblock Interfaces in confined {Ising} models: {Kawasaki}, {Glauber} and
+  sheared dynamics.
+\newblock {\em Journal of Physics: Condensed Matter}, 20(49):494237, December
+  2008.
+
+\bibitem{sadhu_non-local_2014}
+Tridib Sadhu, Satya~N. Majumdar, and David Mukamel.
+\newblock Non-local response in a lattice gas under a shear drive.
+\newblock {\em Journal of Physics A: Mathematical and Theoretical},
+  47(50):505005, 2014.
+
+\bibitem{cohen_interface_2016}
+O.~Cohen and D.~Mukamel.
+\newblock Interface localization in the {2D} {Ising} model with a driven line.
+\newblock {\em Journal of Physics A: Mathematical and Theoretical},
+  49(15):155002, 2016.
+
+\bibitem{dean_effect_2020}
+David~S. Dean, Paul Gersberg, and Peter C.~W. Holdsworth.
+\newblock The effect of driving on model {C} interfaces.
+\newblock {\em arXiv:2001.04245 [cond-mat]}, January 2020.
+\newblock arXiv: 2001.04245.
+
+\end{thebibliography}

@@ -1,0 +1,52 @@
+\documentclass[a4paper,11pt]{report}
+\usepackage[utf8]{inputenc} % accents
+\usepackage[T1]{fontenc} %accents
+\usepackage{lmodern}
+\usepackage{xcolor} % pour colorier
+\usepackage{hyperref} % pour mettre les liens cliquants
+
+% Maths
+\usepackage{amsmath}
+\usepackage{geometry}
+\usepackage{amssymb}
+\DeclareMathOperator{\sign}{sign}
+% Figures
+\usepackage[final]{graphicx}
+\usepackage{subcaption}
+\usepackage{tikz}
+\setkeys{Gin}{width=10cm} %% largeur par défaut
+\geometry{hmargin=2.5cm,vmargin=1.5cm}
+% Links in refs
+\usepackage{hyperref}
+\usepackage{comment}
+
+%Pour mettre une page en paysage
+\usepackage{lscape}
+
+% Commandes personnalisées 
+\newcommand{\nn}{\nonumber \\} % newline sans nombre dans align
+
+\begin{document}
+\begin{comment}
+\tableofcontents
+
+
+\chapter{State of the Art}
+
+\chapter{Numerical procedures}
+\input{numerical/method.tex}
+
+\chapter{The Models}
+\input{models/modele.tex}
+
+\chapter{Transfer Matrix}
+\input{tm/tm-explications.tex} 
+
+\chapter{Numerical results}
+\input{resultat/res.tex} 
+\end{comment}
+
+%\chapter{Kawasaki and Glauber}
+\input{kawglau/kawglau.tex}
+
+\end{document}

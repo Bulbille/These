@@ -1,0 +1,11 @@
+# Fdb version 3
+["pdflatex"] 1567419042 "kawglau.tex" "kawglau.pdf" "kawglau" 1567419042
+  "/etc/texmf/web2c/texmf.cnf" 1552406724 475 c0e671620eb5563b2130f56340a5fde8 ""
+  "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1503343927 31343 93828589fb0cea665e553ee5a17ad2d4 ""
+  "/usr/share/texmf/web2c/texmf.cnf" 1503343927 31343 93828589fb0cea665e553ee5a17ad2d4 ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1552406809 718487 6c24220b468e92c382c10da5e40fbc6c ""
+  "kawglau.aux" 1561472222 8 a94a2480d3289e625eea47cd1b285758 ""
+  "kawglau.tex" 1567419042 780 1d16a660dff743188f1cf646d7c7a596 ""
+  (generated)
+  "kawglau.log"
+  "kawglau.pdf"

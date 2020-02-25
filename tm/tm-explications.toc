@@ -1,0 +1,8 @@
+\contentsline {section}{\numberline {1}General considerations on the Transfer Matrix}{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}Density probability}{2}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Free energy}{3}{subsection.1.2}
+\contentsline {section}{\numberline {2}SOS Hamiltonian}{5}{section.2}
+\contentsline {subsection}{\numberline {2.1}Model $g(i) = h_i$ (model A)}{5}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Model $g(i) = |h_i|$ (model B)}{6}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Model $g(i) = -|h_i|$ (model C)}{7}{subsection.2.3}
+\contentsline {section}{\numberline {3}Numerical results}{10}{section.3}

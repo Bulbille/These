@@ -1,0 +1,82 @@
+This is BibTeX, Version 0.99d (TeX Live 2019/dev/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: main.aux
+The style file: unsrt.bst
+Database file #1: biblio.bib
+Warning--I didn't find a database entry for ""
+Warning--I didn't find a database entry for "matrice_transfert"
+Warning--I didn't find a database entry for "guyer1979"
+Warning--I didn't find a database entry for "chui"
+Warning--I didn't find a database entry for "delville"
+Warning--I didn't find a database entry for "barkema"
+Warning--I didn't find a database entry for "gibbs"
+Warning--I didn't find a database entry for "wanslebenlandau1991_3disingmodel"
+Warning--I didn't find a database entry for "netz2003"
+Warning--I didn't find a database entry for "dzub2002"
+Warning--I didn't find a database entry for "chak2003"
+Warning--I didn't find a database entry for "chak2004"
+Warning--I didn't find a database entry for "lowe2009"
+Warning--I didn't find a database entry for "glan2012"
+Warning--I didn't find a database entry for "klym2016"
+Warning--I didn't find a database entry for "onsager"
+Warning--I didn't find a database entry for "dean1996"
+Warning--I didn't find a database entry for "bray2001"
+Warning--I didn't find a database entry for "bray2002"
+Warning--I didn't find a database entry for "hem1996"
+Warning--I didn't find a database entry for "dem2016"
+Warning--I didn't find a database entry for "dean2016"
+Warning--I didn't find a database entry for "leun1993"
+Warning--I didn't find a database entry for "gros2015"
+Warning--I didn't find a database entry for "lu2015"
+Warning--I didn't find a database entry for "zia1991"
+Warning--I didn't find a database entry for "derks2006"
+Warning--I didn't find a database entry for "smith2008"
+Warning--I didn't find a database entry for "smith2010"
+Warning--I didn't find a database entry for "katz1984"
+Warning--I didn't find a database entry for "schm1995"
+Warning--I didn't find a database entry for "schm1998"
+Warning--empty publisher in l_landau_physique_1990
+Warning--empty journal in cahn_free_nodate
+Warning--empty year in cahn_free_nodate
+You've used 38 entries,
+            1791 wiz_defined-function locations,
+            704 strings with 10001 characters,
+and the built_in function-call counts, 8339 in all, are:
+= -- 752
+> -- 351
+< -- 1
++ -- 132
+- -- 94
+* -- 681
+:= -- 1360
+add.period$ -- 118
+call.type$ -- 38
+change.case$ -- 34
+chr.to.int$ -- 0
+cite$ -- 41
+duplicate$ -- 339
+empty$ -- 807
+format.name$ -- 94
+if$ -- 1788
+int.to.chr$ -- 0
+int.to.str$ -- 38
+missing$ -- 38
+newline$ -- 196
+num.names$ -- 38
+pop$ -- 55
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 135
+stack$ -- 0
+substring$ -- 616
+swap$ -- 42
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 3
+while$ -- 84
+width$ -- 40
+write$ -- 422
+(There were 35 warnings)

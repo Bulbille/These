@@ -1,0 +1,244 @@
+\chapter{Rappels théoriques sur les interfaces}
+
+Prenons un système composé de deux types de particules A et B qui se repoussent mutuellement, comme un ensemble liquide/gaz ou un fluide binaire du genre vinaigrette. À chaque point de l'espace $x$ on peut associer la présence de la particule la plus proche par la fonction $n(x,t) = A \text{ ou } B$. Ici, les particules sont supposées indiscernables entre elles. Dans le cas où les particules seraient discernables, ce qui n'est jamais le cas dans les expériences mais l'est dans les simulations numériques, il est plus correct d'invertir la fonction par $n_i(t) = x$, où $i$ est le label de chaque particule, qu'elle soit de type A ou B. 
+Il est plus convenable que la fonction $n(x,t)$ donne un nombre plutôt qu'un type de particules. Nous supposons que les deux types de particules $A$ et $B$ se comportent comme des pôles électriques de signe opposés, puisque qu'elles s'attirent entre particules du même type mais se repoussent si elles ne le sont pas. Le module de la force d'interaction entre particules peut toujours être factorisée en dehors de la fonction de partition, si bien que l'on peut poser que
+\begin{align}
+    n(x,t) = \begin{cases} -1 &\text{ si particule A} \\ 1 &\text{ si particule B}  \end{cases}
+\end{align}
+Une fois définie cette fonction, un paramètre d'ordre convenable est la magnétisation totale du système
+\begin{align}
+    m(t) = <n(x,t)>_x = \int d^dx  n(x,t)
+\end{align}
+Les particules ont la possibilité de réagir par la réaction chimique $A \leftrightarrow B$ dans un système chimique, par inversion de spin dans un système ferromagnétique, ou par échange avec un réservoir si l'échelle de temps de l'échange est bien inférieure à l'échelle de temps du système. Dans tous ces cas, le paramètre d'ordre $m(t)$ n'est pas conservé et, si nous sommes à l'équilibre thermodynamique, fluctue autour d'une valeur moyenne $m$.  Dans la classification de Hohenberg et Halperin\cite{hohenberg_theory_1977}, ces systèmes appartiennent au \textbf{modèle A}, qui décrit les systèmes dans l'ensemble grand-canonique.
+
+Les particules peuvent également diffuser par échange de place entre deux particules voisines, et aucune particule ne peut être créée ou détruite. Le paramètre d'ordre est maintenant conservé dans le temps. Il est possible d'imposer, via les conditions initiales, un paramètre d'ordre à l'équilibre thermodynamique canonique différent de celui que l'on aurait dans l'ensemble grand-canonique. Ces systèmes sont décrits par le \textbf{modèle B}.
+
+Dans ce chapitre, nous introduisons les principaux résultats de la physique des interfaces dans chaque ensemble thermodynamique, ainsi que les principales méthodes d'analyse. Pour de plus complètes informations, se référer à \cite{hohenberg_theory_1977,bray_theory_1994,krapivsky_kinetic_2010,halpin-healy_kinetic_1995}.
+
+    \section{Théorie de champ moyen}
+
+Une connaissance parfaite de la fonction de partition nécessite de connaître en tout temps la position de toutes la particules. Les appareils de mesure possèdent tous une résolution spatiale et temporelle, c'est-à-dire qu'ils mesurent l'état moyen de toutes les particules dans un volume et dans un laps de temps donné. Plus la résolution des appareils est bonne, et plus la mesure de la fonction de partition est précise. 
+Concrètement, l'appareil de mesure nous donne un champ moyen $\phi(x,t)$ de notre système, qui correspond à l'intégration sur un petit volume autour de $x$ et une petite durée de temps autour de $t$ de $n(x,t)$. 
+Puisque ce champ moyen représente une densité, de particules $A$ et $B$ de valeur $-1$ et $+1$ respectivement, la fonction $\phi$ a pour valeurs dans $[-1,1]$.
+Par exemple, on peut dire que si à un endroit et à un temps donné, il n'y que des particules de type A, $\phi(x,t)=-1$, tandis que $\phi(r,t)=+1$ pour les particules B. Le paramètre d'ordre est maintenant donné par
+\begin{align}
+    m(t) = <\phi(x,t)>_x = \int d^dx  \phi(x,t)
+\end{align}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\linewidth]{intro/clusterization.pdf}
+    \caption{Phénomène d'aggrégation à partir d'un refroidissement (\textit{quench}) dans un modèle d'Ising de $T=\infty$ à $T=T_C$ pour différents temps en étapes de Monte Carlo, pour un système $600 \times 600$ avec une dynamique non-conservée de Glauber. La longueur de corrélation croît ici comme $\xi(t) \propto t^{\frac{1}{2}}$.}
+    \label{clusterization}
+\end{figure}
+
+À température non nulle, les fluctuations thermiques vont créer un système non-uniforme possédant des clusters possédant une longueur de corrélation $\xi$. L'énergie d'interaction de ces clusters est donné par l'Hamiltonien de Ginzburg-Landau\cite[§ 45]{l_landau_physique_1990}
+\begin{align}
+    H_0 &= \int d^dx \frac{\sigma}{2}(\nabla \phi)^2 + V(\phi) =  \int d^dx \frac{\sigma}{2}(\nabla \phi)^2 + \frac{\lambda}{2}(\phi^2-1)^2
+    \label{hamil-mean-field}
+\end{align}
+où le premier terme correspond à la tension superficielle cherchant à diminuer les variations au sein du système, et le second terme est un potentiel en double puit simulant une interaction repoussante entre les deux types de particules. En l'absence de ce terme, la minimisation locale de l'énergie favoriserait un système homogène et uniforme complètement mélangé, comme dans la première image de la figure \ref{clusterization}.
+
+Dans les expériences en laboratoire, les systèmes sont souvent couplés à des champs magnétiques ou chimiques $h(x)$ d'Hamiltonien
+\begin{align}
+    H_1 &= \int d^dx h(x)\phi(x)
+    \label{champ-externe}
+\end{align}
+qui induit un changement de stabilité entre les phases. 
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{intro/shift.pdf}
+    \caption{Potentiel en double puits \ref{hamil-mean-field} pour $\lambda = 1$ en bleu. Le potentiel a deux positions d'équilibre stables à $\pm1$, ce qui induit une séparation de phase. En orange, l'ajout d'un champ externe \ref{champ-externe} constant $h \phi(x)$ rend la phase $+1$ métastable.}
+\end{figure}
+
+La fonction de partition du système s'écrit
+\begin{align}
+    \mZ = \int D[\phi] e^{-\beta( H)}
+\end{align}
+avec $H= H_0 + H_1$. Dans le cas où le paramètre d'ordre est conservé avec pour valeur fixe $M$, un terme supplémentaire égal à $\delta(\int d^dx \phi(x)-M)$ apparaît. Ce terme empêche toute résolution analytique de la fonction de partition, mais nous verrons plus tard certaines méthodes pour contourner ce problème.
+La valeur moyenne de $\phi$ est alors
+\begin{align}
+    <\phi> = - \frac{1}{\beta} \frac{\delta \mZ}{\delta h(x)} = - \frac{1}{\beta} <\frac{\delta H}{\delta h(x)} >
+\end{align}
+qui est nul en l'absence d'un champ extérieur $h(x)$. La fonction de corrélation à deux points de cet Hamiltonien est donné par 
+\begin{align}
+    C(x,y) = <m(x)m(y)> =  \frac{k_B T}{\sigma} \int_q \frac{e^{iq(x-y)}}{\xi^{-2}+ \sigma q^2}
+\end{align}
+et le facteur de structure  par
+\begin{align}
+    S(k) = <m(k)m(-k)> = (2\pi)^d  \frac{k_B T}{\sigma} \frac{1}{\xi^{-2}+ \sigma q^2}
+\end{align}
+où l'on voit apparaître ici la longueur de corrélation à l'équilibre $\xi$. 
+
+Dans l'ensemble grand-canonique, les particules ont la possibilité de se transformer en d'autres particules par réaction chimique ou par exemple inversion des spins dans un système ferromagnétique. L'équation dépendante du temps de Ginzburg-Landau (TDGL) décrit l'évolution du champ moyen en minimisant l'énergie libre du système
+\begin{align}
+    \frac{\partial \phi}{\partial t} &= - \alpha \frac{\delta H}{\delta \phi} 
+    \label{tdgl}
+\end{align}
+Le terme $\alpha$ est un coefficient cinétique décrivant le temps de relaxation du système. La minimisation de l'énergie tend à minimiser l'interface entre les différentes phases ainsi qu'à privilégier les phases homogènes. Dans un système infini, afin de minimiser la tension superficielle, les clusters grandissent au fur et à mesure de sorte que la longueur de corrélation $\xi$, qui décrit la longueur typique des phases, augmente comme $\xi(t) \propto t^{1/2}$.
+
+Ces clusters sont définis pas l'interface\footnote{Dans les systèmes 1D, on retrouve le terme de mur entre deux domaines (\textit{domain wall}).} comme une courbe imaginaire où nous avons, en moyenne, un très fort gradient du champ $\phi$. 
+En considérant que de part et d'autre du système nous avons deux phases différentes complètement homogènes selon l'axe des $z$, c'est-à-dire $\phi(z \to -\infty) = -1$ et $\phi(z \to +\infty) = +1$, on peut minimiser l'énergie libre selon $z$ afin d'obtenir le profil de l'interface. L'équation $\frac{\delta H}{\delta \phi} = 0$ nous donne une équation différentielle du second ordre en $\phi$ qui a pour solution selon l'axe $z$
+\begin{align}
+    \phi(z) = \tanh(\frac{1}{\xi_\perp} (z-h))
+    \label{profil-phi}
+\end{align}
+où $\phi(z)$ est moyennée sur les autres variables spatiales et sur le temps, $\xi_\perp = (2\lambda)^{-\frac{1}{2}}$ est la largeur moyenne de l'interface, et $h$ est la hauteur moyenne de l'interface, que l'on peut fixer comme on le désire. Bien sûr, cette équation n'est valable qu'à la frontière entre deux domaines. Proche d'une transition de phase, la longueur de corrélation de l'interface $\xi_\perp$  diverge selon des exposants critiques spécifiques à chaque classe d'universalité. Pour une étude complète des exposants critiques pour chaque classe d'universalité, se référer à \cite{pelissetto_critical_2002}. 
+
+La tension superficielle est donnée par l'énergie apportée par l'interface comparée à un milieu parfaitement homogène, c'est-à-dire où le terme $\frac{1}{2}(\nabla \phi)^2$ de l'hamiltonien est nul. La densité d'énergie par unité de surface est donc
+\begin{align}
+    \sigma = H_{inhomogène} - H_{homogène} = \int_{-\infty}^\infty dz \left(\frac{\partial \phi}{\partial z} \right)^2
+\end{align}
+
+Dans le \textbf{modèle B}, c'est-à-dire dans l'ensemble canonique, les particules ne peuvent réagir chimiquement entre elles. Avec l'agitation thermique, les particules auront cependant tendance à se déplacer, en échangeant leur position avec celle de leur plus proche voisin. Cette dynamique locale, qui décrit les phénomènes locaux comme la diffusion, est régie par l'équation de Cahn-Hillard\cite{cahn_free_nodate,langer_new_1975,kawasaki_growth_1978}
+\begin{align}
+    \frac{\partial \phi}{\partial t} = D \nabla^2 \frac{\delta H}{\delta \phi} 
+    \label{cahn-hillard}
+\end{align}
+où $D$ est la diffusivité des particules. Dans cette dynamique plus lente, la taille typique des clusters est de l'ordre de $\xi(t) \propto t^{1/3}$.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{intro/profil-KawVsGlau.png}
+    \caption{Profil de l'interface pour un paramètre d'ordre conservé (orange) et non-conservé (bleu) avec les conditions aux limites $\phi(+\infty)-1$ et $\phi(+\infty)=+1$. Pour le modèle non-conservé, la résolution de l'équation \label{langevin-kawasaki} nécessite deux autres conditions supplémentaires. Nous avons donc mis $\phi(-1)=-1$,$\phi(1)=1$,$\phi'(-1)=\phi'(1)=0$. {\color{red} relancer code en résolvant la solution conservée au lieu de tanh(2x). Besoin mathematica.}}
+\end{figure}
+
+L'ajout d'un terme de bruit thermique aux équations de Langevin \ref{tdgl} et \ref{cahn-hillard} leur donne une la même allure que les modèles \textbf{A} et \textbf{B} respectivement de la théorie de la dynamique au point critique\cite{hohenberg_theory_1977}. Les équations précédents sont bien une approximation à $T=0$.
+
+
+    \section{Taille finie et effet Casimir critique}
+    
+Sans perte de généralités en 3D, supposons un système de taille $L\times L' $ où $L<L'$. L'énergie libre $F(\beta,L,L') = - \frac{1}{\beta} \ln ( Z(\beta,L,L'))$ est une grandeur extensive lorsque la longueur de corrélation est plus petite que la taille du système $L$. 
+Cette énergie libre peut se décomposer entre l'énergie de chaque phase $\omega_{bulk}$ et l'énergie de tension superficielle aux interfaces $\omega_{surf}$ \cite[§4]{cardozo_finite_2015}. À noter qu'à haute température dans un système complètement homogène, ce dernier terme disparaît.
+
+Cependant, lorsque $\xi \simeq L$, la contrainte exercée sur les fluctuations thermiques par les conditions aux bords implique une modification de l'énergie libre, créant une force les parois. Cet effet, premièrement prédit Hendrik Casimir\cite{h_b_g_casimir_attraction_1948}, fut étendu aux systèmes critiques\cite{nikolic_is_2017}, où la divergence de la longueur de corrélation rend les expériences bien plus faciles\cite{nguyen_controlling_2013}.
+
+L'énergie libre d'un tel système se décompose maintenant en 
+\begin{align}
+    \Omega(\beta,L,L') = L \omega_{bulk}(\beta) + \omega_{surf}(\beta) + L \omega_{ex}(\beta,L)
+    \label{decomposition-energie}
+\end{align}
+où $\omega_{bulk}(L)$ est le surplus d'énergie libre due au confinement des fluctuations, qui devient nul dans la limite $L\to \infty$.
+
+La force de confinement est définit par 
+\begin{align}
+    F_\perp(\beta,L) = - \frac{1}{L' }\frac{\partial \Omega}{\partial L} \bigg|_{\beta,L'} = -  \omega_{bulk}(\beta) -  \frac{\partial \omega_{ex}(\beta,L)}{\partial L}\bigg|_{\beta,L'}
+\end{align}
+où le premier terme est la pression exercée par le système, tandis que le second terme est la force de Casimir, qui n'est pas extensive. Afin d'extraire la force de Casimir, il suffit alors de soustraire deux quantités extensives, c'est-à-dire 
+\begin{align}
+    F_\perp(\beta,L_1) - F_\perp(\beta,L_2) =   \frac{\partial \omega_{ex}(\beta,L_2)}{\partial L_2}\bigg|_{\beta,L'} -  \frac{\partial \omega_{ex}(\beta,L_1)}{\partial L_1}\bigg|_{\beta,L'}
+\end{align}
+Puisque le surplus d'énergie est nul lorsque $L\to \infty$, on obtient que
+\begin{align}
+    F_\perp(\beta,L_1) - F_\perp(\beta,\infty) =   -  \frac{\partial \omega_{ex}(\beta,L_1)}{\partial L_1}\bigg|_{\beta,L'}
+\end{align}
+Cardozo et Holdsworth\cite[§5]{cardozo_finite_2015} ont développé une méthode numérique de calcul pour calculer numériquement cet excès. Nous y reviendrons plus tard.
+
+
+
+
+    \section{Modèles d'interface}
+
+Dans la réalité, les phases sont extrêmement inhomogènes, avec des bulles ou des digitations qui empêchent une description dynamique aisée de l'interface. Si l'on désire étudier l'interface de ces bulles ou digitations, où localement l'interface est bien définie par une fonction d'une seule variable, l'approche du champ moyen suffit. C'est le cas par exemple des régimes d'échelle (\textit{scaling regime}) où les interfaces se comportent toujours de façon correcte. De la même manière, ce régime d'échelle peut s'obtenir dans un milieu inhomogène en supposant qui'il est, au contraire, homogène. On suppose dans ce cas qu'il n'y a ni digitation ni bulles d'évaporation. Dans cette approximation l'interface est parfaitement définie en un point $h(x)$ (et non dans un profil comme dans \ref{profil-phi}. Tous les points du champ se trouvant en bas de l'interface prennent une unique valeur strictement différente de tous les points du champ au-dessus de l'interface. Sans perte de généralité, nous pouvons séparer les variables spatiales par $x$ pour toutes les coordonnées parallèles à l'interface et par $z$ la coordonnée transverse. Cela se traduit par
+\begin{align}
+    \phi(z) = f(z-h(x))
+    \label{capillary-wave-theory}
+\end{align}
+où $f(x\greater 0) = \phi_1$ et $f(x\less 0) = \phi_2$. Notre système est maintenant complètement défini par l'interface $h(x)$ d'Hamiltonien
+\begin{align}
+    H = \int d^d x \frac{\sigma}{2} (\nabla h(x))^2 + V(h)
+    \label{hamil-cwt}
+\end{align}
+où le premier terme est l'analogue au premier terme dans \ref{hamil-mean-field} représentant la tension superficielle et le potentiel $V$ fait référence au champ externe \ref{champ-externe}. 
+Une interface se caractérise le plus généralement sa hauteur moyenne $<h(t)>$ de l'interface dans l'espace, et sa fonction de corrélation parallèle à l'interface qui décrit les modes de fluctuation de l'interface (sa rugosité)
+\begin{align}
+    C_\parallel(r,t) = <h(x,t)h(x+r,t)>_x - <h(0,t)>^2 = \sum_i A_i(\frac{r}{\xi_i}) 
+\end{align}
+Comme démontré dans la section \ref{sec_laser}, la décroissance spatiale est une somme de modes $i$ ayant des longueurs de corrélation différentes $\xi_i$ à décroissance exponentielle dont, dans la limite thermodynamique, seul le mode de plus basse énergie est observable. 
+L'épaisseur de l'interface est donnée par $\omega(t) = \sqrt{C_\parallel(0,t)} = \sqrt{<h(t)^2> - <h(t)>^2}$. Cet observable est très facilement calculable dans les simulations de Monte Carlo.
+
+
+    \subsection{Paramètre d'ordre non conservé}
+
+Supposons une surface à laquelle viennent s'agréger des particules provenant d'un réservoir afin de créer un dépot. L'interface est alors définie par la hauteur de l'aggrégat par rapport à la surface de dépôt.
+
+En partant de \ref{tdgl} et en insérant \ref{capillary-wave-theory} avec le changement de variable $u= z-h$, on a \cite{bray_interface_2001}
+\begin{align}
+    \frac{\partial h}{\partial t} f'(u) &= \nabla^2 h f'(u) - V'(f) + \xi(x,t)
+\end{align}
+avec $\xi(x,t)$ un bruit blanc gaussien. En multipliant les deux côtés par $f'(u)$ et en intégrant de $-\infty$ à $+\infty$, puisque le terme $ \int_{-\infty}^\infty V'(f) f'(u) du = 0$, on obtient l'équation d'Edwards-Wilkinson \cite{edwards_surface_1982} 
+\begin{align}
+     \frac{\partial h}{\partial t} = D + D \nabla^2 h +  \eta(x,t)
+    \label{edwards-wilkinson}
+\end{align}
+où $\eta(x,t)$ est un bruit blanc de moyenne nulle et de corrélation 
+\begin{align}
+    <\eta(x,t)\eta(x',t')> = 2 D T\delta(x-x')\delta(t-t')
+\end{align}
+Ici $D+ \sqrt{2 D T} \eta(x,t)$ est le flux de particules s'aggrégeant en fonction du temps et $D \nabla^2 h$ dépend de la forme de l'interface, favorisant ou non le dépôt de particules à certains endroits.
+La hauteur moyenne de l'interface varie donc comme $<h(t)> = Dt$. En se positionant dans le référentiel de l'interface via la transformation $h \rightarrow h + Dt$, on obtient
+\begin{align}
+     \frac{\partial h}{\partial t} =   \nabla^2 h +   \eta(x,t)
+    \label{edwards-wilkinson-conesrved}
+\end{align}
+On remarquera la similarité entre cette équation et l'équation \ref{tdgl} en l'absence de potentiel en double puits et de champ externe.
+
+L'ajoute d'un potentiel en double puits est cependant nécessaire afin d'obtenir une séparation de phases. L'équation KPZ\cite{kardar_dynamic_1986} étudie un champ moyen en $\phi^4$, ce qui introduit des nonlinéarités indispensables pour certaines propriétés des interfaces.
+\begin{align}
+     \frac{\partial h}{\partial t} = D \nabla^2 h +  \lambda (\nabla h)^2 + \eta(x,t)
+    \label{kpz}
+\end{align}
+
+Il est intéressant de calculer la probabilité de distribution de la hauteur de l'interface par rapport à sa moyenne. La probabilité $p(h$) de trouver l'interface à la distande $h$ de la hauteur moyenne est donnée par l'équation de Focker-Planck\cite[p.241]{halpin-healy_kinetic_1995} associée à \ref{edwards-wilkinson-conesrved}
+\begin{align}
+    \frac{\partial p(h,t)}{\partial t} = - \int dx \frac{\delta}{\delta h} \left[ \left( D \nabla^2 h + \frac{\lambda}{2} (\nabla h) ^2 \right) p \right] + \int dx \frac{\delta^2 p}{\delta^2 h}
+    \label{fokker-planck}
+\end{align}
+Dans le régime stationnaire $ \frac{\partial p(h,t)}{\partial t} = 0$ en une dimension, on trouve la distribution
+\begin{align}
+    p(h) = e^{-\frac{D}{2}\int_0^L dx (\nabla h)^2}
+    \label{stationary-distribution}
+\end{align}
+Cette distribution gaussienne ne prend pas en compte le terme nonlinéaire de l'équation KPZ, qui a donc, à l'équilibre en une dimension, le même profil que l'interface EW. Des études du profil KPZ dans le régime transient \cite{miettinen_experimental_2005,assis_dynamic_2015,g_foltin_width_1994,antal_dynamic_1996} donnent des résultats non symmétriques, puisque l'interface bouge avec le temps.
+
+D'autres études de l'équation EW avec des conditions aux bords périodiques $h(0)=h(L)=0$ en 1+1 dimensions, prouve que l'hypothèse du régime d'échelle est justifié\cite{majumdar_airy_2005}, puisque la distribution de l'interface est de la forme 
+\begin{align}
+    P(h,L) = L^{-\frac{1}{2}} f(h L^{-\frac{1}{2}} )
+\end{align}
+avec la fonction $f(x)$ montré sur la figure \ref{fig-airy-majumdar}. L'exposant $\frac{1}{2}$ est l'exposant critique du modèle KPZ en une dimension.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{intro/airyplot-majumdar.png}
+    \caption{Fonction $f(x$) de la distribution des hauteurs d'une interface Edwards-Wilkinson avec des conditions aux bords périodiques\cite{majumdar_airy_2005} en 1+1 dimensions.}
+     \label{fig-airy-majumdar}
+\end{figure}
+
+
+    \subsection{Paramètre d'ordre conservé}
+
+Si l'on se place dans le référentiel du centre de l'interface, les équations \ref{edwards-wilkinson-conesrved} et \ref{kpz} conservent le paramètre d'ordre en moyenne. Néanmoins, la transformation $h \rightarrow h + Dt$ ne prend pas en compte les fluctuations thermiques qui viennent perturber l'interface, ce qui fait que $h(t) \neq cte$. L'astuce vient ici de \cite{kawasaki_diffusion_1966,kawasaki_correlation-function_1966}, où l'on reprend l'équation de Cahn-Hilliard-Cook pour les interfaces
+\begin{align}
+    \frac{\partial h}{\partial t} = D \nabla^2 \frac{\delta H}{\delta h} +  \eta(x,t)
+\end{align}
+qui nous donne l'équation Villain-Lai-Das Sarma\cite{villain_continuum_1991,lai_kinetic_1991}
+\begin{align}
+    \frac{\partial h}{\partial t} = - D \nabla^4 h + \lambda \nabla^2 (\nabla h) ^2 +  \eta(x,t)
+\end{align}
+qui a fait l'objet de nombreuses études\cite{kim_conserved_1994,assis_dynamic_2015}.
+
+L'intérêt d'un tel système est qu'il est contraint à une dynamique locale qui permet d'obtenir un système hors-équilibre. La distribution de la hauteur de l'interface respecte ici aussi le régime d'échelle  \cite{oliveira_maximal-_2008,singha_renormalization_2016} dans le régime transient. 
+
+    \section{Cisaillement d'une interface}
+
+Il suffit d'avoir une force non conservative dans le système pour qu'il soit hors-équilibre, le cisaillement en est l'expression la plus simple. Le cisaillement intervient dans la sédimentation des particules, le mouvement forcé de certaines particules chargées dans un champ électrique ou bien par la pression de radiation exercée par un laser. 
+Dans un cisaillement, certaines particules ont tendance à bouger préférentiellement dans un sens par rapport aux autres particules, impliquant un flux non nul. Cette dynamique étant locale, elle ne peut exister que si le paramètre d'ordre est conservé. L'équation générale d'un système d'interface avec un cisaillement est\cite{bray_interface_2001-1,bray_interface_2001}
+\begin{align}
+     \frac{\partial h}{\partial t} + v \nabla h =  \mathcal{L} h +  \eta(x,t)
+     \label{eq-cisaillement}
+\end{align}
+où l'opérateur $\mathcal{L}$ est associé au modèle A ou B, et le terme $v \nabla v$ est un terme de d'advection du au flux produit par le cisaillement. 
+
+
+Le cisaillement le plus évident est un cisaillement homogène, par exemple un champ gravitationel qui sédimente les particules. Dans ce cas, le champ de vitesse $v$ étant constant, l'équation \ref{eq-cisaillement} est invariante par la transformation galiléenne $x \rightarrow x+vt$. 
+Néanmoins de nombreuses expériences\cite{derks_suppression_2006} et simulations numériques \cite{leung_field_1986,rikvold_microstructure_2002,gonnella_nonequilibrium_2009,smith_driven_2010,smith_interfaces_2008,sadhu_non-local_2014,cohen_interface_2016} montrent que le cisaillement provoque un confinement de l'interface. Dans les expériences, cette invariance galiléenne est brisée par la disparité du champ de vitesse sur les différentes particules, comme expliqué en détail au chapitre \ref{chap-article-dean} \footnote{Ce chapitre a été publié dans \cite{dean_effect_2020}.}
+Pour les simulations numériques, l'invariance est brisée par la dynamique même du système, puisque les mouvements sont fait séquentiellement. 
