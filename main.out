@@ -1,47 +1,48 @@
 \BOOKMARK [0][-]{chapter*.2}{Introduction}{}% 1
 \BOOKMARK [0][-]{chapter.1}{Rappels th\351oriques sur les interfaces}{}% 2
-\BOOKMARK [1][-]{section.1.1}{Th\351orie de champ moyen}{chapter.1}% 3
-\BOOKMARK [1][-]{section.1.2}{Taille finie et effet Casimir critique}{chapter.1}% 4
-\BOOKMARK [1][-]{section.1.3}{Mod\350les d'interface}{chapter.1}% 5
-\BOOKMARK [2][-]{subsection.1.3.1}{Param\350tre d'ordre non conserv\351}{section.1.3}% 6
-\BOOKMARK [2][-]{subsection.1.3.2}{Param\350tre d'ordre conserv\351}{section.1.3}% 7
-\BOOKMARK [1][-]{section.1.4}{Cisaillement d'une interface}{chapter.1}% 8
-\BOOKMARK [0][-]{chapter.2}{Mod\350le Solid-On-Solid}{}% 9
-\BOOKMARK [1][-]{section.2.1}{Hamiltonien}{chapter.2}% 10
-\BOOKMARK [1][-]{section.2.2}{Matrice de Transfert}{chapter.2}% 11
-\BOOKMARK [1][-]{section.2.3}{Stabilit\351 de l'interface}{chapter.2}% 12
-\BOOKMARK [1][-]{section.2.4}{Ensemble canonique}{chapter.2}% 13
-\BOOKMARK [1][-]{section.2.5}{Indiscernabilit\351 des particules : Particle-Over-Particle}{chapter.2}% 14
-\BOOKMARK [0][-]{chapter.3}{Simulations}{}% 15
-\BOOKMARK [1][-]{section.3.1}{Algorithme de Metropolis}{chapter.3}% 16
-\BOOKMARK [2][-]{subsection.3.1.1}{Ensemble grand-canonique : algorithme de Glauber}{section.3.1}% 17
-\BOOKMARK [2][-]{subsection.3.1.2}{Ensemble canonique : algorithme de Kasawaki}{section.3.1}% 18
-\BOOKMARK [2][-]{subsection.3.1.3}{Dynamique hors-\351quilibre}{section.3.1}% 19
-\BOOKMARK [2][-]{subsection.3.1.4}{Mod\350le POP}{section.3.1}% 20
-\BOOKMARK [0][-]{chapter.4}{R\351sultats pour le mod\350le SOS}{}% 21
-\BOOKMARK [1][-]{section.4.1}{Diff\351rences Glauber/Kawasaki}{chapter.4}% 22
-\BOOKMARK [1][-]{section.4.2}{Effet du cisaillement}{chapter.4}% 23
-\BOOKMARK [2][-]{subsection.4.2.1}{Diff\351rences avec le mod\350le d'Ising}{section.4.2}% 24
-\BOOKMARK [1][-]{section.4.3}{Cisaillement avec deux types de particules}{chapter.4}% 25
-\BOOKMARK [2][-]{subsection.4.3.1}{Discussion about the Gaussian model}{section.4.3}% 26
-\BOOKMARK [1][-]{section.4.4}{Interpretation}{chapter.4}% 27
-\BOOKMARK [0][-]{chapter.5}{Champ magn\351tique |hi|}{}% 28
-\BOOKMARK [1][-]{section.5.1}{Mod\350le gaussien}{chapter.5}% 29
-\BOOKMARK [1][-]{section.5.2}{Distribution de l'interface}{chapter.5}% 30
-\BOOKMARK [1][-]{section.5.3}{Fonction de corr\351lation }{chapter.5}% 31
-\BOOKMARK [1][-]{section.5.4}{Conclusion}{chapter.5}% 32
-\BOOKMARK [0][-]{chapter.6}{Mod\350le Particle-Over-Particle }{}% 33
-\BOOKMARK [1][-]{section.6.1}{Particules indiscernables}{chapter.6}% 34
-\BOOKMARK [1][-]{section.6.2}{Avec le SOS}{chapter.6}% 35
-\BOOKMARK [2][-]{subsection.6.2.1}{Modifications de l'algorithme Metropolis}{section.6.2}% 36
-\BOOKMARK [1][-]{section.6.3}{R\351sultats mod\350le A}{chapter.6}% 37
-\BOOKMARK [1][-]{section.6.4}{R\351sultats mod\350le B}{chapter.6}% 38
-\BOOKMARK [1][-]{section.6.5}{R\351sultats mod\350le A+B}{chapter.6}% 39
-\BOOKMARK [0][-]{chapter.7}{A+B POP model : la totale}{}% 40
-\BOOKMARK [1][-]{section.7.1}{Le mod\350le C=A+B}{chapter.7}% 41
-\BOOKMARK [1][-]{section.7.2}{Effective interface dynamics}{chapter.7}% 42
-\BOOKMARK [1][-]{section.7.3}{A model of active interfaces}{chapter.7}% 43
-\BOOKMARK [1][-]{section.7.4}{Conclusions}{chapter.7}% 44
-\BOOKMARK [1][-]{section.7.5}{Acknowledgements}{chapter.7}% 45
-\BOOKMARK [1][-]{section.Alph0.1}{Evaluating Fourier integrals}{chapter.7}% 46
-\BOOKMARK [0][-]{appendix*.19}{Conclusion et perspectives}{}% 47
+\BOOKMARK [1][-]{section.1.1}{Statistical field theory}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.2}{Th\351orie de champ moyen}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.3}{Taille finie et effet Casimir critique}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.4}{Mod\350les d'interface}{chapter.1}% 6
+\BOOKMARK [2][-]{subsection.1.4.1}{Param\350tre d'ordre non conserv\351}{section.1.4}% 7
+\BOOKMARK [2][-]{subsection.1.4.2}{Param\350tre d'ordre conserv\351}{section.1.4}% 8
+\BOOKMARK [1][-]{section.1.5}{Cisaillement d'une interface}{chapter.1}% 9
+\BOOKMARK [0][-]{chapter.2}{Mod\350le Solid-On-Solid}{}% 10
+\BOOKMARK [1][-]{section.2.1}{Hamiltonien}{chapter.2}% 11
+\BOOKMARK [1][-]{section.2.2}{Matrice de Transfert}{chapter.2}% 12
+\BOOKMARK [1][-]{section.2.3}{Stabilit\351 de l'interface}{chapter.2}% 13
+\BOOKMARK [1][-]{section.2.4}{Ensemble canonique}{chapter.2}% 14
+\BOOKMARK [1][-]{section.2.5}{Indiscernabilit\351 des particules : Particle-Over-Particle}{chapter.2}% 15
+\BOOKMARK [0][-]{chapter.3}{Simulations}{}% 16
+\BOOKMARK [1][-]{section.3.1}{Algorithme de Metropolis}{chapter.3}% 17
+\BOOKMARK [2][-]{subsection.3.1.1}{Ensemble grand-canonique : algorithme de Glauber}{section.3.1}% 18
+\BOOKMARK [2][-]{subsection.3.1.2}{Ensemble canonique : algorithme de Kasawaki}{section.3.1}% 19
+\BOOKMARK [2][-]{subsection.3.1.3}{Dynamique hors-\351quilibre}{section.3.1}% 20
+\BOOKMARK [2][-]{subsection.3.1.4}{Mod\350le POP}{section.3.1}% 21
+\BOOKMARK [0][-]{chapter.4}{R\351sultats pour le mod\350le SOS}{}% 22
+\BOOKMARK [1][-]{section.4.1}{Diff\351rences Glauber/Kawasaki}{chapter.4}% 23
+\BOOKMARK [1][-]{section.4.2}{Effet du cisaillement}{chapter.4}% 24
+\BOOKMARK [2][-]{subsection.4.2.1}{Diff\351rences avec le mod\350le d'Ising}{section.4.2}% 25
+\BOOKMARK [1][-]{section.4.3}{Cisaillement avec deux types de particules}{chapter.4}% 26
+\BOOKMARK [2][-]{subsection.4.3.1}{Discussion about the Gaussian model}{section.4.3}% 27
+\BOOKMARK [1][-]{section.4.4}{Interpretation}{chapter.4}% 28
+\BOOKMARK [0][-]{chapter.5}{Champ magn\351tique |hi|}{}% 29
+\BOOKMARK [1][-]{section.5.1}{Mod\350le gaussien}{chapter.5}% 30
+\BOOKMARK [1][-]{section.5.2}{Distribution de l'interface}{chapter.5}% 31
+\BOOKMARK [1][-]{section.5.3}{Fonction de corr\351lation }{chapter.5}% 32
+\BOOKMARK [1][-]{section.5.4}{Conclusion}{chapter.5}% 33
+\BOOKMARK [0][-]{chapter.6}{Mod\350le Particle-Over-Particle }{}% 34
+\BOOKMARK [1][-]{section.6.1}{Particules indiscernables}{chapter.6}% 35
+\BOOKMARK [1][-]{section.6.2}{Avec le SOS}{chapter.6}% 36
+\BOOKMARK [2][-]{subsection.6.2.1}{Modifications de l'algorithme Metropolis}{section.6.2}% 37
+\BOOKMARK [1][-]{section.6.3}{R\351sultats mod\350le A}{chapter.6}% 38
+\BOOKMARK [1][-]{section.6.4}{R\351sultats mod\350le B}{chapter.6}% 39
+\BOOKMARK [1][-]{section.6.5}{R\351sultats mod\350le A+B}{chapter.6}% 40
+\BOOKMARK [0][-]{chapter.7}{A+B POP model : la totale}{}% 41
+\BOOKMARK [1][-]{section.7.1}{Le mod\350le C=A+B}{chapter.7}% 42
+\BOOKMARK [1][-]{section.7.2}{Effective interface dynamics}{chapter.7}% 43
+\BOOKMARK [1][-]{section.7.3}{A model of active interfaces}{chapter.7}% 44
+\BOOKMARK [1][-]{section.7.4}{Conclusions}{chapter.7}% 45
+\BOOKMARK [1][-]{section.7.5}{Acknowledgements}{chapter.7}% 46
+\BOOKMARK [1][-]{section.Alph0.1}{Evaluating Fourier integrals}{chapter.7}% 47
+\BOOKMARK [0][-]{appendix*.19}{Conclusion et perspectives}{}% 48

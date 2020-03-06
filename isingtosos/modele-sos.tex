@@ -20,26 +20,15 @@ En utilisant l'identité $\min(a,b)-\max(a,b)=|a-b|$, on a
     \sum_{j=0}^L \sgn(h-j)\sgn(h'-j) = L - 2 |h-h'|
 \end{align*}
 Ainsi, pour un système de longueur $L_X$ et de largeur $L_Y$ l'hamiltonien du modèle d'Ising en absence de potentiel se réécrit comme 
-\begin{align*}
-    H &= - J \sum_{<ij>} \sigma_i \sigma_j  \nn
-    &= -J \sum_{i,j} \sgn(h_i-j) ( \sgn(h_{i+1}-j)+\sgn(h_{i-1}-j)+\sgn(h_{i}-j-1)+\sgn(h_{i}-j+1) ) \nn
-    &= 4 J L_X (2-L_Y) +4J \sum_i |h_i-h_{i+1}|
-\end{align*}
+\begin{align}
+    H = 4 J L_X (2-L_Y) +4J \sum_i |h_i-h_{i+1}|
+\end{align}
 Le terme $|h_i-h_{i+1}|$ représente la surface de contact horizontale entre les deux phases qui dépend directement de la hauteur, tandis que le terme constant représente la surface de contact verticale.
 En retirant la partie constante de l'énergie et simplifiant $4 J = J$ et en gardant $L_X = L$, nous obtenons l'hamiltonien du \textbf{modèle Solid-On-Solid}
 \begin{align}
     H = J \sum_i |h_i-h_{i+1}|
     \label{hamil-sos}
 \end{align}
-
-On calcule les observables du système de manière analogue. 
-
-\begin{itemize}
-	\item La magnétisation moyenne par site $M = <\sigma_{ij}>$ devient $M = <h_i> = \frac{1}{L}\sum_i h_i$
-	\item La magnétisation moyenne à $j$ donné est $m(j) = \frac{1}{L} \sum_i \sgn(h_i-j)$
-	\item L'énergie moyenne par site $E = \frac{1}{L}  \sum_i |h_i-h_{i+1}|$
-	\item Corrélation en hauteur voir Bray 68 -> rapport ?
-\end{itemize}
 
 Nous avons ici réussi à réduire la dimensionalité du système en ne prenant en compte que la hauteur $h_i$ au site $i$. L'énergie du système est alors décrite par la différence de hauteur entre deux sites voisins, et $\beta J$ prend ici alors le rôle de la tension de surface.
 
@@ -66,9 +55,9 @@ Ainsi la fonction de partition devient\cite{}
 
 Dans la limite thermodynamique $L \to \infty$, seuls les plus grands vecteurs propres jouent un rôle. Afin de calculer les observables de notre système, il convient d'introduire la matrice des hauteurs $\tilde{M}(i,j) = \delta_{ij} i$. Nous avons donc \footnote{Pour une démonstration plus détaillée sur les matrices de transfert, se référer à \cite{matrice_transfert}}
 \begin{itemize}
-	\item L'énergie libre :  
+	\item L'énergie libre par site :  
 	\begin{align}
-		F =  - \frac{1}{L \beta} \ln(Z) \simeq - \frac{1}{\beta } \ln( \lambda_0)
+		F =  - \frac{1}{L \beta} \ln(Z) \simeq - \frac{1}{L \beta } \ln( \lambda_0)
 	\end{align}
 	\item La densité de probabilité qu'un site se trouve à la hauteur $h$ : 
 	\begin{align}
