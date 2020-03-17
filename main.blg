@@ -3,7 +3,12 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: main.aux
 The style file: unsrt.bst
 Database file #1: biblio.bib
+Warning--I didn't find a database entry for "edwards-wilkinson-conesrved"
+Warning--I didn't find a database entry for "ref23David"
 Warning--I didn't find a database entry for ""
+Warning--I didn't find a database entry for "onsager"
+Warning--I didn't find a database entry for "3d"
+Warning--I didn't find a database entry for "these_david"
 Warning--I didn't find a database entry for "matrice_transfert"
 Warning--I didn't find a database entry for "guyer1979"
 Warning--I didn't find a database entry for "chui"
@@ -18,7 +23,6 @@ Warning--I didn't find a database entry for "chak2004"
 Warning--I didn't find a database entry for "lowe2009"
 Warning--I didn't find a database entry for "glan2012"
 Warning--I didn't find a database entry for "klym2016"
-Warning--I didn't find a database entry for "onsager"
 Warning--I didn't find a database entry for "dean1996"
 Warning--I didn't find a database entry for "bray2001"
 Warning--I didn't find a database entry for "bray2002"
@@ -35,48 +39,48 @@ Warning--I didn't find a database entry for "smith2010"
 Warning--I didn't find a database entry for "katz1984"
 Warning--I didn't find a database entry for "schm1995"
 Warning--I didn't find a database entry for "schm1998"
-Warning--empty publisher in l_landau_physique_1990
 Warning--empty journal in cahn_free_nodate
 Warning--empty year in cahn_free_nodate
-You've used 38 entries,
+Warning--empty publisher in l_landau_physique_1990
+You've used 48 entries,
             1791 wiz_defined-function locations,
-            704 strings with 10001 characters,
-and the built_in function-call counts, 8339 in all, are:
-= -- 752
-> -- 351
+            754 strings with 12020 characters,
+and the built_in function-call counts, 10362 in all, are:
+= -- 891
+> -- 497
 < -- 1
-+ -- 132
-- -- 94
-* -- 681
-:= -- 1360
-add.period$ -- 118
-call.type$ -- 38
-change.case$ -- 34
++ -- 184
+- -- 136
+* -- 858
+:= -- 1728
+add.period$ -- 150
+call.type$ -- 48
+change.case$ -- 44
 chr.to.int$ -- 0
-cite$ -- 41
-duplicate$ -- 339
-empty$ -- 807
-format.name$ -- 94
-if$ -- 1788
+cite$ -- 51
+duplicate$ -- 423
+empty$ -- 981
+format.name$ -- 136
+if$ -- 2211
 int.to.chr$ -- 0
-int.to.str$ -- 38
-missing$ -- 38
-newline$ -- 196
-num.names$ -- 38
-pop$ -- 55
+int.to.str$ -- 48
+missing$ -- 48
+newline$ -- 248
+num.names$ -- 48
+pop$ -- 65
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 135
+skip$ -- 171
 stack$ -- 0
-substring$ -- 616
-swap$ -- 42
+substring$ -- 658
+swap$ -- 52
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 3
-while$ -- 84
-width$ -- 40
-write$ -- 422
-(There were 35 warnings)
+while$ -- 95
+width$ -- 50
+write$ -- 535
+(There were 39 warnings)

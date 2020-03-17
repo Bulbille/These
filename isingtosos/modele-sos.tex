@@ -1,4 +1,32 @@
 \chapter{Modèle Solid-On-Solid}
+		  \section{Le modèle d'Ising}
+  
+  	Le modèle d'Ising fait partie de la catégorie des modèles sur réseau où l'interaction entre les particules du système se fait uniquement entre les plus proches voisins. Chaque particule au site $i$ possède deux états différents que l'on note $\sigma_i = \pm 1$, analogues aux spins en mécanique quantique. L'Hamiltonien d'un tel modèle s'écrit alors
+\begin{equation}
+	\mH =  - \sum_{\langle i j >} J_{ij} \sigma_i \sigma_j + \frac{V(\sigma_i)+V(\sigma_j)}{2}
+\end{equation}
+où $\langle ij >$ dénotent deux premiers voisins, $J_{ij}$ l'énergie d'interaction entre deux sites et $V(\sigma_i)$ le potentiel au site $i$.
+En général, le modèle d'Ising est utilisé avec une énergie d'interaction constante entre tous les spins, soit $J_{ij} = J$. Les systèmes les plus connus possédant une énergie d'interaction non-constante sont  \textbf{trouver quelques exemples}.
+
+En faisant la transformation\cite{ref23David} $n_i =  \frac{\sigma_i +1}{2}$ afin que $n_i(\sigma_i = 1) = 1$ et $n_i(\sigma_i = -1) = 0$, on obtient l'hamiltonient
+\begin{equation}
+	\mH =  - \sum_{\langle i j >}  J_{ij} \left( 4 n_i n_j -2 ( n_i+n_j) + 1 \right)+ \sum_{\langle i j >}  J_{ij} \frac{V(\sigma_i)+V(\sigma_j)}{2}  
+\end{equation}
+où le terme constant $\sum_{\langle i j >}  J_{ij}$ ne modifie la fonction de partition $\mZ$ que d'une constante peu importante pour les propriétés à l'équilibre du système. On définit alors 
+\begin{equation}
+	\mH_{LG} =  - 4 \sum_{\langle i j >}  J_{ij}  n_i n_j  + 2 \sum_{\langle i j >}  J_{ij}  (n_i+n_j) + \sum_{\langle i j >}  J_{ij} \frac{V(\sigma_i)+V(\sigma_j)}{2}  
+\end{equation}
+Le deuxième terme s'identifie à la présence d'un potentiel chimique pour les particules liquide-gaz. Une phase magnétique positive dans le modèle d'Ising s'apparente dès lors à un état de haute densité (un liquide), tandis qu'une phase négative est considérée comme une phase de basse densité, c'est-à-dire un gaz.
+Ce modèle représente également un mélange binaire\cite{} entre deux types de particules $A$ et $B$ comme par exemple un polymère dans un solvant, les particules identiques s'attirant tandis que les particules d'un type différent se repoussent. 
+
+En général, dans tous les modèles d'Ising étudiés, $J_{ij}$ est constante et égale à $J$. Nous prendrons cette approximation à partir de maintenant.
+
+En absence de potentiel, le système est statistiquement découpé en amas (\textit{bulk}) de spins du même signe\ref{amas-quench}. La longueur de corrélation   $\mC= \mC(T,J)$ dépend fortement de la température et diverge près de la température critique. Une étude détaillée des grandeurs du modèle d'Ising proche du point critique\cite{onsager,3d} peut être retrouvée dans \cite{these_david}.
+
+L'étude de l'interface entre les phases $+$ et $-$ nécessite la brisure de la symétrie de translation au sein du système. Cela peut se faire facilement soit par des conditions aux bords non-périodiques dans une direction, soit  par la présence d'un champ magnétique non-uniforme du style $V(y) = h |\frac{L_Y}{2}-y|$. 
+Dans le cas de conditions aux bords fixes avec par exemple les spins de la rangée $0$ étant positifs et ceux de la rangée $L_Y$ négatifs, des clusters vont se former et créer une interface au milieu. Il est possible de favoriser une phase par rapport à l'autre grâce à un potentiel chimique (ou champ magnétique) $V(h_i) = -h \sigma_i$ \cite{}. Ce genre de modèle s'assimile à un système d'absorption d'un gaz sur réseau\cite{} ou de la croissance d'un matériau sur un substrat\cite{}
+
+Le choix d'un champ magnétique du style $V(y) = - B |\frac{L_Y}{2}-y|$ modélise quant à lui l'effet d'un champ  sur un liquide binaire selon les expériences de Delville\cite{}. La présence d'un laser dans certaines régions du système peut modifier localement le potentiel chimique des particules, favorisant la présence d'un type par rapport à l'autre. L'épinglage\cite{} (\textit{pinning}) de l'interface auprès de la ligne de démarcation permet de l'étudier loin des bords du système.		
 		
 		\section{Hamiltonien}
 	

@@ -1,52 +1,284 @@
-\documentclass[a4paper,11pt]{report}
-\usepackage[utf8]{inputenc} % accents
+\documentclass[a4paper,11pt]{book}
+\usepackage[utf8]{inputenc} % accents    
+\usepackage[frenchb]{babel}
 \usepackage[T1]{fontenc} %accents
 \usepackage{lmodern}
 \usepackage{xcolor} % pour colorier
-\usepackage{hyperref} % pour mettre les liens cliquants
+\usepackage[hidelinks]{hyperref} % pour mettre les liens cliquants
+
+\usepackage{setspace}
+\onehalfspacing
 
 % Maths
 \usepackage{amsmath}
 \usepackage{geometry}
 \usepackage{amssymb}
-\DeclareMathOperator{\sign}{sign}
+\usepackage{bm}
+
 % Figures
 \usepackage[final]{graphicx}
 \usepackage{subcaption}
-\usepackage{tikz}
+\usepackage{mwe}
 \setkeys{Gin}{width=10cm} %% largeur par défaut
-\geometry{hmargin=2.5cm,vmargin=1.5cm}
-% Links in refs
-\usepackage{hyperref}
+%\geometry{hmargin=2.5cm,vmargin=2cm}
+
 \usepackage{comment}
 
 %Pour mettre une page en paysage
 \usepackage{lscape}
 
-% Commandes personnalisées 
-\newcommand{\nn}{\nonumber \\} % newline sans nombre dans align
+\usepackage{epsfig}
+\usepackage{bm}
+\usepackage{latexsym}
+\usepackage{graphicx}
+\usepackage{comment}
 
+\usepackage{graphicx,color}
+ \graphicspath{{./}{./figures/}}
+\usepackage{ams math}
+\usepackage{enumerate}
+%\usepackage{graphicx}
+\usepackage{mathbbol}
+\usepackage{amsfonts}
+\usepackage{natbib}
+\def\figwidth{8cm}
+\usepackage{bm}
+\usepackage{hyperref}
+
+
+%%% Commandes personnalisées  %%%
+\newcommand{\nn}{\nonumber \\} % newline sans nombre dans align
+\newcommand{\mH}{\mathcal{H}} %pour les hamiltoniens ronds
+\newcommand{\mZ}{\mathcal{Z}} %pour les hamiltoniens ronds
+\newcommand{\mC}{\mathcal{C}} %pour les fonctions de corrélation
+\newcommand{\mx}{{\bf x}} %pour les vecteurs en gras
+\newcommand{\mq}{{\bf q}}
+\DeclareMathOperator{\sgn}{sgn}
+% Les > et < se comportent normalement si c'est pour supérieur ou inférieur, sinon se comportent comme \langle
+\mathchardef\less=\mathcode`<
+\mathchardef\greater=\mathcode`>
+\DeclareMathDelimiter{<}{\mathopen}{symbols}{"68}{largesymbols}{"0A}
+\DeclareMathDelimiter{>}{\mathclose}{symbols}{"69}{largesymbols}{"0B}
+
+%%%%%%% Début du document %%%%%
 \begin{document}
-\begin{comment}
+
+\bibliographystyle{unsrt}
+
 \tableofcontents
 
+\input{intro/intro}
+\input{intro/modeles-interface}
+\input{isingtosos/modele-sos}
+\input{numerical/method}
+\input{semiifgeom/kawglau.tex}
+\input{sosequi-laser/laser}
+\input{pop/particle}
+\input{pop/ab-model}
 
-\chapter{State of the Art}
 
-\chapter{Numerical procedures}
-\input{numerical/method.tex}
+\input{intro/conclusion}
 
-\chapter{The Models}
-\input{models/modele.tex}
 
-\chapter{Transfer Matrix}
-\input{tm/tm-explications.tex} 
-
-\chapter{Numerical results}
-\input{resultat/res.tex} 
-\end{comment}
-
-%\chapter{Kawasaki and Glauber}
-\input{kawglau/kawglau.tex}
-
+\bibliography{biblio.bib}
 \end{document}
+
+\begin{comment}
+\chapter{Phase ordering kinetics}
+\section{Introduction}
+In this chapter we will analyse the dynamics of statistical systems. The analysis will allow us to understand how phase transitions occur dynamically. For instance we know that certain systems undergo what is known phase separation, for instance if we take the Ising model with zero magnetic field, in the high temperature phase the system is homogeneous and the average magnetisation, which is the order parameter for the transition is zero. Below the critical temperature if the overall magnetisation is conserved (for instance for Kawasaki dynamics), which would be the case if spins corresponded to different types of particles, the system will separate into two  phases of opposite average magnetisation, separated by an interface which will be roughly flat in order to minimise the surface energy between the two phases. For nonconserved systems, where the overall magnetisation in not conserved (for example Glauber dynamics), eventually one of the two phases will make up the system (spontaneous symmetry breaking). In a continuous phase transition as the critical point is reached from the disordered to ordered, domains of phases of positive and negative magnetisation form and the size of these domains is given by the correlation length of the system. For continuous phase transitions such as that in the Ising model the correlation length diverges as as the critical point is approached, for instance as $T\to T_c$ if the temperature is varied. The size of the domains thus have to become infinite if the system is infinite, this means that for an infinite system it will take an infinite time to relax to the equilibrium state. The process of domain growth is known as coarsening and phase ordering kinetics is the theory that has been developed to understand the phenomenon of coarsening. Furthermore, for systems with a conserved order parameter which separate into two phases, the two phases will be separated by an interface. This interface will be characterised by a surface tension, its average position will be fixed but it will exhibit fluctuations. Later we will see how model of phase ordering kinetics and be used to determine the static and dynamical properties of interfaces between two coexisiting phases. 
+
+While the phase diagram of a system can be determined via 
+its Hamiltonian and equilibrium statistical mechanics, the dynamics of coarsening depends on details of the systems dynamics that do not show up in single time thermodynamic observables. Therefore one needs to construct dynamical models that capture the underlying evolution of the state of the system, in particular there is a big difference between systems where the order parameter is conserved and those where it is not conserved.
+
+\section{Statics of systems with a finite number of degrees of freedom}
+
+Thermodynamic systems are naturally described in terms of fields, for example densities. This means that one is naturally lead to consider statistical field theories where the system is described in terms of a local field $\phi({\bf x})$. Statistical field theories can be applied to both statics, to understand phase diagrams, and dynamics to understand phase ordering. However to start with we will examine the case of systems with a finite number of degrees of freedom. 
+
+Consider a system in the canonical ensemble with a Hamiltonian $H({\bf q})$ where $q_i$ for 
+$1\leq i\leq N$ represent a finite number of continuous degrees of freedom. The partition function for the system is given by
+\begin{equation}
+Z = \int d{\bf q} \exp\left(-\beta H({\bf q})\right),
+\end{equation}
+and in equilibrium the probability density function $P_{eq}({\bf q})$ of the degrees of freedom is given by 
+\begin{equation}
+P_{eq}({\bf q}) = \frac{\exp\left(-\beta H({\bf q}\right)}{Z}.\label{eqdis}
+\end{equation}
+In general the integral which gives the  partition function cannot be computed analytically.
+The simplest approximation to compute $Z$ is the mean field approximation where the integral 
+is approximated by the integrand at its largest value - in mathematics this is the Laplace method for approximating an integral. The mean field approximation is thus
+\begin{equation}
+Z_{MF}= \exp\left(-\beta H({\bf q}^*)\right),
+\end{equation}
+where ${\bf q}^*$ is the value of ${\bf q}$ which minimises $H$ (note that the approximation becomes exact in the zero temperature limit - $\beta \to \infty$   - as the system will minimise its energy). The values $q_i^*$ are determined from
+\begin{equation}
+\frac{\partial H}{\partial q_i}|_{{\bf q}={\bf q^*}}=0.
+\end{equation}
+Within this approximation any thermodynamic observable is given by
+\begin{equation}
+\langle f({\bf q}) \rangle = f({\bf q}^*).
+\end{equation}
+
+We now consider how one can model dynamics of such systems. We will look for a Langevin equation which is chosen to give the correct equilibrium Gibbs-Boltzmann distribution. We write
+\begin{equation}
+\frac{d q_i}{dt} = -L_{ij}\frac{\partial H({\bf q})}{ \partial q_j} + \eta_i(t),
+\end{equation}
+where $L_{ij}$ is a matrix which discuss later and $\eta_i(t)$ is zero mean Gaussian white noise  with correlation function 
+\begin{equation}
+\langle \eta_i(t)\eta_j(t')\rangle =  \Gamma_{ij} \delta(t-t'),\label{cfn}
+\end{equation}
+The Gaussian white noise represents the effects of thermal fluctuations on the system we assume that the correlation time of these fluctuations is extremely short with respect to the dynamics of the degrees of freedom $q_i$ (in fact in critical systems the dynamics becomes very slow, critical slowing down, and this approximation becomes better and better as one approaches the critical point).  As Eq. (\ref{cfn}) is for a correlation function the matrix $\Gamma_{ij}$ must be symmetric and cannot have any negative eigenvalues.
+
+In the absence of noise or thermal fluctuations, so at zero temperature, the system will simply minimise its energy. Therefore if 
+\begin{equation}
+\frac{\partial H({\bf q})}{ \partial q_j} =0, 
+\end{equation}
+with no noise we have $\frac{d q_i}{dt}=0$, that is to say it is the term $\frac{\partial H({\bf q})}{ \partial q_j}$ that drives the dynamics if there is no noise. As long as the matrix $L_{ij}^{-1}$ exists the zero temperature dynamics will take the system to the local minimum of $H$ and to the absolute minimum if there are no metastable configurations. 
+
+Under these assumptions, the Fokker-Planck equation for the probability density function of the degrees of freedom is 
+\begin{align}
+\frac{\partial p({\bf q},t)}{\partial t} = \frac{\partial}{\partial q_i} \left[\frac{1}{2}\Gamma_{ij} \frac{\partial p({\bf q},t)}{\partial q_i} + p({\bf q},t) L_{ij}\frac{\partial H({\bf q})}{ \partial q_j}\right].
+\end{align}
+This can be written as 
+\begin{align}
+\frac{\partial p({\bf q},t)}{\partial t} +\frac{\partial}{\partial q_i}J_i({\bf q},t)=0,
+\end{align}
+where the ${\bf J}({\bf q},t)$ is the probability current. We now insist that the system is in equilibrium with zero current when $p({\bf q},t)= P_{eq}({\bf q})$ as given by Eq. (\ref{eqdis}), this gives
+\begin{align}
+\left[-\frac{\beta}{2}\Gamma_{ij} + L_{ij}\right]\frac{\partial H({\bf q})}{ \partial q_j},
+\end{align}
+and this holds for any choice of $H$ is we chose.
+\begin{align}
+\Gamma_{ij}= 2T L_{ij}
+\end{align}
+where we have taken units where Boltzmann's constant $k_B=1$. 
+\section{Statistical field theory}
+We now consider a system with Hamiltonian $H[\phi]$ which depends on a continuous field 
+$\phi({\bf x})$. The partition function is given by a functional integral
+\begin{align}
+Z = \int d[\phi] \exp(-\beta H[\phi]),
+\end{align}
+the functional integral over all possible fields $\phi$ can be taken as a limit where $\phi$ is defined at a finite number of points on a lattice and then the lattice spacing is taken to zero. 
+
+The mean field approximation to partition function is then given by
+\begin{align}
+Z _{MF}=  \exp(-\beta H[\phi_{MF}]),
+\end{align} 
+where $\phi_{MF}$ is the mean field solution which minimises $H$. The definition of a functional derivative of a functional 
+\begin{align}
+F[\phi+\delta\phi]-F[\phi]= \int d{\bf x} \frac{\delta F}{\delta\phi({\bf x})} \delta\phi({\bf x}).
+\end{align}
+Therefore if a field $\phi$ maximises $H$ we must have 
+\begin{align}
+\frac{\delta H}{\delta\phi({\bf x})}=0.
+\end{align}
+
+We now consider the standard Landau-Ginzburg Hamiltonian describing Ising like systems where
+\begin{align}
+H[\phi] = \int d{\bf x} \ \frac{\kappa}{2}[\nabla \phi]^2 + V(\phi) .
+\end{align}
+The first term represents an energetic cost of varying the field $\phi$ while the second potential term has two minima at $\phi=\pm \phi_c$, and without loss of generality we can chose  $V(\phi_c)=V(-\phi_c)$, in the low temperature or phase separated phase and a single minimum at $\phi=0$ in the high temperature phase. The standard, so called, $\phi^4$ form is
+\begin{align}
+V(\phi) = \frac{1}{2} m^2 \phi^2 + \frac{\lambda}{4!} \phi^4,\label{p4}
+\end{align} 
+where 
+\begin{align}
+m^2 = T-T_c.
+\end{align}
+It is easy to see that 
+\begin{align}
+\frac{\delta H}{\delta \phi({\bf x})} = -\kappa \nabla^2 \phi({\bf x}) + V'(\phi).\label{cm}
+\end{align}
+If there is non constraint on the system if can simply chose $\phi({\bf x}) =\phi_c$ or $\phi({\bf x}) =-\phi_c$ everywhere which corresponds to a  free energy $F=H[\phi_c]=0$. However in a system with a conserved order parameter
+\begin{align}
+\int d{\bf x} \  \phi({\bf x})=0, 
+\end{align}
+then the solutions $\phi=\pm \phi_c$ cannot hold. In this case the system will separate into a two phases where $\phi({\bf x})= \pm \phi_c$. We therefore choose an interface at $z=0$ where 
+and take $\phi({\bf x}) = \phi_K(z)$ ($K$ standing for kink as it is known as the kink solution in the literature) where $\lim_{z\to\-\infty}=-\phi_c$ and  $\lim_{z\to\infty}=-\phi_c$. 
+We therefore find from Eq. (\ref{cm}) that
+\begin{align}
+-\kappa \frac{d^2 }{dz^2}\phi_K(z)  + V'(\phi_K) = 0 \label{kk0}
+\end{align}
+This align can be solved for the potential in Eq. (\ref{p4}) ({\em you should do it and fill in the details}) but even without knowing the explicit solution we can write
+\begin{align}
+H[\phi_K]=  A\int dz \ \frac{\kappa}{2}\left(\frac{d\phi_K(z)}{dz}\right)^2 + V(\phi_K(z)),\label{kk1}
+\end{align}
+where $A$ is the surface area of the system in the plane perpendicular to the direction $z$. 
+However if we multiply Eq. (\ref{kk0}) by $d\phi/dz$ and integrate we find
+\begin{align}
+-\frac{\kappa}{2} (\frac{d\phi_K}{dz})^2 + V(\phi) = C,
+\end{align}
+where $C$ is a constant. However as $\phi_K(z)\to \pm \phi_c$ as $z\to \pm \infty$ and $V(\pm\phi_c) =0$ we find that $C=0$. Using this we obtain 
+\begin{align}
+H[\phi_K]=  A\int dz\  {\kappa}\left(\frac{d\phi_K(z)}{dz}\right)^2 .
+\end{align}
+If the interface has a free energy per unit area of $\sigma$ then we have the Cahn-Hillard estimate of the surface tension 
+\begin{align}
+\sigma=  \int dz\  {\kappa}\left(\frac{d\phi_K(z)}{dz}\right)^2 .
+\end{align}
+
+Now we return to dynamics. If we compare with systems with a discrete number of variables we
+should have a Langevin align of the form
+\begin{align}
+\frac{\partial \phi({\bf x})}{\partial t}= -L \frac{\delta H}{\delta \phi({\bf x})} + \eta({\bf x},t).
+\end{align}
+The white noise correlator should have the form
+\begin{align}
+\langle \eta({\bf x},t)\eta({\bf x}',t)\rangle =\delta(t-t')\Gamma({\bf x},{\bf x'}),
+\end{align}
+where here  $\Gamma({\bf x},{\bf x'})$ is an operator (before it was a matrix) defined by its action on functions $f$ as
+\begin{align}
+\Gamma f({\bf x}) = \int d{\bf x}' \Gamma({\bf x},{\bf x}')f({\bf x}'),
+\end{align}
+and $L$ is also an operator with 
+\begin{align}
+L f({\bf x}) = \int d{\bf x}' L({\bf x},{\bf x}')f({\bf x}'),
+\end{align}
+Following the same arguments for systems with a finite number of degrees of freedom we thus have the relation
+\begin{align} 
+\Gamma({\bf x},{\bf x}') =2T L({\bf x},{\bf x}').
+\end{align}
+The simplest form of dynamics is given by $L({\bf x},{\bf x}')=\alpha\delta({\bf x}-{\bf x}')$ which gives the model A dynamics
+\begin{align}
+\frac{\partial \phi({\bf x})}{\partial t}= -\alpha \frac{\delta H}{\delta \phi({\bf x})} + \eta({\bf x},t),
+\end{align}
+with the noise correlator
+\begin{align}
+\langle \eta({\bf x},t)\eta({\bf x}',t)\rangle =2T \alpha \delta(t-t')\delta({\bf x}-{\bf x'}).
+\end{align}
+The average value of $\phi$ 
+\begin{align}
+\overline \phi(t) = \frac{1}{V}\int d{\bf x} \phi({\bf x},t),
+\end{align}
+is clearly not generally conserved by this dynamics.
+
+Model $B$ dynamics amounts to choosing
+\begin{align}
+L({\bf x}-{\bf x}')= -D\nabla^2 \delta({\bf x}-{\bf x'}),
+\end{align}
+here the fact that $L$ is a positive semi-definite operator can be seen by taking its Fourier transform. The evolution align here is
+\begin{align}
+\frac{\partial \phi({\bf x})}{\partial t}= D\nabla^2 \frac{\delta H}{\delta \phi({\bf x})} + \eta({\bf x},t),
+\label{MB}
+\end{align}
+and where
+\begin{align}
+\langle \eta({\bf x},t)\eta({\bf x}',t)\rangle =-2TD   \delta(t-t')\nabla^2\delta({\bf x}-{\bf x'}).
+\end{align}
+We notice that if we introduce the vectorial white noise with components $\eta_i({\bf x},t)$ such that
+\begin{align}
+\langle \eta_i({\bf x},t) \eta_i({\bf x}',t')\rangle =\delta_{ij} \delta({\bf x}-{\bf x'})\delta(t-t),
+\end{align}
+where $\delta_{ij}=1$ for $i=j$ and is zero otherwise,  we can write
+\begin{align}
+\eta({\bf x},t)= \nabla\cdot {\boldsymbol \eta}({\bf x},t),
+\end{align}
+as one can verify the two noises have the same correlation function. In this way Eq. (\ref{MB}) becomes 
+\begin{align}
+\frac{\partial \phi({\bf x})}{\partial t}= \nabla\cdot[ D\nabla \frac{\delta H}{\delta \phi({\bf x})} + {\boldsymbol\eta}({\bf x},t)].
+\end{align}
+From this it is easy to see that the order parameter is conserved - thus model  B describes conserved phase ordering dynamics.
+
+The above argument is rather phenomenological and a microscopic derivation of conserved order parameter dynamics gives the so called Dean-Kawasaki align. Model B is a simplified form of this exact align - you could say more.
+
+\end{comment}
