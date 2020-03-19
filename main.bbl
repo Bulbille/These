@@ -288,4 +288,60 @@ David~S. Dean, Paul Gersberg, and Peter C.~W. Holdsworth.
 \newblock {\em arXiv:2001.04245 [cond-mat]}, January 2020.
 \newblock arXiv: 2001.04245.
 
+\bibitem{onsager_crystal_1944}
+Lars Onsager.
+\newblock Crystal {Statistics}. {I}. {A} {Two}-{Dimensional} {Model} with an
+  {Order}-{Disorder} {Transition}.
+\newblock {\em Physical Review}, 65(3-4):117--149, February 1944.
+
+\bibitem{talapov_magnetization_1996}
+A~L Talapov and H~W~J Blöte.
+\newblock The magnetization of the {3D} {Ising} model.
+\newblock {\em Journal of Physics A: Mathematical and General},
+  29(17):5727--5733, September 1996.
+
+\bibitem{niss_history_2005}
+Martin Niss.
+\newblock History of the {Lenz}-{Ising} {Model} 1920–1950: {From}
+  {Ferromagnetic} to {Cooperative} {Phenomena}.
+\newblock {\em Archive for History of Exact Sciences}, 59(3):267--318, March
+  2005.
+
+\bibitem{niss_history_2009}
+Martin Niss.
+\newblock History of the {Lenz}–{Ising} {Model} 1950–1965: from irrelevance
+  to relevance.
+\newblock {\em Archive for History of Exact Sciences}, 63(3):243, May 2009.
+
+\bibitem{goldenfeld_lectures_2018}
+Nigel Goldenfeld.
+\newblock {\em Lectures on {Phase} {Transitions} and the {Renormalization}
+  {Group}}.
+\newblock CRC Press, 1 edition, March 2018.
+
+\bibitem{girot_conical_2019}
+A.~Girot, J.~Petit, R.~Saiseau, T.~Guérin, H.~Chraibi, U.~Delabre, and J.~P.
+  Delville.
+\newblock Conical {Interfaces} between {Two} {Immiscible} {Fluids} {Induced} by
+  an {Optical} {Laser} {Beam}.
+\newblock {\em Physical Review Letters}, 122(17), May 2019.
+
+\bibitem{abraham_transfer_1973}
+D.~B. Abraham and A.~Martin-Löf.
+\newblock The transfer matrix for a pure phase in the two-dimensional {Ising}
+  model.
+\newblock {\em Communications in Mathematical Physics}, 32(3):245--268,
+  September 1973.
+
+\bibitem{abraham_interface_1976}
+D.~B. Abraham and P.~Reed.
+\newblock Interface profile of the {Ising} ferromagnet in two dimensions.
+\newblock {\em Communications in Mathematical Physics}, 49(1):35--46, February
+  1976.
+
+\bibitem{guyer_sine-gordon_1979}
+R.~A. Guyer.
+\newblock Sine-{Gordon} chain as a model for a two-dimensional interface.
+\newblock {\em Physical Review B}, 20(10):4375--4381, November 1979.
+
 \end{thebibliography}

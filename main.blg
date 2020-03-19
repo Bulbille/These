@@ -4,13 +4,7 @@ The top-level auxiliary file: main.aux
 The style file: unsrt.bst
 Database file #1: biblio.bib
 Warning--I didn't find a database entry for "edwards-wilkinson-conesrved"
-Warning--I didn't find a database entry for "ref23David"
 Warning--I didn't find a database entry for ""
-Warning--I didn't find a database entry for "onsager"
-Warning--I didn't find a database entry for "3d"
-Warning--I didn't find a database entry for "these_david"
-Warning--I didn't find a database entry for "matrice_transfert"
-Warning--I didn't find a database entry for "guyer1979"
 Warning--I didn't find a database entry for "chui"
 Warning--I didn't find a database entry for "delville"
 Warning--I didn't find a database entry for "barkema"
@@ -23,6 +17,7 @@ Warning--I didn't find a database entry for "chak2004"
 Warning--I didn't find a database entry for "lowe2009"
 Warning--I didn't find a database entry for "glan2012"
 Warning--I didn't find a database entry for "klym2016"
+Warning--I didn't find a database entry for "onsager"
 Warning--I didn't find a database entry for "dean1996"
 Warning--I didn't find a database entry for "bray2001"
 Warning--I didn't find a database entry for "bray2002"
@@ -42,45 +37,45 @@ Warning--I didn't find a database entry for "schm1998"
 Warning--empty journal in cahn_free_nodate
 Warning--empty year in cahn_free_nodate
 Warning--empty publisher in l_landau_physique_1990
-You've used 48 entries,
+You've used 57 entries,
             1791 wiz_defined-function locations,
-            754 strings with 12020 characters,
-and the built_in function-call counts, 10362 in all, are:
-= -- 891
-> -- 497
+            797 strings with 13264 characters,
+and the built_in function-call counts, 12332 in all, are:
+= -- 1076
+> -- 564
 < -- 1
-+ -- 184
-- -- 136
-* -- 858
-:= -- 1728
-add.period$ -- 150
-call.type$ -- 48
-change.case$ -- 44
++ -- 211
+- -- 154
+* -- 1023
+:= -- 2039
+add.period$ -- 177
+call.type$ -- 57
+change.case$ -- 53
 chr.to.int$ -- 0
-cite$ -- 51
-duplicate$ -- 423
-empty$ -- 981
-format.name$ -- 136
-if$ -- 2211
+cite$ -- 60
+duplicate$ -- 504
+empty$ -- 1181
+format.name$ -- 154
+if$ -- 2634
 int.to.chr$ -- 0
-int.to.str$ -- 48
-missing$ -- 48
-newline$ -- 248
-num.names$ -- 48
-pop$ -- 65
+int.to.str$ -- 57
+missing$ -- 58
+newline$ -- 293
+num.names$ -- 57
+pop$ -- 79
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 171
+skip$ -- 201
 stack$ -- 0
-substring$ -- 658
-swap$ -- 52
+substring$ -- 823
+swap$ -- 61
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 3
-while$ -- 95
-width$ -- 50
-write$ -- 535
-(There were 39 warnings)
+while$ -- 117
+width$ -- 59
+write$ -- 634
+(There were 34 warnings)
