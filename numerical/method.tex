@@ -1,67 +1,72 @@
 \chapter{Simulations}
 
-Les simulations numériques permettent de calculer propriétés des systèmes là où la diagonalisation directe des hamiltoniens est trop difficile. Elle permet également de faire varier facilement les géométries et les potentiels dans les systèmes. Les algorithmes mis en jeu sont en général lents et peu efficients car ils essaient de calculer la fonction de partition complète du système. Les modèles 1D que nous étudions dans cette thèse ont l'avantage d'être rapides à calculer et donne une pléthore d'informations qui peut être extrapolée aux modèles 2D et 3D à basse température. 
+Les simulations numériques permettent de calculer propriétés des systèmes là où la diagonalisation directe des hamiltoniens est trop difficile. Elle permet également de faire varier facilement les géométries et les potentiels dans les systèmes. Les algorithmes mis en jeu sont en général lents et peu efficients car ils essaient d'explorer l'ensemble de l'espace des configurations du système. Les modèles 1D que nous étudions dans cette thèse ont l'avantage d'être rapides à calculer et donne une pléthore d'informations qui peut être extrapolée aux modèles 2D et 3D à basse température. 
 
 \section{Algorithme de Metropolis}
 
-Les systèmes à l'équilibre sont, en présence d'une température non-nulle, définis par les moyennes statistiques des grandeurs observables. La moyenne statistique de l'observable $A$ est définie vis-à-vis de la fonction de partition
+Les systèmes à l'équilibre sont, en présence d'une température non-nulle, définis par les moyennes statistiques des grandeurs observables. La moyenne statistique de l'observable $A$ est définie vis-à-vis de la fonction de partition 
 \begin{align}
-	<A> = \sum_\mu e^{-\beta \mH(\mu)}
+	<A> = \sum_\mu e^{-\beta \mH(\mu)} = \sum_E e^{-\beta(E-T S)}
 \end{align}
-où $\sum_\mu$ désigne la somme sur tous les micro-états $\mu$ possibles du système. Tandis qu'une diagonalisation de la fonction de partition nécessiterait de connaître tous les micro-états possibles, on observe que certains états sont plus probables que d'autres car d'énergie moindre, et donc contribuent plus aux moyennes statistiques que le reste. 
-Les algorithmes de Monte Carlo ont pour objectif d'explorer l'espace des phases de manière aléatoire afin de découvrir quels micro-états sont les plus probables. En prenant suffisement de micro-états au hasard de manière à satisfaire au bilan détaillé, l'algorithme de Monte Carlo espère converger vers la valeur limite $<A>(t=\infty) = <A>$.
-Une littérature extensive\cite{barkema} existe sur le sujet. Nous nous contenterons ici d'expliquer le minimum. 
+où $\sum_\mu$ désigne la somme sur tous les micro-états $\mu$ possibles du système et $\sum_E$ la somme sur toutes les énergies possibles du système associées à leur entropie $S$. Tandis qu'une diagonalisation de la fonction de partition nécessiterait de connaître tous les micro-états possibles, on observe que certains états sont plus probables que d'autres car d'énergie moindre, et donc contribuent plus aux moyennes statistiques que le reste, tandis qu'à haute température la densité d'états de plus haute énergie donnant l'entropie devient plus importante.
+Les algorithmes de Metropolis ont pour objectif d'explorer l'espace des phases de manière aléatoire afin de découvrir quelles configurations contribuent le plus aux observables du système, afin de converger vers la valeur limite $<A>(t=\infty) = <A>$.
+
+Nous nous basons ici sur \cite{newman_monte_1999} afin d'expliquer le fonctionnement d'un tel algorithme.
 
 Soit $\mu$ un micro-état de notre système d'énergie $E(\mu)$. À l'équilibre\cite{gibbs}, la probabilité d'occupation du système est
 \begin{align}
 	p_\mu = \frac{1}{\mZ} e^{-\beta E(\mu)}
 \end{align}
-qui définit la fonction de partition $\mZ$. Dans un algorithme de Metropolis, on met à jour notre micro-état en prenant un site $i$ au hasard\footnote{L'utilisation d'un générateur de nombre aléatoire (\textit{pRNG}) efficace est primordial. Il est déconseillé d'utiliser le générateur standard \textit{default\_random\_engine} de la librairie C++ \textit{rand} et conseillé d'opter pour des générateurs \textit{sfc64} ou \textit{xoroshiro}. Pour un pRNG booléen performant, voir \url{https://martin.ankerl.com/2018/12/08/fast-random-bool/}. Pour accélérer encore plus les calculs, ne pas oublier d'utiliser le flag d'optimisation \textit{-O3}  sur \textit{gcc} si vous codez en C/C++.} et en le changeant légèrement vers un état $\nu$. La différence d'énergie notée $\Delta E(\mu \rightarrow \nu)$ donne la probabilité de transition entre les deux. Si l'état final $\nu$ a une énergie inférieure à l'état initial, alors il est forcément plus probable, et nous acceptons le changement. La probabilité d'acceptation de transition de Metropolis est 
-\begin{align}
-	p(\mu \rightarrow \nu) = min(1,e^{-\beta \Delta E(\mu \rightarrow \nu)})
-\end{align}
-De cette manière on parcoure l'espace des phases en restant dans les micro-états les plus probables. Cette manière de procéder satisfait aux conditions du bilan détaillé pour une marche markovienne satisfaisant l'état d'équilibre de Boltzmann
+qui définit la fonction de partition $\mZ$. Dans un algorithme de Metropolis, on met à jour notre micro-état en prenant un site $i$ au hasard
+\footnote{L'utilisation d'un générateur de nombre aléatoire (\textit{pRNG}) efficace est primordial. Il est déconseillé d'utiliser le générateur standard \textit{default\_random\_engine} de la librairie C++ \textit{rand} et conseillé d'opter pour des générateurs \textit{sfc64} ou \textit{xoroshiro}. Pour un pRNG booléen performant, voir \url{https://martin.ankerl.com/2018/12/08/fast-random-bool/}. Pour accélérer encore plus les calculs, ne pas oublier d'utiliser le flag d'optimisation \textit{-O3}  sur \textit{gcc} si vous codez en C/C++. Tout cela combiné accélère le code d'un facteur 20 environ. \newline
+De plus, bien que la librairire OpenMP pour paralléliser le code soit simple d'utilisation, elle gère très mal - de sa nature de mémoire partagée - les pRNG. Je conseille vivement l'utilisation de la librairie MPI qui assure une étanchéité au niveau des pRNG entre chaque thread.} 
+
+et en le changeant légèrement vers un état $\nu$. Dans un système d'Ising, nous choisissons un spin $\sigma_i$ au hasard et regardons s'il peut être renversé ou échanger avec un de ses plus proches voisins. Dans le modèle SOS, nous choisissons une colonne $h_i$ au hasard et regardons s'il est possible d'ajouter ou de retirer une unité à la hauteur (c'est le nombre de particules sous l'interface au site $h_i$), ou d'échanger une particule d'une colonne vers une de ses plus proches voisins.
+La différence d'énergie notée $\Delta E(\mu \rightarrow \nu)$ donne la probabilité de transition entre les deux. Si l'état final $\nu$ a une énergie inférieure à l'état initial, alors il est forcément plus probable, et nous acceptons le changement. Dans le cas où $E_\nu \greater E_\nu$, on accepte le changement avec une probabilité satisfaisant au bilan détaillé pour une marche markovienne satisfaint à l'état d'équilibre de Botlzmann
 \begin{align}
 \frac{p(\mu \rightarrow \nu)}{p(\nu \rightarrow \mu)} = e^{-\Delta Ep(\nu \rightarrow \mu)}
 \end{align}
-
-\footnote{La librairire OpenMP pour paralléliser le code est simple d'utilisation mais gère très mal - de sa nature de mémoire partagée - les pRNG. Je conseille vivement l'utilisation de la librairie MPI qui, bien que plus difficile d'accès, assure une étanchéité au niveau des pRNG entre chaque thread.}
-
-Une étape de Monte Carlo est achevée lorsque $L$ tentatives de transition ont été faites. L'erreur obtenue à la fin sur notre observable $<A>$ est 
+ce qui nous donne la probabilité de transition $\mu \to \nu$ de Metropolis
 \begin{align}
-	\sigma(A) = \sqrt{\frac{2 \tau}{t_max} (<A^2>-<A>^2)}
+	p(\mu \rightarrow \nu) = min(1,e^{-\beta \Delta E(\mu \rightarrow \nu)})
 \end{align}
-Cette variance dépend du temps de corrélation $\tau$ puisque deux micro-états très proches dans le temps étant fortement corrélés, l'observable n'aura pas eu le temps de bouger. 
+
+Une étape de Monte Carlo est achevée lorsque $L$ tentatives de transition ont été faites. L'erreur obtenue à la fin sur notre observable $<A>$ au cours d'une simulation ayant duré $t_{max}$ étapes de Monte Carlo est 
 \begin{align}
-\mC(t) = <A(t')A(t+t')>-\langle A \rangle^2 = \frac{1}{T_{max}}\int_0^{T_{max}}A(t')A(t+t')-<A>^2 dt'
+	\sigma(A) = \sqrt{\frac{2 \tau}{t_{max}} (<A^2>-<A>^2)} 
 \end{align}
-Aux temps longs, la fonction $\mC(t)$ décroît de manière exponentielle. Néanmoins, il existe plusieurs temps de corrélation dans un système qui font que la fonction de corrélation aux temps courts est une somme de plusieurs exponentielles\cite{wanslebenlandau1991_3disingmodel}. Dans cette thèse nous ne sommes intéressés que par l'ordre de grandeur de ce temps de corrélation afin d'avoir une estimation de l'erreur de nos observables. En négligeant les termes provenant des temps de corrélation inférieurs, le calcul de l'intégrale\footnote{Numériquement, elle peut se faire précisément via la méthode de Simpson.}  nous donne directement
+Cette variance dépend du temps de corrélation $\tau$ puisque si deux micro-états sont très rapprochés dans le temps , l'observable en question n'aura pas grandement évolué. Ce temps de corrélation $\tau$ se calcule via la fonction d'auto-corrélation 
+\begin{align}
+\mC(t) = <A(t')A(t+t')>-\langle A \rangle^2 = \frac{1}{T_{max}}\int_0^{T_{max}}A(t')A(t+t')-<A>^2 dt' \simeq e^{-\frac{t}{\tau}}
+\end{align}
+qui se comporte comme une somme d'exponentielles, mais où dans la limite thermodynamique, seul le mode de relaxation le plus long compte\cite{wansleben_monte_1991}. En supposant la limite thermodynamique, l'ordre de grandeur de $\tau$ - et donc de la variance de nos observables - est donnée par le calcul de l'intégrale\footnote{Je recommande d'intégration de Simpson.}
 \begin{align}
 	\tau = \int_0^{\infty} \mC(t)/\mC(0) dt
 	\label{tau_cor}
 \end{align}
-Nous pouvons de la même manière calculer la fonction de corrélation spatiale moyennée sur le temps, avec une longueur de corrélation qui se calcule avec l'équation \ref{tau_cor}
+Le calcul de la plus grande longueur de corrélation $\xi$ du système se fait de manière analogue en intégrant la fonction de corrélation spatiale définie par
 \begin{align}
-\mC(x) = \frac{1}{L} \sum_{x'}^L A(x')A(x+x')-<A>^2 
+\mC(x) = \frac{1}{L} \sum_{x'}^L A(x')A(x+x')-<A>^2 \simeq e^{-\frac{x}{\xi}}
 \end{align}
+Une discussion plus rigoureuse sur la forme de la fonction de corrélation spatiale sera donnée dans la section \ref{sec_laser}.
 
 	\subsection{Ensemble grand-canonique : algorithme de Glauber}
-Le dépôt de particules provenant d'un réservoir permet de faire grandir un cristal à partir d'un substrat. Ce genre de systèmes est défini par le potentiel chimique $\mu$ des particules, dans le solvant et appartient à l'ensemble grand-canonique. Dans ce cas, on choisit au hasard de manière uniforme une colonne $h_i$ dans laquelle on décide de mettre ou d'enlever une particule avec une probabilité de 50\%, en respectant les conditions aux bords en $y$ (c'est-à-dire si l'on désire par exemple une géométrie rectangulaire d'hauteur $L$, il faut que $0<h_i<L$ ). En essayant d'aller du micro-état $\mu$ vers le micro-état $\nu$ où on a fait la transformation $h_i \rightarrow h_i + \alpha$ où $\alpha=\pm 1$, on obtient que la différence d'énergie est
+Le dépôt de particules provenant d'un réservoir permet de faire grandir un cristal à partir d'un substrat. Ce genre de systèmes est défini par le potentiel chimique $\mu$ des particules, dans le solvant et appartient à l'ensemble grand-canonique. Dans ce cas, on choisit au hasard de manière uniforme une colonne $h_i$ dans laquelle on décide de mettre ou d'enlever une particule selon le flux de particules $\nu$ vu dans l'équation d'Edwards-Wilkinson \ref{edwards-wilkinson}. Si l'on se place à l'équilibre thermodynamique, c'est-à-dire qu'autant de particules se déposent au niveau de l'interface que de particules la quittent, alors il faut que la probabilité de ces deux événements soient égales entre elles, et donc égales à $50\%$.
+Dans le cas où la géométrie est infinie, les valeurs des $h_i$ ne sont pas bornées, tandis que dans une géométrie torique de hauteur $L$, on rejette toutes les configurations qui ne respectent pas aux conditions $0 \leq h_i \leq L$.
+En essayant d'aller du micro-état $\mu$ vers le micro-état $\nu$ où on a fait la transformation $h_i \rightarrow h_i + \alpha$ où $\alpha=\pm 1$, on obtient que la différence d'énergie est
 \begin{align}
 	\Delta E &= |h_{i-1}-(h_i \pm 1)| + |h_{i+1}-(h_i \pm 1)| - |h_{i-1}-h_i| - |h_{i+1}-h_i|  \\
 		&= 2 \left( (h_i \leq h_{i-1}) + (h_i \geq h_{i+1}) -1 \right )
 \end{align}
 où $(h_i \leq h_{i-1})$ est un booléen valant $1$ si la condition est vraie, $0$ sinon.
-Le changement de magnétisation quand à lui est juste $\Delta M = \alpha$. La largeur de l'interface, quand à elle, définie par $\sigma = \sum_i (h_i-h_{i+1})^2$ change comme
+Le changement de magnétisation est alors $\Delta M = \alpha$, et La largeur de l'interface, définie par $\sigma = \sum_i (h_i-h_{i+1})^2$, change comme
 \begin{align}
 	\Delta \sigma = 2 \alpha (h_{i+1}-h_i) + 2
 \end{align}
 On n'a donc pas besoin, à chaque pas de temps, de recalculer ces deux grandeurs, il suffit de les mettre à jour dans une variable pour avoir les observables à tout instant $t$.
 
-
-
 Afin d'accélérer le processus d'équilibrage du système, il est recommandé de commencer directementa avec la valeur moyenne de magnétisation calculée directement à partir de la matrice de transfert. On regarde ensuite le temps d'équilibrage par la courbe $E(t)$, en attendant d'atteindre la valeur à l'équilibre. 
-À l'équilibre, le taux d'évaporation des particules doit être égal au temps de dépôt sur notre système. Cependant, en l'absence d'un potentiel qui contraint l'interface, l'interface est délocalisée, l'empêchant d'atteindre l'équilibre thermodynamique. C'est pour ça qu'une simulation numérique dans une dynamique de Glauber se doit de toujours avoir un potentiel permettant d'obtenir la localisation d'une interface. 
+À l'équilibre, le taux d'évaporation des particules doit être égal au taux de dépôt sur notre système. Cependant, en l'absence d'un potentiel qui contraint l'interface, l'interface est délocalisée, l'empêchant d'atteindre l'équilibre thermodynamique. C'est pour ça qu'une simulation numérique dans une dynamique de Glauber se doit de toujours avoir un potentiel permettant d'obtenir la localisation d'une interface. 
 
 Temps de corrélation sur un SOS, longueur de correl. 
 Effet de la taille 

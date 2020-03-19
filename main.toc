@@ -1,54 +1,55 @@
 \babel@toc {french}{}
-\contentsline {chapter}{Introduction}{3}{chapter*.2}
-\contentsline {chapter}{\numberline {1}Rappels th\IeC {\'e}oriques sur les interfaces}{7}{chapter.1}
-\contentsline {section}{\numberline {1.1}\IeC {\'E}quations dynamique d'un champ}{9}{section.1.1}
-\contentsline {subsection}{\numberline {1.1.1}Champ avec un nombre de degr\IeC {\'e}s de libert\IeC {\'e} fini}{9}{subsection.1.1.1}
-\contentsline {subsection}{\numberline {1.1.2}Th\IeC {\'e}orie statistique des champs}{11}{subsection.1.1.2}
-\contentsline {subsection}{\numberline {1.1.3}Mod\IeC {\`e}le $\phi ^4$}{13}{subsection.1.1.3}
-\contentsline {subsection}{\numberline {1.1.4}Tension superficielle}{16}{subsection.1.1.4}
-\contentsline {section}{\numberline {1.2}Taille finie et effet Casimir critique}{17}{section.1.2}
-\contentsline {section}{\numberline {1.3}Mod\IeC {\`e}les d'interface}{19}{section.1.3}
-\contentsline {subsection}{\numberline {1.3.1}Param\IeC {\`e}tre d'ordre non conserv\IeC {\'e}}{20}{subsection.1.3.1}
-\contentsline {subsection}{\numberline {1.3.2}Param\IeC {\`e}tre d'ordre conserv\IeC {\'e}}{21}{subsection.1.3.2}
-\contentsline {subsection}{\numberline {1.3.3}Interface hors \IeC {\'e}quilibre}{21}{subsection.1.3.3}
-\contentsline {section}{\numberline {1.4}Conclusion}{22}{section.1.4}
-\contentsline {chapter}{\numberline {2}Mod\IeC {\`e}le Solid-On-Solid}{25}{chapter.2}
-\contentsline {section}{\numberline {2.1}Le mod\IeC {\`e}le d'Ising}{25}{section.2.1}
-\contentsline {section}{\numberline {2.2}Hamiltonien}{27}{section.2.2}
-\contentsline {section}{\numberline {2.3}Matrice de Transfert}{29}{section.2.3}
-\contentsline {section}{\numberline {2.4}Stabilit\IeC {\'e} de l'interface}{30}{section.2.4}
-\contentsline {section}{\numberline {2.5}Ensemble canonique}{33}{section.2.5}
-\contentsline {section}{\numberline {2.6}Indiscernabilit\IeC {\'e} des particules : Particle-Over-Particle}{34}{section.2.6}
-\contentsline {chapter}{\numberline {3}Simulations}{37}{chapter.3}
-\contentsline {section}{\numberline {3.1}Algorithme de Metropolis}{37}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Ensemble grand-canonique : algorithme de Glauber}{39}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Ensemble canonique : algorithme de Kasawaki}{40}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Dynamique hors-\IeC {\'e}quilibre}{41}{subsection.3.1.3}
-\contentsline {subsection}{\numberline {3.1.4}Mod\IeC {\`e}le POP}{42}{subsection.3.1.4}
-\contentsline {chapter}{\numberline {4}R\IeC {\'e}sultats pour le mod\IeC {\`e}le SOS}{43}{chapter.4}
-\contentsline {section}{\numberline {4.1}Diff\IeC {\'e}rences Glauber/Kawasaki}{43}{section.4.1}
-\contentsline {section}{\numberline {4.2}Effet du cisaillement}{43}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Diff\IeC {\'e}rences avec le mod\IeC {\`e}le d'Ising}{45}{subsection.4.2.1}
-\contentsline {section}{\numberline {4.3}Cisaillement avec deux types de particules}{45}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Discussion about the Gaussian model}{48}{subsection.4.3.1}
-\contentsline {section}{\numberline {4.4}Interpretation}{48}{section.4.4}
-\contentsline {chapter}{\numberline {5}Champ magn\IeC {\'e}tique $|h_i|$}{51}{chapter.5}
-\contentsline {section}{\numberline {5.1}Mod\IeC {\`e}le gaussien}{51}{section.5.1}
-\contentsline {section}{\numberline {5.2}Distribution de l'interface}{52}{section.5.2}
-\contentsline {section}{\numberline {5.3}Fonction de corr\IeC {\'e}lation }{56}{section.5.3}
-\contentsline {section}{\numberline {5.4}Conclusion}{58}{section.5.4}
-\contentsline {chapter}{\numberline {6}Mod\IeC {\`e}le Particle-Over-Particle }{61}{chapter.6}
-\contentsline {section}{\numberline {6.1}Particules indiscernables}{61}{section.6.1}
-\contentsline {section}{\numberline {6.2}Avec le SOS}{61}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Modifications de l'algorithme Metropolis}{62}{subsection.6.2.1}
-\contentsline {section}{\numberline {6.3}R\IeC {\'e}sultats mod\IeC {\`e}le A}{62}{section.6.3}
-\contentsline {section}{\numberline {6.4}R\IeC {\'e}sultats mod\IeC {\`e}le B}{62}{section.6.4}
-\contentsline {section}{\numberline {6.5}R\IeC {\'e}sultats mod\IeC {\`e}le A+B}{62}{section.6.5}
-\contentsline {chapter}{\numberline {7}A+B POP model : la totale}{63}{chapter.7}
-\contentsline {section}{\numberline {7.1}Le mod\IeC {\`e}le C=A+B}{63}{section.7.1}
-\contentsline {section}{\numberline {7.2}Effective interface dynamics}{66}{section.7.2}
-\contentsline {section}{\numberline {7.3}A model of active interfaces}{71}{section.7.3}
-\contentsline {section}{\numberline {7.4}Conclusions}{73}{section.7.4}
-\contentsline {section}{\numberline {7.5}Acknowledgements}{74}{section.7.5}
-\contentsline {section}{\numberline {.1}Evaluating Fourier integrals}{75}{section.Alph0.1}
-\contentsline {chapter}{Conclusion et perspectives}{77}{appendix*.20}
+\contentsline {chapter}{Introduction}{3}{chapter*.2}% 
+\contentsline {chapter}{\numberline {1}Rappels th\IeC {\'e}oriques sur les interfaces}{7}{chapter.1}% 
+\contentsline {section}{\numberline {1.1}\IeC {\'E}quations dynamique d'un champ}{9}{section.1.1}% 
+\contentsline {subsection}{\numberline {1.1.1}Champ avec un nombre de degr\IeC {\'e}s de libert\IeC {\'e} fini}{9}{subsection.1.1.1}% 
+\contentsline {subsection}{\numberline {1.1.2}Th\IeC {\'e}orie statistique des champs}{11}{subsection.1.1.2}% 
+\contentsline {subsection}{\numberline {1.1.3}Mod\IeC {\`e}le $\phi ^4$}{13}{subsection.1.1.3}% 
+\contentsline {subsection}{\numberline {1.1.4}Tension superficielle}{16}{subsection.1.1.4}% 
+\contentsline {section}{\numberline {1.2}Taille finie et effet Casimir critique}{17}{section.1.2}% 
+\contentsline {section}{\numberline {1.3}Mod\IeC {\`e}les d'interface}{19}{section.1.3}% 
+\contentsline {subsection}{\numberline {1.3.1}Param\IeC {\`e}tre d'ordre non conserv\IeC {\'e}}{20}{subsection.1.3.1}% 
+\contentsline {subsection}{\numberline {1.3.2}Param\IeC {\`e}tre d'ordre conserv\IeC {\'e}}{21}{subsection.1.3.2}% 
+\contentsline {subsection}{\numberline {1.3.3}Interface hors \IeC {\'e}quilibre}{21}{subsection.1.3.3}% 
+\contentsline {section}{\numberline {1.4}Conclusion}{22}{section.1.4}% 
+\contentsline {chapter}{\numberline {2}Mod\IeC {\`e}le Solid-On-Solid}{25}{chapter.2}% 
+\contentsline {section}{\numberline {2.1}Le mod\IeC {\`e}le d'Ising}{25}{section.2.1}% 
+\contentsline {section}{\numberline {2.2}Hamiltonien}{27}{section.2.2}% 
+\contentsline {section}{\numberline {2.3}Matrice de Transfert}{30}{section.2.3}% 
+\contentsline {section}{\numberline {2.4}Stabilit\IeC {\'e} de l'interface}{31}{section.2.4}% 
+\contentsline {section}{\numberline {2.5}Ensemble canonique}{34}{section.2.5}% 
+\contentsline {section}{\numberline {2.6}Indiscernabilit\IeC {\'e} des particules : Particle-Over-Particle}{35}{section.2.6}% 
+\contentsline {section}{\numberline {2.7}Conclusion}{36}{section.2.7}% 
+\contentsline {chapter}{\numberline {3}Simulations}{37}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Algorithme de Metropolis}{37}{section.3.1}% 
+\contentsline {subsection}{\numberline {3.1.1}Ensemble grand-canonique : algorithme de Glauber}{39}{subsection.3.1.1}% 
+\contentsline {subsection}{\numberline {3.1.2}Ensemble canonique : algorithme de Kasawaki}{40}{subsection.3.1.2}% 
+\contentsline {subsection}{\numberline {3.1.3}Dynamique hors-\IeC {\'e}quilibre}{41}{subsection.3.1.3}% 
+\contentsline {subsection}{\numberline {3.1.4}Mod\IeC {\`e}le POP}{42}{subsection.3.1.4}% 
+\contentsline {chapter}{\numberline {4}R\IeC {\'e}sultats pour le mod\IeC {\`e}le SOS}{43}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Diff\IeC {\'e}rences Glauber/Kawasaki}{43}{section.4.1}% 
+\contentsline {section}{\numberline {4.2}Effet du cisaillement}{43}{section.4.2}% 
+\contentsline {subsection}{\numberline {4.2.1}Diff\IeC {\'e}rences avec le mod\IeC {\`e}le d'Ising}{45}{subsection.4.2.1}% 
+\contentsline {section}{\numberline {4.3}Cisaillement avec deux types de particules}{45}{section.4.3}% 
+\contentsline {subsection}{\numberline {4.3.1}Discussion about the Gaussian model}{48}{subsection.4.3.1}% 
+\contentsline {section}{\numberline {4.4}Interpretation}{48}{section.4.4}% 
+\contentsline {chapter}{\numberline {5}Champ magn\IeC {\'e}tique $|h_i|$}{51}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}Mod\IeC {\`e}le gaussien}{51}{section.5.1}% 
+\contentsline {section}{\numberline {5.2}Distribution de l'interface}{52}{section.5.2}% 
+\contentsline {section}{\numberline {5.3}Fonction de corr\IeC {\'e}lation }{56}{section.5.3}% 
+\contentsline {section}{\numberline {5.4}Conclusion}{58}{section.5.4}% 
+\contentsline {chapter}{\numberline {6}Mod\IeC {\`e}le Particle-Over-Particle }{61}{chapter.6}% 
+\contentsline {section}{\numberline {6.1}Particules indiscernables}{61}{section.6.1}% 
+\contentsline {section}{\numberline {6.2}Avec le SOS}{61}{section.6.2}% 
+\contentsline {subsection}{\numberline {6.2.1}Modifications de l'algorithme Metropolis}{62}{subsection.6.2.1}% 
+\contentsline {section}{\numberline {6.3}R\IeC {\'e}sultats mod\IeC {\`e}le A}{62}{section.6.3}% 
+\contentsline {section}{\numberline {6.4}R\IeC {\'e}sultats mod\IeC {\`e}le B}{62}{section.6.4}% 
+\contentsline {section}{\numberline {6.5}R\IeC {\'e}sultats mod\IeC {\`e}le A+B}{62}{section.6.5}% 
+\contentsline {chapter}{\numberline {7}A+B POP model : la totale}{63}{chapter.7}% 
+\contentsline {section}{\numberline {7.1}Le mod\IeC {\`e}le C=A+B}{63}{section.7.1}% 
+\contentsline {section}{\numberline {7.2}Effective interface dynamics}{66}{section.7.2}% 
+\contentsline {section}{\numberline {7.3}A model of active interfaces}{71}{section.7.3}% 
+\contentsline {section}{\numberline {7.4}Conclusions}{73}{section.7.4}% 
+\contentsline {section}{\numberline {7.5}Acknowledgements}{74}{section.7.5}% 
+\contentsline {section}{\numberline {.1}Evaluating Fourier integrals}{75}{section.Alph0.1}% 
+\contentsline {chapter}{Conclusion et perspectives}{77}{appendix*.22}% 

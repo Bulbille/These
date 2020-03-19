@@ -282,6 +282,18 @@ O.~Cohen and D.~Mukamel.
 \newblock {\em Journal of Physics A: Mathematical and Theoretical},
   49(15):155002, 2016.
 
+\bibitem{cirillo_monte_2005}
+E.~N.~M. Cirillo, G.~Gonnella, and G.~P. Saracco.
+\newblock Monte {Carlo} results for the {Ising} model with shear.
+\newblock {\em Physical Review E}, 72(2):026139, August 2005.
+
+\bibitem{berthier_nonequilibrium_2002}
+Ludovic Berthier and Jean-Louis Barrat.
+\newblock Nonequilibrium dynamics and fluctuation-dissipation relation in a
+  sheared fluid.
+\newblock {\em The Journal of Chemical Physics}, 116(14):6228--6242, April
+  2002.
+
 \bibitem{dean_effect_2020}
 David~S. Dean, Paul Gersberg, and Peter C.~W. Holdsworth.
 \newblock The effect of driving on model {C} interfaces.
@@ -319,12 +331,11 @@ Nigel Goldenfeld.
   {Group}}.
 \newblock CRC Press, 1 edition, March 2018.
 
-\bibitem{girot_conical_2019}
-A.~Girot, J.~Petit, R.~Saiseau, T.~Guérin, H.~Chraibi, U.~Delabre, and J.~P.
-  Delville.
-\newblock Conical {Interfaces} between {Two} {Immiscible} {Fluids} {Induced} by
-  an {Optical} {Laser} {Beam}.
-\newblock {\em Physical Review Letters}, 122(17), May 2019.
+\bibitem{stecki_magnetization_1994}
+J.~Stecki, A.~Maciol/ek, and K.~Olaussen.
+\newblock Magnetization profiles of the planar fluctuating interface in a d=2
+  {Ising} strip.
+\newblock {\em Physical Review B}, 49(2):1092--1103, January 1994.
 
 \bibitem{abraham_transfer_1973}
 D.~B. Abraham and A.~Martin-Löf.
@@ -339,9 +350,62 @@ D.~B. Abraham and P.~Reed.
 \newblock {\em Communications in Mathematical Physics}, 49(1):35--46, February
   1976.
 
+\bibitem{girot_conical_2019}
+A.~Girot, J.~Petit, R.~Saiseau, T.~Guérin, H.~Chraibi, U.~Delabre, and J.~P.
+  Delville.
+\newblock Conical {Interfaces} between {Two} {Immiscible} {Fluids} {Induced} by
+  an {Optical} {Laser} {Beam}.
+\newblock {\em Physical Review Letters}, 122(17), May 2019.
+
+\bibitem{knops_exact_1977}
+H.~J.~F. Knops.
+\newblock Exact {Relation} between the {Solid}-on-{Solid} {Model} and the
+  \${\textbackslash}mathrm\{{XY}\}\$ {Model}.
+\newblock {\em Physical Review Letters}, 39(12):766--769, September 1977.
+
+\bibitem{owczarek_exact_1993}
+Aleksander~L. Owczarek and Thomas Prellberg.
+\newblock Exact solution of the discrete (1+1)-dimensional {SOS} model with
+  field and surface interactions.
+\newblock {\em Journal of Statistical Physics}, 70(5-6):1175--1194, March 1993.
+
+\bibitem{majumdar_airy_2005}
+Satya~N. Majumdar and Alain Comtet.
+\newblock Airy {Distribution} {Function}: {From} the {Area} {Under} a
+  {Brownian} {Excursion} to the {Maximal} {Height} of {Fluctuating}
+  {Interfaces}.
+\newblock {\em Journal of Statistical Physics}, 119(3-4):777--826, May 2005.
+
+\bibitem{schehr_universal_2006}
+Grégory Schehr and Satya~N. Majumdar.
+\newblock Universal asymptotic statistics of maximal relative height in
+  one-dimensional solid-on-solid models.
+\newblock {\em Physical Review E}, 73(5):056103, May 2006.
+
+\bibitem{vaysburd_critical_1995}
+I.~Vaysburd.
+\newblock Critical {RSOS} models in external fields.
+\newblock {\em Nuclear Physics B}, 446(3):387--404, July 1995.
+
 \bibitem{guyer_sine-gordon_1979}
 R.~A. Guyer.
 \newblock Sine-{Gordon} chain as a model for a two-dimensional interface.
 \newblock {\em Physical Review B}, 20(10):4375--4381, November 1979.
+
+\bibitem{chui_pinning_1999}
+S.~T. Chui.
+\newblock Pinning of interfaces by three-dimensional potentials.
+\newblock {\em Journal of Physics: Condensed Matter}, 11(13):2719, 1999.
+
+\bibitem{newman_monte_1999}
+M.~E.~J. Newman and G.~T. Barkema.
+\newblock {\em Monte {Carlo} {Methods} in {Statistical} {Physics}}.
+\newblock Oxford University Press, Oxford, New York, February 1999.
+
+\bibitem{wansleben_monte_1991}
+S.~Wansleben and D.~P. Landau.
+\newblock Monte {Carlo} investigation of critical dynamics in the
+  three-dimensional {Ising} model.
+\newblock {\em Physical Review B}, 43(7):6006--6014, March 1991.
 
 \end{thebibliography}

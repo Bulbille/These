@@ -4,8 +4,9 @@ La discrétisation du champ $\phi(\mx,t)$ afin de faire des simulations numériq
 
 À basse température $T \less T_C$, le système tend à créer des domaines de magnétisation moyenne opposées induisant des interfaces. Nous rappelons dans ce chapitres quelques notions essentielles sur le modèle d'Ising, sur la manière d'étudier les interfaces dans ce modèles, et une approximation à très basse température qui ne retient que l'information sur l'interface : le modèle Solid-On-Solid.
 
-		  \section{Le modèle d'Ising}
-  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \section{Le modèle d'Ising}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
 \begin{figure}
 	\begin{minipage}[t]{0.5\linewidth}
 		\includegraphics[width=\linewidth]{isingtosos/snap07.pdf}
@@ -20,6 +21,7 @@ La discrétisation du champ $\phi(\mx,t)$ afin de faire des simulations numériq
   	Le modèle d'Ising \footnote{Pour le lecteur curieux quant à l'histoire du modèle, se référer à \cite{niss_history_2005} et à \cite{niss_history_2009}.} est un modèle de particules sur réseau où l'interaction entre les particules du système se fait uniquement entre les plus proches voisins. Chaque particule au site $i$ possède deux états différents que l'on note $\sigma_i = \pm 1$, analogues aux spins en mécanique quantique. L'Hamiltonien d'un tel modèle s'écrit alors
 \begin{equation}
 	\mH =  - \sum_{<i j >} J_{ij} \sigma_i \sigma_j + \frac{V(i)+V(j)}{2}
+	\label{hamil-ising}
 \end{equation}
 où $< ij >$ dénotent deux premiers voisins, $J_{ij}$ l'énergie d'interaction entre deux sites et $V(i)$ un champ externe. On peut voir ce terme d'interaction comme la discrétisation du terme $(\nabla \phi(\mx,t))^2$ où l'on a enlevé les constantes d'énergies, et l'absence du potentiel $\phi^4$ puisqu'il est toujours égal à $m^2+\frac{\lambda}{4!}$ ici. 
 
@@ -34,19 +36,25 @@ où le terme constant $\sum_{\langle i j >}  J_{ij}$ ne modifie la fonction de p
 Le deuxième terme s'identifie à la présence d'un potentiel chimique pour les particules liquide-gaz. Une phase magnétique positive dans le modèle d'Ising s'apparente dès lors à un état de haute densité (un liquide), tandis qu'une phase négative est considérée comme une phase de basse densité, c'est-à-dire un gaz.
 Ce modèle représente également un mélange binaire entre deux types de particules $A$ et $B$ comme par exemple un polymère dans un solvant, les particules identiques s'attirant tandis que les particules d'un type différent se repoussent. 
 
-L'étude de l'interface entre les phases $+$ et $-$ nécessite la brisure de la symétrie de translation au sein du système. Cela peut se faire par des conditions aux bords non-périodiques dans une direction.
-Dans ce cas on a par exemple les spins de la rangée $0$ étant positifs et ceux de la rangée $L_Y$ négatifs, des clusters vont se former et créer une interface au milieu. Il est possible de favoriser une phase par rapport à l'autre grâce à un potentiel chimique (ou champ magnétique) $V(h_i) = -h \sigma_i$. 
-La création d'une interface peut également se faire par un champ externe assymétrique favorisant une phase au-dessus et l'autre en-dessous, comme le potentiel $V(y) = - B |\frac{L_Y}{2}-y|$. Cette séparation modélise quant à lui l'effet d'un champ  sur un liquide binaire comme dans les expériences de forçage laser \cite{girot_conical_2019}. 
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{isingtosos/stecki-profil.png}
+    \caption{Profil de magnétisation $m(z)$ d'une interface en 2D pour différentes températures en unité de $T_C$ via la diagonalisation de la matrice de transfert du modèle d'Ising \cite{stecki_magnetization_1994}. Plus la température est faible  et plus elle est localisée.}
+    \label{interface-ising}
+\end{figure}
 
-La tension superficielle d'une telle interface est alors donnée \cite{abraham_transfer_1973,abraham_interface_1976} par
+L'étude de l'interface entre les phases $+$ et $-$ nécessite la brisure de la symétrie de translation au sein du système. Cela peut se faire par des conditions aux bords non-périodiques dans une direction.
+Dans ce cas on a par exemple les spins de la rangée $0$ étant positifs et ceux de la rangée $L_Y$ négatifs, des clusters vont se former et créer une interface au milieu. 
+Le profil de magnétisation d'une telle interface est donnée dans la figure \ref{interface-ising} \cite{stecki_magnetization_1994}, et sa tension superficielle est égale à \cite{abraham_transfer_1973,abraham_interface_1976.richards_numerical_1993} 
 \begin{align}
     \sigma = 2 \beta J - \log(\tanh(\beta J))
 \end{align}
-En absence de champ externe, 
 
-L'épinglage\cite{} (\textit{pinning}) de l'interface auprès de la ligne de démarcation permet de l'étudier loin des bords du système.		
-		
-		\section{Hamiltonien}
+Il est également possible de favoriser une phase par rapport à l'autre grâce à un champ externe assymétrique favorisant une phase au-dessus et l'autre en-dessous, comme le potentiel $V(y) = - B |\frac{L_Y}{2}-y|$. Cette séparation modélise quant à elle l'effet d'un champ  sur un liquide binaire comme dans les expériences de forçage laser \cite{girot_conical_2019}, que nous étudierons plus en détail dans la Section \ref{sec_laser}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%		
+    \section{Hamiltonien}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
 	
 Quelle que soit la méthode utilisée, le système se simplifie dès lors que nous désirons étudier uniquement l'interface d'un système et non son ensemble, telles que les longueurs de corrélations dans le \textit{bulk}, l'aimantation moyenne, la chaleur spécifique ou la susceptilibté magnétique. À très basse température, les interfaces sont bien délimitées et il y a très peu de gouttes d'évaporations d'une phase dans l'autre. En considérant le système très peu mélangé, il est possible de définir la présence d'une phase par rapport à la hauteur $h_i$ de l'interface. Chaque site prend la valeur
 \begin{align*}
@@ -65,22 +73,38 @@ En utilisant l'identité $\min(a,b)-\max(a,b)=|a-b|$, on a
 \begin{align*}
     \sum_{j=0}^L \sgn(h-j)\sgn(h'-j) = L - 2 |h-h'|
 \end{align*}
-Ainsi, pour un système de longueur $L_X$ et de largeur $L_Y$ l'hamiltonien du modèle d'Ising en absence de potentiel se réécrit comme 
+Ainsi, pour un système de longueur $L_X$ et de largeur $L_Y$ l'hamiltonien du modèle d'Ising \ref{hamil-ising} en absence de potentiel en évitant de recompter les liens deux fois se réécrit comme 
 \begin{align}
-    \mH = 4 J L_X (2-L_Y) +4J \sum_i |h_i-h_{i+1}|
+    \mH = 2 J L_X (2-L_Y) +2 J \sum_i |h_i-h_{i+1}|
+    \label{energie-sos-ising}
 \end{align}
 Le terme $|h_i-h_{i+1}|$ représente la surface de contact horizontale entre les deux phases qui dépend directement de la hauteur, tandis que le terme constant représente la surface de contact verticale.
-En retirant la partie constante de l'énergie et simplifiant $4 J = J$ et en gardant $L_X = L$, nous obtenons l'hamiltonien du \textbf{modèle Solid-On-Solid}
+En retirant la partie constante de l'énergie et simplifiant $4 J = J$ et en gardant $L_X = L$, nous obtenons l'hamiltonien du \textbf{modèle Solid-On-Solid} (SOS)
 \begin{align}
-    \mH = J \sum_i |h_i-h_{i+1}|
+    \mH = J \sum_i |h_i-h_{i+1}|^k
     \label{hamil-sos}
 \end{align}
+L'exposant $k$ désigne ici tous les types de modèles SOS que l'on peut trouver,avec des interactions différentes entres les sites. Par exemple, dans le cas d'un hamiltonien gaussien où  $k=2$, on peut démontrer qu'il existe une relation entre le modèle SOS et le modèle $XY$ \cite{knops_exact_1977}. Par la suite nous prendrons $k=1$ puisque c'est l'exposant qui découle directement de l'approximation du modèle d'Ising.
 
-Nous avons ici réussi à réduire la dimensionalité du système en ne prenant en compte que la hauteur $h_i$ au site $i$. L'énergie du système est alors décrite par la différence de hauteur entre deux sites voisins, et $\beta J$ prend ici alors le rôle de la tension de surface.
+Nous avons réussi à réduire la dimensionalité du système en ne prenant en compte que la hauteur $h_i$ au site $i$. L'approximation du modèle SOS implique que les configurations sont analogues à celles d'un mouvement brownien partiellement dirigés auto-évitant. Cette analogie a permis de diagonaliser complètement la fonction de partition dans le cas où il existe un champ magnétique et un potentiel épinglant l'interface (nous en reparlons au paragraphe \ref{par-stab}) \cite{owczarek_exact_1993} et d'étudier les statistiques des déviations extrêmes de l'interface \cite{majumdar_airy_2005,schehr_universal_2006}.
 
-Puisqu'il n'y a plus de transition de phase possible dans ce modèle, la température critique $\beta_C$ du modèle d'Ising n'a plus de rôle à jouer ici. Pour rester dans le domaine de l'approximation, si nous désirons comparer les résultats avec ceux du modèle d'Ising, il faudra veiller à rester dans le domaine $T \less T_C$, l'approximation étant de plus en plus valable plus la température est basse. Par la suite, puisque nous désironts étudier le modèle SOS et non le comparer avec le modèle d'Ising, nous prendrons, sauf cas contraire explicité, $\beta = \beta_C \simeq 0.44$ et $J=1$ par soucis de simplicité. 
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\textwidth]{example-image-a}
+    \caption{Energie par site entre les modèles d'Ising (\ref{hamil-ising}) (avec conditions fixes en $y$), SOS et RSOS (\ref{hamil-sos}) en fonction de la température via des simulations de Monte Carlo pour $L_X=64$, $L_Y=51$ et $J=1$ avec des conditions périodiques en $x$. La configuration intiale est la configuration à $T=0$ d'une interface parfaitement lisse. {\color{red} refaire avec MCIA pour Ising 'Curta/CompModels/Ising', 10min pour eq=5e5,max=5e5,32*51 par point, soit 22hCPU total nécessaire pour 5e7 max } }
+    \label{comparaison-modeles}
+\end{figure}
 
+À très faible température, il est possible de rajouter une condition supplémentaire, appelée \textbf{modèle Solid-On-Solid Restreint} (RSOS) \cite{privman_transfer-matrix_1989}. Das ces conditions, l'interface est très lisse puisque l'on suppose que $|h_i - h_{i+1} \leq 1$ \cite{kim_conserved_1994,vaysburd_critical_1995}. Dans la figure \ref{comparaison-modeles}, l'énergie du modèle d'Ising, du SOS et du RSOS sont reliées par l'équation \ref{energie-sos-ising}, et l'on voit que les approximations correspondent pour $T_{SOS} \less T_{C,Ising}$ et $T_{RSOS} \less T_{C,Ising}$. 
+
+
+Par la suite, puisque nous désironts étudier le modèle SOS et non le comparer avec le modèle d'Ising, nous prendrons, sauf cas contraire explicité, $\beta = \beta_C \simeq 0.44$ et $J=1$ par soucis de simplicité. 
+
+ {\color{red} compléter quand résultats}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \section{Matrice de Transfert}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 	De manière plus générale, l'Hamiltonien d'un système avec des interactions entre les particules peut se réécrire comme $\mH = \sum_{\langle ij >} H(i,j)$ avec
 \begin{align*}
@@ -94,6 +118,18 @@ La fonction de partition de notre système s'écrit alors
    = \sum_{h_1 h_2 ... h_L} \prod_{i} e^{-\beta H(h_i,h_{i+1})} 
 \end{align*}
 
+La matrice 
+\begin{align}
+    T(h_i,h_j) = e^{-\beta H(h_i,h_j)}
+    \label{matric-transfert}
+\end{align}
+est appelée matrice de transfert. Puisque le système est périodique (c'est-à-dire que $h_{L+1} = h_1$,  la matrice est périodique également, c'est-à-dire que $T(h_L,h_{L+1}) = T(h_L,h_1)$ \cite{pearce_exact_1989}. Elle est également symétrique, ce qui implique qu'elle est diagonalisable dans la base des vecteurs propres $|\lambda >$ de valeur propre $\lambda$. On dénote par $\lambda_0$ la plus grande valeur propre de $T$, par $\lambda_1$ la deuxième plus grande valeur propre et ainsi de suite.
+Ainsi on peut diagonaliser la fonction de partition par la trace de la matrice de transfert \cite{abraham_transfer_1973}
+\begin{align}
+  Z = \sum_{h_1 h_2 ... h_L} \prod_{i} T(h_i,h_{i+i}) = Tr T^L  = \sum_\lambda \langle\lambda | T^L | \lambda> = \sum_\lambda \lambda^L
+\end{align}
+
+
 \begin{figure}
     \begin{align}
     T = \begin{bmatrix} 
@@ -106,17 +142,6 @@ La fonction de partition de notre système s'écrit alors
     \end{align}
     \caption{Matrice de transfert infinie et symmétrique \ref{matric-transfert}.}
 \end{figure}
-
-La matrice 
-\begin{align}
-    T(h_i,h_j) = e{-\beta H(h_i,h_j)}
-    \label{matric-transfert}
-\end{align}
-est appelée matrice de transfert. Puisque le système est pérdioque (c'est-à-dire que $h_{L+1} = h_1$,  la matrice est périodique également, c'est-à-dire $T(h_L,h_{L+1}) = T(h_L,h_1)$. Elle est également symétrique, ce qui implique qu'elle est diagonalisable dans la base des vecteurs propres $|\lambda >$ de valeur propre $\lambda$. On dénote par $\lambda_0$ la plus grande valeur propre de $T$, par $\lambda_1$ la deuxième plus grande valeur propre et ainsi de suite.
-Ainsi on peut diagonaliser la fonction de partition par la trace de la matrice de transfert
-\begin{align}
-  Z = \sum_{h_1 h_2 ... h_L} \prod_{i} T(h_i,h_{i+i}) = Tr T^L  = \sum_\lambda \langle\lambda | T^L | \lambda> = \sum_\lambda \lambda^L
-\end{align}
 
 Dans la limite thermodynamique $L \to \infty$, seuls les plus grands vecteurs propres jouent un rôle. Afin de calculer les observables de notre système, il convient d'introduire les vecteurs de l'espace de Hilbert de ${|\lambda>}$ qui vont de $|h = -\infty>$ à $|h = +\infty>$.
 En introduisant également la matrice des hauteurs $\tilde{M} |h> = h |h> i$, on trouve
@@ -140,8 +165,9 @@ En introduisant également la matrice des hauteurs $\tilde{M} |h> = h |h> i$, on
 \end{itemize}
 
 	\section{Stabilité de l'interface}
+	\label{par-stab}
 
-	Soit $\psi_\lambda(h)= <h|\lambda>$ la projection du vecteur propre associé à la valeur propre $\lambda$ de la matrice de transfert sur la base des hauteurs $|h>$ dans un système infini de par et d'autre de l'interface. En absence de potentiel\cite{guyer_sine-gordon_1979}, l'équation du vecteur propre donne
+	Soit $\psi_\lambda(h)= <h|\lambda>$ la projection du vecteur propre associé à la valeur propre $\lambda$ de la matrice de transfert sur la base des hauteurs $|h>$ dans un système infini de par et d'autre de l'interface. En absence de potentiel\cite{guyer_sine-gordon_1979,chui_pinning_1981}, l'équation du vecteur propre donne
 \begin{align}
 	\sum_{h=-\infty}^\infty T(h,h') \psi_\lambda(h) = \lambda \psi_\lambda(h')
 \end{align}
@@ -166,7 +192,7 @@ L'existence d'une solution de ce genre indique que l'interface n'est pas localis
 Il est à noter qu'à $\beta=0$, c'est-à-dire pour une température infinie, tous les termes de la matrice de transfert sont égaux à $1$, menant à des vecteurs propres nuls. Dans cette limite, l'interface n'existe plus, le modèle SOS n'est donc pas valable. De même, pour une température nulle $\beta=\infty$, la matrice de transfert devient la matrice identité. Les valeurs propres deviennent toutes égales à $1$ et les vecteurs propres sont $\psi_i(h) = \delta_{h,i}$ où ici $i$ est l'indice de la i-ème valeur propre $\lambda_i = 1$. La probabilité de trouver l'interface à la hauteur $h$ devient $p(h) = \frac{1}{Z}\sum_{i} <\lambda_i | h >^2 = 1$. La température nulle a pour effet de geler l'interface sur une seule hauteur, mais toutes les hauteurs sont équiprobables. Bien que les micro-états soient extrêmement différents que pour une température finie, les propriétés macroscopiques sont identiques à cause du même poids statistique associé à chaque état.
 
 
-Historiquement, une manière facile de localiser l'interface est de rajouter un potentiel $V(h) = -B \delta_{h,0}$ \cite{chui_pinning_1999}. La présence du potentiel n'affecte pas la parité du système mais peut introduire un surplus de particules en $0$. La recherche d'un état localisé nous donne un ansatz de la forme 
+Historiquement, une manière facile de localiser l'interface est de rajouter un potentiel $V(h) = -B \delta_{h,0}$ \cite{chui_pinning_1999,chalker_pinning_1981,chalker_pinning_1982}. La présence du potentiel n'affecte pas la parité du système mais peut introduire un surplus de particules en $0$. La recherche d'un état localisé nous donne un ansatz de la forme 
 \begin{align}
 	\psi_\lambda(h) = \begin{cases} |\alpha|^h & \text{si } h \neq 0 \\ \psi_{\lambda,0} & \text{sinon} \end{cases} 
 \end{align}
@@ -187,7 +213,7 @@ L'équation du vecteur propre à $h'=0$ nous donne par ailleurs
 \begin{align}
 	\psi_{\lambda,0} + 2 \frac{R \alpha}{1-R \alpha} = \lambda \psi_{\lambda,0} e^{-\beta B}
 \end{align}
-L'existence d'une solution cohérente $\alpha < 1$ autorise la présence d'une interface localisée grâce au pinning.
+L'existence d'une solution cohérente $\alpha \less 1$ autorise la présence d'une interface localisée grâce à l'épinglage \cite{burkhardt_localisation-delocalisation_1981,kroll_solid--solid_1981,kroll_pinning_1982,kroll_interface_1983}.
 
 D'autres méthodes existent pour confiner l'interface. Le cisaillement d'une interface diminue sa largeur et permet de la localiser dans l'espace. On peut également proposer deux potentiels chimiques différents pour chaque phase à une hauteur de l'interface prédéfinie, comme le ferait un laser dans les expériences de cisaillement\cite{delville} dans un système semi-infini. Cet cas sera étudié plus loin. Dans un système infini, une autre possibilité est de définir un champ magnétique symétrique rendant plus difficile la présence de l'interface loin de $0$. Nous utiliserons ici un potentiel du style
 \begin{align}
@@ -195,7 +221,6 @@ D'autres méthodes existent pour confiner l'interface. Le cisaillement d'une int
 \end{align}
 
 Il est facile de se convaincre que loin de $h=0$ le coût énergétique est si grand que la probabilité que l'interface s'y trouve soit petite, impliquant que l'interface est localisée. La position moyenne de l'interface se situe au minimum du potentiel qui est dans ce cas $0$. 
-
 
 	\section{Ensemble canonique}
 
@@ -213,11 +238,17 @@ avec la relation vis-à-vis de l'ensemble grand-canonique pour un potentiel chim
 \begin{align}
 	 \Xi(\mu) = \sum_{A = -\infty}^\infty Z(A) e^{\beta \mu M}
 \end{align}
-La position moyenne de l'interface est maintenant définie et beaucoup d'états sont interdits, ce qui change  les propriétés thermodynamiques de la matrice de transfert comme la distribution des hauteurs de l'interface, même si la moyenne reste la même. Dans la limite thermodynamique, si l'on prend dans l'ensemble canonique pour paramètre d'ordre la valeur moyenne du paramètre d'ordre dans l'ensemble grand canonique, on s'attend à ce que les observables du système se comportent de manière équivalente. 
+La position moyenne de l'interface est maintenant définie et beaucoup d'états sont interdits, ce qui change  les propriétés thermodynamiques de la matrice de transfert comme la distribution des hauteurs de l'interface \cite{siegert_scaling_1993}, même si la moyenne reste la même. Dans la limite thermodynamique, si l'on prend dans l'ensemble canonique pour paramètre d'ordre la valeur moyenne du paramètre d'ordre dans l'ensemble grand canonique, on s'attend à ce que les observables du système se comportent de manière équivalente. 
 Malheureusement, il est impossible de réécrire la contrainte dans le langage des matrices de transfert, empêchant ainsi de calculer analytiquement les différences entre les deux ensembles pour une taille donnée. Il est possible de construire la fonction de partition \textit{ab initio}, mais le grand nombre de sites et de hauteurs permises dans un système classique empêchent le calcul dans un temps CPU raisonnable. 
 
 
 	\section{Indiscernabilité des particules : Particle-Over-Particle}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{isingtosos/figure-sos.pdf}
+	\caption{Une configuration possible de modèle SOS lorsque les particules sont discernables. Cette représentation est la représentation classique dans la littérature.}
+\end{figure}	
 	
 Dans le modèle d'Ising, les particules sont discernables puisque labellisées par leur position $(i,j)$. Cette discernabilité pose problème lorsque l'on utilise le modèle pour un système de gaz sur réseaux ou de fluides binaires par exemple. À cet égard le modèle SOS est meilleur, puisque la discernabilité ne concerne plus que les sites $i$ contenant $h_i$ particules indiscernables. 
 En prenant le point de vue atomiste présent dans le modèle d'Ising, nous pouvons suivre la position de chaque particule au sein de nos sites. Cela a plusieurs implications.
@@ -225,142 +256,16 @@ La première, c'est qu'en général, seules les couches proche de l'interface so
 Deuxièmement, lors des algorithmes de Monte Carlo définit au chapitre suivant, la probabilité de choisir un site au hasard n'est pas la même que celle de choisir une particule au hasard ! 
 La fonction de partition d'un système où les particules sont discernables s'écrit maintenant
 \begin{align}
-	Z = \sum_{h_1 h_2 ... h_L} e^{- \beta \sum_{i} H(i,i+1)} \frac{N!}{\prod_i n_i!} = N! \sum_{h_1 h_2 ... h_L} e^{- \beta \sum_{i} H(i,i+1) -\sum_i \ln(n_i!)}
+	Z = \sum_{h_1 h_2 ... h_L} e^{- \beta \sum_{i} H(i,i+1)} \frac{1}{\prod_i n_i!} = \sum_{h_1 h_2 ... h_L} e^{- \beta \sum_{i} H(i,i+1) -\sum_i \ln(n_i!)}
 \end{align}
 
-Ce nouveau système, que l'on appellera - par analogie avec Solid-On-Solid - le modèle Particle-Over-Particle sera étudié de manière détailĺée dans les derniers chapitres.
+Ce nouveau système, que l'on appellera - par analogie avec Solid-On-Solid - le modèle Particle-Over-Particle sera étudié de manière détailĺée dans au chapitre \ref{chap-pop}}.
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.7\linewidth]{isingtosos/figure-sos.pdf}
-	\caption{Une configuration possible de modèle SOS lorsque les particules sont discernables. Cette représentation est la représentation classique dans la littérature.}
-\end{figure}
-
-
-
-\begin{comment}
-		\section{SOS Hamiltonian}
-		%%%%%%%%%%%%
-		
-		In the following, we present three Solid-On-Solid models with different magnetic fields. 
-		The SOS interaction between nearest neighboors is of the form $f(i,j) = |h_i - h_j|$. 
-		This kind of interaction prevents big fluctuations between two nearest neighboors and is directly related to the Ising model in the approximation where there are no overhangs between the two phases. \textcolor{blue}{see my notes for the derivation}
-		
-		In the absence of a magnetic field, the interface will fluctuate around its center. Shown below an typical SOS interface for an $L_X=50$ and a $L_Y=60$ after $10^5$ Monte Carlo steps.
-		
-		%\includegrapsics[width=10cm]{nomag.png}
-		
-		
-		%%%%%%
-		\subsection{Model $g(i) = h_i$ (model A)}
-		%%%%%%
-		
-		This model replicates the effect of a homogeneous magnetic field. The bigger the magnetic field $B$ (which can be positive or negative), the further the interface is driven with a symetry breaking. 
-		
-		\begin{align}
-		  H(i,j) = J |h_i-h_j| + B \frac{h_i + h_j}{2}
-		\end{align}
-		
-		%\includegrapsics[width=10cm]{normal.png}
-		
-		For an infinite magnetic field, we clearly see that the interface gets flattened over on of the edge. The resulting single state avalaible in this limit is the flat interface, with all sites beeing over or under it, depending on the sign of $B$.
-		
-		In the limit $B \rightarrow \infty$, the interface will flatten to the bottom edge, resulting in a single state of energy 
-		\begin{align}
-		  F(B \rightarrow \infty) = - B L_Y
-		\end{align}
-		
-		The free energy for at $B=0$ is thus given by align \ref{free_energy} as
-		\begin{align}
-		  F(0) = B L_X L_Y - \int_0^\infty m(B)dB
-		  \label{energymodela}
-		\end{align}
-		with $m(B) = \langle\sum_i h_i> = L_Y$
-		
-		%%%%%%
-		\subsection{Model $g(i) = |h_i|$ (model B)}
-		%%%%%%
-		
-		This model uses a stagged magnetic field analoguous to the action of a laser on a binary mixture. The further we get from the mean position, the higher is the energy. In order to minimize the energy, the system will have a tendency to be pinned, leading to a very flat interface. 
-		
-		\begin{align}
-		  H(i,j) = J |h_i-h_j| - B \frac{|h_i| + |h_j|}{2}
-		\end{align}
-		
-		%\includegrapsics[width=10cm]{stagged.png}
-		
-		In the limit $B \rightarrow \infty$, the free energy $F$ will be equal to $0$, while the magnetisation $m(B \rightarrow \infty) = \langle\sum_i |h_i|> = 0$ also.
-		
-		%%%%%%
-		\subsection{Model $g(i) = -|h_i|$ (model C)}
-		%%%%%%
-		
-		This model is the same as the previous one, except with a switch of sign. In this case, the magnetic field will have a depinning effect leading to a scattering of the heights around both edges. \textcolor{red}{I don't really get yet the argument about the competition between entropy and energy.}
-		
-		\begin{align}
-		  H(i,j) = J |h_i-h_j| - B \frac{|h_i| + |h_j|}{2}
-		\end{align}
-		
-		%\includegrapsics[width=10cm]{negstagged.png}
-		
-		In the $B \rightarrow \infty$ limit, we have then a scattered system. How can we compute its free energy ? Sites will be at $h_i=\pm L_Y$ , leading to an easy $2\times 2$ transfer matrix.
-		\begin{align}
-		  Z = e^{\beta B L_Y L_X} Tr( (e^{-\beta J \frac{L_Y}{2} \sum_i |\sigma_i - \sigma_j| })^{L_X} )
-		\end{align}
-		where $\sigma_i = \pm 1$
-		
-		The transfer matrix is then given as
-		
-		\begin{align}
-		T= e^{\beta B L_Y}
-		  \begin{pmatrix}
-		    1 & e^{-\beta 2 J L_Y} \\
-		    e^{-\beta 2 J L_Y} & 1
-		  \end{pmatrix}
-		\end{align}
-		Its eigenvalues are $\lambda_\pm = e^{\beta B L_Y}( 1 \pm e^{-\beta 2 J L_Y})$, giving a partion function 
-		\begin{align}
-		  Z = e^{\beta B L_Y L_X} \times ((1 - e^{-\beta 2 J L_Y})^{L_X} + (1 + e^{-\beta 2 J L_Y})^{L_X} )
-		\end{align}
-		
-		The free energy from \ref{deffree_energy} is 
-		\begin{align}
-		  F(B\rightarrow \infty) = - L_Y B - \frac{1}{\beta} \ln \left( 1 + e^{-\beta 2 J L_Y} \right)
-		  \label{energymodelc}
-		\end{align}
-		which, in the limit of $L_X \rightarrow \infty$ converges to \ref{energymodela}. This is easily explained as the energy to switch from a side to another increases so much that at some point the interface will be pinned to one of the edges, resulting in the same single state.
-		
-		\begin{figure}
-		%  \includegrapsics[width=13cm]{comparison.pdf}
-		  \caption{Computation of both terms in \ref{free_energy} in the limit $L_X \rightarrow \infty$ and $L_Y=30$ for the three different models. We see that models A and C have a very similar behaviour even for very small $B$. The linear fit does indeed give a relation $F(0) - F(B) = L_Y \times B$}
-		\end{figure}
-		
-		%%%%%%%%%%%%
-		\newpage
-		\section{Numerical results}
-		%%%%%%%%%%%%
-		
-		The diffusion of particles in a system can be mapped in an Ising model pretty easily if we assume the conservation of particles through time in our Monte Carlo dynamics. That means that $\sum h_i = K$, with $K$ a constant defined by the initial conditions. This condition can be enforced in the partition function if we only take the microstates satisfying our constraint. Sadly, this constraint is about the microstates and can not be transposed into our Hamiltonian, making the Transfer Matrix useless for such a case. 
-		
-		The question we want to adress is thus : how big is the difference between the constrained and the unconstrained dynamic in the computation of the free energy ? Is the limit $B^{\ast} \rightarrow \infty$ the same for the three models for both dynamics ? 
-%		Figure \ref{compGlau} conforts us in the conformity between the Glauber dynamic and the Transfer Matrix method. 
-		
-		\begin{figure}[h]
-		%  \includegrapsics[width=13cm]{ModGlau.pdf}
-		  \caption{Computation of the free energy (above) and the magnetisation (below) for the three models in a Glauber dynamics (unconstrained dynamics) through simulations (with error bars) and exact transfer matrix diagonalization.}
-		  \label{compGlau}
-		\end{figure}
-		
-		When comparing to the Kawasaki dynamic in Figure \ref{compKaw}, we start seeing some differences. First, in model A the magnetization of our system is always  equal to $0$, by construction of our Kawasaki dynamics, meaning that the computation of the free energy is a tricky one. Luckily, Model A is very similar to Model C with respect to the posible microstates, except some walls that do not add a significan free energy into the system. This means that the results we obtain in Model C are roughly the same as in Model A ! This allows us to drop Model A from the discussion from now on and get retrieve its general behaviour and properties from Model C.
-		
-		As expected, the constrained dynamics adds some variance with respect to the Transfer Matrix. 
-		
-		\begin{figure}
-		%  \includegraphics[width=13cm]{ModKaw.pdf}
-		  \caption{Computation of the free energy (above) and the magnetisation (below) for the three models in a Kawasaki dynamics (constrained dynamics) through simulations (with error bars) and exact transfer matrix diagonalization. The error in magnetization of Model A is exactly equal to 0, by construction.}
-		  \label{compKaw}  
-		\end{figure}
-
-  \section{Discretization of the system with respect to continuous models}
-    \subsection{Correlation length and temperature}
-\end{comment}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusion}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+7
+Bien que le modèle d'Ising soit extrêmement étudié de par sa richesse à la transition de phase, l'étude des interfaces peut se contenter d'une approximation à basse température où il n'existe pas d'évaporation, bulles ou digitations de la phase $+$ au sein de la phase $-$ et vice-versa. Le modèle Solid-On-Solid suffit à étudier une grande variété de phénomènes ayant lieu à l'interface d'Hamiltonien \ref{hamil-sos}. 
+La basse dimensionalité de ce système permet d'utiliser le formalisme des matrices de transfert. 
+Nous avons démontré que l'interface était libre de fluctuer où elle le désirait sauf en présent d'un champ de confinement qui permet d'étudier ses fluctuations autour d'un point central.
+4
