@@ -319,6 +319,7 @@ Afin d'extraire la force de Casimir, il suffit alors de soustraire deux quantit�
 Puisque le surplus d'énergie dû au confinement est nul lorsque $L_2\to \infty$, on obtient que la force de Casimir est
 \begin{align}
     f_c(\beta,L_1,h) \simeq \frac{1}{L' }\frac{\partial \Omega(\beta,L_2,h)}{\partial L} \bigg|_{\beta,L'} -  \frac{1}{L' }\frac{\partial \Omega(\beta,L_1,h)}{\partial L} \bigg|_{\beta,L'}
+    \label{casimir-diff-omega}   
 \end{align}
 où en utilisant \ref{casimir-scaling}, l'approximation est valable dans le cas où $ \left( \frac{L_2}{L_1}\right)^{-d} \ll 1 $.  Il est à noter que la force soumise à une particule par le reste du système n'est pas égale à la somme des forces exercées indivuellement par chaque particule du système \cite{paladugu_nonadditivity_2016}.
 
@@ -435,7 +436,28 @@ où l'opérateur $\mathcal{L}$ est associé au modèle A ou B, et le terme $v \n
 
 Dans le cas où le champ de vitesse est constant, comme la sédimentation dans un champ gravitationel, on peut parler d'écoulement. L'équation \ref{eq-cisaillement} est alors invariante par la transformation galiléenne $x \rightarrow x+vt$. 
 
+\begin{figure}
+	\begin{minipage}[t]{0.5\linewidth}
+		\includegraphics[width=\linewidth]{intro/cis-ising-f-000.pdf}
+	\end{minipage}%
+	\begin{minipage}[t]{0.5\linewidth}
+		\includegraphics[width=\linewidth]{intro/cis-ising-f-033.pdf}
+	\end{minipage}
+	\centering
+	\begin{minipage}[t]{0.5\linewidth}
+		\includegraphics[width=\linewidth]{intro/cis-ising-f-066.pdf}
+	\end{minipage}
+	\caption{Photos d'un système d'Ising $128 \times 50$ en fonction d'un cisaillement
+	${f(y) = \omega (\frac{2 y}{L} -1)}$.}
+    \label{snap-ising-shear}	
+\end{figure}  
 
+\begin{figure}
+    \centering
+    \includegraphics[width=0.6\linewidth]{intro/profil-mag-ising-shear.pdf}
+    \caption{Profil de magnétisation d'un système d'Ising $128 \times 50$ en fonction du cisaillement de la figure \ref{snap-ising-shear}. Plus le cisaillement est élevé, plus l'interface est confinée.}
+    \label{profil-mag-ising-shear}
+\end{figure}
 
 Néanmoins de nombreuses expériences\cite{derks_suppression_2006} et simulations numériques pour le modèle d'Ising \cite{leung_field_1986,rikvold_microstructure_2002,gonnella_nonequilibrium_2009,smith_driven_2010,smith_interfaces_2008,sadhu_non-local_2014,cohen_interface_2016,cirillo_monte_2005} ainsi qu'avec des techniques de Dynamique Moléculaire \cite{berthier_nonequilibrium_2002} montrent que le cisaillement provoque un confinement de l'interface. Dans les expériences où les effets gravitationnels sont importants, le solvant ne bouge pas, contrairement aux particules en suspension. La brisure d'invariance galiléenne qui en résulte est expliqué en détail au chapitre \ref{chap-article-dean} \footnote{Ce chapitre a été publié dans \cite{dean_effect_2020}.}
 Pour les simulations de Monte Carlo, l'invariance est brisée par la dynamique même du système, puisque les mouvements sont fait séquentiellement et non simultanément.

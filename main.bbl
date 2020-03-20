@@ -344,12 +344,6 @@ D.~B. Abraham and A.~Martin-Löf.
 \newblock {\em Communications in Mathematical Physics}, 32(3):245--268,
   September 1973.
 
-\bibitem{abraham_interface_1976}
-D.~B. Abraham and P.~Reed.
-\newblock Interface profile of the {Ising} ferromagnet in two dimensions.
-\newblock {\em Communications in Mathematical Physics}, 49(1):35--46, February
-  1976.
-
 \bibitem{girot_conical_2019}
 A.~Girot, J.~Petit, R.~Saiseau, T.~Guérin, H.~Chraibi, U.~Delabre, and J.~P.
   Delville.
@@ -382,25 +376,89 @@ Grégory Schehr and Satya~N. Majumdar.
   one-dimensional solid-on-solid models.
 \newblock {\em Physical Review E}, 73(5):056103, May 2006.
 
+\bibitem{privman_transfer-matrix_1989}
+V.~Privman and N.~M. Švrakić.
+\newblock Transfer-{Matrix} {Spectrum} for {Systems} with {Interfaces}.
+\newblock {\em Physical Review Letters}, 62(6):633--636, February 1989.
+
 \bibitem{vaysburd_critical_1995}
 I.~Vaysburd.
 \newblock Critical {RSOS} models in external fields.
 \newblock {\em Nuclear Physics B}, 446(3):387--404, July 1995.
+
+\bibitem{pearce_exact_1989}
+Paul~A Pearce and Katherine~A Seaton.
+\newblock Exact solution of cyclic solid-on-solid lattice models.
+\newblock {\em Annals of Physics}, 193(2):326--366, August 1989.
 
 \bibitem{guyer_sine-gordon_1979}
 R.~A. Guyer.
 \newblock Sine-{Gordon} chain as a model for a two-dimensional interface.
 \newblock {\em Physical Review B}, 20(10):4375--4381, November 1979.
 
+\bibitem{chui_pinning_1981}
+S.~T. Chui and John~D. Weeks.
+\newblock Pinning and roughening of one-dimensional models of interfaces and
+  steps.
+\newblock {\em Physical Review B}, 23(5):2438--2441, March 1981.
+
 \bibitem{chui_pinning_1999}
 S.~T. Chui.
 \newblock Pinning of interfaces by three-dimensional potentials.
 \newblock {\em Journal of Physics: Condensed Matter}, 11(13):2719, 1999.
 
+\bibitem{chalker_pinning_1981}
+J.~T. Chalker.
+\newblock The pinning of a domain wall by weakened bonds in two dimensions.
+\newblock {\em Journal of Physics A: Mathematical and General}, 14(9):2431,
+  1981.
+
+\bibitem{chalker_pinning_1982}
+J.~T. Chalker.
+\newblock The pinning of an interface by a planar defect.
+\newblock {\em Journal of Physics A: Mathematical and General}, 15(9):L481,
+  1982.
+
+\bibitem{burkhardt_localisation-delocalisation_1981}
+T.~W. Burkhardt.
+\newblock Localisation-delocalisation transition in a solid-on-solid model with
+  a pinning potential.
+\newblock {\em Journal of Physics A: Mathematical and General}, 14(3):L63,
+  1981.
+
+\bibitem{kroll_solid--solid_1981}
+D.~M. Kroll.
+\newblock Solid-on-solid model for the interface pinning transition in {Ising}
+  ferromagnets.
+\newblock {\em Zeitschrift für Physik B Condensed Matter}, 41(4):345--348,
+  December 1981.
+
+\bibitem{kroll_pinning_1982}
+D.~M. Kroll and R.~Lipowsky.
+\newblock Pinning transitions in \$d\$-dimensional {Ising} ferromagnets.
+\newblock {\em Physical Review B}, 26(9):5289--5292, November 1982.
+
+\bibitem{kroll_interface_1983}
+D.~M. Kroll and R.~Lipowsky.
+\newblock Interface delocalization transitions in semi-infinite systems.
+\newblock {\em Physical Review B}, 28(11):6435--6442, December 1983.
+
+\bibitem{siegert_scaling_1993}
+Martin Siegert and Michael Plischke.
+\newblock Scaling behavior of driven solid-on-solid models with diffusion.
+\newblock {\em Journal de Physique I}, 3(6):1371--1376, June 1993.
+
 \bibitem{newman_monte_1999}
 M.~E.~J. Newman and G.~T. Barkema.
 \newblock {\em Monte {Carlo} {Methods} in {Statistical} {Physics}}.
 \newblock Oxford University Press, Oxford, New York, February 1999.
+
+\bibitem{frenkel_speed-up_2004}
+D.~Frenkel.
+\newblock Speed-up of {Monte} {Carlo} simulations by sampling of rejected
+  states.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  101(51):17571--17575, December 2004.
 
 \bibitem{wansleben_monte_1991}
 S.~Wansleben and D.~P. Landau.
