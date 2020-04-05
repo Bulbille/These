@@ -3,17 +3,10 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: main.aux
 The style file: unsrt.bst
 Database file #1: biblio.bib
-Warning--I didn't find a database entry for "gibbs"
+Warning--I didn't find a database entry for "casimir-universel"
 Warning--I didn't find a database entry for ""
-Warning--I didn't find a database entry for "netz2003"
-Warning--I didn't find a database entry for "dzub2002"
-Warning--I didn't find a database entry for "chak2003"
-Warning--I didn't find a database entry for "chak2004"
-Warning--I didn't find a database entry for "lowe2009"
-Warning--I didn't find a database entry for "glan2012"
-Warning--I didn't find a database entry for "klym2016"
-Warning--I didn't find a database entry for "onsager"
 Warning--I didn't find a database entry for "delville"
+Warning--I didn't find a database entry for "onsager"
 Warning--I didn't find a database entry for "dean1996"
 Warning--I didn't find a database entry for "bray2001"
 Warning--I didn't find a database entry for "bray2002"
@@ -33,45 +26,45 @@ Warning--I didn't find a database entry for "schm1998"
 Warning--empty journal in cahn_free_nodate
 Warning--empty year in cahn_free_nodate
 Warning--empty publisher in l_landau_physique_1990
-You've used 82 entries,
+You've used 83 entries,
             1791 wiz_defined-function locations,
-            922 strings with 16919 characters,
-and the built_in function-call counts, 18185 in all, are:
-= -- 1627
-> -- 762
+            918 strings with 17029 characters,
+and the built_in function-call counts, 18362 in all, are:
+= -- 1640
+> -- 773
 < -- 1
-+ -- 288
-- -- 206
-* -- 1526
-:= -- 2952
-add.period$ -- 252
-call.type$ -- 82
++ -- 292
+- -- 209
+* -- 1534
+:= -- 2981
+add.period$ -- 255
+call.type$ -- 83
 change.case$ -- 77
 chr.to.int$ -- 0
-cite$ -- 85
-duplicate$ -- 729
-empty$ -- 1775
-format.name$ -- 206
-if$ -- 3894
+cite$ -- 86
+duplicate$ -- 739
+empty$ -- 1794
+format.name$ -- 209
+if$ -- 3935
 int.to.chr$ -- 0
-int.to.str$ -- 82
-missing$ -- 84
-newline$ -- 418
-num.names$ -- 82
-pop$ -- 109
+int.to.str$ -- 83
+missing$ -- 86
+newline$ -- 423
+num.names$ -- 83
+pop$ -- 116
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 289
+skip$ -- 291
 stack$ -- 0
 substring$ -- 1394
-swap$ -- 86
+swap$ -- 87
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 3
-while$ -- 181
-width$ -- 84
-write$ -- 909
-(There were 30 warnings)
+while$ -- 182
+width$ -- 85
+write$ -- 919
+(There were 23 warnings)

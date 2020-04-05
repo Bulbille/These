@@ -164,7 +164,7 @@ Le modèle standard, appelé $\phi^4$ est donné par le potentiel en double-puit
     V(\phi) = \frac{1}{2} m^2 \phi^2 + \frac{\lambda}{4!} \phi^4
     \label{phi4}
 \end{align} 
-où $m^2 = T-T_C$. À basse température, ce potentiel symmétrique possédant deux minima globaux à $\phi_C = \pm \sqrt{- \frac{3! m^2}{\lambda} } \pm$ décrit la séparation de phase.
+où $m^2 = T-T_C$. À basse température, ce potentiel symmétrique possédant deux minima globaux à $\phi_C = \pm \sqrt{- \frac{6 m^2}{\lambda} } \pm$ décrit la séparation de phase.
 
 
 Dans les expériences en laboratoire, les systèmes sont souvent couplés à des champs magnétiques ou chimiques $h(x)$ d'Hamiltonien
@@ -174,7 +174,7 @@ Dans les expériences en laboratoire, les systèmes sont souvent couplés à des
 \end{align}
 qui induit un changement de stabilité entre les phases (voir Fig \ref{double-puits-temperature}). La nouvelle fonction de partition est
 \begin{align}
-    \mZ[h] = \int d [\phi] e^{ \beta (\int d^d x \left( \frac{\kappa}{2} (\nabla \phi(\mx))^2 + V(\phi) \right) - \int d^d x h(\mx) \phi(\mx)}
+    \mZ[h] = \int d [\phi] e^{ - \beta (\int d^d x \left( \frac{\kappa}{2} (\nabla \phi(\mx))^2 + V(\phi(\mx)) \right) + \beta \int d^d x h(\mx) \phi(\mx)}
 \end{align}
 
 \begin{figure}
@@ -186,16 +186,16 @@ qui induit un changement de stabilité entre les phases (voir Fig \ref{double-pu
 
 La valeur moyenne de $\phi$ est alors
 \begin{align}
-    <\phi> =  \frac{1}{\mZ[h]} \int d [\phi] \phi(\mx) e^{ \beta (\int d^d x \left( \frac{\kappa}{2} (\nabla \phi(\mx))^2 + V(\phi) \right) - \int d^d x h(\mx) \phi(\mx)}
+    <\phi> =  \frac{1}{\mZ[h]} \int d [\phi] \phi(\mx)e^{ - \beta (\int d^d x \left( \frac{\kappa}{2} (\nabla \phi(\mx))^2 + V(\phi(\mx)) \right) + \beta \int d^d x h(\mx) \phi(\mx)}
 \end{align}
 Plaçons-nous maintenant dans la phase désordonnée, où $m^2 \ge 0$ et $\lambda \simeq 0$, ce qui nous permet d'avoir une approximation gaussienne. Si on réécrit l'Hamiltonien sous forme d'opérateurs, on obtient 
 \begin{align}
-    H[\phi] = \frac{1}{2} \int d^d x d^y \phi(\mx) \mL(\mx,\my) \phi(\my) - \int d^d x h(\mx) \phi(\mx)
+    H[\phi] = \frac{1}{2} \int d^d x d^d y \; \phi(\mx) \mL(\mx,\my) \phi(\my) - \int d^d x h(\mx) \phi(\mx)
 \end{align}
 où l'on a introduit l'opérateur $\mL(\mx,\my) = (m^2 - \kappa \nabla^2) \delta(\mx-\my)$.
 La fonction de partition prend maintenant la forme gaussienne
 \begin{align}
-    \mZ[h] \propto e^{\frac{\beta}{2} \int d^d x d^d y h(\mx) \mL^{-1}(\mx,\my) h(\my)}
+    \mZ[h] \propto e^{- \frac{\beta}{2} \int d^d x d^d y h(\mx) \mL^{-1}(\mx,\my) h(\my)}
 \end{align}
 où $\mL^{-1}$ est déterminé par 
 \begin{align}
@@ -203,7 +203,7 @@ où $\mL^{-1}$ est déterminé par
 \end{align}
 Par identification avec la fonction de Green $\Gamma(x)$ de l'opérateur $m^2 - \kappa \nabla^2$, on obtient que l'énergie libre du modèle gaussien est au final donné par 
 \begin{align}
-    F[h] = F_0 - \frac{1}{2} \int d^d x d^d y h(\mx) \Gamma(\mx-\my) h(\my)
+    F[h] = F_0 - \frac{1}{2} \int d^d x d^dy \;  h(\mx) \Gamma(\mx-\my) h(\my)
 \end{align}
 
 La transformée de Fourrier de l'équation de la fonction de Green $(m^2-\kappa \nabla^2) \Gamma(\mx) = \delta(\mx)$ donne
@@ -212,7 +212,7 @@ La transformée de Fourrier de l'équation de la fonction de Green $(m^2-\kappa 
 \end{align}
 puis
 \begin{align}
-    \Gamma(\mx) = \frac{1}{\kappa} \int_\mq \frac{e^{i \mq \dot \mx}}{\xi^{-2} +  q^2}
+    \Gamma(\mx) = \frac{1}{\kappa} \int \frac{d^dq}{(2\pi)^d} \frac{e^{i \mq \cdot \mx}}{\xi^{-2} +  q^2}
     \label{fonction-correl}
 \end{align}
 où l'on a introduit la longueur de corrélation du système $\xi = \sqrt{\frac{\kappa}{m^2}}$.
@@ -220,7 +220,7 @@ Par ailleurs, par différentiation fonctionnelle directe de la fonction de parti
 \begin{align}
     <\phi(x)> = \frac{1}{\mZ[h]} \frac{1}{\beta} \frac{\delta \mZ[H]}{\delta h(\mx)} = \frac{\delta (k_B T \ln \mZ[h])}{\delta h(\mx)} = - \frac{\delta F}{\delta h(\mx)} = \int d^d \my \Gamma(\mx-\my) h(\my)
 \end{align} 
-où l'on a posé que l'énergie libre du système est $F[h] = -k_B T \ln(\mZ[h])$. Ce résultat n'est valable que pour $h \neq 0$ ou $h \to 0$. En absence de champ extérieur, la magnétisation est nulle.
+avec l'énergie libre du système  $F[h] = -k_B T \ln(\mZ[h])$. Ce résultat n'est valable que pour $h \neq 0$ ou $h \to 0$. En absence de champ extérieur, la magnétisation est nulle.
 De la même manière, on peut démontrer que la fonction de corrélation est égale à 
 \begin{align}
     C(\mx,{\bf y}) =  <\phi(x)\phi(y)> = \frac{1}{\beta} \frac{\delta <\phi(\mx)>}{\delta h({\bf y})} = \frac{1}{\beta} \Gamma(\mx-my)
@@ -229,12 +229,10 @@ et le facteur de structure
 \begin{align}
     S(k) = < \tilde{\phi}(k)\tilde{\phi}(q)> = \frac{(2\pi)^d}{\beta} \delta_{k,q}  \tilde{\Gamma}(\mq)
 \end{align}
-Dans la phase désordonnée, où $m^2 \less 0$ et $\lambda \neq 0$, l'approximation gaussienne du modèle $\phi^4$ donne le même résultat que \ref{fonction-correl} avec le facteur $m^2$ renormalisé par l'équation auto-consistante
+Dans la phase désordonnée, où $m^2 \less 0$ et $\lambda \neq 0$, l'approximation gaussienne du modèle $\phi^4$ donne le même résultat que \ref{fonction-correl} avec le facteur $m^2$ renormalisé par l'équation auto-consistante \cite[\P 4.3]{bellac_equilibrium_2004}
 \begin{align}
     m^2_0 = m^2 + \frac{1}{2} \lambda \int_\mq \frac{1}{m^2_0+\mq^2}
 \end{align}
-{\color{red} Pas de biblio ici, c'est un TD de Fournier. Que faire ? }
-
     \subsection{Tension superficielle}
 
 La solution de champ moyen minimise l'Hamiltonien \ref{hamil-mean-field},  nous donne
@@ -254,11 +252,11 @@ Plaçons-nous au voisinnage de l'interface entre deux phases, c'est-à-dire que 
 \end{align}
 En multipliant de chaque côté par $\phi'_K(z)$ et en utilisant les conditions aux limites, on trouve que 
 \begin{align}
-    H[\phi_K]=  A\int dz\  \phi_K''(z)
+    H[\phi_K]=  A\int dz\ \kappa \phi_K'^2(z)
 \end{align}
 où $A$ est l'aire de la surface du système dans le plan perpendiculaire à la direction $z$. On peut identifier l'intégrale à une énergie libre par unité de surface, c'est à dire la tension superficielle de l'interface $\sigma$ définie par l'équation d'Allen-Cahn
 \begin{align}
-    \sigma=  \int dz\  \phi_K''(z)
+    \sigma=  \int dz\ \kappa \phi_K'^2(z)
     \label{tension-superficielle}
 \end{align}
 Il s'ensuit que l'excès d'énergie est localisé au niveau de l'interface, et que la force principale de la croissance des domaines est la courbure du profil de l'interface, puisque l'énergie du système ne peut diminuer que par une réduction de l'aire totale de l'interface. 
@@ -274,25 +272,12 @@ dont la solution est
        \label{profil-interface-glauber}    
 \end{align}
 
-\begin{figure}
-    \centering
-    \includegraphics[width=0.5\linewidth]{intro/profil-KawVsGlau.png}
-    \caption{Solutions numériques du profil de l'interface pour un paramètre d'ordre non-conservé (bleu) \ref{eq-interface-glauber} et conservé (orange) \ref{eq-interface-kawasaki} avec $\phi_C = 1$  pour  les conditions aux bords à l'infini. {\color{red} relancer code en résolvant la solution conservée au lieu de tanh(2x). Besoin mathematica.}}
-\end{figure}
-
-Dans le modèle B, l'interface est solution de 
-\begin{align}
-    \kappa \phi_K^{(4)}(z) = \lambda \phi_K(z) 
-    \label{eq-interface-kawasaki}
-\end{align}
-avec pour conditions aux limites $\phi_K(\pm \infty) = \pm \phi_C$ et $\phi_K'(\pm \infty) = 0$.
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \section{Taille finie et effet Casimir critique}
+    \label{sec-casimir}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     
-Sans perte de généralités en 3D, supposons un système 2D de taille $L \times L' $ où $L \less L'$. L'énergie libre $F(\beta,L,L') = - \frac{1}{\beta} \ln ( Z(\beta,L,L'))$ est une grandeur extensive lorsque la longueur de corrélation est plus petite que la taille du système $L$. 
+Supposons un système 2D de taille $L \times L' $ où $L \less L'$. L'énergie libre $F(\beta,L,L') = - \frac{1}{\beta} \ln ( Z(\beta,L,L'))$ est une grandeur extensive lorsque la longueur de corrélation est plus petite que la taille du système $L$. 
 Cette énergie libre peut se décomposer entre l'énergie de chaque phase par unité de volume $\omega_{bulk}$, et l'énergie de tension superficielle à l'interface par unité de surface $\omega_{surf}$ \cite{cardozo_finite_2015,lopes_cardozo_critical_2014}. À noter qu'à haute température dans un système complètement homogène, ce dernier terme disparaît.
 
 Cependant, lorsque $\xi \simeq L$, la contrainte exercée sur les fluctuations thermiques par les conditions aux bords implique une modification de l'énergie libre, créant une force sur les parois. Cet effet, premièrement prédit par Hendrik Casimir\cite{h_b_g_casimir_attraction_1948}, fut étendu aux systèmes critiques\cite{nikolic_is_2017}, où la divergence de la longueur de corrélation rend les expériences bien plus faciles\cite{nguyen_controlling_2013}.
@@ -302,7 +287,7 @@ En présence d'un champ magnétique $h$ uniforme favorisant une phase par rappor
     \frac{\Omega(\beta,L,L',h)}{L'} = L \omega_{bulk}(\beta,h) + \omega_{surf}(\beta,h) + L \omega_{ex}(\beta,L,h)
     \label{decomposition-energie}
 \end{align}
-où $\omega_{bulk}(L,h)$ est le surplus d'énergie libre due au confinement des fluctuations, qui devient nul dans la limite $L\to \infty$.
+où $\omega_{ex}(L,h)$ est le surplus d'énergie libre due au confinement des fluctuations, qui devient nul dans la limite $L\to \infty$.
 
 La force de confinement par unité d'aire est définie par 
 \begin{align}
@@ -310,10 +295,10 @@ La force de confinement par unité d'aire est définie par
 \end{align}
 où le premier terme est la pression exercée par le système, tandis que le second terme est la force de Casimir par unité d'aire \cite{vasilyev_critical_2013} en $d$ dimensions 
 \begin{align}
-    f_c(\beta,L,h) = - k_B T \frac{\partial(L \omega_{ex}(\beta,L,h))}{\partial L}\bigg|_{\beta,L'} = k_B T L_\perp^{-d} \Theta(u_t,u_h)
+    f_c(\beta,L,h) = - k_B T \frac{\partial(L \omega_{ex}(\beta,L,h))}{\partial L}\bigg|_{\beta,L'} = k_B T L^{-d} \Theta(u_t,u_h)
     \label{casimir-scaling}
 \end{align}
-où $u_T = \frac{T-T_C}{T_C} L_\perp^\frac{1}{\nu}$ et $u_h = \frac{h}{k_B T_C} L_\perp^\frac{\beta+\gamma}{\nu}$ où les exposants $\beta$, $\gamma$ et $\nu$ sont des exposants universels reliés aux amplitudes universelles des longueurs de corrélation du système \cite{pelissetto_critical_2002,vasilyev_critical_2013} et $\Theta(u_t,u_h)$ est une fonction universelle propre à chaque modèle. Cette fonction universelle dépend des conditions aux bords du système \cite{dantchev_casimir_2017,dantchev_exact_2016} ainsi que de l'ensemble thermodynamique dans lequel on se place \cite{gross_critical_2016,rohwer_transient_2017}.
+où $u_T = \frac{T-T_C}{T_C} L^\frac{1}{\nu}$ et $u_h = \frac{h}{k_B T_C} L^\frac{\beta+\gamma}{\nu}$ et où les exposants $\beta$, $\gamma$ et $\nu$ sont des exposants universels reliés aux amplitudes universelles des longueurs de corrélation du système \cite{pelissetto_critical_2002,vasilyev_critical_2013} et $\Theta(u_t,u_h)$ est une fonction universelle propre à chaque modèle. Cette fonction universelle dépend des conditions aux bords du système \cite{dantchev_casimir_2017,dantchev_exact_2016} ainsi que de l'ensemble thermodynamique dans lequel on se place \cite{gross_critical_2016,rohwer_transient_2017}.
 
 Afin d'extraire la force de Casimir, il suffit alors de soustraire deux quantités extensives, c'est-à-dire en utilisant deux largeurs différentes $L_1$ et $L_2$
 \begin{align}
@@ -346,7 +331,7 @@ où $f(a \greater 0) = \phi_1$ et $f(a \less 0) = \phi_2$. Notre système est ma
     H = \int d^d x \frac{\sigma}{2} (\nabla h(\mx))^2 + V(h)
     \label{hamil-cwt}
 \end{align}
-où le premier terme est l'analogue au premier terme dans \ref{hamil-mean-field} représentant la tension superficielle, et le potentiel $V$ fait référence au champ externe \ref{champ-externe}. 
+où le premier terme est l'excès d'énergie par rapport à une interface plane, et le potentiel $V$ fait référence au champ externe \ref{champ-externe}. 
 Une interface se caractérise par sa hauteur moyenne $<h(t)>$ de l'interface dans l'espace et par sa fonction de corrélation parallèle à l'interface décrivant les modes de fluctuation de l'interface
 \begin{align}
     C_\parallel(r,t) = <h(\mx,t)h(\mx+r,t)>_x - <h(0,t)>^2 = \sum_i A_i(\frac{r}{\xi_i}) 
@@ -364,66 +349,34 @@ En partant de \ref{MA} et en insérant \ref{capillary-wave-theory} avec le chang
 \end{align}
 avec $\eta(x,t)$ un bruit blanc gaussien. En multipliant les deux côtés par $f'(u)$ et en intégrant de $-\infty$ à $+\infty$, puisque le terme $ \int_{-\infty}^\infty V'(f) f'(u) du = 0$, on obtient l'équation d'Edwards-Wilkinson \cite{edwards_surface_1982} 
 \begin{align}
-     \frac{\partial h}{\partial t} = \nu + D \nabla^2 h +  \eta(\mx,t)
+     \frac{\partial h}{\partial t} = \nu + \nabla^2 h +  \tilde{\eta}(\mx,t)
     \label{edwards-wilkinson}
 \end{align}
-où $D$ est le coefficient de diffusion de l'interface, $\nu$ le flux d'aggrégation de particules sur l'interface et $\tilde{\eta}(x,t)$ est un bruit blanc de moyenne nulle défini par
+où $\nu$ désigne le flux total, et $\tilde{\eta}(x,t)$  un bruit blanc de moyenne nulle défini par
 \begin{align}
     \tilde{\eta}(\mx,t) = - \frac{1}{\sigma} \int du f'(u) \eta(\mx,u+h(\mx,t),t)
 \end{align}
-avec $\sigma$ la tension superficielle définie en \ref{tension-superficielle} et de corrélation 
+et de corrélation 
 \begin{align}
     <\tilde{\eta}(\mx,t)\tilde{\eta}(\mx',t')> = \frac{2 D}{\sigma} T\delta(\mx-\mx')\delta(t-t')
 \end{align}
+avec $\sigma$ la tension superficielle définie en \ref{tension-superficielle}, et $D$ le bruit thermique.
 Ici $D+ \sqrt{2 D T} \tilde{\eta}(x,t)$ est le flux de particules s'aggrégeant en fonction du temps et $D \nabla^2 h$ dépend de la forme de l'interface, favorisant ou non le dépôt de particules à certains endroits.
-La hauteur moyenne de l'interface varie donc comme $<h(t)> = Dt$. En se positionant dans le référentiel de l'interface via la transformation $h \rightarrow h + \nu t$, on obtient
+La hauteur moyenne de l'interface varie donc comme $<h(t)> = \nu t$. En se positionant dans le référentiel de l'interface via la transformation $h \rightarrow h + \nu t$, on obtient
 \begin{align}
-     \frac{\partial h}{\partial t} =   D \nabla^2 h +  \tilde{\eta}(\mx,t)
+     \frac{\partial h}{\partial t} =    \nabla^2 h +  \tilde{\eta}(\mx,t)
     \label{edwards-wilkinson-conesrved}
 \end{align}
-
-%%%%%%%%%%%%%%%%%%% Pas de KPZ %%%%%%%%%%%%%%
-\begin{comment}
-L'ajoute d'un potentiel en double puits est cependant nécessaire afin d'obtenir une séparation de phases. L'équation KPZ\cite{kardar_dynamic_1986} étudie un champ moyen en $\phi^4$, ce qui introduit des nonlinéarités indispensables pour certaines propriétés des interfaces.
-\begin{align}
-     \frac{\partial h}{\partial t} = D \nabla^2 h +  \lambda (\nabla h)^2 + \eta(x,t)
-    \label{kpz}
-\end{align}
-
-Il est intéressant de calculer la probabilité de distribution de la hauteur de l'interface par rapport à sa moyenne. La probabilité $p(h$) de trouver l'interface à la distande $h$ de la hauteur moyenne est donnée par l'équation de Focker-Planck\cite[p.241]{halpin-healy_kinetic_1995} associée à \ref{edwards-wilkinson-conesrved}
-\begin{align}
-    \frac{\partial p(h,t)}{\partial t} = - \int dx \frac{\delta}{\delta h} \left[ \left( D \nabla^2 h + \frac{\lambda}{2} (\nabla h) ^2 \right) p \right] + \int dx \frac{\delta^2 p}{\delta^2 h}
-    \label{fokker-planck}
-\end{align}
-Dans le régime stationnaire $ \frac{\partial p(h,t)}{\partial t} = 0$ en une dimension, on trouve la distribution
-\begin{align}
-    p(h) = \frac{e^{-\frac{D}{2}\int_0^L dx (\nabla h)^2}}{Z}
-    \label{stationary-distribution}
-\end{align}
-Cette distribution gaussienne ne prend pas en compte le terme nonlinéaire de l'équation KPZ, qui a donc, à l'équilibre en une dimension, le même profil que l'interface EW. Des études du profil KPZ dans le régime transient \cite{miettinen_experimental_2005,assis_dynamic_2015,g_foltin_width_1994,antal_dynamic_1996} donnent des résultats non symmétriques, puisque l'interface bouge avec le temps.
-
-D'autres études de l'équation EW avec des conditions aux bords périodiques $h(0)=h(L)=0$ en 1+1 dimensions, prouve que l'hypothèse du régime d'échelle est justifié\cite{majumdar_airy_2005}, puisque la distribution de l'interface est de la forme 
-\begin{align}
-    p(h,L) = L^{-\frac{1}{2}} f(h L^{-\frac{1}{2}} )
-\end{align}
-avec la fonction $f(x)$ montré sur la figure \ref{fig-airy-majumdar}. L'exposant $\frac{1}{2}$ est l'exposant critique du modèle KPZ en une dimension.
-\begin{figure}
-    \centering
-    \includegraphics[width=0.5\linewidth]{intro/airyplot-majumdar.png}
-    \caption{Fonction $f(x$) de la distribution des hauteurs d'une interface Edwards-Wilkinson avec des conditions aux bords périodiques\cite{majumdar_airy_2005} en 1+1 dimensions.}
-     \label{fig-airy-majumdar}
-\end{figure}
-\end{comment}
 
     \subsection{Paramètre d'ordre conservé}
 
 Si l'on se place dans le référentiel du centre de l'interface, le'équation d'Edwards-Wilkinson \ref{edwards-wilkinson-conesrved} conserve le paramètre d'ordre en moyenne. Néanmoins, la transformation $h \rightarrow h + Dt$ ne prend pas en compte les fluctuations thermiques qui viennent perturber l'interface, ce qui fait que $h(t) \neq cte$. L'astuce vient ici de \cite{kawasaki_diffusion_1966,kawasaki_correlation-function_1966}, où l'on reprend l'équation de Cahn-Hilliard-Cook \ref{MB} pour les interfaces
 \begin{align}
-    \frac{\partial h}{\partial t} = D \nabla^2 \frac{\delta H}{\delta h} +  \eta(x,t)
+    \frac{\partial h}{\partial t} =  \nabla^2 \frac{\delta H}{\delta h} +  \tilde{\eta}(x,t)
 \end{align}
 qui nous donne l'équation Villain-Lai-Das Sarma\cite{villain_continuum_1991,lai_kinetic_1991}
 \begin{align}
-    \frac{\partial h}{\partial t} = - D \nabla^4 h + \lambda \nabla^2 (\nabla h) ^2 +  \eta(x,t)
+    \frac{\partial h}{\partial t} = - \nabla^4 h + \lambda \nabla^2 (\nabla h) ^2 +  \tilde{\eta}(x,t)
 \end{align}
 qui a fait l'objet de nombreuses études\cite{kim_conserved_1994,assis_dynamic_2015,oliveira_maximal-_2008,singha_renormalization_2016}.
 L'intérêt d'un tel système est qu'il est contraint à une dynamique locale qui permet d'obtenir un système hors-équilibre. 

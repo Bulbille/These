@@ -13,7 +13,7 @@ Les algorithmes de Metropolis ont pour objectif d'explorer l'espace des phases d
 
 Nous nous basons ici sur \cite{newman_monte_1999} afin d'expliquer le fonctionnement d'un tel algorithme.
 
-Soit $\mu$ un micro-état de notre système d'énergie $E(\mu)$. À l'équilibre\cite{gibbs}, la probabilité d'occupation du système est
+Soit $\mu$ un micro-état de notre système d'énergie $E(\mu)$. À l'équilibre, la probabilité d'occupation du système est
 \begin{align}
 	p_\mu = \frac{1}{\mZ} e^{-\beta E(\mu)}
 \end{align}
@@ -29,8 +29,7 @@ ce qui nous donne la probabilité de transition $\mu \to \nu$ de Metropolis
 \begin{align}
 	p(\mu \rightarrow \nu) = min(1,e^{-\beta \Delta E(\mu \rightarrow \nu)})
 \end{align}
-
-Une étape de Monte Carlo est achevée lorsque $L$ tentatives de transition ont été faites. Cependant, il est possible d'accélérer l'algorithme en utilisant un temps continu \cite{newman_monte_1999} ou en prenant en compte les états dont la transition a été refusée \cite{frenkel_speed-up_2004}.
+Ensuite on prend un nombre aléatoire $q$ entre $0$ et $1$. Si $q < p(\mu \rightarrow \nu)$, alors la transition est validée. Une étape de Monte Carlo est achevée lorsque $L$ tentatives de transition ont été faites. Cependant, il est possible d'accélérer l'algorithme en utilisant un temps continu \cite{newman_monte_1999} ou en prenant en compte les états dont la transition a été refusée \cite{frenkel_speed-up_2004}.
 L'erreur obtenue à la fin sur notre observable $<A>$ au cours d'une simulation ayant duré $t_{max}$ étapes de Monte Carlo est 
 \begin{align}
 	E(A) = \sqrt{\frac{2 \tau}{t_{max}} (<A^2>-<A>^2)} 
@@ -165,15 +164,15 @@ Finalement, dans la limite où l'épaisseur du système est suffisement grande p
 		\caption*{$\mH_0$}
 	\end{minipage}
 	\begin{minipage}[t]{0.3\linewidth}
-		\includegraphics[width=\linewidth]{numerical/cross-h1.pdf}
+		\includegraphics[width=\linewidth]{numerical/cross-hlambda.pdf}
 		\caption*{$\mH(\lambda)$}		
 	\end{minipage}
 	\centering
 	\begin{minipage}[t]{0.3\linewidth}
-		\includegraphics[width=\linewidth]{numerical/cross-hlambda.pdf}
+		\includegraphics[width=\linewidth]{numerical/cross-h1.pdf}
 		\caption*{$\mH_1$}
 	\end{minipage}
-	\caption{Découplage progressif de la $k$-ième couche du système afin de calculer la variation de l'énergie libre grâce à l'hamiltonien de transition. Les liens en bleu ont une énergie de $\beta J$, les liens en rouge une énergie de $\lambda \beta J $ et les liens en vert Ouune énergie de $ (1-\lambda) \beta J$. Reproduction 2D de \cite{vasilyev_monte_2007}.}
+	\caption{Découplage progressif de la $k$-ième couche du système afin de calculer la variation de l'énergie libre grâce à l'hamiltonien de transition. Les liens en bleu ont une énergie de $\beta J$, les liens en rouge une énergie de $\lambda \beta J $ et les liens en vert une énergie de $ (1-\lambda) \beta J$. Reproduction 2D de \cite{vasilyev_monte_2007}.}
 	\label{decouplage}
 \end{figure}
 

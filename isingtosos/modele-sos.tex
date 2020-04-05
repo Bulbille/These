@@ -120,6 +120,7 @@ est appelée matrice de transfert. Puisque le système est périodique (c'est-à
 Ainsi on peut diagonaliser la fonction de partition par la trace de la matrice de transfert \cite{abraham_transfer_1973}
 \begin{align}
   Z = \sum_{h_1 h_2 ... h_L} \prod_{i} T(h_i,h_{i+i}) = Tr T^L  = \sum_\lambda \langle\lambda | T^L | \lambda> = \sum_\lambda \lambda^L
+  \label{partition-trace-lambda}
 \end{align}
 
 
@@ -141,9 +142,10 @@ En introduisant également la matrice des hauteurs $\tilde{M} |h> = h |h> i$, on
 \begin{itemize}
 	\item L'énergie libre par site :  
 	\begin{align}
-		F =  - \frac{1}{L \beta} \ln(Z) \simeq - \frac{1}{L \beta } \ln( \lambda_0)
+		F =  - \frac{1}{L \beta} \ln(Z) \simeq - \frac{1}{\beta } \ln( \lambda_0)
+		\label{energie-libre-site}
 	\end{align}
-	\item La densité de probabilité qu'un site se trouve à la hauteur $h$ avec
+	\item La densité de probabilité qu'un site se trouve à la hauteur $h$ :
 	\begin{align}
 		p(h) = \frac{1}{Z} \sum_\lambda \lambda^L \langle\lambda | h >^2 \simeq \langle \lambda_0 | h >^2
 	\end{align}
@@ -167,14 +169,15 @@ En introduisant également la matrice des hauteurs $\tilde{M} |h> = h |h> i$, on
 \begin{align}
 	\sum_{h=-\infty}^\infty T(h,h') \psi_\lambda(h) = \lambda \psi_\lambda(h')
 \end{align}
-En introduisant l'ansatz $\psi_\lambda(h) = \alpha_{\lambda}^h$ qui respecte la symétrie du système, et en séparant de la somme les termes pour $h$ négatifs et positifs, on trouve aisément que 
+En introduisant l'ansatz $\psi_\lambda(h) = \alpha_{\lambda}^h$ et en séparant de la somme les termes pour $h$ négatifs et positifs, on trouve aisément que 
 \begin{align}
-	\frac{\sinh(\beta J)}{\cosh(\beta J)-(\alpha_{\lambda}+\frac{1}{\alpha_{\lambda}})} = \lambda
+	\lambda = \frac{\sinh(\beta J)}{\cosh(\beta J)-(\alpha_{\lambda}+\frac{1}{\alpha_{\lambda}})} 
 \end{align}
-Dans la limite thermodynamique, la probabilité de présence de l'interface à la hauteur $h$ est $p(h) = <\lambda_0|h>^2 = |\psi_0(h)|^2$. Le système ne possédant aucune brisure de symétrie particulière, la probabilité $p(h)$ se doit d'être bornée pour tout $h$. Dès lors, l'ansatz supposé $\psi_\lambda(h) = \alpha^h$ implique que $\alpha_{\lambda}$ soit de la forme $e^{ik}$ où $k$ est la longueur d'onde associée à la valeur propre $\lambda$. On obtient que 
+Dans la limite thermodynamique, la probabilité de présence de l'interface à la hauteur $h$ est $p(h) = <\lambda_0|h>^2 = |\psi_0(h)|^2$. Le système ne possédant aucune brisure de symétrie particulière, la probabilité $p(h)$ se doit d'être bornée pour tout $h$ avec $p(h)=p(-h)$. Dès lors, l'ansatz supposé $\psi_\lambda(h) = \alpha_{\lambda}^h$ implique que $\alpha_{\lambda}$ soit de la forme $e^{ik}$ où $k$ est la longueur d'onde associée à la valeur propre $\lambda$. On obtient que 
 \begin{align}
 	\psi_k(h) =& e^{ikh} \\
 	\lambda =& \frac{\sinh(\beta J)}{\cosh(\beta J) - \cos(k)}
+	\label{lambda-sos}
 \end{align}
 
 
@@ -188,7 +191,7 @@ L'existence d'une solution de ce genre indique que l'interface n'est pas localis
 Il est à noter qu'à $\beta=0$, c'est-à-dire pour une température infinie, tous les termes de la matrice de transfert sont égaux à $1$, menant à des vecteurs propres nuls. Dans cette limite, l'interface n'existe plus, le modèle SOS n'est donc pas valable. De même, pour une température nulle $\beta=\infty$, la matrice de transfert devient la matrice identité. Les valeurs propres deviennent toutes égales à $1$ et les vecteurs propres sont $\psi_i(h) = \delta_{h,i}$ où ici $i$ est l'indice de la i-ème valeur propre $\lambda_i = 1$. La probabilité de trouver l'interface à la hauteur $h$ devient $p(h) = \frac{1}{Z}\sum_{i} <\lambda_i | h >^2 = 1$. La température nulle a pour effet de geler l'interface sur une seule hauteur, mais toutes les hauteurs sont équiprobables. Bien que les micro-états soient extrêmement différents pour une température finie, les propriétés macroscopiques sont identiques à cause du même poids statistique associé à chaque état.
 
 
-Une manière simple de localiser l'interface est de rajouter un potentiel $V(h) = -B \delta_{h,0}$ \cite{chui_pinning_1999,chalker_pinning_1981,chalker_pinning_1982}. La présence du potentiel n'affecte pas la parité du système mais peut introduire un surplus de particules en $0$. La recherche d'un état localisé nous donne un ansatz de la forme 
+Une manière simple de localiser l'interface est de rajouter un potentiel $V(h) = -B \delta_{h,0}$ \cite{chui_pinning_1999,chalker_pinning_1981,chalker_pinning_1982}, qui augmente la probabilité de présence de l'interface à $h=0$. La recherche d'un état localisé nous donne un ansatz de la forme 
 \begin{align}
 	\psi_\lambda(h) = \begin{cases} |\alpha|^h & \text{si } h \neq 0 \\ \psi_{\lambda,0} & \text{sinon} \end{cases} 
 \end{align}
@@ -303,6 +306,6 @@ La prise en compte des permutations possibles des particules ajoute un terme d'e
 \begin{figure}
     \centering
     \includegraphics[width=0.5\textwidth]{isingtosos/comparaison-modeles.pdf}
-    \caption{Énergie par site entre les modèles d'Ising (\ref{hamil-ising}) (avec conditions fixes en $y$), SOS et RSOS (\ref{hamil-sos}) en fonction de la température via des simulations de Monte Carlo pour $L_X=64$, $L_Y=51$ et $J=1$ avec des conditions périodiques en $x$. La configuration intiale est la configuration à $T=0$ d'une interface parfaitement lisse. {\color{red} Énergie Ising ne décolle pas à très basse température. Soit nécessite algo temps continu, soit SOS est une très mauvaise approximation. Rajouter POP, peut-être que la différence vient de là !! } }
+    \caption{Énergie par site entre les modèles d'Ising (\ref{hamil-ising}) (avec conditions fixes en $y$), SOS et RSOS (\ref{hamil-sos}) et POP (\ref{hamil-pop}) en fonction de la température via des simulations de Monte Carlo pour $L_X=64$, $L_Y=51$ et $J=1$ avec des conditions périodiques en $x$. La configuration intiale est la configuration à $T=0$ d'une interface parfaitement lisse. {\color{red} Besoin refaire Ising avec MCIA.} }
     \label{comparaison-modeles}
 \end{figure}
