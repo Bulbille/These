@@ -127,65 +127,7 @@ Il est également possible de donner des constantes de diffusion différentes à
 La question est plus délicate lorsqu'il s'agit d'une dynamique de Glauber. Puisque chaque particule a une probabilité d'être sélectionnée pour être détruite, comment choisir la probabilité d'ajouter une particule au système ? À l'équilibre, le flux de particules entrantes est égale au flux de particules sortantes, c'est-à-dire $p_{ajout}= p_{retrait} = 0.5\%$. Dans ce cas, il suffit de choisir un booléen au hasard, puis détruire une particule et son label ou ajouter une particule à un site particulier. L'avantage de la dynamique conservée est qu'il n'est pas nécessaire de reconstruire une distrubtion pRNG à chaque étape, même si le constructeur est rapide \footnote{Le constructeur a une complexité en $\mathcal{O}(n)$ au pire. \url{http://www.cplusplus.com/reference/random/discrete_distribution/discrete_distribution/}}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Hamiltonien de transition}
-\label{sec-transition}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-Nous avions vu à l'équation \ref{casimir-diff-omega} que la force de Casimir par unité d'aire se calcule à partir de la variation de l'énergie libre $\Omega$
-\begin{align}
-    f_c(\beta,L_1,h) \simeq \frac{1}{L' }\frac{\partial \Omega(\beta,L_2,h)}{\partial L} \bigg|_{\beta,L'} -  \frac{1}{L' }\frac{\partial \Omega(\beta,L_1,h)}{\partial L} \bigg|_{\beta,L'}
-\end{align}
-
-En suivant \cite{vasilyev_monte_2007,cardozo_finite_2015} pour un système d'Ising carré de taille $L \times L'$, l'idée est de calculer la dérivée continue par rapport à une taille discrète du système $L$ en interpolant le système via l'Hamiltonien de transition
-\begin{align}
-    \mH_{tr}(\lambda) = (1-\lambda) \mH_0 + \lambda \mH_1
-    \label{hamil-trans}
-\end{align}
-où $\mH_0$ est l'Hamiltonien d'un système de hauteur maximale $L$, et $\mH_1$ l'Hamiltonien d'un système de hauteur maximale $L-1$ où on a découplé une couche (voir Figure \ref{decouplage}). L'énergie libre associée à cet Hamiltonien est
-\begin{align}
-    \Omega_{tr}(\lambda) = -k_B T \ln \left( \sum_{h_1 ... h_L} e^{-\beta \mH_{tr}(\lambda)} \right)
-\end{align}
-De la dérivée de l'énerie libre découle
-\begin{align}
-    \frac{\Omega_{tr}(\lambda)}{d\lambda} = < \mH_1 - \mH_0>_{\mH_{tr}(\lambda)}
-\end{align}
-où $< · >_{\mH_{tr}(\lambda)}$ représente la moyenne statistique sur le système en transition, facilement calculable dans les simulations numériques. En intégrant sur le couplage, on trouve au final que
-\begin{align}
-    \Omega_1 - \Omega_0 = \int_0^1 d\lambda  < \mH_1 - \mH_0>_{\mH_{tr}(\lambda)}
-\end{align}
-Finalement, dans la limite où l'épaisseur du système est suffisement grande pour que la variation d'une couche soit suffisement petite ($L' \gg 1$), on trouve que
-\begin{align}
-   - \frac{\partial \Omega(\beta,L,h)}{\partial L} \bigg|_{\beta,L'} \simeq  \int_0^1 d\lambda  < \mH_1 - \mH_0>_{\mH_{tr}(\lambda)}
-\end{align}
-
-\begin{figure}
-	\begin{minipage}[t]{0.3\linewidth}
-		\includegraphics[width=\linewidth]{numerical/cross-h0.pdf}
-		\caption*{$\mH_0$}
-	\end{minipage}
-	\begin{minipage}[t]{0.3\linewidth}
-		\includegraphics[width=\linewidth]{numerical/cross-hlambda.pdf}
-		\caption*{$\mH(\lambda)$}		
-	\end{minipage}
-	\centering
-	\begin{minipage}[t]{0.3\linewidth}
-		\includegraphics[width=\linewidth]{numerical/cross-h1.pdf}
-		\caption*{$\mH_1$}
-	\end{minipage}
-	\caption{Découplage progressif de la $k$-ième couche du système afin de calculer la variation de l'énergie libre grâce à l'hamiltonien de transition. Les liens en bleu ont une énergie de $\beta J$, les liens en rouge une énergie de $\lambda \beta J $ et les liens en vert une énergie de $ (1-\lambda) \beta J$. Reproduction 2D de \cite{vasilyev_monte_2007}.}
-	\label{decouplage}
-\end{figure}
-
-Pour le modèle Solid-On-Solid, il est possible de calculer la variation d'énergie créée par le découplage directement. Si le découplage s'est créé à la rangée $k$, on ajoute un lien d'énergie $\lambda J$ entre les rangées $k-1$ et $k+1$ et on retire $\lambda J$ énergie des rangées $k-1$ à $k$  et de $k$ à $k+1$. On obtient
-\begin{align}
-    &\mH_{tr,SOS}(\lambda) = \mH_{0,SOS} - \nn
-     &\frac{\lambda J}{2} \sum_x \left[ \sgn(k-1-h(x)) \sgn(k+1-h(x)) - \sgn(k-h(x)) \left( \sgn(k-1-h(x))+\sgn(k+1-h(x)) \right) \right]
-\end{align}
-où le facteur $\frac{1}{2}$ est obtenu afin de prendre en compte le coefficient $2$ dans \ref{energie-sos-ising}.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusion}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Dans ce chapitre nous avons décrit les différentes méthodes de calcul numérique qui vont de pair avec le modèle A et le modèle B, et la manière de mesurer les observables ainsi que leur barre d'erreur. Dans la pratique, les temps de corrélation sont si faibles qu'il suffit de faire environ $10^7$ étapes de Monte Carlo afin d'obtenir de bonnes statistiques, ce qui en une dimension, est extrêmement rapide. La rapidité des simulations dans le modèle SOS nous permet ainsi d'étudier une très vaste plage de paramètres, que ce soit pour différentes températures, cisaillements, hauteurs maximales ou champs externes. 
-Nous avons également vu une manière d'obtenir la fonction universelle de la force de Casimir critique via le découplage progressif d'une couche du système, afin que dans la limite où $L' \gg 1$, ce découplage s'apparent à la dérivée discrète de l'énergie libre (section \ref{sec-transition}). Dans le chapitre \ref{chap-sos}, nous étudions une manière moins générale d'obtenir cette énergie libre par de l'intégration d'une autre variable.

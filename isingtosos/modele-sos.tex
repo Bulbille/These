@@ -151,12 +151,20 @@ En introduisant également la matrice des hauteurs $\tilde{M} |h> = h |h> i$, on
 	\end{align}
 	\item La magnétisation moyenne :
 	\begin{align}
-		M = \langle h > = \langle \lambda_0 | \tilde{M} | \lambda_0 > 
+		M = \langle h > = \frac{1}{Z} \sum_\lambda \lambda^L \langle \lambda | \tilde{M} | \lambda \rangle \simeq \langle \lambda_0 | \tilde{M} | \lambda_0 > 
 		\label{tm-magnetisation}
 	\end{align}
 	\item La variance des hauteurs :
 	\begin{align}
-		\sigma = \langle (h - \langle h >)^2 > =  \langle \lambda_0 | \tilde{M}^2 | \lambda_0 >
+		\sigma = \langle (h - \langle h >)^2 > = \frac{1}{Z} \sum_\lambda \lambda^L \langle \lambda | \tilde{M}^2 | \lambda \rangle - \langle \lambda | \tilde{M}| \lambda \rangle^2  \simeq  \langle \lambda_0 | \tilde{M}^2 | \lambda_0 >
+	\end{align}
+	\item La fonction de corrélation :
+	\begin{align}
+	    C(r) = \langle h_i h_{i+r} \rangle - M^2 = \frac{1}{Z} \sum_{\lambda \neq \lambda_0} \langle \lambda | M T^r M | \lambda > \lambda^{L-r}  \simeq \left( \frac{\lambda_1}{\lambda_0} \right)^r
+	\end{align}
+	qui nous donne une longueur de corrélation
+	\begin{align}
+	    \xi = - \frac{1}{\ln(\frac{\lambda_1}{\lambda_0})}
 	\end{align}
 \end{itemize}
 
@@ -171,9 +179,9 @@ En introduisant également la matrice des hauteurs $\tilde{M} |h> = h |h> i$, on
 \end{align}
 En introduisant l'ansatz $\psi_\lambda(h) = \alpha_{\lambda}^h$ et en séparant de la somme les termes pour $h$ négatifs et positifs, on trouve aisément que 
 \begin{align}
-	\lambda = \frac{\sinh(\beta J)}{\cosh(\beta J)-(\alpha_{\lambda}+\frac{1}{\alpha_{\lambda}})} 
+	\lambda = \frac{\sinh(\beta J)}{\cosh(\beta J)-(\alpha_{\lambda}+\alpha_{\lambda}^{-1})} 
 \end{align}
-Dans la limite thermodynamique, la probabilité de présence de l'interface à la hauteur $h$ est $p(h) = <\lambda_0|h>^2 = |\psi_0(h)|^2$. Le système ne possédant aucune brisure de symétrie particulière, la probabilité $p(h)$ se doit d'être bornée pour tout $h$ avec $p(h)=p(-h)$. Dès lors, l'ansatz supposé $\psi_\lambda(h) = \alpha_{\lambda}^h$ implique que $\alpha_{\lambda}$ soit de la forme $e^{ik}$ où $k$ est la longueur d'onde associée à la valeur propre $\lambda$. On obtient que 
+Dans la limite thermodynamique, la probabilité de présence de l'interface à la hauteur $h$ est $p(h) = <\lambda_0|h>^2 = |\psi_0(h)|^2$. Le système ne possédant aucune brisure de symétrie particulière, la probabilité $p(h)$ est finie pour tout $h$ avec $p(h)=p(-h)$. Dès lors, l'ansatz supposé $\psi_\lambda(h) = \alpha_{\lambda}^h$ implique que $\alpha_{\lambda}$ soit de la forme $e^{ik}$ où $k$ est la longueur d'onde associée à la valeur propre $\lambda$. On obtient que 
 \begin{align}
 	\psi_k(h) =& e^{ikh} \\
 	\lambda =& \frac{\sinh(\beta J)}{\cosh(\beta J) - \cos(k)}
@@ -181,10 +189,10 @@ Dans la limite thermodynamique, la probabilité de présence de l'interface à l
 \end{align}
 
 
-Dans le cas plus général où la matrice de transfert s'écrit de la forme $T(h,h') = f(|h-h'|)$, on trouve 
-\begin{align}
-	\lambda = \sum_{h=0}^\infty f(h)(\alpha_{\lambda}^h+\alpha_{\lambda}^{-h}) - f(0)
-\end{align}
+%Dans le cas plus général où la matrice de transfert s'écrit de la forme $T(h,h') = f(|h-h'|)$, on trouve 
+%\begin{align}
+%	\lambda = \sum_{h=0}^\infty f(h)(\alpha_{\lambda}^h+\alpha_{\lambda}^{-h}) - f(0)
+%\end{align}
 
 L'existence d'une solution de ce genre indique que l'interface n'est pas localisée dans le cas d'un système infini (ou semi-infini) en absence de tout potentiel, ce qui conduit à de nombreux problèmes numériques. 
 
