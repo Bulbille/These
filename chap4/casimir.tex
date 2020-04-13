@@ -2,7 +2,7 @@
     \label{chap-sos}
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Longueur de corrélation}
+\section{Limite thermodynamique}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 La fonction de partition d'un système dépend de la taille du système 
@@ -11,34 +11,54 @@ La fonction de partition d'un système dépend de la taille du système
     f_c(\beta,L,h) = - \frac{1}{L'} \frac{\delta \Omega(\beta,L,h)}{\delta L} \bigg|_{\beta,L'}
     \label{casimir-interface}
 \end{align}
-	
-	
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \section{Énergie libre d'un système confiné}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	\textbf{c}
-	
+
 \begin{figure}
 	\begin{minipage}[t]{0.5\linewidth}
-		\includegraphics[width=\linewidth]{chap4/freeene-lambda0.pdf}
+		\includegraphics[width=\linewidth]{chap4/freeene-lambda0-mu.pdf}
 	\end{minipage}%Cyclin
 	\begin{minipage}[t]{0.5\linewidth}
-		\includegraphics[width=\linewidth]{chap4/freeene-thermo.pdf}
+		\includegraphics[width=\linewidth]{chap4/freeene-thermo-mu.pdf}
 	\end{minipage}
-	\caption{Plus grande valeur propre d'une interface libre en fonction de la taille $L$ du système  ayant pour limite \ref{lambda-sos} avec $k=0$ (gauche) ; énergie libre par site calculée via l'approximation de la limite thermodynamique \ref{energie-libre-site} comparé à la vraie fonction de partition \ref{partition-trace-lambda} en fonction de la taille $L$ du système (droite).}
-\end{figure}  	
+	\caption{Plus grande valeur propre d'une interface libre en fonction de la taille $L$ du système pour $mu = 0.01$ et $\beta = 1$ (gauche)  ; énergie libre par site calculée via l'approximation de la limite thermodynamique \ref{energie-libre-site} comparé à la vraie fonction de partition \ref{partition-trace-lambda} en fonction de la taille $L$ du système pour $\mu=0.01$ et $\beta = 1$ (droite).}
+	\vspace{-0.5cm}
+\end{figure}  
+	
+
+\begin{figure}
+    \centering
+	\includegraphics[width=0.5\linewidth]{chap4/longueur-correl.pdf}
+    \caption{Longueur de corrélation à grande distance \ref{longueur-correl-thermo} pour une matrice $200\times200$ en fonction du potentiel chimique $\mu$ pour différentes températures.}
+\end{figure}
+
+\begin{figure}
+    \centering
+	\includegraphics[width=0.5\linewidth]{chap4/distribution-taille-finie.pdf}
+	\label{distribution-taille-finie}
+	\caption{Distribution de l'interface pour différentes tailles de la matrice de transfert à $\mu=0.01$ et $\beta = 1$. Par un fit, la distribution ne suit pas une distribution de Poisson.}
+\end{figure}
+
 
     \subsection{Paramètre d'ordre conservé}
 	
     
     \subsection{Intégration sur le paramètre d'ordre}
 
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \section{Taille finie et effet Casimir critique}
-    \label{sec-casimir}
+    \label{sec-casimir}    
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{comment}
+
+\begin{figure}
+    \begin{minipage}[t]{0.5\linewidth}
+        	\includegraphics[width=\linewidth]{chap4/casimir-temperature.pdf}    
+    \end{minipage}
+    \begin{minipage}[t]{0.5\linewidth}
+        	\includegraphics[width=\linewidth]{chap4/casimir-temperature-zoom.pdf}    
+    \end{minipage}
+	\label{distribution-taille-finie}
+	\caption{Dérivée de l'énergie libre par rapport à la taille du système \ref{casimir-interface} pour différentes températures à $\mu=0.1$ (gauche) ; zoom sur la température seuil à $\mu=0.1$ comparé avec $\mu=0.05$ en pointillés (droite). }
+\end{figure}
+
 
 Dans la section \ref{sec-casimir} nous avons introduit l'effet Casimir comme étant le surplus d'énergie libre causé par le confinement du système, soit 
 \begin{align}
@@ -146,36 +166,25 @@ Pour le modèle Solid-On-Solid, il est possible de calculer la variation d'éner
 \end{align}
 où le facteur $\frac{1}{2}$ est obtenu afin de prendre en compte le coefficient $2$ dans \ref{energie-sos-ising}.
 
+\begin{figure}
+    \centering
+	\includegraphics[width=0.5\linewidth]{example-image-a}
+	\caption{Effet Casimir pour Glauber avec TM, hamiltonien de transition et intégation magnétique, pour Kawasaki avec Hamiltonien de transition}
+\end{figure}
+	
+	
+	\section{Effet du cisaillement}
+
+
+\begin{figure}
+    \centering
+	\includegraphics[width=0.5\linewidth]{example-image-b}
+	\caption{Effet Casimir pour Kawasaki avec cisaillement pour différent $\mu$}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \section{Conclusion}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
 	
 	Il existe par ailleurs de nombreuses sources contribuant à l'énergie totale du système : l'énergie du volume (\textit{bulk}) du système, l'énergie de l'interface définie par sa tension superficielle \ref{tension-superficielle}, et une énergie d'excès qui donne naissance à la force de Casimir \ref{casimir-scaling}. Cette force est dûe au confinement du système par des conditions aux bords contraignant les fluctuations du champ $\phi$ selon une direction. 
-Nous avons également vu une manière d'obtenir la fonction universelle de la force de Casimir critique via le découplage progressif d'une couche du système, afin que dans la limite où $L' \gg 1$, ce découplage s'apparent à la dérivée discrète de l'énergie libre (section \ref{sec-transition}). Dans le chapitre \ref{chap-sos}, nous étudions une manière moins générale d'obtenir cette énergie libre par de l'intégration d'une autre variable.	
-	
-\begin{comment}	
-	\section{Effet du cisaillement}
-
-Dans les expériences, le système est soumis à un cisaillement au niveau de l'interface, ce qui modifie les observables par rapport à l'état d'équilibre. Nous optons ici pour un modèle de cisaillement uniforme dont le sens est défini par $\sgn(i-j)$, $i$ et $j$ étant des sites de hauteurs respectives $h_i$ et $h_j$. 
-La différence d'énergie entre un micro-état et le suivant d'une étape de Monte Carlo sous une dynamique de diffusion (Kawasaki) est alors
-\begin{align}
-	\Delta E = J \sum_i \left[ |h'_i-h'_{i+1}|-|h_i-h_{i+1}| \right] \pm f 
-\end{align}
-où $h_i'(t) = h_i(t+1)$ - le temps étant discrétisé, $f$ le module de cisaillement et le signe du cisaillement étant pris de manière aléatoire à chaque étape, regardant ainsi si ce mouvement va dans ou contre le sens du flux. 
-
-Pour rappel, à chaque étape on essaie de transférer une particule du site $i$ vers son voisin (gauche ou droit) $j$, ce qui se traduit par $h_i' = h_i-1$ et $h_j' = h_j+1$. 
-Pour $f=0$, en remarquant que les valeurs absolues ont les propriétés suivantes
-\begin{align}
-	|a \pm 1| - |a| = \pm 1 \\
-	|a \pm 2| - |a| = {0,\pm 2}
-\end{align}
-nous voyons facilement l'émergence d'une sélection des énergies possibles entre deux micro-états successifs dans ${-4,-2,0,2,4}$. Ainsi, toutes les transformations diminuant l'énergie totale du système seront toujours acceptées. En augmentant le cisaillement il devient alors possible de refuser des états réduisant l'énergie et d'accepter ceux qui l'augmente. 
-Nous nous attendons alors à trois régimes différents :
-\begin{itemize}
-	\item $f  \less  2 J $ : à faible cisaillement, la symmétrie du système impose les observables à être paire vis-à-vis de $f$, comme le prouve le fit en carré des figures.
-	\item $2 J \less f \less 4 J$ : à cisaillement moyen, certains mouvements augmentant la rugosité de l'interface sont toujours acceptés. 
-	\item $f > 4 J$ : à haut cisaillement, tous les mouvements augmentant l'entropie du système sont acceptés. Une saturation du système se produit lorsque l'énergie de lien entre les sites devient négligeable face au cisaillement.
-\end{itemize}
-
-\end{comment}
+Nous avons également vu une manière d'obtenir la fonction universelle de la force de Casimir critique via le découplage progressif d'une couche du système, afin que dans la limite où $L' \gg 1$, ce découplage s'apparent à la dérivée discrète de l'énergie libre (section \ref{sec-transition}). Dans le chapitre \ref{chap-sos}, nous étudions une manière moins générale d'obtenir cette énergie libre par de l'intégration d'une autre vari

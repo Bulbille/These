@@ -17,40 +17,42 @@
 \contentsline {section}{\numberline {2.3}Matrice de Transfert}{22}{section.2.3}% 
 \contentsline {section}{\numberline {2.4}Stabilit\IeC {\'e} de l'interface}{24}{section.2.4}% 
 \contentsline {section}{\numberline {2.5}\IeC {\'E}quivalence des ensembles}{26}{section.2.5}% 
-\contentsline {section}{\numberline {2.6}Mod\IeC {\`e}le de particules : le mod\IeC {\`e}le POP}{27}{section.2.6}% 
-\contentsline {section}{\numberline {2.7}Conclusion}{28}{section.2.7}% 
-\contentsline {chapter}{\numberline {3}Simulations}{31}{chapter.3}% 
-\contentsline {section}{\numberline {3.1}Algorithme de Metropolis}{31}{section.3.1}% 
-\contentsline {subsection}{\numberline {3.1.1}Ensemble grand-canonique : algorithme de Glauber}{33}{subsection.3.1.1}% 
-\contentsline {subsection}{\numberline {3.1.2}Ensemble canonique : algorithme de Kawasaki}{36}{subsection.3.1.2}% 
-\contentsline {subsection}{\numberline {3.1.3}Dynamique hors-\IeC {\'e}quilibre}{36}{subsection.3.1.3}% 
-\contentsline {subsection}{\numberline {3.1.4}Mod\IeC {\`e}le POP}{37}{subsection.3.1.4}% 
-\contentsline {section}{\numberline {3.2}Conclusion}{38}{section.3.2}% 
-\contentsline {chapter}{\numberline {4}Effets de taille finie}{39}{chapter.4}% 
-\contentsline {section}{\numberline {4.1}Longueur de corr\IeC {\'e}lation}{39}{section.4.1}% 
-\contentsline {section}{\numberline {4.2}\IeC {\'E}nergie libre d'un syst\IeC {\`e}me confin\IeC {\'e}}{39}{section.4.2}% 
-\contentsline {subsection}{\numberline {4.2.1}Param\IeC {\`e}tre d'ordre conserv\IeC {\'e}}{39}{subsection.4.2.1}% 
-\contentsline {subsection}{\numberline {4.2.2}Int\IeC {\'e}gration sur le param\IeC {\`e}tre d'ordre}{39}{subsection.4.2.2}% 
-\contentsline {section}{\numberline {4.3}Taille finie et effet Casimir critique}{39}{section.4.3}% 
-\contentsline {chapter}{\numberline {5}Champ magn\IeC {\'e}tique $|h_i|$}{41}{chapter.5}% 
-\contentsline {section}{\numberline {5.1}Mod\IeC {\`e}le gaussien}{41}{section.5.1}% 
-\contentsline {section}{\numberline {5.2}Distribution de l'interface}{42}{section.5.2}% 
-\contentsline {section}{\numberline {5.3}Fonction de corr\IeC {\'e}lation }{46}{section.5.3}% 
-\contentsline {section}{\numberline {5.4}Cisaillement avec deux types de particules}{48}{section.5.4}% 
-\contentsline {subsection}{\numberline {5.4.1}Discussion about the Gaussian model}{51}{subsection.5.4.1}% 
-\contentsline {section}{\numberline {5.5}Conclusion}{51}{section.5.5}% 
-\contentsline {chapter}{\numberline {6}Mod\IeC {\`e}le Particle-Over-Particle }{53}{chapter.6}% 
-\contentsline {section}{\numberline {6.1}Particules indiscernables}{53}{section.6.1}% 
-\contentsline {section}{\numberline {6.2}Avec le SOS}{53}{section.6.2}% 
-\contentsline {subsection}{\numberline {6.2.1}Modifications de l'algorithme Metropolis}{54}{subsection.6.2.1}% 
-\contentsline {section}{\numberline {6.3}R\IeC {\'e}sultats mod\IeC {\`e}le A}{54}{section.6.3}% 
-\contentsline {section}{\numberline {6.4}R\IeC {\'e}sultats mod\IeC {\`e}le B}{54}{section.6.4}% 
-\contentsline {section}{\numberline {6.5}R\IeC {\'e}sultats mod\IeC {\`e}le A+B}{54}{section.6.5}% 
-\contentsline {chapter}{\numberline {7}A+B POP model : la totale}{55}{chapter.7}% 
-\contentsline {section}{\numberline {7.1}Le mod\IeC {\`e}le C=A+B}{55}{section.7.1}% 
-\contentsline {section}{\numberline {7.2}Effective interface dynamics}{58}{section.7.2}% 
-\contentsline {section}{\numberline {7.3}A model of active interfaces}{63}{section.7.3}% 
-\contentsline {section}{\numberline {7.4}Conclusions}{65}{section.7.4}% 
-\contentsline {section}{\numberline {7.5}Acknowledgements}{66}{section.7.5}% 
-\contentsline {section}{\numberline {.1}Evaluating Fourier integrals}{67}{section.Alph0.1}% 
-\contentsline {chapter}{Conclusion et perspectives}{69}{appendix*.27}% 
+\contentsline {section}{\numberline {2.6}Mod\IeC {\`e}le de particules : le mod\IeC {\`e}le POP}{28}{section.2.6}% 
+\contentsline {section}{\numberline {2.7}Conclusion}{29}{section.2.7}% 
+\contentsline {chapter}{\numberline {3}Simulations}{33}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Algorithme de Metropolis}{33}{section.3.1}% 
+\contentsline {subsection}{\numberline {3.1.1}Ensemble grand-canonique : algorithme de Glauber}{35}{subsection.3.1.1}% 
+\contentsline {subsection}{\numberline {3.1.2}Ensemble canonique : algorithme de Kawasaki}{38}{subsection.3.1.2}% 
+\contentsline {subsection}{\numberline {3.1.3}Dynamique hors-\IeC {\'e}quilibre}{38}{subsection.3.1.3}% 
+\contentsline {subsection}{\numberline {3.1.4}Mod\IeC {\`e}le POP}{39}{subsection.3.1.4}% 
+\contentsline {section}{\numberline {3.2}Conclusion}{40}{section.3.2}% 
+\contentsline {chapter}{\numberline {4}Effets de taille finie}{41}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Limite thermodynamique}{41}{section.4.1}% 
+\contentsline {subsection}{\numberline {4.1.1}Param\IeC {\`e}tre d'ordre conserv\IeC {\'e}}{41}{subsection.4.1.1}% 
+\contentsline {subsection}{\numberline {4.1.2}Int\IeC {\'e}gration sur le param\IeC {\`e}tre d'ordre}{41}{subsection.4.1.2}% 
+\contentsline {section}{\numberline {4.2}Taille finie et effet Casimir critique}{41}{section.4.2}% 
+\contentsline {section}{\numberline {4.3}Hamiltonien de transition}{46}{section.4.3}% 
+\contentsline {section}{\numberline {4.4}Effet du cisaillement}{48}{section.4.4}% 
+\contentsline {section}{\numberline {4.5}Conclusion}{48}{section.4.5}% 
+\contentsline {chapter}{\numberline {5}Champ magn\IeC {\'e}tique $|h_i|$}{49}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}Mod\IeC {\`e}le gaussien}{49}{section.5.1}% 
+\contentsline {section}{\numberline {5.2}Distribution de l'interface}{50}{section.5.2}% 
+\contentsline {section}{\numberline {5.3}Fonction de corr\IeC {\'e}lation }{54}{section.5.3}% 
+\contentsline {section}{\numberline {5.4}Cisaillement avec deux types de particules}{56}{section.5.4}% 
+\contentsline {subsection}{\numberline {5.4.1}Discussion about the Gaussian model}{59}{subsection.5.4.1}% 
+\contentsline {section}{\numberline {5.5}Conclusion}{61}{section.5.5}% 
+\contentsline {chapter}{\numberline {6}Mod\IeC {\`e}le Particle-Over-Particle }{63}{chapter.6}% 
+\contentsline {section}{\numberline {6.1}Particules indiscernables}{63}{section.6.1}% 
+\contentsline {section}{\numberline {6.2}Avec le SOS}{63}{section.6.2}% 
+\contentsline {subsection}{\numberline {6.2.1}Modifications de l'algorithme Metropolis}{64}{subsection.6.2.1}% 
+\contentsline {section}{\numberline {6.3}R\IeC {\'e}sultats mod\IeC {\`e}le A}{64}{section.6.3}% 
+\contentsline {section}{\numberline {6.4}R\IeC {\'e}sultats mod\IeC {\`e}le B}{64}{section.6.4}% 
+\contentsline {section}{\numberline {6.5}R\IeC {\'e}sultats mod\IeC {\`e}le A+B}{64}{section.6.5}% 
+\contentsline {chapter}{\numberline {7}A+B POP model : la totale}{65}{chapter.7}% 
+\contentsline {section}{\numberline {7.1}Le mod\IeC {\`e}le C=A+B}{65}{section.7.1}% 
+\contentsline {section}{\numberline {7.2}Effective interface dynamics}{68}{section.7.2}% 
+\contentsline {section}{\numberline {7.3}A model of active interfaces}{73}{section.7.3}% 
+\contentsline {section}{\numberline {7.4}Conclusions}{75}{section.7.4}% 
+\contentsline {section}{\numberline {7.5}Acknowledgements}{76}{section.7.5}% 
+\contentsline {section}{\numberline {.1}Evaluating Fourier integrals}{77}{section.Alph0.1}% 
+\contentsline {chapter}{Conclusion et perspectives}{79}{appendix*.34}% 

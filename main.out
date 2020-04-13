@@ -26,30 +26,32 @@
 \BOOKMARK [2][-]{subsection.3.1.4}{Mod\350le POP}{section.3.1}% 26
 \BOOKMARK [1][-]{section.3.2}{Conclusion}{chapter.3}% 27
 \BOOKMARK [0][-]{chapter.4}{Effets de taille finie}{}% 28
-\BOOKMARK [1][-]{section.4.1}{Longueur de corr\351lation}{chapter.4}% 29
-\BOOKMARK [1][-]{section.4.2}{\311nergie libre d'un syst\350me confin\351}{chapter.4}% 30
-\BOOKMARK [2][-]{subsection.4.2.1}{Param\350tre d'ordre conserv\351}{section.4.2}% 31
-\BOOKMARK [2][-]{subsection.4.2.2}{Int\351gration sur le param\350tre d'ordre}{section.4.2}% 32
-\BOOKMARK [1][-]{section.4.3}{Taille finie et effet Casimir critique}{chapter.4}% 33
-\BOOKMARK [0][-]{chapter.5}{Champ magn\351tique |hi|}{}% 34
-\BOOKMARK [1][-]{section.5.1}{Mod\350le gaussien}{chapter.5}% 35
-\BOOKMARK [1][-]{section.5.2}{Distribution de l'interface}{chapter.5}% 36
-\BOOKMARK [1][-]{section.5.3}{Fonction de corr\351lation }{chapter.5}% 37
-\BOOKMARK [1][-]{section.5.4}{Cisaillement avec deux types de particules}{chapter.5}% 38
-\BOOKMARK [2][-]{subsection.5.4.1}{Discussion about the Gaussian model}{section.5.4}% 39
-\BOOKMARK [1][-]{section.5.5}{Conclusion}{chapter.5}% 40
-\BOOKMARK [0][-]{chapter.6}{Mod\350le Particle-Over-Particle }{}% 41
-\BOOKMARK [1][-]{section.6.1}{Particules indiscernables}{chapter.6}% 42
-\BOOKMARK [1][-]{section.6.2}{Avec le SOS}{chapter.6}% 43
-\BOOKMARK [2][-]{subsection.6.2.1}{Modifications de l'algorithme Metropolis}{section.6.2}% 44
-\BOOKMARK [1][-]{section.6.3}{R\351sultats mod\350le A}{chapter.6}% 45
-\BOOKMARK [1][-]{section.6.4}{R\351sultats mod\350le B}{chapter.6}% 46
-\BOOKMARK [1][-]{section.6.5}{R\351sultats mod\350le A+B}{chapter.6}% 47
-\BOOKMARK [0][-]{chapter.7}{A+B POP model : la totale}{}% 48
-\BOOKMARK [1][-]{section.7.1}{Le mod\350le C=A+B}{chapter.7}% 49
-\BOOKMARK [1][-]{section.7.2}{Effective interface dynamics}{chapter.7}% 50
-\BOOKMARK [1][-]{section.7.3}{A model of active interfaces}{chapter.7}% 51
-\BOOKMARK [1][-]{section.7.4}{Conclusions}{chapter.7}% 52
-\BOOKMARK [1][-]{section.7.5}{Acknowledgements}{chapter.7}% 53
-\BOOKMARK [1][-]{section.Alph0.1}{Evaluating Fourier integrals}{chapter.7}% 54
-\BOOKMARK [0][-]{appendix*.27}{Conclusion et perspectives}{}% 55
+\BOOKMARK [1][-]{section.4.1}{Limite thermodynamique}{chapter.4}% 29
+\BOOKMARK [2][-]{subsection.4.1.1}{Param\350tre d'ordre conserv\351}{section.4.1}% 30
+\BOOKMARK [2][-]{subsection.4.1.2}{Int\351gration sur le param\350tre d'ordre}{section.4.1}% 31
+\BOOKMARK [1][-]{section.4.2}{Taille finie et effet Casimir critique}{chapter.4}% 32
+\BOOKMARK [1][-]{section.4.3}{Hamiltonien de transition}{chapter.4}% 33
+\BOOKMARK [1][-]{section.4.4}{Effet du cisaillement}{chapter.4}% 34
+\BOOKMARK [1][-]{section.4.5}{Conclusion}{chapter.4}% 35
+\BOOKMARK [0][-]{chapter.5}{Champ magn\351tique |hi|}{}% 36
+\BOOKMARK [1][-]{section.5.1}{Mod\350le gaussien}{chapter.5}% 37
+\BOOKMARK [1][-]{section.5.2}{Distribution de l'interface}{chapter.5}% 38
+\BOOKMARK [1][-]{section.5.3}{Fonction de corr\351lation }{chapter.5}% 39
+\BOOKMARK [1][-]{section.5.4}{Cisaillement avec deux types de particules}{chapter.5}% 40
+\BOOKMARK [2][-]{subsection.5.4.1}{Discussion about the Gaussian model}{section.5.4}% 41
+\BOOKMARK [1][-]{section.5.5}{Conclusion}{chapter.5}% 42
+\BOOKMARK [0][-]{chapter.6}{Mod\350le Particle-Over-Particle }{}% 43
+\BOOKMARK [1][-]{section.6.1}{Particules indiscernables}{chapter.6}% 44
+\BOOKMARK [1][-]{section.6.2}{Avec le SOS}{chapter.6}% 45
+\BOOKMARK [2][-]{subsection.6.2.1}{Modifications de l'algorithme Metropolis}{section.6.2}% 46
+\BOOKMARK [1][-]{section.6.3}{R\351sultats mod\350le A}{chapter.6}% 47
+\BOOKMARK [1][-]{section.6.4}{R\351sultats mod\350le B}{chapter.6}% 48
+\BOOKMARK [1][-]{section.6.5}{R\351sultats mod\350le A+B}{chapter.6}% 49
+\BOOKMARK [0][-]{chapter.7}{A+B POP model : la totale}{}% 50
+\BOOKMARK [1][-]{section.7.1}{Le mod\350le C=A+B}{chapter.7}% 51
+\BOOKMARK [1][-]{section.7.2}{Effective interface dynamics}{chapter.7}% 52
+\BOOKMARK [1][-]{section.7.3}{A model of active interfaces}{chapter.7}% 53
+\BOOKMARK [1][-]{section.7.4}{Conclusions}{chapter.7}% 54
+\BOOKMARK [1][-]{section.7.5}{Acknowledgements}{chapter.7}% 55
+\BOOKMARK [1][-]{section.Alph0.1}{Evaluating Fourier integrals}{chapter.7}% 56
+\BOOKMARK [0][-]{appendix*.34}{Conclusion et perspectives}{}% 57

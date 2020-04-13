@@ -160,11 +160,14 @@ En introduisant également la matrice des hauteurs $\tilde{M} |h> = h |h> i$, on
 	\end{align}
 	\item La fonction de corrélation :
 	\begin{align}
-	    C(r) = \langle h_i h_{i+r} \rangle - M^2 = \frac{1}{Z} \sum_{\lambda \neq \lambda_0} \langle \lambda | M T^r M | \lambda > \lambda^{L-r}  \simeq \left( \frac{\lambda_1}{\lambda_0} \right)^r
+	    C(r) &= \langle h_i h_{i+r} \rangle - M^2 = \frac{1}{Z} \sum_{\lambda \neq \lambda_0} \langle \lambda_0 | M | \lambda \rangle \langle \lambda | M | \lambda_0 \rangle \left( \frac{\lambda}{\lambda_0} \right)^r  
+	    \nn
+	    &\simeq \langle \lambda_0 | M | \lambda_1 \rangle \langle \lambda_1 | M | \lambda_0 \rangle \left( \frac{\lambda_1}{\lambda_0} \right)^r
 	\end{align}
-	qui nous donne une longueur de corrélation
+	\item La longueur de corrélation :
 	\begin{align}
 	    \xi = - \frac{1}{\ln(\frac{\lambda_1}{\lambda_0})}
+	    \label{longueur-correl-thermo}
 	\end{align}
 \end{itemize}
 
@@ -188,6 +191,16 @@ Dans la limite thermodynamique, la probabilité de présence de l'interface à l
 	\label{lambda-sos}
 \end{align}
 
+\begin{figure}
+	\begin{minipage}[t]{0.5\linewidth}
+		\includegraphics[width=\linewidth]{isingtosos/freeene-lambda0-libre.pdf}
+	\end{minipage}%Cyclin
+	\begin{minipage}[t]{0.5\linewidth}
+		\includegraphics[width=\linewidth]{isingtosos/freeene-thermo-libre.pdf}
+	\end{minipage}
+	\caption{Plus grande valeur propre d'une interface libre en fonction de la taille $L$ du système  ayant pour limite \ref{lambda-sos} avec $k=0$ pour $\beta = 1$ (gauche)  ; énergie libre par site calculée via l'approximation de la limite thermodynamique \ref{energie-libre-site} comparé à la vraie fonction de partition \ref{partition-trace-lambda} en fonction de la taille $L$ du système pour $\beta = 1$ (droite).}
+	\vspace{-0.5cm}
+\end{figure}  
 
 %Dans le cas plus général où la matrice de transfert s'écrit de la forme $T(h,h') = f(|h-h'|)$, on trouve 
 %\begin{align}

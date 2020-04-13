@@ -254,6 +254,29 @@ Les croix notent un fit en carré pour petit $f$, montrant la symétrie du syst�
 
 \section{Cisaillement avec deux types de particules}
 
+
+Dans les expériences, le système est soumis à un cisaillement au niveau de l'interface, ce qui modifie les observables par rapport à l'état d'équilibre. Nous optons ici pour un modèle de cisaillement uniforme dont le sens est défini par $\sgn(i-j)$, $i$ et $j$ étant des sites de hauteurs respectives $h_i$ et $h_j$. 
+La différence d'énergie entre un micro-état et le suivant d'une étape de Monte Carlo sous une dynamique de diffusion (Kawasaki) est alors
+\begin{align}
+	\Delta E = J \sum_i \left[ |h'_i-h'_{i+1}|-|h_i-h_{i+1}| \right] \pm f 
+\end{align}
+où $h_i'(t) = h_i(t+1)$ - le temps étant discrétisé, $f$ le module de cisaillement et le signe du cisaillement étant pris de manière aléatoire à chaque étape, regardant ainsi si ce mouvement va dans ou contre le sens du flux. 
+
+Pour rappel, à chaque étape on essaie de transférer une particule du site $i$ vers son voisin (gauche ou droit) $j$, ce qui se traduit par $h_i' = h_i-1$ et $h_j' = h_j+1$. 
+Pour $f=0$, en remarquant que les valeurs absolues ont les propriétés suivantes
+\begin{align}
+	|a \pm 1| - |a| = \pm 1 \\
+	|a \pm 2| - |a| = {0,\pm 2}
+\end{align}
+nous voyons facilement l'émergence d'une sélection des énergies possibles entre deux micro-états successifs dans ${-4,-2,0,2,4}$. Ainsi, toutes les transformations diminuant l'énergie totale du système seront toujours acceptées. En augmentant le cisaillement il devient alors possible de refuser des états réduisant l'énergie et d'accepter ceux qui l'augmente. 
+Nous nous attendons alors à trois régimes différents :
+\begin{itemize}
+	\item $f  \less  2 J $ : à faible cisaillement, la symmétrie du système impose les observables à être paire vis-à-vis de $f$, comme le prouve le fit en carré des figures.
+	\item $2 J \less f \less 4 J$ : à cisaillement moyen, certains mouvements augmentant la rugosité de l'interface sont toujours acceptés. 
+	\item $f > 4 J$ : à haut cisaillement, tous les mouvements augmentant l'entropie du système sont acceptés. Une saturation du système se produit lorsque l'énergie de lien entre les sites devient négligeable face au cisaillement.
+\end{itemize}
+
+
 La construction naïve d'un modèle continu du cisaillement avec un seul type de particules ne donnera aucun résultat. En effet, pour que le cisaillement induise des effets hors équilibre, il faut que la dynamique des particules dans tout repère galilén soit le même. Si l'on considère une force de cisaillement uniforme qui induit la même vitesse moyenne sur toutes les particules du système, en nous plaçant dans un repère bougeant à la même vitesse que cette vitesse moyenne, nous retrouvons les mêmes propriétés à l'équilibre.
 Afin de briser la symmétrie de translation, il faut soit induire un cisaillement non-uniforme, soit introduire des particules qui réagissent de manière différente vis-à-vis de cette force. Dans notre exemple sur les colloïdes, la gravité agit bien sur les polymères mais bien moins sur le solvant, ce qui brise en effet l'invariance galiléenne. 
 Plusieurs études récentes portent sur le mouvement de systèmes avec plusieurs particules browniennes, incluant le problème des électrolytes étudié par Onsager \cite{onsager} il y a longtemps.
