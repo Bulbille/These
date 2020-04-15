@@ -272,6 +272,72 @@ dont la solution est
        \label{profil-interface-glauber}    
 \end{align}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \section{Taille finie et effet Casimir critique}
+    \label{sec-casimir}    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}
+    \begin{minipage}[t]{0.5\linewidth}
+        	\includegraphics[width=\linewidth]{chap4/casimir-temperature.pdf}    
+    \end{minipage}
+    \begin{minipage}[t]{0.5\linewidth}
+        	\includegraphics[width=\linewidth]{chap4/casimir-temperature-zoom.pdf}    
+    \end{minipage}
+	\label{distribution-taille-finie}
+	\caption{Dérivée de l'énergie libre par rapport à la taille du système \ref{casimir-interface} pour différentes températures à $\mu=0.1$ (gauche) ; zoom sur la température seuil à $\mu=0.1$ comparé avec $\mu=0.05$ en pointillés (droite). }
+\end{figure}
+
+
+Dans la section \ref{sec-casimir} nous avons introduit l'effet Casimir comme étant le surplus d'énergie libre causé par le confinement du système, soit 
+\begin{align}
+    f_c(\beta,L,h) = - k_B T \frac{\partial(L \omega_{ex}(\beta,L,h))}{\partial L}\bigg|_{\beta,L'}
+\end{align}
+où $\omega_{ex}$ est l'énergie libre en excès dans le système, et prend une forme universelle proche du point critique \cite{casimir-universel}. Cet excès d'énergie libre est dûe à la frustration du système lorsque la longueur de corrélation est du même ordre de grandeur que la taille du système. Afin d'obtenir cette quantité dans les modèles sur réseau à partir de l'énergie libre totale, il est nécessaire de soustraire l'énergie du bulk au total. Néanmoins, dans les modèles d'interfaces qui nous intéressent, le seul terme extensif contribuant à l'énergie libre est l'énergie de surface, qui disparaît lorsque l'on prend la dérivée par rapport à la taille du système. Il n'est donc pas nécessaire de comparer l'énergie libre à la limite thermodynamique, et on obtient que 
+ 
+    
+    
+Supposons un système 2D de taille $L \times L' $ où $L \less L'$. L'énergie libre $F(\beta,L,L') = - \frac{1}{\beta} \ln ( Z(\beta,L,L'))$ est une grandeur extensive lorsque la longueur de corrélation est plus petite que la taille du système $L$. 
+Cette énergie libre peut se décomposer entre l'énergie de chaque phase par unité de volume $\omega_{bulk}$, et l'énergie de tension superficielle à l'interface par unité de surface $\omega_{surf}$ \cite{cardozo_finite_2015,lopes_cardozo_critical_2014}. À noter qu'à haute température dans un système complètement homogène, ce dernier terme disparaît.
+
+Cependant, lorsque $\xi \simeq L$, la contrainte exercée sur les fluctuations thermiques par les conditions aux bords implique une modification de l'énergie libre, créant une force sur les parois. Cet effet, premièrement prédit par Hendrik Casimir\cite{h_b_g_casimir_attraction_1948}, fut étendu aux systèmes critiques\cite{nikolic_is_2017}, où la divergence de la longueur de corrélation rend les expériences bien plus faciles\cite{nguyen_controlling_2013}.
+
+En présence d'un champ magnétique $h$ uniforme favorisant une phase par rapport à l'autre, l'énergie libre par unité d'aire d'un tel système se décompose \cite{lopes_cardozo_critical_2014,cardozo_finite_2015} en 
+\begin{align}
+    \frac{\Omega(\beta,L,L',h)}{L'} = L \omega_{bulk}(\beta,h) + \omega_{surf}(\beta,h) + L \omega_{ex}(\beta,L,h)
+    \label{decomposition-energie}
+\end{align}
+où $\omega_{ex}(L,h)$ est le surplus d'énergie libre due au confinement des fluctuations, qui devient nul dans la limite $L\to \infty$.
+
+La force de confinement par unité d'aire est définie par 
+\begin{align}
+    F_\perp(\beta,L,h) = - \frac{1}{L' }\frac{\partial \Omega(\beta,L,h)}{\partial L} \bigg|_{\beta,L'} = - k_B T \omega_{bulk}(\beta,h) - k_B T \frac{\partial(L \omega_{ex}(\beta,L,h))}{\partial L}\bigg|_{\beta,L'}
+\end{align}
+où le premier terme est la pression exercée par le système, tandis que le second terme est la force de Casimir par unité d'aire \cite{vasilyev_critical_2013} en $d$ dimensions 
+\begin{align}
+    f_c(\beta,L,h) = - k_B T \frac{\partial(L \omega_{ex}(\beta,L,h))}{\partial L}\bigg|_{\beta,L'} = k_B T L^{-d} \Theta(u_t,u_h)
+    \label{casimir-scaling}
+\end{align}
+où $u_T = \frac{T-T_C}{T_C} L^\frac{1}{\nu}$ et $u_h = \frac{h}{k_B T_C} L^\frac{\beta+\gamma}{\nu}$ et où les exposants $\beta$, $\gamma$ et $\nu$ sont des exposants universels reliés aux amplitudes universelles des longueurs de corrélation du système \cite{pelissetto_critical_2002,vasilyev_critical_2013} et $\Theta(u_t,u_h)$ est une fonction universelle propre à chaque modèle. Cette fonction universelle dépend des conditions aux bords du système \cite{dantchev_casimir_2017,dantchev_exact_2016} ainsi que de l'ensemble thermodynamique dans lequel on se place \cite{gross_critical_2016,rohwer_transient_2017}.
+
+Afin d'extraire la force de Casimir, il suffit alors de soustraire deux quantités extensives, c'est-à-dire en utilisant deux largeurs différentes $L_1$ et $L_2$
+\begin{align}
+    f_c(\beta,L_1,h) - f_c(\beta,L_2,h) =  \frac{1}{L' }\frac{\partial \Omega(\beta,L_2,h)}{\partial L} \bigg|_{\beta,L'} -  \frac{1}{L' }\frac{\partial \Omega(\beta,L_1,h)}{\partial L} \bigg|_{\beta,L'}
+\end{align}
+Puisque le surplus d'énergie dû au confinement est nul lorsque $L_2\to \infty$, on obtient que la force de Casimir est
+\begin{align}
+    f_c(\beta,L_1,h) \simeq \frac{1}{L' }\frac{\partial \Omega(\beta,L_2,h)}{\partial L} \bigg|_{\beta,L'} -  \frac{1}{L' }\frac{\partial \Omega(\beta,L_1,h)}{\partial L} \bigg|_{\beta,L'}
+    \label{casimir-diff-omega}   
+\end{align}
+où en utilisant \ref{casimir-scaling}, l'approximation est valable dans le cas où $ \left( \frac{L_2}{L_1}\right)^{-d} \ll 1 $.  Cette force étant une force émergente d'origine entropique, la somme des forces exercées individuellement par chaque particule du système n'est pas égale à la force totale appliquée sur le système\cite{paladugu_nonadditivity_2016}.
+
+La détection expérimentale de ce phénomène se fait traditionnellement dans des fluides binaires par \textit{Total Internal Reflection Microscopy} (TIRM) \cite{fukuto_critical_2005,hertlein_direct_2008,gambassi_critical_2009,edison_critical_2015-1}. La méthode consiste à mesurer le potentiel d'une sphère flottant sur un fluide binaire critique reposant sur une plaque. Cette sphère et cette plaque sont traitées chimiquement afin de favoriser l'une des deux phases à leu voisinage. Ainsi il est possible de créer des conditions aux bords $(++)$, $(+-)$ ou $(--)$ qui modifient la forme de la fonction universelle \ref{casimir-scaling}. À l'inverse, il est possible de mesurer la force de Casimir \cite{nguyen_controlling_2013} afin d'étudier les transitions de phases colloïdales.
+
+Le modèle d'Ising appartient à une classe de modèles où il est facilitant l'obtention de résultat analytique \cite{hobrecht_critical_2017} comparables aux simulations numériques \cite{vasilyev_monte_2007,vasilyev_universal_2009,cardozo_finite_2015}.
+
+Jusqu'à présent nous avons parlé de systèmes à l'équilibre, mais l'effet des fluctuations est également présent en dehors de l'équilibre. L'étude des interfaces nous mène à proposer des modèles de cisaillement qui influencent les propriétés statistiques des systèmes, et ainsi modifier la force de Casimir \cite{dean_out--equilibrium_2010}.
+
     \section{Modèles d'interface}
 
 Dans la réalité, la phase désordonnée est extrêmement inhomogène, avec des bulles ou des digitations qui empêchent une description dynamique aisée de l'interface. Si l'on désire étudier l'interface de ces bulles ou digitations, où localement l'interface est bien définie par une fonction d'une seule variable, l'approche du champ moyen suffit. On suppose dans ce cas qu'il n'y a ni digitation ni bulles d'évaporation. Dans cette approximation, l'interface est parfaitement définie en un point et non dans un profil comme dans l'équation \ref{profil-interface-glauber}. Tous les points du champ se trouvant en bas de l'interface prennent une unique valeur strictement différente de tous les points du champ au-dessus de l'interface. 
@@ -377,6 +443,8 @@ Pour les simulations de Monte Carlo, l'invariance est brisée par la dynamique m
 
 Nous avons présenté les modèles standards des transitions de phase et avons étudié l'importance de l'ensemble thermodynamique de ces systèmes.
 Dans l'ensemble grand-canonique où le paramètre d'odre n'est pas conservé, les équations dynamiques du modèle A \ref{MA} appliqués au champ $\phi(\mx,t)$ permettent de calculer la fonction de corrélation du système pour le modèle $\phi^4$. Le modèle $\phi^4$ permet de basculer naturellement vers un modèle d'interface $h(\mx,t)$ qui réduit la dimensionalité du champ et rend ainsi les calculs plus simples.
+	Il existe par ailleurs de nombreuses sources contribuant à l'énergie totale du système : l'énergie du volume (\textit{bulk}) du système, l'énergie de l'interface définie par sa tension superficielle \ref{tension-superficielle}, et une énergie d'excès qui donne naissance à la force de Casimir \ref{casimir-scaling}. Cette force est dûe au confinement du système par des conditions aux bords contraignant les fluctuations du champ $\phi$ selon une direction. 
+
 
 Dans l'esemble canonique où le paramètre d'ordre est conservé (ou modèle B \ref{MB}), toutes les considérations antérieures se s'appliquent. Il est possible d'appliquer un flux local qui sort le système de l'équilibre. La manière la plus naturelle de le faire est de cisailler l'interface, ce qui modifie également les propriétés statistiques du système. 
 

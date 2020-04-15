@@ -1,16 +1,37 @@
 \chapter{Effets de taille finie}
     \label{chap-sos}
-	
+
+Certains dépôts de films nanoscopiques sur des surfaces présentent des fluctuations dont la longueur de corrélation est similaire à celle de la hauteur du film. L'interface entre le dépôt et le substrat présente une énergie libre qui dépend fortement de la taille dudit film\cite{ouyang_size-dependent_2006,jiang_size_2008}. De telles modifications des propriétés thermodynamiques à cause d'un effet de taille finie peut provoquer de fortes instabilités hydrodynamiques pouvant rendre le système thermodynamiquement instable\cite{ding_theoretical_2001}. Ces conditions aux limites entraînent une frustration du système qui finit par causer une force entre les surfaces du système, appelé force Casimir. Cette force entropique peut se retrouver dans les systèmes critiques\cite{} et possède alors des propriétés universelles selon la classe d'universalité du système. Plus proche des dépôts de film on retrouve les systèmes de membranes\cite{nelson_statistical_2004} possédant une force non-universelle\cite{hasnaoui_casimir_2010}. Certaines membranes biologiques possèdent même une transition de phase appartenant à la classe d'universalité du modèle d'Ising \cite{machta_critical_2012}.
+
+Dès lors, quelles propriétés de la force de Casimir peut-on retrouver dans un modèle Solid-On-Solid d'Hamiltonien
+\begin{align}
+    \mH = J \sum_i |h_i-h_{i+1}| + \mu \frac{h_i+h_{i+1}}{2}
+\end{align}
+et avec quels outils peut-on l'étudier ?
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Limite thermodynamique}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
 
 La fonction de partition d'un système dépend de la taille du système 
 	
 \begin{align}
     f_c(\beta,L,h) = - \frac{1}{L'} \frac{\delta \Omega(\beta,L,h)}{\delta L} \bigg|_{\beta,L'}
     \label{casimir-interface}
+\end{align}	
+
+parler problème localisation interface
+
+Dans l'ensemble grand-canonique, la fonction de partition est calculée par les valeurs propres de la matrice de transfert de taille $L$ où l'on pose $\lambda_0 \ge \lambda_1 \ge ... \ge \lambda_n \ge 0$ :
+\begin{align}
+  \mZ =  \sum_\lambda \lambda^L 
 \end{align}
+Dans la limite thermodynamique $L \to \infty$, la fonction de partition se simplifie en $\mZ \simeq \lambda_0^L$.
 
 \begin{figure}
 	\begin{minipage}[t]{0.5\linewidth}
@@ -19,17 +40,14 @@ La fonction de partition d'un système dépend de la taille du système
 	\begin{minipage}[t]{0.5\linewidth}
 		\includegraphics[width=\linewidth]{chap4/freeene-thermo-mu.pdf}
 	\end{minipage}
-	\caption{Plus grande valeur propre d'une interface libre en fonction de la taille $L$ du système pour $mu = 0.01$ et $\beta = 1$ (gauche)  ; énergie libre par site calculée via l'approximation de la limite thermodynamique \ref{energie-libre-site} comparé à la vraie fonction de partition \ref{partition-trace-lambda} en fonction de la taille $L$ du système pour $\mu=0.01$ et $\beta = 1$ (droite).}
+	\centering
+	\begin{minipage}{0.5\linewidth}
+    	\includegraphics[width=\linewidth]{chap4/longueur-correl.pdf}
+	\end{minipage}
+	\caption{Plus grande valeur propre d'une interface libre en fonction de la taille $L$ du système pour $\mu = 0.01$ et $\beta = 1$ (gauche)  ; énergie libre par site calculée via l'approximation de la limite thermodynamique \ref{energie-libre-site} comparé à la vraie fonction de partition \ref{partition-trace-lambda} en fonction de la taille $L$ du système pour $\mu=0.01$ et $\beta = 1$ (droite) ; longueur de corrélation à grande distance \ref{longueur-correl-thermo} pour une matrice $200\times200$ en fonction du potentiel chimique $\mu$ pour différentes températures (bas).}
 	\vspace{-0.5cm}
 \end{figure}  
 	
-
-\begin{figure}
-    \centering
-	\includegraphics[width=0.5\linewidth]{chap4/longueur-correl.pdf}
-    \caption{Longueur de corrélation à grande distance \ref{longueur-correl-thermo} pour une matrice $200\times200$ en fonction du potentiel chimique $\mu$ pour différentes températures.}
-\end{figure}
-
 \begin{figure}
     \centering
 	\includegraphics[width=0.5\linewidth]{chap4/distribution-taille-finie.pdf}
@@ -37,89 +55,31 @@ La fonction de partition d'un système dépend de la taille du système
 	\caption{Distribution de l'interface pour différentes tailles de la matrice de transfert à $\mu=0.01$ et $\beta = 1$. Par un fit, la distribution ne suit pas une distribution de Poisson.}
 \end{figure}
 
-
-    \subsection{Paramètre d'ordre conservé}
-	
-    
-    \subsection{Intégration sur le paramètre d'ordre}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \section{Taille finie et effet Casimir critique}
-    \label{sec-casimir}    
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Effet Casimir}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{figure}
-    \begin{minipage}[t]{0.5\linewidth}
-        	\includegraphics[width=\linewidth]{chap4/casimir-temperature.pdf}    
-    \end{minipage}
-    \begin{minipage}[t]{0.5\linewidth}
-        	\includegraphics[width=\linewidth]{chap4/casimir-temperature-zoom.pdf}    
-    \end{minipage}
-	\label{distribution-taille-finie}
-	\caption{Dérivée de l'énergie libre par rapport à la taille du système \ref{casimir-interface} pour différentes températures à $\mu=0.1$ (gauche) ; zoom sur la température seuil à $\mu=0.1$ comparé avec $\mu=0.05$ en pointillés (droite). }
+	\begin{minipage}[t]{0.5\linewidth}
+		\includegraphics[width=\linewidth]{chap4/casimir-temperature-zoom.pdf}
+	\end{minipage}%Cyclin
+	\begin{minipage}[t]{0.5\linewidth}
+		\includegraphics[width=\linewidth]{chap4/casimir-distance.pdf}
+	\end{minipage}
+	\centering
+	\begin{minipage}{0.5\linewidth}
+    	\includegraphics[width=\linewidth]{example-image-a}
+	\end{minipage}	
+	\label{casimir-temperature}
+	\caption{Force de Casimir \ref{casimir-interface} en fonction de la distance pour $\mu = 0.01$ à température fixée (gauche) ; force de Casimir en fonction de la température pour $\mu=0.01$ à taille fixée (droite) ; force de Casimir en fonction du potentiel chimique pour $L=10$ à température fixée (bas). }
 \end{figure}
-
-
-Dans la section \ref{sec-casimir} nous avons introduit l'effet Casimir comme étant le surplus d'énergie libre causé par le confinement du système, soit 
-\begin{align}
-    f_c(\beta,L,h) = - k_B T \frac{\partial(L \omega_{ex}(\beta,L,h))}{\partial L}\bigg|_{\beta,L'}
-\end{align}
-où $\omega_{ex}$ est l'énergie libre en excès dans le système, et prend une forme universelle proche du point critique \cite{casimir-universel}. Cet excès d'énergie libre est dûe à la frustration du système lorsque la longueur de corrélation est du même ordre de grandeur que la taille du système. Afin d'obtenir cette quantité dans les modèles sur réseau à partir de l'énergie libre totale, il est nécessaire de soustraire l'énergie du bulk au total. Néanmoins, dans les modèles d'interfaces qui nous intéressent, le seul terme extensif contribuant à l'énergie libre est l'énergie de surface, qui disparaît lorsque l'on prend la dérivée par rapport à la taille du système. Il n'est donc pas nécessaire de comparer l'énergie libre à la limite thermodynamique, et on obtient que 
- 
     
-    
-Supposons un système 2D de taille $L \times L' $ où $L \less L'$. L'énergie libre $F(\beta,L,L') = - \frac{1}{\beta} \ln ( Z(\beta,L,L'))$ est une grandeur extensive lorsque la longueur de corrélation est plus petite que la taille du système $L$. 
-Cette énergie libre peut se décomposer entre l'énergie de chaque phase par unité de volume $\omega_{bulk}$, et l'énergie de tension superficielle à l'interface par unité de surface $\omega_{surf}$ \cite{cardozo_finite_2015,lopes_cardozo_critical_2014}. À noter qu'à haute température dans un système complètement homogène, ce dernier terme disparaît.
-
-Cependant, lorsque $\xi \simeq L$, la contrainte exercée sur les fluctuations thermiques par les conditions aux bords implique une modification de l'énergie libre, créant une force sur les parois. Cet effet, premièrement prédit par Hendrik Casimir\cite{h_b_g_casimir_attraction_1948}, fut étendu aux systèmes critiques\cite{nikolic_is_2017}, où la divergence de la longueur de corrélation rend les expériences bien plus faciles\cite{nguyen_controlling_2013}.
-
-En présence d'un champ magnétique $h$ uniforme favorisant une phase par rapport à l'autre, l'énergie libre par unité d'aire d'un tel système se décompose \cite{lopes_cardozo_critical_2014,cardozo_finite_2015} en 
-\begin{align}
-    \frac{\Omega(\beta,L,L',h)}{L'} = L \omega_{bulk}(\beta,h) + \omega_{surf}(\beta,h) + L \omega_{ex}(\beta,L,h)
-    \label{decomposition-energie}
-\end{align}
-où $\omega_{ex}(L,h)$ est le surplus d'énergie libre due au confinement des fluctuations, qui devient nul dans la limite $L\to \infty$.
-
-La force de confinement par unité d'aire est définie par 
-\begin{align}
-    F_\perp(\beta,L,h) = - \frac{1}{L' }\frac{\partial \Omega(\beta,L,h)}{\partial L} \bigg|_{\beta,L'} = - k_B T \omega_{bulk}(\beta,h) - k_B T \frac{\partial(L \omega_{ex}(\beta,L,h))}{\partial L}\bigg|_{\beta,L'}
-\end{align}
-où le premier terme est la pression exercée par le système, tandis que le second terme est la force de Casimir par unité d'aire \cite{vasilyev_critical_2013} en $d$ dimensions 
-\begin{align}
-    f_c(\beta,L,h) = - k_B T \frac{\partial(L \omega_{ex}(\beta,L,h))}{\partial L}\bigg|_{\beta,L'} = k_B T L^{-d} \Theta(u_t,u_h)
-    \label{casimir-scaling}
-\end{align}
-où $u_T = \frac{T-T_C}{T_C} L^\frac{1}{\nu}$ et $u_h = \frac{h}{k_B T_C} L^\frac{\beta+\gamma}{\nu}$ et où les exposants $\beta$, $\gamma$ et $\nu$ sont des exposants universels reliés aux amplitudes universelles des longueurs de corrélation du système \cite{pelissetto_critical_2002,vasilyev_critical_2013} et $\Theta(u_t,u_h)$ est une fonction universelle propre à chaque modèle. Cette fonction universelle dépend des conditions aux bords du système \cite{dantchev_casimir_2017,dantchev_exact_2016} ainsi que de l'ensemble thermodynamique dans lequel on se place \cite{gross_critical_2016,rohwer_transient_2017}.
-
-Afin d'extraire la force de Casimir, il suffit alors de soustraire deux quantités extensives, c'est-à-dire en utilisant deux largeurs différentes $L_1$ et $L_2$
-\begin{align}
-    f_c(\beta,L_1,h) - f_c(\beta,L_2,h) =  \frac{1}{L' }\frac{\partial \Omega(\beta,L_2,h)}{\partial L} \bigg|_{\beta,L'} -  \frac{1}{L' }\frac{\partial \Omega(\beta,L_1,h)}{\partial L} \bigg|_{\beta,L'}
-\end{align}
-Puisque le surplus d'énergie dû au confinement est nul lorsque $L_2\to \infty$, on obtient que la force de Casimir est
-\begin{align}
-    f_c(\beta,L_1,h) \simeq \frac{1}{L' }\frac{\partial \Omega(\beta,L_2,h)}{\partial L} \bigg|_{\beta,L'} -  \frac{1}{L' }\frac{\partial \Omega(\beta,L_1,h)}{\partial L} \bigg|_{\beta,L'}
-    \label{casimir-diff-omega}   
-\end{align}
-où en utilisant \ref{casimir-scaling}, l'approximation est valable dans le cas où $ \left( \frac{L_2}{L_1}\right)^{-d} \ll 1 $.  Cette force étant une force émergente d'origine entropique, la somme des forces exercées individuellement par chaque particule du système n'est pas égale à la force totale appliquée sur le système\cite{paladugu_nonadditivity_2016}.
-
-La détection expérimentale de ce phénomène se fait traditionnellement dans des fluides binaires par \textit{Total Internal Reflection Microscopy} (TIRM) \cite{fukuto_critical_2005,hertlein_direct_2008,gambassi_critical_2009,edison_critical_2015-1}. La méthode consiste à mesurer le potentiel d'une sphère flottant sur un fluide binaire critique reposant sur une plaque. Cette sphère et cette plaque sont traitées chimiquement afin de favoriser l'une des deux phases à leu voisinage. Ainsi il est possible de créer des conditions aux bords $(++)$, $(+-)$ ou $(--)$ qui modifient la forme de la fonction universelle \ref{casimir-scaling}. À l'inverse, il est possible de mesurer la force de Casimir \cite{nguyen_controlling_2013} afin d'étudier les transitions de phases colloïdales.
-
-Le modèle d'Ising appartient à une classe de modèles où il est facilitant l'obtention de résultat analytique \cite{hobrecht_critical_2017} comparables aux simulations numériques \cite{vasilyev_monte_2007,vasilyev_universal_2009,cardozo_finite_2015}.
-
-Jusqu'à présent nous avons parlé de systèmes à l'équilibre, mais l'effet des fluctuations est également présent en dehors de l'équilibre. L'étude des interfaces nous mène à proposer des modèles de cisaillement qui influencent les propriétés statistiques des systèmes, et ainsi modifier la force de Casimir \cite{dean_out--equilibrium_2010}.
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Hamiltonien de transition}
 \label{sec-transition}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Nous avions vu à l'équation \ref{casimir-diff-omega} que la force de Casimir par unité d'aire se calcule à partir de la variation de l'énergie libre $\Omega$
-\begin{align}
-    f_c(\beta,L_1,h) \simeq \frac{1}{L' }\frac{\partial \Omega(\beta,L_2,h)}{\partial L} \bigg|_{\beta,L'} -  \frac{1}{L' }\frac{\partial \Omega(\beta,L_1,h)}{\partial L} \bigg|_{\beta,L'}
-\end{align}
-
-En suivant \cite{vasilyev_monte_2007,cardozo_finite_2015} pour un système d'Ising carré de taille $L \times L'$, l'idée est de calculer la dérivée continue par rapport à une taille discrète du système $L$ en interpolant le système via l'Hamiltonien de transition
+La force de Casimir dépend  de l'énergie libre, bien qu'elle ne puisse être exprimée par des moyennes d'observables facilement calculables par Monte Carlo. Néanmoins, sa dérivée peut être calculée via la méthode du paramètre de couplage. En suivant \cite{vasilyev_monte_2007,cardozo_finite_2015} pour un système d'Ising carré de taille $L \times L'$, l'idée est de calculer la dérivée continue par rapport à une taille discrète du système $L$ en interpolant le système via l'Hamiltonien de transition
 \begin{align}
     \mH_{tr}(\lambda) = (1-\lambda) \mH_0 + \lambda \mH_1
     \label{hamil-trans}
@@ -164,27 +124,80 @@ Pour le modèle Solid-On-Solid, il est possible de calculer la variation d'éner
     &\mH_{tr,SOS}(\lambda) = \mH_{0,SOS} - \nn
      &\frac{\lambda J}{2} \sum_x \left[ \sgn(k-1-h(x)) \sgn(k+1-h(x)) - \sgn(k-h(x)) \left( \sgn(k-1-h(x))+\sgn(k+1-h(x)) \right) \right]
 \end{align}
-où le facteur $\frac{1}{2}$ est obtenu afin de prendre en compte le coefficient $2$ dans \ref{energie-sos-ising}.
+où le facteur $\frac{1}{2}$ est obtenu afin de prendre en compte le coefficient $2$ dans \ref{energie-sos-ising}. En faisant un tableau de valeurs, on remarque rapidement que la somme est une constante égale à $-1$ quel que soit $k$, puisque contraiement au modèle d'Ising, les modèles d'interface ne possèdent pas d'énergie de bulk. Il faut donc utiliser une autre méthode afin de mesurer l'effet Casimir dans les simulations de Monte Carlo.	
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+\section{Intégration sur le potentiel chimique}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Pour un système d'Hamiltonien 
+\begin{align}
+    \mH = J \sum_i |h_i-h_{i+1}| + \mu \frac{V(h_i)+V(h_{i+1})}{2}
+    \label{potentiel-integration-param}
+\end{align}
+on a la différence d'énergie le long d'une isotherme entre un état de référence $(T,\mu_0)$ et $(T,\mu)$ \cite{lopes_cardozo_critical_2014}
+\begin{align}
+   \Omega(\beta,L,\mu) - \Omega(\beta,L,\mu_0) = \int_{\mu_0}^\mu d\mu'  < \sum_i V(h_i) >_{\beta,L,\mu'} 
+\end{align}
+Dans les modèles d'interface SOS, il est assez simple de calculer analytiquement $\Omega(\beta,L,\infty)$ par dénombrement de tous les états possibles. Cela nous permet d'obtenir via les simulations numériques l'énergie libre d'un système soumis à un potentiel quelconque de la forme \ref{potentiel-integration-param} lorsque l'on intègre le système dans la limite $\mu \to \infty$.
+
+Dans le cas où on a un potentiel chimique normal, c'est-à-dire $V(h_i)= h_i$, alors l'intégration se fait directement sur le paramètre d'ordre $<\sum_i h_i>$. Dans ce cas, dans la limite $\mu \to \infty$, la seule configuration possible est celle où $h_i=0$ pour tout $i$, ce qui mène à l'énergie libre $\Omega(\beta,L,\infty) = 0$. 
+
+Si l'on désire mesurer l'énergie libre d'un tel système dans le cas d'une dynamique de Kawasaki, cette méthode ne donnera rien puisque par définition, $<\sum_i h_i>$ est une constante. L'étude d'un Hamiltonien au chapitre \ref{sec_laser} nous a conduit à un champ $V(h_i)$ possédant la même limite à $\mu \to \infty$. Considérons le champ suivant
+\begin{align}
+    \mu V(h_i) = -\mu \frac{|h_i-\frac{L}{2}|}{2}
+    \label{neggstaged}
+\end{align}
+Ce champ a tendance à plaquer l'interface loin de $\frac{L}{2}$, c'est-à-dire en $h=0$ et $h=L$ pour un système de taille $L\times L'$, contrairement à un potentiel chimique classique où l'interface est plaquée en $h=0$. Proche des limites du système, on observe que les deux champs sont équivalents à une constante près de l'énergie. Il existe donc deux positions d'équilibre stables de l'interface d'énergie équivalente au potentiel classique. Il y a ici une compétition entre l'énergie qui essaie de conserver l'interface lisse, et l'entropie, qui rend l'interface extrêmement rugueuse, comme dans la figure \ref{comp-potentiels-chimiques}.
 
 \begin{figure}
-    \centering
-	\includegraphics[width=0.5\linewidth]{example-image-a}
-	\caption{Effet Casimir pour Glauber avec TM, hamiltonien de transition et intégation magnétique, pour Kawasaki avec Hamiltonien de transition}
-\end{figure}
-	
-	
-	\section{Effet du cisaillement}
+	\begin{minipage}[t]{0.5\linewidth}
+		\includegraphics[width=\linewidth]{chap4/comp-potentiels-chimiques.pdf}
+	\end{minipage}
+	\begin{minipage}[t]{0.5\linewidth}
+		\includegraphics[width=\linewidth]{chap4/free-ene-potentiels.pdf}
 
+	\end{minipage}
+    \caption{Configuration possible du système à $\beta=1$ et $\mu$ élevé ($\mu=2$) pour les deux types de potentiel (gauche) ; énergie libre en fonction de $\mu$ à laquelle on a retiré l'énergie libre de la configuration limite pour les deux types de potentiel (droite).}
+    \label{comp-potentiels-chimiques}
+\end{figure}
+
+Dnas la limite $\mu \rightarrow \infty$, on a donc un système éparpillé à $h=0$ et $h=L$. On a la matrice de transfert
+\begin{align}
+T= e^{-\beta \mu \frac{L}{2}}
+  \begin{pmatrix}
+    1 & e^{-\beta  J L} \\
+    e^{-\beta  J L} & 1
+  \end{pmatrix}
+\end{align}
+Les valeurs propres sont $\lambda_\pm = e^{- \beta \mu \frac{L}{2}}( 1 \pm e^{-\beta J L})$, ce qui nous donne dans la limite thermodynamique l'énergie libre 
+\begin{align}
+  \Omega(\mu \rightarrow \infty) = \mu \frac{L}{2}
+\end{align}
+Il est donc aisé de calculer l'énergie libre pour un champ donné grâce à l'intégration
+\begin{align}
+        \Omega(\beta,L,\mu) = -\Omega(\beta,L,\infty) + \int_{\mu}^\infty d\mu'  < \sum_i V(h_i) >_{\beta,L,\mu'} 
+\end{align}
+Cette méthode d'intégration est particulièrement adaptée aux modèles sur réseau où l'on connait la limite du système soumis à un potentiel extrême. Dans le cas du modèle SOS, il est possible de diagonaliser directement la matrice de transfert pour $\mu=0$, et ainsi obtenir
+\begin{align}
+        \Omega(\beta,L,\mu) =\Omega(\beta,L,0) + \int_{0}^\mu d\mu'  < \sum_i V(h_i) >_{\beta,L,\mu'} 
+\end{align}
+Pour petits champs, cette intégration est plus rapide.
+
+Dans la figure \ref{comp-potentiels-chimiques} on remarque que la différence d'énergie libre $\Omega(\beta,\mu,L)$ et $\Omega(\beta,\infty,L)$ est la même dans nos deux systèmes. Cette équivalence entre les deux modèles nous autorise à mesurer la variation de l'énergie libre (et ainsi l'effet Casimir) via l'intégration de la quantité $<\sum_i V(h_i)>$ dans le cas où la dynamique conserve le paramètre d'ordre $<\sum_i h_i>$. 
+Dansla figure \ref{casimir-kaw-glau} nous montrons les différences dans les effets de taille finie selon l'ensemble thermodynamique choisit. 
 
 \begin{figure}
     \centering
 	\includegraphics[width=0.5\linewidth]{example-image-b}
 	\caption{Effet Casimir pour Kawasaki avec cisaillement pour différent $\mu$}
+	\label{casimir-kaw-glau}
 \end{figure}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \section{Conclusion}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
 	
-	Il existe par ailleurs de nombreuses sources contribuant à l'énergie totale du système : l'énergie du volume (\textit{bulk}) du système, l'énergie de l'interface définie par sa tension superficielle \ref{tension-superficielle}, et une énergie d'excès qui donne naissance à la force de Casimir \ref{casimir-scaling}. Cette force est dûe au confinement du système par des conditions aux bords contraignant les fluctuations du champ $\phi$ selon une direction. 
 Nous avons également vu une manière d'obtenir la fonction universelle de la force de Casimir critique via le découplage progressif d'une couche du système, afin que dans la limite où $L' \gg 1$, ce découplage s'apparent à la dérivée discrète de l'énergie libre (section \ref{sec-transition}). Dans le chapitre \ref{chap-sos}, nous étudions une manière moins générale d'obtenir cette énergie libre par de l'intégration d'une autre vari
