@@ -1,18 +1,24 @@
 \chapter{Rappels théoriques sur les interfaces}
- 
+{\color{red} mettre le bruit systémaiquement à chaque équation, rappeler le bruit}
+{\color{red} être sûr de définir tous les nouveaux mots. Revoir 1.64, cisaillement, quj'est-ce que v ?}
+{\color{red} séparer ce qu'on fait les autres et ce que j'ai fait moi-même.}
+{\color{red} faire gaffe quand ce sont des vecteurs et non des scalaires !!!}
+ {\color{red} changer les exponentielles en exponentielles complètes. Ajouter de l'effet Casimir critique de Cardozo avec discussion thermodynamique.}
+  
 Dans ce chapitre nous analysons la dynamique des systèmes statistiques. L'analyse nous permettra de comprendre comment les transitions de phase, notament certains systèmes subissant une séparation de phase à la transition, se comportent de manière dynamique. L'exemple le plus connu est le modèle d'Ising en absence de champ magnétique, ayant la magnétisation comme paramètre d'ordre de la transition. Dans la phase haute température le système est homogène et sa magnétisation est nulle, tandis qu'en dessous de la température critique, dans le cas où le paramètre d'ordre est conservé (par exemple une dynamique de Kawasaki ou modèle B), le système va localement se séparer en deux phases de magnétisation moyenne opposée séparées par une interface minimisant l'énergie de surface entre les deux phases. 
-Dans le cas où le paramètre d'ordre n'est pas conservé (par exemple une dynamique de Glauber ou modèle A), une rupture spontannée de symmétrie fera que l'une des deux phases englobe l'autre, au point de recouvrir tout le système (voir Fig \ref{clusterization}). Dans une transition de phase continue où le point critique est atteint depuis l'état désordonné vers l'état ordonné, les domaines de phase égales ont pour taille la longueur de corrélation du système. Dans les transitions de phase telles que celles du modèle d'Ising, la longueur de corrélation diverge lorsque l'on s'approche de la température critique $T_C$. En présence d'un système infini, la longueur de corrélation devient infinie, ce qui implique que le système prend un temps infini pour atteindre l'équilibre thermodynamique. Ce processus de croissance des domaines depuis la phase désordonnée s'appelle le \textit{coarsening} et la théorie de la cinétique d'ordre des phases est la théorie qui a été développée pour le comprendre.
+Dans le cas où le paramètre d'ordre n'est pas conservé (par exemple une dynamique de Glauber ou modèle A), une brisure spontannée de symmétrie fera que l'une des deux phases englobe l'autre, au point de recouvrir tout le système (voir Fig \ref{clusterization}). Dans une transition de phase continue où le point critique est atteint depuis l'état désordonné vers l'état ordonné, les domaines de phase égales ont pour taille la longueur de corrélation du système. Dans les transitions de phase telles que celles du modèle d'Ising, la longueur de corrélation diverge lorsque l'on s'approche de la température critique $T_C$. En présence d'un système infini, la longueur de corrélation devient infinie, ce qui implique que le système prend un temps infini pour atteindre l'équilibre thermodynamique. Ce processus de croissance des domaines depuis la phase désordonnée s'appelle le \textit{coarsening} et la théorie de la cinétique d'ordre des phases est la théorie qui a été développée pour le comprendre.
 Cette thèse s'appuie cette théorie pour déterminer les propriétés statistiques (telles que la position moyenne et sa tension superficielle) des interfaces entre deux phases coexistantes.
 
 Tandis que l'Hamiltonien d'un système permet d'explorer toutes les configurations d'équilibre possibles, la dynamique du coarsening ne peut être étudiée qu'en construisant un modèle qui explique l'évolution de l'état du système en fonction du temps. Nous verrons tout au long de ce travail comment la conservation (ou non) du paramètre d'ordre influe sur la dynamique. Nous nous référons principalement dans ce chapitre aux références \cite{hohenberg_theory_1977,bray_theory_1994,krapivsky_kinetic_2010,halpin-healy_kinetic_1995}.
 
 Une connaissance parfaite de la fonction de partition nécessite de connaître toutes les micro-configurations possibles du système. Les appareils de mesure possèdent tous une résolution spatiale et temporelle, c'est-à-dire qu'ils mesurent l'état moyen de toutes les particules dans un volume et dans un laps de temps donné. Plus la résolution des appareils de mesure est bonne, et plus la mesure des observables dérivées de la fonction de partition est précise. 
-Concrètement, l'appareil de mesure nous donne un champ - par exemple de densité - $\phi(\mx,t)$ de notre système, qui correspond à l'intégration sur un petit volume autour de $\mx$ et une petite durée de temps autour de $t$. 
+Concrètement, l'appareil de mesure nous donne un champ - par exemple de densité - $\phi(\mx,t)$ de notre système, qui correspond à l'intégration sur un petit volume autour de $\mx$ et une petite durée de temps autour de $t$.
+{\color{red} mettre équation coarse-graining} 
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.9\linewidth]{intro/clusterization.pdf}
-    \caption{Phénomène d'aggrégation à partir d'un refroidissement (\textit{quench}) dans un modèle d'Ising de $T=\infty$ à $T=T_C$ pour différents temps en étapes de Monte Carlo, pour un système $600 \times 600$ avec une dynamique non-conservée de Glauber.}
+    \caption{Phénomène d'aggrégation à partir d'une trempe (\textit{quench}) dans un modèle d'Ising de $T=\infty$ à $T=T_C$ pour différents temps en étapes de Monte Carlo, pour un système $600 \times 600$ avec une dynamique non-conservée de Glauber.}
     \label{clusterization}
 \end{figure}
 
@@ -180,7 +186,7 @@ qui induit un changement de stabilité entre les phases (voir Fig \ref{double-pu
 \begin{figure}
     \centering
     \includegraphics[width=0.6\linewidth]{intro/double-puit-en-fonction-temp.pdf}
-    \caption{Potentiel en double-puits pour $\lambda=1$ en fonction de la différence entre la température et la température critique. Dans la phase ordonnée, les mimina stables sont à $\phi_C =\pm \sqrt{- \frac{3! m^2}{\lambda} } $ et à $\phi_C = 0$ pour la phase désordonnée. En noir, l'ajout d'un champ magnétique uniforme $h(\mx) = 1$ rend la phase positive métastable.}
+    \caption{Potentiel en double-puits pour $\lambda=1$ en fonction de la différence entre la température et la température critique. Dans la phase ordonnée, les mimina stables sont à $\phi_C =\pm \sqrt{- \frac{3! m^2}{\lambda} } $ et à $\phi_C = 0$ pour la phase désordonnée. En noir, l'ajout d'un champ magnétique uniforme $h(\mx) = 1$ rend la phase positive métastable. {\color{red} $m^2 = T-T_C$, ref à l'équation}}
     \label{double-puits-temperature}
 \end{figure}
 
@@ -201,7 +207,7 @@ où $\mL^{-1}$ est déterminé par
 \begin{align}
     (m^2 - \kappa \nabla_\my^2) \mL^{-1}(\mx,\my) = \delta(\mx-\my)
 \end{align}
-Par identification avec la fonction de Green $\Gamma(x)$ de l'opérateur $m^2 - \kappa \nabla^2$, on obtient que l'énergie libre du modèle gaussien est au final donné par 
+Par identification avec la fonction de Green $\Gamma(\mx)$ de l'opérateur $m^2 - \kappa \nabla^2$, on obtient que l'énergie libre du modèle gaussien est au final donné par 
 \begin{align}
     F[h] = F_0 - \frac{1}{2} \int d^d x d^dy \;  h(\mx) \Gamma(\mx-\my) h(\my)
 \end{align}
@@ -218,17 +224,18 @@ puis
 où l'on a introduit la longueur de corrélation du système $\xi = \sqrt{\frac{\kappa}{m^2}}$.
 Par ailleurs, par différentiation fonctionnelle directe de la fonction de partition, on voit que
 \begin{align}
-    <\phi(x)> = \frac{1}{\mZ[h]} \frac{1}{\beta} \frac{\delta \mZ[H]}{\delta h(\mx)} = \frac{\delta (k_B T \ln \mZ[h])}{\delta h(\mx)} = - \frac{\delta F}{\delta h(\mx)} = \int d^d \my \Gamma(\mx-\my) h(\my)
+    <\phi(\mx)> = \frac{1}{\mZ[h]} \frac{1}{\beta} \frac{\delta \mZ[H]}{\delta h(\mx)} = \frac{\delta (k_B T \ln \mZ[h])}{\delta h(\mx)} = - \frac{\delta F}{\delta h(\mx)} = \int d^d \my \Gamma(\mx-\my) h(\my)
 \end{align} 
 avec l'énergie libre du système  $F[h] = -k_B T \ln(\mZ[h])$. Ce résultat n'est valable que pour $h \neq 0$ ou $h \to 0$. En absence de champ extérieur, la magnétisation est nulle.
 De la même manière, on peut démontrer que la fonction de corrélation est égale à 
 \begin{align}
-    C(\mx,{\bf y}) =  <\phi(x)\phi(y)> = \frac{1}{\beta} \frac{\delta <\phi(\mx)>}{\delta h({\bf y})} = \frac{1}{\beta} \Gamma(\mx-my)
+    C(\mx,{\bf y}) =  <\phi(x)\phi(y)> = \frac{1}{\beta} \frac{\delta <\phi(\mx)>}{\delta h({\bf y})} = \frac{1}{\beta} \Gamma(\mx-\my)
 \end{align}
 et le facteur de structure
 \begin{align}
-    S(k) = < \tilde{\phi}(k)\tilde{\phi}(q)> = \frac{(2\pi)^d}{\beta} \delta_{k,q}  \tilde{\Gamma}(\mq)
+    S(k) = < \tilde{\phi}(k)\tilde{\phi}(q)> = \frac{(2\pi)^d}{\beta} \delta(k-q)  \tilde{\Gamma}(\mq)
 \end{align}
+{\color{red} vecteurs k et q}
 Dans la phase désordonnée, où $m^2 \less 0$ et $\lambda \neq 0$, l'approximation gaussienne du modèle $\phi^4$ donne le même résultat que \ref{fonction-correl} avec le facteur $m^2$ renormalisé par l'équation auto-consistante \cite[\P 4.3]{bellac_equilibrium_2004}
 \begin{align}
     m^2_0 = m^2 + \frac{1}{2} \lambda \int_\mq \frac{1}{m^2_0+\mq^2}
@@ -277,31 +284,13 @@ dont la solution est
     \section{Taille finie et effet Casimir critique}
     \label{sec-casimir}    
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{figure}
-    \begin{minipage}[t]{0.5\linewidth}
-        	\includegraphics[width=\linewidth]{chap4/casimir-temperature.pdf}    
-    \end{minipage}
-    \begin{minipage}[t]{0.5\linewidth}
-        	\includegraphics[width=\linewidth]{chap4/casimir-temperature-zoom.pdf}    
-    \end{minipage}
-	\label{distribution-taille-finie}
-	\caption{Dérivée de l'énergie libre par rapport à la taille du système \ref{casimir-interface} pour différentes températures à $\mu=0.1$ (gauche) ; zoom sur la température seuil à $\mu=0.1$ comparé avec $\mu=0.05$ en pointillés (droite). }
-\end{figure}
-
-
-Dans la section \ref{sec-casimir} nous avons introduit l'effet Casimir comme étant le surplus d'énergie libre causé par le confinement du système, soit 
-\begin{align}
-    f_c(\beta,L,h) = - k_B T \frac{\partial(L \omega_{ex}(\beta,L,h))}{\partial L}\bigg|_{\beta,L'}
-\end{align}
-où $\omega_{ex}$ est l'énergie libre en excès dans le système, et prend une forme universelle proche du point critique \cite{casimir-universel}. Cet excès d'énergie libre est dûe à la frustration du système lorsque la longueur de corrélation est du même ordre de grandeur que la taille du système. Afin d'obtenir cette quantité dans les modèles sur réseau à partir de l'énergie libre totale, il est nécessaire de soustraire l'énergie du bulk au total. Néanmoins, dans les modèles d'interfaces qui nous intéressent, le seul terme extensif contribuant à l'énergie libre est l'énergie de surface, qui disparaît lorsque l'on prend la dérivée par rapport à la taille du système. Il n'est donc pas nécessaire de comparer l'énergie libre à la limite thermodynamique, et on obtient que 
- 
-    
     
 Supposons un système 2D de taille $L \times L' $ où $L \less L'$. L'énergie libre $F(\beta,L,L') = - \frac{1}{\beta} \ln ( Z(\beta,L,L'))$ est une grandeur extensive lorsque la longueur de corrélation est plus petite que la taille du système $L$. 
 Cette énergie libre peut se décomposer entre l'énergie de chaque phase par unité de volume $\omega_{bulk}$, et l'énergie de tension superficielle à l'interface par unité de surface $\omega_{surf}$ \cite{cardozo_finite_2015,lopes_cardozo_critical_2014}. À noter qu'à haute température dans un système complètement homogène, ce dernier terme disparaît.
 
-Cependant, lorsque $\xi \simeq L$, la contrainte exercée sur les fluctuations thermiques par les conditions aux bords implique une modification de l'énergie libre, créant une force sur les parois. Cet effet, premièrement prédit par Hendrik Casimir\cite{h_b_g_casimir_attraction_1948}, fut étendu aux systèmes critiques\cite{nikolic_is_2017}, où la divergence de la longueur de corrélation rend les expériences bien plus faciles\cite{nguyen_controlling_2013}.
+Cependant, lorsque $\xi \simeq L$, la contrainte exercée sur les fluctuations thermiques par les conditions aux bords implique une modification de l'énergie libre, créant une force sur les parois. Cet effet, premièrement prédit par Hendrik Casimir\cite{h_b_g_casimir_attraction_1948}, fut étendu aux systèmes critiques, où la divergence de la longueur de corrélation rend les expériences bien plus faciles\cite{nguyen_controlling_2013}.
+{\color{red} réf originale de gennes fischer, ref 15 cardozo, review gambassi}
+{\color{red} résumé notes David Casimir}
 
 En présence d'un champ magnétique $h$ uniforme favorisant une phase par rapport à l'autre, l'énergie libre par unité d'aire d'un tel système se décompose \cite{lopes_cardozo_critical_2014,cardozo_finite_2015} en 
 \begin{align}
@@ -344,14 +333,17 @@ Dans la réalité, la phase désordonnée est extrêmement inhomogène, avec des
 
 Sans perte de généralité, nous pouvons séparer les variables spatiales par $x$ pour toutes les coordonnées parallèles à l'interface et par $z$ la coordonnée transverse. Cela se traduit par
 \begin{align}
-    \phi(\mx) = f(z-h(\mx))
+    \phi(\mx,z) = f(z-h(\mx))
     \label{capillary-wave-theory}
 \end{align}
 où $f(a \greater 0) = \phi_1$ et $f(a \less 0) = \phi_2$. Notre système est maintenant complètement défini par l'interface $h(x)$ d'Hamiltonien
+{\color{red} $\phi$ miminise champ moyen }
 \begin{align}
-    H = \int d^d x \frac{\sigma}{2} (\nabla h(\mx))^2 + V(h)
+    H = \int d^d x \frac{\sigma}{2} (\nabla h(\mx))^2 + V(h(\mx))
     \label{hamil-cwt}
 \end{align}
+{\color{red} expliquer développement pour surface dans formule de Mange}
+
 où le premier terme est l'excès d'énergie par rapport à une interface plane, et le potentiel $V$ fait référence au champ externe \ref{champ-externe}. 
 Une interface se caractérise par sa hauteur moyenne $<h(t)>$ de l'interface dans l'espace et par sa fonction de corrélation parallèle à l'interface décrivant les modes de fluctuation de l'interface
 \begin{align}
@@ -373,6 +365,7 @@ avec $\eta(x,t)$ un bruit blanc gaussien. En multipliant les deux côtés par $f
      \frac{\partial h}{\partial t} = \nu + \nabla^2 h +  \tilde{\eta}(\mx,t)
     \label{edwards-wilkinson}
 \end{align}
+{\color{red} ne pas mettre $\nu$, on s'emballe ??? gné ? voir notes de David. Éliminer la section, rmeplacer avec la dérivation dans les notes}
 où $\nu$ désigne le flux total, et $\tilde{\eta}(x,t)$  un bruit blanc de moyenne nulle défini par
 \begin{align}
     \tilde{\eta}(\mx,t) = - \frac{1}{\sigma} \int du f'(u) \eta(\mx,u+h(\mx,t),t)
@@ -395,6 +388,8 @@ Si l'on se place dans le référentiel du centre de l'interface, le'équation d'
 \begin{align}
     \frac{\partial h}{\partial t} =  \nabla^2 \frac{\delta H}{\delta h} +  \tilde{\eta}(x,t)
 \end{align}
+{\color{red}$ H =\int d \mx \frac{\sigma (\nabla h)^2}{2} +V(h(x) $}
+{\color{red} version modèle de KPZ, pas le moême modèle. Enlever $\nabla^2 (\nabla h)^2$}
 qui nous donne l'équation Villain-Lai-Das Sarma\cite{villain_continuum_1991,lai_kinetic_1991}
 \begin{align}
     \frac{\partial h}{\partial t} = - \nabla^4 h + \lambda \nabla^2 (\nabla h) ^2 +  \tilde{\eta}(x,t)
@@ -409,6 +404,8 @@ Les systèmes à l'équilibre ont la particularité que les états ont une proba
      \frac{\partial h}{\partial t} + v \nabla h =  \mathcal{L} h +  \eta(x,t)
      \label{eq-cisaillement}
 \end{align}
+{\color{red} $v \nabla h$ are vectors scalar product $\nabla (vh)$ vecteur advection du à un écoulement. Mettre la formule pour un cisaillement, article Bray. Dire que champ de vitesse est constant pour faire transfo galiliéenne, écrire qu'est-ce que c'est que le cisaillement. 
+Champ de cisaillement c'est à revoir}
 où l'opérateur $\mathcal{L}$ est associé au modèle A ou B, et le terme $v \nabla h$ est un terme de d'advection dû au flux produit par le cisaillement. 
 
 Dans le cas où le champ de vitesse est constant, comme la sédimentation dans un champ gravitationel, on peut parler d'écoulement. L'équation \ref{eq-cisaillement} est alors invariante par la transformation galiléenne $x \rightarrow x+vt$. 
@@ -425,7 +422,7 @@ Dans le cas où le champ de vitesse est constant, comme la sédimentation dans u
 		\includegraphics[width=\linewidth]{intro/cis-ising-f-066.pdf}
 	\end{minipage}
 	\caption{Photos d'un système d'Ising $128 \times 50$ en fonction d'un cisaillement
-	${f(y) = \omega (\frac{2 y}{L} -1)}$.}
+	${f(y) = \omega (\frac{2 y}{L} -1)}$.  {\color{red} expliquer qu'est-ce qu'un cisaillement, comment on implémente ça dans un modèle discret}}
     \label{snap-ising-shear}	
 \end{figure}  
 

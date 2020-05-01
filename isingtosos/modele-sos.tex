@@ -1,5 +1,7 @@
 \chapter{Modèle Solid-On-Solid}
-
+    \label{chap-sos}
+ {\color{red} ising model = liquid model same thing ?
+ Potentiel chimique = champ magnétique, pourquoi pareil ?}
 La discrétisation du champ $\phi(\mx,t)$ afin de faire des simulations numériques mène naturellement vers le modèle sur réseau par excellence, le modèle d'Ising. À partir de deux dimensions, ce modèle de particules à interaction avec les plus proches voisins, possède une transition de second ordre depuis une phase ordonnée vers une phase désordonnée. Si lon suppose l'énergie d'interaction entre toutes les particules plus proches voisins égale à $J$, la température critique est $\beta_{C,2D} =  \frac{\ln(1+\sqrt{2})}{2} J \simeq 0.44 J$ en deux dimensions \cite{onsager_crystal_1944}. et $\beta_{C,3D} \simeq 0.22 J$ en trois dimensions \cite{talapov_magnetization_1996} (via des simulations de Monte Carlo).
 
 À basse température $T \less T_C$, le système tend à créer des domaines de magnétisation moyenne opposées induisant des interfaces. Nous rappelons dans ce chapitre quelques notions essentielles sur le modèle d'Ising, sur la manière d'étudier les interfaces dans ce modèle, et une approximation à très basse température qui ne retient que l'information sur l'interface : le modèle Solid-On-Solid.
@@ -327,6 +329,6 @@ La prise en compte des permutations possibles des particules ajoute un terme d'e
 \begin{figure}
     \centering
     \includegraphics[width=0.5\textwidth]{isingtosos/comparaison-modeles.pdf}
-    \caption{Énergie par site entre les modèles d'Ising (\ref{hamil-ising}) (avec conditions fixes en $y$), SOS et RSOS (\ref{hamil-sos}) et POP (\ref{hamil-pop}) en fonction de la température via des simulations de Monte Carlo pour $L_X=64$, $L_Y=51$ et $J=1$ avec des conditions périodiques en $x$. La configuration intiale est la configuration à $T=0$ d'une interface parfaitement lisse. {\color{red} Besoin refaire Ising avec MCIA.} }
+    \caption{Énergie par site entre les modèles d'Ising (\ref{hamil-ising}) (avec conditions fixes en $y$), SOS et RSOS (\ref{hamil-sos}) et POP (\ref{hamil-pop}) en fonction de la température via des simulations de Monte Carlo pour $L_X=64$, $L_Y=51$ et $J=1$ avec des conditions périodiques en $x$. La configuration intiale est la configuration à $T=0$ d'une interface parfaitement lisse. {\color{red} Besoin refaire Ising avec MCIA. et ajouter $J\to2J$ dans la simu pour SOS} }
     \label{comparaison-modeles}
 \end{figure}

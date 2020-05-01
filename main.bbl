@@ -41,8 +41,8 @@ Kyozi Kawasaki, Mehmet~C. Yalabik, and J.~D. Gunton.
 
 \bibitem{l_landau_physique_1990}
 {L. Landau} and {E. Lifchitz}.
-\newblock {\em Physique théorique - {T9} {Physique} {Statistique}}.
-\newblock Éditions {Mir} {Moscou}. 1990.
+\newblock {\em Physique th{\'e}orique - {T9} {Physique} {Statistique}}.
+\newblock {\'E}ditions {Mir} {Moscou}. 1990.
 
 \bibitem{bellac_equilibrium_2004}
 Michel~Le Bellac, Fabrice Mortessagne, and G~George Batrouni.
@@ -54,7 +54,7 @@ Michel~Le Bellac, Fabrice Mortessagne, and G~George Batrouni.
 David~Lopes Cardozo and Peter Holdsworth.
 \newblock {\em Finite size scaling et force de {Casimir} critique: aimants
   d'{Ising} et fluides binaires}.
-\newblock PhD thesis, Ecole normale supérieure de lyon-ENS LYON, 2015.
+\newblock PhD thesis, Ecole normale sup{\'e}rieure de lyon-ENS LYON, 2015.
 
 \bibitem{lopes_cardozo_critical_2014}
 David Lopes~Cardozo, Hugo Jacquin, and Peter C.~W. Holdsworth.
@@ -69,7 +69,7 @@ H.~B.~G. Casimir.
   51(7):793--498, 1948.
 
 \bibitem{nikolic_is_2017}
-Hrvoje Nikolić.
+Hrvoje Nikoli{\'c}.
 \newblock Is zero-point energy physical? {A} toy model for {Casimir}-like
   effect.
 \newblock {\em Annals of Physics}, 383, 2017.
@@ -114,7 +114,7 @@ Markus Gross, Oleg Vasilyev, Andrea Gambassi, and S.~Dietrich.
 \newblock {\em Physical Review E}, 94(2):022103, August 2016.
 
 \bibitem{rohwer_transient_2017}
-Christian~M. Rohwer, Mehran Kardar, and Matthias Krüger.
+Christian~M. Rohwer, Mehran Kardar, and Matthias Kr{\"u}ger.
 \newblock Transient {Casimir} {Forces} from {Quenches} in {Thermal} and
   {Active} {Matter}.
 \newblock {\em Physical Review Letters}, 118(1), January 2017.
@@ -137,14 +137,14 @@ C.~Hertlein, L.~Helden, A.~Gambassi, S.~Dietrich, and C.~Bechinger.
 \newblock {\em Nature}, 451(7175):172--175, January 2008.
 
 \bibitem{gambassi_critical_2009}
-A.~Gambassi, A.~Maciołek, C.~Hertlein, U.~Nellen, L.~Helden, C.~Bechinger, and
-  S.~Dietrich.
+A.~Gambassi, A.~Macio{\l }ek, C.~Hertlein, U.~Nellen, L.~Helden, C.~Bechinger,
+  and S.~Dietrich.
 \newblock Critical {Casimir} effect in classical binary liquid mixtures.
 \newblock {\em Physical Review E}, 80(6), December 2009.
 
 \bibitem{edison_critical_2015-1}
-John~R. Edison, Nikos Tasios, Simone Belli, Robert Evans, René van Roij, and
-  Marjolein Dijkstra.
+John~R. Edison, Nikos Tasios, Simone Belli, Robert Evans, Ren{\'e} van Roij,
+  and Marjolein Dijkstra.
 \newblock Critical {Casimir} {Forces} and {Colloidal} {Phase} {Transitions} in
   a {Near}-{Critical} {Solvent}: {A} {Simple} {Model} {Reveals} a {Rich}
   {Phase} {Diagram}.
@@ -158,12 +158,12 @@ Hendrik Hobrecht and Alfred Hucht.
   2017(2):024002, February 2017.
 
 \bibitem{vasilyev_monte_2007}
-O.~Vasilyev, A.~Gambassi, A.~Maciołek, and S.~Dietrich.
+O.~Vasilyev, A.~Gambassi, A.~Macio{\l }ek, and S.~Dietrich.
 \newblock Monte {Carlo} simulation results for critical {Casimir} forces.
 \newblock {\em EPL (Europhysics Letters)}, 80(6):60009, 2007.
 
 \bibitem{vasilyev_universal_2009}
-O.~Vasilyev, A.~Gambassi, A.~Maciołek, and S.~Dietrich.
+O.~Vasilyev, A.~Gambassi, A.~Macio{\l }ek, and S.~Dietrich.
 \newblock Universal scaling functions of critical {Casimir} forces obtained by
   {Monte} {Carlo} simulations.
 \newblock {\em Physical Review E}, 79(4), April 2009.
@@ -217,13 +217,13 @@ Yup Kim, D.~K. Park, and Jin~Min Kim.
   1994.
 
 \bibitem{assis_dynamic_2015}
-T.~A.~de Assis and F.~D. A.~Aarão Reis.
+T.~A.~de Assis and F.~D. A.~Aar{\~a}o Reis.
 \newblock Dynamic scaling and temperature effects in thin film roughening.
 \newblock {\em Journal of Statistical Mechanics: Theory and Experiment},
   2015(6):P06023, 2015.
 
 \bibitem{oliveira_maximal-_2008}
-T.~J. Oliveira and F.~D.~A. Aarão~Reis.
+T.~J. Oliveira and F.~D.~A. Aar{\~a}o~Reis.
 \newblock Maximal- and minimal-height distributions of fluctuating interfaces.
 \newblock {\em Physical Review E}, 77(4), April 2008.
 
@@ -235,8 +235,8 @@ Tapas Singha and Malay~K Nandy.
   2016(2):023205, February 2016.
 
 \bibitem{girot_conical_2019}
-A.~Girot, J.~Petit, R.~Saiseau, T.~Guérin, H.~Chraibi, U.~Delabre, and J.~P.
-  Delville.
+A.~Girot, J.~Petit, R.~Saiseau, T.~Gu{\'e}rin, H.~Chraibi, U.~Delabre, and
+  J.~P. Delville.
 \newblock Conical {Interfaces} between {Two} {Immiscible} {Fluids} {Induced} by
   an {Optical} {Laser} {Beam}.
 \newblock {\em Physical Review Letters}, 122(17), May 2019.
@@ -276,7 +276,7 @@ Thomas~HR Smith.
 \newblock PhD thesis, University of Bristol, 2010.
 
 \bibitem{smith_interfaces_2008}
-Thomas H~R Smith, Oleg Vasilyev, Douglas~B Abraham, Anna Maciołek, and
+Thomas H~R Smith, Oleg Vasilyev, Douglas~B Abraham, Anna Macio{\l }ek, and
   Matthias Schmidt.
 \newblock Interfaces in confined {Ising} models: {Kawasaki}, {Glauber} and
   sheared dynamics.
@@ -320,22 +320,22 @@ Lars Onsager.
 \newblock {\em Physical Review}, 65(3-4):117--149, February 1944.
 
 \bibitem{talapov_magnetization_1996}
-A~L Talapov and H~W~J Blöte.
+A~L Talapov and H~W~J Bl{\"o}te.
 \newblock The magnetization of the {3D} {Ising} model.
 \newblock {\em Journal of Physics A: Mathematical and General},
   29(17):5727--5733, September 1996.
 
 \bibitem{niss_history_2005}
 Martin Niss.
-\newblock History of the {Lenz}-{Ising} {Model} 1920–1950: {From}
+\newblock History of the {Lenz}-{Ising} {Model} 1920{\textendash}1950: {From}
   {Ferromagnetic} to {Cooperative} {Phenomena}.
 \newblock {\em Archive for History of Exact Sciences}, 59(3):267--318, March
   2005.
 
 \bibitem{niss_history_2009}
 Martin Niss.
-\newblock History of the {Lenz}–{Ising} {Model} 1950–1965: from irrelevance
-  to relevance.
+\newblock History of the {Lenz}{\textendash}{Ising} {Model}
+  1950{\textendash}1965: from irrelevance to relevance.
 \newblock {\em Archive for History of Exact Sciences}, 63(3):243, May 2009.
 
 \bibitem{goldenfeld_lectures_2018}
@@ -351,7 +351,7 @@ J.~Stecki, A.~Maciol/ek, and K.~Olaussen.
 \newblock {\em Physical Review B}, 49(2):1092--1103, January 1994.
 
 \bibitem{abraham_transfer_1973}
-D.~B. Abraham and A.~Martin-Löf.
+D.~B. Abraham and A.~Martin-L{\"o}f.
 \newblock The transfer matrix for a pure phase in the two-dimensional {Ising}
   model.
 \newblock {\em Communications in Mathematical Physics}, 32(3):245--268,
@@ -389,13 +389,13 @@ Satya~N. Majumdar and Alain Comtet.
 \newblock {\em Journal of Statistical Physics}, 119(3-4):777--826, May 2005.
 
 \bibitem{schehr_universal_2006}
-Grégory Schehr and Satya~N. Majumdar.
+Gr{\'e}gory Schehr and Satya~N. Majumdar.
 \newblock Universal asymptotic statistics of maximal relative height in
   one-dimensional solid-on-solid models.
 \newblock {\em Physical Review E}, 73(5):056103, May 2006.
 
 \bibitem{privman_transfer-matrix_1989}
-V.~Privman and N.~M. Švrakić.
+V.~Privman and N.~M. {\v S}vraki{\'c}.
 \newblock Transfer-{Matrix} {Spectrum} for {Systems} with {Interfaces}.
 \newblock {\em Physical Review Letters}, 62(6):633--636, February 1989.
 
@@ -448,7 +448,7 @@ T.~W. Burkhardt.
 D.~M. Kroll.
 \newblock Solid-on-solid model for the interface pinning transition in {Ising}
   ferromagnets.
-\newblock {\em Zeitschrift für Physik B Condensed Matter}, 41(4):345--348,
+\newblock {\em Zeitschrift f{\"u}r Physik B Condensed Matter}, 41(4):345--348,
   December 1981.
 
 \bibitem{kroll_pinning_1982}
@@ -468,8 +468,8 @@ Alexis Casner and Jean-Pierre Delville.
 
 \bibitem{delville_laser_2009}
 Jean-Pierre Delville, Matthieu Robert~de Saint~Vincent, Robert~D Schroll, Hamza
-  Chraïbi, Bruno Issenmann, Régis Wunenburger, Didier Lasseux, Wendy~W Zhang,
-  and Etienne Brasselet.
+  Chra{\"i}bi, Bruno Issenmann, R{\'e}gis Wunenburger, Didier Lasseux, Wendy~W
+  Zhang, and Etienne Brasselet.
 \newblock Laser microfluidics: fluid actuation by light.
 \newblock {\em Journal of Optics A: Pure and Applied Optics}, 11(3):034015,
   March 2009.
@@ -496,5 +496,45 @@ S.~Wansleben and D.~P. Landau.
 \newblock Monte {Carlo} investigation of critical dynamics in the
   three-dimensional {Ising} model.
 \newblock {\em Physical Review B}, 43(7):6006--6014, March 1991.
+
+\bibitem{ouyang_size-dependent_2006}
+G.~Ouyang, L.~H. Liang, C.~X. Wang, and G.~W. Yang.
+\newblock Size-dependent interface energy.
+\newblock {\em Applied Physics Letters}, 88(9):091914, February 2006.
+
+\bibitem{jiang_size_2008}
+Q.~Jiang and H.M. Lu.
+\newblock Size dependent interface energy and its applications.
+\newblock {\em Surface Science Reports}, 63(10):427--464, October 2008.
+
+\bibitem{ding_theoretical_2001}
+Jian-Ning Ding, Shi-Zhu Wen, and Yong-Gang Meng.
+\newblock Theoretical study of the sticking of a membrane strip in {MEMS} under
+  the {Casimir} effect.
+\newblock {\em Journal of Micromechanics and Microengineering}, 11(3):202--208,
+  May 2001.
+
+\bibitem{nelson_statistical_2004}
+David~R. Nelson, Tsvi Piran, and Steven Weinberg, editors.
+\newblock {\em Statistical mechanics of membranes and surfaces}.
+\newblock World Scientific Pub, River Edge, N.J, 2nd ed edition, 2004.
+\newblock OCLC: ocm56720001.
+
+\bibitem{hasnaoui_casimir_2010}
+K~El Hasnaoui, Y~Madmoune, H~Kaidi, M~Chahid, and M~Benhamou.
+\newblock Casimir force in confined biomembranes.
+\newblock 8:15, 2010.
+
+\bibitem{machta_critical_2012}
+Benjamin~B. Machta, Sarah~L. Veatch, and James~P. Sethna.
+\newblock Critical {Casimir} {Forces} in {Cellular} {Membranes}.
+\newblock {\em Physical Review Letters}, 109(13), September 2012.
+
+\bibitem{smith_interfaces_2008-1}
+Thomas H.~R. Smith, Oleg Vasilyev, Douglas~B. Abraham, Anna Macio{\l }ek, and
+  Matthias Schmidt.
+\newblock Interfaces in {Driven} {Ising} {Models}: {Shear} {Enhances}
+  {Confinement}.
+\newblock {\em Physical Review Letters}, 101(6):067203, August 2008.
 
 \end{thebibliography}
