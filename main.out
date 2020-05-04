@@ -1,41 +1,45 @@
 \BOOKMARK [0][-]{chapter*.2}{Introduction}{}% 1
 \BOOKMARK [0][-]{chapter.1}{Rappels th\351oriques sur les interfaces}{}% 2
-\BOOKMARK [1][-]{section.1.1}{\311quations dynamique d'un champ}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.1}{\311quation dynamique d'un champ}{chapter.1}% 3
 \BOOKMARK [2][-]{subsection.1.1.1}{Champ avec un nombre de degr\351s de libert\351 fini}{section.1.1}% 4
 \BOOKMARK [2][-]{subsection.1.1.2}{Th\351orie statistique des champs}{section.1.1}% 5
 \BOOKMARK [2][-]{subsection.1.1.3}{Mod\350le 4}{section.1.1}% 6
 \BOOKMARK [2][-]{subsection.1.1.4}{Tension superficielle}{section.1.1}% 7
-\BOOKMARK [1][-]{section.1.2}{Taille finie et effet Casimir critique}{chapter.1}% 8
-\BOOKMARK [1][-]{section.1.3}{Mod\350les d'interface}{chapter.1}% 9
-\BOOKMARK [2][-]{subsection.1.3.1}{Param\350tre d'ordre non conserv\351}{section.1.3}% 10
-\BOOKMARK [2][-]{subsection.1.3.2}{Param\350tre d'ordre conserv\351}{section.1.3}% 11
-\BOOKMARK [2][-]{subsection.1.3.3}{Interface hors \351quilibre}{section.1.3}% 12
-\BOOKMARK [1][-]{section.1.4}{Conclusion}{chapter.1}% 13
-\BOOKMARK [0][-]{chapter.2}{Mod\350le Solid-On-Solid}{}% 14
-\BOOKMARK [1][-]{section.2.1}{Le mod\350le d'Ising}{chapter.2}% 15
-\BOOKMARK [1][-]{section.2.2}{Hamiltonien}{chapter.2}% 16
-\BOOKMARK [1][-]{section.2.3}{Matrice de Transfert}{chapter.2}% 17
-\BOOKMARK [1][-]{section.2.4}{Stabilit\351 de l'interface}{chapter.2}% 18
-\BOOKMARK [1][-]{section.2.5}{\311quivalence des ensembles}{chapter.2}% 19
-\BOOKMARK [1][-]{section.2.6}{Mod\350le de particules : le mod\350le POP}{chapter.2}% 20
-\BOOKMARK [1][-]{section.2.7}{Conclusion}{chapter.2}% 21
-\BOOKMARK [0][-]{chapter.3}{Simulations}{}% 22
-\BOOKMARK [1][-]{section.3.1}{Algorithme de Metropolis}{chapter.3}% 23
-\BOOKMARK [2][-]{subsection.3.1.1}{Ensemble grand-canonique : algorithme de Glauber}{section.3.1}% 24
-\BOOKMARK [2][-]{subsection.3.1.2}{Ensemble canonique : algorithme de Kawasaki}{section.3.1}% 25
-\BOOKMARK [2][-]{subsection.3.1.3}{Dynamique hors-\351quilibre}{section.3.1}% 26
-\BOOKMARK [2][-]{subsection.3.1.4}{Mod\350le POP}{section.3.1}% 27
-\BOOKMARK [1][-]{section.3.2}{Conclusion}{chapter.3}% 28
-\BOOKMARK [0][-]{chapter.4}{Effets de taille finie}{}% 29
-\BOOKMARK [1][-]{section.4.1}{Limite thermodynamique}{chapter.4}% 30
-\BOOKMARK [1][-]{section.4.2}{Effet Casimir}{chapter.4}% 31
-\BOOKMARK [1][-]{section.4.3}{Hamiltonien de transition}{chapter.4}% 32
-\BOOKMARK [1][-]{section.4.4}{Int\351gration sur le potentiel chimique}{chapter.4}% 33
-\BOOKMARK [1][-]{section.4.5}{Conclusion}{chapter.4}% 34
-\BOOKMARK [0][-]{chapter.5}{Interaction gaussienne avec champ magn\351tique confinant}{}% 35
-\BOOKMARK [1][-]{section.5.1}{Interface statique}{chapter.5}% 36
-\BOOKMARK [2][-]{subsection.5.1.1}{Distribution de probabilit\351 de l'interface}{section.5.1}% 37
-\BOOKMARK [2][-]{subsection.5.1.2}{Fonction de corr\351lation}{section.5.1}% 38
-\BOOKMARK [2][-]{subsection.5.1.3}{Tension superficielle effective}{section.5.1}% 39
-\BOOKMARK [1][-]{section.5.2}{Interface hors-\351quilibre}{chapter.5}% 40
-\BOOKMARK [1][-]{section.5.3}{Conclusion}{chapter.5}% 41
+\BOOKMARK [1][-]{section.1.2}{Effets de taille finie}{chapter.1}% 8
+\BOOKMARK [2][-]{subsection.1.2.1}{Hypothese d'invariance d'\351chelle}{section.1.2}% 9
+\BOOKMARK [2][-]{subsection.1.2.2}{Pression de s\351paration et force de Casimir critique}{section.1.2}% 10
+\BOOKMARK [2][-]{subsection.1.2.3}{Int\351gration sur le param\350tre d'ordre}{section.1.2}% 11
+\BOOKMARK [1][-]{section.1.3}{Mod\350les d'interface}{chapter.1}% 12
+\BOOKMARK [2][-]{subsection.1.3.1}{Param\350tre d'ordre non conserv\351}{section.1.3}% 13
+\BOOKMARK [2][-]{subsection.1.3.2}{Param\350tre d'ordre conserv\351}{section.1.3}% 14
+\BOOKMARK [2][-]{subsection.1.3.3}{Interface hors \351quilibre}{section.1.3}% 15
+\BOOKMARK [1][-]{section.1.4}{Conclusion}{chapter.1}% 16
+\BOOKMARK [0][-]{chapter.2}{Mod\350le Solid-On-Solid}{}% 17
+\BOOKMARK [1][-]{section.2.1}{Le mod\350le d'Ising}{chapter.2}% 18
+\BOOKMARK [2][-]{subsection.2.1.1}{Crossover Hamiltonian}{section.2.1}% 19
+\BOOKMARK [1][-]{section.2.2}{Hamiltonien}{chapter.2}% 20
+\BOOKMARK [1][-]{section.2.3}{Matrice de Transfert}{chapter.2}% 21
+\BOOKMARK [1][-]{section.2.4}{Stabilit\351 de l'interface}{chapter.2}% 22
+\BOOKMARK [1][-]{section.2.5}{\311quivalence des ensembles}{chapter.2}% 23
+\BOOKMARK [1][-]{section.2.6}{Mod\350le de particules : le mod\350le POP}{chapter.2}% 24
+\BOOKMARK [1][-]{section.2.7}{Conclusion}{chapter.2}% 25
+\BOOKMARK [0][-]{chapter.3}{Simulations}{}% 26
+\BOOKMARK [1][-]{section.3.1}{Algorithme de Metropolis}{chapter.3}% 27
+\BOOKMARK [2][-]{subsection.3.1.1}{Ensemble grand-canonique : algorithme de Glauber}{section.3.1}% 28
+\BOOKMARK [2][-]{subsection.3.1.2}{Ensemble canonique : algorithme de Kawasaki}{section.3.1}% 29
+\BOOKMARK [2][-]{subsection.3.1.3}{Dynamique hors-\351quilibre}{section.3.1}% 30
+\BOOKMARK [2][-]{subsection.3.1.4}{Mod\350le POP}{section.3.1}% 31
+\BOOKMARK [1][-]{section.3.2}{Conclusion}{chapter.3}% 32
+\BOOKMARK [0][-]{chapter.4}{Effets de taille finie}{}% 33
+\BOOKMARK [1][-]{section.4.1}{Limite thermodynamique}{chapter.4}% 34
+\BOOKMARK [1][-]{section.4.2}{Effet Casimir}{chapter.4}% 35
+\BOOKMARK [1][-]{section.4.3}{Hamiltonien de transition}{chapter.4}% 36
+\BOOKMARK [1][-]{section.4.4}{Int\351gration sur le potentiel chimique}{chapter.4}% 37
+\BOOKMARK [1][-]{section.4.5}{Conclusion}{chapter.4}% 38
+\BOOKMARK [0][-]{chapter.5}{Interaction gaussienne avec champ magn\351tique confinant}{}% 39
+\BOOKMARK [1][-]{section.5.1}{Interface statique}{chapter.5}% 40
+\BOOKMARK [2][-]{subsection.5.1.1}{Distribution de probabilit\351 de l'interface}{section.5.1}% 41
+\BOOKMARK [2][-]{subsection.5.1.2}{Fonction de corr\351lation}{section.5.1}% 42
+\BOOKMARK [2][-]{subsection.5.1.3}{Tension superficielle effective}{section.5.1}% 43
+\BOOKMARK [1][-]{section.5.2}{Interface hors-\351quilibre}{chapter.5}% 44
+\BOOKMARK [1][-]{section.5.3}{Conclusion}{chapter.5}% 45

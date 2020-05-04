@@ -3,50 +3,51 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: main.aux
 The style file: unsrt.bst
 Database file #1: biblio.bib
-Warning--I didn't find a database entry for "onsager"
+Warning--I didn't find a database entry for ""
+Warning--I didn't find a database entry for "degennes"
 Warning--empty journal in cahn_free_nodate
 Warning--empty year in cahn_free_nodate
 Warning--empty publisher in l_landau_physique_1990
 Warning--empty journal in hasnaoui_casimir_2010
-You've used 90 entries,
+You've used 93 entries,
             1791 wiz_defined-function locations,
-            936 strings with 18117 characters,
-and the built_in function-call counts, 19951 in all, are:
-= -- 1771
-> -- 863
+            947 strings with 18667 characters,
+and the built_in function-call counts, 20756 in all, are:
+= -- 1836
+> -- 911
 < -- 1
-+ -- 324
-- -- 234
-* -- 1672
-:= -- 3247
-add.period$ -- 277
-call.type$ -- 90
-change.case$ -- 84
++ -- 341
+- -- 248
+* -- 1754
+:= -- 3374
+add.period$ -- 283
+call.type$ -- 93
+change.case$ -- 87
 chr.to.int$ -- 0
-cite$ -- 94
-duplicate$ -- 803
-empty$ -- 1940
-format.name$ -- 234
-if$ -- 4273
+cite$ -- 97
+duplicate$ -- 831
+empty$ -- 2015
+format.name$ -- 248
+if$ -- 4444
 int.to.chr$ -- 0
-int.to.str$ -- 90
-missing$ -- 93
-newline$ -- 459
-num.names$ -- 91
-pop$ -- 127
+int.to.str$ -- 93
+missing$ -- 97
+newline$ -- 471
+num.names$ -- 94
+pop$ -- 135
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 313
+skip$ -- 322
 stack$ -- 0
-substring$ -- 1486
-swap$ -- 93
+substring$ -- 1554
+swap$ -- 96
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 4
-while$ -- 196
-width$ -- 92
-write$ -- 998
-(There were 5 warnings)
+while$ -- 203
+width$ -- 95
+write$ -- 1027
+(There were 6 warnings)
