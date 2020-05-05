@@ -9,45 +9,45 @@ Warning--empty journal in cahn_free_nodate
 Warning--empty year in cahn_free_nodate
 Warning--empty publisher in l_landau_physique_1990
 Warning--empty journal in hasnaoui_casimir_2010
-You've used 93 entries,
+You've used 86 entries,
             1791 wiz_defined-function locations,
-            947 strings with 18667 characters,
-and the built_in function-call counts, 20756 in all, are:
-= -- 1836
-> -- 911
+            916 strings with 17650 characters,
+and the built_in function-call counts, 19273 in all, are:
+= -- 1699
+> -- 864
 < -- 1
-+ -- 341
-- -- 248
-* -- 1754
-:= -- 3374
-add.period$ -- 283
-call.type$ -- 93
-change.case$ -- 87
++ -- 322
+- -- 236
+* -- 1630
+:= -- 3138
+add.period$ -- 262
+call.type$ -- 86
+change.case$ -- 80
 chr.to.int$ -- 0
-cite$ -- 97
-duplicate$ -- 831
-empty$ -- 2015
-format.name$ -- 248
-if$ -- 4444
+cite$ -- 90
+duplicate$ -- 769
+empty$ -- 1861
+format.name$ -- 236
+if$ -- 4124
 int.to.chr$ -- 0
-int.to.str$ -- 93
-missing$ -- 97
-newline$ -- 471
-num.names$ -- 94
-pop$ -- 135
+int.to.str$ -- 86
+missing$ -- 90
+newline$ -- 436
+num.names$ -- 87
+pop$ -- 128
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 322
+skip$ -- 297
 stack$ -- 0
-substring$ -- 1554
-swap$ -- 96
+substring$ -- 1431
+swap$ -- 89
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 4
-while$ -- 203
-width$ -- 95
-write$ -- 1027
+while$ -- 187
+width$ -- 88
+write$ -- 950
 (There were 6 warnings)

@@ -174,65 +174,17 @@ David Lopes~Cardozo, Hugo Jacquin, and Peter C.~W. Holdsworth.
   protocol.
 \newblock {\em Physical Review B}, 90(18), November 2014.
 
-\bibitem{bray_interface_2001}
-Alan~J. Bray, Andrea Cavagna, and Rui D.~M. Travasso.
-\newblock Interface fluctuations, {Burgers} equations, and coarsening under
-  shear.
-\newblock {\em Physical Review E}, 65(1):016104, December 2001.
-
 \bibitem{edwards_surface_1982}
 S.~F. Edwards and D.~R. Wilkinson.
 \newblock The {Surface} {Statistics} of a {Granular} {Aggregate}.
 \newblock {\em Proceedings of the Royal Society of London. Series A,
   Mathematical and Physical Sciences}, 381(1780):17--31, 1982.
 
-\bibitem{kawasaki_diffusion_1966}
-Kyozi Kawasaki.
-\newblock Diffusion {Constants} near the {Critical} {Point} for
-  {Time}-{Dependent} {Ising} {Models}. {I}.
-\newblock {\em Physical Review}, 145(1):224--230, May 1966.
-
-\bibitem{kawasaki_correlation-function_1966}
-Kyozi Kawasaki.
-\newblock Correlation-{Function} {Approach} to the {Transport} {Coefficients}
-  near the {Critical} {Point}. {I}.
-\newblock {\em Physical Review}, 150(1):291--306, October 1966.
-
-\bibitem{villain_continuum_1991}
-J.~Villain.
-\newblock Continuum models of crystal growth from atomic beams with and without
-  desorption.
-\newblock {\em Journal de Physique I}, 1(1):19--42, January 1991.
-
 \bibitem{lai_kinetic_1991}
 Z.-W. Lai and S.~Das~Sarma.
 \newblock Kinetic growth with surface relaxation: {Continuum} versus atomistic
   models.
 \newblock {\em Physical Review Letters}, 66(18):2348--2351, May 1991.
-
-\bibitem{kim_conserved_1994}
-Yup Kim, D.~K. Park, and Jin~Min Kim.
-\newblock Conserved growth in a restricted solid-on-solid model.
-\newblock {\em Journal of Physics A: Mathematical and General}, 27(15):L533,
-  1994.
-
-\bibitem{assis_dynamic_2015}
-T.~A.~de Assis and F.~D. A.~Aar{\~a}o Reis.
-\newblock Dynamic scaling and temperature effects in thin film roughening.
-\newblock {\em Journal of Statistical Mechanics: Theory and Experiment},
-  2015(6):P06023, 2015.
-
-\bibitem{oliveira_maximal-_2008}
-T.~J. Oliveira and F.~D.~A. Aar{\~a}o~Reis.
-\newblock Maximal- and minimal-height distributions of fluctuating interfaces.
-\newblock {\em Physical Review E}, 77(4), April 2008.
-
-\bibitem{singha_renormalization_2016}
-Tapas Singha and Malay~K Nandy.
-\newblock A renormalization scheme and skewness of height fluctuations in (1 +
-  1)-dimensional {VLDS} dynamics.
-\newblock {\em Journal of Statistical Mechanics: Theory and Experiment},
-  2016(2):023205, February 2016.
 
 \bibitem{girot_conical_2019}
 A.~Girot, J.~Petit, R.~Saiseau, T.~Gu{\'e}rin, H.~Chraibi, U.~Delabre, and
@@ -246,12 +198,25 @@ Alan~J. Bray, Andrea Cavagna, and Rui D.~M. Travasso.
 \newblock Interface fluctuations under shear.
 \newblock {\em Physical Review E}, 64(1):012102, June 2001.
 
+\bibitem{bray_interface_2001}
+Alan~J. Bray, Andrea Cavagna, and Rui D.~M. Travasso.
+\newblock Interface fluctuations, {Burgers} equations, and coarsening under
+  shear.
+\newblock {\em Physical Review E}, 65(1):016104, December 2001.
+
 \bibitem{derks_suppression_2006}
 Didi Derks, Dirk G. A.~L. Aarts, Daniel Bonn, Henk N.~W. Lekkerkerker, and
   Arnout Imhof.
 \newblock Suppression of {Thermally} {Excited} {Capillary} {Waves} by {Shear}
   {Flow}.
 \newblock {\em Physical Review Letters}, 97(3), July 2006.
+
+\bibitem{bray_coarsening_2000}
+Alan~J Bray and Andrea Cavagna.
+\newblock Coarsening dynamics of a nonconserved field advected by a uniform
+  shear flow.
+\newblock {\em Journal of Physics A: Mathematical and General},
+  33(33):L305--L311, August 2000.
 
 \bibitem{leung_field_1986}
 Kwan-tai Leung and John~L. Cardy.
@@ -299,19 +264,6 @@ O.~Cohen and D.~Mukamel.
 E.~N.~M. Cirillo, G.~Gonnella, and G.~P. Saracco.
 \newblock Monte {Carlo} results for the {Ising} model with shear.
 \newblock {\em Physical Review E}, 72(2):026139, August 2005.
-
-\bibitem{berthier_nonequilibrium_2002}
-Ludovic Berthier and Jean-Louis Barrat.
-\newblock Nonequilibrium dynamics and fluctuation-dissipation relation in a
-  sheared fluid.
-\newblock {\em The Journal of Chemical Physics}, 116(14):6228--6242, April
-  2002.
-
-\bibitem{dean_effect_2020}
-David~S Dean, Paul Gersberg, and Peter C~W Holdsworth.
-\newblock The effect of driving on model {C} interfaces.
-\newblock {\em Journal of Statistical Mechanics: Theory and Experiment},
-  2020(3):033206, March 2020.
 
 \bibitem{talapov_magnetization_1996}
 A~L Talapov and H~W~J Bl{\"o}te.
@@ -404,6 +356,12 @@ Gr{\'e}gory Schehr and Satya~N. Majumdar.
 V.~Privman and N.~M. {\v S}vraki{\'c}.
 \newblock Transfer-{Matrix} {Spectrum} for {Systems} with {Interfaces}.
 \newblock {\em Physical Review Letters}, 62(6):633--636, February 1989.
+
+\bibitem{kim_conserved_1994}
+Yup Kim, D.~K. Park, and Jin~Min Kim.
+\newblock Conserved growth in a restricted solid-on-solid model.
+\newblock {\em Journal of Physics A: Mathematical and General}, 27(15):L533,
+  1994.
 
 \bibitem{vaysburd_critical_1995}
 I.~Vaysburd.

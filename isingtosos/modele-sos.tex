@@ -29,11 +29,11 @@ où $< ij >$ dénotent deux premiers voisins, $J_{ij}$ l'énergie d'interaction 
 
 En faisant la transformation\cite{goldenfeld_lectures_2018} $n_i =  \frac{\sigma_i +1}{2}$ afin que $n_i(\sigma_i = 1) = 1$ et $n_i(\sigma_i = -1) = 0$, on obtient l'Hamiltonien
 \begin{equation}
-	\mH =  - \sum_{\langle i j >}  J_{ij} \left( 4 n_i n_j -2 ( n_i+n_j) + 1 \right)+ \sum_{\langle i j >}  J_{ij} \frac{V(\sigma_i)+V(\sigma_j)}{2}  
+	\mH =  - \sum_{< i j >}  J_{ij} \left( 4 n_i n_j -2 ( n_i+n_j) + 1 \right)+ \sum_{< i j >}  J_{ij} \frac{V(\sigma_i)+V(\sigma_j)}{2}  
 \end{equation}
-où le terme constant $\sum_{\langle i j >}  J_{ij}$ ne modifie la fonction de partition $\mZ$ que d'une constante. On définit alors 
+où le terme constant $\sum_{< i j >}  J_{ij}$ ne modifie la fonction de partition $\mZ$ que d'une constante. On définit alors 
 \begin{equation}
-	\mH_{LG} =  - 4 \sum_{\langle i j >}  J_{ij}  n_i n_j  + 2 \sum_{\langle i j >}  J_{ij}  (n_i+n_j) + \sum_{\langle i j >}  J_{ij} \frac{V(\sigma_i)+V(\sigma_j)}{2}  
+	\mH_{LG} =  - 4 \sum_{< i j >}  J_{ij}  n_i n_j  + 2 \sum_{< i j >}  J_{ij}  (n_i+n_j) + \sum_{< i j >}  J_{ij} \frac{V(\sigma_i)+V(\sigma_j)}{2}  
 \end{equation}
 Le deuxième terme s'identifie à la présence d'un potentiel chimique pour les particules liquide-gaz. Une phase magnétique positive dans le modèle d'Ising s'apparente dès lors à un état de haute densité (un liquide), tandis qu'une phase négative est considérée comme une phase de basse densité, c'est-à-dire un gaz.
 Ce modèle représente également un mélange binaire entre deux types de particules $A$ et $B$ comme par exemple un polymère dans un solvant, les particules identiques s'attirent tandis que les particules d'un type différent se repoussent. 
@@ -106,7 +106,7 @@ Par la suite, puisque nous désironts étudier le modèle SOS et non le comparer
   \section{Matrice de Transfert}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-	De manière plus générale, l'Hamiltonien d'un système avec des interactions entre les particules peut se réécrire comme $\mH = \sum_{\langle ij >} H(i,j)$ avec
+	De manière plus générale, l'Hamiltonien d'un système avec des interactions entre les particules peut se réécrire comme $\mH = \sum_{< ij >} H(i,j)$ avec
 \begin{align*}
   H(h_i,h_{i+1}) = f(h_i,h_{i+1}) + V(h_i,h_{i+1}) 
 \end{align*}
@@ -126,7 +126,7 @@ La matrice
 est appelée matrice de transfert. Puisque le système est périodique (c'est-à-dire que $h_{L+1} = h_1$),  la matrice est périodique également, c'est-à-dire que $T(h_L,h_{L+1}) = T(h_L,h_1)$ \cite{pearce_exact_1989}. Elle est également symétrique, ce qui implique qu'elle est diagonalisable dans la base des vecteurs propres $|\lambda >$ de valeur propre $\lambda$. On dénote par $\lambda_0$ la plus grande valeur propre de $T$, par $\lambda_1$ la deuxième plus grande valeur propre et ainsi de suite.
 Ainsi on peut diagonaliser la fonction de partition par la trace de la matrice de transfert \cite{abraham_transfer_1973}
 \begin{align}
-  Z = \sum_{h_1 h_2 ... h_L} \prod_{i} T(h_i,h_{i+i}) = Tr T^L  = \sum_\lambda \langle\lambda | T^L | \lambda> = \sum_\lambda \lambda^L
+  Z = \sum_{h_1 h_2 ... h_L} \prod_{i} T(h_i,h_{i+i}) = Tr T^L  = \sum_\lambda <\lambda | T^L | \lambda> = \sum_\lambda \lambda^L
   \label{partition-trace-lambda}
 \end{align}
 
@@ -154,22 +154,22 @@ En introduisant également la matrice des hauteurs $\tilde{M} |h> = h |h> i$, on
 	\end{align}
 	\item La densité de probabilité qu'un site se trouve à la hauteur $h$ :
 	\begin{align}
-		p(h) = \frac{1}{Z} \sum_\lambda \lambda^L \langle\lambda | h >^2 \simeq \langle \lambda_0 | h >^2
+		p(h) = \frac{1}{Z} \sum_\lambda \lambda^L <\lambda | h >^2 \simeq < \lambda_0 | h >^2
 	\end{align}
 	\item La magnétisation moyenne :
 	\begin{align}
-		M = \langle h > = \frac{1}{Z} \sum_\lambda \lambda^L \langle \lambda | \tilde{M} | \lambda \rangle \simeq \langle \lambda_0 | \tilde{M} | \lambda_0 > 
+		M = < h > = \frac{1}{Z} \sum_\lambda \lambda^L < \lambda | \tilde{M} | \lambda > \simeq < \lambda_0 | \tilde{M} | \lambda_0 > 
 		\label{tm-magnetisation}
 	\end{align}
 	\item La variance des hauteurs :
 	\begin{align}
-		\sigma = \langle (h - \langle h >)^2 > = \frac{1}{Z} \sum_\lambda \lambda^L \langle \lambda | \tilde{M}^2 | \lambda \rangle - \langle \lambda | \tilde{M}| \lambda \rangle^2  \simeq  \langle \lambda_0 | \tilde{M}^2 | \lambda_0 >
+		\sigma^2 = < (h - < h >)^2 > = \frac{1}{Z} \sum_\lambda \lambda^L < \lambda | \tilde{M}^2 | \lambda > - < \lambda | \tilde{M}| \lambda >^2  \simeq  < \lambda_0 | \tilde{M}^2 | \lambda_0 > - < \lambda_0 | \tilde{M} | \lambda_0 >^2
 	\end{align}
 	\item La fonction de corrélation :
 	\begin{align}
-	    C(r) &= \langle h_i h_{i+r} \rangle - M^2 = \frac{1}{Z} \sum_{\lambda \neq \lambda_0} \langle \lambda_0 | M | \lambda \rangle \langle \lambda | M | \lambda_0 \rangle \left( \frac{\lambda}{\lambda_0} \right)^r  
+	    C(r) &= < h_i h_{i+r} > - M^2 = \frac{1}{Z} \sum_{\lambda \neq \lambda_0} < \lambda_0 | M | \lambda > < \lambda | M | \lambda_0 > \left( \frac{\lambda}{\lambda_0} \right)^r  
 	    \nn
-	    &\simeq \langle \lambda_0 | M | \lambda_1 \rangle \langle \lambda_1 | M | \lambda_0 \rangle \left( \frac{\lambda_1}{\lambda_0} \right)^r
+	    &\simeq < \lambda_0 | M | \lambda_1 > < \lambda_1 | M | \lambda_0 > \left( \frac{\lambda_1}{\lambda_0} \right)^r
 	\end{align}
 	\item La longueur de corrélation :
 	\begin{align}

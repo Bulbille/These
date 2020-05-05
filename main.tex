@@ -55,12 +55,18 @@
 \newcommand{\mx}{{\bf x}} %pour les vecteurs en gras
 \newcommand{\my}{{\bf y}} %pour les vecteurs en gras
 \newcommand{\mq}{{\bf q}}
+\newcommand{\mr}{{\bf r}}
+\newcommand{\mv}{{\bf v}}
 \DeclareMathOperator{\sgn}{sgn}
 % Les > et < se comportent normalement si c'est pour supérieur ou inférieur, sinon se comportent comme \langle
 \mathchardef\less=\mathcode`<
 \mathchardef\greater=\mathcode`>
 \DeclareMathDelimiter{<}{\mathopen}{symbols}{"68}{largesymbols}{"0A}
 \DeclareMathDelimiter{>}{\mathclose}{symbols}{"69}{largesymbols}{"0B}
+
+%% Ne pas casser les équations inline $ $ 
+\relpenalty=10000
+\binoppenalty=10000
 
 %%%%%%% Début du document %%%%%
 \begin{document}

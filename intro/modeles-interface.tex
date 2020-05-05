@@ -1,4 +1,4 @@
-\chapter{Rappels théoriques sur les interfaces}
+\chapter{Équations dynamiques des systèmes statistiques}
 
 Dans ce chapitre nous analysons la dynamique des systèmes statistiques. L'analyse nous permettra de comprendre comment les transitions de phase, notament certains systèmes subissant une séparation de phase à la transition, se comportent de manière dynamique. L'exemple le plus connu est le modèle d'Ising en absence de champ magnétique, le paramètre d'ordre de la transition étant la magnétisation totale du système. Dans la phase haute température, le système est homogène et sa magnétisation est nulle. En dessous de la température critique, dans le cas où le paramètre d'ordre est conservé (par exemple une dynamique de Kawasaki ou modèle B), le système va localement se séparer en deux phases de magnétisation moyenne opposée séparées par une interface minimisant l'énergie de surface entre les deux phases. 
 
@@ -14,9 +14,9 @@ Les configurations d'équilibre possibles proviennent du compromis entre la mini
     \label{clusterization}
 \end{figure}
 
-La mesure des observables nécessite une connaissance parfaite de la dérivée de la fonction de partition $\mZ$, et donc d'explorer l'espace des phases des configurations du système. Les appareils de mesure possèdent tous une résolution spatiale et temporelle, c'est-à-dire qu'ils mesurent l'état moyen de toutes les particules dans un volume et dans un laps de temps donné. Plus la résolution des appareils de mesure est bonne, et plus la mesure des observables dérivées de la fonction de partition est précise. Si $\Phi(\mx,t)$ est le champ réel de l'observable du système, alors l'appareil, possédant une précision dans le temps et l'espace de $(2dt,2dx,2dy,2dz)$ mesure le champ
+La mesure des observables nécessite une connaissance parfaite de la dérivée de la fonction de partition $\mZ$, et donc d'explorer l'espace des phases des configurations du système. Les appareils de mesure possèdent tous une résolution spatiale et temporelle, c'est-à-dire qu'ils mesurent l'état moyen de toutes les particules dans un volume et dans un laps de temps donné. Plus la résolution des appareils de mesure est bonne, et plus la mesure des observables dérivées de la fonction de partition est précise. Si $\Phi(\mx,t)$ est le champ réel de l'observable du système, alors l'appareil, possédant une précision dans le temps et l'espace de $(dt,2dx,2dy,2dz)$ mesure le champ
 \begin{align}
-    \phi(\mx,t) = \int_{t-dt}^{t+dt} dt' \int_{x-dx}^{x+dx} dx' \int_{y-dy}^{y+dy} dy' \int_{z-dz}^{z+dz} dz' \Phi(x,y,z,t)
+    \phi(\mx,t) = \frac{1}{8~ dt~ dx~ dy~ dz} \int_{t-dt}^{t} dt' \int_{x-dx}^{x+dx} dx' \int_{y-dy}^{y+dy} dy' \int_{z-dz}^{z+dz} dz' \Phi(x,y,z,t)
 \end{align}
 
 
@@ -94,7 +94,7 @@ L'approximation du champ moyen devient maintenant
 \end{align} 
 où $\phi_{MF}$ est la solution de champ moyen qui minimise $H$, c'est-à-dire 
 \begin{align}
-    \frac{\delta H}{\delta\phi({\bf x})} = 0
+    \frac{\delta H}{\delta\phi(\mx)} = 0
     \label{equi-hamil}
 \end{align}
 
@@ -330,16 +330,16 @@ où l'on a définit $\omega_{ex}$ comme étant l'énergie libre d'excès dû au 
     \gamma \simeq t^{\frac{d-1}{y_1}} = \xi^{-(d-1)}
     \label{temp-xi}
 \end{align}
-En posant $b^{y_1}t=1$ dans la version renormalisée de l'équation \ref{renorma_singu}, on obtient 
+Ce découplage entre un terme de surface et un terme d'excès de bulk n'est strictement valide que dans la limite thermodynamique. Cependant une telle décomposition pour $L$ finie nous permet d'étudier phénomélogiquement le système. Pour $L$ fini, le découplage n'est plus valide, mais on trouve, en posant $b^{y_1}t=1$ dans la version renormalisée de l'équation \ref{renorma_singu}, que
 \begin{align}
     \omega_{na}(t,h,L^{-1}) = \frac{1}{L^d} \Theta(\frac{L}{\xi},\xi^{y_2}h)
     \label{theta-universel}
 \end{align}
-où la fonction $\Theta$ est une fonction analytique appelée fonction d'échelle universelle. Le calcul de cette fonction universelle a premièrement été fait part Hendrik Casimir \cite{h_b_g_casimir_attraction_1948} pour deux plaques conductrices dans le vide, puis par Gilles de Gennes et Fischer dans le cas des systèmes critiques {\color{red}obtenir article Fisher+Gennes, ref Cardozo pas téléchargeable}. Sur l'étude de cette fonction universelle, se référer à \cite{gambassi_critical_2009,cardozo_finite_2015}.
+où la fonction $\Theta$ est une fonction analytique appelée fonction d'échelle universelle. Le calcul de cette fonction universelle a premièrement été fait part Hendrik Casimir \cite{h_b_g_casimir_attraction_1948} pour deux plaques conductrices dans le vide, puis par De Gennes et Fisher dans le cas des systèmes critiques \cite{gambassi_casimir_2009}. Sur l'étude de cette fonction universelle, se référer à \cite{gambassi_critical_2009,cardozo_finite_2015}.
 Il est possible que plusieurs systèmes physiques différents partagent la même fonction d'échelle universelle mais avec des amplitudes différentes. Ces systèmes possèdent donc le même comportement proche du point. On dit que ces systèmes appartiennent à la même classe d'universalité.
 En mettant ensemble les équations \ref{decomposition-free-energie} et \ref{decompostion-singu}, on trouve que l'énergie libre totale du système, en présence de conditions aux bords qui contraignent les fluctuations, est
 \begin{align}
-    \Omega(t,h,L^{-1}) &= A L \left( \omega_b(t,h) +  \omega_{ex}(t,h) \right) + A w_s(t,h) 
+    \Omega(t,h,L^{-1}) &= A L \left( \omega_b(t,h) +  \omega_{ex}(t,h,L) \right) + A w_s(t,h) 
     \label{full-decomposition}
 \end{align}
 Bien sûr, dans la limite où $L\to \infty$, le terme d'excès $\omega_{ex}(t,h,L^{-1}) \to 0$, puisque la contrainte sur les modes de fluctuations est relâchée. 
@@ -371,6 +371,8 @@ Si l'on trouve la force de Casimir, il est alors possible de remonter à la fonc
 
 La détection expérimentale de ce phénomène se fait traditionnellement dans des fluides binaires par \textit{Total Internal Reflection Microscopy} (TIRM) \cite{fukuto_critical_2005,hertlein_direct_2008,gambassi_critical_2009,edison_critical_2015-1}. La méthode consiste à mesurer le potentiel d'une sphère flottant sur un fluide binaire critique reposant sur une plaque. Cette sphère et cette plaque sont traitées chimiquement afin de favoriser l'une des deux phases à leu voisinage. Ainsi il est possible de créer des conditions aux bords $(++)$, $(+-)$ ou $(--)$ qui modifient la forme de la fonction universelle \ref{theta-universel}. À l'inverse, il est possible de mesurer la force de Casimir \cite{nguyen_controlling_2013} afin d'étudier les transitions de phases colloïdales.
 
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%
     \subsection{Intégration sur le paramètre d'ordre}
 %%%%%%%%%%%%%%%%%%%%%%%%%%    
@@ -400,89 +402,271 @@ La différence \ref{integration-cardozo} contient donc toute l'information néce
     dL \frac{\partial \Omega(t,h,L)}{\partial L} = \Delta \Omega(t,h,L)-\Delta \Omega(t,h,L-dL)
 \end{align}
 
+%%%%%%%%%%%%%%%%%%%%%%
     \section{Modèles d'interface}
-
-Dans la réalité, la phase désordonnée est extrêmement inhomogène, avec des bulles ou des digitations qui empêchent une description dynamique aisée de l'interface. Si l'on désire étudier l'interface de ces bulles ou digitations, où localement l'interface est bien définie par une fonction d'une seule variable, l'approche du champ moyen suffit. On suppose dans ce cas qu'il n'y a ni digitation ni bulles d'évaporation. Dans cette approximation, l'interface est parfaitement définie en un point et non dans un profil comme dans l'équation \ref{profil-interface-glauber}. Tous les points du champ se trouvant en bas de l'interface prennent une unique valeur strictement différente de tous les points du champ au-dessus de l'interface. 
-
-Sans perte de généralité, nous pouvons séparer les variables spatiales par $x$ pour toutes les coordonnées parallèles à l'interface et par $z$ la coordonnée transverse. Cela se traduit par
+%%%%%%%%%%%%%%%%%%%%%%
+La phase désordonnée, où cohabitent la phase 1 et la phase 2, est inhomogène, avec des gouttes ou des digitations. Afin d'étudier les fluctuations au niveau des interfaces entre les phases, nous mettons au point un modèle effectif d'interfaces. Le modèle le plus simple est de considérer que l'interface est définie par une hauteur $h(\mr)$, avec $\mx := (\mr,z)$. On suppose également que $h(\mx)=h(\mr)$.  
+On va maintenant poser les équations de la dynamique de la hauteur de l'interface à partir des équations de la théorie statistique des champs. On suppose que les phases sont séparées selon l'axe $z$ et que la hauteur moyenne de l'interface se trouve à $z=0$. L'approximation de l'interface nous permet alors de poser le champ $\phi$ comme étant égal à 
 \begin{align}
-    \phi(\mx,z) = f(z-h(\mx))
-    \label{capillary-wave-theory}
+    \phi(\mr,z,t) = f(z-h(\mr,t))
+    \label{hans}
 \end{align}
-où $f(a \greater 0) = \phi_1$ et $f(a \less 0) = \phi_2$. Notre système est maintenant complètement défini par l'interface $h(x)$ d'Hamiltonien
-{\color{red} $\phi$ miminise champ moyen }
+où $f(z)=\phi_K(z)$ est la solution kink du champ moyen \ref{kink}, et $f(z \to -\infty) = \phi_1$ et $f(z \to -\infty) = \phi_2$
+L'Hamiltonien considérer est l'Hamiltonien de Landau-Ginzburg \ref{hamil-mean-field}
 \begin{align}
-    H = \int d^d x \frac{\sigma}{2} ({\boldsymbol \nabla} h(\mx))^2 + V(h(\mx))
-    \label{hamil-cwt}
+    H[\phi] = \int d \mx  \frac{\kappa}{2}[{\boldsymbol \nabla} \phi]^2 + V(\phi)
 \end{align}
-{\color{red} expliquer développement pour surface dans formule de Mange}
-
-où le premier terme est l'excès d'énergie par rapport à une interface plane, et le potentiel $V$ fait référence au champ externe \ref{champ-externe}. 
-Une interface se caractérise par sa hauteur moyenne $<h(t)>$ de l'interface dans l'espace et par sa fonction de corrélation parallèle à l'interface décrivant les modes de fluctuation de l'interface
+D'un autre côté, l'Hamiltonien d'une interface libre décrit l'énergie de la surface totale $A$ uniquement, c'est-à-dire que l'on peut trouver un Hamiltonien effectif
 \begin{align}
-    C_\parallel(r,t) = <h(\mx,t)h(\mx+r,t)>_x - <h(0,t)>^2 = \sum_i A_i(\frac{r}{\xi_i}) 
+    H[h] = \sigma \int_A d \mr\sqrt{1+[\nabla h]^2}
 \end{align}
-où les $A_i$ sont des fonctions à décroissance exponentielle. Le calcul de ces fonctions sera donnée dans la section \ref{sec_laser}. 
-L'épaisseur de l'interface est donnée par $\omega(t) = \sqrt{C_\parallel(0,t)} = \sqrt{<h(t)^2> - <h(t)>^2}$. 
-
-    \subsection{Paramètre d'ordre non conservé}
-
-Supposons une surface à laquelle viennent s'agréger des particules provenant d'un réservoir afin de créer un dépot. L'interface est alors définie par la hauteur de l'aggrégat par rapport à la surface de dépôt.
-
-En partant de \ref{MA} et en insérant \ref{capillary-wave-theory} avec le changement de variable $u= z-h$, on a \cite{bray_interface_2001}
+où l'integrale est fait sur tout le plan perpendiculaire à l'axe $z$ d'aire $A$. Lorsque les fluctuations de l'interface sont faibles, le développement limité au second ordre nous donne
 \begin{align}
-    \frac{\partial h}{\partial t} f'(u) &= D {\boldsymbol \nabla}^2 h f'(u) - V'(f) + \eta(\mx,u+h(\mx,t),t)
+    H[h]= A\sigma +\frac{\sigma}{2} \int_A d \mr \ [\nabla h]^2
 \end{align}
-avec $\eta(x,t)$ un bruit blanc gaussien. En multipliant les deux côtés par $f'(u)$ et en intégrant de $-\infty$ à $+\infty$, puisque le terme $ \int_{-\infty}^\infty V'(f) f'(u) du = 0$, on obtient l'équation d'Edwards-Wilkinson \cite{edwards_surface_1982} 
+Le premier terme est indépendant de la hauteur. On peut donc réécrire l'Hamiltonien sous la forme d'un Hamiltonien effectif
 \begin{align}
-     \frac{\partial h}{\partial t} = \nu + {\boldsymbol \nabla}^2 h +  \tilde{\eta}(\mx,t)
-    \label{edwards-wilkinson}
-\end{align}
-{\color{red} ne pas mettre $\nu$, on s'emballe ??? gné ? voir notes de David. Éliminer la section, rmeplacer avec la dérivation dans les notes}
-où $\nu$ désigne le flux total, et $\tilde{\eta}(x,t)$  un bruit blanc de moyenne nulle défini par
-\begin{align}
-    \tilde{\eta}(\mx,t) = - \frac{1}{\sigma} \int du f'(u) \eta(\mx,u+h(\mx,t),t)
-\end{align}
-et de corrélation 
-\begin{align}
-    <\tilde{\eta}(\mx,t)\tilde{\eta}(\mx',t')> = \frac{2 D}{\sigma} T\delta(\mx-\mx')\delta(t-t')
-\end{align}
-avec $\sigma$ la tension superficielle définie en \ref{tension-superficielle}, et $D$ le bruit thermique.
-Ici $D+ \sqrt{2 D T} \tilde{\eta}(x,t)$ est le flux de particules s'aggrégeant en fonction du temps et $D {\boldsymbol \nabla}^2 h$ dépend de la forme de l'interface, favorisant ou non le dépôt de particules à certains endroits.
-La hauteur moyenne de l'interface varie donc comme $<h(t)> = \nu t$. En se positionant dans le référentiel de l'interface via la transformation $h \rightarrow h + \nu t$, on obtient
-\begin{align}
-     \frac{\partial h}{\partial t} =    {\boldsymbol \nabla}^2 h +  \tilde{\eta}(\mx,t)
-    \label{edwards-wilkinson-conesrved}
+    H_{eff} [h]= \frac{\sigma}{2} \int_A d \mr\  [\nabla h]^2
+    \label{heff}
 \end{align}
 
-    \subsection{Paramètre d'ordre conservé}
 
-Si l'on se place dans le référentiel du centre de l'interface, le'équation d'Edwards-Wilkinson \ref{edwards-wilkinson-conesrved} conserve le paramètre d'ordre en moyenne. Néanmoins, la transformation $h \rightarrow h + Dt$ ne prend pas en compte les fluctuations thermiques qui viennent perturber l'interface, ce qui fait que $h(t) \neq cte$. L'astuce vient ici de \cite{kawasaki_diffusion_1966,kawasaki_correlation-function_1966}, où l'on reprend l'équation de Cahn-Hilliard-Cook \ref{MB} pour les interfaces
+%%%%%%%%%%%%%%%%%
+    \subsection{Modèle A}
+%%%%%%%%%%%%%%%%%
+Pou rappel, l'équation de la dynamiqu du champ dans le modèle A s'écrit
 \begin{align}
-    \frac{\partial h}{\partial t} =  {\boldsymbol \nabla}^2 \frac{\delta H}{\delta h} +  \tilde{\eta}(x,t)
+    \frac{\partial \phi(\mx)}{\partial t}= -\alpha \frac{\delta H}{\delta \phi(\mx)} + \eta(\mx,t)
+    \label{ma2}
 \end{align}
-{\color{red}$ H =\int d \mx \frac{\sigma ({\boldsymbol \nabla} h)^2}{2} +V(h(x) $}
-{\color{red} version modèle de KPZ, pas le moême modèle. Enlever ${\boldsymbol \nabla}^2 ({\boldsymbol \nabla} h)^2$}
-qui nous donne l'équation Villain-Lai-Das Sarma\cite{villain_continuum_1991,lai_kinetic_1991}
+En utilisant le fait que 
+\begin{align*}
+\frac{\partial f(z-h(\mr,t))}{\partial t}&= -f'(z-h(\mr,t))\frac{\partial h(\mr,t)}{\partial t} \nn
+\nabla f(z-h(\mr,t))&= [{\bf e}_z-\nabla h(\mr,t)]f'(z-h(\mr,t))  \nn
+\nabla^2 f(z-h(\mr,t))&= f''(z-h(\mr,t))- \nabla^2 h(\mr,t)f'(z-h(\mr,t))+ [\nabla h(\mr,t)]^2 
+f''(z-h(\mr,t))
+\end{align*}
+on introduit l'approximation \ref{hans} dans l'équation de champ moyen afin de trouver
 \begin{align}
-    \frac{\partial h}{\partial t} = - {\boldsymbol \nabla}^4 h + \lambda {\boldsymbol \nabla}^2 ({\boldsymbol \nabla} h) ^2 +  \tilde{\eta}(x,t)
+    -f'(z-h(\mr,t)) \frac{\partial h(\mr,t)}{\partial t} =& 
+    \alpha\kappa\times \left[f''(z-h(\mr,t))- \nabla^2 h(\mr,t)f'(z-h(\mr,t))+ [\nabla h(\mr,t)]^2 f''(z-h(\mr,t))\right] \nn
+    &- \alpha V'(f'(z-h(\mr,t))) + \eta(\mr,z,t).
 \end{align}
-qui a fait l'objet de nombreuses études\cite{kim_conserved_1994,assis_dynamic_2015,oliveira_maximal-_2008,singha_renormalization_2016}.
-L'intérêt d'un tel système est qu'il est contraint à une dynamique locale qui permet d'obtenir un système hors-équilibre. 
-
-    \subsection{Interface hors équilibre}
-
-Les systèmes à l'équilibre ont la particularité que les états ont une probabilité en accord avec la distribution de Gibbs-Boltzmann \ref{eqdis}, c'est-à-dire que le courant \ref{courant} est nul. La manière la plus simple de mettre le système hors-équilibre est donc d'induire un courant dans le champ $\phi(\mx,t)$. L'évolution d'un système depuis une condition initiale vers ses configurations d'équilibre est le moyen le plus simple d'étudier les conditions hors équilibre. On retrouve également dans le régime stationnaire beaucoup de systèmes hors-équilibre. expérimentalement, les colloïdes sédimentant dans un champ gravitationel induisent un écoulement hors-équilibre. Il est également possible d'induire un flux sur des particules chargées dans un champ électrique via la pression de radiation exercée par un laser ou par un cisaillement dans un liquide visqueux\cite{girot_conical_2019}. Cette dynamique étant locale, elle ne peut exister que si le paramètre d'ordre est conservé. L'équation générale d'un système d'interface avec un cisaillement est\cite{bray_interface_2001-1,bray_interface_2001}
+En multipliant de part et d'autre l'équation par $f'(z-h(\mr,t))$ et une introduisant le changement de variable $\zeta=z-h(\mr,t)$, on intègre $\zeta$ sur $[-\infty,\infty]$. 
+Puisuque $f(\zeta \to \pm \infty)=\pm \phi_c$ et que $V(\phi_c)=V(-\phi_c)=0$, on obtient deux identités supplémentaires
 \begin{align}
-     \frac{\partial h}{\partial t} + v {\boldsymbol \nabla} h =  \mathcal{L} h +  \eta(x,t)
-     \label{eq-cisaillement}
+    \int_{-\infty}^\infty d\zeta f'(\zeta)f''(\zeta) &= [\frac{1}{2}f'^2(\zeta)]_{-\infty}^\infty =0\\
+    \int_{-\infty}^\infty d\zeta f'(\zeta) V'(f) &= \int_{-\infty}^\infty d\zeta\frac{d V(f)}{d\zeta}= [V(f(\zeta))]_{-\infty}^\infty=0
+\end{align} 
+Les termes non nuls dans l'équation \ref{ma2} sont donc
+\begin{align}
+    -\int_{-\infty}^\infty f'^2(\zeta)d\zeta\ \frac{\partial h(\mr,t)}{\partial t}
+    = -\alpha\int_{-\infty}^\infty f'^2(\zeta)d\zeta \ \kappa \nabla^2 h(\mr,t) + \int_{-\infty}^\infty d\zeta \eta(\mr,\zeta+ h(\mr,t))f'(\zeta)
 \end{align}
-{\color{red} $v {\boldsymbol \nabla} h$ are vectors scalar product ${\boldsymbol \nabla} (vh)$ vecteur advection du à un écoulement. Mettre la formule pour un cisaillement, article Bray. Dire que champ de vitesse est constant pour faire transfo galiliéenne, écrire qu'est-ce que c'est que le cisaillement. 
-Champ de cisaillement c'est à revoir}
-où l'opérateur $\mathcal{L}$ est associé au modèle A ou B, et le terme $v {\boldsymbol \nabla} h$ est un terme de d'advection dû au flux produit par le cisaillement. 
+En utilisant l'estimation de Cahn-Hilliard pour la tension superficielle \ref{tension-superficielle}, on obtient 
+\begin{align}
+    \frac{\sigma}{\kappa} \frac{\partial h(\mr,t)}{\partial t} = \alpha\sigma \nabla^2 h(\mr,t) +\xi(\mr,t),
+\end{align}
+avec le bruit  
+\begin{align}
+    \xi(\mr,t)= \int_{-\infty}^\infty d\zeta \eta(\mr,\zeta+ h(\mr,t))f'(\zeta)
+\end{align}
+Ce bruit est de moyenne nulle et sa fonction de corrélation est
+\begin{align}
+    < \xi(\mr,t)\xi(\mr',t') > &=2\alpha T\delta(t-t')\delta(\mr-\mr')\int_{-\infty}^\infty d\zeta d\zeta' \delta(\zeta-\zeta')f'(\zeta)f'(\zeta')\nn
+    &= 2\alpha T\delta(t-t')\delta(\mr-\mr')\int_{-\infty}^\infty d\zeta f'^2(\zeta) \nn
+    &= \frac{2\alpha T\sigma}{\kappa}\delta(t-t')\delta(\mr-\mr')
+\end{align}
+On obtient 
+\begin{align}
+    \frac{\partial h(\mr,t)}{\partial t}= \kappa\alpha \nabla^2 h(\mr,t) + \eta(\mr,t)
+\end{align}
+où 
+\begin{align}
+    < \eta(\mr,t)\eta(\mr',t') > = \frac{2\alpha T\kappa}{\sigma}\delta(t-t')\delta(\mr-\mr')
+\end{align}
+En posant $\alpha' = \frac{\kappa\alpha}{\sigma}$, on obtient finalement que 
+\begin{align}
+    \frac{\partial h(\mr,t)}{\partial t}= \alpha' \sigma\nabla^2 h(\mr,t) + \eta(\mr,t).
+\end{align}
+Cette équation est la même forme que l'équation du modèle A pour la hauteur de l'interface. Le potentiel $V(\phi)$ étant responsable de la séparation de phase uniquement, il est normal de ne pas le retrouver dans l'équation finale, où l'on étudie un modèle d'interface. En utilisant l'Hamiltonien effectif \ref{heff}, on obtient l'équation d'Edwards-Wilkinson \cite{edwards_surface_1982}
+\begin{align}
+    \frac{\partial h(\mr,t)}{\partial t}= -\alpha' \frac{\delta H_{eff}[h]}{\delta h(\mr)} + \eta(\mr,t),
+    \label{ew}
+\end{align}
+avec
+\begin{align}
+    < \eta(\mr,t)\eta(\mr',t')>= 2T\alpha'\delta(t-t').
+\end{align}
+Cette équation est consistante avec l'idée de décrire la surface de l'interface en termes d'une hauteur variable avec une énergie donnée par une tension de surface.
+%
+%The equation \eqref{ew} is known as the Edwards-Wilkinson equation. We can use this equation to determine how the domains of a coarsening systems grow at low temperatures. To do this we ignore the noise term and assume that at $t=0$ the correlations of the height are short range so
+%\begin{align}
+%C(\mr-\mr',0)= < h(\mr,0)h(\mr',0)> =C_0 \delta(\mr-\mr').
+%\end{align}
+%In Fourier space the noiseless Edwards-Wilkinson equation becomes
+%\begin{align}
+%\frac{\partial\tilde h({\bf k},t)}{\partial t} = -\alpha'\sigma \tilde h({\bf k},t) ,
+%\end{align}
+%and so we find
+%\begin{align}
+%\tilde h({\bf k},t) = h({\bf k},0)\exp(-\alpha'\sigma{\bf k}^2 t).
+%\end{align}
+%We thus find 
+%\begin{align}
+%< \tilde h({\bf k},t)\tilde h({\bf k}',t')> = < h({\bf k},0)h({\bf k}',0)> \exp(-\alpha'\sigma[k^2+k'^2] t).
+%\end{align}
+%Now recall that if 
+%\begin{align}
+%<  h(\mr,t) h(\mr',t')> =C(\mr-\mr',t)
+%\end{align}
+%then
+%\begin{align}
+%< \tilde h({\bf k},t)\tilde h({\bf k}',t')>= (2\pi)^d \delta({\bf k}+{\bf k}') \tilde C({\bf k},t),
+%\end{align}
+%where 
+%\begin{align}
+%\tilde C({\bf k},t)= \int d\mr \exp(-i{\bf k}\cdot \mr)C(\mr,t),
+%\end{align}
+%is the Fourier transform of the correlation function which is a function of a single position due to invariance by translation in space, and $d$ is the dimension of space (so here $d=2$ for a surface in 3d space and $d=1$ for a surface in a 2d space). Putting all this together gives
+%\begin{align}
+%\tilde C({\bf k},t)= C_0 \exp(-2\alpha'\sigma k^2 t).
+%\end{align}
+%Inverting the Fourier transform gives
+%\begin{align}
+%C(\mr,t)= \frac{C_0}{(8\pi \alpha'\sigma t)^{\frac{d}{2}}} \exp(-\frac{\mr^2}{16\pi \alpha'\sigma t}).
+%\end{align}
+%From this we see that if $C(\mr,t)\sim g(\frac{\mr}{\ell(t)})r(t)$ then the length scale $\ell(t)\sim t^{\frac{1}{2}}$, this agrees with what we found in the Ising model under Glauber dynamics, where the growth exponent is also given by $z=\frac{1}{2}$.
+%\\
+%%%%%%%%%%%%%%%%%
+    \subsection{Modèle B}
+%%%%%%%%%%%%%%%%%
+On propose de refaire le même calcul d'interface avec l'équation du Modèle B \ref{MB} :
+\begin{align}
+    -\nabla^{-2} \frac{\partial\phi(\mx,t)}{\partial t} = -D \frac{\delta H}{\delta \phi(\mx)}+ \theta(\mx,t)
+\end{align}
+où $-\nabla^{-2}$ représente la fonction de Green $G$ qui obéit à
+\begin{align}
+    \nabla^2 G(\mx-{\bf x'}) = -\delta(\mx-\mx')
+\end{align}
+et
+\begin{align}
+    \theta(\mx,t)=-\nabla^{-2}\eta(\mx,t)= \int d\mx'G(\mx-{\bf x'})\eta(\mx,t)
+\end{align}
+La fonction de corrélation de ce bruit est donné par 
+\begin{align}
+< \theta(\mx,t)\theta({\bf y},t')> &=-2DT\delta(t-t') \int d\mx'G(\mx-{\bf x'})d{\bf y}'G({\bf y}-{\bf y'})\nabla^2\delta(\mx'-{\bf y}') \nn
+&= -2DT\delta(t-t') \int d\mx'G(\mx-{\bf x'})d{\bf y}'\nabla^2G({\bf y}-{\bf y'})\delta(\mx'-{\bf y}') \nn
+&= 2DT\delta(t-t') G(\mx-{\bf y}).
+\end{align}
+Comme précédement, on multiplie l'équation de chaque côté par $f'(z-h(\mr,t))$ puis on intégre $z$ sur$[-\infty,\infty]$ pour trouver 
+\begin{align}
+-\int dz f'(z-h(\mr,t))\int dz'd\mr'\  G(z-z',\mr-\mr') f'(z'-h(\mr',t))\frac{\partial h(\mr',t)}{\partial t} = -D\sigma \nabla^2 h(\mr,t) + \chi(\mr,t)
+\end{align}
+avec le bruit
+\begin{align}
+    \chi(\mr,t)= \int dz f'(z-h(\mr,t)) \theta(\mr,z,t)
+\end{align}
+En suppose maintenant que les fluctuations de l'interface sont concentrées autour de $0$, ce qui nous permet de faire ne garder que les termes à l'ordre $0$, ce qui nous donne
+\begin{align}
+    -\int dz \ f'(z)\int dz'd\mr'\  G(z-z',\mr-\mr') f'(z')\frac{\partial h(\mr',t)}{\partial t} = -D\sigma \nabla^2 h(\mr,t) + \chi(\mr,t)
+\end{align}
+avec le bruit donné par 
+\begin{align}
+    \chi(\mr,t)= \int dz\  f'(z) \theta(\mr,z',t)
+\end{align}
+Cette équation linéaire peut maintenant subir une transformation de Fourier dans le plan $\mr$, ce qui nous donne
+\begin{align}
+    -\int dz \ f'(z)\int dz'd\mr'\ \tilde G(z-z',{\bf k}) f'(z')\frac{\partial\tilde h({\bf k},t)}{\partial t} = 
+Dk^2\sigma \tilde h({\bf k},t) + \tilde \chi({\bf k},t)
+    \label{bstep}
+\end{align}
+La transformée de Fourier de $G$ dans le plan $\mr$ suit
+\begin{align}
+    \frac{d^2 \tilde G(z-z',{\bf k} )}{dz^2}-k^2 \tilde G(z-z',{\bf k} )=-\delta(z-z')
+\end{align}
+dont la solution avec la condition au bord $\tilde G(z-z',{\bf k} )\to 0$ lorsque $|z-z'|\to\infty$)  est
+\begin{align}
+    \tilde G(z-z',{\bf k}) = \frac{\exp(-k|z-z'|)}{2k}
+\end{align}
+avec $k=|{\bf k}|$. On suppose maintenant que l'interface est abrupte, c'est-à-dire que $f(z) = 2\phi_c \delta(z)$, qui est la limite $\xi \to 0$ de la solution \ref{kink}. On obtient
+\begin{align}
+    -4\phi_c^2 \tilde G(0,k) \frac{\partial h({\bf k},t)}{\partial t} = Dk^2\sigma  h(\mr,t) + \tilde \chi({\bf k},t)
+\end{align}
+que l'on réécrit comme
+\begin{align}
+    \frac{\partial \tilde h({\bf k},t)}{\partial t} = -\frac{Dk^3\sigma}{2\phi_c^2} \tilde h({\bf k},t) + \tilde \xi({\bf k},t)
+\end{align}
+avec
+\begin{align}
+    \tilde \xi({\bf k},t)= - \frac{k}{2\phi_c^2}\tilde \chi({\bf k},t)=  - \frac{k}{2\phi_c^2} \int dz\  f'(z) \tilde\theta({\bf k},z,t)
+\end{align}
+La fonction de corrélation de $\tilde \theta({\bf k},t)$ est
+\begin{align}
+    < \theta({\bf k},t)\theta({\bf k}',t')> = 2DT(2\pi)^d \delta(t-t') \delta({\bf k}+{\bf k'}) \tilde G(z-z',k)
+\end{align}
+ce qui nous donne
+\begin{align}
+    < \chi({\bf k},t)\chi({\bf k}',t')>  &= 2DT(2\pi)^d \delta(t-t') \delta({\bf k}+{\bf k'}) \int dz dz' f(z) f(z') \tilde G(z-z',k) \nn
+ &= 2DT(2\pi)^d \delta(t-t') \delta({\bf k}+{\bf k'}) \frac{2\phi_c^2}{k}
+\end{align}
+où l'on a utilisé l'approximation de l'interface abrupte pour passer de la première à la seconde ligne, ce qui nous donne
+\begin{align}
+    < \xi({\bf k},t)\xi({\bf k}',t')> = 2DT(2\pi)^d \delta(t-t') \delta({\bf k}+{\bf k'}) \frac{k}{2\phi_c^2}
+\end{align}
+L'équation finale de la dynamique de l'interface pour le modèle B dans l'espace de Fourier est
+\begin{align}
+    \frac{\partial h({\bf k},t)}{\partial t} = -\frac{Dk^3\sigma}{2\phi_c^2} \tilde h({\bf k},t) + \tilde \xi({\bf k},t)
+    \label{modBFT}
+\end{align}
+On obtient au final, dans l'espace réel, l'équation de Lai-Das Sarma \cite{lai_kinetic_1991}
+\begin{align}
+    \frac{\partial h(\mx)}{\partial t}= -L \frac{\delta H_{eff}}{\delta h (\mx)} + \xi(\mx,t)
+\end{align}
+où l'opérateur $L$ est défini dans l'espace de Fourier par
+\begin{align}
+    \tilde L({\bf k}) = \frac{Dk}{2\phi_c^2}
+    \label{op-mb}
+\end{align}
+%Now if we look at Eq. \eqref{modBFT} we see that solving the equation without noise will give a function of $k^3t$, which in real space corresponds to $x^3/t$. From this we see that the coarsening length scale grows as $\ell(t) \sim t^{\frac{1}{3}}$ and consequently the coarsening exponent is $z=\frac{1}{3}$.  Coarsening for conserved model B or diffusive dynamics is slower than that of model A. One of the reasons for this slowing down with respect to nonconserved dynamics is that material must be physically transported by diffusion (by exchanging spins in the language of lattice spin models), where as for  model A dynamics the composition can change at any given point by {\em spin flipping}.
+%
+%We can actually do better than the above sharp interface approximation as Eq. \eqref{bstep} can be written as
+%\begin{align}
+%Q(k)\frac{\partial\tilde h({\bf k},t)}{\partial t} = 
+%-Dk^2\sigma \tilde h({\bf k},t) - \tilde \chi({\bf k},t).\label{bstep2}
+%\end{align}
+%where 
+%\begin{align}
+%Q(k)= \int dzdz' \ f'(z)\ \tilde G(z-z',{\bf k}) f'(z').
+%\end{align}
+%Notice that from Eq. \eqref{bstep2} that
+%\begin{align}
+%< \chi({\bf k},t)\chi({\bf k}',t')>  = 2DT(2\pi)^d \delta(t-t') \delta({\bf k}+{\bf k'}) Q(k).\end{align}
+%and so 
+%\begin{align}
+%\frac{\partial\tilde h({\bf k},t)}{\partial t}= -\tilde L(k) \tilde \mu({\bf k}) + \eta({\bf k}),
+%\end{align}
+%where $\mu(x)=\delta H_{eff}/\delta h(\mx) $ and $\tilde L(k) = D/Q(k)$ and 
+%\begin{align}
+%< \eta({\bf k},t)\eta({\bf k}',t')>  = 2T(2\pi)^d \delta(t-t') \delta({\bf k}+{\bf k'}) \tilde L(k).\end{align}
 
-Dans le cas où le champ de vitesse est constant, comme la sédimentation dans un champ gravitationel, on peut parler d'écoulement. L'équation \ref{eq-cisaillement} est alors invariante par la transformation galiléenne $x \rightarrow x+vt$. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \section{Systèmes hors équilibre}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+Les systèmes à l'équilibre ont la particularité que les états ont une probabilité en accord avec la distribution de Gibbs-Boltzmann \ref{eqdis}, c'est-à-dire que le courant \ref{courant} est nul. La manière la plus simple de mettre le système hors-équilibre est donc d'induire un courant dans le champ $\phi(\mx,t)$. L'évolution d'un système depuis une condition initiale vers ses configurations d'équilibre est le moyen le plus simple d'étudier les conditions hors équilibre. On retrouve également dans le régime stationnaire beaucoup de systèmes hors-équilibre. Expérimentalement, les colloïdes sédimentant dans un champ gravitationel induisent un écoulement hors-équilibre. Il est également possible d'induire un flux sur des particules chargées dans un champ électrique via la pression de radiation exercée par un laser ou par un cisaillement dans un liquide visqueux\cite{girot_conical_2019}. Cette dynamique étant locale, elle ne peut exister que si le paramètre d'ordre est conservé. L'équation générale d'un système d'interface avec un cisaillement est\cite{bray_interface_2001-1,bray_interface_2001}
+\begin{align}
+     \frac{\partial h(\mr,t)}{\partial t} + {\boldsymbol \nabla} (\mv(\mx,t) h(\mr,t)) =  L H[h] +  \eta(x,t)
+\end{align}
+où $L$ est l'opérateur défini pour le modèle B à l'équation \ref{op-mb} et $\mv(\mx,t)$ est un champ de vitesse quelconque. 
+Un champ de vitesse d'intérêt est celui un champ de cisaillement de la forme 
+\begin{align}
+    \mv(\mx,t) = \omega z \vec{e_x}
+     \label{eq-cisaillement}    
+\end{align}
+Ce champ de cisaillement, dont une illustration est donné en figure \ref{snap-ising-shear} et dont l'effet dans des simulations de Monte Carlo est évident, a été extensivement étudié expérimentalement \cite{derks_suppression_2006}, théoriquement \cite{leung_field_1986,bray_coarsening_2000,bray_interface_2001-1,bray_interface_2001} ou dans les simulations numériques dans le cas du modèle d'Ising \cite{gonnella_nonequilibrium_2009,smith_driven_2010,smith_interfaces_2008,sadhu_non-local_2014,cohen_interface_2016,cirillo_monte_2005} expliquent en détail pourquoi un cisaillement de ce type entraîne la suppression des modes de fluctuations excités, ce qui aplanit l'interface. 
+
+Dans le chapitre \ref{chap-article-dean}, nous étudions plus en détail le cas d'un écoulement uniforme, et montrons qu'il a également tendance à réduire les fluctuations au niveau de l'interface.
 \begin{figure}
 	\begin{minipage}[t]{0.5\linewidth}
 		\includegraphics[width=\linewidth]{intro/cis-ising-f-000.pdf}
@@ -494,28 +678,15 @@ Dans le cas où le champ de vitesse est constant, comme la sédimentation dans u
 	\begin{minipage}[t]{0.5\linewidth}
 		\includegraphics[width=\linewidth]{intro/cis-ising-f-066.pdf}
 	\end{minipage}
-	\caption{Photos d'un système d'Ising $128 \times 50$ en fonction d'un cisaillement
-	${f(y) = \omega (\frac{2 y}{L} -1)}$.  {\color{red} expliquer qu'est-ce qu'un cisaillement, comment on implémente ça dans un modèle discret}}
+	\caption{Photos d'un système d'Ising en fonction du cisaillement  \ref{eq-cisaillement} via des simulations de Monte Carlo avec un algorithme de Kawasaki. Ledit algorithme sera expliqué plus en détail au chapitre \ref{chap-sim}.}
     \label{snap-ising-shear}	
 \end{figure}  
 
-\begin{figure}
-    \centering
-    \includegraphics[width=0.6\linewidth]{intro/profil-mag-ising-shear.pdf}
-    \caption{Profil de magnétisation d'un système d'Ising $128 \times 50$ en fonction du cisaillement de la figure \ref{snap-ising-shear}. Plus le cisaillement est élevé, plus l'interface est confinée.}
-    \label{profil-mag-ising-shear}
-\end{figure}
-
-Néanmoins, de nombreuses expériences\cite{derks_suppression_2006} et simulations numériques pour le modèle d'Ising \cite{leung_field_1986,rikvold_microstructure_2002,gonnella_nonequilibrium_2009,smith_driven_2010,smith_interfaces_2008,sadhu_non-local_2014,cohen_interface_2016,cirillo_monte_2005} ainsi qu'avec des techniques de Dynamique Moléculaire \cite{berthier_nonequilibrium_2002} montrent que le cisaillement provoque un confinement de l'interface. Dans les expériences où les effets gravitationnels sont importants, le solvant d'une suspension de colloïdes ne bouge pas, contrairement aux particules en suspension. La brisure d'invariance galiléenne qui en résulte est expliqué en détail au chapitre \ref{chap-article-dean}. \footnote{Ce chapitre a été publié dans \cite{dean_effect_2020}.}
-Pour les simulations de Monte Carlo, l'invariance est brisée par la dynamique même du système, puisque les mouvements sont fait séquentiellement et non simultanément.
 
 \section{Conclusion}
 
-Nous avons présenté les modèles standards des transitions de phase et avons étudié l'importance de l'ensemble thermodynamique de ces systèmes.
-Dans l'ensemble grand-canonique où le paramètre d'odre n'est pas conservé, les équations dynamiques du modèle A \ref{MA} appliqués au champ $\phi(\mx,t)$ permettent de calculer la fonction de corrélation du système pour le modèle $\phi^4$. Le modèle $\phi^4$ permet de basculer naturellement vers un modèle d'interface $h(\mx,t)$ qui réduit la dimensionalité du champ et rend ainsi les calculs plus simples.
-	Il existe par ailleurs de nombreuses sources contribuant à l'énergie totale du système : l'énergie du volume (\textit{bulk}) du système, l'énergie de l'interface définie par sa tension superficielle \ref{tension-superficielle}, et une énergie d'excès qui donne naissance à la force de Casimir \ref{casimir-scaling}. Cette force est dûe au confinement du système par des conditions aux bords contraignant les fluctuations du champ $\phi$ selon une direction. 
+Nous avons présenté les modèles standards des transitions de phase et avons étudié l'importance de l'ensemble thermodynamique dans ces systèmes. Dans l'ensemble grand-canonique où le paramètre d'odre n'est pas conservé, les équations dynamiques du modèle A \ref{MA} appliqués au champ $\phi(\mx,t)$ permettent de calculer la fonction de corrélation du système pour le modèle $\phi^4$. Le modèle $\phi^4$ permet de basculer naturellement vers un modèle d'interface $h(\mx,t)$ qui réduit la dimensionalité des équations et permet de n'étudier qu'une partie précise du problème. Nous avons expliqué comment passer d'un modèle de champ à un modèle d'interface, en dérivant des équations très similaires entre les deux modèles.
 
+Lorsques la longueur de corrélation des fluctuations deviennent de l'ordre de grandeur de la taille du système, la contrainte influe sur l'énergie libre totale. On a démontré que l'énergie libre libre se décompose alors en un terme de volume, un terme de surface dépendant des conditions aux bords, et d'un terme d'excès. La dérivée de l'énergie libre en fonction de la taille du système nous donne une pression de confinement, qui dans les systèmes critiques, s'appelle force de Casimir. Nous avons expliqué commennt mesurer cette force par une intégration sur le paramètre d'ordre, dans le cas où il n'est pas possible de calculer analytiquement l'énergie libre du système.
 
-Dans l'esemble canonique où le paramètre d'ordre est conservé (ou modèle B \ref{MB}), toutes les considérations antérieures se s'appliquent. Il est possible d'appliquer un flux local qui sort le système de l'équilibre. La manière la plus naturelle de le faire est de cisailler l'interface, ce qui modifie également les propriétés statistiques du système. 
-
-Nous nous intéressons maintenant aux modèles sur réseaux, qui présentent l'avantage de la simplicité numérique et analytique et permettent de modifier facilement l'ensemble thermodynamique ainsi que le cisaillement. 
+Une attention particulière a été portée aux ensembles thermodynamiques. Bien que l'hypothèse de l'équivalence des ensembles thermodynamiques implique que les systèmes se comportent identiquement à l'équilibre pour des systèmes thermodynamiques, la dynamique des systèmes confinés est particulièrement différente dans les deux cas. De plus, nous avons vu que seul l'ensemble canonique permettait, grâce à une dynamique locale, d'obtenir des systèmes hors-équilibre. Expérimentalement, la manière la plus simple est de cisailler les parois du système afin d'induire un flux stationnaire. 

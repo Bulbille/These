@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.3.19)  4 MAY 2020 02:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.3.19)  5 MAY 2020 02:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -633,38 +633,41 @@ LaTeX Warning: Label `figure-pop' multiply defined.
 
 LaTeX Warning: Label `chap-sos' multiply defined.
 
+
+LaTeX Warning: Label `heff' multiply defined.
+
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 66.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 72.
  (/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Info: Redefining \degres on input line 66.
-LaTeX Info: Redefining \dots on input line 66.
+LaTeX Info: Redefining \degres on input line 72.
+LaTeX Info: Redefining \dots on input line 72.
 
 
 Package french.ldf Warning: Please load the "natbib" package
-(french.ldf)                BEFORE babel/french; reported on input line 66.
+(french.ldf)                BEFORE babel/french; reported on input line 72.
 
 Package french.ldf Info: Setting StandardEnumerateEnv=true for
 (french.ldf)             compatibility with enumerate package,
-(french.ldf)             reported on input line 66.
-LaTeX Info: Redefining \up on input line 66.
+(french.ldf)             reported on input line 72.
+LaTeX Info: Redefining \up on input line 72.
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count306
@@ -696,7 +699,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box49
-Package hyperref Info: Link coloring OFF on input line 66.
+Package hyperref Info: Link coloring OFF on input line 72.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -706,9 +709,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count312
 )
-LaTeX Info: Redefining \ref on input line 66.
-LaTeX Info: Redefining \pageref on input line 66.
-LaTeX Info: Redefining \nameref on input line 66.
+LaTeX Info: Redefining \ref on input line 72.
+LaTeX Info: Redefining \pageref on input line 72.
+LaTeX Info: Redefining \nameref on input line 72.
 
 (./main.out) (./main.out)
 \@outlinefile=\write4
@@ -898,6 +901,11 @@ Underfull \vbox (badness 5245) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [12]
+
+Package natbib Warning: Citation `gambassi_casimir_2009' on page 13 undefined o
+n input line 338.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [13]
@@ -905,38 +913,63 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Package natbib Warning: Citation `degennes' on page 14 undefined on input line 
 355.
 
-[14] [15] [16] [17] [18]
-<intro/cis-ising-f-000.pdf, id=632, 406.37096pt x 191.01828pt>
+[14] [15]
+Underfull \vbox (badness 7963) has occurred while \output is active []
+
+ [16]
+Overfull \hbox (61.19576pt too wide) detected at line 454
+[]
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [17]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [18]
+Overfull \hbox (38.12271pt too wide) detected at line 565
+[]
+ []
+
+[19]
+Overfull \hbox (31.8674pt too wide) in paragraph at lines 591--593
+\T1/lmr/m/n/10.95 avec $\OML/lmm/m/it/10.95 k \OT1/lmr/m/n/10.95 = \OMS/lmsy/m/
+n/10.95 j\OT1/lmr/bx/n/10.95 k\OMS/lmsy/m/n/10.95 j$\T1/lmr/m/n/10.95 . On sup-
+pose main-te-nant que l'in-ter-face est abrupte, c'est-à-dire que $\OML/lmm/m/i
+t/10.95 f\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 z\OT1/lmr/m/n/10.95 ) = 2\OML/
+lmm/m/it/10.95 ^^^[]^^N\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 z\OT1/lmr/m/n/10
+.95 )$\T1/lmr/m/n/10.95 ,
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [20]
+[21]
+
+LaTeX Warning: Reference `chap-article-dean' on page 22 undefined on input line
+ 669.
+
+<intro/cis-ising-f-000.pdf, id=668, 406.37096pt x 191.01828pt>
 File: intro/cis-ising-f-000.pdf Graphic file (type pdf)
 <use intro/cis-ising-f-000.pdf>
-Package pdftex.def Info: intro/cis-ising-f-000.pdf  used on input line 488.
+Package pdftex.def Info: intro/cis-ising-f-000.pdf  used on input line 672.
 (pdftex.def)             Requested size: 209.12683pt x 98.3041pt.
-<intro/cis-ising-f-033.pdf, id=633, 406.37096pt x 191.01828pt>
+<intro/cis-ising-f-033.pdf, id=669, 406.37096pt x 191.01828pt>
 File: intro/cis-ising-f-033.pdf Graphic file (type pdf)
 <use intro/cis-ising-f-033.pdf>
-Package pdftex.def Info: intro/cis-ising-f-033.pdf  used on input line 491.
+Package pdftex.def Info: intro/cis-ising-f-033.pdf  used on input line 675.
 (pdftex.def)             Requested size: 209.12683pt x 98.3041pt.
-<intro/cis-ising-f-066.pdf, id=634, 406.37096pt x 191.01828pt>
+<intro/cis-ising-f-066.pdf, id=670, 406.37096pt x 191.01828pt>
 File: intro/cis-ising-f-066.pdf Graphic file (type pdf)
 <use intro/cis-ising-f-066.pdf>
-Package pdftex.def Info: intro/cis-ising-f-066.pdf  used on input line 495.
+Package pdftex.def Info: intro/cis-ising-f-066.pdf  used on input line 679.
 (pdftex.def)             Requested size: 209.12683pt x 98.3041pt.
-<intro/profil-mag-ising-shear.pdf, id=635, 462.52798pt x 346.89601pt>
-File: intro/profil-mag-ising-shear.pdf Graphic file (type pdf)
-<use intro/profil-mag-ising-shear.pdf>
-Package pdftex.def Info: intro/profil-mag-ising-shear.pdf  used on input line 5
-04.
-(pdftex.def)             Requested size: 250.95476pt x 188.21559pt.
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Warning: Reference `chap-article-dean' on page 19 undefined on input line
- 509.
-
-
-LaTeX Warning: Reference `casimir-scaling' on page 19 undefined on input line 5
-16.
-
-[19 <./intro/cis-ising-f-000.pdf> <./intro/cis-ising-f-033.pdf
+ [22 <./intro/cis-ising-f-000.pdf> <./intro/cis-ising-f-033.pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ./intro/cis-ising-f-033.pdf): PDF inclu
 sion: multiple pdfs with page group included in a single page
@@ -944,14 +977,16 @@ sion: multiple pdfs with page group included in a single page
 
 pdfTeX warning: /usr/bin/pdflatex (file ./intro/cis-ising-f-066.pdf): PDF inclu
 sion: multiple pdfs with page group included in a single page
->]) (./isingtosos/modele-sos.tex [20 <./intro/profil-mag-ising-shear.pdf>]
+>]) (./isingtosos/modele-sos.tex [23] [24
+
+]
 Chapitre 2.
-<isingtosos/snap07.pdf, id=739, 489.55083pt x 316.01813pt>
+<isingtosos/snap07.pdf, id=751, 489.55083pt x 316.01813pt>
 File: isingtosos/snap07.pdf Graphic file (type pdf)
 <use isingtosos/snap07.pdf>
 Package pdftex.def Info: isingtosos/snap07.pdf  used on input line 14.
 (pdftex.def)             Requested size: 209.12683pt x 134.99306pt.
-<isingtosos/snap09.pdf, id=740, 489.55083pt x 316.01813pt>
+<isingtosos/snap09.pdf, id=752, 489.55083pt x 316.01813pt>
 File: isingtosos/snap09.pdf Graphic file (type pdf)
 <use isingtosos/snap09.pdf>
 Package pdftex.def Info: isingtosos/snap09.pdf  used on input line 17.
@@ -959,23 +994,21 @@ Package pdftex.def Info: isingtosos/snap09.pdf  used on input line 17.
 
 Underfull \vbox (badness 4181) has occurred while \output is active []
 
- [21
-
-]
+ [25]
 Underfull \vbox (badness 1052) has occurred while \output is active []
 
- [22 <./isingtosos/snap07.pdf> <./isingtosos/snap09.pdf
+ [26 <./isingtosos/snap07.pdf> <./isingtosos/snap09.pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ./isingtosos/snap09.pdf): PDF inclusion
 : multiple pdfs with page group included in a single page
 >]
-<isingtosos/stecki-profil.png, id=798, 955.57pt x 820.06375pt>
+<isingtosos/stecki-profil.png, id=812, 955.57pt x 820.06375pt>
 File: isingtosos/stecki-profil.png Graphic file (type png)
 <use isingtosos/stecki-profil.png>
 Package pdftex.def Info: isingtosos/stecki-profil.png  used on input line 43.
 (pdftex.def)             Requested size: 209.12683pt x 179.46358pt.
- [23 <./isingtosos/stecki-profil.png>]
-<isingtosos/sos-indiscernable.pdf, id=824, 462.52798pt x 346.89601pt>
+ [27 <./isingtosos/stecki-profil.png>]
+<isingtosos/sos-indiscernable.pdf, id=838, 462.52798pt x 346.89601pt>
 File: isingtosos/sos-indiscernable.pdf Graphic file (type pdf)
 <use isingtosos/sos-indiscernable.pdf>
 Package pdftex.def Info: isingtosos/sos-indiscernable.pdf  used on input line 7
@@ -984,10 +1017,10 @@ Package pdftex.def Info: isingtosos/sos-indiscernable.pdf  used on input line 7
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [24 <./isingtosos/sos-indiscernable.pdf>]
+ [28 <./isingtosos/sos-indiscernable.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [25]
+ [29]
 Overfull \hbox (2.01183pt too wide) in paragraph at lines 112--115
 \T1/lmr/m/n/10.95 où $\OML/lmm/m/it/10.95 f\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10
 .95 h[]; h[]\OT1/lmr/m/n/10.95 )$ \T1/lmr/m/n/10.95 est l'éner-gie d'in-ter-ac-
@@ -1004,33 +1037,33 @@ n/10.95 ), la ma-trice est pé-rio-dique éga-le-ment, c'est-à-dire que $\OML/lmm
 lmr/m/n/10.95 )$
  []
 
-[26]
+[30]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [27]
-<isingtosos/freeene-lambda0-libre.pdf, id=904, 462.52798pt x 346.89601pt>
+ [31]
+<isingtosos/freeene-lambda0-libre.pdf, id=920, 462.52798pt x 346.89601pt>
 File: isingtosos/freeene-lambda0-libre.pdf Graphic file (type pdf)
 <use isingtosos/freeene-lambda0-libre.pdf>
 Package pdftex.def Info: isingtosos/freeene-lambda0-libre.pdf  used on input li
 ne 203.
 (pdftex.def)             Requested size: 209.12683pt x 156.8481pt.
-<isingtosos/freeene-thermo-libre.pdf, id=905, 462.52798pt x 346.89601pt>
+<isingtosos/freeene-thermo-libre.pdf, id=921, 462.52798pt x 346.89601pt>
 File: isingtosos/freeene-thermo-libre.pdf Graphic file (type pdf)
 <use isingtosos/freeene-thermo-libre.pdf>
 Package pdftex.def Info: isingtosos/freeene-thermo-libre.pdf  used on input lin
 e 206.
 (pdftex.def)             Requested size: 209.12683pt x 156.8481pt.
 
-[28]
+[32]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [29 <./isingtosos/freeene-lambda0-libre.pdf> <./isingtosos/freeene-thermo-libr
+ [33 <./isingtosos/freeene-lambda0-libre.pdf> <./isingtosos/freeene-thermo-libr
 e.pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ./isingtosos/freeene-thermo-libre.pdf):
  PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<isingtosos/figure-canonique.pdf, id=1021, 462.52798pt x 346.89601pt>
+<isingtosos/figure-canonique.pdf, id=1036, 462.52798pt x 346.89601pt>
 File: isingtosos/figure-canonique.pdf Graphic file (type pdf)
 <use isingtosos/figure-canonique.pdf>
 Package pdftex.def Info: isingtosos/figure-canonique.pdf  used on input line 25
@@ -1040,17 +1073,17 @@ Package pdftex.def Info: isingtosos/figure-canonique.pdf  used on input line 25
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[30]
+[34]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [31 <./isingtosos/figure-canonique.pdf>]
-<isingtosos/hauteur-tm-sos.pdf, id=1064, 462.52798pt x 346.89601pt>
+ [35 <./isingtosos/figure-canonique.pdf>]
+<isingtosos/hauteur-tm-sos.pdf, id=1078, 462.52798pt x 346.89601pt>
 File: isingtosos/hauteur-tm-sos.pdf Graphic file (type pdf)
 <use isingtosos/hauteur-tm-sos.pdf>
 Package pdftex.def Info: isingtosos/hauteur-tm-sos.pdf  used on input line 282.
 
 (pdftex.def)             Requested size: 209.12683pt x 156.8481pt.
-<isingtosos/figure-sos.pdf, id=1069, 578.16pt x 433.62pt>
+<isingtosos/figure-sos.pdf, id=1083, 578.16pt x 433.62pt>
 File: isingtosos/figure-sos.pdf Graphic file (type pdf)
 <use isingtosos/figure-sos.pdf>
 Package pdftex.def Info: isingtosos/figure-sos.pdf  used on input line 293.
@@ -1059,7 +1092,7 @@ Package pdftex.def Info: isingtosos/figure-sos.pdf  used on input line 293.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<isingtosos/hauteur-tm-pop.pdf, id=1074, 462.52798pt x 346.89601pt>
+<isingtosos/hauteur-tm-pop.pdf, id=1088, 462.52798pt x 346.89601pt>
 File: isingtosos/hauteur-tm-pop.pdf Graphic file (type pdf)
 <use isingtosos/hauteur-tm-pop.pdf>
 Package pdftex.def Info: isingtosos/hauteur-tm-pop.pdf  used on input line 299.
@@ -1068,85 +1101,89 @@ Package pdftex.def Info: isingtosos/hauteur-tm-pop.pdf  used on input line 299.
 
 Underfull \vbox (badness 2460) has occurred while \output is active []
 
- [32 <./isingtosos/hauteur-tm-sos.pdf>] [33 <./isingtosos/figure-sos.pdf>]
-<isingtosos/comparaison-modeles.pdf, id=1210, 462.52798pt x 346.89601pt>
+ [36 <./isingtosos/hauteur-tm-sos.pdf>] [37 <./isingtosos/figure-sos.pdf>]
+<isingtosos/comparaison-modeles.pdf, id=1225, 462.52798pt x 346.89601pt>
 File: isingtosos/comparaison-modeles.pdf Graphic file (type pdf)
 <use isingtosos/comparaison-modeles.pdf>
 Package pdftex.def Info: isingtosos/comparaison-modeles.pdf  used on input line
  336.
 (pdftex.def)             Requested size: 209.12683pt x 156.8481pt.
 )
-(./numerical/method.tex [34 <./isingtosos/hauteur-tm-pop.pdf>] [35 <./isingtoso
-s/comparaison-modeles.pdf>] [36
+(./numerical/method.tex [38 <./isingtosos/hauteur-tm-pop.pdf>] [39 <./isingtoso
+s/comparaison-modeles.pdf>] [40
 
 ]
 Chapitre 3.
-[37]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 22.
+[41]
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 23.
  (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 22.
+(Font)              <9> on input line 23.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 22.
- [38]
-<numerical/sos-glau-eq-cor.pdf, id=1293, 462.52798pt x 346.89601pt>
+(Font)              <5> on input line 23.
+ [42]
+<numerical/sos-glau-eq-cor.pdf, id=1309, 462.52798pt x 346.89601pt>
 File: numerical/sos-glau-eq-cor.pdf Graphic file (type pdf)
 <use numerical/sos-glau-eq-cor.pdf>
-Package pdftex.def Info: numerical/sos-glau-eq-cor.pdf  used on input line 56.
+Package pdftex.def Info: numerical/sos-glau-eq-cor.pdf  used on input line 57.
 (pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[39]
+
+LaTeX Warning: Reference `edwards-wilkinson' on page 43 undefined on input line
+ 62.
+
+[43]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [40 <./numerical/sos-glau-eq-cor.pdf>]
-<numerical/sos-kaw-eq-cor.pdf, id=1327, 462.52798pt x 346.89601pt>
+ [44 <./numerical/sos-glau-eq-cor.pdf>]
+<numerical/sos-kaw-eq-cor.pdf, id=1343, 462.52798pt x 346.89601pt>
 File: numerical/sos-kaw-eq-cor.pdf Graphic file (type pdf)
 <use numerical/sos-kaw-eq-cor.pdf>
-Package pdftex.def Info: numerical/sos-kaw-eq-cor.pdf  used on input line 83.
+Package pdftex.def Info: numerical/sos-kaw-eq-cor.pdf  used on input line 84.
 (pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [41 <./numerical/sos-kaw-eq-cor.pdf>] [42] [43]) (./chap4/casimir.tex [44]
+ [45 <./numerical/sos-kaw-eq-cor.pdf>] [46] [47]) (./chap4/casimir.tex [48]
 Chapitre 4.
-[45
+
+Underfull \vbox (badness 5985) has occurred while \output is active []
+
+ [49
 
 ]
-<chap4/freeene-lambda0-mu.pdf, id=1402, 462.52798pt x 346.89601pt>
+<chap4/freeene-lambda0-mu.pdf, id=1417, 462.52798pt x 346.89601pt>
 File: chap4/freeene-lambda0-mu.pdf Graphic file (type pdf)
 <use chap4/freeene-lambda0-mu.pdf>
-Package pdftex.def Info: chap4/freeene-lambda0-mu.pdf  used on input line 28.
+Package pdftex.def Info: chap4/freeene-lambda0-mu.pdf  used on input line 45.
 (pdftex.def)             Requested size: 167.2989pt x 125.4753pt.
-<chap4/freeene-thermo-mu.pdf, id=1403, 462.52798pt x 346.89601pt>
+<chap4/freeene-thermo-mu.pdf, id=1418, 462.52798pt x 346.89601pt>
 File: chap4/freeene-thermo-mu.pdf Graphic file (type pdf)
 <use chap4/freeene-thermo-mu.pdf>
-Package pdftex.def Info: chap4/freeene-thermo-mu.pdf  used on input line 31.
+Package pdftex.def Info: chap4/freeene-thermo-mu.pdf  used on input line 48.
 (pdftex.def)             Requested size: 167.2989pt x 125.4753pt.
-<chap4/longueur-correl.pdf, id=1404, 462.52798pt x 346.89601pt>
+<chap4/longueur-correl.pdf, id=1419, 462.52798pt x 346.89601pt>
 File: chap4/longueur-correl.pdf Graphic file (type pdf)
 <use chap4/longueur-correl.pdf>
-Package pdftex.def Info: chap4/longueur-correl.pdf  used on input line 34.
+Package pdftex.def Info: chap4/longueur-correl.pdf  used on input line 51.
 (pdftex.def)             Requested size: 167.2989pt x 125.4753pt.
-<chap4/distribution-taille-finie.pdf, id=1405, 462.52798pt x 346.89601pt>
+<chap4/distribution-taille-finie.pdf, id=1420, 462.52798pt x 346.89601pt>
 File: chap4/distribution-taille-finie.pdf Graphic file (type pdf)
 <use chap4/distribution-taille-finie.pdf>
 Package pdftex.def Info: chap4/distribution-taille-finie.pdf  used on input lin
-e 37.
+e 54.
 (pdftex.def)             Requested size: 167.2989pt x 125.4753pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--39
+Underfull \hbox (badness 10000) in paragraph at lines 44--56
 [][][]
  []
 
-
-Underfull \vbox (badness 4266) has occurred while \output is active []
-
- [46 <./chap4/freeene-lambda0-mu.pdf> <./chap4/freeene-thermo-mu.pdf
+[50] [51 <./chap4/freeene-lambda0-mu.pdf> <./chap4/freeene-thermo-mu.pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ./chap4/freeene-thermo-mu.pdf): PDF inc
 lusion: multiple pdfs with page group included in a single page
@@ -1160,43 +1197,43 @@ pdfTeX warning: /usr/bin/pdflatex (file ./chap4/distribution-taille-finie.pdf):
  PDF inclusion: multiple pdfs with page group included in a single page
 >]
 
-Package caption Warning: \label without proper reference on input line 76.
+Package caption Warning: \label without proper reference on input line 93.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `casimir-temperature' on page 47 undefined on input li
-ne 59.
+LaTeX Warning: Reference `casimir-temperature' on page 52 undefined on input li
+ne 76.
 
-<chap4/casimir-distance-mu001.pdf, id=1549, 462.52798pt x 346.89601pt>
+<chap4/casimir-distance-mu001.pdf, id=1573, 462.52798pt x 346.89601pt>
 File: chap4/casimir-distance-mu001.pdf Graphic file (type pdf)
 <use chap4/casimir-distance-mu001.pdf>
-Package pdftex.def Info: chap4/casimir-distance-mu001.pdf  used on input line 6
-7.
+Package pdftex.def Info: chap4/casimir-distance-mu001.pdf  used on input line 8
+4.
 (pdftex.def)             Requested size: 167.2989pt x 125.4753pt.
-<chap4/casimir-temperature-mu001.pdf, id=1550, 462.52798pt x 346.89601pt>
+<chap4/casimir-temperature-mu001.pdf, id=1574, 462.52798pt x 346.89601pt>
 File: chap4/casimir-temperature-mu001.pdf Graphic file (type pdf)
 <use chap4/casimir-temperature-mu001.pdf>
 Package pdftex.def Info: chap4/casimir-temperature-mu001.pdf  used on input lin
-e 70.
+e 87.
 (pdftex.def)             Requested size: 167.2989pt x 125.4753pt.
-<chap4/casimir-mu-t1.pdf, id=1551, 462.52798pt x 346.89601pt>
+<chap4/casimir-mu-t1.pdf, id=1575, 462.52798pt x 346.89601pt>
 File: chap4/casimir-mu-t1.pdf Graphic file (type pdf)
 <use chap4/casimir-mu-t1.pdf>
-Package pdftex.def Info: chap4/casimir-mu-t1.pdf  used on input line 74.
+Package pdftex.def Info: chap4/casimir-mu-t1.pdf  used on input line 91.
 (pdftex.def)             Requested size: 167.2989pt x 125.4753pt.
-[47]
+[52]
 
-LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 9
-8.
+LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 1
+15.
 
 
-LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 9
-8.
+LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 1
+15.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [48 <./chap4/casimir-distance-mu001.pdf> <./chap4/casimir-temperature-mu001.pd
+ [53 <./chap4/casimir-distance-mu001.pdf> <./chap4/casimir-temperature-mu001.pd
 f
 
 pdfTeX warning: /usr/bin/pdflatex (file ./chap4/casimir-temperature-mu001.pdf):
@@ -1206,30 +1243,27 @@ pdfTeX warning: /usr/bin/pdflatex (file ./chap4/casimir-temperature-mu001.pdf):
 pdfTeX warning: /usr/bin/pdflatex (file ./chap4/casimir-mu-t1.pdf): PDF inclusi
 on: multiple pdfs with page group included in a single page
 >]
-<numerical/cross-h0.pdf, id=1680, 325.215pt x 271.0125pt>
+<numerical/cross-h0.pdf, id=1705, 325.215pt x 271.0125pt>
 File: numerical/cross-h0.pdf Graphic file (type pdf)
 <use numerical/cross-h0.pdf>
-Package pdftex.def Info: numerical/cross-h0.pdf  used on input line 109.
+Package pdftex.def Info: numerical/cross-h0.pdf  used on input line 126.
 (pdftex.def)             Requested size: 125.47737pt x 104.5655pt.
-<numerical/cross-hlambda.pdf, id=1681, 325.215pt x 271.7352pt>
+<numerical/cross-hlambda.pdf, id=1706, 325.215pt x 271.7352pt>
 File: numerical/cross-hlambda.pdf Graphic file (type pdf)
 <use numerical/cross-hlambda.pdf>
-Package pdftex.def Info: numerical/cross-hlambda.pdf  used on input line 113.
+Package pdftex.def Info: numerical/cross-hlambda.pdf  used on input line 130.
 (pdftex.def)             Requested size: 125.47737pt x 104.84433pt.
-<numerical/cross-h1.pdf, id=1682, 324.4923pt x 271.0125pt>
+<numerical/cross-h1.pdf, id=1707, 324.4923pt x 271.0125pt>
 File: numerical/cross-h1.pdf Graphic file (type pdf)
 <use numerical/cross-h1.pdf>
-Package pdftex.def Info: numerical/cross-h1.pdf  used on input line 118.
+Package pdftex.def Info: numerical/cross-h1.pdf  used on input line 135.
 (pdftex.def)             Requested size: 125.47737pt x 104.79707pt.
 
-Overfull \hbox (61.1888pt too wide) detected at line 129
+Overfull \hbox (61.1888pt too wide) detected at line 146
 []
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [49 <./numerical/cross-h0.pdf> <./numerical/cross-hlambda.pdf
+[54 <./numerical/cross-h0.pdf> <./numerical/cross-hlambda.pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ./numerical/cross-hlambda.pdf): PDF inc
 lusion: multiple pdfs with page group included in a single page
@@ -1237,29 +1271,27 @@ lusion: multiple pdfs with page group included in a single page
 
 pdfTeX warning: /usr/bin/pdflatex (file ./numerical/cross-h1.pdf): PDF inclusio
 n: multiple pdfs with page group included in a single page
->] [50]
-<chap4/comp-potentiels-chimiques.pdf, id=1725, 462.52798pt x 346.89601pt>
+>]
+<chap4/comp-potentiels-chimiques.pdf, id=1740, 462.52798pt x 346.89601pt>
 File: chap4/comp-potentiels-chimiques.pdf Graphic file (type pdf)
 <use chap4/comp-potentiels-chimiques.pdf>
 Package pdftex.def Info: chap4/comp-potentiels-chimiques.pdf  used on input lin
-e 163.
+e 180.
 (pdftex.def)             Requested size: 167.2989pt x 125.4753pt.
-<chap4/free-ene-potentiels.pdf, id=1726, 462.52798pt x 346.89601pt>
+<chap4/free-ene-potentiels.pdf, id=1741, 462.52798pt x 346.89601pt>
 File: chap4/free-ene-potentiels.pdf Graphic file (type pdf)
 <use chap4/free-ene-potentiels.pdf>
-Package pdftex.def Info: chap4/free-ene-potentiels.pdf  used on input line 166.
+Package pdftex.def Info: chap4/free-ene-potentiels.pdf  used on input line 183.
 
 (pdftex.def)             Requested size: 167.2989pt x 125.4753pt.
-<chap4/simu-tm-negstagged-l20.pdf, id=1727, 462.52798pt x 346.89601pt>
+<chap4/simu-tm-negstagged-l20.pdf, id=1742, 462.52798pt x 346.89601pt>
 File: chap4/simu-tm-negstagged-l20.pdf Graphic file (type pdf)
 <use chap4/simu-tm-negstagged-l20.pdf>
 Package pdftex.def Info: chap4/simu-tm-negstagged-l20.pdf  used on input line 1
-70.
+87.
 (pdftex.def)             Requested size: 167.2989pt x 125.4753pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [51 <./chap4/comp-potentiels-chimiques.pdf> <./chap4/free-ene-potentiels.pdf
+ [55] [56 <./chap4/comp-potentiels-chimiques.pdf> <./chap4/free-ene-potentiels.
+pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ./chap4/free-ene-potentiels.pdf): PDF i
 nclusion: multiple pdfs with page group included in a single page
@@ -1268,75 +1300,17 @@ nclusion: multiple pdfs with page group included in a single page
 pdfTeX warning: /usr/bin/pdflatex (file ./chap4/simu-tm-negstagged-l20.pdf): PD
 F inclusion: multiple pdfs with page group included in a single page
 >]
-Overfull \hbox (7.96848pt too wide) in paragraph at lines 200--201
+Overfull \hbox (7.96848pt too wide) in paragraph at lines 217--218
 []\T1/lmr/m/n/10.95 mettre en va-leur fi-gure 4.4, ÇA MARCHE avec le nu-mé-riqu
 e, PLUS DE CONTEXTE ! ![] 
  []
 
-) (./sosequi-laser/laser.tex [52] [53] [54
+) (./sosequi-laser/laser.tex [57] [58]
+Chapitre 5.
+[59
 
 ]
-Chapitre 5.
-[55]
 Underfull \vbox (badness 1418) has occurred while \output is active []
-
-
-Overfull \hbox (50.92105pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10.95 56 \T1/lmr/m/sl/10.95 CHAPITRE 5.  INTERACTION GAUSSIENNE AVE
-C CHAMP MAGNÉTIQUE CONFINANT
- []
-
-[56]
-<sosequi-laser/etats-laser.pdf, id=1879, 462.52798pt x 346.89601pt>
-File: sosequi-laser/etats-laser.pdf Graphic file (type pdf)
-<use sosequi-laser/etats-laser.pdf>
-Package pdftex.def Info: sosequi-laser/etats-laser.pdf  used on input line 66.
-(pdftex.def)             Requested size: 209.12683pt x 156.8481pt.
-<sosequi-laser/energies-laser.pdf, id=1880, 462.52798pt x 346.89601pt>
-File: sosequi-laser/energies-laser.pdf Graphic file (type pdf)
-<use sosequi-laser/energies-laser.pdf>
-Package pdftex.def Info: sosequi-laser/energies-laser.pdf  used on input line 6
-9.
-(pdftex.def)             Requested size: 209.12683pt x 156.8481pt.
- [57]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \hbox (50.92105pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10.95 58 \T1/lmr/m/sl/10.95 CHAPITRE 5.  INTERACTION GAUSSIENNE AVE
-C CHAMP MAGNÉTIQUE CONFINANT
- []
-
-[58 <./sosequi-laser/etats-laser.pdf> <./sosequi-laser/energies-laser.pdf
-
-pdfTeX warning: /usr/bin/pdflatex (file ./sosequi-laser/energies-laser.pdf): PD
-F inclusion: multiple pdfs with page group included in a single page
->]
-<sosequi-laser/histo.pdf, id=1969, 462.52798pt x 346.89601pt>
-File: sosequi-laser/histo.pdf Graphic file (type pdf)
-<use sosequi-laser/histo.pdf>
-Package pdftex.def Info: sosequi-laser/histo.pdf  used on input line 109.
-(pdftex.def)             Requested size: 209.12683pt x 156.8481pt.
-<sosequi-laser/loghisto.pdf, id=1970, 462.52798pt x 346.89601pt>
-File: sosequi-laser/loghisto.pdf Graphic file (type pdf)
-<use sosequi-laser/loghisto.pdf>
-Package pdftex.def Info: sosequi-laser/loghisto.pdf  used on input line 112.
-(pdftex.def)             Requested size: 209.12683pt x 156.8481pt.
-<sosequi-laser/comp-airy-kaw-glau.pdf, id=1975, 462.52798pt x 346.89601pt>
-File: sosequi-laser/comp-airy-kaw-glau.pdf Graphic file (type pdf)
-<use sosequi-laser/comp-airy-kaw-glau.pdf>
-Package pdftex.def Info: sosequi-laser/comp-airy-kaw-glau.pdf  used on input li
-ne 121.
-(pdftex.def)             Requested size: 209.12683pt x 156.8481pt.
-
-Underfull \vbox (badness 6110) has occurred while \output is active []
-
- [59 <./sosequi-laser/histo.pdf> <./sosequi-laser/loghisto.pdf
-
-pdfTeX warning: /usr/bin/pdflatex (file ./sosequi-laser/loghisto.pdf): PDF incl
-usion: multiple pdfs with page group included in a single page
->]
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \hbox (50.92105pt too wide) has occurred while \output is active
@@ -1344,29 +1318,27 @@ Overfull \hbox (50.92105pt too wide) has occurred while \output is active
 C CHAMP MAGNÉTIQUE CONFINANT
  []
 
-[60 <./sosequi-laser/comp-airy-kaw-glau.pdf>]
-Overfull \hbox (24.87733pt too wide) detected at line 183
-[]
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+[60]
+<sosequi-laser/etats-laser.pdf, id=1897, 462.52798pt x 346.89601pt>
+File: sosequi-laser/etats-laser.pdf Graphic file (type pdf)
+<use sosequi-laser/etats-laser.pdf>
+Package pdftex.def Info: sosequi-laser/etats-laser.pdf  used on input line 66.
+(pdftex.def)             Requested size: 209.12683pt x 156.8481pt.
+<sosequi-laser/energies-laser.pdf, id=1898, 462.52798pt x 346.89601pt>
+File: sosequi-laser/energies-laser.pdf Graphic file (type pdf)
+<use sosequi-laser/energies-laser.pdf>
+Package pdftex.def Info: sosequi-laser/energies-laser.pdf  used on input line 6
+9.
+(pdftex.def)             Requested size: 209.12683pt x 156.8481pt.
  [61]
-Overfull \hbox (50.71243pt too wide) detected at line 195
-[]
+Overfull \hbox (0.8905pt too wide) in paragraph at lines 82--85
+\T1/lmr/m/n/10.95 où le dé-no-mi-na-teur est une constante de nor-ma-li-sa-tion
+ uti-li-sant la sy-mé-trie $\OML/lmm/m/it/10.95 p\OT1/lmr/m/n/10.95 (\OML/lmm/m
+/it/10.95 h\OT1/lmr/m/n/10.95 ) = \OML/lmm/m/it/10.95 p\OT1/lmr/m/n/10.95 (\OMS
+/lmsy/m/n/10.95 ^^@\OML/lmm/m/it/10.95 h\OT1/lmr/m/n/10.95 )$\T1/lmr/m/n/10.95 
+.
  []
 
-<sosequi-laser/sigma-perp.pdf, id=2141, 462.52798pt x 346.89601pt>
-File: sosequi-laser/sigma-perp.pdf Graphic file (type pdf)
-<use sosequi-laser/sigma-perp.pdf>
-Package pdftex.def Info: sosequi-laser/sigma-perp.pdf  used on input line 213.
-(pdftex.def)             Requested size: 209.12683pt x 156.8481pt.
-<sosequi-laser/sigma-para.pdf, id=2142, 462.52798pt x 346.89601pt>
-File: sosequi-laser/sigma-para.pdf Graphic file (type pdf)
-<use sosequi-laser/sigma-para.pdf>
-Package pdftex.def Info: sosequi-laser/sigma-para.pdf  used on input line 216.
-(pdftex.def)             Requested size: 209.12683pt x 156.8481pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1376,21 +1348,90 @@ Overfull \hbox (50.92105pt too wide) has occurred while \output is active
 C CHAMP MAGNÉTIQUE CONFINANT
  []
 
-[62]
+[62 <./sosequi-laser/etats-laser.pdf> <./sosequi-laser/energies-laser.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./sosequi-laser/energies-laser.pdf): PD
+F inclusion: multiple pdfs with page group included in a single page
+>]
+<sosequi-laser/histo.pdf, id=1988, 462.52798pt x 346.89601pt>
+File: sosequi-laser/histo.pdf Graphic file (type pdf)
+<use sosequi-laser/histo.pdf>
+Package pdftex.def Info: sosequi-laser/histo.pdf  used on input line 109.
+(pdftex.def)             Requested size: 209.12683pt x 156.8481pt.
+<sosequi-laser/loghisto.pdf, id=1989, 462.52798pt x 346.89601pt>
+File: sosequi-laser/loghisto.pdf Graphic file (type pdf)
+<use sosequi-laser/loghisto.pdf>
+Package pdftex.def Info: sosequi-laser/loghisto.pdf  used on input line 112.
+(pdftex.def)             Requested size: 209.12683pt x 156.8481pt.
+<sosequi-laser/comp-airy-kaw-glau.pdf, id=1994, 462.52798pt x 346.89601pt>
+File: sosequi-laser/comp-airy-kaw-glau.pdf Graphic file (type pdf)
+<use sosequi-laser/comp-airy-kaw-glau.pdf>
+Package pdftex.def Info: sosequi-laser/comp-airy-kaw-glau.pdf  used on input li
+ne 121.
+(pdftex.def)             Requested size: 209.12683pt x 156.8481pt.
+
+Underfull \vbox (badness 6110) has occurred while \output is active []
+
+ [63 <./sosequi-laser/histo.pdf> <./sosequi-laser/loghisto.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./sosequi-laser/loghisto.pdf): PDF incl
+usion: multiple pdfs with page group included in a single page
+>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [63 <./sosequi-laser/sigma-perp.pdf> <./sosequi-laser/sigma-para.pdf
+
+Overfull \hbox (50.92105pt too wide) has occurred while \output is active
+\T1/lmr/m/n/10.95 64 \T1/lmr/m/sl/10.95 CHAPITRE 5.  INTERACTION GAUSSIENNE AVE
+C CHAMP MAGNÉTIQUE CONFINANT
+ []
+
+[64 <./sosequi-laser/comp-airy-kaw-glau.pdf>]
+Overfull \hbox (24.87733pt too wide) detected at line 183
+[]
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [65]
+Overfull \hbox (50.71243pt too wide) detected at line 195
+[]
+ []
+
+<sosequi-laser/sigma-perp.pdf, id=2159, 462.52798pt x 346.89601pt>
+File: sosequi-laser/sigma-perp.pdf Graphic file (type pdf)
+<use sosequi-laser/sigma-perp.pdf>
+Package pdftex.def Info: sosequi-laser/sigma-perp.pdf  used on input line 213.
+(pdftex.def)             Requested size: 209.12683pt x 156.8481pt.
+<sosequi-laser/sigma-para.pdf, id=2160, 462.52798pt x 346.89601pt>
+File: sosequi-laser/sigma-para.pdf Graphic file (type pdf)
+<use sosequi-laser/sigma-para.pdf>
+Package pdftex.def Info: sosequi-laser/sigma-para.pdf  used on input line 216.
+(pdftex.def)             Requested size: 209.12683pt x 156.8481pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (50.92105pt too wide) has occurred while \output is active
+\T1/lmr/m/n/10.95 66 \T1/lmr/m/sl/10.95 CHAPITRE 5.  INTERACTION GAUSSIENNE AVE
+C CHAMP MAGNÉTIQUE CONFINANT
+ []
+
+[66]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [67 <./sosequi-laser/sigma-perp.pdf> <./sosequi-laser/sigma-para.pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ./sosequi-laser/sigma-para.pdf): PDF in
 clusion: multiple pdfs with page group included in a single page
 >]
-<sosequi-laser/ene-kaw-airy.pdf, id=2270, 462.52798pt x 346.89601pt>
+<sosequi-laser/ene-kaw-airy.pdf, id=2289, 462.52798pt x 346.89601pt>
 File: sosequi-laser/ene-kaw-airy.pdf Graphic file (type pdf)
 <use sosequi-laser/ene-kaw-airy.pdf>
 Package pdftex.def Info: sosequi-laser/ene-kaw-airy.pdf  used on input line 256
 .
 (pdftex.def)             Requested size: 209.12683pt x 156.8481pt.
-<sosequi-laser/sigma-kaw-airy.pdf, id=2271, 462.52798pt x 346.89601pt>
+<sosequi-laser/sigma-kaw-airy.pdf, id=2290, 462.52798pt x 346.89601pt>
 File: sosequi-laser/sigma-kaw-airy.pdf Graphic file (type pdf)
 <use sosequi-laser/sigma-kaw-airy.pdf>
 Package pdftex.def Info: sosequi-laser/sigma-kaw-airy.pdf  used on input line 2
@@ -1398,41 +1439,35 @@ Package pdftex.def Info: sosequi-laser/sigma-kaw-airy.pdf  used on input line 2
 (pdftex.def)             Requested size: 209.12683pt x 156.8481pt.
 
 Overfull \hbox (50.92105pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10.95 64 \T1/lmr/m/sl/10.95 CHAPITRE 5.  INTERACTION GAUSSIENNE AVE
+\T1/lmr/m/n/10.95 68 \T1/lmr/m/sl/10.95 CHAPITRE 5.  INTERACTION GAUSSIENNE AVE
 C CHAMP MAGNÉTIQUE CONFINANT
  []
 
-[64] [65 <./sosequi-laser/ene-kaw-airy.pdf> <./sosequi-laser/sigma-kaw-airy.pdf
+[68] [69 <./sosequi-laser/ene-kaw-airy.pdf> <./sosequi-laser/sigma-kaw-airy.pdf
 
 
 pdfTeX warning: /usr/bin/pdflatex (file ./sosequi-laser/sigma-kaw-airy.pdf): PD
 F inclusion: multiple pdfs with page group included in a single page
 >]) (./main.bbl
 Overfull \hbox (50.92105pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10.95 66 \T1/lmr/m/sl/10.95 CHAPITRE 5.  INTERACTION GAUSSIENNE AVE
+\T1/lmr/m/n/10.95 70 \T1/lmr/m/sl/10.95 CHAPITRE 5.  INTERACTION GAUSSIENNE AVE
 C CHAMP MAGNÉTIQUE CONFINANT
  []
 
-[66] [67
+[70] [71
 
-] [68] [69] [70]
-Underfull \hbox (badness 1152) in paragraph at lines 304--309
-\T1/lmr/m/n/10.95 dissipation re-la-tion in a shea-red fluid.  \T1/lmr/m/it/10.
-95 The Jour-nal of Che-mi-cal Phy-sics\T1/lmr/m/n/10.95 ,
- []
-
-[71] [72] [73] [74])
+] [72] [73] [74] [75] [76] [77])
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 92.
-[75]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 92.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 98.
+[78]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 98.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 92.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 92.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 98.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 98.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 8697178A7F4E026185410C6BE6624822;3373.
+(rerunfilecheck)             Checksum: D56DD5F05710CD97D038CA5D61F6E9A4;3334.
 
 
 LaTeX Warning: There were undefined references.
@@ -1440,21 +1475,18 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 92.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 98.
  ) 
 Here is how much of TeX's memory you used:
- 21602 strings out of 492609
- 379778 string characters out of 6131462
+ 21608 strings out of 492609
+ 379140 string characters out of 6131462
  596036 words of memory out of 5000000
- 24774 multiletter control sequences out of 15000+600000
+ 24754 multiletter control sequences out of 15000+600000
  634679 words of font info for 105 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 47i,20n,65p,1280b,856s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.9} has been referenced but does not exi
+ 47i,20n,65p,1280b,812s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{Hfootnote.8} has been referenced but does not exi
 st, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.8} has been referenced but does not exist
-, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.7} has been referenced but does not exist
 , replaced by a fixed one
@@ -1503,10 +1535,10 @@ fonts/type1/public/lm/lmro10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10
 type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></u
 sr/share/texmf/fonts/type1/public/lm/lmtt9.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on main.pdf (81 pages, 1394222 bytes).
+Output written on main.pdf (84 pages, 1395867 bytes).
 PDF statistics:
- 2607 PDF objects out of 2984 (max. 8388607)
- 1723 compressed objects within 18 object streams
- 437 named destinations out of 1000 (max. 500000)
- 566 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2627 PDF objects out of 2984 (max. 8388607)
+ 1740 compressed objects within 18 object streams
+ 464 named destinations out of 1000 (max. 500000)
+ 561 words of extra memory for PDF output out of 10000 (max. 10000000)
 
