@@ -17,6 +17,7 @@ Les configurations d'équilibre possibles proviennent du compromis entre la mini
 La mesure des observables nécessite une connaissance parfaite de la dérivée de la fonction de partition $\mZ$, et donc d'explorer l'espace des phases des configurations du système. Les appareils de mesure possèdent tous une résolution spatiale et temporelle, c'est-à-dire qu'ils mesurent l'état moyen de toutes les particules dans un volume et dans un laps de temps donné. Plus la résolution des appareils de mesure est bonne, et plus la mesure des observables dérivées de la fonction de partition est précise. Si $\Phi(\mx,t)$ est le champ réel de l'observable du système, alors l'appareil, possédant une précision dans le temps et l'espace de $(dt,2dx,2dy,2dz)$ mesure le champ
 \begin{align}
     \phi(\mx,t) = \frac{1}{8~ dt~ dx~ dy~ dz} \int_{t-dt}^{t} dt' \int_{x-dx}^{x+dx} dx' \int_{y-dy}^{y+dy} dy' \int_{z-dz}^{z+dz} dz' \Phi(x,y,z,t)
+    \label{renormalisation}
 \end{align}
 
 
@@ -98,7 +99,7 @@ où $\phi_{MF}$ est la solution de champ moyen qui minimise $H$, c'est-à-dire
     \label{equi-hamil}
 \end{align}
 
-Considérons maintenant l'Hamiltonien décrivant les modèles de type Ising
+Considérons maintenant l'Hamiltonien 
 \begin{align}
     H[\phi] = \int d \mx  \frac{\kappa}{2}[{\boldsymbol \nabla} \phi]^2 + V(\phi)
     \label{hamil-mean-field}
@@ -376,7 +377,7 @@ La détection expérimentale de ce phénomène se fait traditionnellement dans d
 %%%%%%%%%%%%%%%%%%%%%%%%%%
     \subsection{Intégration sur le paramètre d'ordre}
 %%%%%%%%%%%%%%%%%%%%%%%%%%    
-
+{\color{red} mettre dans le chapitre 3. C'est une méthode numérique que j'ai utilisé.}
 Afin d'isoler la force de Casimir du terme de volume dans la force de confinement, il convient de retirer la force de confinement d'un système de taille différente. Ainsi, pour deux systèmes de taille $L_1 \less L_2$, on a 
 \begin{align}
     F(t,h,L_1) - F(t,h,L_2) = f_c(t,h,L_1) - f_c(t,h,L_2) =  - \frac{\partial \Omega(t,h,L_1)}{\partial L}  + \frac{\partial \Omega(t,h,L_2)}{\partial L} 
@@ -391,9 +392,9 @@ Or, nous savons grâce à l'équation \ref{moyenne-phi} que dans le cas d'un cha
 \begin{align}
     <\phi(\mx)>(t,h,L) = - \frac{\delta \Omega(t,h,L)}{\delta h(\mx)}
 \end{align} 
-Si on pose $h(\mx) = h \phi(\mx)$, alors il est possible d'obtenir une différence entre deux énergies libres à champs magnétiques différents \cite{lopes_cardozo_critical_2014} 
+Si on pose $h(\mx) = h$, alors il est possible d'obtenir une différence entre deux énergies libres à champs magnétiques différents \cite{lopes_cardozo_critical_2014} 
 \begin{align}
-    \Delta \Omega = \Omega(t,h_1,L) - \Omega(t,h_2,L) = - \int_{h_1}^{h_2} <\phi(\mx)>(t,h,L) d\mx
+    \Delta \Omega = \Omega(t,h_1,L) - \Omega(t,h_2,L) = - \int_{h_1}^{h_2} <\phi(\mx)>(t,h,L) dh
     \label{integration-cardozo}
 \end{align}
 Dans le cas où l'on connait la configuration lorsque $h_2 \to \infty$ ou $h_1 \to 0$, il est possible de mesurer directement l'énergie libre d'un système pour n'importe quelle température et taille en intégrant selon \ref{integration-cardozo}. Dans le cas où $h_2 \to \infty$, le potentiel en double-puit \ref{phi4} ne possède qu'un seul minimum, l'énergie libre d'un tel système est alors uniquement lié à l'énergie libre du volume.
@@ -619,7 +620,7 @@ L'équation finale de la dynamique de l'interface pour le modèle B dans l'espac
     \frac{\partial h({\bf k},t)}{\partial t} = -\frac{Dk^3\sigma}{2\phi_c^2} \tilde h({\bf k},t) + \tilde \xi({\bf k},t)
     \label{modBFT}
 \end{align}
-On obtient au final, dans l'espace réel, l'équation de Lai-Das Sarma \cite{lai_kinetic_1991}
+On obtient au final, dans l'espace réel, 
 \begin{align}
     \frac{\partial h(\mx)}{\partial t}= -L \frac{\delta H_{eff}}{\delta h (\mx)} + \xi(\mx,t)
 \end{align}
@@ -655,8 +656,8 @@ où l'opérateur $L$ est défini dans l'espace de Fourier par
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Les systèmes à l'équilibre ont la particularité que les états ont une probabilité en accord avec la distribution de Gibbs-Boltzmann \ref{eqdis}, c'est-à-dire que le courant \ref{courant} est nul. La manière la plus simple de mettre le système hors-équilibre est donc d'induire un courant dans le champ $\phi(\mx,t)$. L'évolution d'un système depuis une condition initiale vers ses configurations d'équilibre est le moyen le plus simple d'étudier les conditions hors équilibre. On retrouve également dans le régime stationnaire beaucoup de systèmes hors-équilibre. Expérimentalement, les colloïdes sédimentant dans un champ gravitationel induisent un écoulement hors-équilibre. Il est également possible d'induire un flux sur des particules chargées dans un champ électrique via la pression de radiation exercée par un laser ou par un cisaillement dans un liquide visqueux\cite{girot_conical_2019}. Cette dynamique étant locale, elle ne peut exister que si le paramètre d'ordre est conservé. L'équation générale d'un système d'interface avec un cisaillement est\cite{bray_interface_2001-1,bray_interface_2001}
-\begin{align}
-     \frac{\partial h(\mr,t)}{\partial t} + {\boldsymbol \nabla} (\mv(\mx,t) h(\mr,t)) =  L H[h] +  \eta(x,t)
+\begin{align}s
+     \frac{\partial h(\mr,t)}{\partial t} + {\boldsymbol \nabla} (\mv(\mx,t) h(\mr,t)) =  L \frac{\partial H[h]}{\partial h(\mx)} +  \eta(\mr,t)
 \end{align}
 où $L$ est l'opérateur défini pour le modèle B à l'équation \ref{op-mb} et $\mv(\mx,t)$ est un champ de vitesse quelconque. 
 Un champ de vitesse d'intérêt est celui un champ de cisaillement de la forme 

@@ -32,6 +32,7 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {1.1}{\ignorespaces Ph\IeC {\'e}nom\IeC {\`e}ne d'aggr\IeC {\'e}gation \IeC {\`a} partir d'une trempe (\textit  {quench}) dans un mod\IeC {\`e}le d'Ising de $T=\infty $ \IeC {\`a} $T=T_{2D,C}$ \cite  {onsager_crystal_1944} pour diff\IeC {\'e}rents temps en \IeC {\'e}tapes de Monte Carlo, pour un syst\IeC {\`e}me $600 \times 600$ avec une dynamique non-conserv\IeC {\'e}e de Glauber.\relax }}{2}{figure.caption.3}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{clusterization}{{1.1}{2}{Phénomène d'aggrégation à partir d'une trempe (\textit {quench}) dans un modèle d'Ising de $T=\infty $ à $T=T_{2D,C}$ \cite {onsager_crystal_1944} pour différents temps en étapes de Monte Carlo, pour un système $600 \times 600$ avec une dynamique non-conservée de Glauber.\relax }{figure.caption.3}{}}
+\newlabel{renormalisation}{{1.1}{3}{Équations dynamiques des systèmes statistiques}{equation.1.0.1}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {1.1}\IeC {\'E}quation dynamique d'un champ}{3}{section.1.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.1.1}Champ avec un nombre de degr\IeC {\'e}s de libert\IeC {\'e} fini}{3}{subsection.1.1.1}\protected@file@percent }
 \newlabel{eqdis}{{1.3}{3}{Champ avec un nombre de degrés de liberté fini}{equation.1.1.3}{}}
@@ -98,7 +99,6 @@
 \newlabel{ew}{{1.87}{18}{Modèle A}{equation.1.3.87}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.3.2}Mod\IeC {\`e}le B}{19}{subsection.1.3.2}\protected@file@percent }
 \newlabel{bstep}{{1.97}{20}{Modèle B}{equation.1.3.97}{}}
-\citation{lai_kinetic_1991}
 \citation{girot_conical_2019}
 \citation{bray_interface_2001-1,bray_interface_2001}
 \newlabel{modBFT}{{1.106}{21}{Modèle B}{equation.1.3.106}{}}
@@ -113,91 +113,98 @@
 \@writefile{toc}{\contentsline {section}{\numberline {1.5}Conclusion}{23}{section.1.5}\protected@file@percent }
 \citation{onsager_crystal_1944}
 \citation{talapov_magnetization_1996}
-\citation{niss_history_2005}
-\citation{niss_history_2009}
-\@writefile{toc}{\contentsline {chapter}{\numberline {2}Mod\IeC {\`e}le Solid-On-Solid}{25}{chapter.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {2}Mod\IeC {\`e}les sur r\IeC {\'e}seaux}{25}{chapter.2}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{chap-sos}{{2}{25}{Modèle Solid-On-Solid}{chapter.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.1}Le mod\IeC {\`e}le d'Ising}{25}{section.2.1}\protected@file@percent }
+\newlabel{chap-sos}{{2}{25}{Modèles sur réseaux}{chapter.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces Photo d'un mod\IeC {\`e}le d'Ising pour deux temp\IeC {\'e}ratures diff\IeC {\'e}rentes($T=0.7 T_C$ et $T=0.95 T_C$ ) avec des conditions p\IeC {\'e}riodiques aux bords en X et fix\IeC {\'e}s en Y qui forcent la pr\IeC {\'e}sence d'une interface entre les phases $+$ (rose) et $-$ (blanc) du syst\IeC {\`e}me. Plus la temp\IeC {\'e}rature est \IeC {\'e}lev\IeC {\'e}e et plus l'interface fluctue, jusqu'\IeC {\`a} cesser d'exister pour $T \greater T_C$. \relax }}{26}{figure.caption.6}\protected@file@percent }
+\newlabel{amas-fixe}{{2.1}{26}{Photo d'un modèle d'Ising pour deux températures différentes($T=0.7 T_C$ et $T=0.95 T_C$ ) avec des conditions périodiques aux bords en X et fixés en Y qui forcent la présence d'une interface entre les phases $+$ (rose) et $-$ (blanc) du système. Plus la température est élevée et plus l'interface fluctue, jusqu'à cesser d'exister pour $T \greater T_C$. \relax }{figure.caption.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.1}Le mod\IeC {\`e}le d'Ising}{26}{section.2.1}\protected@file@percent }
+\newlabel{discretisation-landau}{{2.3}{26}{Le modèle d'Ising}{equation.2.1.3}{}}
+\citation{niss_history_2005,niss_history_2009}
+\citation{de_jongh_experiments_1974,wp_wold_ising_2000,ikeda_neutron_nodate}
+\citation{onsager_crystal_1944}
+\citation{preis_gpu_2009}
 \citation{goldenfeld_lectures_2018}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces Photo d'un mod\IeC {\`e}le d'Ising \IeC {\`a} deux temp\IeC {\'e}ratures diff\IeC {\'e}rentes($T=0.7 T_C$ et $T=0.95 T_C$ ) avec des conditions p\IeC {\'e}riodiques aux bords en X et fix\IeC {\'e}s en Y qui forcent la pr\IeC {\'e}sence d'une interface entre les phases $+$ (rose) et $-$ (blanc) du syst\IeC {\`e}me. Plus la temp\IeC {\'e}rature est \IeC {\'e}lev\IeC {\'e}e et plus l'interface fluctue, jusqu'\IeC {\`a} cesser d'exister pour $T \greater T_C$. \relax }}{26}{figure.caption.6}\protected@file@percent }
-\newlabel{amas-fixe}{{2.1}{26}{Photo d'un modèle d'Ising à deux températures différentes($T=0.7 T_C$ et $T=0.95 T_C$ ) avec des conditions périodiques aux bords en X et fixés en Y qui forcent la présence d'une interface entre les phases $+$ (rose) et $-$ (blanc) du système. Plus la température est élevée et plus l'interface fluctue, jusqu'à cesser d'exister pour $T \greater T_C$. \relax }{figure.caption.6}{}}
-\newlabel{hamil-ising}{{2.1}{26}{Le modèle d'Ising}{equation.2.1.1}{}}
+\newlabel{hamil-ising}{{2.4}{27}{Le modèle d'Ising}{equation.2.1.4}{}}
 \citation{stecki_magnetization_1994}
-\citation{stecki_magnetization_1994}
-\citation{stecki_magnetization_1994}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.1}Charact\IeC {\'e}risation de l'interface}{28}{subsection.2.1.1}\protected@file@percent }
 \citation{abraham_transfer_1973,abraham_interface_1976,richards_numerical_1993}
-\citation{girot_conical_2019}
-\citation{hobrecht_critical_2017}
-\citation{vasilyev_monte_2007,vasilyev_universal_2009,cardozo_finite_2015}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces Profil de magn\IeC {\'e}tisation $m(z)$ d'une interface en 2D pour diff\IeC {\'e}rentes temp\IeC {\'e}ratures en unit\IeC {\'e} de $T_C$ via la diagonalisation de la matrice de transfert du mod\IeC {\`e}le d'Ising \cite  {stecki_magnetization_1994}. Plus la temp\IeC {\'e}rature est faible et plus elle est localis\IeC {\'e}e.\relax }}{27}{figure.caption.7}\protected@file@percent }
-\newlabel{interface-ising}{{2.2}{27}{Profil de magnétisation $m(z)$ d'une interface en 2D pour différentes températures en unité de $T_C$ via la diagonalisation de la matrice de transfert du modèle d'Ising \cite {stecki_magnetization_1994}. Plus la température est faible et plus elle est localisée.\relax }{figure.caption.7}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.1}Crossover Hamiltonian}{27}{subsection.2.1.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces Une configuration possible de mod\IeC {\`e}le SOS. Dans la i-\IeC {\`e}me colonne le bord horizontal de l'interface passe \IeC {\`a} la hauteur $h_i$. Toutes les particules au-dessus de l'interface sont des spins positifs et n\IeC {\'e}gatifs en dessous. La repr\IeC {\'e}sentation classique du mod\IeC {\`e}le SOS diff\IeC {\`e}re de ce sch\IeC {\'e}ma par l'hypoth\IeC {\`e}se que les particules sont discernables (cf figure \ref  {figure-pop}).\relax }}{28}{figure.caption.8}\protected@file@percent }
-\newlabel{figure-sos}{{2.3}{28}{Une configuration possible de modèle SOS. Dans la i-ème colonne le bord horizontal de l'interface passe à la hauteur $h_i$. Toutes les particules au-dessus de l'interface sont des spins positifs et négatifs en dessous. La représentation classique du modèle SOS diffère de ce schéma par l'hypothèse que les particules sont discernables (cf figure \ref {figure-pop}).\relax }{figure.caption.8}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.2}Hamiltonien}{28}{section.2.2}\protected@file@percent }
+\citation{vasilyev_monte_2007}
+\citation{vasilyev_monte_2007}
+\citation{vasilyev_monte_2007}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.2}M\IeC {\'e}thode de calcul de la force de Casimir}{29}{subsection.2.1.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces D\IeC {\'e}couplage progressif de la $k$-i\IeC {\`e}me couche du syst\IeC {\`e}me afin de calculer la variation de l'\IeC {\'e}nergie libre gr\IeC {\^a}ce \IeC {\`a} l'Hamiltonien de transition. Les liens en bleu ont une \IeC {\'e}nergie de $\beta J$, les liens en rouge une \IeC {\'e}nergie de $\lambda \beta J $ et les liens en vert une \IeC {\'e}nergie de $ (1-\lambda ) \beta J$. Reproduction 2D de \cite  {vasilyev_monte_2007}.\relax }}{30}{figure.caption.7}\protected@file@percent }
+\newlabel{decouplage}{{2.2}{30}{Découplage progressif de la $k$-ième couche du système afin de calculer la variation de l'énergie libre grâce à l'Hamiltonien de transition. Les liens en bleu ont une énergie de $\beta J$, les liens en rouge une énergie de $\lambda \beta J $ et les liens en vert une énergie de $ (1-\lambda ) \beta J$. Reproduction 2D de \cite {vasilyev_monte_2007}.\relax }{figure.caption.7}{}}
+\newlabel{hamil-trans}{{2.16}{30}{Méthode de calcul de la force de Casimir}{equation.2.1.16}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Mod\IeC {\`e}le Solid-On-Solid}{31}{section.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}D\IeC {\'e}finition du mod\IeC {\`e}le}{31}{subsection.2.2.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces Une configuration possible de mod\IeC {\`e}le SOS. Dans la i-\IeC {\`e}me colonne le bord horizontal de l'interface passe \IeC {\`a} la hauteur $h_i$. Toutes les particules au-dessus de l'interface sont des spins positifs, et n\IeC {\'e}gatifs en dessous. La repr\IeC {\'e}sentation classique du mod\IeC {\`e}le SOS diff\IeC {\`e}re de ce sch\IeC {\'e}ma par l'hypoth\IeC {\`e}se que les particules sont discernables (voir Chapitre \ref  {chap-pop}). {\color  {red} David : pourquoi tu veux mettre cette figure dans un autre chapitre ??}\relax }}{32}{figure.caption.8}\protected@file@percent }
+\newlabel{figure-sos}{{2.3}{32}{Une configuration possible de modèle SOS. Dans la i-ème colonne le bord horizontal de l'interface passe à la hauteur $h_i$. Toutes les particules au-dessus de l'interface sont des spins positifs, et négatifs en dessous. La représentation classique du modèle SOS diffère de ce schéma par l'hypothèse que les particules sont discernables (voir Chapitre \ref {chap-pop}). {\color {red} David : pourquoi tu veux mettre cette figure dans un autre chapitre ??}\relax }{figure.caption.8}{}}
+\citation{gilmer_simulation_1972}
+\citation{elwenspoek_kinetic_1987}
+\citation{wilby_scaling_1992}
+\citation{gompper_steric_1989}
+\citation{privman_transfer-matrix_1989}
+\citation{kim_conserved_1994,vaysburd_critical_1995}
+\newlabel{energie-sos-ising}{{2.24}{33}{Définition du modèle}{equation.2.2.24}{}}
+\newlabel{hamil-sos}{{2.26}{33}{Définition du modèle}{equation.2.2.26}{}}
 \citation{knops_exact_1977}
 \citation{owczarek_exact_1993}
 \citation{majumdar_airy_2005,schehr_universal_2006}
-\newlabel{energie-sos-ising}{{2.5}{29}{Hamiltonien}{equation.2.2.5}{}}
-\newlabel{hamil-sos}{{2.6}{29}{Hamiltonien}{equation.2.2.6}{}}
-\citation{privman_transfer-matrix_1989}
-\citation{kim_conserved_1994,vaysburd_critical_1995}
+\citation{siegert_scaling_1993}
+\newlabel{hamil-gsos}{{2.27}{34}{Définition du modèle}{equation.2.2.27}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}Ensemble grand-canonique et potentiel chimique}{34}{subsection.2.2.2}\protected@file@percent }
+\newlabel{subsec-c-gc}{{2.2.2}{34}{Ensemble grand-canonique et potentiel chimique}{subsection.2.2.2}{}}
+\newlabel{hamil-sos-cano}{{2.28}{34}{Ensemble grand-canonique et potentiel chimique}{equation.2.2.28}{}}
+\newlabel{tm-sos-grand-cano}{{2.32}{35}{Ensemble grand-canonique et potentiel chimique}{equation.2.2.32}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces Position d'\IeC {\'e}quilibre de l'interface \ref  {tm-sos-grand-cano} en fonction de $- \mu $ via diagonalisation de la matrice de transfert \ref  {tm-sos-grand-cano}. Lorsque le potentiel chimique est trop faible, l'interface est d\IeC {\'e}localis\IeC {\'e}e et se retrouve \IeC {\`a} la position $\frac  {N}{2}$. \relax }}{36}{figure.caption.9}\protected@file@percent }
+\newlabel{hauteur-mu}{{2.4}{36}{Position d'équilibre de l'interface \ref {tm-sos-grand-cano} en fonction de $- \mu $ via diagonalisation de la matrice de transfert \ref {tm-sos-grand-cano}. Lorsque le potentiel chimique est trop faible, l'interface est délocalisée et se retrouve à la position $\frac {N}{2}$. \relax }{figure.caption.9}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.3}Matrice de Transfert}{36}{subsection.2.2.3}\protected@file@percent }
 \citation{pearce_exact_1989}
 \citation{abraham_transfer_1973}
-\@writefile{toc}{\contentsline {section}{\numberline {2.3}Matrice de Transfert}{30}{section.2.3}\protected@file@percent }
-\newlabel{matric-transfert}{{2.7}{30}{Matrice de Transfert}{equation.2.3.7}{}}
-\newlabel{partition-trace-lambda}{{2.8}{30}{Matrice de Transfert}{equation.2.3.8}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces Matrice de transfert infinie et symm\IeC {\'e}trique \ref  {matric-transfert}.\relax }}{31}{figure.caption.9}\protected@file@percent }
-\newlabel{energie-libre-site}{{2.10}{31}{Matrice de Transfert}{equation.2.3.10}{}}
-\newlabel{tm-magnetisation}{{2.12}{31}{Matrice de Transfert}{equation.2.3.12}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces Matrice de transfert infinie et symm\IeC {\'e}trique \ref  {matric-transfert}.\relax }}{37}{figure.caption.10}\protected@file@percent }
+\newlabel{mat-inf}{{2.5}{37}{Matrice de transfert infinie et symmétrique \ref {matric-transfert}.\relax }{figure.caption.10}{}}
+\newlabel{matric-transfert}{{2.34}{37}{Matrice de Transfert}{equation.2.2.34}{}}
+\newlabel{partition-trace-lambda}{{2.37}{37}{Matrice de Transfert}{equation.2.2.37}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces \IeC {\'E}nergie libre par site $F(L')$ en fonction du nombre de sites $L'$ compar\IeC {\'e} \IeC {\`a} la limite thermodynamique $F(\infty )$, pour un syst\IeC {\`e}me de hauteur $L=100$, $\beta =1$, $J=1$ et $V(h_i)=0$.\relax }}{38}{figure.caption.11}\protected@file@percent }
+\newlabel{fig-thermo-libre}{{2.6}{38}{Énergie libre par site $F(L')$ en fonction du nombre de sites $L'$ comparé à la limite thermodynamique $F(\infty )$, pour un système de hauteur $L=100$, $\beta =1$, $J=1$ et $V(h_i)=0$.\relax }{figure.caption.11}{}}
+\newlabel{energie-libre-site}{{2.40}{38}{Matrice de Transfert}{equation.2.2.40}{}}
+\newlabel{tm-magnetisation}{{2.42}{38}{Matrice de Transfert}{equation.2.2.42}{}}
+\newlabel{longueur-correl-thermo}{{2.47}{39}{Matrice de Transfert}{equation.2.2.47}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.4}\IeC {\'E}tats libres dans un syst\IeC {\`e}me SOS infini}{39}{subsection.2.2.4}\protected@file@percent }
+\newlabel{par-stab}{{2.2.4}{39}{États libres dans un système SOS infini}{subsection.2.2.4}{}}
 \citation{guyer_sine-gordon_1979,chui_pinning_1981}
-\newlabel{longueur-correl-thermo}{{2.15}{32}{Matrice de Transfert}{equation.2.3.15}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.4}Stabilit\IeC {\'e} de l'interface}{32}{section.2.4}\protected@file@percent }
-\newlabel{par-stab}{{2.4}{32}{Stabilité de l'interface}{section.2.4}{}}
-\newlabel{lambda-sos}{{2.19}{32}{Stabilité de l'interface}{equation.2.4.19}{}}
 \citation{chui_pinning_1999,chalker_pinning_1981,chalker_pinning_1982}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces Plus grande valeur propre d'une interface libre en fonction de la taille $L$ du syst\IeC {\`e}me ayant pour limite \ref  {lambda-sos} avec $k=0$ pour $\beta = 1$ (gauche) ; \IeC {\'e}nergie libre par site calcul\IeC {\'e}e via l'approximation de la limite thermodynamique \ref  {energie-libre-site} compar\IeC {\'e} \IeC {\`a} la vraie fonction de partition \ref  {partition-trace-lambda} en fonction de la taille $L$ du syst\IeC {\`e}me pour $\beta = 1$ (droite).\relax }}{33}{figure.caption.10}\protected@file@percent }
+\newlabel{lambda-sos}{{2.52}{40}{États libres dans un système SOS infini}{equation.2.2.52}{}}
 \citation{burkhardt_localisation-delocalisation_1981,kroll_solid--solid_1981,kroll_pinning_1982,kroll_interface_1983}
 \citation{casner_laser-induced_2003,delville_laser_2009}
-\citation{siegert_scaling_1993}
-\@writefile{toc}{\contentsline {section}{\numberline {2.5}\IeC {\'E}quivalence des ensembles}{34}{section.2.5}\protected@file@percent }
-\newlabel{hamil-sos-cano}{{2.27}{34}{Équivalence des ensembles}{equation.2.5.27}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces Dans un mod\IeC {\`e}le d'Ising \IeC {\`a} 1D, afin d'avoir une magn\IeC {\'e}tisation moyenne du syst\IeC {\`e}me \IeC {\`a} $<M>=2$, tous les \IeC {\'e}tats sont accept\IeC {\'e}s tant qu'il y en a d'autres afin de respecter la moyenne. Dans l'ensemble canonique, on n'a plus $<M>=2$ mais $M=2$, interdisant les micro-\IeC {\'e}tats rouges.\relax }}{35}{figure.caption.11}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2.7}{\ignorespaces Position d'\IeC {\'e}quilibre de l'interface \ref  {tm-sos-grand-cano} en fonction de $- \mu $ via diagonalisation de la matrice de transfert \ref  {tm-sos-grand-cano}. Lorsque le potentiel chimique est trop faible, l'interface est d\IeC {\'e}localis\IeC {\'e}e et se retrouve \IeC {\`a} la position $\frac  {N}{2}$. \relax }}{36}{figure.caption.12}\protected@file@percent }
-\newlabel{hauteur-mu}{{2.7}{36}{Position d'équilibre de l'interface \ref {tm-sos-grand-cano} en fonction de $- \mu $ via diagonalisation de la matrice de transfert \ref {tm-sos-grand-cano}. Lorsque le potentiel chimique est trop faible, l'interface est délocalisée et se retrouve à la position $\frac {N}{2}$. \relax }{figure.caption.12}{}}
-\newlabel{tm-sos-grand-cano}{{2.29}{36}{Équivalence des ensembles}{equation.2.5.29}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.6}Mod\IeC {\`e}le de particules : le mod\IeC {\`e}le POP}{36}{section.2.6}\protected@file@percent }
-\newlabel{hamil-pop}{{2.30}{36}{Modèle de particules : le modèle POP}{equation.2.6.30}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.8}{\ignorespaces Position d'\IeC {\'e}quilibre de l'interface \ref  {tm-magnetisation} en fonction de $\mu $ via diagonalisation de la matrice de transfert \ref  {tm-sos-grand-cano}.\relax }}{37}{figure.caption.13}\protected@file@percent }
-\newlabel{figure-pop}{{2.8}{37}{Position d'équilibre de l'interface \ref {tm-magnetisation} en fonction de $\mu $ via diagonalisation de la matrice de transfert \ref {tm-sos-grand-cano}.\relax }{figure.caption.13}{}}
-\newlabel{position-hauteur-pop}{{2.32}{37}{Modèle de particules : le modèle POP}{equation.2.6.32}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.7}Conclusion}{37}{section.2.7}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2.9}{\ignorespaces Position d'\IeC {\'e}quilibre de l'interface \ref  {tm-magnetisation} en fonction de $\mu $ via diagonalisation de la matrice de transfert \ref  {hamil-pop}. La solution analytique \ref  {position-hauteur-pop} (en pointill\IeC {\'e}s) correspond lorsque le potentiel chimique n'est plus n\IeC {\'e}gligeable. La bosse \IeC {\`a} $\mu \simeq 7$ est due \IeC {\`a} un overflow dans le calcul de la matrice de transfert sous Python.\relax }}{38}{figure.caption.14}\protected@file@percent }
-\newlabel{figure-pop}{{2.9}{38}{Position d'équilibre de l'interface \ref {tm-magnetisation} en fonction de $\mu $ via diagonalisation de la matrice de transfert \ref {hamil-pop}. La solution analytique \ref {position-hauteur-pop} (en pointillés) correspond lorsque le potentiel chimique n'est plus négligeable. La bosse à $\mu \simeq 7$ est due à un overflow dans le calcul de la matrice de transfert sous Python.\relax }{figure.caption.14}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.10}{\ignorespaces \IeC {\'E}nergie par site entre les mod\IeC {\`e}les d'Ising (\ref  {hamil-ising}) (avec conditions fixes en $y$), SOS et RSOS (\ref  {hamil-sos}) et POP (\ref  {hamil-pop}) en fonction de la temp\IeC {\'e}rature via des simulations de Monte Carlo pour $L_X=64$, $L_Y=51$ et $J=1$ avec des conditions p\IeC {\'e}riodiques en $x$. La configuration intiale est la configuration \IeC {\`a} $T=0$ d'une interface parfaitement lisse. {\color  {red} Besoin refaire Ising avec MCIA. et ajouter $J\to 2J$ dans la simu pour SOS} \relax }}{39}{figure.caption.15}\protected@file@percent }
-\newlabel{comparaison-modeles}{{2.10}{39}{Énergie par site entre les modèles d'Ising (\ref {hamil-ising}) (avec conditions fixes en $y$), SOS et RSOS (\ref {hamil-sos}) et POP (\ref {hamil-pop}) en fonction de la température via des simulations de Monte Carlo pour $L_X=64$, $L_Y=51$ et $J=1$ avec des conditions périodiques en $x$. La configuration intiale est la configuration à $T=0$ d'une interface parfaitement lisse. {\color {red} Besoin refaire Ising avec MCIA. et ajouter $J\to 2J$ dans la simu pour SOS} \relax }{figure.caption.15}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {3}Simulations}{41}{chapter.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Conclusion}{42}{section.2.3}\protected@file@percent }
+\citation{metropolis_monte_1949}
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}M\IeC {\'e}thodes num\IeC {\'e}riques}{43}{chapter.3}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{chap-sim}{{3}{41}{Simulations}{chapter.3}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.1}Algorithme de Metropolis}{41}{section.3.1}\protected@file@percent }
+\newlabel{chap-sim}{{3}{43}{Méthodes numériques}{chapter.3}{}}
 \citation{newman_monte_1999}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Algorithme de Monte Carlo Metropolis}{44}{section.3.1}\protected@file@percent }
+\citation{newman_monte_1999}
+\newlabel{norm}{{3.5}{45}{Algorithme de Monte Carlo Metropolis}{equation.3.1.5}{}}
+\newlabel{p-eq-mc}{{3.7}{45}{Algorithme de Monte Carlo Metropolis}{equation.3.1.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Suite}{47}{section.3.2}\protected@file@percent }
 \citation{newman_monte_1999}
 \citation{frenkel_speed-up_2004}
 \citation{wansleben_monte_1991}
-\newlabel{tau_cor}{{3.7}{43}{Algorithme de Metropolis}{equation.3.1.7}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1}Ensemble grand-canonique : algorithme de Glauber}{43}{subsection.3.1.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Courbe de l'\IeC {\'e}nergie (haut) et fonction d'auto-corr\IeC {\'e}lation (bas) dans avec un \textbf  {param\IeC {\`e}tre d'ordre non-conserv\IeC {\'e}} \IeC {\`a} partir de la condition initiale. Le temps d'\IeC {\'e}quilibrage (en \IeC {\'e}tapes de Monte Carlo) diminue avec la temp\IeC {\'e}rature, tandis que le temps de corr\IeC {\'e}lation reste relativement constant. Le temps de corr\IeC {\'e}lation \IeC {\'e}tant extr\IeC {\^e}mement faible, $10^7$ \IeC {\'e}tapes de Monte Carlo suffisent \IeC {\`a} avoir une erreur de moins de $0.1\%$ sur les moyennes mesur\IeC {\'e}es.\relax }}{44}{figure.caption.16}\protected@file@percent }
-\newlabel{eq-glau}{{3.1}{44}{Courbe de l'énergie (haut) et fonction d'auto-corrélation (bas) dans avec un \textbf {paramètre d'ordre non-conservé} à partir de la condition initiale. Le temps d'équilibrage (en étapes de Monte Carlo) diminue avec la température, tandis que le temps de corrélation reste relativement constant. Le temps de corrélation étant extrêmement faible, $10^7$ étapes de Monte Carlo suffisent à avoir une erreur de moins de $0.1\%$ sur les moyennes mesurées.\relax }{figure.caption.16}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Courbe de l'\IeC {\'e}nergie (haut) et fonction d'auto-corr\IeC {\'e}lation (bas) dans avec un \textbf  {param\IeC {\`e}tre d'ordre conserv\IeC {\'e}} \IeC {\`a} partir de la condition initiale. Le temps d'\IeC {\'e}quilibrage (en \IeC {\'e}tapes de Monte Carlo) diminue avec la temp\IeC {\'e}rature, tandis que le temps de corr\IeC {\'e}lation reste relativement constant. Le temps de corr\IeC {\'e}lation est similaire \IeC {\`a} la dynamique de Glauber, bien que l'\IeC {\'e}quilibrage soit plus long \IeC {\`a} se faire.\relax }}{45}{figure.caption.17}\protected@file@percent }
-\newlabel{eq-kaw}{{3.2}{45}{Courbe de l'énergie (haut) et fonction d'auto-corrélation (bas) dans avec un \textbf {paramètre d'ordre conservé} à partir de la condition initiale. Le temps d'équilibrage (en étapes de Monte Carlo) diminue avec la température, tandis que le temps de corrélation reste relativement constant. Le temps de corrélation est similaire à la dynamique de Glauber, bien que l'équilibrage soit plus long à se faire.\relax }{figure.caption.17}{}}
+\newlabel{tau_cor}{{3.22}{48}{Suite}{equation.3.2.22}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Ensemble grand-canonique : algorithme de Glauber}{49}{subsection.3.2.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Courbe de l'\IeC {\'e}nergie (haut) et fonction d'auto-corr\IeC {\'e}lation (bas) dans avec un \textbf  {param\IeC {\`e}tre d'ordre non-conserv\IeC {\'e}} \IeC {\`a} partir de la condition initiale. Le temps d'\IeC {\'e}quilibrage (en \IeC {\'e}tapes de Monte Carlo) diminue avec la temp\IeC {\'e}rature, tandis que le temps de corr\IeC {\'e}lation reste relativement constant. Le temps de corr\IeC {\'e}lation \IeC {\'e}tant extr\IeC {\^e}mement faible, $10^7$ \IeC {\'e}tapes de Monte Carlo suffisent \IeC {\`a} avoir une erreur de moins de $0.1\%$ sur les moyennes mesur\IeC {\'e}es.\relax }}{49}{figure.caption.12}\protected@file@percent }
+\newlabel{eq-glau}{{3.1}{49}{Courbe de l'énergie (haut) et fonction d'auto-corrélation (bas) dans avec un \textbf {paramètre d'ordre non-conservé} à partir de la condition initiale. Le temps d'équilibrage (en étapes de Monte Carlo) diminue avec la température, tandis que le temps de corrélation reste relativement constant. Le temps de corrélation étant extrêmement faible, $10^7$ étapes de Monte Carlo suffisent à avoir une erreur de moins de $0.1\%$ sur les moyennes mesurées.\relax }{figure.caption.12}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Ensemble canonique : algorithme de Kawasaki}{50}{subsection.3.2.2}\protected@file@percent }
 \citation{smith_interfaces_2008}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}Ensemble canonique : algorithme de Kawasaki}{46}{subsection.3.1.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.3}Dynamique hors-\IeC {\'e}quilibre}{46}{subsection.3.1.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.4}Mod\IeC {\`e}le POP}{47}{subsection.3.1.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.2}Conclusion}{48}{section.3.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Courbe de l'\IeC {\'e}nergie (haut) et fonction d'auto-corr\IeC {\'e}lation (bas) dans avec un \textbf  {param\IeC {\`e}tre d'ordre conserv\IeC {\'e}} \IeC {\`a} partir de la condition initiale. Le temps d'\IeC {\'e}quilibrage (en \IeC {\'e}tapes de Monte Carlo) diminue avec la temp\IeC {\'e}rature, tandis que le temps de corr\IeC {\'e}lation reste relativement constant. Le temps de corr\IeC {\'e}lation est similaire \IeC {\`a} la dynamique de Glauber, bien que l'\IeC {\'e}quilibrage soit plus long \IeC {\`a} se faire.\relax }}{51}{figure.caption.13}\protected@file@percent }
+\newlabel{eq-kaw}{{3.2}{51}{Courbe de l'énergie (haut) et fonction d'auto-corrélation (bas) dans avec un \textbf {paramètre d'ordre conservé} à partir de la condition initiale. Le temps d'équilibrage (en étapes de Monte Carlo) diminue avec la température, tandis que le temps de corrélation reste relativement constant. Le temps de corrélation est similaire à la dynamique de Glauber, bien que l'équilibrage soit plus long à se faire.\relax }{figure.caption.13}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}Dynamique hors-\IeC {\'e}quilibre}{51}{subsection.3.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.4}Mod\IeC {\`e}le POP}{53}{subsection.3.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Conclusion}{53}{section.3.3}\protected@file@percent }
 \citation{bergeron_forces_1999}
 \citation{stubenrauch_disjoining_2003}
 \citation{ouyang_size-dependent_2006,jiang_size_2008}
@@ -205,64 +212,58 @@
 \citation{nelson_statistical_2004}
 \citation{hasnaoui_casimir_2010}
 \citation{machta_critical_2012}
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Effets de taille finie}{49}{chapter.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Effets de taille finie}{55}{chapter.4}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{chap-sos}{{4}{49}{Effets de taille finie}{chapter.4}{}}
-\newlabel{heff}{{4.4}{49}{Effets de taille finie}{equation.4.0.4}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}Limite thermodynamique}{50}{section.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Effet Casimir}{50}{section.4.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Plus grande valeur propre d'une interface libre en fonction de la taille $L$ du syst\IeC {\`e}me pour $\mu = 0.01$ et $\beta = 1$ (haut gauche) ; \IeC {\'e}nergie libre par site calcul\IeC {\'e}e via l'approximation de la limite thermodynamique \ref  {energie-libre-site} compar\IeC {\'e} \IeC {\`a} la vraie fonction de partition \ref  {partition-trace-lambda} en fonction de la taille $L$ du syst\IeC {\`e}me pour $\mu =0.01$ et $\beta = 1$ (haut droite) ; longueur de corr\IeC {\'e}lation \IeC {\`a} grande distance \ref  {longueur-correl-thermo} pour une matrice $200\times 200$ en fonction du potentiel chimique $\mu $ pour diff\IeC {\'e}rentes temp\IeC {\'e}ratures (bas gauche) ; distribution de l'interface pour diff\IeC {\'e}rentes tailles de la matrice de transfert \IeC {\`a} $\mu =0.01$ et $\beta = 1$. Par un fit, la distribution ne suit pas une distribution de Poisson (bas droite) .\relax }}{51}{figure.caption.18}\protected@file@percent }
-\citation{vasilyev_monte_2007,cardozo_finite_2015}
-\newlabel{casimir-interface}{{4.7}{52}{Effet Casimir}{equation.4.2.7}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}Hamiltonien de transition}{52}{section.4.3}\protected@file@percent }
-\newlabel{sec-transition}{{4.3}{52}{Hamiltonien de transition}{section.4.3}{}}
-\newlabel{hamil-trans}{{4.8}{52}{Hamiltonien de transition}{equation.4.3.8}{}}
-\newlabel{casimir-temperature}{{\caption@xref {casimir-temperature}{ on input line 93}}{53}{Effet Casimir}{figure.caption.19}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Force de Casimir \ref  {casimir-interface} en fonction de la distance pour $\mu = 0.01$ \IeC {\`a} temp\IeC {\'e}rature fix\IeC {\'e}e (gauche) ; force de Casimir en fonction de la temp\IeC {\'e}rature pour $\mu =0.01$ \IeC {\`a} taille fix\IeC {\'e}e (droite) ; force de Casimir en fonction du potentiel chimique pour diff\IeC {\'e}rentes tailles du syst\IeC {\`e}me \IeC {\`a} $T=1$ (bas). \relax }}{53}{figure.caption.19}\protected@file@percent }
-\citation{vasilyev_monte_2007}
-\citation{vasilyev_monte_2007}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces D\IeC {\'e}couplage progressif de la $k$-i\IeC {\`e}me couche du syst\IeC {\`e}me afin de calculer la variation de l'\IeC {\'e}nergie libre gr\IeC {\^a}ce \IeC {\`a} l'hamiltonien de transition. Les liens en bleu ont une \IeC {\'e}nergie de $\beta J$, les liens en rouge une \IeC {\'e}nergie de $\lambda \beta J $ et les liens en vert une \IeC {\'e}nergie de $ (1-\lambda ) \beta J$. Reproduction 2D de \cite  {vasilyev_monte_2007}.\relax }}{54}{figure.caption.20}\protected@file@percent }
-\newlabel{decouplage}{{4.3}{54}{Découplage progressif de la $k$-ième couche du système afin de calculer la variation de l'énergie libre grâce à l'hamiltonien de transition. Les liens en bleu ont une énergie de $\beta J$, les liens en rouge une énergie de $\lambda \beta J $ et les liens en vert une énergie de $ (1-\lambda ) \beta J$. Reproduction 2D de \cite {vasilyev_monte_2007}.\relax }{figure.caption.20}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.4}Int\IeC {\'e}gration sur le potentiel chimique}{54}{section.4.4}\protected@file@percent }
+\newlabel{chap-sos}{{4}{55}{Effets de taille finie}{chapter.4}{}}
+\newlabel{heff}{{4.4}{55}{Effets de taille finie}{equation.4.0.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Limite thermodynamique}{56}{section.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Effet Casimir}{56}{section.4.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Plus grande valeur propre d'une interface libre en fonction de la taille $L$ du syst\IeC {\`e}me pour $\mu = 0.01$ et $\beta = 1$ (haut gauche) ; \IeC {\'e}nergie libre par site calcul\IeC {\'e}e via l'approximation de la limite thermodynamique \ref  {energie-libre-site} compar\IeC {\'e} \IeC {\`a} la vraie fonction de partition \ref  {partition-trace-lambda} en fonction de la taille $L$ du syst\IeC {\`e}me pour $\mu =0.01$ et $\beta = 1$ (haut droite) ; longueur de corr\IeC {\'e}lation \IeC {\`a} grande distance \ref  {longueur-correl-thermo} pour une matrice $200\times 200$ en fonction du potentiel chimique $\mu $ pour diff\IeC {\'e}rentes temp\IeC {\'e}ratures (bas gauche) ; distribution de l'interface pour diff\IeC {\'e}rentes tailles de la matrice de transfert \IeC {\`a} $\mu =0.01$ et $\beta = 1$. Par un fit, la distribution ne suit pas une distribution de Poisson (bas droite) .\relax }}{57}{figure.caption.14}\protected@file@percent }
+\newlabel{casimir-interface}{{4.7}{58}{Effet Casimir}{equation.4.2.7}{}}
 \citation{lopes_cardozo_critical_2014}
-\newlabel{potentiel-integration-param}{{4.14}{55}{Intégration sur le potentiel chimique}{equation.4.4.14}{}}
-\newlabel{neggstaged}{{4.16}{55}{Intégration sur le potentiel chimique}{equation.4.4.16}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces Configuration possible du syst\IeC {\`e}me \IeC {\`a} $\beta =1$ et $\mu $ \IeC {\'e}lev\IeC {\'e} ($\mu =2$) pour les deux types de potentiel (gauche) ; \IeC {\'e}nergie libre en fonction de $\mu $ \IeC {\`a} laquelle on a retir\IeC {\'e} l'\IeC {\'e}nergie libre de la configuration limite pour les deux types de potentiel (droite) ; comparaison de l'observable $<\DOTSB \sum@ \slimits@ _i |h_i-\frac  {L}{2}|>$ en fonction de $\mu $ entre la matrice de transfert et une simulation num\IeC {\'e}rique avec $L=20$ pour $10^7$ \IeC {\'e}tapes de Monte Carlo avec une dynamique de Glauber (bas). {\color  {red} pas clair, hyper vague. Insister sur la m\IeC {\'e}thode num\IeC {\'e}rique qui marche, proof of concept. M\IeC {\'e}thode, r\IeC {\'e}sultats originaux et proof of concept sont tout m\IeC {\'e}lang\IeC {\'e}s. S\IeC {\'e}parer}\relax }}{56}{figure.caption.21}\protected@file@percent }
-\newlabel{comp-potentiels-chimiques}{{4.4}{56}{Configuration possible du système à $\beta =1$ et $\mu $ élevé ($\mu =2$) pour les deux types de potentiel (gauche) ; énergie libre en fonction de $\mu $ à laquelle on a retiré l'énergie libre de la configuration limite pour les deux types de potentiel (droite) ; comparaison de l'observable $<\sum _i |h_i-\frac {L}{2}|>$ en fonction de $\mu $ entre la matrice de transfert et une simulation numérique avec $L=20$ pour $10^7$ étapes de Monte Carlo avec une dynamique de Glauber (bas). {\color {red} pas clair, hyper vague. Insister sur la méthode numérique qui marche, proof of concept. Méthode, résultats originaux et proof of concept sont tout mélangés. Séparer}\relax }{figure.caption.21}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.5}Conclusion}{57}{section.4.5}\protected@file@percent }
+\newlabel{casimir-temperature}{{\caption@xref {casimir-temperature}{ on input line 93}}{59}{Effet Casimir}{figure.caption.15}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Force de Casimir \ref  {casimir-interface} en fonction de la distance pour $\mu = 0.01$ \IeC {\`a} temp\IeC {\'e}rature fix\IeC {\'e}e (gauche) ; force de Casimir en fonction de la temp\IeC {\'e}rature pour $\mu =0.01$ \IeC {\`a} taille fix\IeC {\'e}e (droite) ; force de Casimir en fonction du potentiel chimique pour diff\IeC {\'e}rentes tailles du syst\IeC {\`e}me \IeC {\`a} $T=1$ (bas). \relax }}{59}{figure.caption.15}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Hamiltonien de transition}{59}{section.4.3}\protected@file@percent }
+\newlabel{sec-transition}{{4.3}{59}{Hamiltonien de transition}{section.4.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Int\IeC {\'e}gration sur le potentiel chimique}{59}{section.4.4}\protected@file@percent }
+\newlabel{potentiel-integration-param}{{4.9}{59}{Intégration sur le potentiel chimique}{equation.4.4.9}{}}
+\newlabel{neggstaged}{{4.11}{60}{Intégration sur le potentiel chimique}{equation.4.4.11}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Configuration possible du syst\IeC {\`e}me \IeC {\`a} $\beta =1$ et $\mu $ \IeC {\'e}lev\IeC {\'e} ($\mu =2$) pour les deux types de potentiel (gauche) ; \IeC {\'e}nergie libre en fonction de $\mu $ \IeC {\`a} laquelle on a retir\IeC {\'e} l'\IeC {\'e}nergie libre de la configuration limite pour les deux types de potentiel (droite) ; comparaison de l'observable $<\DOTSB \sum@ \slimits@ _i |h_i-\frac  {L}{2}|>$ en fonction de $\mu $ entre la matrice de transfert et une simulation num\IeC {\'e}rique avec $L=20$ pour $10^7$ \IeC {\'e}tapes de Monte Carlo avec une dynamique de Glauber (bas). {\color  {red} pas clair, hyper vague. Insister sur la m\IeC {\'e}thode num\IeC {\'e}rique qui marche, proof of concept. M\IeC {\'e}thode, r\IeC {\'e}sultats originaux et proof of concept sont tout m\IeC {\'e}lang\IeC {\'e}s. S\IeC {\'e}parer}\relax }}{61}{figure.caption.16}\protected@file@percent }
+\newlabel{comp-potentiels-chimiques}{{4.3}{61}{Configuration possible du système à $\beta =1$ et $\mu $ élevé ($\mu =2$) pour les deux types de potentiel (gauche) ; énergie libre en fonction de $\mu $ à laquelle on a retiré l'énergie libre de la configuration limite pour les deux types de potentiel (droite) ; comparaison de l'observable $<\sum _i |h_i-\frac {L}{2}|>$ en fonction de $\mu $ entre la matrice de transfert et une simulation numérique avec $L=20$ pour $10^7$ étapes de Monte Carlo avec une dynamique de Glauber (bas). {\color {red} pas clair, hyper vague. Insister sur la méthode numérique qui marche, proof of concept. Méthode, résultats originaux et proof of concept sont tout mélangés. Séparer}\relax }{figure.caption.16}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}Conclusion}{62}{section.4.5}\protected@file@percent }
 \citation{casner_laser-induced_2003,delville_laser_2009,girot_conical_2019}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Interaction gaussienne avec champ magn\IeC {\'e}tique confinant}{59}{chapter.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Interaction gaussienne avec champ magn\IeC {\'e}tique confinant}{65}{chapter.5}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{sec_laser}{{5}{59}{Interaction gaussienne avec champ magnétique confinant}{chapter.5}{}}
-\newlabel{staged}{{5.2}{59}{Interaction gaussienne avec champ magnétique confinant}{equation.5.0.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Interface statique}{60}{section.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}Distribution de probabilit\IeC {\'e} de l'interface}{60}{subsection.5.1.1}\protected@file@percent }
-\newlabel{hamil-gauss}{{5.3}{60}{Distribution de probabilité de l'interface}{equation.5.1.3}{}}
-\newlabel{schro_temp}{{5.7}{61}{Distribution de probabilité de l'interface}{equation.5.1.7}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces \IeC {\`A} gauche, \IeC {\'e}tats propres $\psi _n$ avec en noir, une r\IeC {\'e}f\IeC {\'e}rence par rapport \IeC {\`a} la distribution gaussienne. \IeC {\`A} droite, la s\IeC {\'e}rie $\alpha _n$.\relax }}{62}{figure.caption.22}\protected@file@percent }
-\newlabel{fig-airy}{{5.1}{62}{À gauche, états propres $\psi _n$ avec en noir, une référence par rapport à la distribution gaussienne. À droite, la série $\alpha _n$.\relax }{figure.caption.22}{}}
-\newlabel{xi_perp}{{5.14}{62}{Distribution de probabilité de l'interface}{equation.5.1.14}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces  Distribution de l'interface \IeC {\`a} $\beta = \beta _C$ autour d'un syst\IeC {\`e}me centr\IeC {\'e} \IeC {\`a} $L_Y=400$ en trait plein avec le fit selon la distribution de Airy \ref  {airy} en \IeC {\'e}chelle normale (\IeC {\`a} gauche) et en \IeC {\'e}chelle log (\IeC {\`a} droite). Les \IeC {\'e}carts aux grandes fluctuations sont dues \IeC {\`a} un temps d\IeC {\textquoteright }\IeC {\'e}chantillonnage trop faible ($10^8$ MC steps) par rapport au temps de corr\IeC {\'e}lation ($T_{cor} \simeq 100$), ce qui ne donne qu'environ $10^6$ \IeC {\'e}tats d\IeC {\'e}corr\IeC {\'e}l\IeC {\'e}s. Par comparaison, \IeC {\`a} haut champ magn\IeC {\'e}tique, le temps de corr\IeC {\'e}lation est $T_{cor} \simeq 2$.\relax }}{63}{figure.caption.23}\protected@file@percent }
-\newlabel{histo_airy}{{5.2}{63}{Distribution de l'interface à $\beta = \beta _C$ autour d'un système centré à $L_Y=400$ en trait plein avec le fit selon la distribution de Airy \ref {airy} en échelle normale (à gauche) et en échelle log (à droite). Les écarts aux grandes fluctuations sont dues à un temps d’échantillonnage trop faible ($10^8$ MC steps) par rapport au temps de corrélation ($T_{cor} \simeq 100$), ce qui ne donne qu'environ $10^6$ états décorrélés. Par comparaison, à haut champ magnétique, le temps de corrélation est $T_{cor} \simeq 2$.\relax }{figure.caption.23}{}}
-\newlabel{airy}{{5.15}{63}{Distribution de probabilité de l'interface}{equation.5.1.15}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}Fonction de corr\IeC {\'e}lation}{63}{subsection.5.1.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Comparaison de la distribution de l'interface entre une dynamique de Glauber et une dynamique de Kawasaki avec conditions aux bords p\IeC {\'e}riodiques en $x$ et une g\IeC {\'e}om\IeC {\'e}trie infinie en $y$, avec $L_X=5142$ (la longueur de corr\IeC {\'e}lation parall\IeC {\`e}le \IeC {\`a} l'interface est de $\xi _\parallel = 37$ via diagonalisation de la matriice de transfert) pour $T=3$ et $B=0.01$. \relax }}{64}{figure.caption.24}\protected@file@percent }
-\newlabel{airy-eq-kae}{{5.3}{64}{Comparaison de la distribution de l'interface entre une dynamique de Glauber et une dynamique de Kawasaki avec conditions aux bords périodiques en $x$ et une géométrie infinie en $y$, avec $L_X=5142$ (la longueur de corrélation parallèle à l'interface est de $\xi _\parallel = 37$ via diagonalisation de la matriice de transfert) pour $T=3$ et $B=0.01$. \relax }{figure.caption.24}{}}
-\newlabel{xi_parallel}{{5.30}{66}{Fonction de corrélation}{equation.5.1.30}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.3}Tension superficielle effective}{66}{subsection.5.1.3}\protected@file@percent }
+\newlabel{sec_laser}{{5}{65}{Interaction gaussienne avec champ magnétique confinant}{chapter.5}{}}
+\newlabel{staged}{{5.2}{65}{Interaction gaussienne avec champ magnétique confinant}{equation.5.0.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Interface statique}{66}{section.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}Distribution de probabilit\IeC {\'e} de l'interface}{66}{subsection.5.1.1}\protected@file@percent }
+\newlabel{hamil-gauss}{{5.3}{66}{Distribution de probabilité de l'interface}{equation.5.1.3}{}}
+\newlabel{schro_temp}{{5.7}{67}{Distribution de probabilité de l'interface}{equation.5.1.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces \IeC {\`A} gauche, \IeC {\'e}tats propres $\psi _n$ avec en noir, une r\IeC {\'e}f\IeC {\'e}rence par rapport \IeC {\`a} la distribution gaussienne. \IeC {\`A} droite, la s\IeC {\'e}rie $\alpha _n$.\relax }}{68}{figure.caption.17}\protected@file@percent }
+\newlabel{fig-airy}{{5.1}{68}{À gauche, états propres $\psi _n$ avec en noir, une référence par rapport à la distribution gaussienne. À droite, la série $\alpha _n$.\relax }{figure.caption.17}{}}
+\newlabel{xi_perp}{{5.14}{68}{Distribution de probabilité de l'interface}{equation.5.1.14}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces  Distribution de l'interface \IeC {\`a} $\beta = \beta _C$ autour d'un syst\IeC {\`e}me centr\IeC {\'e} \IeC {\`a} $L_Y=400$ en trait plein avec le fit selon la distribution de Airy \ref  {airy} en \IeC {\'e}chelle normale (\IeC {\`a} gauche) et en \IeC {\'e}chelle log (\IeC {\`a} droite). Les \IeC {\'e}carts aux grandes fluctuations sont dues \IeC {\`a} un temps d\IeC {\textquoteright }\IeC {\'e}chantillonnage trop faible ($10^8$ MC steps) par rapport au temps de corr\IeC {\'e}lation ($T_{cor} \simeq 100$), ce qui ne donne qu'environ $10^6$ \IeC {\'e}tats d\IeC {\'e}corr\IeC {\'e}l\IeC {\'e}s. Par comparaison, \IeC {\`a} haut champ magn\IeC {\'e}tique, le temps de corr\IeC {\'e}lation est $T_{cor} \simeq 2$.\relax }}{69}{figure.caption.18}\protected@file@percent }
+\newlabel{histo_airy}{{5.2}{69}{Distribution de l'interface à $\beta = \beta _C$ autour d'un système centré à $L_Y=400$ en trait plein avec le fit selon la distribution de Airy \ref {airy} en échelle normale (à gauche) et en échelle log (à droite). Les écarts aux grandes fluctuations sont dues à un temps d’échantillonnage trop faible ($10^8$ MC steps) par rapport au temps de corrélation ($T_{cor} \simeq 100$), ce qui ne donne qu'environ $10^6$ états décorrélés. Par comparaison, à haut champ magnétique, le temps de corrélation est $T_{cor} \simeq 2$.\relax }{figure.caption.18}{}}
+\newlabel{airy}{{5.15}{69}{Distribution de probabilité de l'interface}{equation.5.1.15}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}Fonction de corr\IeC {\'e}lation}{69}{subsection.5.1.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Comparaison de la distribution de l'interface entre une dynamique de Glauber et une dynamique de Kawasaki avec conditions aux bords p\IeC {\'e}riodiques en $x$ et une g\IeC {\'e}om\IeC {\'e}trie infinie en $y$, avec $L_X=5142$ (la longueur de corr\IeC {\'e}lation parall\IeC {\`e}le \IeC {\`a} l'interface est de $\xi _\parallel = 37$ via diagonalisation de la matriice de transfert) pour $T=3$ et $B=0.01$. \relax }}{70}{figure.caption.19}\protected@file@percent }
+\newlabel{airy-eq-kae}{{5.3}{70}{Comparaison de la distribution de l'interface entre une dynamique de Glauber et une dynamique de Kawasaki avec conditions aux bords périodiques en $x$ et une géométrie infinie en $y$, avec $L_X=5142$ (la longueur de corrélation parallèle à l'interface est de $\xi _\parallel = 37$ via diagonalisation de la matriice de transfert) pour $T=3$ et $B=0.01$. \relax }{figure.caption.19}{}}
+\newlabel{xi_parallel}{{5.30}{72}{Fonction de corrélation}{equation.5.1.30}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.3}Tension superficielle effective}{72}{subsection.5.1.3}\protected@file@percent }
 \citation{smith_interfaces_2008,smith_interfaces_2008-1}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces V\IeC {\'e}rification des \IeC {\'e}quations \ref  {xi_perp} (gauche) et \ref  {xi_parallel} (droite) en montrant la tension superficielle $\sigma $ par rapport aux longueurs charact\IeC {\'e}ristiques, calcul\IeC {\'e}es gr\IeC {\^a}ce \IeC {\`a} l'Hamiltonien gaussien \ref  {hamil-gauss}, pour diff\IeC {\'e}rentes temp\IeC {\'e}ratures et champs magn\IeC {\'e}tiques, pour une matrice de transfert de talle $L=400$. Chaque couleur correspond \IeC {\`a} une temp\IeC {\'e}rature, chaque symbole correspond \IeC {\`a} une intensit\IeC {\'e} du champ magn\IeC {\'e}tique.\relax }}{67}{figure.caption.25}\protected@file@percent }
-\newlabel{tension-airy}{{5.4}{67}{Vérification des équations \ref {xi_perp} (gauche) et \ref {xi_parallel} (droite) en montrant la tension superficielle $\sigma $ par rapport aux longueurs charactéristiques, calculées grâce à l'Hamiltonien gaussien \ref {hamil-gauss}, pour différentes températures et champs magnétiques, pour une matrice de transfert de talle $L=400$. Chaque couleur correspond à une température, chaque symbole correspond à une intensité du champ magnétique.\relax }{figure.caption.25}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces V\IeC {\'e}rification des \IeC {\'e}quations \ref  {xi_perp} (gauche) et \ref  {xi_parallel} (droite) en montrant la tension superficielle $\sigma $ par rapport aux longueurs charact\IeC {\'e}ristiques, calcul\IeC {\'e}es gr\IeC {\^a}ce \IeC {\`a} l'Hamiltonien gaussien \ref  {hamil-gauss}, pour diff\IeC {\'e}rentes temp\IeC {\'e}ratures et champs magn\IeC {\'e}tiques, pour une matrice de transfert de talle $L=400$. Chaque couleur correspond \IeC {\`a} une temp\IeC {\'e}rature, chaque symbole correspond \IeC {\`a} une intensit\IeC {\'e} du champ magn\IeC {\'e}tique.\relax }}{73}{figure.caption.20}\protected@file@percent }
+\newlabel{tension-airy}{{5.4}{73}{Vérification des équations \ref {xi_perp} (gauche) et \ref {xi_parallel} (droite) en montrant la tension superficielle $\sigma $ par rapport aux longueurs charactéristiques, calculées grâce à l'Hamiltonien gaussien \ref {hamil-gauss}, pour différentes températures et champs magnétiques, pour une matrice de transfert de talle $L=400$. Chaque couleur correspond à une température, chaque symbole correspond à une intensité du champ magnétique.\relax }{figure.caption.20}{}}
 \citation{smith_interfaces_2008}
 \citation{cirillo_monte_2005,winter_finite-size_2010}
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}Interface hors-\IeC {\'e}quilibre}{68}{section.5.2}\protected@file@percent }
-\newlabel{ecoulement-uniforme}{{5.33}{68}{Interface hors-équilibre}{equation.5.2.33}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Interface hors-\IeC {\'e}quilibre}{74}{section.5.2}\protected@file@percent }
+\newlabel{ecoulement-uniforme}{{5.33}{74}{Interface hors-équilibre}{equation.5.2.33}{}}
 \citation{girot_conical_2019}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces \IeC {\'E}nergie par site du mod\IeC {\`e}le gaussien dans une dynamique de Kawasaki pour $T=4$ et $B=0.01$ en fonction de la force \ref  {ecoulement-uniforme} -en pointill\IeC {\'e} un fit avec une puissance carr\IeC {\'e}e (gauche). Largeur de l'interface par site $\frac  {1}{L_X}\DOTSB \sum@ \slimits@ _i |h_i|^2$ en fonction de l'\IeC {\'e}coulement (droite). {\color  {red} Besoin MCIA pour propre,Chip/AiryDrive}\relax }}{69}{figure.caption.26}\protected@file@percent }
-\newlabel{ene-kaw-airy}{{5.5}{69}{Énergie par site du modèle gaussien dans une dynamique de Kawasaki pour $T=4$ et $B=0.01$ en fonction de la force \ref {ecoulement-uniforme} -en pointillé un fit avec une puissance carrée (gauche). Largeur de l'interface par site $\frac {1}{L_X}\sum _i |h_i|^2$ en fonction de l'écoulement (droite). {\color {red} Besoin MCIA pour propre,Chip/AiryDrive}\relax }{figure.caption.26}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}Conclusion}{69}{section.5.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces \IeC {\'E}nergie par site du mod\IeC {\`e}le gaussien dans une dynamique de Kawasaki pour $T=4$ et $B=0.01$ en fonction de la force \ref  {ecoulement-uniforme} -en pointill\IeC {\'e} un fit avec une puissance carr\IeC {\'e}e (gauche). Largeur de l'interface par site $\frac  {1}{L_X}\DOTSB \sum@ \slimits@ _i |h_i|^2$ en fonction de l'\IeC {\'e}coulement (droite). {\color  {red} Besoin MCIA pour propre,Chip/AiryDrive}\relax }}{75}{figure.caption.21}\protected@file@percent }
+\newlabel{ene-kaw-airy}{{5.5}{75}{Énergie par site du modèle gaussien dans une dynamique de Kawasaki pour $T=4$ et $B=0.01$ en fonction de la force \ref {ecoulement-uniforme} -en pointillé un fit avec une puissance carrée (gauche). Largeur de l'interface par site $\frac {1}{L_X}\sum _i |h_i|^2$ en fonction de l'écoulement (droite). {\color {red} Besoin MCIA pour propre,Chip/AiryDrive}\relax }{figure.caption.21}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Conclusion}{75}{section.5.3}\protected@file@percent }
 \bibdata{biblio.bib}
 \bibcite{hohenberg_theory_1977}{{1}{}{{}}{{}}}
 \bibcite{bray_theory_1994}{{2}{}{{}}{{}}}
@@ -278,76 +279,83 @@
 \bibcite{atencia_controlled_2005}{{12}{}{{}}{{}}}
 \bibcite{amit_field_2005}{{13}{}{{}}{{}}}
 \bibcite{h_b_g_casimir_attraction_1948}{{14}{}{{}}{{}}}
-\bibcite{gambassi_critical_2009}{{15}{}{{}}{{}}}
-\bibcite{cardozo_finite_2015}{{16}{}{{}}{{}}}
-\bibcite{stubenrauch_disjoining_2003}{{17}{}{{}}{{}}}
-\bibcite{bitbol_fluctuations_2010}{{18}{}{{}}{{}}}
-\bibcite{vasilyev_universal_2009}{{19}{}{{}}{{}}}
-\bibcite{dantchev_casimir_2017}{{20}{}{{}}{{}}}
-\bibcite{dantchev_exact_2016}{{21}{}{{}}{{}}}
-\bibcite{gross_critical_2016}{{22}{}{{}}{{}}}
-\bibcite{rohwer_transient_2017}{{23}{}{{}}{{}}}
-\bibcite{paladugu_nonadditivity_2016}{{24}{}{{}}{{}}}
-\bibcite{fukuto_critical_2005}{{25}{}{{}}{{}}}
-\bibcite{hertlein_direct_2008}{{26}{}{{}}{{}}}
-\bibcite{edison_critical_2015-1}{{27}{}{{}}{{}}}
-\bibcite{nguyen_controlling_2013}{{28}{}{{}}{{}}}
-\bibcite{lopes_cardozo_critical_2014}{{29}{}{{}}{{}}}
-\bibcite{edwards_surface_1982}{{30}{}{{}}{{}}}
-\bibcite{lai_kinetic_1991}{{31}{}{{}}{{}}}
+\bibcite{gambassi_casimir_2009}{{15}{}{{}}{{}}}
+\bibcite{gambassi_critical_2009}{{16}{}{{}}{{}}}
+\bibcite{cardozo_finite_2015}{{17}{}{{}}{{}}}
+\bibcite{stubenrauch_disjoining_2003}{{18}{}{{}}{{}}}
+\bibcite{bitbol_fluctuations_2010}{{19}{}{{}}{{}}}
+\bibcite{vasilyev_universal_2009}{{20}{}{{}}{{}}}
+\bibcite{dantchev_casimir_2017}{{21}{}{{}}{{}}}
+\bibcite{dantchev_exact_2016}{{22}{}{{}}{{}}}
+\bibcite{gross_critical_2016}{{23}{}{{}}{{}}}
+\bibcite{rohwer_transient_2017}{{24}{}{{}}{{}}}
+\bibcite{paladugu_nonadditivity_2016}{{25}{}{{}}{{}}}
+\bibcite{fukuto_critical_2005}{{26}{}{{}}{{}}}
+\bibcite{hertlein_direct_2008}{{27}{}{{}}{{}}}
+\bibcite{edison_critical_2015-1}{{28}{}{{}}{{}}}
+\bibcite{nguyen_controlling_2013}{{29}{}{{}}{{}}}
+\bibcite{lopes_cardozo_critical_2014}{{30}{}{{}}{{}}}
+\bibcite{edwards_surface_1982}{{31}{}{{}}{{}}}
 \bibcite{girot_conical_2019}{{32}{}{{}}{{}}}
 \bibcite{bray_interface_2001-1}{{33}{}{{}}{{}}}
 \bibcite{bray_interface_2001}{{34}{}{{}}{{}}}
 \bibcite{derks_suppression_2006}{{35}{}{{}}{{}}}
-\bibcite{bray_coarsening_2000}{{36}{}{{}}{{}}}
-\bibcite{leung_field_1986}{{37}{}{{}}{{}}}
-\bibcite{rikvold_microstructure_2002}{{38}{}{{}}{{}}}
-\bibcite{gonnella_nonequilibrium_2009}{{39}{}{{}}{{}}}
-\bibcite{smith_driven_2010}{{40}{}{{}}{{}}}
-\bibcite{smith_interfaces_2008}{{41}{}{{}}{{}}}
-\bibcite{sadhu_non-local_2014}{{42}{}{{}}{{}}}
-\bibcite{cohen_interface_2016}{{43}{}{{}}{{}}}
-\bibcite{cirillo_monte_2005}{{44}{}{{}}{{}}}
-\bibcite{talapov_magnetization_1996}{{45}{}{{}}{{}}}
-\bibcite{niss_history_2005}{{46}{}{{}}{{}}}
-\bibcite{niss_history_2009}{{47}{}{{}}{{}}}
-\bibcite{goldenfeld_lectures_2018}{{48}{}{{}}{{}}}
-\bibcite{stecki_magnetization_1994}{{49}{}{{}}{{}}}
-\bibcite{abraham_transfer_1973}{{50}{}{{}}{{}}}
-\bibcite{abraham_interface_1976}{{51}{}{{}}{{}}}
-\bibcite{richards_numerical_1993}{{52}{}{{}}{{}}}
-\bibcite{hobrecht_critical_2017}{{53}{}{{}}{{}}}
-\bibcite{vasilyev_monte_2007}{{54}{}{{}}{{}}}
-\bibcite{knops_exact_1977}{{55}{}{{}}{{}}}
-\bibcite{owczarek_exact_1993}{{56}{}{{}}{{}}}
-\bibcite{majumdar_airy_2005}{{57}{}{{}}{{}}}
-\bibcite{schehr_universal_2006}{{58}{}{{}}{{}}}
-\bibcite{privman_transfer-matrix_1989}{{59}{}{{}}{{}}}
-\bibcite{kim_conserved_1994}{{60}{}{{}}{{}}}
-\bibcite{vaysburd_critical_1995}{{61}{}{{}}{{}}}
-\bibcite{pearce_exact_1989}{{62}{}{{}}{{}}}
-\bibcite{guyer_sine-gordon_1979}{{63}{}{{}}{{}}}
-\bibcite{chui_pinning_1981}{{64}{}{{}}{{}}}
-\bibcite{chui_pinning_1999}{{65}{}{{}}{{}}}
-\bibcite{chalker_pinning_1981}{{66}{}{{}}{{}}}
-\bibcite{chalker_pinning_1982}{{67}{}{{}}{{}}}
-\bibcite{burkhardt_localisation-delocalisation_1981}{{68}{}{{}}{{}}}
-\bibcite{kroll_solid--solid_1981}{{69}{}{{}}{{}}}
-\bibcite{kroll_pinning_1982}{{70}{}{{}}{{}}}
-\bibcite{kroll_interface_1983}{{71}{}{{}}{{}}}
-\bibcite{casner_laser-induced_2003}{{72}{}{{}}{{}}}
-\bibcite{delville_laser_2009}{{73}{}{{}}{{}}}
-\bibcite{siegert_scaling_1993}{{74}{}{{}}{{}}}
-\bibcite{newman_monte_1999}{{75}{}{{}}{{}}}
-\bibcite{frenkel_speed-up_2004}{{76}{}{{}}{{}}}
-\bibcite{wansleben_monte_1991}{{77}{}{{}}{{}}}
-\bibcite{bergeron_forces_1999}{{78}{}{{}}{{}}}
-\bibcite{ouyang_size-dependent_2006}{{79}{}{{}}{{}}}
-\bibcite{jiang_size_2008}{{80}{}{{}}{{}}}
-\bibcite{ding_theoretical_2001}{{81}{}{{}}{{}}}
-\bibcite{nelson_statistical_2004}{{82}{}{{}}{{}}}
-\bibcite{hasnaoui_casimir_2010}{{83}{}{{}}{{}}}
-\bibcite{machta_critical_2012}{{84}{}{{}}{{}}}
-\bibcite{smith_interfaces_2008-1}{{85}{}{{}}{{}}}
-\bibcite{winter_finite-size_2010}{{86}{}{{}}{{}}}
+\bibcite{leung_field_1986}{{36}{}{{}}{{}}}
+\bibcite{bray_coarsening_2000}{{37}{}{{}}{{}}}
+\bibcite{gonnella_nonequilibrium_2009}{{38}{}{{}}{{}}}
+\bibcite{smith_driven_2010}{{39}{}{{}}{{}}}
+\bibcite{smith_interfaces_2008}{{40}{}{{}}{{}}}
+\bibcite{sadhu_non-local_2014}{{41}{}{{}}{{}}}
+\bibcite{cohen_interface_2016}{{42}{}{{}}{{}}}
+\bibcite{cirillo_monte_2005}{{43}{}{{}}{{}}}
+\bibcite{talapov_magnetization_1996}{{44}{}{{}}{{}}}
+\bibcite{niss_history_2005}{{45}{}{{}}{{}}}
+\bibcite{niss_history_2009}{{46}{}{{}}{{}}}
+\bibcite{de_jongh_experiments_1974}{{47}{}{{}}{{}}}
+\bibcite{wp_wold_ising_2000}{{48}{}{{}}{{}}}
+\bibcite{ikeda_neutron_nodate}{{49}{}{{}}{{}}}
+\bibcite{preis_gpu_2009}{{50}{}{{}}{{}}}
+\bibcite{goldenfeld_lectures_2018}{{51}{}{{}}{{}}}
+\bibcite{stecki_magnetization_1994}{{52}{}{{}}{{}}}
+\bibcite{abraham_transfer_1973}{{53}{}{{}}{{}}}
+\bibcite{abraham_interface_1976}{{54}{}{{}}{{}}}
+\bibcite{richards_numerical_1993}{{55}{}{{}}{{}}}
+\bibcite{vasilyev_monte_2007}{{56}{}{{}}{{}}}
+\bibcite{gilmer_simulation_1972}{{57}{}{{}}{{}}}
+\bibcite{elwenspoek_kinetic_1987}{{58}{}{{}}{{}}}
+\bibcite{wilby_scaling_1992}{{59}{}{{}}{{}}}
+\bibcite{gompper_steric_1989}{{60}{}{{}}{{}}}
+\bibcite{privman_transfer-matrix_1989}{{61}{}{{}}{{}}}
+\bibcite{kim_conserved_1994}{{62}{}{{}}{{}}}
+\bibcite{vaysburd_critical_1995}{{63}{}{{}}{{}}}
+\bibcite{knops_exact_1977}{{64}{}{{}}{{}}}
+\bibcite{owczarek_exact_1993}{{65}{}{{}}{{}}}
+\bibcite{majumdar_airy_2005}{{66}{}{{}}{{}}}
+\bibcite{schehr_universal_2006}{{67}{}{{}}{{}}}
+\bibcite{siegert_scaling_1993}{{68}{}{{}}{{}}}
+\bibcite{pearce_exact_1989}{{69}{}{{}}{{}}}
+\bibcite{guyer_sine-gordon_1979}{{70}{}{{}}{{}}}
+\bibcite{chui_pinning_1981}{{71}{}{{}}{{}}}
+\bibcite{chui_pinning_1999}{{72}{}{{}}{{}}}
+\bibcite{chalker_pinning_1981}{{73}{}{{}}{{}}}
+\bibcite{chalker_pinning_1982}{{74}{}{{}}{{}}}
+\bibcite{burkhardt_localisation-delocalisation_1981}{{75}{}{{}}{{}}}
+\bibcite{kroll_solid--solid_1981}{{76}{}{{}}{{}}}
+\bibcite{kroll_pinning_1982}{{77}{}{{}}{{}}}
+\bibcite{kroll_interface_1983}{{78}{}{{}}{{}}}
+\bibcite{casner_laser-induced_2003}{{79}{}{{}}{{}}}
+\bibcite{delville_laser_2009}{{80}{}{{}}{{}}}
+\bibcite{metropolis_monte_1949}{{81}{}{{}}{{}}}
+\bibcite{newman_monte_1999}{{82}{}{{}}{{}}}
+\bibcite{frenkel_speed-up_2004}{{83}{}{{}}{{}}}
+\bibcite{wansleben_monte_1991}{{84}{}{{}}{{}}}
+\bibcite{bergeron_forces_1999}{{85}{}{{}}{{}}}
+\bibcite{ouyang_size-dependent_2006}{{86}{}{{}}{{}}}
+\bibcite{jiang_size_2008}{{87}{}{{}}{{}}}
+\bibcite{ding_theoretical_2001}{{88}{}{{}}{{}}}
+\bibcite{nelson_statistical_2004}{{89}{}{{}}{{}}}
+\bibcite{hasnaoui_casimir_2010}{{90}{}{{}}{{}}}
+\bibcite{machta_critical_2012}{{91}{}{{}}{{}}}
+\bibcite{smith_interfaces_2008-1}{{92}{}{{}}{{}}}
+\bibcite{winter_finite-size_2010}{{93}{}{{}}{{}}}
 \providecommand\NAT@force@numbers{}\NAT@force@numbers

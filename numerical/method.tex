@@ -1,23 +1,110 @@
-\chapter{Simulations}
+\chapter{Méthodes numériques}
 \label{chap-sim}
 
-Les simulations numériques permettent de calculer les propriétés des systèmes là où la diagonalisation directe des hamiltoniens est trop difficile. Elle permet également de faire varier facilement les géométries et les potentiels dans les systèmes. Les algorithmes mis en jeu sont en général lents et peu efficients car ils essaient d'explorer l'ensemble de l'espace des configurations du système. Les modèles 1D que nous étudions dans cette thèse ont l'avantage d'être rapides à calculer et donnent une pléthore d'informations qui peuvent être extrapolées aux modèles 2D et 3D à basse température. 
-
-\section{Algorithme de Metropolis}
-
-Les systèmes à l'équilibre sont, en présence d'une température non-nulle, définis par les moyennes statistiques des grandeurs observables. La moyenne statistique de l'observable $A$ est définie vis-à-vis de la fonction de partition 
+En 1949, Metropolis \cite{metropolis_monte_1949} découvre une méthode pour calculer via des simulations numériques de Monte Carlo, la moyenne d'observables statistiques. Si $Q$ est une quantité observable appartenant à un système statistique, comme l'énergie interne ou la densité moyenne de particules par site, alors la moyenne est calculée en pondérant la valeur de l'observable sur toutes les configurations $C$ du système par rapport au poids statistique de ces configurations. Si l'on considère le système en équilibre thermodynamique alors chaque configuration $C$ suit une distribution de Gibbs-Boltzmann, et la moyenne $<Q>$ est vaut
 \begin{align}
-	<A> = \sum_\mu e^{-\beta \mH(\mu)} = \sum_E e^{-\beta(E-T S)}
+    <Q> = \frac{\sum_{C} Q(C) \exp(-\beta E(C))}{\sum_{C} \exp(-\beta E(C))}
 \end{align}
-où $\sum_\mu$ désigne la somme sur tous les micro-états $\mu$ possibles du système et $\sum_E$ la somme sur toutes les énergies possibles du système associées à leur entropie $S$. Tandis qu'une diagonalisation de la fonction de partition nécessiterait de connaître tous les micro-états possibles, on observe que certains états sont plus probables que d'autres car d'énergie moindre, et donc contribuent plus aux moyennes statistiques que les autres états, tandis qu'à haute température la densité d'états de plus haute énergie contribue de manière plus importante à l'entropie.
-Les algorithmes de Metropolis ont pour objectif d'explorer l'espace des phases de manière aléatoire afin de découvrir quelles configurations contribuent le plus aux observables du système, afin de converger vers la valeur limite $<A>(t=\infty) = <A>$.
+Pour un système SOS de taille $100\times100$ par exemple, petit par rapport à la limite thermodynamique comme discuté avec la figure \ref{fig-thermo-libre}, il existe $100^{100}$ configurations possibles, bien qu'une simulation numérique ne puisse explorer qu'environ $10^8$ configurations différentes en un temps CPU raisonnable.
+Les modèles sur réseau se prêtent parfaitement aux simulations numériques de Monte Carlo, où le but est de calculer la valeur moyenne des observables telles que l'énergie interne ou la densité moyenne de particule par site. Toutes ces quantités peuvent être calculées directement pour le modèle SOS dans l'ensemble grand-canonique à l'aide des valeurs propres de la matrice de transfert, mais il est impossible d'utiliser une telle méthode dans l'ensemble canonique, comme expliqué dans le chapitre précédent.
 
-Nous nous basons ici sur \cite{newman_monte_1999} afin d'expliquer le fonctionnement d'un tel algorithme.
+Dans ce chapitre, nous commençons par expliquer le principe des simulations de Monte Carlo Metropolis, et comment choisir l'ensemble thermodyique de la simulation numérique. En plus d'étudier l'ensemble canonique, les simulations numériques offrent la possibilité d'étudier les régimes hors équilibre, dont nous justifierons la validité.
+Nous finirons le chapitre par expliquer comment accélérer la vitesse de simulation grâce à la parallélisation, ainsi que d'autres astuces de programmation, en insistant sur les écueils techniques à éviter. 
 
-Soit $\mu$ un micro-état de notre système d'énergie $E(\mu)$. À l'équilibre, la probabilité d'occupation du système est
+Je remercie le Mésocentre de Calcul Intensif Aquitain (MCIA)\footnote{\url{https://redmine.mcia.fr/projects/mcia}} sur lequel j'ai effectué la très grande majorité de mes simulations numériques. 
+L'intégralité du code produit pour cette thèse est accessible sur Github \footnote{\url{https://github.com/Bulbille/Curta}} sous la licence Creative Commons BY 3.0 \footnote{\url{https://creativecommons.org/licenses/by/3.0/fr/}}. Les simulations numériques ont été codées en C++, la parallélisation avec la librairie MPI, l'automatisation du lancement des jobs en Bash, et la visualisation des données ainsi que les diagonalisations des matrices de transfert sous Python.
+
+{\color{red} actuellement, est-ce que j'ai le droit de diffuser librement mon code ? Le CNRS autorise la libre diffusion du code ?}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \section{Algorithme de Monte Carlo Metropolis}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Les simulations de Monte Carlo explorent l'espace des configurations de manière aléatoire \cite{newman_monte_1999} avec une probabilité $p(C$ que nous définirons plus tard. En choisissant $M$ états ${C_0,...,C_M}$, l'estimateur $Q_M$ de $Q$ est donnée par
 \begin{align}
-	p_\mu = \frac{1}{\mZ} e^{-\beta E(\mu)}
+    Q_M = \frac{\sum_{i=0}^M Q(C_i) p(C_i)^{-1} \exp(-\beta E(C_i))}{\sum_{i=0}^M  p(C_i)^{-1} \exp(-\beta E(C_i))}
 \end{align}
+Lorsque $M$ augmente, l'estimateur devient une estimation de plus en plus précise de $<Q>$, jusqu'à la limite $Q_{M\to \infty} = <Q>$. Si l'on choisit les configurations sur lesquelles on échantillone le système selon la distribution à l'équilibre de Gibbs-Boltzmann $p(\nu) = Z^{-1} e^{-\beta E(C)}$, alors l'éstimateur de $<Q>$ devient
+\begin{align}
+    Q_M = \frac{1}{M} \sum_{i=0}^M Q(C_i)
+\end{align}
+On se pose maintenant la question de savoir comment choisir les configurations afin que chacune apparaisse avec la bonne probabilité de Boltzmann. 
+
+Une dynamique pour les systèmes avec une espace des phases discret peut être construit à partir de chaînes de Markov. On laisse la dynamique évoluer dans un discret noté $n$, et $p_n(C)$ la probabilité que le système soit dans l'état $C$ au temps $n$. Au pas de temps suivant, si le système est dans l'état $C$ il peut sauter vers un autre état $C'$ avec la probabilité de transition $\rho(C\to C')$. Le système au tempst $n+1$ dépend alors uniquement de l'état au temps $n$ : c'est un processus markovien. La probabilité $p_{n+1}(X)$ d'être dans l'état $C$ au temps $n+1$ est possible si le système était dans l'état $C$ au temps $n$ et y reste avec une probabilité $\rho(C\to C)$ , ou s'il est dans un état $C'$ et bouge vers l'état $C$ avec une probabilité $\rho(C'\to C)$. On a alors l'équation maîtresse
+\begin{align}
+    p_{n+1}(C) =  \rho(C\to C) p_n(C) + \sum_{C'\neq C} \rho(C'\to C) p_n(C')
+\end{align}
+Puisque $\rho(C' \to C)$ est une probabilité, on a la condition suivante
+\begin{align}
+    \sum_{C'} \rho(C' \to C) = 1
+    \label{norm}
+\end{align}
+Maintenant, si la dynamique décrit un système physique en interaction avec un  réservoir de chaleur, la distribution à l'équilibre est donnée par
+\begin{align}
+    p_{eq}(C) = \frac{\exp(-\beta E(C))}{Z}
+\end{align}
+avec $Z$ la fonction de partition canonique. Puisque la distribution à l'équilibre n'évolue pas au cours du temps, on a
+\begin{align}
+    p_{eq}(C) =  \rho(C\to C) p_{eq}(C) + \sum_{C'\neq C} \rho(C'\to C)p_{eq}(C')
+    \label{p-eq-mc}
+\end{align}
+Une autre condition que l'on impose à notre chaîne de Markov afin qu'elle génère une probabilité de distribution de Boltzmann après équilibrage, est qu'elle respecte le bilan détaillé. Afin qu'un système respecte le bilan détailĺé, il faut que le taux auquel il fait des transitions vers à partir de n'importe quel état $C$ soit égal. Mathématiquement, cela revient à dire que
+\begin{align}
+    \sum_{C'} p(C) \rho(C \to C') = \sum_{C'} p(C') \rho(C' \to C)
+\end{align}
+On peut démontrer que cette relation est équivalente à \cite{newman_monte_1999} 
+\begin{align}
+    \frac{\rho(C'\to C)}{\rho(C \to C')} = \frac{p(C)}{p(C')} = \frac{\exp(-\beta E(C))}{\exp(-\beta E(C'))}
+\end{align} 
+En adoptant le bilan détaillé, on voit facilement que la distribution à l'équilibre calculée via \ref{p-eq-mc} redonne bien la distribution de Gibbs-Boltzmann.
+Durant une étape de Metropolis, la probabilité pour que la transition $C\to C'$ soit acceptée est 
+\begin{align}
+    p_a(C\to C')
+\end{align}
+
+
+Systems with a canonical heat bath can be simulated on a computer using an algorithm
+obeying detailed balance. For example consider a system of $N$ Ising spins $S_i=\pm1$ interacting via a Hamiltonian $H(S_1, S_2,\cdots S_N)$. We choose $1$ of the spins randomly uniformly with a probability $p=1/N$ and calculate the new energy of the system when the spin, $S_j$ say is changed to $-S_j$. In Metropolis dynamics the probability of accepting the spin flip $p_a(S_j\to -S_j)$ is given by 
+\begin{align}
+p_a(S_j\to -S_j)
+\end{align}
+if $H(S_1, S_2,\cdots, -S_j,\cdots S_N) < H(S_1, S_2,\cdots, S_j,\cdots S_N)$ but if $H(S_1, S_2,\cdots, -S_j,\cdots S_N) > H(S_1, S_2,\cdots, S_j,\cdots S_N)$ then the flip is accepted with probability 
+\begin{align}
+p_a(S_j\to -S_j) = \exp\left[ -\beta\left(H(S_1, S_2,\cdots, -S_j,\cdots S_N) - H(S_1, S_2,\cdots, S_j,\cdots S_N)\right)\right] <1.
+\end{align}
+The total probability at a given discrete time of changing $S_j$ is thus equal to 
+\begin{align}
+p(S_j\to -S_j) = \frac{1}{N} p_a(S_j\to -S_j)
+\end{align}
+as we choose the spin $S_j$ with probability $1/N$. Therefore we have
+\begin{align}
+\frac{p(S_j\to -S_j)}{p(-S_j\to S_j)} = \frac{p_a(S_j\to -S_j)}{p_a(-S_j\to S_j)}.
+\end{align}
+In the case where the change $S_j\to -S_j$ lowers the energy we have
+\begin{align}
+p_a(S_j\to -S_j) =1,
+\end{align}
+however the reverse move $-S_j\to S_j$ costs energy so 
+\begin{align}
+p_a(-S_j\to S_j) =\exp\left[ -\beta\left(H(S_1, S_2,\cdots, S_j,\cdots S_N) - H(S_1, S_2,\cdots, -S_j,\cdots S_N)\right)\right],
+\end{align}
+which gives
+\begin{eqnarray}
+\frac{p(S_j\to -S_j)}{p(-S_j\to S_j)} &=& \frac{1}{\exp\left[ -\beta\left(H(S_1, S_2,\cdots, S_j,\cdots S_N) - H(S_1, S_2,\cdots, -S_j,\cdots S_N)\right)\right]} \nonumber \\
+&=&\frac{ \exp\left[ -\beta H(S_1, S_2,\cdots, -S_j,\cdots S_N)\right]}{\exp\left[ -\beta H(S_1, S_2,\cdots, S_j,\cdots S_N)\right]},
+\end{eqnarray}
+and so in this case we see that detailed balance is respected. In the case of a move which increases the energy it is easy to see that detailed balance is again respected.  
+
+If we consider a case where the spins $+$ represent one type of particle and the $-$ another type and insist that the total  chemical composition remains the same the above dynamics is not correct as you cannot convert a $+$ into a $-$ and vice-a-versa. However a $+$ next to a $-$ can change places. Kawasaki dynamics chooses a neighbouring pair of $+$ and $-$ and tries to switch their positions, e.g. $.+-.\to .-+.$,  the move is accepted with probability $1$ if the energy change $\Delta E<0$  and with probability $p_a=\exp\left(-\beta\Delta E\right)$ if $\Delta E>0$.
+
+Practically in a computer program if $\Delta E >0$ one draws a uniformly distributed random
+number $r\in[0,1]$ (for example {\tt rand} in Fortran and Matlab), if $r< p_a $ the move accepted but if $r>p_a$ it is refused and the system stays in its initial state.
+
+
+
+\section{Suite}
+
+
 qui définit la fonction de partition $\mZ$. Dans un algorithme de Metropolis, on met à jour le micro-état en prenant un site $i$ au hasard
 \footnote{L'utilisation d'un générateur de nombre aléatoire (\textit{pRNG}) efficace est primordial. Il est déconseillé d'utiliser le générateur standard \textit{default\_random\_engine} de la librairie C++ \textit{rand} et conseillé d'opter pour des générateurs \textit{sfc64} ou \textit{xoroshiro}. Pour un pRNG booléen performant, voir \url{https://martin.ankerl.com/2018/12/08/fast-random-bool/}. Pour accélérer encore plus les calculs, ne pas oublier d'utiliser le flag d'optimisation \textit{-O3}  sur \textit{gcc} si vous codez en C/C++. Tout cela combiné accélère le code d'un facteur 20 environ. \newline
 De plus, bien que la librairire OpenMP pour paralléliser le code soit simple d'utilisation, elle gère très mal - de sa nature de mémoire partagée - les pRNG. Je conseille vivement l'utilisation de la librairie MPI qui assure une étanchéité au niveau des pRNG entre chaque thread.} 

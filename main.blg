@@ -8,46 +8,48 @@ Warning--I didn't find a database entry for "degennes"
 Warning--empty journal in cahn_free_nodate
 Warning--empty year in cahn_free_nodate
 Warning--empty publisher in l_landau_physique_1990
+Warning--empty journal in ikeda_neutron_nodate
+Warning--empty year in ikeda_neutron_nodate
 Warning--empty journal in hasnaoui_casimir_2010
-You've used 86 entries,
+You've used 93 entries,
             1791 wiz_defined-function locations,
-            916 strings with 17650 characters,
-and the built_in function-call counts, 19273 in all, are:
-= -- 1699
-> -- 864
+            957 strings with 18671 characters,
+and the built_in function-call counts, 20880 in all, are:
+= -- 1852
+> -- 921
 < -- 1
-+ -- 322
-- -- 236
-* -- 1630
-:= -- 3138
-add.period$ -- 262
-call.type$ -- 86
-change.case$ -- 80
++ -- 344
+- -- 251
+* -- 1765
+:= -- 3390
+add.period$ -- 283
+call.type$ -- 93
+change.case$ -- 87
 chr.to.int$ -- 0
-cite$ -- 90
-duplicate$ -- 769
-empty$ -- 1861
-format.name$ -- 236
-if$ -- 4124
+cite$ -- 99
+duplicate$ -- 832
+empty$ -- 2020
+format.name$ -- 251
+if$ -- 4466
 int.to.chr$ -- 0
-int.to.str$ -- 86
-missing$ -- 90
-newline$ -- 436
-num.names$ -- 87
-pop$ -- 128
+int.to.str$ -- 93
+missing$ -- 97
+newline$ -- 471
+num.names$ -- 94
+pop$ -- 138
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 297
+skip$ -- 321
 stack$ -- 0
-substring$ -- 1431
-swap$ -- 89
+substring$ -- 1581
+swap$ -- 95
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 4
-while$ -- 187
-width$ -- 88
-write$ -- 950
-(There were 6 warnings)
+warning$ -- 6
+while$ -- 207
+width$ -- 95
+write$ -- 1025
+(There were 8 warnings)

@@ -15,32 +15,34 @@
 \contentsline {subsection}{\numberline {1.3.2}Mod\IeC {\`e}le B}{19}{subsection.1.3.2}% 
 \contentsline {section}{\numberline {1.4}Syst\IeC {\`e}mes hors \IeC {\'e}quilibre}{21}{section.1.4}% 
 \contentsline {section}{\numberline {1.5}Conclusion}{23}{section.1.5}% 
-\contentsline {chapter}{\numberline {2}Mod\IeC {\`e}le Solid-On-Solid}{25}{chapter.2}% 
-\contentsline {section}{\numberline {2.1}Le mod\IeC {\`e}le d'Ising}{25}{section.2.1}% 
-\contentsline {subsection}{\numberline {2.1.1}Crossover Hamiltonian}{27}{subsection.2.1.1}% 
-\contentsline {section}{\numberline {2.2}Hamiltonien}{28}{section.2.2}% 
-\contentsline {section}{\numberline {2.3}Matrice de Transfert}{30}{section.2.3}% 
-\contentsline {section}{\numberline {2.4}Stabilit\IeC {\'e} de l'interface}{32}{section.2.4}% 
-\contentsline {section}{\numberline {2.5}\IeC {\'E}quivalence des ensembles}{34}{section.2.5}% 
-\contentsline {section}{\numberline {2.6}Mod\IeC {\`e}le de particules : le mod\IeC {\`e}le POP}{36}{section.2.6}% 
-\contentsline {section}{\numberline {2.7}Conclusion}{37}{section.2.7}% 
-\contentsline {chapter}{\numberline {3}Simulations}{41}{chapter.3}% 
-\contentsline {section}{\numberline {3.1}Algorithme de Metropolis}{41}{section.3.1}% 
-\contentsline {subsection}{\numberline {3.1.1}Ensemble grand-canonique : algorithme de Glauber}{43}{subsection.3.1.1}% 
-\contentsline {subsection}{\numberline {3.1.2}Ensemble canonique : algorithme de Kawasaki}{46}{subsection.3.1.2}% 
-\contentsline {subsection}{\numberline {3.1.3}Dynamique hors-\IeC {\'e}quilibre}{46}{subsection.3.1.3}% 
-\contentsline {subsection}{\numberline {3.1.4}Mod\IeC {\`e}le POP}{47}{subsection.3.1.4}% 
-\contentsline {section}{\numberline {3.2}Conclusion}{48}{section.3.2}% 
-\contentsline {chapter}{\numberline {4}Effets de taille finie}{49}{chapter.4}% 
-\contentsline {section}{\numberline {4.1}Limite thermodynamique}{50}{section.4.1}% 
-\contentsline {section}{\numberline {4.2}Effet Casimir}{50}{section.4.2}% 
-\contentsline {section}{\numberline {4.3}Hamiltonien de transition}{52}{section.4.3}% 
-\contentsline {section}{\numberline {4.4}Int\IeC {\'e}gration sur le potentiel chimique}{54}{section.4.4}% 
-\contentsline {section}{\numberline {4.5}Conclusion}{57}{section.4.5}% 
-\contentsline {chapter}{\numberline {5}Interaction gaussienne avec champ magn\IeC {\'e}tique confinant}{59}{chapter.5}% 
-\contentsline {section}{\numberline {5.1}Interface statique}{60}{section.5.1}% 
-\contentsline {subsection}{\numberline {5.1.1}Distribution de probabilit\IeC {\'e} de l'interface}{60}{subsection.5.1.1}% 
-\contentsline {subsection}{\numberline {5.1.2}Fonction de corr\IeC {\'e}lation}{63}{subsection.5.1.2}% 
-\contentsline {subsection}{\numberline {5.1.3}Tension superficielle effective}{66}{subsection.5.1.3}% 
-\contentsline {section}{\numberline {5.2}Interface hors-\IeC {\'e}quilibre}{68}{section.5.2}% 
-\contentsline {section}{\numberline {5.3}Conclusion}{69}{section.5.3}% 
+\contentsline {chapter}{\numberline {2}Mod\IeC {\`e}les sur r\IeC {\'e}seaux}{25}{chapter.2}% 
+\contentsline {section}{\numberline {2.1}Le mod\IeC {\`e}le d'Ising}{26}{section.2.1}% 
+\contentsline {subsection}{\numberline {2.1.1}Charact\IeC {\'e}risation de l'interface}{28}{subsection.2.1.1}% 
+\contentsline {subsection}{\numberline {2.1.2}M\IeC {\'e}thode de calcul de la force de Casimir}{29}{subsection.2.1.2}% 
+\contentsline {section}{\numberline {2.2}Mod\IeC {\`e}le Solid-On-Solid}{31}{section.2.2}% 
+\contentsline {subsection}{\numberline {2.2.1}D\IeC {\'e}finition du mod\IeC {\`e}le}{31}{subsection.2.2.1}% 
+\contentsline {subsection}{\numberline {2.2.2}Ensemble grand-canonique et potentiel chimique}{34}{subsection.2.2.2}% 
+\contentsline {subsection}{\numberline {2.2.3}Matrice de Transfert}{36}{subsection.2.2.3}% 
+\contentsline {subsection}{\numberline {2.2.4}\IeC {\'E}tats libres dans un syst\IeC {\`e}me SOS infini}{39}{subsection.2.2.4}% 
+\contentsline {section}{\numberline {2.3}Conclusion}{42}{section.2.3}% 
+\contentsline {chapter}{\numberline {3}M\IeC {\'e}thodes num\IeC {\'e}riques}{43}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Algorithme de Monte Carlo Metropolis}{44}{section.3.1}% 
+\contentsline {section}{\numberline {3.2}Suite}{47}{section.3.2}% 
+\contentsline {subsection}{\numberline {3.2.1}Ensemble grand-canonique : algorithme de Glauber}{49}{subsection.3.2.1}% 
+\contentsline {subsection}{\numberline {3.2.2}Ensemble canonique : algorithme de Kawasaki}{50}{subsection.3.2.2}% 
+\contentsline {subsection}{\numberline {3.2.3}Dynamique hors-\IeC {\'e}quilibre}{51}{subsection.3.2.3}% 
+\contentsline {subsection}{\numberline {3.2.4}Mod\IeC {\`e}le POP}{53}{subsection.3.2.4}% 
+\contentsline {section}{\numberline {3.3}Conclusion}{53}{section.3.3}% 
+\contentsline {chapter}{\numberline {4}Effets de taille finie}{55}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Limite thermodynamique}{56}{section.4.1}% 
+\contentsline {section}{\numberline {4.2}Effet Casimir}{56}{section.4.2}% 
+\contentsline {section}{\numberline {4.3}Hamiltonien de transition}{59}{section.4.3}% 
+\contentsline {section}{\numberline {4.4}Int\IeC {\'e}gration sur le potentiel chimique}{59}{section.4.4}% 
+\contentsline {section}{\numberline {4.5}Conclusion}{62}{section.4.5}% 
+\contentsline {chapter}{\numberline {5}Interaction gaussienne avec champ magn\IeC {\'e}tique confinant}{65}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}Interface statique}{66}{section.5.1}% 
+\contentsline {subsection}{\numberline {5.1.1}Distribution de probabilit\IeC {\'e} de l'interface}{66}{subsection.5.1.1}% 
+\contentsline {subsection}{\numberline {5.1.2}Fonction de corr\IeC {\'e}lation}{69}{subsection.5.1.2}% 
+\contentsline {subsection}{\numberline {5.1.3}Tension superficielle effective}{72}{subsection.5.1.3}% 
+\contentsline {section}{\numberline {5.2}Interface hors-\IeC {\'e}quilibre}{74}{section.5.2}% 
+\contentsline {section}{\numberline {5.3}Conclusion}{75}{section.5.3}% 
