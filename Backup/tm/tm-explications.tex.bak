@@ -1,0 +1,72 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+% Maths
+\usepackage{amsmath}
+\usepackage{geometry}
+% Figures
+\usepackage{tikz}
+\usepackage{subcaption}
+% Links in refs
+\usepackage{hyperref}
+\geometry{hmargin=2.5cm,vmargin=1.5cm}
+\newcommand{\nn}{\nonumber \\}
+\DeclareMathOperator{\sign}{sign}
+
+\title{Interface width under a steplike magnetic field}
+%\author{Paul, David S. , Peter C. W}
+\author{}
+
+\begin{document}
+\bibliographystyle{unsrt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{General considerations on the Transfer Matrix}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+Let $H$ be a Hamiltonian of the form $H = \sum_{i} H(i,i+1)$, where $H(i,j)$ is a symmetric interaction hamiltonian between particles $i$ and $j$.
+The partition function is thus written as 
+\begin{align*}
+    Z &= \sum_{\sigma_1 \sigma_2 ... \sigma_N} e^{- \beta H } \\
+     &= \sum_{\sigma_1 \sigma_2 ... \sigma_N} e^{- \beta \sum_{i} h(i,i+1)}  \\
+     &= \sum_{\sigma_1 \sigma_2 ... \sigma_N} \prod_{i} e^{-\beta h(i,i+1)} \\
+     &= \sum_{\sigma_1 \sigma_2 ... \sigma_N} \prod_{i} T(i,i+1)
+\end{align*}
+
+This transfer matrix $T(i,j)$ is obviously symmetric. 
+By definition of the product of two matrices, and using the periodic boundary conditions $T(N,N+1) = T(N,1)$
+\begin{align*}
+    \sum_j T(i,j)T(j,k) = T(j,k) \rightarrow \sum_{\sigma_1 \sigma_2 ... \sigma_N} T(1,2) T(2,3) ... T(N-1,N) T(N,N+1) = \sum_{\sigma_1} T^N(1,1)
+\end{align*}
+
+This gives 
+\begin{align*}
+    Z = \sum_{\sigma_1} T^N(1,1) = Tr T^N
+\end{align*}
+
+Since the $T$ is symmetric, we can get the eigenvectors $T|\lambda> = \lambda |\lambda>$, whith $<\lambda|\lambda'> = \delta_{\lambda\lambda'}$
+
+This gives us
+\begin{align*}
+    Z = Tr T^N = \sum_\lambda <\lambda | T^N | \lambda> = \sum_\lambda \lambda^N
+\end{align*}
+
+Using the completeness relation on the physical space of heights $h$, we get
+\begin{align*}
+    Z &=  \sum_h \sum_\lambda \lambda^N <\lambda | h > < h | \lambda > \\
+    1 &= \sum_h \frac{1}{Z} \sum_\lambda \lambda^N <\lambda | h >^2
+\end{align*}
+
+Defining $p(h)$ as a density probability normalized to $1$, we can identify from the previous equation
+\begin{align*}
+    p(h) = \frac{1}{Z} \sum_\lambda \lambda^N <\lambda | h >^2
+\end{align*}
+
+\bibliographystyle{unsrt.bst}
+\bibliography{ref} 
+
+\end{document}

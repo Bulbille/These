@@ -1,0 +1,55 @@
+This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: main.aux
+The style file: unsrt.bst
+Database file #1: biblio.bib
+Warning--I didn't find a database entry for ""
+Warning--I didn't find a database entry for "degennes"
+Warning--empty journal in cahn_free_nodate
+Warning--empty year in cahn_free_nodate
+Warning--empty publisher in l_landau_physique_1990
+Warning--empty journal in ikeda_neutron_nodate
+Warning--empty year in ikeda_neutron_nodate
+Warning--empty journal in hasnaoui_casimir_2010
+You've used 94 entries,
+            1791 wiz_defined-function locations,
+            963 strings with 18807 characters,
+and the built_in function-call counts, 21104 in all, are:
+= -- 1875
+> -- 925
+< -- 1
++ -- 346
+- -- 252
+* -- 1784
+:= -- 3424
+add.period$ -- 286
+call.type$ -- 94
+change.case$ -- 88
+chr.to.int$ -- 0
+cite$ -- 100
+duplicate$ -- 841
+empty$ -- 2044
+format.name$ -- 252
+if$ -- 4514
+int.to.chr$ -- 0
+int.to.str$ -- 94
+missing$ -- 98
+newline$ -- 476
+num.names$ -- 95
+pop$ -- 139
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 324
+stack$ -- 0
+substring$ -- 1606
+swap$ -- 96
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 6
+while$ -- 210
+width$ -- 96
+write$ -- 1036
+(There were 8 warnings)

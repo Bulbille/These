@@ -1,0 +1,44 @@
+\BOOKMARK [0][-]{chapter.1}{Liquid interfaces}{}% 1
+\BOOKMARK [1][-]{section.1.1}{xx}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{Diffusion dynamic}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.3}{Shearing at interface}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.4}{Delville's experiment}{chapter.1}% 5
+\BOOKMARK [0][-]{chapter.2}{SOS model}{}% 6
+\BOOKMARK [1][-]{section.2.1}{Hamiltonian : from Ising to SOS }{chapter.2}% 7
+\BOOKMARK [1][-]{section.2.2}{Transfer Matrix method}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.3}{Discretization of the system with respect to continuous models}{chapter.2}% 9
+\BOOKMARK [2][-]{subsection.2.3.1}{Correlation length and temperature}{section.2.3}% 10
+\BOOKMARK [1][-]{section.2.4}{Three magnetic fields}{chapter.2}% 11
+\BOOKMARK [2][-]{subsection.2.4.1}{A : fluctuation suppresing model -B }{section.2.4}% 12
+\BOOKMARK [2][-]{subsection.2.4.2}{B : fluctuation enhancing model +B}{section.2.4}% 13
+\BOOKMARK [2][-]{subsection.2.4.3}{C : symetric model |B| }{section.2.4}% 14
+\BOOKMARK [0][-]{chapter.3}{Strip geometry}{}% 15
+\BOOKMARK [1][-]{section.3.1}{Interface probability distribution, David's Airy computation}{chapter.3}% 16
+\BOOKMARK [1][-]{section.3.2}{Other stuff}{chapter.3}% 17
+\BOOKMARK [0][-]{chapter.4}{Simulations}{}% 18
+\BOOKMARK [1][-]{section.4.1}{Monte Carlo method}{chapter.4}% 19
+\BOOKMARK [2][-]{subsection.4.1.1}{Metropolis algorithm}{section.4.1}% 20
+\BOOKMARK [2][-]{subsection.4.1.2}{Technicalities about parallelisation and pRNG}{section.4.1}% 21
+\BOOKMARK [2][-]{subsection.4.1.3}{Equilibrium and Autocorrelation time}{section.4.1}% 22
+\BOOKMARK [1][-]{section.4.2}{Glauber dynamics}{chapter.4}% 23
+\BOOKMARK [2][-]{subsection.4.2.1}{The pinning problem on a Glauber dynamics. How model B answers that}{section.4.2}% 24
+\BOOKMARK [1][-]{section.4.3}{Kawasaki dynamics}{chapter.4}% 25
+\BOOKMARK [1][-]{section.4.4}{Differences between the two dynamics}{chapter.4}% 26
+\BOOKMARK [0][-]{chapter.5}{Semiinfinite geometry}{}% 27
+\BOOKMARK [1][-]{section.5.1}{No magnetic field case, analytical computations}{chapter.5}% 28
+\BOOKMARK [1][-]{section.5.2}{?}{chapter.5}% 29
+\BOOKMARK [0][-]{chapter.6}{Kawasaki SOS + shear}{}% 30
+\BOOKMARK [1][-]{section.6.1}{Corresponding experiment}{chapter.6}% 31
+\BOOKMARK [1][-]{section.6.2}{Results with respect to the drive}{chapter.6}% 32
+\BOOKMARK [2][-]{subsection.6.2.1}{Interpretation}{section.6.2}% 33
+\BOOKMARK [2][-]{subsection.6.2.2}{Abraham's paper on shearing suppresing fluctuations}{section.6.2}% 34
+\BOOKMARK [0][-]{chapter.7}{Finite size effects}{}% 35
+\BOOKMARK [1][-]{section.7.1}{Casimir force on a strip}{chapter.7}% 36
+\BOOKMARK [2][-]{subsection.7.1.1}{Free energy and integration of observables}{section.7.1}% 37
+\BOOKMARK [2][-]{subsection.7.1.2}{Coupling parameter approach \(Lopes\)}{section.7.1}% 38
+\BOOKMARK [1][-]{section.7.2}{Adaptation with semiinfinite plane}{chapter.7}% 39
+\BOOKMARK [0][-]{chapter.8}{Kawasaki+Glauber SOS}{}% 40
+\BOOKMARK [1][-]{section.8.1}{Corresponding experiment with mixing \045ages of Glauber}{chapter.8}% 41
+\BOOKMARK [2][-]{subsection.8.1.1}{Fluctuation of height}{section.8.1}% 42
+\BOOKMARK [1][-]{section.8.2}{Results}{chapter.8}% 43
+\BOOKMARK [0][-]{chapter.9}{Wrap-up and perspectives}{}% 44
