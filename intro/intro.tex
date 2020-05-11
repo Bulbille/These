@@ -1,26 +1,34 @@
 \chapter*{Introduction}
 \addcontentsline{toc}{chapter}{Introduction} 
 
+{\color{blue}
 
-Chaque système statistique est décrit par un paramètre d'ordre, que ce soit la magnétisation moyenne d'un milieu aimanté ou de l'orientation moyenne des polymères par exemple. Dans ces systèmes, on appelle phase un milieu homogène selon le paramètre d'ordre. Les transitions de phase d'un système, où une phase homogène se sépare en plusieurs phases différentes, possèdent des propriétés intéressantes. Lors d'une transition de phase continue, la largeur de l'interface entre deux phases diverge jusqu'à atteindre une taille macroscopique. Lorsque cette largeur charactéristique devient du même ordre de grandeur que la cellule expérimentale ou numérique, le système ainsi confiné est soumis à des effets de taille finie, notamment l'effet Casimir critique.
+Every statistical model is described by an order parameter, such as the mean magnetization in a magnetic system or the polymer's mean orientation. During a continuous phase transition, the correlation length diverges up to a macroscopical scale. When this length scale becomes as the same order of magnitude as the experimental or numerical cell, finite size effect arise, such as the critical Casimir effect.
 
-L'étude des propriétés statistiques des interfaces peut se faire via différentes approches, toutes complémentaires. Les modèles sur réseau, et plus préciseément le modèle d'Ising, sont particulièrement adaptés aux simulations numériques, mais plus difficiles à traiter analytiquement à cause du trop grand nombre de degrés de liberté du système. Une manière de simplifier le problème est de réduire la dimensionalité du système d'une dimension, ce qui nous permet d'utiliser le formalisme des matrices de transfert. À cet effet, le modèle Solid-On-Solid a été énormément étudié dans les annés 80-90 pour sa simplicité. L'interface peut également être assimilée à un marcheur brownien qui, au lieu de bouger dans le temps, se meut dans l'espace, rendant possible l'usage du formalisme stochastique. Cette méthode permet d'étudier la théorie des ondes capillaires, théorie décrivant les propriétés des interfaces. 
-La dernière méthode que nous aborderons dans cette thèse est celle du champ moyen, c'est-à-dire l'étude des propriétés de deux phases grâce aux équations de Landau-Ginzburg. Cette méthode a l'avantage d'offrir des calculs analytiques relativement faciles et permet d'obtenir la forme des fonctions de corrélation à plusieurs point ainsi que les longueurs de corrélation. Néanmoins, la vérification des résultats via les simulations numériques, qui nous permettrait de mettre des grandeurs mésoscopiques comme la tension superficielle ou la longueur capillaire en relation avec les grandeurs microscopiques du modèle d'Ising, est asez difficile, et nous éviterons dans la présente thèse le rapprochement.
+We may study the statistical properties of interfaces between two phases through different though complementary methods. Historically, the first method was through lattice models, and more precisely the Ising model. Those models are well-suited for numerical analysis due to their discrete nature, while posing analytical challenges due to the big number of degrees of freedom. The Solid-On-Solid model is an approximation of the Ising model in $d-1$ dimensions allowing us to use the transfer matrix method, which holds analytical results directly comparable with numerical simulations.
+From the Ising model arose some mean-field approximations, with the Landau-Ginzburg Hamiltonian. This method allows for relatively easy analytical computations of the two-point space correlation function of the system, which gives us some insight about the properties of the interfaces. 
+From the mean field theory we can derive the mean-field equations of a fluctuating interface, which then resembles to a brownian walker. This powerful analogy allows the use of quantum mechanics formalism, as we will see later on.
 
-L'étude de l'effet Casimir critique - qui est un effet de taille finie - revient au final à étudier les propriétés statistiques d'une interface, et à voir comment elles sont modifiées lorsque le système est de taille finie dans une direction avec ou sans les conditions de bords sur les surfaces correspondantes. Cependant, les propriétés d'une interface varient également lorsqu'elle est mise hors-équilibre, par exemple via une force générée par un cisaillement, qui représente beaucoup de cas expérimentaux classiques. 
-Nous nous intéressons ici particulièrement à la différence entre les états d'équilibre et hors-équilibre, pour lesquels les formalismes sont différents mais dont les simulations numériques sont similaires.
+Systems may exist in many different contexts. Knowing how the thermodynamical ensemble in which we place the system affects its statistical properties is a key to understanding how to transpose the analytical results to actual experiments. 
+A special attention will also be brought to the free energy. From the free energy between a bulk and an interface we can compute the its surface tension. The derivative of the free energy with respect to the length of the system also gives us a confinement force, called the Casimir force. This force is exerced on the boundary conditions because of the confinement of fluctuations. 
 
-Au final, la présence d'effets de taille finie nous mène à prendre en compte la non-équivalence des ensembles thermodynamiques canoniques et grand-canoniques loin de la limite thermodynamique. Nous porterons une attention particulière dans les cas où ces deux ensembles se comportent de manière différente.
-
-Le manuscrit se décompose de la manière suivante :
+This outline of this thesis is as following :
 \begin{itemize}
-    \item Le premier chapitre introduit les différents approches historiques sur l'étude des interfaces, en s''attardant sur les principaux résultats obtenus dans la littérature pour des interfaces à l'équilibre, puis hors-équilibre
-    \item Le second chapitre introduit le modèle Solid-On-Solid, qui est une approximation 1D à très basse température du modèle d'Ising en 2D. Nous y parlerons du formalisme des matrices de transfert, des principaux résultats obtenus dans ce modèle et de quelques précisions fondamentales sur les différents ensembles thermodynamique sdans lesquelles ont peut étudier nos systèmes
-    \item Nous présentons dans le troisième chapitre l'alogirthme de Monter Carlo-Metropolis, un outil puissant pour explorer l'espace des phases et calculer numériquement la fonction de partition de nos systèmes
-    \item Dans le quatrième chapitre, l'étude d'un système SOS - analogue à la croissance d'un cristal -  via une méthode d'intégration sur les potentitels chimiques nour permet d'obtenir l'énergie libre, et ainsi l'effet Casimir. Cette étude se termine par l'ajout du cisaillement.
-        \item Dans le cinquième chapitre, nos étudions un modèle avec un champ magnétique charactéristique des expériences dans lesquelles on force une phase d'un fluide binaire dans une autre grâce à une pression de radiation exercée par un laser
-    \item Un nouveau modèle découlant des considérations du second chapitre peut être créé de la même manière que le modèle SOS, en prenant en compte l'entropie. Ce nouveau modèle, baptisé Particles-Over-Paticle, fait l'objet du sixième chapitre
-    \item Le septième chapitre reprend les calculs d'une publication récente de notre équipe sur un modèle de champ moyen où l'on mélange deux types de particules appartenant à des ensembles thermodynamiques différents, sous l'effet d'un cisaillement uniforme
+    \item The first chapter derives the interface dynamics from mean field theory. In doing so, we will define all the main interface models that exist, and explain the main results from litterature. 
+    \item In the second chapter we explain how do numerical simulations work, some methods to compute the free energy in lattice gas models, and some usefull tips.
+    \item The third chapter is devoted to finite size effects, computed for all the models presented in chapter one, and compoared to numerical results. 
+    \item The fourth chapter is about a paper we've published \cite{dean_effect_2020}. This paper is about the computation of the surface tension of a sheared interface, where we've coupled the field with a virtual one in order to proceed with the computation.
+    \item In the last chapter we introduce a new lattice model which is a better approximation to the Ising model than the Solid-On-Solid model. This new model, the Particles-Over-Particles model, takes into account the entropy, in comparison to SOS.
 \end{itemize}
 
-La présente thèse a été rendue possible grâce à l'ANR FISICS, le Laboratoire Onde Matière d'Aquitaine de l'Université de Bordeaux, le Laboratoire de Physique de l'ENS Lyon et le Mésocentre de Calcul Intensif d'Aquitaine sur lesquelles ont été faites les simulations numériques. Je remercie particulièrement Josiane Parzych (LOMA) et Laurence Mauduit (ENS LYON) pour le suivi administratif, ainsi que Nguyen Ky Nguyen (MCIA) pour l'aide technique.
+All our numerical efforts benefited from the numerical resources of the PSMN at the ENS
+de Lyon [22] and this work was financed by the ERC grant OUTEFLUCOP with principal
+investigator Sergio Ciliberto (CNRS, ENS de Lyon). This work was performed during three years
+at the Laboratoire de Physique of the ENS de Lyon, under the direction of Peter Holdsworth.
+
+
+
+All our numerical efforts benefited from the numerical resources of the MCIA at 
+
+This thesis has been posible thanks to the ANR's grant FISICS, the Laboratoire Onde Matière d'Aquitaine from 'Université de Bordeaux, and the Laboratoire de Physique  from ENS Lyon. The numerical simulations benefited from the numerical resources of the Mésocentre de Calcul Intensif Aquitain \cite{noauthor_mesocentre_nodate}, with the help of Nguyen Ky Nguyen. I also wish to thank Josiane Parzych (LOMA) and Laurence Mauduit (ENS LYON) for all the administration procedures.
+}

@@ -2,64 +2,73 @@
 \chapter{Equilibrium interface dynamics}
 %%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%
-    \section{Introduction}
-%%%%%%%%%%%%%%%%%%%%%%
+In this chapter we will analyse the dynamics of statistical systems. The analysis will allow us to understand how phase transitions - in particular those who possess a phase separation - occur dynamically \cite{hohenberg_theory_1977}. The most famous example is the Ising model without any external field, its order parameter beeing the total magnetization. 
 
-Dans ce chapitre nous analysons la dynamique des systèmes statistiques. L'analyse nous permettra de comprendre comment les transitions de phase, notament certains systèmes subissant une séparation de phase à la transition, se comportent de manière dynamique. L'exemple le plus connu est le modèle d'Ising en absence de champ magnétique, le paramètre d'ordre de la transition étant la magnétisation totale du système. Dans la phase haute température, le système est homogène et sa magnétisation est nulle. En dessous de la température critique, dans le cas où le paramètre d'ordre est conservé (par exemple une dynamique de Kawasaki ou modèle B), le système va localement se séparer en deux phases de magnétisation moyenne opposée séparées par une interface minimisant l'énergie de surface entre les deux phases. 
+In the high temperature phase, the system is homoegeneous and its total magnetization is zero. Below the critical temperature, when the order parameter is conserved (for example with a Kawasaki dynamics or Model B), the system will locally separate into two phases of opposite mean magnetization separated by and interface, this interface minimizing the surface energy between both pahses.
+When the order parameter is not conserved (for example Glauber dynamics or Model A), a sponteneous symetry breaking will make one of the two phases take over the whole system. In a continuous phase transition where the critical point is reached from the disordered state to the ordered stated, the domain size, which is equal to the system's correlation lengt, diverges close to the critical temperature $T_C$. In a thermodynamical system, it becomes infinite, implying that the system takes an infinite amount of time to reach equilibrium : it's the critical slowing down. The process of domain growth is known as coarsening and phase ordering kinetics is the theory that has been developed to understand the phenomenon of coarsening\cite{bray_theory_1994}. {\color{purple} In Fig \ref{clusterization}, we show an example of coarsening in the Ising model with respect to time.}
 
-Dans le cas où le paramètre d'ordre n'est pas conservé (par exemple une dynamique de Glauber ou modèle A), une brisure spontannée de symmétrie fera que l'une des deux phases englobe l'autre, au point de recouvrir tout le système (voir Fig \ref{clusterization}). Dans une transition de phase continue où le point critique est atteint depuis l'état désordonné vers l'état ordonné, les domaines de phase égales sont de taille égale à la longueur de corrélation du système. Dans les transitions de phase telles que celles du modèle d'Ising, cette longueur de corrélation diverge lorsque l'on s'approche de la température critique $T_C$. Dans un système thermodnamique, elle devient infinie, impliquant que le système prend un temps infini pour atteindre l'équilibre thermodynamique : c'est le ralentissement critique. Ce processus de croissance des domaines depuis la phase désordonnée s'appelle le \textit{coarsening} et la théorie de la cinétique d'ordre des phases est la théorie développée pour le comprendre.
-Cette thèse s'appuie sur cette théorie afin de déterminer les propriétés statistiques (telles que la position moyenne et la tension superficielle) des interfaces entre deux phases coexistantes.
+Furthermore, for systems with a conserved order parameter which separate into two phases, the two phases will be separated by an interface. This interface will be characterised by a surface tension, its average position will be fixed but it will exhibit fluctuations. Later we will see how model of phase ordering kinetics and be used to determine the static and dynamical properties of interfaces between two coexisiting phases. 
+
 \begin{figure}[t]
     \centering
-    \includegraphics[width=0.9\linewidth]{intro/clusterization.pdf}
-    \caption{Phénomène d'aggrégation à partir d'une trempe (\textit{quench}) dans un modèle d'Ising de $T=\infty$ à $T=T_{2D,C}$ \cite{onsager_crystal_1944} pour différents temps en étapes de Monte Carlo, pour un système $600 \times 600$ avec une dynamique non-conservée de Glauber.}
+    \includegraphics[width=\linewidth]{intro/clusterization.pdf}
+    \caption{Numerical simulations of coarsening from a quench from a disordered state $T=\infty$ to an ordered state  $T=T_{2D,C}$ \cite{onsager_crystal_1944} for different times, in Monte Carlo steps, for a $600 \times 600$ system with non-conserved Glabuer dynamics.}
     \label{clusterization}
 \end{figure}
-$\bx$
 
-In this chapter we will analyse the dynamics of statistical systems. The analysis will allow us to understand how phase transitions occur dynamically. For instance we know that certain systems undergo what is known phase separation, for instance if we take the Ising model with zero magnetic field, in the high temperature phase the system is homogeneous and the average magnetisation, which is the order parameter for the transition is zero. Below the critical temperature if the overall magnetisation is conserved (for instance for Kawasaki dynamics), which would be the case if spins corresponded to different types of particles, the system will separate into two  phases of opposite average magnetisation, separated by an interface which will be roughly flat in order to minimise the surface energy between the two phases. For nonconserved systems, where the overall magnetisation in not conserved (for example Glauber dynamics), eventually one of the two phases will make up the system (spontaneous symmetry breaking). In a continuous phase transition as the critical point is reached from the disordered to ordered, domains of phases of positive and negative magnetisation form and the size of these domains is given by the correlation length of the system. For continuous phase transitions such as that in the Ising model the correlation length diverges as as the critical point is approached, for instance as $T\to T_c$ if the temperature is varied. The size of the domains thus have to become infinite if the system is infinite, this means that for an infinite system it will take an infinite time to relax to the equilibrium state. The process of domain growth is known as coarsening and phase ordering kinetics is the theory that has been developed to understand the phenomenon of coarsening. Furthermore, for systems with a conserved order parameter which separate into two phases, the two phases will be separated by an interface. This interface will be characterised by a surface tension, its average position will be fixed but it will exhibit fluctuations. Later we will see how model of phase ordering kinetics and be used to determine the static and dynamical properties of interfaces between two coexisiting phases. 
-
-While the phase diagram of a system can be determined via 
-its Hamiltonian and equilibrium statistical mechanics, the dynamics of coarsening depends on details of the systems dynamics that do not show up in single time thermodynamic observables. Therefore one needs to construct dynamical models that capture the underlying evolution of the state of the system, in particular there is a big difference between systems where the order parameter is conserved and those where it is not conserved.
+While the phase diagram of a system can be determined via its Hamiltonian and equilibrium statistical mechanics, the dynamics of coarsening depends on {\color{red} the} details of the systems dynamics that do not show up in single time thermodynamic observables. Therefore one needs to construct dynamical models that capture the underlying evolution of the state of the system. In particular, there is a big difference between systems where the order parameter is conserved and those where it is not conserved.
 
 %%%%%%%%%%%%%%%%%%%%%%
     \section{Statics of systems with a finite number of degrees of freedom}
 %%%%%%%%%%%%%%%%%%%%%%
 
-Thermodynamic systems are naturally described in terms of fields, for example densities. This means that one is naturally lead to consider statistical field theories where the system is described in terms of a local field $\phi(\bx)$. Statistical field theories can be applied to both statics, to understand phase diagrams, and dynamics to understand phase ordering. However to start with we will examine the case of systems with a finite number of degrees of freedom. 
+
+Thermodynamic systems are naturally described in terms of fields, for example densities. 
+
+{\color{red} \textbf{To explain why systems are naturally described in therms of fields}
+
+La mesure des observables nécessite une connaissance parfaite de la dérivée de la fonction de partition $Z$, et donc d'explorer l'espace des phases des configurations du système. Les appareils de mesure possèdent tous une résolution spatiale et temporelle, c'est-à-dire qu'ils mesurent l'état moyen de toutes les particules dans un volume et dans un laps de temps donné. Plus la résolution des appareils de mesure est bonne, et plus la mesure des observables dérivées de la fonction de partition est précise. Si $\Phi(\bx,t)$ est le champ réel de l'observable du système, alors l'appareil, possédant une précision dans le temps et l'espace de $(dt,2dx,2dy,2dz)$ mesure le champ
+\begin{align}
+    \phi(\bx,t) = \frac{1}{V dt} \int_{t-dt}^{t} dt' \int_{x-dx}^{x+xd} dx' \int_{y-dy}^{y+dy} dy' \int_{z-dz}^{z+dz} dz' \Phi(x,y,z,t)
+    \label{renormalisation}
+\end{align}
+}
+
+This means that one is naturally lead to consider statistical field theories where the system is described in terms of a local field $\phi(\bx)$. Statistical field theories can be applied to both statics, to understand phase diagrams, and dynamics to understand phase ordering. However to start with we will examine the case of systems with a finite number of degrees of freedom. 
 
 Consider a system in the canonical ensemble with a Hamiltonian $H(\bq)$ where $q_i$ for 
 $1\leq i\leq N$ represent a finite number of continuous spatial degrees of freedom and where in a classical system we have already integrated over the corresponding momenta. The partition function for the system is given by
 \begin{equation}
-    Z = \int d\bq \exp\left(-\beta H(\bq)\right),
+    Z = \int d\bq \exp\left(-\beta H(\bq)\right)
 \end{equation}
-and in equilibrium the probability density function $P_{eq}(\bq)$ of the degrees of freedom is given by 
+In general the integral which gives the  partition function cannot be computed analytically. In equilibrium, the probability density function $P_{eq}(\bq)$ of the degrees of freedom is given by 
 \begin{equation}
-    P_{eq}(\bq) = \frac{\exp\left(-\beta H(\bq)\right)}{Z}.\label{eqdis}
+    P_{eq}(\bq) = \frac{\exp\left(-\beta H(\bq)\right)}{Z}
+    \label{eqdis}
 \end{equation}
-In general the integral which gives the  partition function cannot be computed analytically.
+
 The simplest approximation to compute $Z$ is the mean field approximation where the integral 
 is approximated by the integrand at its largest value - in mathematics this is the Laplace method for approximating an integral and in this context it is just an expansion about the minimum energy configuration of the system. The mean field approximation is thus
 \begin{equation}
-    Z_{MF}= \exp\left(-\beta H(\bq^*)\right),
+    Z_{MF}= \exp\left(-\beta H(\bq^*)\right)
 \end{equation}
 where $\bq^*$ is the value of $\bq$ which minimises $H$ (note that the approximation becomes exact in the zero temperature limit - $\beta \to \infty$   - as the system will minimise its energy). The values $q_i^*$ are determined from
 \begin{equation}
-    \frac{\partial H}{\partial q_i}|_{\bq={\bf q^*}}=0.
+    \frac{\partial H}{\partial q_i}|_{\bq={\bf q^*}}=0
 \end{equation}
 Within this approximation any thermodynamic observable is given by
 \begin{equation}
-    < f(\bq) > = f(\bq^*).
+    < f(\bq) > = f(\bq^*)
 \end{equation}
 
 We now consider how one can model dynamics of such systems. We will look for a Langevin equation which is chosen to give the correct equilibrium Gibbs-Boltzmann distribution. We write
 \begin{equation}
-    \frac{d q_i}{dt} = -L_{ij}\frac{\partial H(\bq)}{ \partial q_j} + \eta_i(t),
+    \frac{d q_i}{dt} = -L_{ij}\frac{\partial H(\bq)}{ \partial q_j} + \eta_i(t)
 \end{equation}
 where $L_{ij}$ is a matrix which discuss later and $\eta_i(t)$ is zero mean Gaussian white noise  with correlation function 
 \begin{equation}
-    < \eta_i(t)\eta_j(t')> =  \Gamma_{ij} \delta(t-t')\label{cfn}
+    < \eta_i(t)\eta_j(t')> =  \Gamma_{ij} \delta(t-t')
+    \label{cfn}
 \end{equation}
 The Gaussian white noise represents the effects of thermal fluctuations on the system we assume that the correlation time of these fluctuations is extremely short with respect to the dynamics of the degrees of freedom $q_i$ (in fact in critical systems the dynamics becomes very slow, critical slowing down, and this approximation becomes better and better as one approaches the critical point).  There is no momentum term in this Langevin equation and for this reason it is often called the over damped Langevin equation. Overdamped Langevin equations can also be derived staring from Newton's laws in the presence of friction, due to a solvent, and again white noise (again due to molecular collisions with the solvent) and by taking the limit where the frictional forces are greater than the acceleration term in Newton's equations (equivalent to setting the particle masses to zero).
 
@@ -68,23 +77,23 @@ As Eq. (\ref{cfn}) is for a correlation function the matrix $\Gamma_{ij}$ must b
 
 In the absence of noise or thermal fluctuations, so at zero temperature, the system will simply minimise its energy. Therefore if 
 \begin{equation}
-    \frac{\partial H(\bq)}{ \partial q_j} =0, 
+    \frac{\partial H(\bq)}{ \partial q_j} =0
 \end{equation}
 with no noise we have $\frac{d q_i}{dt}=0$, that is to say it is the term $\frac{\partial H(\bq)}{ \partial q_j}$ that drives the dynamics if there is no noise. As long as the matrix $L_{ij}^{-1}$ exists the zero temperature dynamics will take the system to the local minimum of $H$ and to the absolute minimum if there are no metastable configurations. 
 
 Under these assumptions, the Fokker-Planck equation for the probability density function of the degrees of freedom is 
 \begin{equation}
-    \frac{\partial p(\bq,t)}{\partial t} = \frac{\partial}{\partial q_i} \left[\frac{1}{2}\Gamma_{ij}     \frac{\partial p(\bq,t)}{\partial q_i} + p(\bq,t) L_{ij}\frac{\partial H(\bq)}{ \partial q_j}\right].
+    \frac{\partial p(\bq,t)}{\partial t} =  \frac{\partial}{\partial q_i} \left[\frac{1}{2}\Gamma_{ij} \frac{\partial p(\bq,t)}{\partial q_i} + p(\bq,t) L_{ij}\frac{\partial H(\bq)}{ \partial q_j}\right]
 \end{equation}
 This can be written as 
 \begin{equation}
-    \frac{\partial p(\bq,t)}{\partial t} +\frac{\partial}{\partial q_i}J_i(\bq,t)=0,
+    \frac{\partial p(\bq,t)}{\partial t} +\frac{\partial}{\partial q_i}J_i(\bq,t)=0
 \end{equation}
-where the ${\bf J}(\bq,t)$ is the probability current. We now insist that the system is in equilibrium with zero current when $p(\bq,t)= P_{eq}(\bq)$ as given by Eq. (\ref{eqdis}), this gives
+where the ${\bf J}(\bq,t)$ is the probability current. We now insist that the system is in equilibrium with zero current when $p(\bq,t)= P_{eq}(\bq)$ as given by Eq. \eqref{eqdis}, this gives
 \begin{equation}
-    \left[-\frac{\beta}{2}\Gamma_{ij} + L_{ij}\right]\frac{\partial H(\bq)}{ \partial q_j},
+    \left[-\frac{\beta}{2}\Gamma_{ij} + L_{ij}\right]\frac{\partial H(\bq)}{ \partial q_j}
 \end{equation}
-and this holds for any choice of $H$ is we chose.
+and this holds for any choice of $H$ is we chose
 \begin{equation}
     \Gamma_{ij}= 2T L_{ij}
 \end{equation}
@@ -94,68 +103,62 @@ where we have taken units where Boltzmann's constant $k_B=1$.
     \section{Statistical field theory}
 %%%%%%%%%%%%%%%%%%%%%%
 
-We now consider a system with Hamiltonian $H[\phi]$ which depends on a continuous field 
-$\phi(\bx)$. The partition function is given by a functional integral
+We now consider a system with Hamiltonian $H[\phi]$ which depends on a continuous field  $\phi(\bx)$. The partition function is given by a functional integral
 \begin{equation}
     Z = \int d[\phi] \exp(-\beta H[\phi]),
 \end{equation}
 the functional integral over all possible fields $\phi$ can be taken as a limit where $\phi$ is defined at a finite number of points on a lattice and then the lattice spacing is taken to zero. 
-In many cases  the system has been coarse grained and $\phi$ represents a spatially varying order parameter, for instance the local density averaged over some small volume. In this case the Hamiltonian $H$ is strictly speaking a free energy  and contains terms that depend on the temperature.
+In many cases, the system has been coarse grained and $\phi$ represents a spatially varying order parameter, for instance the local density averaged over some small volume. In this case the Hamiltonian $H$ is strictly speaking a free energy  and contains terms that depend on the temperature.
 
 The mean field approximation to partition function is then given by
 \begin{equation}
-    Z _{MF}=  \exp(-\beta H[\phi_{MF}]),
+    Z _{MF}=  \exp(-\beta H[\phi_{MF}])
 \end{equation} 
 where $\phi_{MF}$ is the mean field solution which minimises $H$. The definition of a functional derivative of a functional is
 \begin{equation}
-    F[\phi+\delta\phi]-F[\phi]= \int d\bx \frac{\delta F}{\delta\phi(\bx)} \delta\phi(\bx).
+    F[\phi+\delta\phi]-F[\phi]= \int d\bx \frac{\delta F}{\delta\phi(\bx)} \delta\phi(\bx)
 \end{equation}
 Therefore if a field $\phi$ maximises $H$ we must have 
 \begin{equation}
-    \frac{\delta H}{\delta\phi(\bx)}=0.
+    \frac{\delta H}{\delta\phi(\bx)}=0
 \end{equation}
 
-We now consider the standard Landau-Ginzburg Hamiltonian describing Ising like systems where
+We now consider the standard Landau-Ginzburg Hamiltonian  \cite{l_landau_physique_1990} describing Ising like systems where
 \begin{equation}
-    H[\phi] = \int d\bx \ \frac{\kappa}{2}[\nabla \phi]^2 + V(\phi) .
+    H[\phi] = \int d\bx \ \frac{\kappa}{2}[\nabla \phi]^2 + V(\phi)
 \end{equation}
-The first term represents an energetic cost of varying the field $\phi$ while the second potential term has two minima at $\phi=\pm \phi_c$, and without loss of generality we can chose  $V(\phi_c)=V(-\phi_c)$, in the low temperature or phase separated phase and a single minimum at $\phi=0$ in the high temperature phase. 
-It is easy to see that 
-\begin{equation}
-    \frac{\delta H}{\delta \phi(\bx)} = -\kappa \nabla^2 \phi(\bx) + V'(\phi).
-    \label{cm}
-\end{equation}
+{\color{blue}
+The first term represents an energetic cost of varying the field $\phi$. The second potential term has two minima at $\phi=\pm \phi_c$, and, in the low temperature or phase separated phase, without loss of generality we can chose  $V(\phi_c)=V(-\phi_c)$, while it has a single minimum at $\phi=0$ in the high temperature phase.
 
-
-Le modèle standard des séparations de phase, appelé $\phi^4$ est donné par le potentiel en double-puits de Landau-Ginzburg \cite[§ 45]{l_landau_physique_1990} 
+The standard potential for phase separations, called the $\phi^4$ model, is given by the double-well
 \begin{align}
     V(\phi) = \frac{1}{2} m^2 \phi^2 + \frac{\lambda}{4!} \phi^4
     \label{phi4}
 \end{align} 
-où $m^2 = T-T_C$. Pour $m^2 \less 0$, ce potentiel symmétrique possède deux minima globaux à $\phi_C = \pm \sqrt{- \frac{6 m^2}{\lambda} } \pm$. Pour $m^2 \ge 0$, ce potentiel possède un minimum global à $\phi_C = 0$. 
-
-Dans les expériences en laboratoire, les systèmes sont souvent couplés à champ magnétique $h(x)$ d'Hamiltonien
+where $m^2 = T-T_C$. For $m^2 \less 0$, the minima are at $\phi_C = \pm \sqrt{- \frac{6 m^2}{\lambda} } \pm$, while at $m^2 \ge 0$, the single minimum is at $\phi_C = 0$. We can also couple our system with the magnetic field of Hamiltonian
 \begin{align}
     H_1 &= - \int d^dx h(\bx)\phi(\bx)
     \label{champ-externe}
 \end{align}
-Comme on le voit dans la figure \ref{double-puits-temperature}, l'ajout d'un champ externe uniforme au potentiel \ref{phi4} favorise l'une des deux phases par rapport à l'autre. La nouvelle fonction de partition est
-\begin{align}
-    Z[h] = \int d [\phi] \exp \left( - \beta \int d^d x \left( \frac{\kappa}{2} ({\boldsymbol \nabla} \phi(\bx))^2 + V(\phi(\bx) \right) + \beta \int d^d x h(\bx) \phi(\bx) \right)
-\end{align}
+As we in Fig \ref{double-puits-temperature}, the addition of an uniform external field does favour one phase over the other one.
+}
 
 \begin{figure}
     \centering
     \includegraphics[width=0.6\linewidth]{intro/double-puit-en-fonction-temp.pdf}
-    \caption{Potentiel en double-puits \ref{phi4} pour $\lambda=1$ en fonction de la différence entre la température et la température critique avec $m^2 = T-T_C$. Dans la phase ordonnée, les mimina stables sont à $\phi_C =\pm \sqrt{- \frac{6 m^2}{\lambda} } $, pour la phase désordonnée à $\phi_C = 0$. En noir, l'ajout d'un champ magnétique uniforme $h(\bx) = 1$ rend la phase positive métastable.}
+    \caption{Double-well potential \eqref{phi4} for $\lambda=1$ in function of the temperature difference with respect to the critical temperature with $m^2 = T-T_C$. In the ordered pahse, the minima are at $\phi_C =\pm \sqrt{- \frac{6 m^2}{\lambda} } $, while for the ordered phase it is at $\phi_C = 0$. In black, the addition of a uniform magnetic field  $h(\bx) = 1$ makes the postiive phase metastable.}
     \label{double-puits-temperature}
 \end{figure}
 
-
-Now we return to dynamics. If we compare with systems with a discrete number of variables we
+It is easy to see that 
+\begin{equation}
+    \frac{\delta H}{\delta \phi(\bx)} = -\kappa \nabla^2 \phi(\bx) + V'(\phi)
+    \label{cm}
+\end{equation}
+If we compare with systems with a discrete number of variables we
 should have a Langevin equation of the form
 \begin{equation}
-    \frac{\partial \phi(\bx)}{\partial t}= -L \frac{\delta H}{\delta \phi(\bx)} + \eta(\bx,t).
+    \frac{\partial \phi(\bx)}{\partial t}= -L \frac{\delta H}{\delta \phi(\bx)} + \eta(\bx,t)
 \end{equation}
 The white noise correlator should have the form
 \begin{equation}
