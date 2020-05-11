@@ -4,37 +4,45 @@
 \contentsline {section}{\numberline {1.1}Introduction}{1}{section.1.1}% 
 \contentsline {section}{\numberline {1.2}Statics of systems with a finite number of degrees of freedom}{3}{section.1.2}% 
 \contentsline {section}{\numberline {1.3}Statistical field theory}{6}{section.1.3}% 
-\contentsline {section}{\numberline {1.4}Models for equilibrium interfaces}{10}{section.1.4}% 
-\contentsline {section}{\numberline {1.5}Effective dynamics of interface heights}{10}{section.1.5}% 
-\contentsline {section}{\numberline {1.6}Systems driven by imposed hydrodynamic flows}{17}{section.1.6}% 
-\contentsline {chapter}{\numberline {2}Equilibrium Interface models and their finite size effects}{19}{chapter.2}% 
-\contentsline {section}{\numberline {2.1}The Casimir effect}{19}{section.2.1}% 
-\contentsline {subsection}{\numberline {2.1.1}Quantum Casimir effect}{19}{subsection.2.1.1}% 
-\contentsline {subsection}{\numberline {2.1.2}Lifshitz Theory}{23}{subsection.2.1.2}% 
-\contentsline {subsection}{\numberline {2.1.3}Critical Casimir effect}{26}{subsection.2.1.3}% 
-\contentsline {subsubsection}{Bulk scaling for near critical systems}{26}{section*.4}% 
-\contentsline {subsubsection}{Finite size scaling}{27}{section*.5}% 
-\contentsline {subsection}{\numberline {2.1.4}Int\IeC {\'e}gration sur le param\IeC {\`e}tre d'ordre}{29}{subsection.2.1.4}% 
-\contentsline {section}{\numberline {2.2}Finite size scaling in one dimensional interface models}{31}{section.2.2}% 
-\contentsline {subsection}{\numberline {2.2.1}Basic interface models}{31}{subsection.2.2.1}% 
-\contentsline {subsection}{\numberline {2.2.2}Continuous models in one dimension}{32}{subsection.2.2.2}% 
-\contentsline {subsection}{\numberline {2.2.3}The confined elastic line}{35}{subsection.2.2.3}% 
-\contentsline {subsection}{\numberline {2.2.4}The Airy line}{36}{subsection.2.2.4}% 
-\contentsline {section}{\numberline {2.3}Discrete Interface Models}{39}{section.2.3}% 
-\contentsline {subsection}{\numberline {2.3.1}The solid on solid model and its variants}{39}{subsection.2.3.1}% 
-\contentsline {section}{\numberline {2.4}The transfer matrix method}{41}{section.2.4}% 
-\contentsline {section}{\numberline {2.5}The confined solid on solid model}{41}{section.2.5}% 
-\contentsline {subsection}{\numberline {2.5.1}Numerical tests of finite size dependence}{49}{subsection.2.5.1}% 
-\contentsline {chapter}{\numberline {3}Measuring finite size dependence of free energy in numerical simulations}{51}{chapter.3}% 
-\contentsline {section}{\numberline {3.1}Introduction to numerical simulations}{51}{section.3.1}% 
-\contentsline {section}{\numberline {3.2}Methods to measure free energy size dependence}{51}{section.3.2}% 
-\contentsline {subsection}{\numberline {3.2.1}The Layer adding method}{51}{subsection.3.2.1}% 
-\contentsline {subsection}{\numberline {3.2.2}The Lopez method}{52}{subsection.3.2.2}% 
-\contentsline {subsection}{\numberline {3.2.3}The method of staggered fields etc applied to SOS}{52}{subsection.3.2.3}% 
-\contentsline {chapter}{\numberline {4}Driven model C interfaces}{53}{chapter.4}% 
-\contentsline {section}{\numberline {4.1}Introduction}{53}{section.4.1}% 
-\contentsline {section}{\numberline {4.2}The underling two field model}{55}{section.4.2}% 
-\contentsline {section}{\numberline {4.3}Effective interface dynamics}{58}{section.4.3}% 
-\contentsline {section}{\numberline {4.4}A model of active interfaces}{63}{section.4.4}% 
-\contentsline {section}{\numberline {4.5}Conclusions}{65}{section.4.5}% 
-\contentsline {section}{\numberline {.1}Evaluating Fourier integrals}{67}{section.Alph0.1}% 
+\contentsline {subsection}{\numberline {1.3.1}Surface tension}{10}{subsection.1.3.1}% 
+\contentsline {section}{\numberline {1.4}Models for equilibrium interfaces}{11}{section.1.4}% 
+\contentsline {section}{\numberline {1.5}Effective dynamics of interface heights}{13}{section.1.5}% 
+\contentsline {subsection}{\numberline {1.5.1}Model A dynamics}{14}{subsection.1.5.1}% 
+\contentsline {subsection}{\numberline {1.5.2}Model B dynamics}{16}{subsection.1.5.2}% 
+\contentsline {section}{\numberline {1.6}Systems driven by imposed hydrodynamic flows}{20}{section.1.6}% 
+\contentsline {section}{\numberline {1.7}Lattice models}{21}{section.1.7}% 
+\contentsline {subsection}{\numberline {1.7.1}Le mod\IeC {\`e}le d'Ising}{23}{subsection.1.7.1}% 
+\contentsline {subsection}{\numberline {1.7.2}Mod\IeC {\`e}le Solid-On-Solid}{26}{subsection.1.7.2}% 
+\contentsline {subsection}{\numberline {1.7.3}Matrice de Transfert}{32}{subsection.1.7.3}% 
+\contentsline {section}{\numberline {1.8}Conclusion}{35}{section.1.8}% 
+\contentsline {chapter}{\numberline {2}M\IeC {\'e}thodes num\IeC {\'e}riques}{37}{chapter.2}% 
+\contentsline {section}{\numberline {2.1}Estimateur}{38}{section.2.1}% 
+\contentsline {section}{\numberline {2.2}Algorithme de Monte Carlo Metropolis}{39}{section.2.2}% 
+\contentsline {subsection}{\numberline {2.2.1}Algorithme de Glauber}{41}{subsection.2.2.1}% 
+\contentsline {subsection}{\numberline {2.2.2}Algorithme de Kawasaki}{43}{subsection.2.2.2}% 
+\contentsline {section}{\numberline {2.3}Computing size depenedent free energy}{44}{section.2.3}% 
+\contentsline {subsection}{\numberline {2.3.1}The Layer method}{44}{subsection.2.3.1}% 
+\contentsline {subsection}{\numberline {2.3.2}The Lopes Cardozo method}{46}{subsection.2.3.2}% 
+\contentsline {section}{\numberline {2.4}Tips and tricks}{47}{section.2.4}% 
+\contentsline {section}{\numberline {2.5}Conclusion}{48}{section.2.5}% 
+\contentsline {chapter}{\numberline {3}Equilibrium Interface models and their finite size effects}{51}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}The Casimir effect}{51}{section.3.1}% 
+\contentsline {subsection}{\numberline {3.1.1}Quantum Casimir effect}{51}{subsection.3.1.1}% 
+\contentsline {subsection}{\numberline {3.1.2}Lifshitz Theory}{55}{subsection.3.1.2}% 
+\contentsline {subsection}{\numberline {3.1.3}Critical Casimir effect}{58}{subsection.3.1.3}% 
+\contentsline {subsubsection}{Bulk scaling for near critical systems}{58}{section*.14}% 
+\contentsline {subsubsection}{Finite size scaling}{59}{section*.15}% 
+\contentsline {section}{\numberline {3.2}Finite size scaling in one dimensional interface models}{62}{section.3.2}% 
+\contentsline {subsection}{\numberline {3.2.1}Continuous models in one dimension}{62}{subsection.3.2.1}% 
+\contentsline {subsection}{\numberline {3.2.2}The confined elastic line}{64}{subsection.3.2.2}% 
+\contentsline {subsection}{\numberline {3.2.3}The Airy line}{66}{subsection.3.2.3}% 
+\contentsline {section}{\numberline {3.3}The confined solid on solid model}{69}{section.3.3}% 
+\contentsline {subsection}{\numberline {3.3.1}Numerical tests of finite size dependence}{76}{subsection.3.3.1}% 
+\contentsline {chapter}{\numberline {4}Driven model C interfaces}{77}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Introduction}{77}{section.4.1}% 
+\contentsline {section}{\numberline {4.2}The underling two field model}{79}{section.4.2}% 
+\contentsline {section}{\numberline {4.3}Effective interface dynamics}{82}{section.4.3}% 
+\contentsline {section}{\numberline {4.4}A model of active interfaces}{87}{section.4.4}% 
+\contentsline {section}{\numberline {4.5}Conclusions}{89}{section.4.5}% 
+\contentsline {chapter}{\numberline {5}Beyond Solid-On-Solid : the Particles-Over-Particles model}{93}{chapter.5}% 
+\contentsline {chapter}{\numberline {A}Evaluating Fourier integrals}{97}{appendix.A}% 

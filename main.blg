@@ -1,0 +1,77 @@
+This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: main.aux
+The style file: unsrt.bst
+Database file #1: biblio.bib
+Warning--I didn't find a database entry for "derks2006"
+Warning--I didn't find a database entry for "smith2008"
+Warning--I didn't find a database entry for "smith2010"
+Warning--I didn't find a database entry for "hem1996"
+Warning--I didn't find a database entry for "netz2003"
+Warning--I didn't find a database entry for "dzub2002"
+Warning--I didn't find a database entry for "chak2003"
+Warning--I didn't find a database entry for "chak2004"
+Warning--I didn't find a database entry for "lowe2009"
+Warning--I didn't find a database entry for "glan2012"
+Warning--I didn't find a database entry for "klym2016"
+Warning--I didn't find a database entry for "dem2016"
+Warning--I didn't find a database entry for "pon2017"
+Warning--I didn't find a database entry for "dean1996"
+Warning--I didn't find a database entry for "katz1984"
+Warning--I didn't find a database entry for "zia1991"
+Warning--I didn't find a database entry for "leun1993"
+Warning--I didn't find a database entry for "schm1995"
+Warning--I didn't find a database entry for "schm1998"
+Warning--I didn't find a database entry for "bray2001"
+Warning--I didn't find a database entry for "bray2002"
+Warning--I didn't find a database entry for "thie2010"
+Warning--I didn't find a database entry for "thie2014"
+Warning--I didn't find a database entry for "hohe1977"
+Warning--I didn't find a database entry for "dean2016"
+Warning--I didn't find a database entry for "gros2015"
+Warning--I didn't find a database entry for "lu2015"
+Warning--empty publisher in l_landau_physique_1990
+Warning--empty journal in ikeda_neutron_nodate
+Warning--empty year in ikeda_neutron_nodate
+You've used 37 entries,
+            1791 wiz_defined-function locations,
+            708 strings with 9630 characters,
+and the built_in function-call counts, 8513 in all, are:
+= -- 795
+> -- 311
+< -- 0
++ -- 119
+- -- 82
+* -- 725
+:= -- 1343
+add.period$ -- 112
+call.type$ -- 37
+change.case$ -- 35
+chr.to.int$ -- 0
+cite$ -- 40
+duplicate$ -- 334
+empty$ -- 850
+format.name$ -- 82
+if$ -- 1827
+int.to.chr$ -- 0
+int.to.str$ -- 37
+missing$ -- 40
+newline$ -- 188
+num.names$ -- 37
+pop$ -- 55
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 128
+stack$ -- 0
+substring$ -- 757
+swap$ -- 36
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 3
+while$ -- 94
+width$ -- 39
+write$ -- 406
+(There were 30 warnings)

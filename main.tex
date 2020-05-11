@@ -46,15 +46,13 @@
 
 %%% Commandes personnalisées  %%%
 \newcommand{\nn}{\nonumber \\} % newline sans nombre dans align
-\newcommand{\mH}{\mathcal{H}} %pour les hamiltoniens ronds
-\newcommand{\mZ}{\mathcal{Z}} %pour les hamiltoniens ronds
-\newcommand{\mL}{\mathcal{L}} %pour les hamiltoniens ronds
 \newcommand{\mC}{\mathcal{C}} %pour les fonctions de corrélation
-\newcommand{\mx}{{\bf x}} %pour les vecteurs en gras
-\newcommand{\my}{{\bf y}} %pour les vecteurs en gras
-\newcommand{\mq}{{\bf q}}
-\newcommand{\mr}{{\bf r}}
-\newcommand{\mv}{{\bf v}}
+\newcommand{\bx}{{\bf x}} %pour les vecteurs en gras
+\newcommand{\by}{{\bf y}} %pour les vecteurs en gras
+\newcommand{\bq}{{\bf q}}
+\newcommand{\bk}{{\bf k}}
+\newcommand{\br}{{\bf r}}
+\newcommand{\bv}{{\bf v}}
 \DeclareMathOperator{\sgn}{sgn}
 % Les > et < se comportent normalement si c'est pour supérieur ou inférieur, sinon se comportent comme \langle
 \mathchardef\less=\mathcode`<
@@ -84,13 +82,13 @@
 \mainmatter
 
 \input{int-dyn/chap1}
+\input{numerical/method}
 \input{finite-size/chap2}
-\input{numerical/chap3}
 \input{drivenC/chap4}
+\input{pop/pop}
 %\input{sosequi-laser/laser}
-%\input{pop/particle}
 %\input{pop/ab-model}
-
+\input{appendix}
 
 %\input{intro/conclusion}
 

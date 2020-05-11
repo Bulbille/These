@@ -1,0 +1,37 @@
+\appendix
+\chapter{Evaluating Fourier integrals}
+Here we outline how the Fourier integration leading to Eq. (\ref{eqmaind}) is carried out. Defining
+\begin{equation}
+I(f(\omega)) = \int \frac{d\omega}{2\pi} \frac{f(\omega)}{\left|i(A\omega + B) + (C-D\omega-E \omega^2)\right|}
+\end{equation}
+we see that the integral we need to evaluate can be written in the form
+\begin{equation}
+I = a I(\omega^2) + b I(1).
+\end{equation}
+The calculation leading to Eq. (\ref{dyn}) can be carried out in the presence of a forcing term on the height profile in order to compute the response function for the surface which has a denominator of the form
+\begin{equation}
+{\rm Den} = i(A\omega + B) + (C-D\omega-E \omega^2),
+\end{equation}
+and due to causality the above only has poles in the upper complex plane (due to the convention of Fourier transforms used here). Consequently we find that
+\begin{equation}
+\int \frac{d\omega}{2\pi} \frac{1}{i(A\omega + B) + (C-D\omega-E \omega^2)} = 0,\label{key}
+\end{equation}
+as one may close the integration contour in the lower half of the complex plane. Taking the real and imaginary part of Eq. (\ref{key}) leads to
+\begin{eqnarray}
+C I(1) -D I(\omega) - E I(\omega^2) = 0 \\
+AI(\omega) + B I(1) = 0.
+\end{eqnarray}
+Using this we can express $I(\omega^2)$ as a function of $I(1)$, and explicitly we have 
+\begin{equation}
+I(\omega^2) = \frac{I(1)}{E}[C+ \frac{DB}{A}].
+\end{equation}
+
+To evaluate $I(1)$ we now use
+\begin{equation}
+I(1) = -{\rm Im} \int \frac{d\omega}{2\pi}\frac{1}{A\omega +B} \frac{1}{i(A\omega + B) + (C-D\omega-E \omega^2)}.
+\end{equation}
+The integrand above has no poles in the lower half of the complex plane but has a {\em half pole} at $\omega=-B/A$ on the real axis, thus using standard complex analysis we find
+\begin{equation}
+I(1) = \frac{1}{2(CA + BD - \frac{EB^2}{A})}.
+\end{equation}
+Then after some laborious, but straightforward algebra, the results Eq. (\ref{eqmaind}) is obtained.

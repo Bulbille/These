@@ -1,0 +1,218 @@
+\begin{thebibliography}{10}
+
+\bibitem{aarts_hydrodynamics_2005}
+Dirk G. A.~L. Aarts, Henk N.~W. Lekkerkerker, Hua Guo, Gerard~H. Wegdam, and
+  Daniel Bonn.
+\newblock Hydrodynamics of {Droplet} {Coalescence}.
+\newblock {\em Physical Review Letters}, 95(16):164503, October 2005.
+
+\bibitem{onsager_crystal_1944}
+Lars Onsager.
+\newblock Crystal {Statistics}. {I}. {A} {Two}-{Dimensional} {Model} with an
+  {Order}-{Disorder} {Transition}.
+\newblock {\em Physical Review}, 65(3-4):117--149, February 1944.
+
+\bibitem{l_landau_physique_1990}
+{L. Landau} and {E. Lifchitz}.
+\newblock {\em Physique th{\'e}orique - {T9} {Physique} {Statistique}}.
+\newblock {\'E}ditions {Mir} {Moscou}. 1990.
+
+\bibitem{hennequin_drop_2006}
+Y.~Hennequin, D.~G. A.~L. Aarts, J.~H. van~der Wiel, G.~Wegdam, J.~Eggers,
+  H.~N.~W. Lekkerkerker, and Daniel Bonn.
+\newblock Drop {Formation} by {Thermal} {Fluctuations} at an {Ultralow}
+  {Surface} {Tension}.
+\newblock {\em Physical Review Letters}, 97(24), December 2006.
+
+\bibitem{atencia_controlled_2005}
+Javier Atencia and David~J. Beebe.
+\newblock Controlled microfluidic interfaces.
+\newblock {\em Nature}, 437(7059):648--655, September 2005.
+
+\bibitem{talapov_magnetization_1996}
+A~L Talapov and H~W~J Bl{\"o}te.
+\newblock The magnetization of the {3D} {Ising} model.
+\newblock {\em Journal of Physics A: Mathematical and General},
+  29(17):5727--5733, September 1996.
+
+\bibitem{niss_history_2005}
+Martin Niss.
+\newblock History of the {Lenz}-{Ising} {Model} 1920{\textendash}1950: {From}
+  {Ferromagnetic} to {Cooperative} {Phenomena}.
+\newblock {\em Archive for History of Exact Sciences}, 59(3):267--318, March
+  2005.
+
+\bibitem{niss_history_2009}
+Martin Niss.
+\newblock History of the {Lenz}{\textendash}{Ising} {Model}
+  1950{\textendash}1965: from irrelevance to relevance.
+\newblock {\em Archive for History of Exact Sciences}, 63(3):243, May 2009.
+
+\bibitem{de_jongh_experiments_1974}
+L.J. de~Jongh and A.R. Miedema.
+\newblock Experiments on simple magnetic model systems.
+\newblock {\em Advances in Physics}, 23(1):1--260, January 1974.
+
+\bibitem{wp_wold_ising_2000}
+{W.P. Wold}.
+\newblock The {Ising} {Model} and {Real} {Magnetic} {Materials}.
+\newblock {\em Brazilian Journal of Physics}, 30(4):794--810, December 2000.
+
+\bibitem{ikeda_neutron_nodate}
+Hironobu Ikeda and Kinshiro Hirakawa.
+\newblock {NEUTRON} {SCATI}{\textquoteright}{ERING} {STUDY} {OF}
+  {TWO}-{DIMENSIONAL} {ISING} {NATURE} {OF} {K2CoF4}.
+\newblock 14:4.
+
+\bibitem{preis_gpu_2009}
+Tobias Preis, Peter Virnau, Wolfgang Paul, and Johannes~J. Schneider.
+\newblock {GPU} accelerated {Monte} {Carlo} simulation of the {2D} and {3D}
+  {Ising} model.
+\newblock {\em Journal of Computational Physics}, 228(12):4468--4477, July
+  2009.
+
+\bibitem{goldenfeld_lectures_2018}
+Nigel Goldenfeld.
+\newblock {\em Lectures on {Phase} {Transitions} and the {Renormalization}
+  {Group}}.
+\newblock CRC Press, 1 edition, March 2018.
+
+\bibitem{stecki_magnetization_1994}
+J.~Stecki, A.~Maciol/ek, and K.~Olaussen.
+\newblock Magnetization profiles of the planar fluctuating interface in a d=2
+  {Ising} strip.
+\newblock {\em Physical Review B}, 49(2):1092--1103, January 1994.
+
+\bibitem{abraham_transfer_1973}
+D.~B. Abraham and A.~Martin-L{\"o}f.
+\newblock The transfer matrix for a pure phase in the two-dimensional {Ising}
+  model.
+\newblock {\em Communications in Mathematical Physics}, 32(3):245--268,
+  September 1973.
+
+\bibitem{abraham_interface_1976}
+D.~B. Abraham and P.~Reed.
+\newblock Interface profile of the {Ising} ferromagnet in two dimensions.
+\newblock {\em Communications in Mathematical Physics}, 49(1):35--46, February
+  1976.
+
+\bibitem{richards_numerical_1993}
+Howard~L. Richards, M.~A. Novotny, and Per~Arne Rikvold.
+\newblock Numerical transfer-matrix study of surface-tension anisotropy in
+  {Ising} models on square and cubic lattices.
+\newblock {\em Physical Review B}, 48(19):14584--14598, November 1993.
+
+\bibitem{gilmer_simulation_1972}
+G.~H. Gilmer and P.~Bennema.
+\newblock Simulation of {Crystal} {Growth} with {Surface} {Diffusion}.
+\newblock {\em Journal of Applied Physics}, 43(4):1347--1360, April 1972.
+
+\bibitem{elwenspoek_kinetic_1987}
+M.~Elwenspoek and J.~P. van~der Eerden.
+\newblock Kinetic roughening and step free energy in the solid-on-solid model
+  and on naphthalene crystals.
+\newblock {\em Journal of Physics A: Mathematical and General}, 20(3):669,
+  1987.
+
+\bibitem{wilby_scaling_1992}
+M.~R. Wilby, D.~D. Vvedensky, and A.~Zangwill.
+\newblock Scaling in a solid-on-solid model of epitaxial growth.
+\newblock {\em Physical Review B}, 46(19):12896--12898, November 1992.
+
+\bibitem{gompper_steric_1989}
+G~Gompper and D.~M Kroll.
+\newblock Steric {Interactions} in {Multimembrane} {Systems}: {A} {Monte}
+  {Carlo} {Study}.
+\newblock {\em Europhysics Letters (EPL)}, 9(1):59--64, May 1989.
+
+\bibitem{privman_transfer-matrix_1989}
+V.~Privman and N.~M. {\v S}vraki{\'c}.
+\newblock Transfer-{Matrix} {Spectrum} for {Systems} with {Interfaces}.
+\newblock {\em Physical Review Letters}, 62(6):633--636, February 1989.
+
+\bibitem{kim_conserved_1994}
+Yup Kim, D.~K. Park, and Jin~Min Kim.
+\newblock Conserved growth in a restricted solid-on-solid model.
+\newblock {\em Journal of Physics A: Mathematical and General}, 27(15):L533,
+  1994.
+
+\bibitem{vaysburd_critical_1995}
+I.~Vaysburd.
+\newblock Critical {RSOS} models in external fields.
+\newblock {\em Nuclear Physics B}, 446(3):387--404, July 1995.
+
+\bibitem{knops_exact_1977}
+H.~J.~F. Knops.
+\newblock Exact {Relation} between the {Solid}-on-{Solid} {Model} and the
+  \${\textbackslash}mathrm\{{XY}\}\$ {Model}.
+\newblock {\em Physical Review Letters}, 39(12):766--769, September 1977.
+
+\bibitem{owczarek_exact_1993}
+Aleksander~L. Owczarek and Thomas Prellberg.
+\newblock Exact solution of the discrete (1+1)-dimensional {SOS} model with
+  field and surface interactions.
+\newblock {\em Journal of Statistical Physics}, 70(5-6):1175--1194, March 1993.
+
+\bibitem{majumdar_airy_2005}
+Satya~N. Majumdar and Alain Comtet.
+\newblock Airy {Distribution} {Function}: {From} the {Area} {Under} a
+  {Brownian} {Excursion} to the {Maximal} {Height} of {Fluctuating}
+  {Interfaces}.
+\newblock {\em Journal of Statistical Physics}, 119(3-4):777--826, May 2005.
+
+\bibitem{schehr_universal_2006}
+Gr{\'e}gory Schehr and Satya~N. Majumdar.
+\newblock Universal asymptotic statistics of maximal relative height in
+  one-dimensional solid-on-solid models.
+\newblock {\em Physical Review E}, 73(5):056103, May 2006.
+
+\bibitem{siegert_scaling_1993}
+Martin Siegert and Michael Plischke.
+\newblock Scaling behavior of driven solid-on-solid models with diffusion.
+\newblock {\em Journal de Physique I}, 3(6):1371--1376, June 1993.
+
+\bibitem{pearce_exact_1989}
+Paul~A Pearce and Katherine~A Seaton.
+\newblock Exact solution of cyclic solid-on-solid lattice models.
+\newblock {\em Annals of Physics}, 193(2):326--366, August 1989.
+
+\bibitem{metropolis_monte_1949}
+Nicholas Metropolis and S.~Ulam.
+\newblock The {Monte} {Carlo} {Method}.
+\newblock {\em Journal of the American Statistical Association},
+  44(247):335--341, September 1949.
+
+\bibitem{newman_monte_1999}
+M.~E.~J. Newman and G.~T. Barkema.
+\newblock {\em Monte {Carlo} {Methods} in {Statistical} {Physics}}.
+\newblock Oxford University Press, Oxford, New York, February 1999.
+
+\bibitem{wansleben_monte_1991}
+S.~Wansleben and D.~P. Landau.
+\newblock Monte {Carlo} investigation of critical dynamics in the
+  three-dimensional {Ising} model.
+\newblock {\em Physical Review B}, 43(7):6006--6014, March 1991.
+
+\bibitem{glauber_timedependent_1963}
+Roy~J. Glauber.
+\newblock Time-{Dependent} {Statistics} of the {Ising} {Model}.
+\newblock {\em Journal of Mathematical Physics}, 4(2):294--307, February 1963.
+
+\bibitem{kawasaki_diffusion_1966}
+Kyozi Kawasaki.
+\newblock Diffusion {Constants} near the {Critical} {Point} for
+  {Time}-{Dependent} {Ising} {Models}. {I}.
+\newblock {\em Physical Review}, 145(1):224--230, May 1966.
+
+\bibitem{vasilyev_monte_2007}
+O.~Vasilyev, A.~Gambassi, A.~Macio{\l }ek, and S.~Dietrich.
+\newblock Monte {Carlo} simulation results for critical {Casimir} forces.
+\newblock {\em EPL (Europhysics Letters)}, 80(6):60009, 2007.
+
+\bibitem{lopes_cardozo_critical_2014}
+David Lopes~Cardozo, Hugo Jacquin, and Peter C.~W. Holdsworth.
+\newblock Critical {Casimir} forces in a magnetic system: {An} experimental
+  protocol.
+\newblock {\em Physical Review B}, 90(18), November 2014.
+
+\end{thebibliography}

@@ -1,44 +1,53 @@
-
+%%%%%%%%%%%%%%%%%%%%
 \chapter{Equilibrium Interface models and their finite size effects}
+%%%%%%%%%%%%%%%%%%%%
+
 Models for interfaces arise naturally in phase separated systems to describe the region between the two phases. They also arise naturally as descriptions of artificial and biological membranes. Systems undergoing a continuous phase separation exhibit finite size corrections which are manifested by a long range critical Casimir interaction which we describe in the next section. In the sections after we examine finite size effects in interface models in one dimension, and show that while they have similar long range interactions, the forces induced by interface confinement are quite different.
-\section{The Casimir effect}
+
+%%%%%%%%%%%%%%%%%%%%
+    \section{The Casimir effect}
+%%%%%%%%%%%%%%%%%%%%
+    
 Here we explain the critical Casimir effect. For completeness we start by explaining the quantum Casimir effect as it was in the quantum context that the effect was first observed.
 We also describe the basis of the Lifshitz theory that generalises Casimir's contribution to 
 general dielectric materials beyond the perfectly conducting plate paradigm.
-\subsection{Quantum Casimir effect}
+    
+%%%%%%%%%%%%%%%%%%%%    
+    \subsection{Quantum Casimir effect}
+%%%%%%%%%%%%%%%%%%%%
 A perfectly  conducting plate in the $(x,y)$ plane imposes boundary conditions on the electromagnetic field
 \begin{equation}
-{\bf E}\times {\bf n} = {\bf 0};\ {\bf B}\cdot {\bf n} = 0,
+    {\bf E}\times {\bf n} = {\bf 0};\ {\bf B}\cdot {\bf n} = 0,
 \end{equation}
 as in an ideal conductor the free charges can move arbitrarily quickly to cancel out any electric field within the plane. 
 The quantum Hamiltonian for the electromagnetic field is given by 
 \begin{equation}
-H = \sum_{{\bf k},\lambda}\hbar \omega({\bf k},\lambda)\left[a^\dagger({\bf k},\lambda)a({\bf k},\lambda) + {1\over 2}\right]
+    H = \sum_{\bk,\lambda}\hbar \omega(\bk,\lambda)\left[a^\dagger(\bk,\lambda)a(\bk,\lambda) + {1\over 2}\right]
 \end{equation}
-Here $\lambda$ denotes the polarisation (there are two polarisation states) and ${\bf k}$ the wave vector. The dispersion 
+Here $\lambda$ denotes the polarisation (there are two polarisation states) and $\bk$ the wave vector. The dispersion 
 relation for photons is
 \begin{equation}
-\omega({\bf k},\lambda) = |{\bf k}|c.
+    \omega(\bk,\lambda) = |\bk|c.
 \end{equation}
 The ground state energy of the electromagnetic field is given by
 \begin{equation}
-E_0 = \langle 0|H|0\rangle = H = \sum_{{\bf k},\lambda}{1\over 2}\hbar \omega({\bf k},\lambda)= \sum_{\bf k}\hbar |{\bf k}|c
+    E_0 = < 0|H|0> = H = \sum_{\bk,\lambda}{1\over 2}\hbar \omega(\bk,\lambda)= \sum_\bk\hbar |\bk|c
 \end{equation}
 
 The presence of conduction plates at $z=0$ and $z=L$ means that the wave vectors $k_z$
 must be quantised according to $k_z= n\pi/L$ where $n \in \{0,\ 1, \ 2, \ \cdots\}$ while
 if the $(x,y)$ plane has a large area $A$ we can write
 \begin{equation}
-\sum_{k_x,k_y}\ \cdot= {A\over (2\pi)^2}\int  d^2{\bf k} \ \cdot
+    \sum_{k_x,k_y}\ \cdot= {A\over (2\pi)^2}\int  d^2\bk \ \cdot
 \end{equation}
 This then gives 
 \begin{eqnarray}
-E_0(L) &=& {\hbar c A\over (2\pi)^2}\sum_{n=0}^\infty  \int  d^2{\bf k} \left({\bf k}^2 + {n^2\pi^2\over L^2}\right)^{1\over 2} \\
-&=& {\hbar c A\over (2\pi)}\sum_{n=0}^\infty  \int_0^\infty  kdk \left({\bf k}^2 + {n^2\pi^2\over L^2}\right)^{1\over 2}
+E_0(L) &=& {\hbar c A\over (2\pi)^2}\sum_{n=0}^\infty  \int  d^2\bk \left(\bk^2 + {n^2\pi^2\over L^2}\right)^{1\over 2} \\
+&=& {\hbar c A\over (2\pi)}\sum_{n=0}^\infty  \int_0^\infty  kdk \left(\bk^2 + {n^2\pi^2\over L^2}\right)^{1\over 2}
 \end{eqnarray}
 The problem with the above expression is that it is clearly divergent. However it can be rendered finite by cutting off the high momentum degrees of freedom by writing
 \begin{equation}
-E_0(L) = {\hbar c A\over (2\pi)}\sum_{n=0}^\infty  \int_0^\infty  kdk \left({\bf k}^2 + {n^2\pi^2\over L^2}\right)^{1\over 2} f\left(({\bf k}^2 + {n^2\pi^2\over L^2})^{1\over 2}\right)
+    E_0(L) = {\hbar c A\over (2\pi)}\sum_{n=0}^\infty  \int_0^\infty  kdk \left(\bk^2 + {n^2\pi^2\over L^2}\right)^{1\over 2} f\left((\bk^2 + {n^2\pi^2\over L^2})^{1\over 2}\right)
 \end{equation}
 where $f$ is a smooth function such that $f(p)=1$ for $p\ll\Lambda$ and $f(p)=0$ for $p\gg\Lambda$ where $\Lambda$ is an ultraviolet cut-off and $f$ thus only counts the contribution of photons with a momentum less than $\hbar\Lambda$. For this sort of calculation to make physical sense the physical result we get at the end should be independent of both the choice of $f$ and $\Lambda$. 
 
@@ -47,46 +56,46 @@ where $f$ is a smooth function such that $f(p)=1$ for $p\ll\Lambda$ and $f(p)=0$
 
 In the list $L\to\infty$ we can replace the sum over discrete modes by an integral, as usual in statistical physics, 
 \begin{equation}
-E_0(L) = {\hbar c A\over (2\pi)}\int_{0}^\infty  {L\over \pi}d\nu \int_0^\infty   kdk \left({\bf k}^2 + \nu^2\right)^{1\over 2}f\left(({\bf k}^2 + \nu^2)^{1\over 2}\right)
+    E_0(L) = {\hbar c A\over (2\pi)}\int_{0}^\infty  {L\over \pi}d\nu \int_0^\infty   kdk \left(\bk^2 + \nu^2\right)^{1\over 2}f\left((\bk^2 + \nu^2)^{1\over 2}\right)
 \end{equation}
 where we have used $d\nu = \pi/L$. We thus see that for large $L$ we have
 \begin{equation}
-E_0(L) = AL \epsilon_{bulk}
+    E_0(L) = AL \epsilon_{bulk}
 \end{equation}
 where $\epsilon_{bulk}$ is a bulk energy density per unit of volume. Clearly when two the plates are moved this bulk free energy is not changed as the volume of the system both
 interior and exterior to the plates does not change. This is basically the idea of a disjoining pressure in colloidal science where to compute the effective interaction the bulk pressure has to be removed. The computation above only calculates the energy of the EM field between the plates, if the physical system has and extent $L'\gg L$ then the total energy is
 given by
 \begin{equation}
-E_{total}(L) = E_0(L) + A(L'-L)\epsilon_{bulk}
+    E_{total}(L) = E_0(L) + A(L'-L)\epsilon_{bulk}
 \end{equation}
 so we see that the part of the energy that depends on $L$ is given by
 \begin{equation}
-U(L) = E_0(L)- AL\epsilon_{bulk}
+    U(L) = E_0(L)- AL\epsilon_{bulk}
 \end{equation}
 Now we simply write 
 \begin{equation}
-AL\epsilon_{bulk} = {\hbar c A\over (2\pi)}\int_{0}^\infty  dn \int_0^\infty   kdk \left({\bf k}^2 + {n^2\pi^2\over L^2}\right)^{1\over 2} f\left(({\bf k}^2 + {n^2\pi^2\over L^2})^{1\over 2}\right),
+    AL\epsilon_{bulk} = {\hbar c A\over (2\pi)}\int_{0}^\infty  dn \int_0^\infty   kdk \left(\bk^2 + {n^2\pi^2\over L^2}\right)^{1\over 2} f\left((\bk^2 + {n^2\pi^2\over L^2})^{1\over 2}\right),
 \end{equation}
 putting the $L$ dependence in the integral. This then gives
 \begin{equation}
-U(L) = {\hbar c A\over (2\pi)}\left[\sum_{n=0}^\infty g(n) -\int_0^\infty dn \ g(n)\right],
+    U(L) = {\hbar c A\over (2\pi)}\left[\sum_{n=0}^\infty g(n) -\int_0^\infty dn \ g(n)\right],
 \end{equation}
  
 where
 \begin{equation}
-g(n) = \int_0^\infty   kdk \left({\bf k}^2 + {n^2\pi^2\over L^2}\right)^{1\over 2} f\left(({\bf k}^2 + {n^2\pi^2\over L^2})^{1\over 2}\right) = {1\over 2}\int_{n^2\pi^2\over L^2}^\infty du u^{1\over 2} f(u^{1\over 2}).
+    g(n) = \int_0^\infty   kdk \left(\bk^2 + {n^2\pi^2\over L^2}\right)^{1\over 2} f\left((\bk^2 + {n^2\pi^2\over L^2})^{1\over 2}\right) = {1\over 2}\int_{n^2\pi^2\over L^2}^\infty du u^{1\over 2} f(u^{1\over 2}).
 \end{equation}
 We now use the Euler-Mauclarin formula
 \begin{equation}
-\sum_{n=0}^\infty g(n) -\int_0^\infty dn \ g(n) = -B_1g(0) -{1\over 2} B_2 g'(0) - {1\over 24} B_4 g'''(0) - \cdots,
+    \sum_{n=0}^\infty g(n) -\int_0^\infty dn \ g(n) = -B_1g(0) -{1\over 2} B_2 g'(0) - {1\over 24} B_4 g'''(0) - \cdots,
 \end{equation}
 where $B_n$ are the Bernoulli numbers. The first Bernoulli numbers are explicitly given by
 \begin{equation}
-B_1 =1\ , B_2 = {1\over 2} ,\ B_4 = -{1\over 30}
+    B_1 =1\ , B_2 = {1\over 2} ,\ B_4 = -{1\over 30}
 \end{equation}
 We find that
 \begin{equation}
-g'(n) = -{\pi^3\over L^3} n^2 f({n\pi\over L})
+    g'(n) = -{\pi^3\over L^3} n^2 f({n\pi\over L})
 \end{equation}
 and noticing than in the region around $n=0$ we have $f=1$ is a constant shows that
 \begin{eqnarray}
@@ -96,30 +105,32 @@ g'''(0) &=& -{2\pi^3\over L^3}
 \end{eqnarray}
 Higher order derivatives are zero so the full result is given by the first three terms of the Euler-Maclaurin formula. We thus find
 \begin{equation}
-U(L) = {\hbar c A\over (2\pi)}\left[ -g(0) -{\pi^3\over 360 L^3}\right]
+    U(L) = {\hbar c A\over (2\pi)}\left[ -g(0) -{\pi^3\over 360 L^3}\right]
 \end{equation}
 The first term independent of $L$ can be interpreted as a surface energy. The effective $L$ dependent interaction is given by
 \begin{equation}
-U_{int}(L) = -{\hbar \pi^2 c A\over 720 L^3}
+    U_{int}(L) = -{\hbar \pi^2 c A\over 720 L^3}
 \end{equation}
 We see that the effective interaction is attractive. Interestingly Casimir thought that his calculation could explain the stability of the electron. The model of the electron is one of a perfectly conducting shell carrying an electric charge $e$. If the radius of the shell is $a$ then the electrostatic energy of due to the charge is given by
 \begin{equation}
-E_{Charge} = {e^2\over 8\pi a\epsilon_0}
+    E_{Charge} = {e^2\over 8\pi a\epsilon_0}
 \end{equation}
 There is thus a repulsive force on the shell which should make it expand. Casimir thought that the Casimir force on a spherical geometry,   
 if is an attractive force as is the case for the parallel plate geometry, could stabilise the electron. Clearly by dimensional analysis
 \begin{equation}
-E_{Cas} = -{Z\hbar c\over a}
+    E_{Cas} = -{Z\hbar c\over a}
 \end{equation}
 The balance of the Casimir and electric forces would then require
 \begin{equation}
-Z = {e^2\over 8\pi \hbar c}.
+    Z = {e^2\over 8\pi \hbar c}.
 \end{equation}
 However T. Boyer showed, in 1968, that $Z = -0.040618$, this surprising result was later confirmed by a number of authors. A calculation for a cylindrical geometry however predicts
 an attractive force. 
 
-
+%%%%%%%%%%%%%%%%%%%%
 \subsection{Lifshitz Theory}
+%%%%%%%%%%%%%%%%%%%%
+
 The Casimir calculation is based on the boundary conditions imposed on the EM field 
 due to a conductor. However this is an ideal mathematical limit, conductors are conductors because free charges can move to cancel out the electric field in the conducting surface.
 The Casimir force can also be seen as due to correlations induced in the charge fluctuations in each plate - Schwinger devised an alternative method based on sources which recovers the Casimir force. In a sense therefore the effect can be interpreted without reference to
@@ -134,7 +145,7 @@ The Rytov formulation has the advantage that it can be used to treat out of equi
 
 The theory in the presence of electromagnetic media is written in terms of the electric and magnetic fields ${\bf E}$ and ${\bf B}$ and the displacement and magnetizing fields ${\bf D}$ and ${\bf H}$ which are assumed to obey local relations in real space and Fourier space
 \begin{equation}
-\tilde {\bf D}(\omega)=\epsilon(\omega)\tilde{\bf E}(\omega); \ \tilde {\bf B}(\omega)= \mu(\omega) \tilde{\bf H}(\omega)
+    \tilde {\bf D}(\omega)=\epsilon(\omega)\tilde{\bf E}(\omega); \ \tilde {\bf B}(\omega)= \mu(\omega) \tilde{\bf H}(\omega)
 \end{equation}
 where $\tilde\epsilon( \omega)$ and $\tilde\mu( \omega)$ are the frequency dependent
 permittivity and permeability. The boundary conditions at the interface between two materials $1$ and $2$ are given by
@@ -146,7 +157,7 @@ where $n$ denotes the normal component and $t$ the tangential component to the i
 
 Forces can be computed using the vacuum (assuming that the surface where the force is computed is next to the vacuum) Maxwell stress tensor.
 \begin{equation}
-T_{ij}= \epsilon\left(E_iE_j -{1\over 2}\delta_{ij}E^2\right) + {1\over \mu}\left( B_i B_j -{1\over 2}\delta_{ij}B^2\right)
+    T_{ij}= \epsilon\left(E_iE_j -{1\over 2}\delta_{ij}E^2\right) + {1\over \mu}\left( B_i B_j -{1\over 2}\delta_{ij}B^2\right)
 \end{equation}
 Notice that the stress tensor is quadratic in the fields ${\bf E}$ and ${\bf B}$, this means that even if the fields are on average zero, both thermal and quantum fluctuations give rise to forces.
 
@@ -161,28 +172,28 @@ In media Maxwells equations are
 In a dielectric medium or conductor where there are no applied external fields there is no free charge or current as such the average values of ${\bf E}$ and ${\bf B}$ are zero. Rytov's idea was to add a random current to induce both thermal and quantum fluctuations
 into the problem. If we assume that the only contribution to the current comes from a fluctuating polarization density ${\bf P}$ we can write
 \begin{equation}
-{\partial \rho\over \partial t} +\nabla \cdot {\bf J}= 0\implies\nabla\cdot \left[-{\partial {\bf P}\over \partial t} +{\bf J}\right] = 0
+    {\partial \rho\over \partial t} +\nabla \cdot {\bf J}= 0\implies\nabla\cdot \left[-{\partial {\bf P}\over \partial t} +{\bf J}\right] = 0
 \end{equation}
 where we have used
 \begin{equation}
-\rho = -\nabla \cdot {\bf P}
+    \rho = -\nabla \cdot {\bf P}
 \end{equation}
 This means that the current is given by
 \begin{equation}
-{\bf J}={\partial {\bf P}\over \partial t} ,
+    {\bf J}={\partial {\bf P}\over \partial t} ,
 \end{equation}
 or in Fourier space
 \begin{equation}
-\tilde {\bf J}(\omega)= i\omega \tilde P(\omega)
+    \tilde {\bf J}(\omega)= i\omega \tilde P(\omega)
 \end{equation}
 Now if we assume that the fluctuations in the polarization density are uncorrelated in space, the fluctuation dissipation theorem tells us that the correlation function of the polarization density in Fourier space is given by
 \begin{equation}
-\langle P_\alpha(\omega; {\bf x})P^{\dagger}_\beta(\omega; {\bf x}')\rangle_{sym}=
-{\hbar \epsilon''(\omega)\over 2}\coth\left({\hbar\omega\over 2k_B T}\right)\delta(\omega-\omega')\delta({\bf x}-{\bf x}')\delta_{\alpha\beta}
+    < P_\alpha(\omega; \bx)P^{\dagger}_\beta(\omega; \bx')>_{sym}=
+    {\hbar \epsilon''(\omega)\over 2}\coth\left({\hbar\omega\over 2k_B T}\right)\delta(\omega-\omega')\delta(\bx-\bx')\delta_{\alpha\beta}
 \end{equation}
 
 \begin{equation}
-\epsilon(\omega) = \epsilon'(\omega)+i\epsilon''(\omega)
+    \epsilon(\omega) = \epsilon'(\omega)+i\epsilon''(\omega)
 \end{equation}
  The Lifshitz calculation for slab geometries gives a force per unit area between two slabs of media separated by a distance $L$
  \begin{eqnarray}
@@ -196,17 +207,19 @@ $\omega = {2\pi nk_BT \over \hbar}$ are the Mastubara frequencies and $\varepsil
 
 One needs to know the dielectric response at imaginary frequency, this is done using the Kramers-Kronig relation
 \begin{equation}
-\varepsilon(i\omega)= 1 +{2\over \pi}\int_0^\infty d\zeta {\zeta \varepsilon''(\zeta)\over \omega^2 + \zeta^2}
+    \varepsilon(i\omega)= 1 +{2\over \pi}\int_0^\infty d\zeta {\zeta \varepsilon''(\zeta)\over \omega^2 + \zeta^2}
 \end{equation}
 
 
-
-
-\subsection{Critical Casimir effect}
-\subsubsection{Bulk scaling for near critical systems}
+%%%%%%%%%%%%%%%%%%%%
+    \subsection{Critical Casimir effect}
+%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%
+    \subsubsection{Bulk scaling for near critical systems}
+%%%%%%%%%%%%%%%%%%%%
 The free energy for a system consisting of $N$  spins has a singular part at a critical temperature $T_c$ which can be written as
 \begin{equation}
-F(t,h) = N f(t,h)
+    F(t,h) = N f(t,h)
 \end{equation}
 where $t = (T-T_c)/ T_c$ measures the distance from the critical point and $h$ is the external applied magnetic field. We assume that we are in a systems where the only relevant parameters are $T$ and $h$ (equivalently the concentration or chemical potential 
 of a binary mixture). For $d<4$ these are the only relevant fields.
@@ -214,55 +227,58 @@ Now if we carry out a renormalisation group transformation
 blocking spins in blocks of linear size $b$ into new effective spins, the RG transformation
 gives
 \begin{equation}
-N f(t,h) = N'f(t',h')
+    N f(t,h) = N'f(t',h')
 \end{equation}
 Clearly the number of spins in the blocked system is given by $b^d N'=N$ and the RG transformation for $t$ and $h$ are given by $t' = b^{y_1} t$ and $h' = b^{y_2}h$ where $y_1$ and $y_2$ are positive and are the RG exponents for the fields $t$ and $h$ (from which all critical exponents can be deduced). This then means that
 \begin{equation}
-f(t,h) = {1\over b^d}f(b^{y_1} t,  b^{y_2} h)\label{rg}
+    f(t,h) = {1\over b^d}f(b^{y_1} t,  b^{y_2} h)\label{rg}
 \end{equation}
 We begin by working  with $t>0$ but the arguments here are trivially generalisable to the case $t<0$. In Eq. (\ref{rg}) is we choose $b$ such that $b^{y_1}t=1$, then, at the critical field $h=0$, we find
 \begin{equation}
-f(t,0) = t^{d\over y_1} f(1,0)
+    f(t,0) = t^{d\over y_1} f(1,0)
 \end{equation}
 The singularity in the specific heat is defined via
 \begin{equation}
-c\sim {\partial^2 \over \partial t^2}f(t,0)
+    c\sim {\partial^2 \over \partial t^2}f(t,0)
 \end{equation}
 and so we find
 \begin{equation}
-c\sim t^{{d\over y_1}-2} \sim t^{-\alpha}
+    c\sim t^{{d\over y_1}-2} \sim t^{-\alpha}
 \end{equation}
 where $\alpha$ is the exponent associated with the divergence of the specific heat. This means that
 \begin{equation}
-\alpha = 2 -{d\over y_1}
+    \alpha = 2 -{d\over y_1}
 \end{equation}
 The RG transformation for the correlation function has the form
 \begin{equation}
-C(r,t,h) = \lambda^2(b) C(r/b, b^{y_1}t,  b^{y_2} h)
+    C(r,t,h) = \lambda^2(b) C(r/b, b^{y_1}t,  b^{y_2} h)
 \end{equation}
 Clearly length scales transform as $r' = r/b$. Again setting $h=0$ and choosing $b^{y_1}t=1$ gives
 \begin{equation}
-C(r,t,h) = \lambda^2(t^{-{1\over y_1}}) C(r/t^{-{1\over y_1}}, 1, 0).
+    C(r,t,h) = \lambda^2(t^{-{1\over y_1}}) C(r/t^{-{1\over y_1}}, 1, 0).
 \end{equation}
 The correlation function, by definition is given by
 \begin{equation}
-C(r,t) \sim f(r/\xi),
+    C(r,t) \sim f(r/\xi),
 \end{equation}
 where $\xi$ is the correlation length. This immediately tells us that $\xi = t^{-{1\over y_1}}$ and from the usual definition 
 \begin{equation}
-\xi \sim t^{-\nu}
+    \xi \sim t^{-\nu}
 \end{equation}
 we have $\nu = 1/y_1$.  These two formula for $y_1$ then give the hyper scaling relation
 \begin{equation}
-\alpha = 2-d\nu.
+    \alpha = 2-d\nu.
 \end{equation}
 The exponents $\alpha$ and $\nu$ are the ones that are important in the critical Casimir effect.
-\subsubsection{Finite size scaling}
+
+%%%%%%%%%%%%%%%%%%%%
+    \subsubsection{Finite size scaling}
+%%%%%%%%%%%%%%%%%%%%
 Consider a system which is finite in one direction with either periodic boundary systems or 
 two surfaces. While the critical system has $h=0$ there can be local surface fields at each surface $a$ and $b$. This represents a preference of the surfaces for one phase or the other. 
 The finite scaling hypothesis for a slab  system of large area $A$ but with finite width $L$ can be stated as
 \begin{equation}
-f(t,h_a,h_b,L^{-1}) = {1\over b^{d}}f(b^{y_1}t, b^{y_a} h_a, b^{y_b} h_b, bL^{-1}), \label{ffs}
+    f(t,h_a,h_b,L^{-1}) = {1\over b^{d}}f(b^{y_1}t, b^{y_a} h_a, b^{y_b} h_b, bL^{-1}), \label{ffs}
 \end{equation}
 we thus see that the field $L^{-1}$ is a relevant field with RG exponent $y_L=1$. 
 The surface fields are not necessarily relevant so we han have $y_a$ and $y_b$ positive or negative. The important point about finite size scaling is that when $L$ is finite the singularity due to the thermodynamique phase transition is smoothed out by the system's finite size (note that we assume that the system has no two dimensional phase transition in the region we are looking at). First we see that when $L$ is large there should be a bulk contribution to the free energy plus a surface term (so we are considering the limit $L\to\infty$ before $\xi\to\infty$)
@@ -272,157 +288,100 @@ f(t,h_a,h_b,L^{-1})&=& f(t,h_a,h_b,0) + L^{-1}{\partial f(t,h_a,h_b,0)\over \par
 where we have carried out the Taylor expansion for $L^{-1}$ small using both versions of Eq. (\ref{ffs}) and ${\partial \over \partial x_n}$ indicates the partial derivative with respect to the $n^{th}$ argument. 
 The second term gives a total contribution to the singular part of the free energy of the order $AL \times L^{-1}$ and is thus a surface tension $\gamma$  and so we have
 \begin{equation}
-\gamma= {1\over  b^{d-1}}{\partial f(b^{y_1}t, b^{y_a} h_a, b^{y_b} h_b, 0)\over \partial x_4}.
+    \gamma= {1\over  b^{d-1}}{\partial f(b^{y_1}t, b^{y_a} h_a, b^{y_b} h_b, 0)\over \partial x_4}.
 \end{equation}
 
 
 Setting $bt^{y_1}=1$ then gives close to the critical point
 \begin{equation}
-\gamma \sim t^{d-1\over y_1}{\partial f(1,\lim_{t\to 0}  t^{-\frac{y_a}{y_1}}h_a, \lim_{t\to 0}  t^{-\frac{y_a}{y_1}}h_b,0)\over \partial x_4} = t^{(d-1)\nu}C' = \xi^{-(d-1)}C',
+    \gamma \sim t^{d-1\over y_1}{\partial f(1,\lim_{t\to 0}  t^{-\frac{y_a}{y_1}}h_a, \lim_{t\to 0}  t^{-\frac{y_a}{y_1}}h_b,0)\over \partial x_4} = t^{(d-1)\nu}C' = \xi^{-(d-1)}C',
 \end{equation}
 the formula relating the surface tension and the correlation length, in the above $C'$ is a constant depending on the universality class. 
 
 Now if we keep $L$ finite and set $b^{y_1}t=1$ in Eq. (\ref{ffs}) we find
 \begin{equation}
-f(t,h_a,h_b,L^{-1}) = t^{d\over y_1}f(1, t^{-{y_a\over y_1}} h_a, t^{-{y_b\over y_1}} h_b, t^{-{1\over y_1}}L^{-1}), \label{ffs}
+    f(t,h_a,h_b,L^{-1}) = t^{d\over y_1}f(1, t^{-{y_a\over y_1}} h_a, t^{-{y_b\over y_1}} h_b, t^{-{1\over y_1}}L^{-1}), 
+    \label{ffs}
 \end{equation}
 which can be written as
 \begin{equation}
-f(t,h_a,h_b,L^{-1}) = {1\over \xi^d}f(1,\xi^{y_a} h_a, \xi^{y_b} h_b, \xi/L),
+    f(t,h_a,h_b,L^{-1}) = {1\over \xi^d}f(1,\xi^{y_a} h_a, \xi^{y_b} h_b, \xi/L),
 \end{equation}
 This can then be written as
 \begin{equation}
-f(t,h_a,h_b,L^{-1}) = {1\over L^d}\theta({L\over \xi}, \xi^{y_a} h_a, \xi^{y_b} h_b).
+    f(t,h_a,h_b,L^{-1}) = {1\over L^d}\theta({L\over \xi}, \xi^{y_a} h_a, \xi^{y_b} h_b).
 \end{equation}
 Now crucially as $\xi \to \infty$ the function $\theta$ is analytic so we can take the limit $\xi\to\infty$ without any problems to find
 \begin{equation}
-f(0,h_a,h_b,L^{-1}) = {1\over L^d}\theta(0, \lim_{\xi\to \infty} \xi^{y_a} h_a,\lim_{\xi\to \infty}  \xi^{y_b} h_b)
+    f(0,h_a,h_b,L^{-1}) = {1\over L^d}\theta(0, \lim_{\xi\to \infty} \xi^{y_a} h_a,\lim_{\xi\to \infty}  \xi^{y_b} h_b)
 \end{equation}
 Clearly for each surface we have 3 possibilities: $\lim_{\xi\to \infty} \xi^{y_a} h_a = \pm \infty$, if the surface fields are relevant, as well as $\lim_{\xi\to \infty} \xi^{y_a} h_a = 0$ if the surface fields are irrelevant. There is clearly also a similar argument when the system has periodic boundary conditions and there are no surface fields. Near the critical point depending on the boundary conditions there should be scaling functions  when the surface fields attract the same phase $\theta_{++}(x)$, where they attract different phases and
 $\theta_{+-}(x)$, and $\theta_{pbc}(x)$ when the boundary conditions are periodic. There should also be a zero surface field case $\theta_{00}$ when the surfaces fields are irrelevant or zero (this is however unlikely). Fisher and de Gennes argued, without proof, that the force for $++$ boundary conditions should be attractive where as the $+-$ case should produce repulsive forces.   
 
 The total singular part of the free energy is thus given by
 \begin{equation}
-F = ALf(t,h_a,h_b,L^{-1}) = {A\over L^{d-1}}\theta({L\over \xi}, \xi^{y_a} h_a, \xi^{y_b} h_b).
+    F = ALf(t,h_a,h_b,L^{-1}) = {A\over L^{d-1}}\theta({L\over \xi}, \xi^{y_a} h_a, \xi^{y_b} h_b).
 \end{equation}
 
 The scale of the energy is set by the energy of thermal fluctuations $k_BT$ we thus find
 that 
 \begin{equation}
-F(t=0) = {k_BT A C\over L^{d-1}}\label{casfreeenergy}
+    F(t=0) = {k_BT A C\over L^{d-1}}
+    \label{casfreeenergy}
 \end{equation}
 where $C$ is a constant depending on the surface universality class.
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \subsection{Intégration sur le paramètre d'ordre}
-%%%%%%%%%%%%%%%%%%%%%%%%%%    
-{\color{red} mettre dans le chapitre 3. C'est une méthode numérique que j'ai utilisé.}
-Afin d'isoler la force de Casimir du terme de volume dans la force de confinement, il convient de retirer la force de confinement d'un système de taille différente. Ainsi, pour deux systèmes de taille $L_1 \less L_2$, on a 
-\begin{align}
-    F(t,h,L_1) - F(t,h,L_2) = f_c(t,h,L_1) - f_c(t,h,L_2) =  - \frac{\partial \Omega(t,h,L_1)}{\partial L}  + \frac{\partial \Omega(t,h,L_2)}{\partial L} 
-\end{align}
-Puisque le surplus d'énergie dû au confinement est nul lorsque $L_2\to \infty$, on obtient une approximation sur la force de Casimir lorsque $\frac{L_1^d}{L_2^d} \ll 1$ 
-\begin{align}
-    f_c(t,h,L_1) \simeq  \frac{\partial \Omega(t,h,L_2)}{\partial L}  - \frac{\partial \Omega(t,h,L_1)}{\partial L} 
-    \label{casimir-diff-omega}   
-\end{align}
+%%%%%%%%%%%%%%%%%%%%
+    \section{Finite size scaling in one dimensional interface models}
+%%%%%%%%%%%%%%%%%%%%
 
-Or, nous savons grâce à l'équation \ref{moyenne-phi} que dans le cas d'un champ magnétique uniforme $h(\mx)$, la moyenne du paramètre d'ordre est reliée à l'énergie libre par
-\begin{align}
-    <\phi(\mx)>(t,h,L) = - \frac{\delta \Omega(t,h,L)}{\delta h(\mx)}
-\end{align} 
-Si on pose $h(\mx) = h$, alors il est possible d'obtenir une différence entre deux énergies libres à champs magnétiques différents \cite{lopes_cardozo_critical_2014} 
-\begin{align}
-    \Delta \Omega = \Omega(t,h_1,L) - \Omega(t,h_2,L) = - \int_{h_1}^{h_2} <\phi(\mx)>(t,h,L) dh
-    \label{integration-cardozo}
-\end{align}
-Dans le cas où l'on connait la configuration lorsque $h_2 \to \infty$ ou $h_1 \to 0$, il est possible de mesurer directement l'énergie libre d'un système pour n'importe quelle température et taille en intégrant selon \ref{integration-cardozo}. Dans le cas où $h_2 \to \infty$, le potentiel en double-puit \ref{phi4} ne possède qu'un seul minimum, l'énergie libre d'un tel système est alors uniquement lié à l'énergie libre du volume.
-La différence \ref{integration-cardozo} contient donc toute l'information nécessaire afin de mesurer la force de Casimir. On peut alors calculer la dérivée \ref{casimir-diff-omega} avec
-\begin{align}
-    dL \frac{\partial \Omega(t,h,L)}{\partial L} = \Delta \Omega(t,h,L)-\Delta \Omega(t,h,L-dL)
-\end{align}
-
-
-\section{Finite size scaling in one dimensional interface models}
-\subsection{Basic interface models}
-The basic model describing the height of an interface at $z=h({\bf x})$ above a plane with coordinates ${\bf x}$ has the Hamiltonian 
-\begin{equation}
-H[h] = \int d{\bf x}\frac{\sigma}{2} [\nabla h({\bf x})]^2 + V(h({\bf x})).
-\end{equation}
-The first term corresponds to the surface energy for a surface of size $A_s$ 
-\begin{equation}
-H_s[h] = \sigma A_s =\sigma\int d{\bf x} \sqrt{1+[\nabla h({\bf x})]^2}\approx \sigma A + \frac{\sigma}{2}\int d{\bf x} [\nabla h({\bf x})]^2 .
-\end{equation}
-Here $A$ is the area of the projected plane below the surface which is taken to be constant and thus does not change the statistical mechanics of the system. In principle surfaces can also have bending energies, while surface energies correspond to stretching the surface to increase its size, bending energies correspond to curving the surface. The standard bending energy for small surface energies is given by
-\begin{equation}
-H_b[h] = \int d{\bf x} \frac{\kappa_b}{2}[\nabla^2 h({\bf x})]^2,
-\end{equation} 
-where $\kappa_b$ is called the bending rigidity.
-
-The term $V(h)$ is taken to represent the potential energy of the surface. For instance if the surface interacts via an infinite hard core potential with a solid surface at $z=0$, this can be modelled by the potential $V(z) =0$ for $z>0$ and $V(z)=\infty$ for $z\leq 0$. Another example is where the surface describes the surface of a liquid such as water, again with a solid surface at $z=0$, in the presence of gravity the potential energy of the water column above the area 
-element $d{\bf x}$ is given by
-\begin{equation}
-\delta V = \int_0^{h({\bf x})} dz\ \rho g z = \frac{1}{2}\rho g h^2({\bf x}),
-\end{equation}
-where $\rho$ is the (mass) density of the liquid. This then gives
-\begin{equation}
-H[h] = \int d{\bf x} \frac{\sigma}{2}[\nabla h({\bf x})]^2 + \frac{1}{2}\rho g h^2({\bf x}).
-\end{equation}
-We see that the correlation length of the interface is given by
-\begin{equation}
-\xi = \left(\frac{\sigma}{\rho g}\right)^{\frac{1}{2}}.
-\end{equation}
-In the more general context if $V(h)$ has a minimum at some point $h_m$ we can write $h= h_f({\bf x})+ h_m$, where  $h_f({\bf x})$ represents the height fluctuations about the mechanically stable flat interface $h({\bf x})=h_m$. Now expand assuming that $h_f({\bf x})$ is
-small we find the effective Hamiltonian for the fluctuations
-\begin{equation}
-H_{eff}[h_f] = \int d{\bf x} \frac{\sigma}{2}[\nabla h_f({\bf x})]^2 + \frac{1}{2}V''(h_m) h_f^2({\bf x}),
-\end{equation}
-where we have dropped the constant term $AV(h_m)$. The above field theory is Gaussian and 
-so, when the approximations made to derive it are valid, all of the statistical properties of the height fluctuations can be deduced. However for general potentials $V(h)$ the model cannot be solved exactly in two dimensions but can in principle be solved in one dimension as we will see below.
+%%%%%%%%%%%%%%%%%%%%
 \subsection{Continuous models in one dimension}
+%%%%%%%%%%%%%%%%%%%%
 
 In one dimension the partition function for a surface model of the type discussed above can be written as a functional integral  
 \begin{equation}
-Z(L)  = \int d[h]\exp\left(-\frac{\beta\sigma}{2}\int_0^L h'^2(x) dx -\beta\int_0^L  V(h(x)) dx\right).
+    Z(L)  = \int d[h]\exp\left(-\frac{\beta\sigma}{2}\int_0^L h'^2(x) dx -\beta\int_0^L  V(h(x)) dx\right).
 \end{equation}
 It is convenient to fix both the starting point $h(0)=x$ and the end point $h(L)=x$ and define what is known as the propagator
 \begin{equation}
-K(h,h',L)=\int_{h(0)=h} d[h] \delta(h' -h(L)) \exp\left(-\frac{\beta}{2}\int_0^L \sigma h'^2(x) dx -\beta \int_0^L  V(h(x)) dx\right).\label{prog}
+    K(h,h',L)=\int_{h(0)=h} d[h] \delta(h' -h(L)) \exp\left(-\frac{\beta}{2}\int_0^L \sigma h'^2(x) dx -\beta \int_0^L  V(h(x)) dx\right).
+    \label{prog}
 \end{equation}
 The propagator is an example of a path integral and is the sum over all paths going between 
 $h$ and $h'$ in what can be taken to be the time $L$.  It can be shown that the path integral obeys an imaginary time Schr\"odinger equation
 \begin{equation}
-\frac{\partial  K(h,h',L)}{\partial L} = -\hat H K(h,h',L),
+    \frac{\partial  K(h,h',L)}{\partial L} = -\hat H K(h,h',L),
 \end{equation}
 where $\hat H$ is the Hamiltonian operator
 \begin{equation}
-\hat H = -\frac{1}{2\sigma\beta}\frac{\partial^2 }{\partial h^2} + \beta V(h),
+    \hat H = -\frac{1}{2\sigma\beta}\frac{\partial^2 }{\partial h^2} + \beta V(h),
 \end{equation}
 and, with a suitable normalisation, the initial condition
 \begin{equation}
-K(h,h',L)=\delta(h-h').
+    K(h,h',L)=\delta(h-h').
 \end{equation}
 If the Hamiltonian operator $\hat H$ has eigenfunctions $\psi_n$, normalised so that
 \begin{equation}
-\int dh \ \psi^2_n(h) = 1,
+    \int dh \ \psi^2_n(h) = 1,
 \end{equation}
  and with eigenvalues $\epsilon_n$, it is easy to see that the propagator can be written as
 \begin{equation}
-K(h,h',L)= \sum_n \exp(-L\epsilon_n)\psi_n(h)\psi_n(h').
+    K(h,h',L)= \sum_n \exp(-L\epsilon_n)\psi_n(h)\psi_n(h').
 \end{equation}
 If we take a system with periodic boundary conditions but otherwise leave the initial value $h(0)$ of the height to be free, then using the normalisation of the eigenfunctions, we find
 \begin{equation}
-Z(L) = \int dh K(h,h',L) = \sum_n \exp(-L\epsilon_n).
+    Z(L) = \int dh K(h,h',L) = \sum_n \exp(-L\epsilon_n).
 \end{equation}
 Now in the thermodynamic limit $L\to\infty$ if there is a gap between the ground state energy
 $\epsilon_0$ and the first excited state, $g=\epsilon_1-\epsilon_0$ which is non-zero, we can apply ground state dominance 
 \begin{equation}
-Z(L) =\exp(-L\epsilon_0)
+    Z(L) =\exp(-L\epsilon_0)
 \end{equation}
 which gives the free energy per unit length as
 \begin{equation}
-f=\frac{1}{\beta}\epsilon_0.
+    f=\frac{1}{\beta}\epsilon_0.
 \end{equation}
 As well as the free energy we are interested in the probability distribution of the height at a single point (which is independent of the point choses due to invariance by translation of the system). For instance the probability distribution of $h(0)$ is given by
 \begin{eqnarray}
@@ -431,7 +390,7 @@ p_1(h)&=& \frac{\int d[h]\delta(h(0)-h)\exp\left(-\frac{\beta}{2}\int_0^L h'^2(x
 \end{eqnarray}
 and so as $L\to\infty$, ground state dominance gives
 \begin{equation}
-p_1(h)= \psi_0^2(h).
+    p_1(h)= \psi_0^2(h).
 \end{equation}
 We see that the normalisation of the probability density function for $h$ follows from the 
 normalisation of the wave functions.
@@ -449,28 +408,33 @@ p_2(h,h',x) &=& \sum_{n} \psi_0(h')\psi_0(h)\psi_n(h')\psi_n(h)\exp(-x[\epsilon_
 \end{eqnarray}
 From this we see that when $x[\epsilon_n-\epsilon_0] \gg1 $ for all $n$ and so in particular $x[\epsilon_1-\epsilon_0] \gg1$ we have 
 \begin{equation}
-p_2(h,h',x) \sim p_1(h)p_2(h'),
+    p_2(h,h',x) \sim p_1(h)p_2(h'),
 \end{equation}
 so that the height at large distances are uncorrelated or equivalently are independent random variables. This gives a correlation length
 \begin{equation}
-\xi = \frac{1}{\epsilon_1-\epsilon_0}.\label{clq}
+    \xi = \frac{1}{\epsilon_1-\epsilon_0}.\label{clq}
 \end{equation}
-\subsection{The confined elastic line}
+
+%%%%%%%%%%%%%%%%%%%%
+    \subsection{The confined elastic line}
+%%%%%%%%%%%%%%%%%%%%
+    
 Here we consider the case where $V(h)= 0$ for $0<h<\ell$ and $V(h)=0$ otherwise. This corresponds to a one dimensional elastic line confined between two impenetrable walls separated by a distance $\ell$. The Hamiltonian $\hat H$ is that for a quantum well of width $\ell$ and the eigenfunctions can be found in any elementary textbook on quantum mechanics. The are
 \begin{equation}
-\psi(h) = \sqrt{\frac{2}{\ell}}\sin(\frac{\pi(n+1)h}{\ell})
+    \psi(h) = \sqrt{\frac{2}{\ell}}\sin(\frac{\pi(n+1)h}{\ell})
 \end{equation}
 where $n\geq 0$ are integers. From this we see that
 \begin{equation}
-\epsilon_0 = \frac{1}{2\sigma\beta}\frac{\pi^2}{\ell^2},
+    \epsilon_0 = \frac{1}{2\sigma\beta}\frac{\pi^2}{\ell^2},
 \end{equation}
 and so
 \begin{equation}
-f = \frac{1}{2\sigma\beta^2}\frac{\pi^2}{\ell^2}= \frac{T^2\pi^2}{2\sigma\ell^2}.
+    f = \frac{1}{2\sigma\beta^2}\frac{\pi^2}{\ell^2}= \frac{T^2\pi^2}{2\sigma\ell^2}.
 \end{equation}
 Here the pressure (in this case pressure in a force per unit length) is given by
 \begin{equation}
-P = -\frac{\partial f}{\partial \ell} = \frac{\pi^2 T^2}{\sigma\ell^3},\label{pfree}
+    P = -\frac{\partial f}{\partial \ell} = \frac{\pi^2 T^2}{\sigma\ell^3},
+    \label{pfree}
 \end{equation}
 and we see that it is repulsive, physically the fluctuations of the surface repel the walls. 
 The pressure has the Casimir like characteristic that it behaves as a long range power law type interaction, however a two dimensional critical Casimir system (see \eqref{casfreeenergy}) would have a free energy per unit length $f=CT/\ell$. We also see that the free energy scales  a $T^2$ rather than $T$ (as is the case for the Casimir interaction).Having said this, a critical system has zero surface tension and so using a model with a finite
@@ -478,104 +442,107 @@ surface tension for the interface is clearly not appropriate.
 
 Here, using Eq. (\ref{clq}) we find that  the correlation length is given by
 \begin{equation}
-\xi = \frac{2}{3}\frac{\sigma \ell^2}{T\pi^2},\label{corel}
+    \xi = \frac{2}{3}\frac{\sigma \ell^2}{T\pi^2},
+    \label{corel}
 \end{equation}
 thus it increases as the surface tension is increased or the temperature is lower, this makes physical sense as the surface should become {\em flatter} under these conditions. Also as the system becomes more confined the correlation length increases, again as  confinement  
 kills fluctuations. The correlation length tells us that if we wanted to simulate this system then we need to take
 \begin{equation}
-L\gg \xi ,
+    L\gg \xi ,
 \end{equation}
 in order to be in the thermodynamics limit and so $L \gg \frac{\sigma \ell^2}{T\pi^2}$, thus for 
 $\ell$ large, in general we would need to simulate rather large systems.
 The probability distribution function of the height at a single point is given by
 \begin{equation}
-p_1(h) =\frac{2}{\ell}\sin^2(\frac{\pi h}{\ell})
+    p_1(h) =\frac{2}{\ell}\sin^2(\frac{\pi h}{\ell})
 \end{equation}
 and from this we find 
 \begin{equation}
-\langle h\rangle = \frac{\ell}{2},  
+    < h> = \frac{\ell}{2},  
 \end{equation}
 which is rather obvious. The width of the interface is given by 
 \begin{equation}
-w=\sqrt{\langle h^2\rangle - \langle h\rangle^2},
+    w=\sqrt{< h^2> - < h>^2},
 \end{equation}
 and here it is given by
 \begin{equation}
-w= \ell\sqrt{\frac{1}{12}-\frac{1}{2\pi^2}}= 0.0326727\  \ell
+    w= \ell\sqrt{\frac{1}{12}-\frac{1}{2\pi^2}}= 0.0326727\  \ell
 \end{equation}
 
-\subsection{The Airy line}
+%%%%%%%%%%%%%%%%%%%%
+    \subsection{The Airy line}
+%%%%%%%%%%%%%%%%%%%%
 In the  above well known example we confine the surface and then compute the pressure. This is an example of the constant volume ensemble. Physically we could also consider the case of a system which is confined softly by an externally imposed pressure $P_0$ the constant pressure ensemble. In this case the potential is given by
 \begin{equation}
-V(h) = P_0 h \ {\rm for }\ h>0\ ; =\infty \ {\rm for}\ h\leq 0. 
+    V(h) = P_0 h \ {\rm for }\ h>0\ ; =\infty \ {\rm for}\ h\leq 0. 
 \end{equation}
 The time independent Schr\"odinger equation for the eigenfunctions here is
 \begin{equation}
--\frac{1}{2\sigma\beta}\frac{d^2 \psi_n(h)}{dh^2} + P_0\beta h \psi_n(h) = \epsilon_n\psi_n(h).
+    -\frac{1}{2\sigma\beta}\frac{d^2 \psi_n(h)}{dh^2} + P_0\beta h \psi_n(h) = \epsilon_n\psi_n(h).
 \end{equation}
 The corresponding eigenfunctions have boundary conditions $\psi_n(0)=0$ due to the hard wall potential at $h=0$ and they must also decay to zero as $h\to \infty$ so as to be normalisable.
 
 The key to finding the eigenfunctions is to transform  the Schr\"odinger into the Airy equation which is
 \begin{equation}
-\frac{d^2y(x)}{dx^2}- x y(x)=0.
+    \frac{d^2y(x)}{dx^2}- x y(x)=0.
 \end{equation}
 This equation has solutions ${\rm Ai}(x)$ which decay as 
 \begin{equation}
-{\rm Ai}(x) \sim \frac{\exp(-\frac{2}{3} x^{\frac{3}{2}}) \Gamma(\frac{5}{6})\Gamma(\frac{1}{6})}{4\pi^{\frac{3}{2}} x^{\frac{1}{4}}},
+    {\rm Ai}(x) \sim \frac{\exp(-\frac{2}{3} x^{\frac{3}{2}}) \Gamma(\frac{5}{6})\Gamma(\frac{1}{6})}{4\pi^{\frac{3}{2}} x^{\frac{1}{4}}},
 \end{equation}
 as $x\to\infty$ and so are normalizable as eigenfunctions. For $x<0$ the Airy function  oscillates and has an 
 infinite number of negative zeros $-\alpha_n$ such that ${\rm Ai}(-\alpha_n)=0$. 
 
 We make the change of variable $h=\mu z'$ to find
 \begin{equation}
-\frac{1}{2\sigma\beta\mu^2}\frac{d^2 \psi_n(z')}{dz'^2}- P_0\beta \mu(z'-\varepsilon_n)\psi_n(z')=0,
+    \frac{1}{2\sigma\beta\mu^2}\frac{d^2 \psi_n(z')}{dz'^2}- P_0\beta \mu(z'-\varepsilon_n)\psi_n(z')=0,
 \end{equation}
 where $\varepsilon_n= \epsilon_n/(P_0\beta\mu)$. Now  we chose $\mu$ so that
 \begin{equation}
-2\sigma\beta^2P_0 \mu^3=1,
+    2\sigma\beta^2P_0 \mu^3=1,
 \end{equation}
 and we see that  
 \begin{equation}
-\mu = \left(\frac{1}{2\beta^2\sigma P_0}\right)^{\frac{1}{3}},
+    \mu = \left(\frac{1}{2\beta^2\sigma P_0}\right)^{\frac{1}{3}},
 \end{equation}
 is an intrinsic length scale.
 \begin{equation}
-\frac{d^2 \psi_n(z')}{dz'^2}- (z'-\varepsilon_n)\psi_n(z')=0.
+    \frac{d^2 \psi_n(z')}{dz'^2}- (z'-\varepsilon_n)\psi_n(z')=0.
 \end{equation}
 Finally if we use $z=z'-\varepsilon_n$ we obtain Airy's equation
 \begin{equation}
-\frac{d^2 \psi_n(z)}{dz^2}- z\psi_n(z)=0
+    \frac{d^2 \psi_n(z)}{dz^2}- z\psi_n(z)=0
 \end{equation}
 and so
 \begin{equation}
-\psi_n(z)= c_n {\rm Ai}(z),
+    \psi_n(z)= c_n {\rm Ai}(z),
 \end{equation}
 where $c_n$ is a normalisation constant. This means that in terms of the original height variable $h$, 
 \begin{equation}
-\psi_n(h)= c_n {\rm Ai}(\frac{h}{\mu}-\varepsilon_n).
+    \psi_n(h)= c_n {\rm Ai}(\frac{h}{\mu}-\varepsilon_n).
 \end{equation}
 The boundary condition $\psi_n(h)$ then show that we must choose $\varepsilon_n=\alpha_{n+1}$. This means that the ground state energy is
 \begin{equation}
-\epsilon_0 = \alpha_1P_0\beta\mu= \frac{\alpha_1P_0\beta}{(2\sigma\beta^2P_0)^\frac{1}{3}}= \frac{\alpha_1 P_0^\frac{2}{3}\beta^\frac{1}{3}}{2^\frac{1}{3} \sigma^\frac{1}{3}},
+    \epsilon_0 = \alpha_1P_0\beta\mu= \frac{\alpha_1P_0\beta}{(2\sigma\beta^2P_0)^\frac{1}{3}}= \frac{\alpha_1 P_0^\frac{2}{3}\beta^\frac{1}{3}}{2^\frac{1}{3} \sigma^\frac{1}{3}},
 \end{equation}
 and where we note that $\alpha_1 = 2.33811$.
 \begin{equation}
-f= \frac{\alpha_1 P_0^\frac{2}{3}}{2^\frac{1}{3} \sigma^\frac{1}{3}\beta^\frac{2}{3}}.
+    f= \frac{\alpha_1 P_0^\frac{2}{3}}{2^\frac{1}{3} \sigma^\frac{1}{3}\beta^\frac{2}{3}}.
 \end{equation}
 From the original partition function we see that $h$ is conjugate to $P_0$ and so we find the average height is given by
 \begin{equation}
-\bar h= \langle h\rangle = \frac{\partial f}{\partial P_0} = \frac{2}{3}\frac{\alpha_1 }{2^\frac{1}{3} \sigma^\frac{1}{3}\beta^\frac{2}{3}P_0^\frac{1}{3}} = \frac{2}{3}\alpha_1\mu,\label{h1}
+    \bar h= < h> = \frac{\partial f}{\partial P_0} = \frac{2}{3}\frac{\alpha_1 }{2^\frac{1}{3} \sigma^\frac{1}{3}\beta^\frac{2}{3}P_0^\frac{1}{3}} = \frac{2}{3}\alpha_1\mu,\label{h1}
 \end{equation}
 and solving for $P_0$ in terms of $\overline h$ gives
 \begin{equation}
-P_0 = \frac{4}{27}\frac{\alpha_1^3 T^2}{\sigma \overline h^3},
+    P_0 = \frac{4}{27}\frac{\alpha_1^3 T^2}{\sigma \overline h^3},
 \end{equation}
 we see that $P_0$ behaves exactly in the same way as the pressure of a confined elastic line
 in term of the temperature and surface tension. Only the overall numerical prefactor is different.
 
 The correlation length is given by
 \begin{equation}
-\xi = \frac{2^\frac{1}{3}(\sigma T)^\frac{1}{3}}{(\alpha_2-\alpha_1)P_0^\frac{2}{3}}.
+    \xi = \frac{2^\frac{1}{3}(\sigma T)^\frac{1}{3}}{(\alpha_2-\alpha_1)P_0^\frac{2}{3}}.
 \end{equation}
 When written in terms of $\overline h$ the above correlation length behaves in the same way
 as for the free elastic line, however when $P_0$ is fixed we see that the behavior as a function 
@@ -584,83 +551,40 @@ of $T$ and $\sigma$ is quite different. The correlation length still increases w
 The probability density function for the height of the interface at a single point is given
 by
 \begin{equation}
-p_1(h) = \frac{{\rm Ai}^2(\frac{h}{\mu}-\alpha_0)}{\int_0^\infty dh' {\rm Ai}^2(\frac{h'}{\mu}-\alpha_0)}
+    p_1(h) = \frac{{\rm Ai}^2(\frac{h}{\mu}-\alpha_0)}{\int_0^\infty dh' {\rm Ai}^2(\frac{h'}{\mu}-\alpha_0)}
 \end{equation}
 However if we write the height variable in terms of the length scale $\mu$, $h(x)= \mu z(x)$ we find that $z$ has the single point probability density function
 \begin{equation}
-p(z)= \frac{{\rm Ai}^2(z-\alpha_0)}{\int_0^\infty dz' {\rm Ai}^2(z'-\alpha_0)}.
+    p(z)= \frac{{\rm Ai}^2(z-\alpha_0)}{\int_0^\infty dz' {\rm Ai}^2(z'-\alpha_0)}.
 \end{equation}
 
 {\bf Make a nice plot of p(z) with a properly referenced legend}
 Using this we find the average height is given by
 \begin{equation}
-\langle h\rangle = \overline h= \mu z_0,
+    < h> = \overline h= \mu z_0,
 \end{equation}
 where 
 \begin{equation}
-z_0 = \frac{\int_0^\infty dz z {\rm Ai}^2(z-\alpha_0)}{\int_0^\infty dz {\rm Ai}^2(z-\alpha_0)}.
+    z_0 = \frac{\int_0^\infty dz z {\rm Ai}^2(z-\alpha_0)}{\int_0^\infty dz {\rm Ai}^2(z-\alpha_0)}.
 \end{equation}
 Interestingly comparison with the thermodynamic calculation giving Eq. (\ref{h1}) shows that the identity
 \begin{equation}
-z_0 = \frac{2}{3}\alpha_0,
+    z_0 = \frac{2}{3}\alpha_0,
 \end{equation}
 must hold- this surprising identity can be verified numerically. Here we find that the width is given by
 \begin{equation}
-w= 0.697089 \ \mu
-\end{equation}
-\section{Discrete Interface Models}
-It is often interesting to study discrete interface models rather than continuous models. Firstly underlying spin models such as the Ising model are based on discrete lattices, it is that normal
-that the interface is described on the same lattice. Secondly when analytical solutions are not available numerical Monte Carlo simulations are most easily carried out on systems with a discrete phase space. Finally their statics can be formulated in terms of transfer matrices which are finite and can be diagonalized exactly on a computer. Here we review a number of discrete interface models which can be used to describe interfaces in two dimensional systems. 
-\subsection{The solid on solid model and its variants}
-The solid on solid model is based on a lattice with points $1\leq \leq  L$ and at  each site. At each site the interface takes an integer value $h_i$  between the lowest level $H_{min}$ and the highest possible level $H_{max}$. There are thus  $H_{max}-H_{min}+1$ possible values for $h_i$. The Hamiltonian is given by
-\begin{equation}
-H_{SOS} = \sigma\sum_{i=1}^L |h_{i+1}- h_{i}| + \sum_{i=1}^L V(h_i).
-\end{equation}
-The first term is simply the excess length of the interface between the two phases and the second represents an external potential or entropic contribution in a variant (the particle on particle model we introduce in this chapter). As usual we impose periodic boundary conditions 
-$h_{L+1}=h_1$.
-
-
-In the SOS model $h_i$ can take any value between $H_{min}$ and $H_{max}$. A variant the solid on solid model is one where the height $h_{i+1}$ is restricted to one of the three  values $h_i$, $h_{i+1}$ and $h_{i-1}$ as long as they are between $H_{min}$ and $H_{max}$. This version is called the restricted solid on solid model but we will not consider it further. 
-
-A model which is closer to the continuous models is the Gaussian form of the SOS where
-\begin{equation}
-H_{GSOS} = \sigma\sum_{i=1}^L |h_{i+1}- h_{i}| + \sum_{i=1}^L V(h_i),
-\end{equation}
-again the GSOS can have nonrestricted and restricted versions. 
-
-Note that the case where $V(h)=P_0h$ simulates the SOS with and externally imposed pressure. This model is also equivalent mathematically to the SOS model in a grand canonical ensemble, where we think of the height as representing a number $h_i$ of particles stacked at each site $i$ and $P_0=-\mu$ where $\mu$ is the chemical potential (which can be positive or negative). However this is not strictly true, if we consider the case where $\sigma=0$ then in the SOS the configuration where all the particles are concentrated at a single site is equally as probable as that where all sites have the same number of particles and physical intuition tells us that the latter configuration should be more probable.
-
-In fact, if the height profiles represent particle numbers, if we fix the total number of particles to be $N$ and take them to be identical the partition function is given by
-\begin{equation}
-Z_N = \frac{1}{N!}\sum_{h_1,h_2\cdots h_L} \delta_{\sum_{i=1}^L h_i, N}\frac{N!}{\prod_{i=1}^L h_i!} \exp\left(-\beta \sigma \sum_{i=1}^L |h_{i+1}-h_i| -\beta\sum_{i=1}^L V(h_i)\right).
-\end{equation}
-Here the combinatorial term $\frac{N!}{\prod_{i=1}^L h_i!}$ represents the number of ways that the $h_i$ particles on each site can be chosen from the $N$ particles available. The constraint on the particle number makes the computation of the partition function at fixed $N$ complicated both analytically and numerically. However if we change to the grand canonical ensemble using
-the formula
-\begin{equation}
-\Theta = \sum_{N} \exp(\beta\mu N) Z_N,
-\end{equation}
-where $\Theta$ is the grand partition function and $\mu$ the chemical potential, we find
-\begin{equation}
-\Theta = \sum_{h_1,h_2\cdots h_L} \frac{1}{\prod_{i=1}^L h_i!} \exp\left(-\beta \sigma \sum_{i=1}^L |h_{i+1}-h_i| -\beta\sum_{i=1}^L[ V(h_i)-\mu h_i]\right).
-\end{equation}
-The grand partition function can then be written as 
-\begin{equation}
-\Theta = \sum_{h_1,h_2\cdots h_L} \exp\left(-\beta H_{eff}(h_1,h_2\cdots h_L)\right)
-\end{equation}
-where 
-\begin{equation}
-H_{eff}= \sigma \sum_{i=1}^L |h_{i+1}-h_i| +\sum_{i=1}^L [V(h_i)-\mu h_i +\frac{1}{\beta}\ln(h_i !)].
+    w= 0.697089 \ \mu
 \end{equation}
 
-\section{The transfer matrix method}
 
-
+%%%%%%%%%%%%%%%%%%%%
 \section{The confined solid on solid model}
+%%%%%%%%%%%%%%%%%%%%
 Here we consider the effect of confining the solid on solid model. The finite size effects in the SOS for both the restricted and unrestricted model were studied by Svravick et al. The formula for the eigenvalues of the even eigenvectors was given without derivation and the eigenvectors and odd eigenvalues were not discussed. In addition the limiting behavior of the free energy at high and low temperatures was not analysed and the correlation length was not discussed either. 
 
 Here we give the derivation for a system with sites between $0$ and $H$ and with $V=0$.  The SOS transfer matrix is thus given by 
 \begin{equation}
-T_{ij} = \exp(-\beta\sigma|j-i|).
+    T_{ij} = \exp(-\beta\sigma|j-i|).
 \end{equation}
 We no proceed to find the eigenvectors of $T$.  Consider the vector denoted by $[a]$ which has components
 \begin{equation}
@@ -669,7 +593,7 @@ We no proceed to find the eigenvectors of $T$.  Consider the vector denoted by $
 where $i$ is an index ranging from $0$ to $H$. 
 The action of the SOS transfer matrix on this vector is given by
 \begin{equation}
-\left[T\ [a]\right]_i = \sum_{j=0}^H\exp(-\beta\sigma |i-j|)a^j
+    \left[T\ [a]\right]_i = \sum_{j=0}^H\exp(-\beta\sigma |i-j|)a^j
 \end{equation}
 and we find
 \begin{eqnarray}
@@ -683,33 +607,33 @@ and we find
 \end{eqnarray}
 where we have introduced
 \begin{equation}
-r=\exp(-\beta\sigma).
+    r=\exp(-\beta\sigma).
 \end{equation}
 We now define
 \begin{equation}
-\lambda(a)= \frac{ ra}{1-ra}- \frac{ \frac{a}{r}}{1-\frac{a}{r}} = \frac{\frac{1}{r}-r}{\frac{1}{r}+r
+    \lambda(a)= \frac{ ra}{1-ra}- \frac{ \frac{a}{r}}{1-\frac{a}{r}} = \frac{\frac{1}{r}-r}{\frac{1}{r}+r
 - a-\frac{1}{a}}\label{elam}
 \end{equation}
 and notice that
 \begin{equation}
-\lambda(a) = \lambda(a^{-1}).
+    \lambda(a) = \lambda(a^{-1}).
 \end{equation}
 
 We  can thus write
 \begin{equation}
-\left[T\ [a]\right]_i= \lambda(a)a^i +\frac{r^i}{1-\frac{a}{r}}-\frac{r^{H+1}a^{H+1}\frac{1}{r^i}}{1-ra}.
+    \left[T\ [a]\right]_i= \lambda(a)a^i +\frac{r^i}{1-\frac{a}{r}}-\frac{r^{H+1}a^{H+1}\frac{1}{r^i}}{1-ra}.
 \end{equation}
 Now consider the action of the transfer matrix on the vector $[a^{-1}]$, we find
 \begin{equation}
-\left[T\ [a^{-1}]\right]_i = \lambda(a) a^{-i} + \frac{r^i}{1-\frac{1}{ra}}-\frac{r^{H+1}a^{-(H+1)}\frac{1}{r^i}}{1-\frac{r}{a}}.
+    \left[T\ [a^{-1}]\right]_i = \lambda(a) a^{-i} + \frac{r^i}{1-\frac{1}{ra}}-\frac{r^{H+1}a^{-(H+1)}\frac{1}{r^i}}{1-\frac{r}{a}}.
 \end{equation}
 We now look for an eigenvector of the form
 \begin{equation}
-{\bf v} = [a]+ c[a^{-1}].
+    {\bf v} = [a]+ c[a^{-1}].
 \end{equation}
 The action of $T$ on ${\bf v}$ is this
 \begin{equation}
-\left[T\ ([a]+c [a^{-1}]\right]_i = \lambda(a)[a^i + c a^{-i}]
+    \left[T\ ([a]+c [a^{-1}]\right]_i = \lambda(a)[a^i + c a^{-i}]
 + r^i\left(\frac{1}{1-\frac{a}{r}}+ \frac{c}{1-\frac{1}{ra}}\right)
 - \frac{r^{H+1}}{r^i}\left(\frac{a^{H+1}}{1-ra} + c\frac{a^{-(H+1)}}{1-\frac{r}{a}}\right).
 \end{equation}
@@ -720,38 +644,38 @@ and we see that ${\bf v}$ is an eigenvector, with eigenvalue $\lambda(a)$,  if
 \end{eqnarray}
 The above equations imply that 
 \begin{equation}
-c= -\frac{ra-1}{a(r-a)}
+    c= -\frac{ra-1}{a(r-a)}
 \end{equation}
 and
 \begin{equation}
-c^2 = a^{2H}.
+    c^2 = a^{2H}.
 \end{equation}
 Therefore we find
 \begin{equation}
-v_i = a^i \pm a^{H-i},
+    v_i = a^i \pm a^{H-i},
 \end{equation}
 however we expect the ground state eigenvector (corresponding to the largest eigenvalue)  to be symmetric about the middle of the system and so 
 \begin{equation}
-v_i= v_{H-i},
+    v_i= v_{H-i},
 \end{equation}
-which implies that we should have
-$c= a^H$. 
+which implies that we should have $c= a^H$. 
 
 This then gives the equation determining the values of a for the largest eigenvalue, and in general for the eigenvalues which are symmetric $c=1$,
 \begin{equation}
-a^{H+1} =  \frac{1-ra}{r-a}.\label{aeq}
+    a^{H+1} =  \frac{1-ra}{r-a}.
+    \label{aeq}
 \end{equation}
 As a check on the above derivation we can consider the case $H=1$ so we have two sites. Here we see that the transfer matrix is given explicitly by
 \begin{equation}
-T =\begin{pmatrix} & 1 & r\\& r &1\end{pmatrix}
+    T =\begin{pmatrix} & 1 & r\\& r &1\end{pmatrix}
 \end{equation}
 and the largest eigenvector is easily seen to be given by
 \begin{equation}
-\lambda_0 = 1+r 
+    \lambda_0 = 1+r 
 \end{equation}
 Now for $H=1$ we that Eq. (\ref{aeq}) gives
 \begin{equation}
-a^{2} =  \frac{1-ra}{r-a}
+    a^{2} =  \frac{1-ra}{r-a}
 \end{equation}
 has three solutions
 \begin{eqnarray}
@@ -762,27 +686,27 @@ a_3&=& \frac{1}{2} \left(\sqrt{r^2+2
    r-3}+r+1\right)\end{eqnarray}
 We see that $a_2=1/a_3$, and $|a_2|=|a_3|=1$, also
 \begin{equation}
-\lambda(-1)= \frac{1-r}{1+r}
+    \lambda(-1)= \frac{1-r}{1+r}
 \end{equation}
 while 
 \begin{equation}
-\lambda(a_2)=\lambda(a_3)= 1+r
+    \lambda(a_2)=\lambda(a_3)= 1+r
 \end{equation}
 corresponds to the maximal eigenvalue. Note that $\lambda(-1)$ is not the other  eigenvector of the transfer matrix, this has to be found by considering solutions with $c=-1$, as we will see later.
 
 The equation  (\ref{aeq}) determining $a$ can also be written as
 \begin{equation}
-a^{H} = - \frac{r-\frac{1}{a}}{r-a},
+    a^{H} = - \frac{r-\frac{1}{a}}{r-a},
 \end{equation}
 from this we see that if $a$ is a solution then $1/a$. Also we see that $a=-1$ is always a solution.
 
 If we write $a=\exp(i\theta)$ then 
 \begin{equation}
-\exp(iH\theta) = - \frac{r-\exp(-i\theta)}{r-\exp(i\theta)},\label{thetamas}
+    \exp(iH\theta) = - \frac{r-\exp(-i\theta)}{r-\exp(i\theta)},\label{thetamas}
 \end{equation}
 while
 \begin{equation}
-\lambda(\theta) = \frac{\sinh(\beta\sigma)}{\cosh(\beta\sigma) - \cos(\theta)}.
+    \lambda(\theta) = \frac{\sinh(\beta\sigma)}{\cosh(\beta\sigma) - \cos(\theta)}.
 \end{equation}
 
 Notice that in order to construct a real eigenvector corresponding to $\lambda_0$ we can use the fact that both $v_i(a) = a^i + a^{H-i}$ and $v_i(a^{-1}) = a^{-i} + a^{-H+i}$ are both eigenvectors with the same eigenvalue. This means that $u_i(a) = v_i(a) + v_i(-a)$ is also 
@@ -792,53 +716,54 @@ and eigenvector and all its components are real.
 Clearly the largest eigenvalue corresponds to the value of $\theta$ closest to $0$.
 For $H$ large we look for an eigenvalue such that $H \theta \sim 1$ and so we write
 \begin{equation}
-\theta = \frac{\phi}{H}
+    \theta = \frac{\phi}{H}
 \end{equation}
 for $H$ large this gives
 \begin{equation}
-\exp(i\phi) \approx -\frac{r-1+ i\frac{\phi}{H}}{ r-1- i\frac{\phi}{H}}\approx -1 +2 i\frac{\phi}{H(1-r)}
+    \exp(i\phi) \approx -\frac{r-1+ i\frac{\phi}{H}}{ r-1- i\frac{\phi}{H}}\approx -1 +2 i\frac{\phi}{H(1-r)}
 \end{equation}
 and so we find to leading order in $1/H$, 
 \begin{equation}
-\theta = \frac{(2n+1)\pi}{H}.
+    \theta = \frac{(2n+1)\pi}{H}.
 \end{equation}
 However we notice that this approximation is only valid if $H(1-r) \gg1$. For large $\beta$ this approximation is simply equivalent to $H\gg1$, however when $\beta$ is small it requires
 that $H\beta \gg1$.
 
 The closest to the real axis has $n=0$ and so we have
 \begin{equation}
-\lambda_0 \approx \frac{\sinh(\beta\sigma)}{\cosh(\beta\sigma) - \cos(\frac{\pi}{H})} \approx \frac{\sinh(\beta\sigma)}{\cosh(\beta\sigma) - 1+ \frac{\pi^2}{2H^2}} \approx \coth(\frac{\beta\sigma}{2})(1 - \frac{\pi^2}{4\sinh^2(\frac{\beta\sigma}{2}) H^2})
+    \lambda_0 \approx \frac{\sinh(\beta\sigma)}{\cosh(\beta\sigma) - \cos(\frac{\pi}{H})} \approx     \frac{\sinh(\beta\sigma)}{\cosh(\beta\sigma) - 1+ \frac{\pi^2}{2H^2}} \approx \coth(\frac{\beta\sigma}{2})(1 - \frac{\pi^2}{4\sinh^2(\frac{\beta\sigma}{2}) H^2})
 \end{equation}
 
 In order to compute the second eigenvalue $\lambda_1$ we look for and odd an antisymmetric solution with $c=-1$. We thus find
 \begin{equation}
-\exp(iH\theta) = \frac{r-\exp(-i\theta)}{r-\exp(i\theta)}.\label{theta}
+    \exp(iH\theta) = \frac{r-\exp(-i\theta)}{r-\exp(i\theta)}.
+    \label{theta}
 \end{equation}
 
 For large $H$ we look for a solution of the form $\theta=\phi/H$ and this gives
 \begin{equation}
-\exp(i\phi) \approx  1,
+    \exp(i\phi) \approx  1,
 \end{equation}
 and so we chose solutions $\phi = 2n\pi$ for integer $n$, however the solution $n=0$ which corresponds to $a=1$ has $v(i) = a^i-a^{H-i} =0$ and so does not correspond to an eigenvector. We thus take the next solution $\phi = 2\pi$ which gives
 \begin{equation}
-\lambda_1 \approx \frac{\sinh(\beta\sigma)}{\cosh(\beta\sigma) - \cos(\frac{2\pi}{H})} \approx \frac{\sinh(\beta\sigma)}{\cosh(\beta\sigma) - 1+ \frac{2\pi^2}{H^2}}\approx \coth(\frac{\beta\sigma}{2})(1 - \frac{\pi^2}{\sinh^2(\frac{\beta\sigma}{2}) H^2})
+    \lambda_1 \approx \frac{\sinh(\beta\sigma)}{\cosh(\beta\sigma) - \cos(\frac{2\pi}{H})} \approx \frac{\sinh(\beta\sigma)}{\cosh(\beta\sigma) - 1+ \frac{2\pi^2}{H^2}}\approx \coth(\frac{\beta\sigma}{2})(1 - \frac{\pi^2}{\sinh^2(\frac{\beta\sigma}{2}) H^2})
 \end{equation}
 The correlation length is then given by
 \begin{equation}
-\xi =\frac{1}{\ln(\frac{\lambda_0}{\lambda_1})} = \frac{1}{\ln(\frac{\cosh(\beta\sigma) - \cos(\frac{\pi}{H})}{\cosh(\beta\sigma) - \cos(\frac{2\pi}{H})})}\approx  \frac{4}{3}\frac{\sinh^2(\frac{\beta\sigma}{2})H^2}{\pi^2},
+    \xi =\frac{1}{\ln(\frac{\lambda_0}{\lambda_1})} = \frac{1}{\ln(\frac{\cosh(\beta\sigma) - \cos(\frac{\pi}{H})}{\cosh(\beta\sigma) - \cos(\frac{2\pi}{H})})}\approx  \frac{4}{3}\frac{\sinh^2(\frac{\beta\sigma}{2})H^2}{\pi^2},
 \end{equation}
 and we see that this has the same form as that for the free elastic line  in Eq. (\ref{corel}).
 Furthermore, the  free energy per site is given in the thermodynamic limit and for large $H$ by
 \begin{equation}
-f=-\frac{1}{\beta}\ln(\lambda_0) \approx -\frac{1}{\beta}\left[ \ln(\coth(\frac{\beta\sigma}{2}))- \frac{\pi^2}{4\sinh^2(\frac{\beta\sigma}{2}) H^2}\right]
+    f=-\frac{1}{\beta}\ln(\lambda_0) \approx -\frac{1}{\beta}\left[ \ln(\coth(\frac{\beta\sigma}{2}))- \frac{\pi^2}{4\sinh^2(\frac{\beta\sigma}{2}) H^2}\right]
 \end{equation}
 and this gives a pressure
 \begin{equation}
-P= -\frac{\partial f}{\partial H}= \frac{T\pi^2}{2\sigma\sinh^2(\frac{\beta}{2}) H^2}.
+    P= -\frac{\partial f}{\partial H}= \frac{T\pi^2}{2\sigma\sinh^2(\frac{\beta}{2}) H^2}.
 \end{equation}
 This has the same form as the pressure for the elastic line in Eq. (\ref{pfree}) if we make the identification of the effective surface tension to be used in the elastic line model
 \begin{equation}
-\sigma_{eff} = \frac{2}{\beta}\sinh^2(\frac{\beta\sigma}{2}).
+    \sigma_{eff} = \frac{2}{\beta}\sinh^2(\frac{\beta\sigma}{2}).
 \end{equation}
 We should note that this is also consistent with the equality deduced by comparing the correlation length of the two models.
 
@@ -847,68 +772,73 @@ This is not surprising as a low temperatures jumps of more that two lattice spac
 
 To explore the high temperature limit we can note that if we write
 \begin{equation}
-z= r-\exp(-i\theta),
+    z= r-\exp(-i\theta),
 \end{equation}
 we can write Eq. \eqref{thetamas} as
 \begin{equation}
-\exp(iH\theta)  = -\frac{z}{\overline z} = \exp(2i\psi + i\pi),
+    \exp(iH\theta)  = -\frac{z}{\overline z} = \exp(2i\psi + i\pi),
 \end{equation}
 where
 \begin{equation}
-\tan(\psi) = \frac{\sin(\theta)}{r-\cos(\theta)}.
+    \tan(\psi) = \frac{\sin(\theta)}{r-\cos(\theta)}.
 \end{equation}
 This then gives 
 \begin{equation}
-H\theta = 2\psi + \pi,
+    H\theta = 2\psi + \pi,
 \end{equation}
 and so
 \begin{equation}
-\tan(\psi) = \frac{\sin(\theta)}{r-\cos(\theta)}= \tan(\frac{H\theta}{2} +\frac{\pi}{2})= -\cot(\frac{H\theta}{2})
+    \tan(\psi) = \frac{\sin(\theta)}{r-\cos(\theta)}= \tan(\frac{H\theta}{2} +\frac{\pi}{2})= -\cot(\frac{H\theta}{2})
 \end{equation}
 which finally gives
 \begin{equation}
-\tan(\frac{H\theta}{2}) = \frac{\cos(\theta)-r}{\sin(\theta)}.\label{mde}
+    \tan(\frac{H\theta}{2}) = \frac{\cos(\theta)-r}{\sin(\theta)}.
+    \label{mde}
 \end{equation}
 In this form we see that our calculations agree with those of Svravick et al. Futhermore when $\beta\to 0$ we know that the elements of the transfer matrix all tend to one and that the largest eigenvalue has all components equal. This means that in the  infinite temperature limit $\theta=0$. Therefore in Eq. \eqref{mde} we look for solutions where $\theta$ is small. Taylor expanding gives to leading order
 \begin{equation}
-\frac{H\theta^2}{2} \approx1-r-\frac{\theta^2}{2},
+    \frac{H\theta^2}{2} \approx1-r-\frac{\theta^2}{2},
 \end{equation}
 which gives
 \begin{equation}
-\theta \approx \sqrt{\frac{2(1-r)}{H+1}}.
+    \theta \approx \sqrt{\frac{2(1-r)}{H+1}}.
 \end{equation}
 However the above expansion assumes that $\theta H\ll1$ and so
 \begin{equation}
-\sqrt{2H(1-r)} \ll 1.
+    \sqrt{2H(1-r)} \ll 1.
 \end{equation}
 Therefore at high temperature this means that $H\beta\sigma\ll1$. This means that the height can fluctuate by of order $H$ from site to site. The high temperature approximation is thus equivalent to
  \begin{equation}
-\theta \approx \sqrt{\frac{2\beta\sigma}{H+1}}.
+    \theta \approx \sqrt{\frac{2\beta\sigma}{H+1}}.
 \end{equation}
 This gives a maximal eigenvalue
 \begin{equation}
-\lambda_0 = H+1,
+    \lambda_0 = H+1,
 \end{equation}
 and the free energy
 \begin{equation}
-f=-\frac{1}{\beta}\ln(H+1),
+    f=-\frac{1}{\beta}\ln(H+1),
 \end{equation}
 which is the obvious result coming from the infinite temperature entropy. 
 
 This result suggests that the solution for $\theta$ at small $\beta$ can be written as a perturbation series of the form
 \begin{equation}
-\theta = \sqrt{\beta\sigma}\sum_{n=0}^\infty b_n (\beta\sigma)^n.
+    \theta = \sqrt{\beta\sigma}\sum_{n=0}^\infty b_n (\beta\sigma)^n.
 \end{equation}
 The first two terms give
 \begin{equation}
-\theta = \sqrt{\beta\sigma}\left[\sqrt{\frac{2\beta\sigma}{H+1}} -\beta\sigma \frac{2 + 2H +H^2}{6\sqrt{2}(1+H)^{\frac{3}{2}}}\right],
+    \theta = \sqrt{\beta\sigma}\left[\sqrt{\frac{2\beta\sigma}{H+1}} -\beta\sigma \frac{2 + 2H +H^2}{6\sqrt{2}(1+H)^{\frac{3}{2}}}\right],
 \end{equation}
 and from this we find
 \begin{equation}
-f=-\frac{1}{\beta}\ln(H+1-\beta\sigma\frac{H^2+2H}{3}).
+    f=-\frac{1}{\beta}\ln(H+1-\beta\sigma\frac{H^2+2H}{3}).
 \end{equation}
 As pointed out above this result gives the high temperature entropy but it also exhibits the correct average energy $\epsilon$ per unit length at high temperature. To see this we note that all values of $h$ are equiprobable at infinite temperature and so
 \begin{equation}
-\epsilon = \frac{1}{(H+1)^2}\sigma \sum_{i,j=0}^H |i-j| =\sigma\frac{H^2+2H}{3}.
+    \epsilon = \frac{1}{(H+1)^2}\sigma \sum_{i,j=0}^H |i-j| =\sigma\frac{H^2+2H}{3}.
 \end{equation}
+
+
+%%%%%%%%%%%%%%%%
 \subsection{Numerical tests of finite size dependence}
+%%%%%%%%%%%%%%%%
