@@ -1,0 +1,99 @@
+\documentclass[11pt]{book}
+
+\usepackage[utf8]{inputenc} % accents    
+\usepackage[frenchb]{babel}
+
+\usepackage{lmodern}
+\usepackage{xcolor} % pour colorier
+\usepackage[hidelinks]{hyperref} % pour mettre les liens cliquants
+%\usepackage [latin1]{inputenc}
+
+\usepackage{setspace}
+\onehalfspacing
+
+% Maths
+\usepackage{amsmath}
+\usepackage{geometry}
+\usepackage{amssymb}
+\usepackage{bm}
+
+% Figures
+\usepackage[final]{graphicx}
+\usepackage{subcaption}
+\usepackage{mwe}
+\setkeys{Gin}{width=10cm} %% largeur par défaut
+%\geometry{hmargin=2.5cm,vmargin=2cm}
+
+\usepackage{comment}
+
+%Pour mettre une page en paysage
+\usepackage{lscape}
+
+\usepackage{epsfig}
+\usepackage{bm}
+\usepackage{latexsym}
+\usepackage{graphicx}
+\usepackage{comment}
+
+\usepackage{graphicx,color}
+ \graphicspath{{./}{./figures/}}
+\usepackage{ams math}
+\usepackage{mathbbol}
+\usepackage{amsfonts}
+\usepackage{natbib}
+\usepackage{bm}
+
+
+%%% Commandes personnalisées  %%%
+\newcommand{\nn}{\nonumber \\} % newline sans nombre dans align
+\newcommand{\mH}{\mathcal{H}} %pour les hamiltoniens ronds
+\newcommand{\mZ}{\mathcal{Z}} %pour les hamiltoniens ronds
+\newcommand{\mL}{\mathcal{L}} %pour les hamiltoniens ronds
+\newcommand{\mC}{\mathcal{C}} %pour les fonctions de corrélation
+\newcommand{\mx}{{\bf x}} %pour les vecteurs en gras
+\newcommand{\my}{{\bf y}} %pour les vecteurs en gras
+\newcommand{\mq}{{\bf q}}
+\newcommand{\mr}{{\bf r}}
+\newcommand{\mv}{{\bf v}}
+\DeclareMathOperator{\sgn}{sgn}
+% Les > et < se comportent normalement si c'est pour supérieur ou inférieur, sinon se comportent comme \langle
+\mathchardef\less=\mathcode`<
+\mathchardef\greater=\mathcode`>
+\DeclareMathDelimiter{<}{\mathopen}{symbols}{"68}{largesymbols}{"0A}
+\DeclareMathDelimiter{>}{\mathclose}{symbols}{"69}{largesymbols}{"0B}
+
+%% Ne pas casser les équations inline $ $ 
+\relpenalty=10000
+\binoppenalty=10000
+
+%%%%%%% Début du document %%%%%
+\begin{document}
+
+\bibliographystyle{unsrt}
+
+\title{Confinement and driving effects on model interfaces}                                        
+\maketitle
+
+\frontmatter
+
+\tableofcontents
+
+
+\input{intro/intro}
+
+\mainmatter
+
+\input{int-dyn/chap1}
+\input{finite-size/chap2}
+\input{numerical/chap3}
+\input{drivenC/chap4}
+%\input{sosequi-laser/laser}
+%\input{pop/particle}
+%\input{pop/ab-model}
+
+
+%\input{intro/conclusion}
+
+
+\bibliography{biblio.bib}
+\end{document}
