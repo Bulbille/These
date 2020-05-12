@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.3.19)  11 MAY 2020 09:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.3.19)  12 MAY 2020 17:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -620,6 +620,9 @@ LaTeX Info: Redefining \cite on input line 694.
 LaTeX Warning: Label `bstep2' multiply defined.
 
 
+LaTeX Warning: Label `landau-ginzburg-hamiltonian' multiply defined.
+
+
 LaTeX Warning: Label `ffs' multiply defined.
 
 )
@@ -802,30 +805,21 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 (./intro/intro.tex [2] [3
 
-]
-
-Package natbib Warning: Citation `dean_effect_2020' on page iv undefined on inp
-ut line 20.
-
-
-Package natbib Warning: Citation `noauthor_mesocentre_nodate' on page iv undefi
-ned on input line 33.
-
-) [4] (./int-dyn/chap1.tex
+]) [4] (./int-dyn/chap1.tex
 Chapitre 1.
-
-Package natbib Warning: Citation `hohenberg_theory_1977' on page 1 undefined on
- input line 5.
-
-
-Package natbib Warning: Citation `bray_theory_1994' on page 1 undefined on inpu
-t line 8.
-
-<intro/clusterization.pdf, id=260, 462.52798pt x 346.89601pt>
+<intro/clusterization.pdf, id=286, 462.52798pt x 346.89601pt>
 File: intro/clusterization.pdf Graphic file (type pdf)
 <use intro/clusterization.pdf>
 Package pdftex.def Info: intro/clusterization.pdf  used on input line 14.
 (pdftex.def)             Requested size: 430.00462pt x 322.51996pt.
+
+Package natbib Warning: Citation `onsager_crystal_1944' on page 1 undefined on 
+input line 15.
+
+
+Package natbib Warning: Citation `onsager_crystal_1944' on page 1 undefined on 
+input line 15.
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
@@ -841,74 +835,68 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.28 ...e naturally described in therms of fields}
-                                                   [2 <./intro/clusterization.p
-df>]
-Overfull \hbox (5.1763pt too wide) has occurred while \output is active
-\OT1/lmr/m/sl/10.95 1.1.  STATICS OF SYSTEMS WITH A FINITE NUMBER OF DEGREES OF
- FREEDOM \OT1/lmr/m/n/10.95 3
- []
-
-[3] [4]
+l.33 M
+      easuring observables in experimental setups means to measure the deriv...
+[2 <./intro/clusterization.pdf>] [3]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [4]
+Underfull \vbox (badness 6493) has occurred while \output is active []
 
-Overfull \hbox (5.1763pt too wide) has occurred while \output is active
-\OT1/lmr/m/sl/10.95 1.1.  STATICS OF SYSTEMS WITH A FINITE NUMBER OF DEGREES OF
- FREEDOM \OT1/lmr/m/n/10.95 5
- []
-
-[5]
-Underfull \vbox (badness 3407) has occurred while \output is active []
+ [5]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [6]
-<intro/double-puit-en-fonction-temp.pdf, id=342, 462.52798pt x 346.89601pt>
+<intro/double-puit-en-fonction-temp.pdf, id=369, 462.52798pt x 346.89601pt>
 File: intro/double-puit-en-fonction-temp.pdf Graphic file (type pdf)
 <use intro/double-puit-en-fonction-temp.pdf>
 Package pdftex.def Info: intro/double-puit-en-fonction-temp.pdf  used on input 
-line 148.
+line 152.
 (pdftex.def)             Requested size: 258.00539pt x 193.5141pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [7 <./intro/double-puit-en-fonction-temp.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [8]
-
-LaTeX Warning: Reference `p4' on page 9 undefined on input line 236.
-
-[9]
-
-LaTeX Warning: Reference `kink' on page 10 undefined on input line 254.
-
-
-LaTeX Warning: Reference `tension-superficielle' on page 10 undefined on input 
-line 264.
-
+[7 <./intro/double-puit-en-fonction-temp.pdf>] [8] [9]
+<int-dyn/tension-superficielle.pdf, id=465, 462.52798pt x 346.89601pt>
+File: int-dyn/tension-superficielle.pdf Graphic file (type pdf)
+<use int-dyn/tension-superficielle.pdf>
+Package pdftex.def Info: int-dyn/tension-superficielle.pdf  used on input line 
+278.
+(pdftex.def)             Requested size: 301.00192pt x 225.76027pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [10]
-[11]
+Underfull \vbox (badness 3635) has occurred while \output is active []
+
+ [11 <./int-dyn/tension-superficielle.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [12]
-Overfull \hbox (80.76888pt too wide) in alignment at lines 350--353
- [][][] []
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13]
+Overfull \hbox (37.8865pt too wide) detected at line 374
+[]
  []
 
-[13]
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [14]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [15]
-Underfull \vbox (badness 5403) has occurred while \output is active []
+Underfull \vbox (badness 6995) has occurred while \output is active []
 
  [16]
-Overfull \hbox (25.67099pt too wide) in paragraph at lines 505--508
+Overfull \hbox (36.37183pt too wide) detected at line 492
+[]
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [17]
+Overfull \hbox (25.67099pt too wide) in paragraph at lines 523--526
 \OT1/lmr/m/n/10.95 that is to say we have re-pla-ced the smooth kink so-lu-tion
  with a step like so-lu-tion $\OML/lmm/m/it/10.95 f\OT1/lmr/m/n/10.95 (\OML/lmm
 /m/it/10.95 z\OT1/lmr/m/n/10.95 ) = \OML/lmm/m/it/10.95 ^^^[] []\OT1/lmr/m/n/10
@@ -918,42 +906,150 @@ Overfull \hbox (25.67099pt too wide) in paragraph at lines 505--508
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [17]
+ [18]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [18]
-[19]
-<intro/cis-ising-f-000.pdf, id=559, 406.37096pt x 191.01828pt>
+ [19]
+<int-dyn/inte07.pdf, id=622, 462.52798pt x 346.89601pt>
+File: int-dyn/inte07.pdf Graphic file (type pdf)
+<use int-dyn/inte07.pdf>
+Package pdftex.def Info: int-dyn/inte07.pdf  used on input line 613.
+(pdftex.def)             Requested size: 215.0023pt x 161.25204pt.
+<int-dyn/inte09.pdf, id=623, 462.52798pt x 346.89601pt>
+File: int-dyn/inte09.pdf Graphic file (type pdf)
+<use int-dyn/inte09.pdf>
+Package pdftex.def Info: int-dyn/inte09.pdf  used on input line 616.
+(pdftex.def)             Requested size: 215.0023pt x 161.25204pt.
+
+[20]
+Overfull \hbox (48.11696pt too wide) detected at line 630
+[]
+ []
+
+
+Package natbib Warning: Citation `onsager_crystal_1944' on page 21 undefined on
+ input line 635.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [21 <./int-dyn/inte07.pdf> <./int-dyn/inte09.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./int-dyn/inte09.pdf): PDF inclusion: m
+ultiple pdfs with page group included in a single page
+>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [22]
+
+Package natbib Warning: Citation `stecki_magnetization_1994' on page 23 undefin
+ed on input line 672.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [23]
+
+LaTeX Warning: Reference `chap-pop' on page 24 undefined on input line 704.
+
+<int-dyn/sos-indiscernable.pdf, id=724, 462.52798pt x 346.89601pt>
+File: int-dyn/sos-indiscernable.pdf Graphic file (type pdf)
+<use int-dyn/sos-indiscernable.pdf>
+Package pdftex.def Info: int-dyn/sos-indiscernable.pdf  used on input line 709.
+
+(pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [24 <./int-dyn/sos-indiscernable.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [25]
+Underfull \vbox (badness 5403) has occurred while \output is active []
+
+ [26]
+<int-dyn/hauteur-tm-sos.pdf, id=801, 462.52798pt x 346.89601pt>
+File: int-dyn/hauteur-tm-sos.pdf Graphic file (type pdf)
+<use int-dyn/hauteur-tm-sos.pdf>
+Package pdftex.def Info: int-dyn/hauteur-tm-sos.pdf  used on input line 779.
+(pdftex.def)             Requested size: 301.00192pt x 225.76027pt.
+
+Overfull \hbox (39.44392pt too wide) in paragraph at lines 792--794
+\OT1/lmr/m/n/10.95 where $\OML/lmm/m/it/10.95 f\OT1/lmr/m/n/10.95 (\OML/lmm/m/i
+t/10.95 h[]; h[]\OT1/lmr/m/n/10.95 )$ is the energy in-ter-ac-tion bet-ween two
+ nea-rest neigh-boors and $\OML/lmm/m/it/10.95 V\OT1/lmr/m/n/10.95 (\OML/lmm/m/
+it/10.95 h[]; h[]\OT1/lmr/m/n/10.95 ) = []$
+ []
+
+
+LaTeX Warning: Command \textexclamdown invalid in math mode on input line 797.
+
+
+LaTeX Warning: Command \textexclamdown invalid in math mode on input line 797.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [27 <./int-dyn/hauteur-tm-sos.pdf>]
+Overfull \hbox (35.87633pt too wide) in paragraph at lines 806--807
+[]\OT1/lmr/m/n/10.95 Since the sys-tem has per-io-dic boun-dary condi-tions $\O
+ML/lmm/m/it/10.95 h[] \OT1/lmr/m/n/10.95 = \OML/lmm/m/it/10.95 h[]$\OT1/lmr/m/n
+/10.95 , we have $\OML/lmm/m/it/10.95 T\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 
+h[]; h[]\OT1/lmr/m/n/10.95 ) = \OML/lmm/m/it/10.95 T\OT1/lmr/m/n/10.95 (\OML/lm
+m/m/it/10.95 h[]; h[]\OT1/lmr/m/n/10.95 )$
+ []
+
+
+Underfull \vbox (badness 4353) has occurred while \output is active []
+
+ [28]
+<int-dyn/freeene-thermo-libre.pdf, id=860, 462.52798pt x 346.89601pt>
+File: int-dyn/freeene-thermo-libre.pdf Graphic file (type pdf)
+<use int-dyn/freeene-thermo-libre.pdf>
+Package pdftex.def Info: int-dyn/freeene-thermo-libre.pdf  used on input line 8
+47.
+(pdftex.def)             Requested size: 301.00192pt x 225.76027pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [29]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [30 <./int-dyn/freeene-thermo-libre.pdf>]
+
+Package natbib Warning: Citation `leung_field_1986.bray_coarsening_2000' on pag
+e 31 undefined on input line 954.
+
+
+Package natbib Warning: Citation `' on page 31 undefined on input line 960.
+
+
+Underfull \vbox (badness 1275) has occurred while \output is active []
+
+ [31]
+<int-dyn/derks.png, id=959, 1139.25626pt x 819.06pt>
+File: int-dyn/derks.png Graphic file (type png)
+<use int-dyn/derks.png>
+Package pdftex.def Info: int-dyn/derks.png  used on input line 969.
+(pdftex.def)             Requested size: 301.00192pt x 216.39998pt.
+<intro/cis-ising-f-000.pdf, id=962, 406.37096pt x 191.01828pt>
 File: intro/cis-ising-f-000.pdf Graphic file (type pdf)
 <use intro/cis-ising-f-000.pdf>
-Package pdftex.def Info: intro/cis-ising-f-000.pdf  used on input line 606.
+Package pdftex.def Info: intro/cis-ising-f-000.pdf  used on input line 974.
 (pdftex.def)             Requested size: 215.0023pt x 101.06432pt.
-<intro/cis-ising-f-033.pdf, id=560, 406.37096pt x 191.01828pt>
+<intro/cis-ising-f-033.pdf, id=963, 406.37096pt x 191.01828pt>
 File: intro/cis-ising-f-033.pdf Graphic file (type pdf)
 <use intro/cis-ising-f-033.pdf>
-Package pdftex.def Info: intro/cis-ising-f-033.pdf  used on input line 609.
+Package pdftex.def Info: intro/cis-ising-f-033.pdf  used on input line 977.
 (pdftex.def)             Requested size: 215.0023pt x 101.06432pt.
-<intro/cis-ising-f-066.pdf, id=561, 406.37096pt x 191.01828pt>
+<intro/cis-ising-f-066.pdf, id=964, 406.37096pt x 191.01828pt>
 File: intro/cis-ising-f-066.pdf Graphic file (type pdf)
 <use intro/cis-ising-f-066.pdf>
-Package pdftex.def Info: intro/cis-ising-f-066.pdf  used on input line 613.
+Package pdftex.def Info: intro/cis-ising-f-066.pdf  used on input line 981.
 (pdftex.def)             Requested size: 215.0023pt x 101.06432pt.
-
-
-LaTeX Warning: Reference `eq-cisaillement' on page 20 undefined on input line 6
-15.
-
-
-LaTeX Warning: Reference `eq-cisaillement' on page 20 undefined on input line 6
-15.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [20]
-Underfull \vbox (badness 2088) has occurred while \output is active []
-
- [21 <./intro/cis-ising-f-000.pdf> <./intro/cis-ising-f-033.pdf
+)
+(./numerical/method.tex [32] [33 <./int-dyn/derks.png> <./intro/cis-ising-f-000
+.pdf> <./intro/cis-ising-f-033.pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ./intro/cis-ising-f-033.pdf): PDF inclu
 sion: multiple pdfs with page group included in a single page
@@ -961,121 +1057,11 @@ sion: multiple pdfs with page group included in a single page
 
 pdfTeX warning: /usr/bin/pdflatex (file ./intro/cis-ising-f-066.pdf): PDF inclu
 sion: multiple pdfs with page group included in a single page
->]
-<int-dyn/inte07.pdf, id=627, 462.52798pt x 346.89601pt>
-File: int-dyn/inte07.pdf Graphic file (type pdf)
-<use int-dyn/inte07.pdf>
-Package pdftex.def Info: int-dyn/inte07.pdf  used on input line 639.
-(pdftex.def)             Requested size: 215.0023pt x 161.25204pt.
-<int-dyn/inte09.pdf, id=628, 462.52798pt x 346.89601pt>
-File: int-dyn/inte09.pdf Graphic file (type pdf)
-<use int-dyn/inte09.pdf>
-Package pdftex.def Info: int-dyn/inte09.pdf  used on input line 642.
-(pdftex.def)             Requested size: 215.0023pt x 161.25204pt.
-
-
-LaTeX Warning: Reference `hamil-mean-field' on page 22 undefined on input line 
-648.
-
-
-Underfull \vbox (badness 1178) has occurred while \output is active []
-
- [22 <./int-dyn/inte07.pdf> <./int-dyn/inte09.pdf
-
-pdfTeX warning: /usr/bin/pdflatex (file ./int-dyn/inte09.pdf): PDF inclusion: m
-ultiple pdfs with page group included in a single page
->]
-Overfull \hbox (47.84251pt too wide) detected at line 658
-[]
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [23]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [24]
-
-LaTeX Warning: Reference `kink' on page 25 undefined on input line 700.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [25]
-<int-dyn/sos-indiscernable.pdf, id=716, 462.52798pt x 346.89601pt>
-File: int-dyn/sos-indiscernable.pdf Graphic file (type pdf)
-<use int-dyn/sos-indiscernable.pdf>
-Package pdftex.def Info: int-dyn/sos-indiscernable.pdf  used on input line 733.
-
-(pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
-
-
-LaTeX Warning: Reference `chap-pop' on page 26 undefined on input line 735.
-
-
-LaTeX Warning: Reference `chap-pop' on page 26 undefined on input line 735.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [26]
-[27 <./int-dyn/sos-indiscernable.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [28]
-
-LaTeX Warning: Reference `par-stab' on page 29 undefined on input line 780.
-
-
-Overfull \hbox (12.86082pt too wide) in paragraph at lines 783--784
-[]\OT1/lmr/m/n/10.95 Dans l'en-semble grand-canonique, le nombre de par-ti-cule
-s dans le syst^^Reme va-rie, d^^Sependant
- []
-
-
-Underfull \vbox (badness 1845) has occurred while \output is active []
-
- [29]
-<int-dyn/hauteur-tm-sos.pdf, id=795, 462.52798pt x 346.89601pt>
-File: int-dyn/hauteur-tm-sos.pdf Graphic file (type pdf)
-<use int-dyn/hauteur-tm-sos.pdf>
-Package pdftex.def Info: int-dyn/hauteur-tm-sos.pdf  used on input line 812.
-(pdftex.def)             Requested size: 301.00192pt x 225.76027pt.
-
-Overfull \hbox (9.1473pt too wide) in paragraph at lines 817--818
-[]\OT1/lmr/m/n/10.95 Comme dans le mod^^Rele d'Ising, il existe une bi-jec-tion
- entre l'usage d'un champ magn^^Setique
- []
-
-[30] [31 <./int-dyn/hauteur-tm-sos.pdf>]
-
-LaTeX Warning: Command \textexclamdown invalid in math mode on input line 835.
-
-
-LaTeX Warning: Command \textexclamdown invalid in math mode on input line 835.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [32]
-<int-dyn/freeene-thermo-libre.pdf, id=861, 462.52798pt x 346.89601pt>
-File: int-dyn/freeene-thermo-libre.pdf Graphic file (type pdf)
-<use int-dyn/freeene-thermo-libre.pdf>
-Package pdftex.def Info: int-dyn/freeene-thermo-libre.pdf  used on input line 8
-85.
-(pdftex.def)             Requested size: 301.00192pt x 225.76027pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [33]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [34 <./int-dyn/freeene-thermo-libre.pdf>]) (./numerical/method.tex [35] [36
+>] [34
 
 ]
 Chapitre 2.
-[37]
+[35]
 LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 14.
 
  (/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
@@ -1107,14 +1093,14 @@ ML/lmm/m/it/10.95 ^^W\OT1/lmr/m/n/10.95 ) = \OML/lmm/m/it/10.95 Z[]e[]$\OT1/lmr
 /m/n/10.95 ,
  []
 
-[38]
+[36]
 Underfull \vbox (badness 3229) has occurred while \output is active []
 
- [39]
+ [37]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [40]
-<numerical/sos-glau-eq-cor.pdf, id=990, 462.52798pt x 346.89601pt>
+ [38]
+<numerical/sos-glau-eq-cor.pdf, id=1082, 462.52798pt x 346.89601pt>
 File: numerical/sos-glau-eq-cor.pdf Graphic file (type pdf)
 <use numerical/sos-glau-eq-cor.pdf>
 Package pdftex.def Info: numerical/sos-glau-eq-cor.pdf  used on input line 114.
@@ -1123,36 +1109,49 @@ Package pdftex.def Info: numerical/sos-glau-eq-cor.pdf  used on input line 114.
 
 Underfull \vbox (badness 3229) has occurred while \output is active []
 
- [41]
-[42 <./numerical/sos-glau-eq-cor.pdf>]
-<numerical/sos-kaw-eq-cor.pdf, id=1022, 462.52798pt x 346.89601pt>
+ [39]
+[40 <./numerical/sos-glau-eq-cor.pdf>]
+<numerical/sos-kaw-eq-cor.pdf, id=1114, 462.52798pt x 346.89601pt>
 File: numerical/sos-kaw-eq-cor.pdf Graphic file (type pdf)
 <use numerical/sos-kaw-eq-cor.pdf>
 Package pdftex.def Info: numerical/sos-kaw-eq-cor.pdf  used on input line 154.
 (pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
-<numerical/cross-h0.pdf, id=1024, 325.215pt x 271.0125pt>
+<numerical/cross-h0.pdf, id=1116, 325.215pt x 271.0125pt>
 File: numerical/cross-h0.pdf Graphic file (type pdf)
 <use numerical/cross-h0.pdf>
 Package pdftex.def Info: numerical/cross-h0.pdf  used on input line 172.
 (pdftex.def)             Requested size: 137.60461pt x 114.6722pt.
-<numerical/cross-hlambda.pdf, id=1025, 325.215pt x 271.7352pt>
+<numerical/cross-hlambda.pdf, id=1117, 325.215pt x 271.7352pt>
 File: numerical/cross-hlambda.pdf Graphic file (type pdf)
 <use numerical/cross-hlambda.pdf>
 Package pdftex.def Info: numerical/cross-hlambda.pdf  used on input line 176.
 (pdftex.def)             Requested size: 137.60461pt x 114.978pt.
-<numerical/cross-h1.pdf, id=1026, 324.4923pt x 271.0125pt>
+<numerical/cross-h1.pdf, id=1118, 324.4923pt x 271.0125pt>
 File: numerical/cross-h1.pdf Graphic file (type pdf)
 <use numerical/cross-h1.pdf>
 Package pdftex.def Info: numerical/cross-h1.pdf  used on input line 181.
 (pdftex.def)             Requested size: 137.60461pt x 114.92445pt.
- [43]
 
-LaTeX Warning: Reference `sec-casimir' on page 44 undefined on input line 188.
+
+Package natbib Warning: Citation `vasilyev_monte_2007' on page 41 undefined on 
+input line 184.
+
+
+Package natbib Warning: Citation `vasilyev_monte_2007' on page 41 undefined on 
+input line 184.
+
+[41]
+
+LaTeX Warning: Reference `sec-casimir' on page 42 undefined on input line 188.
+
+
+Package natbib Warning: Citation `vasilyev_monte_2007' on page 42 undefined on 
+input line 192.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [44 <./numerical/sos-kaw-eq-cor.pdf>] [45 <./numerical/cross-h0.pdf> <./numeri
+ [42 <./numerical/sos-kaw-eq-cor.pdf>] [43 <./numerical/cross-h0.pdf> <./numeri
 cal/cross-hlambda.pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ./numerical/cross-hlambda.pdf): PDF inc
@@ -1169,19 +1168,15 @@ Overfull \hbox (49.43785pt too wide) detected at line 222
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [46]
+ [44]
 
-LaTeX Warning: Reference `moyenne-phi' on page 47 undefined on input line 239.
+LaTeX Warning: Reference `moyenne-phi' on page 45 undefined on input line 239.
 
-
-Package natbib Warning: Citation `martin_ankerl_fast_nodate' on page 47 undefin
-ed on input line 265.
-
-[47]) (./finite-size/chap2.tex [48] [49] [50
+[45]) (./finite-size/chap2.tex [46] [47] [48
 
 ]
 Chapitre 3.
-[51]
+[49]
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
@@ -1192,29 +1187,29 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \hbox (36.27844pt too wide) has occurred while \output is active
+\OT1/lmr/m/n/10.95 50 \OT1/lmr/m/sl/10.95 CHAPITRE 3.  EQUILIBRIUM INTERFACE MO
+DELS AND THEIR FINITE SIZE EFFECTS
+ []
+
+[50]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [51]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (36.27844pt too wide) has occurred while \output is active
 \OT1/lmr/m/n/10.95 52 \OT1/lmr/m/sl/10.95 CHAPITRE 3.  EQUILIBRIUM INTERFACE MO
 DELS AND THEIR FINITE SIZE EFFECTS
  []
 
-[52]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [53]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
+[52] [53]
 Overfull \hbox (36.27844pt too wide) has occurred while \output is active
 \OT1/lmr/m/n/10.95 54 \OT1/lmr/m/sl/10.95 CHAPITRE 3.  EQUILIBRIUM INTERFACE MO
 DELS AND THEIR FINITE SIZE EFFECTS
  []
 
-[54] [55]
-Overfull \hbox (36.27844pt too wide) has occurred while \output is active
-\OT1/lmr/m/n/10.95 56 \OT1/lmr/m/sl/10.95 CHAPITRE 3.  EQUILIBRIUM INTERFACE MO
-DELS AND THEIR FINITE SIZE EFFECTS
- []
-
-[56]
+[54]
 Overfull \hbox (9.28177pt too wide) in paragraph at lines 203--207
 \OT1/lmr/m/n/10.95 where $\OML/lmm/m/it/10.95 ^^O \OT1/lmr/m/n/10.95 = \OML/lmm
 /m/it/10.95 ^^O[]"$\OT1/lmr/m/n/10.95 , $\OML/lmm/m/it/10.95 s[] \OT1/lmr/m/n/1
@@ -1226,7 +1221,16 @@ Overfull \hbox (9.28177pt too wide) in paragraph at lines 203--207
 
 Underfull \vbox (badness 4608) has occurred while \output is active []
 
- [57]
+ [55]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (36.27844pt too wide) has occurred while \output is active
+\OT1/lmr/m/n/10.95 56 \OT1/lmr/m/sl/10.95 CHAPITRE 3.  EQUILIBRIUM INTERFACE MO
+DELS AND THEIR FINITE SIZE EFFECTS
+ []
+
+[56] [57]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1235,36 +1239,36 @@ Overfull \hbox (36.27844pt too wide) has occurred while \output is active
 DELS AND THEIR FINITE SIZE EFFECTS
  []
 
-[58] [59]
+[58]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
+ [59]
 Overfull \hbox (36.27844pt too wide) has occurred while \output is active
 \OT1/lmr/m/n/10.95 60 \OT1/lmr/m/sl/10.95 CHAPITRE 3.  EQUILIBRIUM INTERFACE MO
 DELS AND THEIR FINITE SIZE EFFECTS
  []
 
 [60]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [61]
-Overfull \hbox (36.27844pt too wide) has occurred while \output is active
-\OT1/lmr/m/n/10.95 62 \OT1/lmr/m/sl/10.95 CHAPITRE 3.  EQUILIBRIUM INTERFACE MO
-DELS AND THEIR FINITE SIZE EFFECTS
- []
-
-[62]
-Overfull \hbox (69.77068pt too wide) in alignment at lines 399--402
+Overfull \hbox (69.77068pt too wide) in alignment at lines 400--403
  [][][] []
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [63]
+ [61]
 Underfull \vbox (badness 1742) has occurred while \output is active []
 
 
+Overfull \hbox (36.27844pt too wide) has occurred while \output is active
+\OT1/lmr/m/n/10.95 62 \OT1/lmr/m/sl/10.95 CHAPITRE 3.  EQUILIBRIUM INTERFACE MO
+DELS AND THEIR FINITE SIZE EFFECTS
+ []
+
+[62]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [63]
 Overfull \hbox (36.27844pt too wide) has occurred while \output is active
 \OT1/lmr/m/n/10.95 64 \OT1/lmr/m/sl/10.95 CHAPITRE 3.  EQUILIBRIUM INTERFACE MO
 DELS AND THEIR FINITE SIZE EFFECTS
@@ -1274,12 +1278,20 @@ DELS AND THEIR FINITE SIZE EFFECTS
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [65]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Overfull \hbox (36.27844pt too wide) has occurred while \output is active
 \OT1/lmr/m/n/10.95 66 \OT1/lmr/m/sl/10.95 CHAPITRE 3.  EQUILIBRIUM INTERFACE MO
 DELS AND THEIR FINITE SIZE EFFECTS
  []
 
 [66]
+Overfull \hbox (54.87556pt too wide) in alignment at lines 600--608
+ [][][] []
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [67]
@@ -1291,33 +1303,28 @@ Overfull \hbox (36.27844pt too wide) has occurred while \output is active
 DELS AND THEIR FINITE SIZE EFFECTS
  []
 
-[68]
-Overfull \hbox (54.87556pt too wide) in alignment at lines 599--607
- [][][] []
- []
+[68pdfTeX warning (ext4): destination with the same identifier (name{equation.3
+.3.119}) has been already used, duplicate ignored
 
-
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.653 \end{equation}
+                    ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [69]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 Overfull \hbox (36.27844pt too wide) has occurred while \output is active
 \OT1/lmr/m/n/10.95 70 \OT1/lmr/m/sl/10.95 CHAPITRE 3.  EQUILIBRIUM INTERFACE MO
 DELS AND THEIR FINITE SIZE EFFECTS
  []
 
-[70pdfTeX warning (ext4): destination with the same identifier (name{equation.3
-.3.119}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.652 \end{equation}
-                    ]
+[70]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [71]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Overfull \hbox (36.27844pt too wide) has occurred while \output is active
 \OT1/lmr/m/n/10.95 72 \OT1/lmr/m/sl/10.95 CHAPITRE 3.  EQUILIBRIUM INTERFACE MO
 DELS AND THEIR FINITE SIZE EFFECTS
@@ -1326,186 +1333,174 @@ DELS AND THEIR FINITE SIZE EFFECTS
 [72]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [73]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
+ [73])
+(./drivenC/chap4.tex
 Overfull \hbox (36.27844pt too wide) has occurred while \output is active
 \OT1/lmr/m/n/10.95 74 \OT1/lmr/m/sl/10.95 CHAPITRE 3.  EQUILIBRIUM INTERFACE MO
 DELS AND THEIR FINITE SIZE EFFECTS
  []
 
 [74]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [75])
-(./drivenC/chap4.tex
-Overfull \hbox (36.27844pt too wide) has occurred while \output is active
-\OT1/lmr/m/n/10.95 76 \OT1/lmr/m/sl/10.95 CHAPITRE 3.  EQUILIBRIUM INTERFACE MO
-DELS AND THEIR FINITE SIZE EFFECTS
- []
-
-[76]
 Chapitre 4.
 
-Package natbib Warning: Citation `derks2006' on page 77 undefined on input line
+Package natbib Warning: Citation `derks2006' on page 75 undefined on input line
  11.
 
 
-Package natbib Warning: Citation `smith2008' on page 77 undefined on input line
+Package natbib Warning: Citation `smith2008' on page 75 undefined on input line
  13.
 
 
-Package natbib Warning: Citation `smith2010' on page 77 undefined on input line
+Package natbib Warning: Citation `smith2010' on page 75 undefined on input line
  13.
 
 
-Package natbib Warning: Citation `hem1996' on page 77 undefined on input line 1
+Package natbib Warning: Citation `hem1996' on page 75 undefined on input line 1
 7.
 
 
-Package natbib Warning: Citation `netz2003' on page 77 undefined on input line 
+Package natbib Warning: Citation `netz2003' on page 75 undefined on input line 
 18.
 
 
-Package natbib Warning: Citation `dzub2002' on page 77 undefined on input line 
+Package natbib Warning: Citation `dzub2002' on page 75 undefined on input line 
 18.
 
 
-Package natbib Warning: Citation `chak2003' on page 77 undefined on input line 
+Package natbib Warning: Citation `chak2003' on page 75 undefined on input line 
 18.
 
 
-Package natbib Warning: Citation `chak2004' on page 77 undefined on input line 
+Package natbib Warning: Citation `chak2004' on page 75 undefined on input line 
 18.
 
 
-Package natbib Warning: Citation `lowe2009' on page 77 undefined on input line 
+Package natbib Warning: Citation `lowe2009' on page 75 undefined on input line 
 18.
 
 
-Package natbib Warning: Citation `glan2012' on page 77 undefined on input line 
+Package natbib Warning: Citation `glan2012' on page 75 undefined on input line 
 18.
 
 
-Package natbib Warning: Citation `klym2016' on page 77 undefined on input line 
+Package natbib Warning: Citation `klym2016' on page 75 undefined on input line 
 18.
 
 
-Package natbib Warning: Citation `dem2016' on page 77 undefined on input line 1
+Package natbib Warning: Citation `dem2016' on page 75 undefined on input line 1
 8.
 
 
-Package natbib Warning: Citation `pon2017' on page 77 undefined on input line 1
+Package natbib Warning: Citation `pon2017' on page 75 undefined on input line 1
 8.
 
 
-Package natbib Warning: Citation `dean1996' on page 77 undefined on input line 
+Package natbib Warning: Citation `dean1996' on page 75 undefined on input line 
 18.
 
-[77
+[75
 
 ]
 
-Package natbib Warning: Citation `katz1984' on page 78 undefined on input line 
+Package natbib Warning: Citation `katz1984' on page 76 undefined on input line 
 20.
 
 
-Package natbib Warning: Citation `zia1991' on page 78 undefined on input line 2
+Package natbib Warning: Citation `zia1991' on page 76 undefined on input line 2
 0.
 
 
-Package natbib Warning: Citation `leun1993' on page 78 undefined on input line 
+Package natbib Warning: Citation `leun1993' on page 76 undefined on input line 
 20.
 
 
-Package natbib Warning: Citation `schm1995' on page 78 undefined on input line 
+Package natbib Warning: Citation `schm1995' on page 76 undefined on input line 
 20.
 
 
-Package natbib Warning: Citation `schm1998' on page 78 undefined on input line 
+Package natbib Warning: Citation `schm1998' on page 76 undefined on input line 
 20.
 
 
-Package natbib Warning: Citation `katz1984' on page 78 undefined on input line 
+Package natbib Warning: Citation `katz1984' on page 76 undefined on input line 
 20.
 
 
-Package natbib Warning: Citation `leun1993' on page 78 undefined on input line 
+Package natbib Warning: Citation `leun1993' on page 76 undefined on input line 
 20.
 
 
-Package natbib Warning: Citation `schm1995' on page 78 undefined on input line 
+Package natbib Warning: Citation `schm1995' on page 76 undefined on input line 
 20.
 
 
-Package natbib Warning: Citation `schm1998' on page 78 undefined on input line 
+Package natbib Warning: Citation `schm1998' on page 76 undefined on input line 
 20.
 
 
-Package natbib Warning: Citation `leun1993' on page 78 undefined on input line 
+Package natbib Warning: Citation `leun1993' on page 76 undefined on input line 
 20.
 
 
-Package natbib Warning: Citation `zia1991' on page 78 undefined on input line 2
+Package natbib Warning: Citation `zia1991' on page 76 undefined on input line 2
 1.
 
 
-Package natbib Warning: Citation `bray2001' on page 78 undefined on input line 
+Package natbib Warning: Citation `bray2001' on page 76 undefined on input line 
 23.
 
 
-Package natbib Warning: Citation `bray2002' on page 78 undefined on input line 
+Package natbib Warning: Citation `bray2002' on page 76 undefined on input line 
 23.
 
 
-Package natbib Warning: Citation `smith2008' on page 78 undefined on input line
+Package natbib Warning: Citation `smith2008' on page 76 undefined on input line
  23.
 
 
-Package natbib Warning: Citation `smith2010' on page 78 undefined on input line
+Package natbib Warning: Citation `smith2010' on page 76 undefined on input line
  23.
 
 
-Package natbib Warning: Citation `thie2010' on page 78 undefined on input line 
+Package natbib Warning: Citation `thie2010' on page 76 undefined on input line 
 23.
 
 
-Package natbib Warning: Citation `thie2014' on page 78 undefined on input line 
+Package natbib Warning: Citation `thie2014' on page 76 undefined on input line 
 23.
 
 
-Package natbib Warning: Citation `hohe1977' on page 78 undefined on input line 
+Package natbib Warning: Citation `hohe1977' on page 76 undefined on input line 
 25.
 
 
-Package natbib Warning: Citation `bray2001' on page 78 undefined on input line 
+Package natbib Warning: Citation `bray2001' on page 76 undefined on input line 
 27.
 
 
-Package natbib Warning: Citation `bray2002' on page 78 undefined on input line 
+Package natbib Warning: Citation `bray2002' on page 76 undefined on input line 
 27.
 
 
-Package natbib Warning: Citation `derks2006' on page 78 undefined on input line
+Package natbib Warning: Citation `derks2006' on page 76 undefined on input line
  27.
 
-[78]
+[76]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [77]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [78]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [79]
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [80]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [81]
-
-Package natbib Warning: Citation `bray2001' on page 82 undefined on input line 
+Package natbib Warning: Citation `bray2001' on page 80 undefined on input line 
 110.
 
 
-Package natbib Warning: Citation `bray2002' on page 82 undefined on input line 
+Package natbib Warning: Citation `bray2002' on page 80 undefined on input line 
 110.
 
 
@@ -1532,7 +1527,7 @@ t\OT1/lmr/m/n/10.95 )) \OMS/lmsy/m/n/10.95 ^^@ \OML/lmm/m/it/10.95 gz:
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [82]
+ [80]
 Overfull \hbox (101.78357pt too wide) in alignment at lines 131--135
  [][][] []
  []
@@ -1543,11 +1538,11 @@ Overfull \hbox (8.46419pt too wide) in alignment at lines 137--141
  []
 
 
-Package natbib Warning: Citation `bray2001' on page 83 undefined on input line 
+Package natbib Warning: Citation `bray2001' on page 81 undefined on input line 
 142.
 
 
-Package natbib Warning: Citation `bray2002' on page 83 undefined on input line 
+Package natbib Warning: Citation `bray2002' on page 81 undefined on input line 
 142.
 
 
@@ -1558,7 +1553,7 @@ Overfull \hbox (112.197pt too wide) in alignment at lines 153--159
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [83pdfTeX warning (ext4): destination with the same identifier (name{equation.
+ [81pdfTeX warning (ext4): destination with the same identifier (name{equation.
 4.3.24}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1585,7 +1580,7 @@ m/it/10.95 ;
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [84]
+ [82]
 Overfull \hbox (59.80876pt too wide) detected at line 204
 []\OT1/lmr/m/n/10.95 (\OT1/lmr/bx/n/10.95 q\OML/lmm/m/it/10.95 ; !\OT1/lmr/m/n/
 10.95 ) = 2\OML/lmm/m/it/10.95 TD[]:
@@ -1599,77 +1594,77 @@ Overfull \hbox (36.2775pt too wide) in alignment at lines 206--209
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [83]
+
+Package natbib Warning: Citation `hem1996' on page 84 undefined on input line 2
+30.
+
+
+Package natbib Warning: Citation `dem2016' on page 84 undefined on input line 2
+30.
+
+
+Package natbib Warning: Citation `dean2016' on page 84 undefined on input line 
+231.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [84]
+
+Package natbib Warning: Citation `leun1993' on page 85 undefined on input line 
+261.
+
+
+Package natbib Warning: Citation `gros2015' on page 85 undefined on input line 
+269.
+
+
+Underfull \vbox (badness 2443) has occurred while \output is active []
+
  [85]
 
-Package natbib Warning: Citation `hem1996' on page 86 undefined on input line 2
-30.
-
-
-Package natbib Warning: Citation `dem2016' on page 86 undefined on input line 2
-30.
-
-
-Package natbib Warning: Citation `dean2016' on page 86 undefined on input line 
-231.
+Package natbib Warning: Citation `lu2015' on page 86 undefined on input line 28
+6.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [86]
 
-Package natbib Warning: Citation `leun1993' on page 87 undefined on input line 
-261.
-
-
-Package natbib Warning: Citation `gros2015' on page 87 undefined on input line 
-269.
-
-
-Underfull \vbox (badness 2443) has occurred while \output is active []
-
- [87]
-
-Package natbib Warning: Citation `lu2015' on page 88 undefined on input line 28
-6.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [88]
-
-Package natbib Warning: Citation `zia1991' on page 89 undefined on input line 3
+Package natbib Warning: Citation `zia1991' on page 87 undefined on input line 3
 13.
 
 
-Package natbib Warning: Citation `derks2006' on page 89 undefined on input line
+Package natbib Warning: Citation `derks2006' on page 87 undefined on input line
  319.
 
 
-Package natbib Warning: Citation `smith2008' on page 89 undefined on input line
+Package natbib Warning: Citation `smith2008' on page 87 undefined on input line
  319.
 
 
-Package natbib Warning: Citation `smith2010' on page 89 undefined on input line
+Package natbib Warning: Citation `smith2010' on page 87 undefined on input line
  319.
 
-[89]) (./pop/pop.tex
+[87]) (./pop/pop.tex
 Underfull \vbox (badness 7777) has occurred while \output is active []
 
- [90]
-[91] [92
+ [88]
+[89] [90
 
 ]
 Chapitre 5.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [93]
-<pop/comparaison-modeles.pdf, id=1540, 462.52798pt x 346.89601pt>
+ [91]
+<pop/comparaison-modeles.pdf, id=1627, 462.52798pt x 346.89601pt>
 File: pop/comparaison-modeles.pdf Graphic file (type pdf)
 <use pop/comparaison-modeles.pdf>
 Package pdftex.def Info: pop/comparaison-modeles.pdf  used on input line 26.
 (pdftex.def)             Requested size: 284.52756pt x 213.40594pt.
-<pop/figure-pop.pdf, id=1541, 578.16pt x 433.62pt>
+<pop/figure-pop.pdf, id=1628, 578.16pt x 433.62pt>
 File: pop/figure-pop.pdf Graphic file (type pdf)
 <use pop/figure-pop.pdf>
 Package pdftex.def Info: pop/figure-pop.pdf  used on input line 29.
@@ -1677,52 +1672,61 @@ Package pdftex.def Info: pop/figure-pop.pdf  used on input line 29.
 )
 (./appendix.tex
 Overfull \hbox (39.32442pt too wide) has occurred while \output is active
+\OT1/lmr/m/n/10.95 92 \OT1/lmr/m/sl/10.95 CHAPITRE 5.  BEYOND SOLID-ON-SOLID : 
+THE PARTICLES-OVER-PARTICLES MODEL
+ []
+
+[92 <./pop/comparaison-modeles.pdf>] [93 <./pop/figure-pop.pdf>]
+Overfull \hbox (39.32442pt too wide) has occurred while \output is active
 \OT1/lmr/m/n/10.95 94 \OT1/lmr/m/sl/10.95 CHAPITRE 5.  BEYOND SOLID-ON-SOLID : 
 THE PARTICLES-OVER-PARTICLES MODEL
  []
 
-[94 <./pop/comparaison-modeles.pdf>] [95 <./pop/figure-pop.pdf>]
-Overfull \hbox (39.32442pt too wide) has occurred while \output is active
-\OT1/lmr/m/n/10.95 96 \OT1/lmr/m/sl/10.95 CHAPITRE 5.  BEYOND SOLID-ON-SOLID : 
-THE PARTICLES-OVER-PARTICLES MODEL
- []
-
-[96
+[94
 
 ]
 Annexe A.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [97])
-(./main.bbl [98] [99
+ [95])
+(./main.bbl [96] [97
 
-] [100]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 147.
+]
+LaTeX Font Info:    Try loading font information for OML+lmr on input line 102.
 
- (/usr/share/texmf/tex/latex/lm/omslmr.fd
+ (/usr/share/texmf/tex/latex/lm/omllmr.fd
+File: omllmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `OML/lmr/m/n' in size <10.95> not available
+(Font)              Font shape `OML/lmm/m/it' tried instead on input line 102.
+ [98] [99]
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 218.
+
+
+(/usr/share/texmf/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 147.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 218.
 
-Underfull \hbox (badness 1028) in paragraph at lines 145--149
+Underfull \hbox (badness 1028) in paragraph at lines 216--220
 []\OT1/lmr/m/n/10.95 H. J. F. Knops.  Exact Re-la-tion bet-ween the Solid-on-So
 lid Mo-del and the
  []
 
-[101])
+[100] [101])
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 97.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 101.
 [102]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 97.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 101.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 97.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 97.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 101.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 101.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 54B69B2C75F9AD21B546CE6BD198E3FD;3253.
+(rerunfilecheck)             Checksum: 72FC11D1DA77E48256E1A86CE4625BCE;3626.
 
 
 LaTeX Warning: There were undefined references.
@@ -1730,16 +1734,16 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 97.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 101.
  ) 
 Here is how much of TeX's memory you used:
- 21253 strings out of 492609
- 369341 string characters out of 6131462
- 596045 words of memory out of 5000000
- 24293 multiletter control sequences out of 15000+600000
+ 21374 strings out of 492609
+ 372581 string characters out of 6131462
+ 597045 words of memory out of 5000000
+ 24386 multiletter control sequences out of 15000+600000
  611195 words of font info for 97 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 47i,20n,65p,1112b,624s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 47i,20n,65p,1112b,712s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -1775,10 +1779,10 @@ lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmro10.pfb></usr/share/texmf
 type1/public/lm/lmtt9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helveti
 c/uhvr8a.pfb>
-Output written on main.pdf (108 pages, 1129755 bytes).
+Output written on main.pdf (108 pages, 1921265 bytes).
 PDF statistics:
- 1909 PDF objects out of 2073 (max. 8388607)
- 1537 compressed objects within 16 object streams
- 612 named destinations out of 1000 (max. 500000)
- 438 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2009 PDF objects out of 2073 (max. 8388607)
+ 1624 compressed objects within 17 object streams
+ 634 named destinations out of 1000 (max. 500000)
+ 480 words of extra memory for PDF output out of 10000 (max. 10000000)
 

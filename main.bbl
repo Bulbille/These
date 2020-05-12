@@ -1,21 +1,40 @@
 \begin{thebibliography}{10}
 
-\bibitem{aarts_hydrodynamics_2005}
-Dirk G. A.~L. Aarts, Henk N.~W. Lekkerkerker, Hua Guo, Gerard~H. Wegdam, and
-  Daniel Bonn.
-\newblock Hydrodynamics of {Droplet} {Coalescence}.
-\newblock {\em Physical Review Letters}, 95(16):164503, October 2005.
+\bibitem{dean_effect_2020}
+David~S Dean, Paul Gersberg, and Peter C~W Holdsworth.
+\newblock The effect of driving on model {C} interfaces.
+\newblock {\em Journal of Statistical Mechanics: Theory and Experiment},
+  2020(3):033206, March 2020.
 
-\bibitem{onsager_crystal_1944}
-Lars Onsager.
-\newblock Crystal {Statistics}. {I}. {A} {Two}-{Dimensional} {Model} with an
-  {Order}-{Disorder} {Transition}.
-\newblock {\em Physical Review}, 65(3-4):117--149, February 1944.
+\bibitem{noauthor_mesocentre_nodate}
+M{\'e}socentre de {Calcul} {Intensif} {Aquitain}.
+
+\bibitem{hohenberg_theory_1977}
+P.~C. Hohenberg and B.~I. Halperin.
+\newblock Theory of dynamic critical phenomena.
+\newblock {\em Reviews of Modern Physics}, 49(3):435--479, July 1977.
+
+\bibitem{bray_theory_1994}
+A.~J. Bray.
+\newblock Theory of phase-ordering kinetics.
+\newblock {\em Advances in Physics}, 43(3):357--459, June 1994.
 
 \bibitem{l_landau_physique_1990}
 {L. Landau} and {E. Lifchitz}.
 \newblock {\em Physique th{\'e}orique - {T9} {Physique} {Statistique}}.
 \newblock {\'E}ditions {Mir} {Moscou}. 1990.
+
+\bibitem{tuszynski_exact_1984}
+J.~A. Tuszy{\'n}ski, R.~Paul, and R.~Chatterjee.
+\newblock Exact solutions to the time-dependent {Landau}-{Ginzburg} model of
+  phase transitions.
+\newblock {\em Physical Review B}, 29(1):380--386, January 1984.
+
+\bibitem{cahn_free_1958}
+John~W Cahn and John~E Hilliard.
+\newblock Free {Energy} of a {Nonuniform} {System}. {I}. {Interfacial} {Free}
+  {Energy}.
+\newblock {\em The Journal of Chemical Physics}, 28(2):11, February 1958.
 
 \bibitem{hennequin_drop_2006}
 Y.~Hennequin, D.~G. A.~L. Aarts, J.~H. van~der Wiel, G.~Wegdam, J.~Eggers,
@@ -29,11 +48,28 @@ Javier Atencia and David~J. Beebe.
 \newblock Controlled microfluidic interfaces.
 \newblock {\em Nature}, 437(7059):648--655, September 2005.
 
-\bibitem{talapov_magnetization_1996}
-A~L Talapov and H~W~J Bl{\"o}te.
-\newblock The magnetization of the {3D} {Ising} model.
-\newblock {\em Journal of Physics A: Mathematical and General},
-  29(17):5727--5733, September 1996.
+\bibitem{edwards_surface_1982}
+S.~F. Edwards and D.~R. Wilkinson.
+\newblock The {Surface} {Statistics} of a {Granular} {Aggregate}.
+\newblock {\em Proceedings of the Royal Society of London. Series A,
+  Mathematical and Physical Sciences}, 381(1780):17--31, 1982.
+
+\bibitem{halpin-healy_kinetic_1995}
+Timothy Halpin-Healy and Yi-Cheng Zhang.
+\newblock Kinetic roughening phenomena, stochastic growth, directed polymers
+  and all that. {Aspects} of multidisciplinary statistical mechanics.
+\newblock {\em Physics Reports}, 254(4-6):215--414, March 1995.
+
+\bibitem{paul_domain_2005}
+Raja Paul, Sanjay Puri, and Heiko Rieger.
+\newblock Domain growth in {Ising} systems with quenched disorder.
+\newblock {\em Physical Review E}, 71(6), June 2005.
+
+\bibitem{huse_corrections_1986}
+David~A. Huse.
+\newblock Corrections to late-stage behavior in spinodal decomposition:
+  {Lifshitz}-{Slyozov} scaling and {Monte} {Carlo} simulations.
+\newblock {\em Physical Review B}, 34(11):7845--7850, December 1986.
 
 \bibitem{niss_history_2005}
 Martin Niss.
@@ -48,6 +84,24 @@ Martin Niss.
   1950{\textendash}1965: from irrelevance to relevance.
 \newblock {\em Archive for History of Exact Sciences}, 63(3):243, May 2009.
 
+\bibitem{gupta_phase_1988}
+Rajan Gupta, Jerry DeLapp, George~G. Batrouni, Geoffrey~C. Fox, Clive~F.
+  Baillie, and John Apostolakis.
+\newblock Phase {Transition} in the 2 {D} {XY} {Model}.
+\newblock {\em Physical Review Letters}, 61(17):1996--1999, October 1988.
+
+\bibitem{bellac_equilibrium_2004}
+Michel~Le Bellac, Fabrice Mortessagne, and G~George Batrouni.
+\newblock {\em Equilibrium and {Non}-{Equilibrium} {Statistical}
+  {Thermodynamics}}.
+\newblock Cambridge University Press, 2004.
+
+\bibitem{aizenman_proof_1981}
+Michael Aizenman.
+\newblock Proof of the {Triviality} of $\phi$ d 4 {Field} {Theory} and {Some}
+  {Mean}-{Field} {Features} of {Ising} {Models} for d {\textgreater} 4.
+\newblock {\em Physical Review Letters}, 47(1):1--4, July 1981.
+
 \bibitem{de_jongh_experiments_1974}
 L.J. de~Jongh and A.R. Miedema.
 \newblock Experiments on simple magnetic model systems.
@@ -58,18 +112,17 @@ L.J. de~Jongh and A.R. Miedema.
 \newblock The {Ising} {Model} and {Real} {Magnetic} {Materials}.
 \newblock {\em Brazilian Journal of Physics}, 30(4):794--810, December 2000.
 
-\bibitem{ikeda_neutron_nodate}
+\bibitem{ikeda_neutron_1973}
 Hironobu Ikeda and Kinshiro Hirakawa.
 \newblock {NEUTRON} {SCATI}{\textquoteright}{ERING} {STUDY} {OF}
   {TWO}-{DIMENSIONAL} {ISING} {NATURE} {OF} {K2CoF4}.
-\newblock 14:4.
+\newblock {\em Solid Sate Communications}, 14:529--532, November 1973.
 
-\bibitem{preis_gpu_2009}
-Tobias Preis, Peter Virnau, Wolfgang Paul, and Johannes~J. Schneider.
-\newblock {GPU} accelerated {Monte} {Carlo} simulation of the {2D} and {3D}
-  {Ising} model.
-\newblock {\em Journal of Computational Physics}, 228(12):4468--4477, July
-  2009.
+\bibitem{frohlich_triviality_1981}
+Jiirg Frohlich.
+\newblock On the triviality of $\lambda$$\varphi$4 theories and the approach to
+  the critical point in {D}{\textgreater}4 dimensions.
+\newblock {\em Nuclear Physics B}, 200:281--296, August 1981.
 
 \bibitem{goldenfeld_lectures_2018}
 Nigel Goldenfeld.
@@ -77,18 +130,18 @@ Nigel Goldenfeld.
   {Group}}.
 \newblock CRC Press, 1 edition, March 2018.
 
-\bibitem{stecki_magnetization_1994}
-J.~Stecki, A.~Maciol/ek, and K.~Olaussen.
-\newblock Magnetization profiles of the planar fluctuating interface in a d=2
-  {Ising} strip.
-\newblock {\em Physical Review B}, 49(2):1092--1103, January 1994.
+\bibitem{talapov_magnetization_1996}
+A~L Talapov and H~W~J Bl{\"o}te.
+\newblock The magnetization of the {3D} {Ising} model.
+\newblock {\em Journal of Physics A: Mathematical and General},
+  29(17):5727--5733, September 1996.
 
-\bibitem{abraham_transfer_1973}
-D.~B. Abraham and A.~Martin-L{\"o}f.
-\newblock The transfer matrix for a pure phase in the two-dimensional {Ising}
-  model.
-\newblock {\em Communications in Mathematical Physics}, 32(3):245--268,
-  September 1973.
+\bibitem{preis_gpu_2009}
+Tobias Preis, Peter Virnau, Wolfgang Paul, and Johannes~J. Schneider.
+\newblock {GPU} accelerated {Monte} {Carlo} simulation of the {2D} and {3D}
+  {Ising} model.
+\newblock {\em Journal of Computational Physics}, 228(12):4468--4477, July
+  2009.
 
 \bibitem{abraham_interface_1976}
 D.~B. Abraham and P.~Reed.
@@ -102,17 +155,30 @@ Howard~L. Richards, M.~A. Novotny, and Per~Arne Rikvold.
   {Ising} models on square and cubic lattices.
 \newblock {\em Physical Review B}, 48(19):14584--14598, November 1993.
 
+\bibitem{abraham_transfer_1973}
+D.~B. Abraham and A.~Martin-L{\"o}f.
+\newblock The transfer matrix for a pure phase in the two-dimensional {Ising}
+  model.
+\newblock {\em Communications in Mathematical Physics}, 32(3):245--268,
+  September 1973.
+
+\bibitem{van_leeuwen_pinning_1981}
+J.~M.~J. van Leeuwen and H.~J. Hilhorst.
+\newblock Pinning of a rough interface by an external potential.
+\newblock {\em Physica A: Statistical Mechanics and its Applications},
+  107(2):319--329, June 1981.
+
 \bibitem{gilmer_simulation_1972}
 G.~H. Gilmer and P.~Bennema.
 \newblock Simulation of {Crystal} {Growth} with {Surface} {Diffusion}.
 \newblock {\em Journal of Applied Physics}, 43(4):1347--1360, April 1972.
 
 \bibitem{elwenspoek_kinetic_1987}
-M.~Elwenspoek and J.~P. van~der Eerden.
+M~Elwenspoek and J~P van~der Eerden.
 \newblock Kinetic roughening and step free energy in the solid-on-solid model
   and on naphthalene crystals.
-\newblock {\em Journal of Physics A: Mathematical and General}, 20(3):669,
-  1987.
+\newblock {\em Journal of Physics A: Mathematical and General}, 20(3):669--678,
+  February 1987.
 
 \bibitem{wilby_scaling_1992}
 M.~R. Wilby, D.~D. Vvedensky, and A.~Zangwill.
@@ -124,6 +190,11 @@ G~Gompper and D.~M Kroll.
 \newblock Steric {Interactions} in {Multimembrane} {Systems}: {A} {Monte}
   {Carlo} {Study}.
 \newblock {\em Europhysics Letters (EPL)}, 9(1):59--64, May 1989.
+
+\bibitem{fisher_walks_1983}
+Michael~E Fisher.
+\newblock Walks, walls, wetting, and melting.
+\newblock {\em Journal of Statistical Physics}, 34(5/6):63, October 1983.
 
 \bibitem{privman_transfer-matrix_1989}
 V.~Privman and N.~M. {\v S}vraki{\'c}.
@@ -176,6 +247,70 @@ Paul~A Pearce and Katherine~A Seaton.
 \newblock Exact solution of cyclic solid-on-solid lattice models.
 \newblock {\em Annals of Physics}, 193(2):326--366, August 1989.
 
+\bibitem{girot_conical_2019}
+A.~Girot, J.~Petit, R.~Saiseau, T.~Gu{\'e}rin, H.~Chraibi, U.~Delabre, and
+  J.~P. Delville.
+\newblock Conical {Interfaces} between {Two} {Immiscible} {Fluids} {Induced} by
+  an {Optical} {Laser} {Beam}.
+\newblock {\em Physical Review Letters}, 122(17), May 2019.
+
+\bibitem{derks_suppression_2006}
+Didi Derks, Dirk G. A.~L. Aarts, Daniel Bonn, Henk N.~W. Lekkerkerker, and
+  Arnout Imhof.
+\newblock Suppression of {Thermally} {Excited} {Capillary} {Waves} by {Shear}
+  {Flow}.
+\newblock {\em Physical Review Letters}, 97(3), July 2006.
+
+\bibitem{berthier_nonequilibrium_2002}
+Ludovic Berthier and Jean-Louis Barrat.
+\newblock Nonequilibrium dynamics and fluctuation-dissipation relation in a
+  sheared fluid.
+\newblock {\em The Journal of Chemical Physics}, 116(14):6228--6242, April
+  2002.
+
+\bibitem{berthier_shearing_2002}
+Ludovic Berthier and Jean-Louis Barrat.
+\newblock Shearing a {Glassy} {Material}: {Numerical} {Tests} of
+  {Nonequilibrium} {Mode}-{Coupling} {Approaches} and {Experimental}
+  {Proposals}.
+\newblock {\em Physical Review Letters}, 89(9), August 2002.
+
+\bibitem{thiebaud_nonequilibrium_2010}
+Marine Thi{\'e}baud and Thomas Bickel.
+\newblock Nonequilibrium fluctuations of an interface under shear.
+\newblock {\em Physical Review E}, 81(3), March 2010.
+
+\bibitem{bray_interface_2001}
+Alan~J. Bray, Andrea Cavagna, and Rui D.~M. Travasso.
+\newblock Interface fluctuations under shear.
+\newblock {\em Physical Review E}, 64(1):012102, June 2001.
+
+\bibitem{bray_interface_2001-1}
+Alan~J. Bray, Andrea Cavagna, and Rui D.~M. Travasso.
+\newblock Interface fluctuations, {Burgers} equations, and coarsening under
+  shear.
+\newblock {\em Physical Review E}, 65(1), December 2001.
+
+\bibitem{smith_driven_2010}
+Thomas~HR Smith.
+\newblock {\em Driven interfaces in the {Ising} model}.
+\newblock PhD thesis, University of Bristol, 2010.
+
+\bibitem{smith_interfaces_2008-1}
+Thomas H.~R. Smith, Oleg Vasilyev, Douglas~B. Abraham, Anna Macio{\l }ek, and
+  Matthias Schmidt.
+\newblock Interfaces in {Driven} {Ising} {Models}: {Shear} {Enhances}
+  {Confinement}.
+\newblock {\em Physical Review Letters}, 101(6):067203, August 2008.
+
+\bibitem{smith_interfaces_2008}
+Thomas H~R Smith, Oleg Vasilyev, Douglas~B Abraham, Anna Macio{\l }ek, and
+  Matthias Schmidt.
+\newblock Interfaces in confined {Ising} models: {Kawasaki}, {Glauber} and
+  sheared dynamics.
+\newblock {\em Journal of Physics: Condensed Matter}, 20(49):494237, December
+  2008.
+
 \bibitem{metropolis_monte_1949}
 Nicholas Metropolis and S.~Ulam.
 \newblock The {Monte} {Carlo} {Method}.
@@ -204,15 +339,14 @@ Kyozi Kawasaki.
   {Time}-{Dependent} {Ising} {Models}. {I}.
 \newblock {\em Physical Review}, 145(1):224--230, May 1966.
 
-\bibitem{vasilyev_monte_2007}
-O.~Vasilyev, A.~Gambassi, A.~Macio{\l }ek, and S.~Dietrich.
-\newblock Monte {Carlo} simulation results for critical {Casimir} forces.
-\newblock {\em EPL (Europhysics Letters)}, 80(6):60009, 2007.
-
 \bibitem{lopes_cardozo_critical_2014}
 David Lopes~Cardozo, Hugo Jacquin, and Peter C.~W. Holdsworth.
 \newblock Critical {Casimir} forces in a magnetic system: {An} experimental
   protocol.
 \newblock {\em Physical Review B}, 90(18), November 2014.
+
+\bibitem{martin_ankerl_fast_nodate}
+{Martin Ankerl}.
+\newblock Fast random bool in {C}++.
 
 \end{thebibliography}
