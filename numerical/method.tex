@@ -1,149 +1,148 @@
-\chapter{Méthodes numériques}
+\chapter{Numerical methods}
 \label{chap-sim}
 
-En 1949, Metropolis \cite{metropolis_monte_1949} découvre une méthode pour calculer via des simulations numériques de Monte Carlo, la moyenne d'observables statistiques. Si $Q$ est une quantité observable appartenant à un système statistique, comme l'énergie interne ou la densité moyenne de particules par site, alors la moyenne est calculée en pondérant la valeur de l'observable sur toutes les configurations $C$ du système par rapport au poids statistique de ces configurations. Si l'on considère le système en équilibre thermodynamique alors chaque configuration $C$ suit une distribution de Gibbs-Boltzmann, et la moyenne $<Q>$ est vaut
+In 1949, Metropolis \cite{metropolis_monte_1949} discovers a method to compute, through Monte Carlo simulations, the expectation value of statistical quantities. If $Q$ is an observable quantity of a statistical system, such as the total energy or density of particles per site, then the expectation value is computed by weighting its value over all configurations $C$ with respect to their statistical weight. If we consider the system to be at thermodynamic equilibrium, then every configuration $C$ follows the Gibbs-Boltzmann distribution, and the mean value $<Q>$ is
 \begin{align}
     <Q> = \frac{\sum_{C} Q(C) \exp(-\beta E(C))}{\sum_{C} \exp(-\beta E(C))}
 \end{align}
-Pour un système SOS de taille $100\times100$ par exemple, petit par rapport à la limite thermodynamique comme discuté avec la figure \ref{fig-thermo-libre}, il existe $100^{100}$ configurations possibles, bien qu'une simulation numérique ne puisse explorer qu'environ $10^8$ configurations différentes en un temps CPU raisonnable.
-Les modèles sur réseau se prêtent parfaitement aux simulations numériques de Monte Carlo, où le but est de calculer la valeur moyenne des observables telles que l'énergie interne ou la densité moyenne de particule par site. Toutes ces quantités peuvent être calculées directement pour le modèle SOS dans l'ensemble grand-canonique à l'aide des valeurs propres de la matrice de transfert, mais il est impossible d'utiliser une telle méthode dans l'ensemble canonique, comme expliqué dans le chapitre précédent.
+For example, in a SOS system of size $100\times100$ - which is small compared to the thermodynamic limit as discussed in figure \ref{fig-thermo-libre} - there exist $100^{100}$ different posible configurations. In comparison, numerical simulations can explore up to $10^9$ configurations in a reasonable amount of CPU time.
 
-Dans ce chapitre, nous commençons par expliquer le principe des simulations de Monte Carlo Metropolis, et comment choisir l'ensemble thermodyique de la simulation numérique. En plus d'étudier l'ensemble canonique, les simulations numériques offrent la possibilité d'étudier les régimes hors équilibre, dont nous justifierons la validité.
-Nous finirons le chapitre par expliquer comment accélérer la vitesse de simulation grâce à la parallélisation, ainsi que d'autres astuces de programmation, en insistant sur les écueils techniques à éviter. 
+Nevertheless, lattice models are well fitted for Monte Carlo simulations, where the goal is to compute is to compute such quantities. In the SOS model, all obersvables (and even quantities not observable such as the free energy) can be directly computed thanks to the matrix transfert in the grand-canonical ensemble. Nevertheless, as stated prior, the canonical ensemble stays out of reach of that method.
 
-Je remercie le Mésocentre de Calcul Intensif Aquitain (MCIA)\footnote{\url{https://redmine.mcia.fr/projects/mcia}} sur lequel j'ai effectué la très grande majorité de mes simulations numériques. 
-L'intégralité du code produit pour cette thèse est accessible sur Github \footnote{\url{https://github.com/Bulbille/Curta}} sous la licence Creative Commons BY 3.0 \footnote{\url{https://creativecommons.org/licenses/by/3.0/fr/}}. Les simulations numériques ont été codées en C++, la parallélisation avec la librairie MPI, l'automatisation du lancement des jobs en Bash, et la visualisation des données ainsi que les diagonalisations des matrices de transfert sous Python.
+In this chapter, we start by explaining how Monte Carlo Metropolis algorithm works based upon the statistical ensemble we're interested in, at or out of equilibrium.
+At last, I will give some technical considerations about optimizing numerical simulations.
 
-{\color{red} actuellement, est-ce que j'ai le droit de diffuser librement mon code ? Le CNRS autorise la libre diffusion du code ?}
+This work has been made possible thanks to the Mésocentre de Calcul Intensif Aquitain (MCIA)\cite{noauthor_mesocentre_nodate}, where I've made the vast majority of the numerical simulations.
+All the code I've produced can be found on Github \cite{paul_gersberg_github_2020} under Creative Commons BY 3.0 licence\footnote{\url{https://creativecommons.org/licenses/by/3.0/fr/}}. Numerical simulations where made with C++, parallelization with MPI, data treatment with Python, and some minor scripts in Bash.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
-    \section{Estimateur}
+    \section{Estimator}
 %%%%%%%%%%%%%%%%%%%%%%%%%
 
-Les simulations de Monte Carlo explorent l'espace des configurations de manière aléatoire \cite{newman_monte_1999} avec une probabilité $p(C$ que nous définirons plus tard. En choisissant $M$ états ${C_0,...,C_M}$, l'estimateur $Q_M$ de $Q$ est donnée par
+Monte Carlo simulations explore the configurations' space in a random fashion \cite{newman_monte_1999} with a probability $p(C)$ wihch we will define later one. By choosing $M$ states ${C_0,...,C_M}$, the estimator $Q_M$ of $Q$ is given by
 \begin{align}
     Q_M = \frac{\sum_{i=0}^M Q(C_i) p(C_i)^{-1} \exp(-\beta E(C_i))}{\sum_{i=0}^M  p(C_i)^{-1} \exp(-\beta E(C_i))}
 \end{align}
-Lorsque $M$ augmente, l'estimateur devient une estimation de plus en plus précise de $<Q>$, jusqu'à la limite $Q_{M\to \infty} = <Q>$. Si l'on choisit les configurations sur lesquelles on échantillone le système selon la distribution à l'équilibre de Gibbs-Boltzmann $p(\nu) = Z^{-1} e^{-\beta E(C)}$, alors l'éstimateur de $<Q>$ devient
+The bigger the $M$, the better estimate the estimator provides for $<Q>$, up to the limit $Q_{M\to \infty} = <Q>$. If we select the configurations over which we sample the system according to the Gibbs-Boltzmann distribution $p(\nu) = Z^{-1} e^{-\beta E(C)}$, the estimator of $<Q>$ is
 \begin{align}
     Q_M = \frac{1}{M} \sum_{i=0}^M Q(C_i)
 \end{align}
-L'erreur obtenue à la fin sur notre observable au cours d'une simulationest
+The error over this estimate is
 \begin{align}
 	E(Q) = \sqrt{\frac{2 \tau}{M} (<Q^2>-<Q>^2)} 
 \end{align}
-Cette variance dépend du temps de corrélation $\tau$ puisque si deux configurations sont très rapprochés dans le temps , l'observable n'aura pas suffisement évolué. En pratique, il suffit que $\frac{\tau}{M} \less 10^{-4}$ pour obtenir une erreur inférieure à $1\%$. Ce temps de corrélation $\tau$ se calcule via la fonction d'auto-corrélation 
+This error does depend from the correlation time $\tau$ since if two states are really close in time, they would be strongly correlated, adding little information to the estimator. In practice, we just need $\frac{\tau}{M} \less 10^{-4}$ to obtain an error under $1\%$. This correlation time $\tau$ is computed through the autocorrelation function
 \begin{align}
-\mC(t) = <Q(t')Q(t+t')>- <Q>^2 = \frac{1}{t}\int_0^t Q(t')Q(t+t')-<Q>^2 dt' 
+    \mC(t) = <Q(t')Q(t+t')>- <Q>^2 = \frac{1}{t}\int_0^t Q(t')Q(t+t')-<Q>^2 dt' 
 \end{align}
-qui se comporte comme une exponentielle à temps long\cite{wansleben_monte_1991}. Une bonne estimation de $\tau$ est alors donnée l'intégrale
+which behaves as an exponential at long time\cite{wansleben_monte_1991}. A first order estimate of $\tau$ is thus given for
 \begin{align}
 	\tau = \int_0^{\infty} \mC(t)/\mC(0) dt
 	\label{tau_cor}
 \end{align}
-Le calcul de longueur de corrélation à grande distance $\xi$ du système se fait de manière analogue en intégrant la fonction de corrélation spatiale définie par
+Similarly, the measurement of the correlation length $\xi$ is given at first order by integration the two-point correlation function
 \begin{align}
 \mC(j) = \frac{1}{L'} \sum_{i=0}^{L'} <h_i h_{i+j}>-<h>^2 
 \end{align}
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \section{Algorithme de Monte Carlo Metropolis}
+    \section{Monte Carlo Metropolis algorithm}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-On se pose maintenant la question de savoir comment choisir les configurations afin que chacune apparaisse avec la bonne probabilité de Boltzmann. 
+We know want to know how to choose configurations so all of them has the good equilibrium probability.
 
-Une dynamique pour les systèmes avec une espace des phases discret peut être construit à partir de chaînes de Markov. On laisse la dynamique évoluer dans un discret noté $n$, et $p_n(C)$ la probabilité que le système soit dans l'état $C$ au temps $n$. Au pas de temps suivant, si le système est dans l'état $C$ il peut sauter vers un autre état $C'$ avec la probabilité de transition $\rho(C\to C')$. Le système au tempst $n+1$ dépend alors uniquement de l'état au temps $n$ : c'est un processus markovien. La probabilité $p_{n+1}(X)$ d'être dans l'état $C$ au temps $n+1$ est possible si le système était dans l'état $C$ au temps $n$ et y reste avec une probabilité $\rho(C\to C)$ , ou s'il est dans un état $C'$ et bouge vers l'état $C$ avec une probabilité $\rho(C'\to C)$. On a alors l'équation maîtresse
+A dynamic for systems with a discrete configuration state can be built using Markov chains. Let the dynamic evolve in a discrete time $n$, and $p_n(C)$ the probability that the system is in configuration $C$ at time $n$. On the time step, if the system is in state $C$, it can jump to another state $C'$ with a transition probability $\rho(C\to C')$. The system at time $n+1$ thus only depends of the state at time $n$ : that's a Markovian process. The probability $p_{n+1}(C)$ to be in state $C$ at time $n+1$ is equal to the probability that the system was already in state $C$ at time $n$ and stays put with a transition probability $\rho(C\to C)$ , plus the probability that it was in state $C'$ and jumps towards $C$ with a transition probability $\rho(C'\to C)$. The master equation of such a dynamic is
 \begin{align}
     p_{n+1}(C) =  \rho(C\to C) p_n(C) + \sum_{C'\neq C} \rho(C'\to C) p_n(C')
 \end{align}
-Puisque $\rho(C' \to C)$ est une probabilité, on a la condition suivante
+Since $\rho(C' \to C)$ is a probability, it meets the requierement 
 \begin{align}
     \sum_{C'} \rho(C' \to C) = 1
     \label{norm}
 \end{align}
-Maintenant, si la dynamique décrit un système physique en interaction avec un  réservoir de chaleur, la distribution à l'équilibre est donnée par
+Now, if the dynamics describes a system in interaction with a heat bath, the equilibrium distribution is given by
 \begin{align}
     p_{eq}(C) = \frac{\exp(-\beta E(C))}{Z}
 \end{align}
-avec $Z$ la fonction de partition canonique. Puisque la distribution à l'équilibre n'évolue pas au cours du temps, on a
+with $Z$ the partition function. Since the equilibrium distribution is also stationary, we have
 \begin{align}
     p_{eq}(C) =  \rho(C\to C) p_{eq}(C) + \sum_{C'\neq C} \rho(C'\to C)p_{eq}(C')
     \label{p-eq-mc}
 \end{align}
-Une autre condition que l'on impose à notre chaîne de Markov afin qu'elle génère une probabilité de distribution de Boltzmann après équilibrage, est qu'elle respecte le bilan détaillé. Afin qu'un système respecte le bilan détailĺé, il faut que le taux auquel il fait des transitions vers à partir de n'importe quel état $C$ soit égal. Mathématiquement, cela revient à dire que
+Another condition that we need in order to generate Gibbs-Boltmanzz states, is that it complies with detailed balance. To comply with detailed balance, the transition rate from a state to another one is equal to the rate from the reciprocal transition, which gives
 \begin{align}
     \sum_{C'} p(C) \rho(C \to C') = \sum_{C'} p(C') \rho(C' \to C)
 \end{align}
-On peut démontrer que cette relation est équivalente à \cite{newman_monte_1999} 
+We can show that this relation is equivalent to \cite{newman_monte_1999} 
 \begin{align}
     \frac{\rho(C'\to C)}{\rho(C \to C')} = \frac{p(C)}{p(C')} = \frac{\exp(-\beta E(C))}{\exp(-\beta E(C'))}
 \end{align} 
-En adoptant le bilan détaillé, on voit facilement que la distribution à l'équilibre calculée via \ref{p-eq-mc} redonne bien la distribution de Gibbs-Boltzmann.
-Durant une étape de Metropolis, la probabilité pour que la transition $C\to C'$ se fasse dépend de la probabilité $g(C\to C')$ que cette transition soit choisie parmis toutes les possibilités de l'espace des configurations, et le taux de transition $A(C \to C')$ que la transition soit acceptée, c'est à dire
+By adopting the detailed balance, we easily see that the equilibrium distribution computed by Eq \eqref{p-eq-mc} gives back the Gibbs-Boltzmann distribution. 
+During a Metropolis step, the transition probability of $C\to C'$ depends of the probabilty $g(C\to C')$ that this transition would be chosen amongst all the other possible transitions, and the acceptance rate $A(C \to C')$, which gives
 \begin{align}
     \rho(C\to C') = g(C\to C') A(C \to C')
 \end{align}
+For a lattice model site $L'$ sites, we say that a Monte Carlo time step is done when we have proceeded to $L'$ transition tries.
+%%%%%%%%%%%%%%
+    \subsection{Glauber dynamics}
+%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%
-    \subsection{Algorithme de Glauber}
-%%%%%%%%%%%%%%
-Dans un modèle SOS possédant $L'$ sites de hauteur comprise entre $0$ et $L$, l'algorithme de Glauber\cite{glauber_timedependent_1963} dit que l'on choisit au hasard un site $i$ avec une probabilité uniforme $\frac{1}{L'}$ et un entier $\alpha = \pm 1$ avec une probabilité $\frac{1}{2}$. Si la configuration $C$ a l'Hamiltonien $H(h_0,h_1...,h_i,...h_{L'})$, alors la nouvelle configuration générée aura l'Hamiltonien $H(h_0,h_1...,h_i+\alpha,...h_{L'})$.
-Si $\alpha=+1$, alors on ajoute une particule au site $i$, et si $\alpha=-1$, on en retire une. Dans le cas où $h_i+\alpha \not\in [0,L]$ , la configuration $C'$ ne respecte pas les conditions aux bords et est donc automatiquement refusée.
-La probabilité de sélection est alors 
+In the SOS model with $L'$ sites of height comprised in $[0,L]$, the Glauber algorithm \cite{glauber_timedependent_1963} makes us chose a site $i$ at random with a uniform probability $\frac{1}{L'}$ and an intenger $\alpha = \pm 1$ with probability $\frac{1}{2}$. If the configuration $C$ has the Hamiltonian $H(h_0,h_1...,h_i,...h_{L'})$, then the new generated configuration will have the Hamiltonian $H(h_0,h_1...,h_i+\alpha,...h_{L'})$.
+If $\alpha=+1$, then we add a particle at site $i$, otherwise we remove one. In the case that $h_i+\alpha \not\in [0,L]$ , the generated configuration is not valid and discarded.
+If the generated configuration is valid, the probability of selecting this transition is
 \begin{align}
     g(C\to C') = \frac{1}{2L'}
 \end{align}
-On a alors
+We thus have
 \begin{align}
     \frac{\rho(C\to C')}{\rho(C' \to C)} = \frac{A(C\to C')}{A(C'\to C)} = \exp(-\beta (E(C')-E(C'))
 \end{align}
-Il est possible de choisir n'importe quel taux de transition $A(C\to C')$ qui satisfait à l'équation précédente. Un algorithme de Metrpoolis est un algorithme qui choisit comme taux de transition 
+Is it possible to choose any acceptance rate $A(C\to C')$ which satisfies detailed balance. A Metropolis algorithm is an algorithm which has the following acceptance rate
 \begin{align}
     A(C\to C') = \begin{cases} \exp(-\beta (E(C')-E(C)) &\text{ si } E(C')-E(C) \greater 0 \\
              1 &\text{ sinon} \end{cases}
     \label{taux-transition-metropolis}
 \end{align}
+In practice, if $\Delta E \greater 0$, we randomly choose an integer uniformly in $r\in[0,1]$. If $r\less A(C\to C') $ then the transition is accepted. Otherwise, the transition is rejected and the system stays in the configuration $C$.
 
-Dans la pratique, si $\Delta E \greater 0$, on tire uniformément au hasard un nombre $r\in[0,1]$. Si $r\less A(C\to C') $ alors la transition est acceptée,  et dans le cas contraire la transition est refusée et le système reste dans la configuration $C$.
-
-Puisque la grandeur $\sum_i h_i$ n'est pas conservée au cours du temps, l'algorithme de Glauber correspond à un système qui échange des particules avec un réservoir dans l'ensemble grand-canonique.
+Since $\sum_i h_i$ is not conserved over time, Glauber dynamics corresponds to model A.
 
 \begin{figure}
 	\centering
 	\includegraphics[scale=1]{numerical/sos-glau-eq-cor.pdf}
-	\caption{Courbe de l'énergie (haut) et fonction d'auto-corrélation (bas) dansavec un algorithme de Glauber à partir d'une condition initiale à $T=\infty$, pour différentes températures.}
+	\caption{Plot of the energy per site (top) and the autocorrelation function (bottom) with Glauber dynamics from an initial state where $h_i=0$, for different temperatures.}
 	\label{eq-glau}
+	\includegraphics[scale=0.5]{example-image-a}
+	\caption{Mean height value per site with respect to $\mu$ different system size $L$ both by Glauber dynamics and diagonalization of the transfer matrix.}
+	\label{eq-glau}	
 \end{figure}
 
-La différence d'énergie entre deux configurations est alors
+The energy difference between two configurations is
 \begin{align}
 	\Delta E &= |h_{i-1}-(h_i + \alpha)| + |h_{i+1}-(h_i + \alpha)| - |h_{i-1}-h_i| - |h_{i+1}-h_i|  
 \end{align}
-Il n'est pas nécessaire de calculer la hauteur totale à chaque étape. La variable $\sum_i h_i$ peut être mise en mémoire, et mise à jour à chaque fois qu'une transition a été validée par la formule
+It is not needed to computed the total height at each time step. We can stock $\sum_i h_i$ in a variable that is updated each time a transition is accepted by
 \begin{align}
     <h>_{M+1} = <h>_M + \alpha
 \end{align}
-On peut faire de même pour la variable $\sum_i h_i^2$ , utile pour calculer la largeur de l'interface, ou bien l'énergie totale du système.
+We can do the same for $\sum_i h_i^2$, which gives us the interface's width, or the total energy of the system with $\sum_i |h_i - h_{i+1}$.
 
-Afin d'accélérer le processus d'équilibrage du système, il est recommandé de commencer directement avec la valeur moyenne de magnétisation calculée à partir de la matrice de transfert. On regarde ensuite le temps d'équilibrage par la courbe $E(t)$, en attendant d'atteindre la valeur à l'équilibre. On choisit ici d'étudier l'énergie totale du système contrairement à la hauteur totale, puisqu'en absence de potentiel chimique, l'interface est libre de fluctuer entre $0$ et $L$. Dans la figure \ref{eq-glau}, on montre le temps d'équilibrage et le temps de corrélation du système en absence de potentiel chimique. Les temps assez faibles d'équilibrage te de corrélation assurent qu'une simulation équilibrée sur $10^3$ et mesurée sur $10^7$ étapes de Monte Carlo donneront des résultats précis.
+In order to accelerate the equilibration process, we can directly start from the total height computed by the transfer matrix. We then get the equilibrium time by looking at $E(t)$. It is better practice to choose study the equilibration time by taking the total energy instead of the magnetization, since without external potential, the interface is delocalised and magnetization is only bounded by the boundary conditions. In Fig \ref{eq-glau}, we show the energy with respect to time and the autocorrelation function of the system in absence of chemical potential from a ground state $h_i=0$ for all $i$. The very small correlation and equilibration times means that numerical simulations reach the equilibrium distribution after $10^3$ MC steps, and that only $10^7$ MC steps will give accurate results.
 
-Dans le modèle SOS, on s'attend à ce que les statistiques générées par la dynamique de Glauber soient identiques, comme on le voit dans la figure XXX.
-{\color{red} rajouter figure où on voit $\sum_i h_i$ avec Glauber ET TM en fonciton de $\mu$ par exemple, pour prouver que ça marche.}
-Dans ces conditions spéciales qui découlent de notre modèle, les simulations dans l'ensemble grand-canonique n'offrent que peu d'intérêt. Il n'existe cependant pas de matrice de transfert dans l'ensemble canonique, et c'est donc là que l'intérêt des simulations de Monte Carlo apparaît pour le modèle SOS.
+In the SOS model, we expect to have the results from the Glauber dynamics to be exactly the same as the transfer matrix method, as shown in Fig \ref{tm-mc-equalt}, Since we can get exact results from the transfer matrix, the Glauber dynamics presents little interest for SOS models in the grand-canonical ensemble. Nevertheless, because there does not exist a transfer matrix formulation of the canonical ensemble, Monte Carlo simulations become interesting.
 
 %%%%%%%%%%%%%%
-    \subsection{Algorithme de Kawasaki}
+    \subsection{Kawasaki dynamics}
 %%%%%%%%%%%%%%
 
-Maintenant, on désire mettre au point un algorithme pour l'ensemble canonique, où la hauteur par site reste constante. Dans l'algorithme de Kawasaki \cite{kawasaki_diffusion_1966}, on choisit au hasard un site $i$ avec une probabilité $\frac{1}{L'}$, et un de ses deux voisins $i-1$ ou $i+1$ avec une probabilité $\frac{1}{2}$. Si par exemple on a choisit le site voisin $i-1$ (la discussion est la même pour le site $i+1$), on génère  la nouvelle configuration test d'Hamiltonien $H(h_0,...,h_{i-1}+1,h_i-1,...h_{L'})$. Ici, on a retiré une particule du site $i$ pour le transférer sur le site adjacent. 
-La probabilité de sélection est à nouveau
+Now we would like to have an algorithm for the canonical ensemble, where the total height stays constant. In the Kawasaki's algorithm \cite{kawasaki_diffusion_1966}, we randomly choose a site $i$ with probability $\frac{1}{L'}$, and one of its two neares neighboors $i-1$ or $i+1$ with probability $\frac{1}{2}$. For example, if we take the neighboor site $i-1$ (it holds the same for the site $i+1$), we generate a new configuration with Hamiltonian $H(h_0,...,h_{i-1}+1,h_i-1,...h_{L'})$, where we have taken a particle from site $i$ to diffuse it to the other site.
+The selection probability is
 \begin{align}
     g(C\to C') = \frac{1}{2L'}
 \end{align}
-et on choisit le même taux de transition  \ref{taux-transition-metropolis}.
+We also chose the same acceptance rate as in Glauber's dynamics \eqref{taux-transition-metropolis}.
 
-Ici, on voit bien que la grandeur $\sum_i h_i$ est conservée au cours du temps. Dans le cas où le site $i$ donne une particule au site $i+1$, la différence d'énergie s'écrit	
+Here, the total height is obvisouly conserved. In the case that we transfer a particle to site $i$ to site $i+1$, the energy difference is
 \begin{align}
 	\Delta E &= |h_{i-1}-(h_i - 1)| + |h_{i+1} + 1 -(h_i- 1)| + |h_{i+1} + 1-(h_{i+2} )|  \nn
 	& - \left( |h_{i-1}-h_i| + |h_{i+1} -h_i| + |h_{i+1}-h_{i+2}| \right)
@@ -152,12 +151,12 @@ Ici, on voit bien que la grandeur $\sum_i h_i$ est conservée au cours du temps.
 \begin{figure}[t]
 	\centering
 	\includegraphics[scale=1]{numerical/sos-kaw-eq-cor.pdf}
-	\caption{Courbe de l'énergie (haut) et fonction d'auto-corrélation (bas) avec un algorithme de Kawasaki à partir d'une condition initiale à $T=\infty$, pour différentes températures.}
+	\caption{Plot of the energy per site (top) and the autocorrelation function (bottom) with Kawasaki dynamics from an initial state where $h_i=0$, for different temperatures.}
 	\label{eq-kaw}
 \end{figure}
-Dans la figure \ref{eq-kaw}, on remarque que le temps d'équilibrage et le temps de corrélation sont plus longs qu'avec la dynamique de Glauber. Bien que la dynamique soit plus lente parce que la longueur de corrélation dans le modèle A croît comme $t^\frac{1}{2}$ et comme $t^\frac{1}{3}$ dans le modèle B, on s'attend à ce que le temps de simulation reste similaire. 
+In Fig \ref{eq-kaw}, we remark that both the equilibration and the correlation time are larger than for non-conserved dynamics, which is normal since the correlation length during coarsening goas as $t^\frac{1}{2}$ in model A and as $t^\frac{1}{3}$ in model B. Nevertheless they are of the same order of magnitude, which means that numerical simultions will take the same CPU time.
 
-Cette dynamique décrit la diffusion de particules au sein d'une interface. Il est donc possible de rajouter un flux qui brise l'équilibre. La méthode reste pertinente si on suppose que la dynamique du système reste lente comparée aux échanges de chaleur avec le réservoir. Dans ces conditions, on considère que les configurations $C$ respectent encore l'équilibre de Gibbs-Boltzmann. 
+This dynamic describes the diffusion of particles at the interface. It is thus possible to add some hydrodynamic flow which breaks equilibrium. SInce we have supposed that our configurations obeys the Gibbs-Boltzmann distribution, the Metropolis method stays pertinent if we assume that the dynamic is slow compared to the heat exchange with the reservoir.
 
 %%%%%%%%%%%%%%%%%%%		
     \section{Computing size depenedent free energy}
@@ -181,96 +180,86 @@ Cette dynamique décrit la diffusion de particules au sein d'une interface. Il e
 		\includegraphics[width=\linewidth]{numerical/cross-h1.pdf}
 		\caption*{$H_1$}
 	\end{minipage}
-	\caption{Découplage progressif de la $k$-ième couche du système afin de calculer la variation de l'énergie libre grâce à l'Hamiltonien de transition. Les liens en bleu ont une énergie de $\beta J$, les liens en rouge une énergie de $\lambda \beta J $ et les liens en vert une énergie de $ (1-\lambda) \beta J$. Reproduction 2D de \cite{vasilyev_monte_2007}.}
+	\caption{Progessive decouplage of the $k$-th layer of the system in order to compute the freen energy through the Crossover Hamiltonian. Blue bonds have an energy of $\beta J$, red ones an energy of $\lambda \beta J $ and the green ones an energy of$ (1-\lambda) \beta J$. Reproduction 2D of \cite{ vasilyev_universal_2009}.}
 	\label{decouplage}
 \end{figure}
 
-Comme vu dans la section \ref{sec-casimir}, on retrouve dans l'énergie libre du système toute l'information nécessaire sur les effets de taille finie, principalement la force de Casimir critique. L'énergie libre ne peut être exprimée par des moyennes d'observables facilement calculables dans les simulations de Monte Carlo. La force de Casimir étant 
+It is not possible to compute from Monte Carlo simulations the free energy of a system, since it is not a derivative of the partition funciton. However we can compute its derivative with respect to the the system. This is usefull to compute the Casimir force 
 \begin{align}
     F(t,h,L) = - \frac{\partial \Omega}{\partial L}
+    \label{casmir-mc}
 \end{align}
-on remarque que le calcul seul de la dérivée par rapport à la hauteur $L$ du systèème est suffisant. Pour se faire, Vasilyec \cite{vasilyev_monte_2007} a développé une méthode pour calculer sa dérivée vis-à-vis d'un paramètre fictif de couplage. Bien que la taille d'un ystème sur réseau soit discrète, il est possible d'obtenir une taille continue du réseau grâce au découplage progressif d'une couche du système. 
-Si $H_0$ est l'Hamiltonien du système de hauteur $L$ et $H_1$ l'Hamiltonien de hauteur $L-1$ (voir figure \ref{decouplage}), alors on pose l'Hamiltonien de transition
+To achieve that, Vasilyec \cite{vasilyev_universal_2009} developped a methode to compute this derivative thanks to a dummy coupling parametera. Even though the system's size is discrete, it is possible to obtain a continuous-like size of the system thanks to the progressive decoupling the $k$-th layer of the system. If $H_0$ is the Hamiltonian of size $L$ and $H_1$ the Hamiltonian of size $L-1$ (see Fig \ref{decouplage}), then we define the crossover Hamiltonian as
 \begin{align}
-    H_{tr}(\lambda) = (1-\lambda) H_0 + \lambda H_1
+    H_{cr}(\lambda) = (1-\lambda) H_0 + \lambda H_1
     \label{hamil-trans}
 \end{align}
-avec $\lambda \in [0,1]$, et qui interpole $H_0$ et $H_1$ lorsque $\lambda$ va de $0$ à $1$. 
-L'Hamiltonien de transition $H_{tr}(\lambda)$ dépend également de la position $k_0 \in {1,2,...,L}$ (selon la direction $z$ de la couche qui se découple du reste du système en fonction de $\lambda$, c'est-à-dire de \ref{decouplage}(a) à \ref{decouplage}(c). L'Hamiltonien résultant est charactérisé par les constantes de couplage décrites dans la figure \ref{decouplage}(b). L'énergie libre associée à cet Hamiltonien est
+with$\lambda \in [0,1]$, which interpolates from $H_0$ to $H_1$ when $\lambda$ goes from $0$ to $1$. As $\lambda$ goes on, we gradually decouple the $k$-th layer of the system, which means that the interaction energy of all vertical bonds between layer $k$ and layers $k-1$ and $k+1$ are now equal to $(1-\lambda)\beta J$, while we gradually couple the layers $k+1$ and $k-1$ with an energy $\lambda \beta J$.
+The crossover Hamitlonian $H_{tr}(\lambda)$ also depends from the position of the decoupled layer $k \in {1,2,...,L}$ . The free energy associated to this system is
 \begin{align}
-    \Omega_{tr}(\lambda) = -k_B T \ln \left( \sum_{h_1 ... h_L} \exp(-\beta H_{tr}(\lambda)) \right)
+    \Omega_{cr}(\lambda) = -k_B T \ln \left( \sum_{h_1 ... h_L} \exp(-\beta H_{tr}(\lambda)) \right)
 \end{align}
-De la dérivée de l'énergie libre découle
+From the derivative of the free energy with respect to $\lambda$, we find
 \begin{align}
-    \frac{\Omega_{tr}(\lambda)}{d\lambda} = < H_1 - H_0>_{H_{tr}(\lambda)}
+    \frac{\Omega_{cr}(\lambda)}{d\lambda} = < H_1 - H_0>_{H_{cr}(\lambda)}
 \end{align}
-où $< \cdot >_{H_{tr}(\lambda)}$ représente la moyenne statistique sur le système en transition, facilement calculable dans les simulations numériques. En intégrant sur le couplage, on trouve que
+where  $< \cdot >_{H_{cr}(\lambda)}$ represents the statistical mean value in the crossover system, easily computable in numerical simulations. By integrating over the coupling constant, we have
 \begin{align}
-    \Omega_1 - \Omega_0 = \int_0^1 d\lambda  < H_1 - H_0>_{H_{tr}(\lambda)}
+    \Omega_1 - \Omega_0 = \int_0^1 d\lambda  < H_1 - H_0>_{H_{cr}(\lambda)}
 \end{align}
-Finalement, dans la limite où l'épaisseur du système est suffisament grande pour que la variation d'une couche soit suffisement petite ($L' \gg 1$), on trouve que
+Finally, in the thick limit where $L\gg1$, we find
 \begin{align}
-   - \frac{\partial \Omega(t,h,L)}{\partial L} \simeq  \int_0^1 d\lambda  < H_1 - H_0>_{H_{tr}(\lambda)}
+   - \frac{\partial \Omega(t,h,L)}{\partial L} \simeq  \int_0^1 d\lambda  < H_1 - H_0>_{H_{cr}(\lambda)}
 \end{align}
-Bien que $H_{tr}(\lambda)$ dépende de la rangée $k_0$ que l'on a décidé de découpler, et par transition $H_1-H_0$ et $< H_1 - H_0>_{H_{tr}(\lambda)}$, l'intégrale $\int_0^1 d\lambda < H_1 - H_0>_{H_{tr}(\lambda)}$ est indépendante de ce choix tant que les conditions aux borrds ne sont pas affectés par l'extraction de la couche $k_0$. 	
+Even though $H_{cr}(\lambda)$ depends of which layer we decided to decouple, and by transition $H_1-H_0$ and $< H_1 - H_0>_{H_{cr}(\lambda)}$, the integrand $\int_0^1 d\lambda < H_1 - H_0>_{H_{tr}(\lambda)}$ should be indenpendent of this choice, as long as boundary conditions are not affect by the $k$-th layer.
 
-
-Pour le modèle Solid-On-Solid, il est possible de calculer la variation d'énergie créée par le découplage directement. Si le découplage s'est créé à la rangée $k$, on ajoute un lien d'énergie $\lambda J$ entre les rangées $k-1$ et $k+1$ et on retire $\lambda J$ énergie des rangées $k-1$ à $k$  et de $k$ à $k+1$. On obtient
+For the SOS model, it is posible to exactly compute the energy variation produced by the decoupling. We find that
 \begin{align}
     &H_{tr,SOS}(\lambda) = H_{0,SOS} - \nn
      &\frac{\lambda J}{2} \sum_x \left[ \sgn(k-1-h(x)) \sgn(k+1-h(x)) - \sgn(k-h(x)) \left( \sgn(k-1-h(x))+\sgn(k+1-h(x)) \right) \right]
 \end{align}
-où le facteur $\frac{1}{2}$ est obtenu afin de prendre en compte le coefficient $2$ dans \ref{energie-sos-ising}. En faisant un tableau de valeurs, on remarque rapidement que la somme est une constante égale à $-1$ quel que soit $k$, puisque contraiement au modèle d'Ising, les modèles d'interface ne possèdent pas d'énergie de bulk. Il faut donc utiliser une autre méthode afin de mesurer l'effet Casimir dans les simulations de Monte Ca    
+where the prefactor $\frac{1}{2}$ take into account the prefactor between Ising and SOS models in Hamiltonian \eqref{energie-sos-ising}. By doing the ?? {\color{red} how do you translate "tableau de valeurs" ? } , we notice that every term in the sum is equal to $-1$ independently of $k$, since contrary to Ising models, SOS models do not possess any bulk energy. We 
+
+En faisant un tableau de valeurs, on remarque rapidement que la somme est une constante égale à $-1$ quel que soit $k$, puisque contraiement au modèle d'Ising, les modèles d'interface ne possèdent pas d'énergie de bulk.
 
 %%%%%%%%%%%%%%%%%%%		
     \subsection{The Lopes Cardozo method}
 %%%%%%%%%%%%%%%%%%%		
-
-Afin d'isoler la force de Casimir du terme de volume dans la force de confinement, il convient de retirer la force de confinement d'un système de taille différente. Ainsi, pour deux systèmes de taille $L_1 \less L_2$, on a 
+Since the Layer method does not work for our models, we have to look to other ways. In the case of a chemical potential conjugated with the total height, we see that \cite{lopes_cardozo_critical_2014}
 \begin{align}
-    F(t,h,L_1) - F(t,h,L_2) = f_c(t,h,L_1) - f_c(t,h,L_2) =  - \frac{\partial \Omega(t,h,L_1)}{\partial L}  + \frac{\partial \Omega(t,h,L_2)}{\partial L} 
-\end{align}
-Puisque le surplus d'énergie dû au confinement est nul lorsque $L_2\to \infty$, on obtient une approximation sur la force de Casimir lorsque $\frac{L_1^d}{L_2^d} \ll 1$ 
-\begin{align}
-    f_c(t,h,L_1) \simeq  \frac{\partial \Omega(t,h,L_2)}{\partial L}  - \frac{\partial \Omega(t,h,L_1)}{\partial L} 
-    \label{casimir-diff-omega}   
-\end{align}
-
-Or, nous savons grâce à l'équation \ref{moyenne-phi} que dans le cas d'un champ magnétique uniforme $h(\bx)$, la moyenne du paramètre d'ordre est reliée à l'énergie libre par
-\begin{align}
-    <\phi(\bx)>(t,h,L) = - \frac{\delta \Omega(t,h,L)}{\delta h(\bx)}
+    <\sum_i h_i>(\mu,L) = - \frac{\delta \Omega(\mu,L)}{\delta \mu}
 \end{align} 
-Si on pose $h(\bx) = h$, alors il est possible d'obtenir une différence entre deux énergies libres à champs magnétiques différents \cite{lopes_cardozo_critical_2014} 
+If we integrate over the chemical potential, we have
 \begin{align}
-    \Delta \Omega = \Omega(t,h_1,L) - \Omega(t,h_2,L) = - \int_{h_1}^{h_2} <\phi(\bx)>(t,h,L) dh
+    \Delta \Omega(\mu_1,\mu_2)  = \Omega(\mu_1,L) - \Omega(\mu_2,L) = - \int_{\mu_1}^{\mu_2} <\sum_i h_i>(\mu,L) dh
     \label{integration-cardozo}
 \end{align}
-Dans le cas où l'on connait la configuration lorsque $h_2 \to \infty$ ou $h_1 \to 0$, il est possible de mesurer directement l'énergie libre d'un système pour n'importe quelle température et taille en intégrant selon \ref{integration-cardozo}. Dans le cas où $h_2 \to \infty$, le potentiel en double-puit \ref{phi4} ne possède qu'un seul minimum, l'énergie libre d'un tel système est alors uniquement lié à l'énergie libre du volume.
-La différence \ref{integration-cardozo} contient donc toute l'information nécessaire afin de mesurer la force de Casimir. On peut alors calculer la dérivée \ref{casimir-diff-omega} avec
+In the case where we know the analytical forme of the free energy in the limits $\mu_2 \to \infty$ or $\mu_1 \to 0$, this method provides a way to directly measure the free energy of the system for any temperature or size  by integrating over the chemical potential.
+
+In the limit $\mu_2 \to \infty$, the correlation length at the reference state will be small so that the reference free energy will be essentially that of the bulk. As a consequence, it should contain all the information of the Casimir force \eqref{casmir-mc}. That derivative force can then be computed by 
 \begin{align}
-    dL \frac{\partial \Omega(t,h,L)}{\partial L} = \Delta \Omega(t,h,L)-\Delta \Omega(t,h,L-dL)
+    \delta L \frac{\partial \Omega(\mu_1,L)}{\partial L} = \Delta \Omega(\mu_1,\mu_2,L)-\Delta \Omega(\mu_1,\mu_2,L-\delta L)
 \end{align}
+where $\delta L$ is the difference thickness between two systems, and which is then independent of $\mu_2$ in the large chemical potential limit as the free energy $\Omega(\mu_2,L)$ converges to the bulk energy.
+
+Since in Kawasaki dynamics the total height is constant, this method does work only for model A.
 
 %%%%%%%%%%%%%%%%%%%		
     \section{Tips and tricks}
 %%%%%%%%%%%%%%%%%%%    
-    {\color{red} en annexe ou je peux le laisser dans le chapitre directement ? }
-    La rapidité des simulations des modèles 1D soit rapide comparé aux modèles d'Ising est telle, qu'il est possible de simuler les phénomènes sur une plage plus grande de paramètres. Si une simulation de $10^/$ étapes de Monte Carlo dure en moyenne 20 minutes, le lancement d'une centaine de ces simulations peut vite prendre une journée ou plus.
-    En C++, la première chose à faire pour gagner un facteur 5 dans le temps simulation est d'ajouter le flag d'optimisation $-03$ dans le compilateur, afin d'optimiser le code au niveau du préprocesseur. 
-    
-    Une fois cela fait, on se tourne vers le générateur de nombre pseudo-aléatoire (pRNG). En effet, à chaque étape de Monte Carlo on génère trois nombres aléatoires : 
-    - le choix du site $i$
-    - un booléen pour savoir si l'on rajoute ou enlève une particule dans le cas de la dynamique de Glauber,ou  un booléen pour savoir à quel plus proche voisin nous alons donner une particule dans le cas de la dynamique de Kawasaki
-    - un double compris entre $[0,1]$ pour savoir si on accepte ou non la transition, dans le cas où $\Delta E \greater 0$
-	La librairie C++ standard propose \textit{default\_random\_engine} comme générateur standard de nombres aléatoires. Un gain substantiel de temps d'un facteur 5 à 10 peut être fait en optant pour les générateurs \textit{sfc64} ou \textit{xoroshiro}. De plus, la génération d'un booléen ne requiert qu'un bit aléatoire, tandis que les générateurs classiques génères 64 bits à chaque fois, ce qui gâche 63 bits à chaque étape. Il est possible de mettre tous les bits générés en mémoire, afin de n'avoir à générer un nombre aléatoire qu'une fois tous les 64 booléens utilsés\cite{martin_ankerl_fast_nodate}.
 
-    Pour finir, l'optimisation la plus évidente est la parallélisation du code. Bien que l'on puisse décomposer les domaines afin d'accélérer la simulation d'un système, les modèles 1D étant rapides, il est plus intéressant de procéder à une parallélisation basique sur les paramètres de la simulation (comme la température ou le potentiel chimique). En C++, il existe deux libraires : OpenMP et MPI. Il m'a fallu plusieurs pour comprendre que bien que la première soit très faicle d'implémentation, la parallélisation avec mémoire partagée rend le pRNG très instable, ce qui fausse complètement l'ensemble des simulations. Il est donc impératif d'utiliser la librairie MPI, qui assure l'étanchéité des pRNG entre chaque thread.
+    The simulation's speed of SOS models is so great compared to Ising ones that it is possible to study systems over a wider range of parameters. A SOS simulation of $10^7$ MC steps takes roughly 20 minutes to complete once fully optimized. We see that if we want to launch hundreds of those simulations, it can easily take days, which forces us to optimize the code.
+    In C++, if compiling with g++, the first thing to do is to compile the programme with the $-O3$ flag, which makes you gain an order of magnitude in CPU time.
+    
+    The most important part of Monte Carlo simulations are the pseudo Random Number Generator (pRNG), which are called at least twice for each transition attempt.  The C++ standard librairy proposes the function  \textit{default\_random\_engine} as the default pRNG. A lot of CPU time can be saved by switching to \textit{sfc64} or \textit{xoroshiro} pRNGs. Furthemore, the generation of $\pm1$ numbers only require one bit, while the pRNG always generates a 64-bits number, thus wasting 63-bits at each boolean generation. A wasteless method which speeds consireably the simulation's speed can be found in \cite{martin_ankerl_fast_nodate}.
+    
+    Lastly, the easiest way to gain real time is to make the code parallel. We can do that either by domain decomposition - which would allow us to simulate larger systems - or parallelise directly over the simulation's parameters (as the temperature or the chemical potential). While the first one is useless in SOS model because of the short correlation length of such systems, the latter can be done via two libraries : OpenMP and MPI. It took me some time to understand that the memory-shared OpenMP protocol has a lot of problems with pRNGs, making this library not suited for Monte Carlo simulations. On the contrary, the MPI library provides impermeability between threads, which makes it the better choice.
 		
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusion}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Dans ce chapitre, nous avons expliqué comment mesurer les moyennes statistiques des observables de nos systèmes grâce aux simulations de Monte Carlo Metropolis. 
-Les hyopthèses sont les suivantes : on demande d'abord que le système soit à l'équilibre thermodynamique avec un réservoir de chaleur ; et on demande également que le système respecte le bilan détaillé. On obtient alors deux deux dynamiques possibles : la dynamique de Glauber permet de simuler les systèmes dans l'ensemble grand-canonique, tandis que la dynamique de Kawasaki permet de simuler les systpèmes dans l'ensemble canonique.
-La première méthode est en parfait accord avec les reśultats de la matrice de transfert, et nous donne donc peu d'informations nouvelles.  C'est donc naturellement dans la dynamique de Kawasaki que les simulations de Monte Carlo pour un modèle SOS prennent tout leur sens.
-On a également discuté du temps d'équilibrage et de corrélation, qui permettent d'obtenir des résultats précis en très peu de temps de calcul. Bien que ces simulations soient rapides comparé au modèle d'Ising (une vingtaine de minutes environ lorsque le code est optimisé), il est nécessaire d'optimiser le code via la parallélisation, ou un changement de pRNG.
+In this chapter, we have explained how to compute expectation values of observables in our system, thanks to the Monte Carlo Metropolis algorithm. For that, we need to suppose that the system is in thermal equilibrium with a heat bath, and that it respects detailed balance. We have two different possible algorithms : the Glauber dynamics allows to study the systems in the grand-canonical ensemble, while the Kawasaki dynamics is for canonical ones. Nevertheless, since the transfer matrix method gives exact results for the grand-canonical ensemble, only the Kawasaki dynamics is relevant for SOS models. 
+
+In addition to that, measuring the free energy of the ssytem is not an easy task, as we can only compute its derivative. The first method we have presented is about progressively decoupling a layer of the system, even though for SOS models, which do not possess a bulk energy, the method does not work. Another method is to integate over the conjugate variable coupled to the total height, which is the chemical potential. This method does not work for Kawasaki algorithms. 
+Since as we have said, Glauber simulations are not relevant for our models, we find that we have no way to compute the free energy in Monte Carlo methods for the only relevant ensemble which is the canonical one. In a latter chapter, we will see how to fix this issue.

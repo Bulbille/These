@@ -83,12 +83,12 @@
 \newlabel{modBFT}{{1.96}{19}{Model B dynamics}{equation.1.2.96}{}}
 \citation{niss_history_2005,niss_history_2009}
 \citation{gupta_phase_1988}
-\citation{bellac_equilibrium_2004}
-\citation{aizenman_proof_1981}
 \newlabel{bstep2}{{1.99}{20}{Model B dynamics}{equation.1.2.99}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {1.3}Lattice models}{20}{section.1.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.3.1}The Ising model}{20}{subsection.1.3.1}\protected@file@percent }
 \newlabel{hamil-ising}{{1.104}{20}{The Ising model}{equation.1.3.104}{}}
+\citation{bellac_equilibrium_2004}
+\citation{aizenman_proof_1981}
 \citation{de_jongh_experiments_1974,wp_wold_ising_2000,ikeda_neutron_1973}
 \citation{onsager_crystal_1944}
 \@writefile{lof}{\contentsline {figure}{\numberline {1.4}{\ignorespaces Snapshot of Monte Carlo simulations of the Ising model for two different temperatures in two dimensions($T=0.7 T_C$ (left) and $T=0.95 T_C$ (right)) with prediodic boundary conditions in $x$ and fixed ones in$y$.\relax }}{21}{figure.caption.6}\protected@file@percent }
@@ -135,8 +135,8 @@
 \citation{girot_conical_2019}
 \citation{derks_suppression_2006}
 \citation{berthier_nonequilibrium_2002,berthier_shearing_2002}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.8}{\ignorespaces Free energy per site $F(L')$ with respect to the number of sites $L'$ compared to the thermodynamic value $F(\infty )$, for a system of maximum height $L=100$, $\beta =1$, $J=1$ and $V(h_i)=0$.\relax }}{30}{figure.caption.10}\protected@file@percent }
-\newlabel{fig-thermo-libre}{{1.8}{30}{Free energy per site $F(L')$ with respect to the number of sites $L'$ compared to the thermodynamic value $F(\infty )$, for a system of maximum height $L=100$, $\beta =1$, $J=1$ and $V(h_i)=0$.\relax }{figure.caption.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.8}{\ignorespaces Free energy per site $\Omega (L')$ with respect to the number of sites $L'$ compared to the thermodynamic value $\Omega (\infty )$, for a system of maximum height $L=100$, $\beta =1$, $J=1$ and $V(h_i)=0$.\relax }}{30}{figure.caption.10}\protected@file@percent }
+\newlabel{fig-thermo-libre}{{1.8}{30}{Free energy per site $\Omega (L')$ with respect to the number of sites $L'$ compared to the thermodynamic value $\Omega (\infty )$, for a system of maximum height $L=100$, $\beta =1$, $J=1$ and $V(h_i)=0$.\relax }{figure.caption.10}{}}
 \newlabel{longueur-correl-thermo}{{1.142}{30}{Matrice de Transfert}{equation.1.3.142}{}}
 \citation{leung_field_1986.bray_coarsening_2000}
 \citation{derks_suppression_2006,thiebaud_nonequilibrium_2010}
@@ -153,82 +153,86 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {1.10}{\ignorespaces Snapshot of an Ising model with respect to the shear \textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {eq-cisaillement}\unskip \@@italiccorr )}} with Kawasaki dynamics.\relax }}{33}{figure.caption.11}\protected@file@percent }
 \newlabel{snap-ising-shear}{{1.10}{33}{Snapshot of an Ising model with respect to the shear \eqref {eq-cisaillement} with Kawasaki dynamics.\relax }{figure.caption.11}{}}
 \citation{metropolis_monte_1949}
-\@writefile{toc}{\contentsline {chapter}{\numberline {2}M\IeC {\'e}thodes num\IeC {\'e}riques}{35}{chapter.2}\protected@file@percent }
+\citation{noauthor_mesocentre_nodate}
+\citation{paul_gersberg_github_2020}
+\@writefile{toc}{\contentsline {chapter}{\numberline {2}Numerical methods}{35}{chapter.2}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{chap-sim}{{2}{35}{Méthodes numériques}{chapter.2}{}}
+\newlabel{chap-sim}{{2}{35}{Numerical methods}{chapter.2}{}}
 \citation{newman_monte_1999}
-\@writefile{toc}{\contentsline {section}{\numberline {2.1}Estimateur}{36}{section.2.1}\protected@file@percent }
 \citation{wansleben_monte_1991}
-\newlabel{tau_cor}{{2.6}{37}{Estimateur}{equation.2.1.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.2}Algorithme de Monte Carlo Metropolis}{37}{section.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2.1}Estimator}{36}{section.2.1}\protected@file@percent }
+\newlabel{tau_cor}{{2.6}{37}{Estimator}{equation.2.1.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Monte Carlo Metropolis algorithm}{37}{section.2.2}\protected@file@percent }
+\newlabel{norm}{{2.9}{37}{Monte Carlo Metropolis algorithm}{equation.2.2.9}{}}
 \citation{newman_monte_1999}
 \citation{glauber_timedependent_1963}
-\newlabel{norm}{{2.9}{38}{Algorithme de Monte Carlo Metropolis}{equation.2.2.9}{}}
-\newlabel{p-eq-mc}{{2.11}{38}{Algorithme de Monte Carlo Metropolis}{equation.2.2.11}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}Algorithme de Glauber}{39}{subsection.2.2.1}\protected@file@percent }
-\newlabel{taux-transition-metropolis}{{2.17}{39}{Algorithme de Glauber}{equation.2.2.17}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces Courbe de l'\IeC {\'e}nergie (haut) et fonction d'auto-corr\IeC {\'e}lation (bas) dansavec un algorithme de Glauber \IeC {\`a} partir d'une condition initiale \IeC {\`a} $T=\infty $, pour diff\IeC {\'e}rentes temp\IeC {\'e}ratures.\relax }}{40}{figure.caption.12}\protected@file@percent }
-\newlabel{eq-glau}{{2.1}{40}{Courbe de l'énergie (haut) et fonction d'auto-corrélation (bas) dansavec un algorithme de Glauber à partir d'une condition initiale à $T=\infty $, pour différentes températures.\relax }{figure.caption.12}{}}
+\newlabel{p-eq-mc}{{2.11}{38}{Monte Carlo Metropolis algorithm}{equation.2.2.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}Glauber dynamics}{38}{subsection.2.2.1}\protected@file@percent }
+\newlabel{taux-transition-metropolis}{{2.17}{39}{Glauber dynamics}{equation.2.2.17}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces Plot of the energy per site (top) and the autocorrelation function (bottom) with Glauber dynamics from an initial state where $h_i=0$, for different temperatures.\relax }}{40}{figure.caption.12}\protected@file@percent }
+\newlabel{eq-glau}{{2.1}{40}{Plot of the energy per site (top) and the autocorrelation function (bottom) with Glauber dynamics from an initial state where $h_i=0$, for different temperatures.\relax }{figure.caption.12}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces Mean height value per site with respect to $\mu $ different system size $L$ both by Glauber dynamics and diagonalization of the transfer matrix.\relax }}{40}{figure.caption.12}\protected@file@percent }
+\newlabel{eq-glau}{{2.2}{40}{Mean height value per site with respect to $\mu $ different system size $L$ both by Glauber dynamics and diagonalization of the transfer matrix.\relax }{figure.caption.12}{}}
 \citation{kawasaki_diffusion_1966}
-\citation{vasilyev_monte_2007}
-\citation{vasilyev_monte_2007}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}Algorithme de Kawasaki}{41}{subsection.2.2.2}\protected@file@percent }
-\citation{vasilyev_monte_2007}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces Courbe de l'\IeC {\'e}nergie (haut) et fonction d'auto-corr\IeC {\'e}lation (bas) avec un algorithme de Kawasaki \IeC {\`a} partir d'une condition initiale \IeC {\`a} $T=\infty $, pour diff\IeC {\'e}rentes temp\IeC {\'e}ratures.\relax }}{42}{figure.caption.13}\protected@file@percent }
-\newlabel{eq-kaw}{{2.2}{42}{Courbe de l'énergie (haut) et fonction d'auto-corrélation (bas) avec un algorithme de Kawasaki à partir d'une condition initiale à $T=\infty $, pour différentes températures.\relax }{figure.caption.13}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}Kawasaki dynamics}{41}{subsection.2.2.2}\protected@file@percent }
+\citation{vasilyev_universal_2009}
+\citation{vasilyev_universal_2009}
+\citation{vasilyev_universal_2009}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces Plot of the energy per site (top) and the autocorrelation function (bottom) with Kawasaki dynamics from an initial state where $h_i=0$, for different temperatures.\relax }}{42}{figure.caption.13}\protected@file@percent }
+\newlabel{eq-kaw}{{2.3}{42}{Plot of the energy per site (top) and the autocorrelation function (bottom) with Kawasaki dynamics from an initial state where $h_i=0$, for different temperatures.\relax }{figure.caption.13}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.3}Computing size depenedent free energy}{42}{section.2.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}The Layer method}{42}{subsection.2.3.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces D\IeC {\'e}couplage progressif de la $k$-i\IeC {\`e}me couche du syst\IeC {\`e}me afin de calculer la variation de l'\IeC {\'e}nergie libre gr\IeC {\^a}ce \IeC {\`a} l'Hamiltonien de transition. Les liens en bleu ont une \IeC {\'e}nergie de $\beta J$, les liens en rouge une \IeC {\'e}nergie de $\lambda \beta J $ et les liens en vert une \IeC {\'e}nergie de $ (1-\lambda ) \beta J$. Reproduction 2D de \cite  {vasilyev_monte_2007}.\relax }}{43}{figure.caption.14}\protected@file@percent }
-\newlabel{decouplage}{{2.3}{43}{Découplage progressif de la $k$-ième couche du système afin de calculer la variation de l'énergie libre grâce à l'Hamiltonien de transition. Les liens en bleu ont une énergie de $\beta J$, les liens en rouge une énergie de $\lambda \beta J $ et les liens en vert une énergie de $ (1-\lambda ) \beta J$. Reproduction 2D de \cite {vasilyev_monte_2007}.\relax }{figure.caption.14}{}}
+\newlabel{casmir-mc}{{2.22}{42}{The Layer method}{equation.2.3.22}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces Progessive decouplage of the $k$-th layer of the system in order to compute the freen energy through the Crossover Hamiltonian. Blue bonds have an energy of $\beta J$, red ones an energy of $\lambda \beta J $ and the green ones an energy of$ (1-\lambda ) \beta J$. Reproduction 2D of \cite  { vasilyev_universal_2009}.\relax }}{43}{figure.caption.14}\protected@file@percent }
+\newlabel{decouplage}{{2.4}{43}{Progessive decouplage of the $k$-th layer of the system in order to compute the freen energy through the Crossover Hamiltonian. Blue bonds have an energy of $\beta J$, red ones an energy of $\lambda \beta J $ and the green ones an energy of$ (1-\lambda ) \beta J$. Reproduction 2D of \cite { vasilyev_universal_2009}.\relax }{figure.caption.14}{}}
 \newlabel{hamil-trans}{{2.23}{43}{The Layer method}{equation.2.3.23}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}The Lopes Cardozo method}{44}{subsection.2.3.2}\protected@file@percent }
 \citation{lopes_cardozo_critical_2014}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}The Lopes Cardozo method}{44}{subsection.2.3.2}\protected@file@percent }
 \citation{martin_ankerl_fast_nodate}
-\newlabel{casimir-diff-omega}{{2.30}{45}{The Lopes Cardozo method}{equation.2.3.30}{}}
-\newlabel{integration-cardozo}{{2.32}{45}{The Lopes Cardozo method}{equation.2.3.32}{}}
+\newlabel{integration-cardozo}{{2.30}{45}{The Lopes Cardozo method}{equation.2.3.30}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.4}Tips and tricks}{45}{section.2.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {2.5}Conclusion}{46}{section.2.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {3}Equilibrium Interface models and their finite size effects}{49}{chapter.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}Equilibrium Interface models and their finite size effects}{47}{chapter.3}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {3.1}The Casimir effect}{49}{section.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1}Quantum Casimir effect}{49}{subsection.3.1.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}Lifshitz Theory}{53}{subsection.3.1.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.3}Critical Casimir effect}{56}{subsection.3.1.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.3.1}Bulk scaling for near critical systems}{56}{subsubsection.3.1.3.1}\protected@file@percent }
-\newlabel{rg}{{3.45}{56}{Bulk scaling for near critical systems}{equation.3.1.45}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.3.2}Finite size scaling}{57}{subsubsection.3.1.3.2}\protected@file@percent }
-\newlabel{ffs}{{3.55}{58}{Finite size scaling}{equation.3.1.55}{}}
-\newlabel{ffs}{{3.59}{58}{Finite size scaling}{equation.3.1.59}{}}
-\newlabel{casfreeenergy}{{3.64}{59}{Finite size scaling}{equation.3.1.64}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.2}Finite size scaling in one dimensional interface models}{60}{section.3.2}\protected@file@percent }
-\newlabel{sec-continuous-model}{{3.2}{60}{Finite size scaling in one dimensional interface models}{section.3.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Continuous models in one dimension}{60}{subsection.3.2.1}\protected@file@percent }
-\newlabel{prog}{{3.66}{60}{Continuous models in one dimension}{equation.3.2.66}{}}
-\newlabel{clq}{{3.83}{62}{Continuous models in one dimension}{equation.3.2.83}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}The confined elastic line}{62}{subsection.3.2.2}\protected@file@percent }
-\newlabel{pfree}{{3.87}{62}{The confined elastic line}{equation.3.2.87}{}}
-\newlabel{corel}{{3.88}{63}{The confined elastic line}{equation.3.2.88}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}The Airy line}{64}{subsection.3.2.3}\protected@file@percent }
-\newlabel{h1}{{3.107}{65}{The Airy line}{equation.3.2.107}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.3}The confined solid on solid model}{67}{section.3.3}\protected@file@percent }
-\newlabel{elam}{{3.120}{68}{The confined solid on solid model}{equation.3.3.120}{}}
-\newlabel{aeq}{{3.132}{69}{The confined solid on solid model}{equation.3.3.132}{}}
-\newlabel{thetamas}{{3.142}{70}{The confined solid on solid model}{equation.3.3.142}{}}
-\newlabel{theta}{{3.148}{71}{The confined solid on solid model}{equation.3.3.148}{}}
-\newlabel{mde}{{3.160}{73}{The confined solid on solid model}{equation.3.3.160}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Numerical tests of finite size dependence}{74}{subsection.3.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}The Casimir effect}{47}{section.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1}Quantum Casimir effect}{47}{subsection.3.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}Lifshitz Theory}{51}{subsection.3.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.3}Critical Casimir effect}{54}{subsection.3.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.3.1}Bulk scaling for near critical systems}{54}{subsubsection.3.1.3.1}\protected@file@percent }
+\newlabel{rg}{{3.45}{54}{Bulk scaling for near critical systems}{equation.3.1.45}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.3.2}Finite size scaling}{55}{subsubsection.3.1.3.2}\protected@file@percent }
+\newlabel{ffs}{{3.55}{56}{Finite size scaling}{equation.3.1.55}{}}
+\newlabel{ffs}{{3.59}{56}{Finite size scaling}{equation.3.1.59}{}}
+\newlabel{casfreeenergy}{{3.64}{57}{Finite size scaling}{equation.3.1.64}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Finite size scaling in one dimensional interface models}{58}{section.3.2}\protected@file@percent }
+\newlabel{sec-continuous-model}{{3.2}{58}{Finite size scaling in one dimensional interface models}{section.3.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Continuous models in one dimension}{58}{subsection.3.2.1}\protected@file@percent }
+\newlabel{prog}{{3.66}{58}{Continuous models in one dimension}{equation.3.2.66}{}}
+\newlabel{clq}{{3.83}{60}{Continuous models in one dimension}{equation.3.2.83}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}The confined elastic line}{60}{subsection.3.2.2}\protected@file@percent }
+\newlabel{pfree}{{3.87}{60}{The confined elastic line}{equation.3.2.87}{}}
+\newlabel{corel}{{3.88}{61}{The confined elastic line}{equation.3.2.88}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}The Airy line}{62}{subsection.3.2.3}\protected@file@percent }
+\newlabel{h1}{{3.107}{63}{The Airy line}{equation.3.2.107}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}The confined solid on solid model}{65}{section.3.3}\protected@file@percent }
+\newlabel{elam}{{3.120}{66}{The confined solid on solid model}{equation.3.3.120}{}}
+\newlabel{aeq}{{3.132}{67}{The confined solid on solid model}{equation.3.3.132}{}}
+\newlabel{thetamas}{{3.142}{68}{The confined solid on solid model}{equation.3.3.142}{}}
+\newlabel{theta}{{3.148}{69}{The confined solid on solid model}{equation.3.3.148}{}}
+\newlabel{mde}{{3.160}{71}{The confined solid on solid model}{equation.3.3.160}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Numerical tests of finite size dependence}{72}{subsection.3.3.1}\protected@file@percent }
 \citation{derks2006}
 \citation{smith2008,smith2010}
 \citation{hem1996}
 \citation{netz2003,dzub2002,chak2003,chak2004,lowe2009,glan2012,klym2016}
 \citation{dem2016,pon2017}
 \citation{dean1996}
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Driven model C interfaces}{75}{chapter.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Driven model C interfaces}{73}{chapter.4}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}Introduction}{75}{section.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Introduction}{73}{section.4.1}\protected@file@percent }
 \citation{katz1984,zia1991,leun1993,schm1995,schm1998}
 \citation{katz1984,leun1993,schm1995,schm1998}
 \citation{leun1993}
@@ -237,35 +241,35 @@
 \citation{hohe1977}
 \citation{bray2001,bray2002}
 \citation{derks2006}
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}The underling two field model}{77}{section.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}The underling two field model}{75}{section.4.2}\protected@file@percent }
 \citation{bray2001,bray2002}
-\newlabel{dyn1}{{4.17}{80}{The underling two field model}{equation.4.2.17}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}Effective interface dynamics}{80}{section.4.3}\protected@file@percent }
-\newlabel{eqpsi}{{4.18}{80}{Effective interface dynamics}{equation.4.3.18}{}}
+\newlabel{dyn1}{{4.17}{78}{The underling two field model}{equation.4.2.17}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Effective interface dynamics}{78}{section.4.3}\protected@file@percent }
+\newlabel{eqpsi}{{4.18}{78}{Effective interface dynamics}{equation.4.3.18}{}}
 \citation{bray2001,bray2002}
-\newlabel{mfsig}{{4.25}{81}{Effective interface dynamics}{equation.4.3.25}{}}
-\newlabel{eqdelta}{{4.28}{82}{Effective interface dynamics}{equation.4.3.28}{}}
-\newlabel{em}{{4.29}{82}{Effective interface dynamics}{equation.4.3.29}{}}
-\newlabel{dyn}{{4.35}{83}{Effective interface dynamics}{equation.4.3.35}{}}
-\newlabel{eqmaind}{{4.37}{83}{Effective interface dynamics}{equation.4.3.37}{}}
+\newlabel{mfsig}{{4.25}{79}{Effective interface dynamics}{equation.4.3.25}{}}
+\newlabel{eqdelta}{{4.28}{80}{Effective interface dynamics}{equation.4.3.28}{}}
+\newlabel{em}{{4.29}{80}{Effective interface dynamics}{equation.4.3.29}{}}
+\newlabel{dyn}{{4.35}{81}{Effective interface dynamics}{equation.4.3.35}{}}
+\newlabel{eqmaind}{{4.37}{81}{Effective interface dynamics}{equation.4.3.37}{}}
 \citation{hem1996}
 \citation{dem2016}
 \citation{dean2016}
 \citation{leun1993}
 \citation{gros2015}
-\@writefile{toc}{\contentsline {section}{\numberline {4.4}A model of active interfaces}{85}{section.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}A model of active interfaces}{83}{section.4.4}\protected@file@percent }
 \citation{lu2015}
 \citation{zia1991}
 \citation{derks2006}
 \citation{smith2008,smith2010}
-\@writefile{toc}{\contentsline {section}{\numberline {4.5}Conclusions}{87}{section.4.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Beyond Solid-On-Solid : the Particles-Over-Particles model}{91}{chapter.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}Conclusions}{85}{section.4.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Beyond Solid-On-Solid : the Particles-Over-Particles model}{89}{chapter.5}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Evaluating Fourier integrals}{95}{appendix.A}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Evaluating Fourier integrals}{93}{appendix.A}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{key}{{A.4}{95}{Evaluating Fourier integrals}{equation.A.0.4}{}}
+\newlabel{key}{{A.4}{93}{Evaluating Fourier integrals}{equation.A.0.4}{}}
 \bibdata{biblio.bib}
 \bibcite{dean_effect_2020}{{1}{}{{}}{{}}}
 \bibcite{noauthor_mesocentre_nodate}{{2}{}{{}}{{}}}
@@ -321,10 +325,11 @@
 \bibcite{smith_interfaces_2008-1}{{52}{}{{}}{{}}}
 \bibcite{smith_interfaces_2008}{{53}{}{{}}{{}}}
 \bibcite{metropolis_monte_1949}{{54}{}{{}}{{}}}
-\bibcite{newman_monte_1999}{{55}{}{{}}{{}}}
-\bibcite{wansleben_monte_1991}{{56}{}{{}}{{}}}
-\bibcite{glauber_timedependent_1963}{{57}{}{{}}{{}}}
-\bibcite{kawasaki_diffusion_1966}{{58}{}{{}}{{}}}
-\bibcite{lopes_cardozo_critical_2014}{{59}{}{{}}{{}}}
-\bibcite{martin_ankerl_fast_nodate}{{60}{}{{}}{{}}}
+\bibcite{paul_gersberg_github_2020}{{55}{}{{}}{{}}}
+\bibcite{newman_monte_1999}{{56}{}{{}}{{}}}
+\bibcite{wansleben_monte_1991}{{57}{}{{}}{{}}}
+\bibcite{glauber_timedependent_1963}{{58}{}{{}}{{}}}
+\bibcite{kawasaki_diffusion_1966}{{59}{}{{}}{{}}}
+\bibcite{lopes_cardozo_critical_2014}{{60}{}{{}}{{}}}
+\bibcite{martin_ankerl_fast_nodate}{{61}{}{{}}{{}}}
 \providecommand\NAT@force@numbers{}\NAT@force@numbers

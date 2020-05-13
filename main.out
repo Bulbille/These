@@ -15,11 +15,11 @@
 \BOOKMARK [2][-]{subsection.1.3.3}{Matrice de Transfert}{section.1.3}% 15
 \BOOKMARK [1][-]{section.1.4}{Systems driven by imposed hydrodynamic flows}{chapter.1}% 16
 \BOOKMARK [1][-]{section.1.5}{Conclusion}{chapter.1}% 17
-\BOOKMARK [0][-]{chapter.2}{M\351thodes num\351riques}{}% 18
-\BOOKMARK [1][-]{section.2.1}{Estimateur}{chapter.2}% 19
-\BOOKMARK [1][-]{section.2.2}{Algorithme de Monte Carlo Metropolis}{chapter.2}% 20
-\BOOKMARK [2][-]{subsection.2.2.1}{Algorithme de Glauber}{section.2.2}% 21
-\BOOKMARK [2][-]{subsection.2.2.2}{Algorithme de Kawasaki}{section.2.2}% 22
+\BOOKMARK [0][-]{chapter.2}{Numerical methods}{}% 18
+\BOOKMARK [1][-]{section.2.1}{Estimator}{chapter.2}% 19
+\BOOKMARK [1][-]{section.2.2}{Monte Carlo Metropolis algorithm}{chapter.2}% 20
+\BOOKMARK [2][-]{subsection.2.2.1}{Glauber dynamics}{section.2.2}% 21
+\BOOKMARK [2][-]{subsection.2.2.2}{Kawasaki dynamics}{section.2.2}% 22
 \BOOKMARK [1][-]{section.2.3}{Computing size depenedent free energy}{chapter.2}% 23
 \BOOKMARK [2][-]{subsection.2.3.1}{The Layer method}{section.2.3}% 24
 \BOOKMARK [2][-]{subsection.2.3.2}{The Lopes Cardozo method}{section.2.3}% 25
