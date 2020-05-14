@@ -4,10 +4,8 @@ The top-level auxiliary file: main.aux
 The style file: unsrt.bst
 Database file #1: biblio.bib
 Warning--I didn't find a database entry for "onsager_crystal_1944"
-Warning--I didn't find a database entry for "stecki_magnetization_1994"
 Warning--I didn't find a database entry for "leung_field_1986.bray_coarsening_2000"
 Warning--I didn't find a database entry for ""
-Warning--I didn't find a database entry for "vasilyev_monte_2007"
 Warning--I didn't find a database entry for "derks2006"
 Warning--I didn't find a database entry for "smith2008"
 Warning--I didn't find a database entry for "smith2010"
@@ -36,45 +34,45 @@ Warning--I didn't find a database entry for "dean2016"
 Warning--I didn't find a database entry for "gros2015"
 Warning--I didn't find a database entry for "lu2015"
 Warning--empty publisher in l_landau_physique_1990
-You've used 61 entries,
+You've used 63 entries,
             1791 wiz_defined-function locations,
-            833 strings with 13508 characters,
-and the built_in function-call counts, 13349 in all, are:
-= -- 1223
-> -- 522
+            839 strings with 13823 characters,
+and the built_in function-call counts, 13806 in all, are:
+= -- 1262
+> -- 547
 < -- 0
-+ -- 200
-- -- 139
-* -- 1104
-:= -- 2127
-add.period$ -- 183
-call.type$ -- 61
-change.case$ -- 57
++ -- 209
+- -- 146
+* -- 1146
+:= -- 2203
+add.period$ -- 189
+call.type$ -- 63
+change.case$ -- 59
 chr.to.int$ -- 0
-cite$ -- 62
-duplicate$ -- 531
-empty$ -- 1332
-format.name$ -- 139
-if$ -- 2867
+cite$ -- 64
+duplicate$ -- 548
+empty$ -- 1373
+format.name$ -- 146
+if$ -- 2963
 int.to.chr$ -- 0
-int.to.str$ -- 61
-missing$ -- 61
-newline$ -- 307
-num.names$ -- 60
-pop$ -- 104
+int.to.str$ -- 63
+missing$ -- 63
+newline$ -- 317
+num.names$ -- 62
+pop$ -- 106
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 213
+skip$ -- 220
 stack$ -- 0
-substring$ -- 1065
-swap$ -- 61
+substring$ -- 1096
+swap$ -- 63
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 141
-width$ -- 63
-write$ -- 664
-(There were 33 warnings)
+while$ -- 145
+width$ -- 65
+write$ -- 686
+(There were 31 warnings)

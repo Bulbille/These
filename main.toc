@@ -12,8 +12,8 @@
 \contentsline {subsubsection}{\numberline {1.2.2.2}Model B dynamics}{16}{subsubsection.1.2.2.2}% 
 \contentsline {section}{\numberline {1.3}Lattice models}{20}{section.1.3}% 
 \contentsline {subsection}{\numberline {1.3.1}The Ising model}{20}{subsection.1.3.1}% 
-\contentsline {subsection}{\numberline {1.3.2}Mod\IeC {\`e}le Solid-On-Solid}{24}{subsection.1.3.2}% 
-\contentsline {subsection}{\numberline {1.3.3}Matrice de Transfert}{27}{subsection.1.3.3}% 
+\contentsline {subsection}{\numberline {1.3.2}The Solid-On-Solid Model}{24}{subsection.1.3.2}% 
+\contentsline {subsection}{\numberline {1.3.3}Matrice de Transfert}{28}{subsection.1.3.3}% 
 \contentsline {section}{\numberline {1.4}Systems driven by imposed hydrodynamic flows}{31}{section.1.4}% 
 \contentsline {section}{\numberline {1.5}Conclusion}{32}{section.1.5}% 
 \contentsline {chapter}{\numberline {2}Numerical methods}{35}{chapter.2}% 
@@ -21,7 +21,7 @@
 \contentsline {section}{\numberline {2.2}Monte Carlo Metropolis algorithm}{37}{section.2.2}% 
 \contentsline {subsection}{\numberline {2.2.1}Glauber dynamics}{38}{subsection.2.2.1}% 
 \contentsline {subsection}{\numberline {2.2.2}Kawasaki dynamics}{41}{subsection.2.2.2}% 
-\contentsline {section}{\numberline {2.3}Computing size depenedent free energy}{42}{section.2.3}% 
+\contentsline {section}{\numberline {2.3}Computing size dependent free energy}{42}{section.2.3}% 
 \contentsline {subsection}{\numberline {2.3.1}The Layer method}{42}{subsection.2.3.1}% 
 \contentsline {subsection}{\numberline {2.3.2}The Lopes Cardozo method}{44}{subsection.2.3.2}% 
 \contentsline {section}{\numberline {2.4}Tips and tricks}{45}{section.2.4}% 

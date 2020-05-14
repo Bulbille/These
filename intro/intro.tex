@@ -1,34 +1,22 @@
 \chapter*{Introduction}
 \addcontentsline{toc}{chapter}{Introduction} 
 
-{\color{blue}
-
-Every statistical model is described by an order parameter, such as the mean magnetization in a magnetic system or the polymer's mean orientation. During a continuous phase transition, the correlation length diverges up to a macroscopical scale. When this length scale becomes as the same order of magnitude as the experimental or numerical cell, finite size effect arise, such as the critical Casimir effect.
+Every statistical model is described by an order parameter, such as the mean magnetization in a magnetic system or the polymer's mean orientation. During a continuous phase transition, the correlation length diverges up to a macroscopical scale. When this length scale becomes as the same order of magnitude as the experimental or numerical cell, finite size effect arises, such as the critical Casimir effect.
 
 We may study the statistical properties of interfaces between two phases through different though complementary methods. Historically, the first method was through lattice models, and more precisely the Ising model. Those models are well-suited for numerical analysis due to their discrete nature, while posing analytical challenges due to the big number of degrees of freedom. The Solid-On-Solid model is an approximation of the Ising model in $d-1$ dimensions allowing us to use the transfer matrix method, which holds analytical results directly comparable with numerical simulations.
-From the Ising model arose some mean-field approximations, with the Landau-Ginzburg Hamiltonian. This method allows for relatively easy analytical computations of the two-point space correlation function of the system, which gives us some insight about the properties of the interfaces. 
+From the Ising model arises some mean-field approximations, with the Landau-Ginzburg Hamiltonian. This method allows for relatively easy analytical computations of the two-point space correlation function of the system, which gives us some insight about the properties of the interfaces. 
 From the mean field theory we can derive the mean-field equations of a fluctuating interface, which then resembles to a brownian walker. This powerful analogy allows the use of quantum mechanics formalism, as we will see later on.
 
 Systems may exist in many different contexts. Knowing how the thermodynamical ensemble in which we place the system affects its statistical properties is a key to understanding how to transpose the analytical results to actual experiments. 
-A special attention will also be brought to the free energy. From the free energy between a bulk and an interface we can compute the its surface tension. The derivative of the free energy with respect to the length of the system also gives us a confinement force, called the Casimir force. This force is exerced on the boundary conditions because of the confinement of fluctuations. 
+A special attention will also be brought to the free energy. From the free energy between a bulk and an interface we can compute the its surface tension. The derivative of the free energy with respect to the length of the system also gives us a confinement force, called the Casimir force. This force is exerted on the boundary conditions because of the confinement of fluctuations. 
 
-This outline of this thesis is as following :
+The thesis' outline is as following :
 \begin{itemize}
-    \item The first chapter derives the interface dynamics from mean field theory. In doing so, we will define all the main interface models that exist, and explain the main results from litterature. 
+    \item The first chapter derives the interface dynamics from mean field theory. In doing so, we will define all the main interface models that exist, and explain the main results from literature. 
     \item In the second chapter we explain how do numerical simulations work, some methods to compute the free energy in lattice gas models, and some usefull tips.
-    \item The third chapter is devoted to finite size effects, computed for all the models presented in chapter one, and compoared to numerical results. 
+    \item The third chapter is devoted to finite size effects, computed for all the models presented in chapter one, and compared to numerical results. 
     \item The fourth chapter is about a paper we've published \cite{dean_effect_2020}. This paper is about the computation of the surface tension of a sheared interface, where we've coupled the field with a virtual one in order to proceed with the computation.
     \item In the last chapter we introduce a new lattice model which is a better approximation to the Ising model than the Solid-On-Solid model. This new model, the Particles-Over-Particles model, takes into account the entropy, in comparison to SOS.
 \end{itemize}
 
-All our numerical efforts benefited from the numerical resources of the PSMN at the ENS
-de Lyon [22] and this work was financed by the ERC grant OUTEFLUCOP with principal
-investigator Sergio Ciliberto (CNRS, ENS de Lyon). This work was performed during three years
-at the Laboratoire de Physique of the ENS de Lyon, under the direction of Peter Holdsworth.
-
-
-
-All our numerical efforts benefited from the numerical resources of the MCIA at 
-
-This thesis has been posible thanks to the ANR's grant FISICS, the Laboratoire Onde Matière d'Aquitaine from 'Université de Bordeaux, and the Laboratoire de Physique  from ENS Lyon. The numerical simulations benefited from the numerical resources of the Mésocentre de Calcul Intensif Aquitain \cite{noauthor_mesocentre_nodate}, with the help of Nguyen Ky Nguyen. I also wish to thank Josiane Parzych (LOMA) and Laurence Mauduit (ENS LYON) for all the administration procedures.
-}
+This thesis has been possible thanks to the ANR's grant FISICS, the Laboratoire Onde Matière d'Aquitaine from Université de Bordeaux, and the Laboratoire de Physique  from ENS Lyon. The numerical simulations benefited from the numerical resources of the Mésocentre de Calcul Intensif Aquitain \cite{noauthor_mesocentre_nodate}, with the help of Nguyen Ky Nguyen. I also wish to thank Josiane Parzych (LOMA) and Laurence Mauduit (ENS LYON) for all the administration procedures.

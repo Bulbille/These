@@ -49,6 +49,17 @@ Javier Atencia and David~J. Beebe.
 \newblock Controlled microfluidic interfaces.
 \newblock {\em Nature}, 437(7059):648--655, September 2005.
 
+\bibitem{bray_interface_2001}
+Alan~J. Bray, Andrea Cavagna, and Rui D.~M. Travasso.
+\newblock Interface fluctuations under shear.
+\newblock {\em Physical Review E}, 64(1):012102, June 2001.
+
+\bibitem{bray_interface_2001-1}
+Alan~J. Bray, Andrea Cavagna, and Rui D.~M. Travasso.
+\newblock Interface fluctuations, {Burgers} equations, and coarsening under
+  shear.
+\newblock {\em Physical Review E}, 65(1), December 2001.
+
 \bibitem{edwards_surface_1982}
 S.~F. Edwards and D.~R. Wilkinson.
 \newblock The {Surface} {Statistics} of a {Granular} {Aggregate}.
@@ -143,6 +154,12 @@ Tobias Preis, Peter Virnau, Wolfgang Paul, and Johannes~J. Schneider.
   {Ising} model.
 \newblock {\em Journal of Computational Physics}, 228(12):4468--4477, July
   2009.
+
+\bibitem{stecki_magnetization_1994}
+J.~Stecki, A.~Maciol/ek, and K.~Olaussen.
+\newblock Magnetization profiles of the planar fluctuating interface in a
+  \textit{d} =2 {Ising} strip.
+\newblock {\em Physical Review B}, 49(2):1092--1103, January 1994.
 
 \bibitem{abraham_interface_1976}
 D.~B. Abraham and P.~Reed.
@@ -281,17 +298,6 @@ Marine Thi{\'e}baud and Thomas Bickel.
 \newblock Nonequilibrium fluctuations of an interface under shear.
 \newblock {\em Physical Review E}, 81(3), March 2010.
 
-\bibitem{bray_interface_2001}
-Alan~J. Bray, Andrea Cavagna, and Rui D.~M. Travasso.
-\newblock Interface fluctuations under shear.
-\newblock {\em Physical Review E}, 64(1):012102, June 2001.
-
-\bibitem{bray_interface_2001-1}
-Alan~J. Bray, Andrea Cavagna, and Rui D.~M. Travasso.
-\newblock Interface fluctuations, {Burgers} equations, and coarsening under
-  shear.
-\newblock {\em Physical Review E}, 65(1), December 2001.
-
 \bibitem{smith_driven_2010}
 Thomas~HR Smith.
 \newblock {\em Driven interfaces in the {Ising} model}.
@@ -344,6 +350,12 @@ Kyozi Kawasaki.
 \newblock Diffusion {Constants} near the {Critical} {Point} for
   {Time}-{Dependent} {Ising} {Models}. {I}.
 \newblock {\em Physical Review}, 145(1):224--230, May 1966.
+
+\bibitem{vasilyev_universal_2009}
+O.~Vasilyev, A.~Gambassi, A.~Macio{\l }ek, and S.~Dietrich.
+\newblock Universal scaling functions of critical {Casimir} forces obtained by
+  {Monte} {Carlo} simulations.
+\newblock {\em Physical Review E}, 79(4), April 2009.
 
 \bibitem{lopes_cardozo_critical_2014}
 David Lopes~Cardozo, Hugo Jacquin, and Peter C.~W. Holdsworth.
