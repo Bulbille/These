@@ -5,7 +5,7 @@
 In this chapter we will analyse the dynamics of statistical systems. The analysis will allow us to understand how phase transitions - in particular those who possess a phase separation - occur dynamically \cite{hohenberg_theory_1977}. The most famous example is the Ising model without any external field, its order parameter being the total magnetization. 
 
 In the high temperature phase, the system is homogeneous and its total magnetization is zero. Below the critical temperature, when the order parameter is conserved (for example with a Kawasaki dynamic or Model B), the system will locally separate into two phases of opposite mean magnetization separated by and interface, this interface minimizing the surface energy between both phases.
-When the order parameter is not conserved (for example Glauber dynamics or Model A), a spontaneous symmetry breaking will make one of the two phases take over the whole system. In a continuous phase transition where the critical point is reached from the disordered state to the ordered stated, the domain size, which is equal to the system's correlation length, diverges close to the critical temperature $T_C$. In a thermodynamical system, it becomes infinite, implying that the system takes an infinite amount of time to reach equilibrium : it's the critical slowing down. The process of domain growth is known as coarsening and phase ordering kinetics is the theory that has been developed to understand the phenomenon of coarsening\cite{bray_theory_1994}. {\color{purple} In Fig \ref{clusterization}, we show an example of coarsening in the Ising model with respect to time.}
+When the order parameter is not conserved (for example Glauber dynamics or Model A), a spontaneous symmetry breaking will make one of the two phases take over the whole system. In a continuous phase transition where the critical point is reached from the disordered state to the ordered stated, the domain size, which is equal to the system's correlation length, diverges close to the critical temperature $T_C$. In a thermodynamical system, it becomes infinite, implying that the system takes an infinite amount of time to reach equilibrium : it's the critical slowing down. The process of domain growth is known as coarsening and phase ordering kinetics is the theory that has been developed to understand the phenomenon of coarsening\cite{bray_theory_1994}.  In Fig \ref{clusterization}, we show an example of coarsening in the Ising model with respect to time.
 
 Furthermore, for systems with a conserved order parameter which separate into two phases, the two phases will be separated by an interface. This interface will be characterised by a surface tension, its average position will be fixed but it will exhibit fluctuations. Later we will see how model of phase ordering kinetics and be used to determine the static and dynamical properties of interfaces between two coexisting phases. 
 
@@ -16,7 +16,7 @@ Furthermore, for systems with a conserved order parameter which separate into tw
     \label{clusterization}
 \end{figure}
 
-While the phase diagram of a system can be determined via its Hamiltonian and equilibrium statistical mechanics, the dynamics of coarsening depends on {\color{red} the} details of the systems dynamics that do not show up in single time thermodynamic observables. Therefore, one needs to construct dynamical models that capture the underlying evolution of the state of the system. In particular, there is a big difference between systems where the order parameter is conserved and those where it is not conserved.
+While the phase diagram of a system can be determined via its Hamiltonian and equilibrium statistical mechanics, the dynamics of coarsening depends on the details of the systems dynamics that do not show up in single time thermodynamic observables. Therefore, one needs to construct dynamical models that capture the underlying evolution of the state of the system. In particular, there is a big difference between systems where the order parameter is conserved and those where it is not conserved.
 %%%%%%%%%%%%%%%%%%%%%%
     \section{Models for equilibrium fields}
 %%%%%%%%%%%%%%%%%%%%%%    
@@ -130,7 +130,7 @@ We now consider the standard Landau-Ginzburg Hamiltonian \cite{l_landau_physique
 H[\phi] = \int d\bx \ \frac{\kappa}{2}[\nabla \phi]^2 + V(\phi)
 \label{landau-ginzburg-hamiltonian}
 \end{equation}
-{\color{blue}
+
 The first term represents an energetic cost of varying the field $\phi$. The second potential term has two minima at $\phi=\pm \phi_c$, and, in the low temperature or phase separated phase, without loss of generality we can chose $V(\phi_c)=V(-\phi_c)$, while it has a single minimum at $\phi=0$ in the high temperature phase.
 
 The standard potential for phase separations, called the $\phi^4$ model, is given by the double-well
@@ -144,7 +144,7 @@ H_1 &= - \int d^dx h(\bx)\phi(\bx)
 \label{champ-externe}
 \end{align}
 As we in Fig \ref{double-puits-temperature}, the addition of an uniform external field does favour one phase over the other one.
-}
+
 
 \begin{figure}
 \centering
@@ -194,7 +194,7 @@ The average value of $\phi$
 \begin{equation}
 \overline \phi(t) = \frac{1}{V}\int d\bx\ \phi(\bx,t)
 \end{equation}
-is clearly not generally conserved by this dynamics. {\color{purple} Model A corresponds to a system in the grand-canonical ensemble, where $\alpha$ is the kinetic coefficient related to the relaxation time of the system \cite{hohenberg_theory_1977}.}
+is clearly not generally conserved by this dynamics. Model A corresponds to a system in the grand-canonical ensemble, where $\alpha$ is the kinetic coefficient related to the relaxation time of the system \cite{hohenberg_theory_1977}.
 
 \textbf{Model B dynamics} amounts to choosing
 \begin{equation}
@@ -221,20 +221,20 @@ as one can verify the two noises have the same correlation function. In this way
 \begin{equation}
 \frac{\partial \phi(\bx)}{\partial t}= \nabla\cdot[ D\nabla \frac{\delta H}{\delta \phi(\bx)} + {\boldsymbol\eta}(\bx,t)]
 \end{equation}
-From this it is easy to see that the order parameter is conserved - thus model B describes conserved phase ordering dynamics. {\color{purple}This model corresponds to the canonical ensemble, and is useful to describe diffusion or accretion systems.
+From this it is easy to see that the order parameter is conserved - thus model B describes conserved phase ordering dynamics. This model corresponds to the canonical ensemble, and is useful to describe diffusion or accretion systems.
 
-Without the noise fluctuations, equations \eqref{MA} and \eqref{MB} are called the Time Dependant Ginzburg-Landau equation \cite{tuszynski_exact_1984} and the Cahn-Hilliard equation\cite{cahn_free_1958} equations, which give the mean field's dynamics.}
+Without the noise fluctuations, equations \eqref{MA} and \eqref{MB} are called the Time Dependant Ginzburg-Landau equation \cite{tuszynski_exact_1984} and the Cahn-Hilliard equation\cite{cahn_free_1958} equations, which give the mean field's dynamics.
 
 
 %%%%%%%%%%%%%%%%%%%%%
 \subsection{Surface tension}
 %%%%%%%%%%%%%%%%%%%%%
 
-{\color{purple}In order to minimize the free energy in a non-conserved system, we can simply choose $\phi(\bx) =\phi_c$ or $\phi(\bx) =-\phi_c$ everywhere, which corresponds to a free energy $F=H[\phi_c]=0$.} However in a system with a conserved order parameter
+In order to minimize the free energy in a non-conserved system, we can simply choose $\phi(\bx) =\phi_c$ or $\phi(\bx) =-\phi_c$ everywhere, which corresponds to a free energy $F=H[\phi_c]=0$. However in a system with a conserved order parameter
 \begin{equation}
 \int d\bx \ \phi(\bx)=0
 \end{equation}
-the solutions $\phi=\pm \phi_c$ cannot hold. In this case the system will separate into two {\color{purple}homogeneous} phases where $\phi(\bx)= \pm \phi_c$. We therefore choose an interface at $z=0$ and take $\phi(\bx) = \phi_K(z)$ ($K$ standing for kink as it is known as the kink solution in the literature) where $\lim_{z\to\-\infty}=-\phi_c$ and $\lim_{z\to\infty}=-\phi_c$. 
+the solutions $\phi=\pm \phi_c$ cannot hold. In this case the system will separate into two homogeneous phases where $\phi(\bx)= \pm \phi_c$. We therefore choose an interface at $z=0$ and take $\phi(\bx) = \phi_K(z)$ ($K$ standing for kink as it is known as the kink solution in the literature) where $\lim_{z\to\-\infty}=-\phi_c$ and $\lim_{z\to\infty}=-\phi_c$. 
 We therefore find from Eq. \eqref{cm} that
 \begin{equation}
 -\kappa \frac{d^2 }{dz^2}\phi_K(z) + V'(\phi_K) = 0 
@@ -260,7 +260,7 @@ If the interface has a free energy per unit area of $\sigma$ then we have the Ca
 \label{CHST}
 \end{equation}
 
-{\color{blue}In the case of the $\phi^4$ model defined at Eq \eqref{phi4}, the equation \eqref{kk0} becomes
+In the case of the $\phi^4$ model defined at Eq \eqref{phi4}, the equation \eqref{kk0} becomes
 \begin{align}
 \kappa \phi_K''(z) = m^2 \phi_K(z) \left( 1 + \phi_C \phi_K(z) ^2 \right)
 \label{eq-interface-glauber}
@@ -270,15 +270,15 @@ This potential is only defined by the ratio between $m^2$ and $\lambda$, so with
 \phi_K(z) = \tanh \left( \frac{z}{\xi} \right)
 \label{profil-interface-glauber} 
 \end{align}
-where $\xi = \sqrt{\frac{-2 \kappa}{m^2}}$. This correlation length diverges when $T\to T_C$.}
-{\color{purple}From Fig \ref{tension-xi} we see that the bigger the correlation length of the system, the smaller the surface tension is. The experimental study of quasi-critical systems, which have fluctuations at a macroscopic length scale, is a good way to probe the properties of ultra-low surface tension systems \cite{hennequin_drop_2006}. Such systems are very susceptible to hydrodynamic instabilities caused by thermal noise, as in microfluidics for example \cite{atencia_controlled_2005}. 
+where $\xi = \sqrt{\frac{-2 \kappa}{m^2}}$. This correlation length diverges when $T\to T_C$.
+From Fig \ref{tension-xi} we see that the bigger the correlation length of the system, the smaller the surface tension is. The experimental study of quasi-critical systems, which have fluctuations at a macroscopic length scale, is a good way to probe the properties of ultra-low surface tension systems \cite{hennequin_drop_2006}. Such systems are very susceptible to hydrodynamic instabilities caused by thermal noise, as in microfluidics for example \cite{atencia_controlled_2005}. 
 \begin{figure}
 \centering
 \includegraphics[width=0.7\linewidth]{int-dyn/tension-superficielle.pdf}
 \caption{Superificial tension \eqref{CHST} with respect to $\xi$ for the $\phi^4$ solution \eqref{profil-interface-glauber}.}
 \label{tension-xi}
 \end{figure}
-}
+
 
 %%%%%%%%%%%%%%%%%%%%%%
 \section{Models for equilibrium interfaces}
@@ -316,7 +316,7 @@ The first term corresponds to the surface energy for a surface of size $A_s$
 \begin{equation}
 H_s[h] = \sigma A_s =\sigma\int d\bx \sqrt{1+[\nabla h(\br)]^2}\approx \sigma A + \frac{\sigma}{2}\int d\br [\nabla h(\br)]^2 
 \end{equation}
-Here $A$ is the area of the projected plane below the surface which is taken to be constant and thus does not change the statistical mechanics of the system. In principle surfaces can also have bending energies, while surface energies correspond to stretching the surface to increase its size, bending energies correspond to curving the surface. The standard bending energy for small surface energies is given by
+Here $A$ is the area of the projected plane below the surface which is taken to be constant and thus does not change the statistical mechanics of the system. In principle surfaces can also have bending energies, while surface energies correspond to stretching the surface to increase its size, bending energies correspond to curving the surface. The standard bending energy for small surface energies \cite{diehl_interface_1980} is given by
 \begin{equation}
 H_b[h] = \int d\br \frac{\kappa_b}{2}[\nabla^2 h(\br)]^2
 \end{equation} 
@@ -597,7 +597,7 @@ where $\mu(\bx)=\delta H_{eff}/\delta h(\bx) $, $\tilde L(k) = D/Q(k)$ and
     \subsection{The Ising model}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
 
-{\color{blue}
+
 We take a system of size $L'\times L' \times L$, composed of $N$ sites $i$. At each site corresponds a value $\sigma_i =\pm1$. The Hamiltonian of the Ising model is 
 \begin{equation}
 	H =  - \sum_{<ij>} J \sigma_i \sigma_j + \frac{V(\sigma_i)+V(\sigma_j)}{2}
@@ -618,7 +618,6 @@ $J$ is called the coupling parameter of the system, and can be non-uniform, with
 \end{figure}  
 
 
-{\color{red} 
 The mean-field theory with a $\phi^4$ potential has been developed from this model \cite{bellac_equilibrium_2004}. Exact relationship between both of them has been found in 4 dimensions and above \cite{aizenman_proof_1981}. A fast way to convince ourselves is to take the finite difference derivative at first order of Eq \eqref{landau-ginzburg-hamiltonian}. If we suppose the sole role of the potential is to set the field to $\pm \phi_C$ on each site, then we have
 \begin{align}
     [{\boldsymbol \nabla} \phi(i)]^2 &= \left( \frac{\partial \phi(i)}{\partial x} \right)^2  + \left( \frac{\partial \phi(i)}{\partial y} \right)^2 + \left( \frac{\partial \phi({\bf i})}{\partial z} \right)^2\nn
@@ -627,7 +626,7 @@ The mean-field theory with a $\phi^4$ potential has been developed from this mod
     \label{discretisation-landau}
 \end{align}
 where we've set the distance between two sites to $1$.
-From this we easily see some bulk energy to which we add the sites' nearest neighbours interactions in an Ising-like fashion.}
+From this we easily see some bulk energy to which we add the sites' nearest neighbours interactions in an Ising-like fashion.
 %%%%%%%%%%%%%
 
 This model precisely describes  phase transitions in uniaxial magnetic systems\cite{de_jongh_experiments_1974,wp_wold_ising_2000,ikeda_neutron_1973}. It is also the simplest model of its eponymous universality class, which also contains liquid/gas transitions and binary fluids.This model does not have a phase transition in 1D, but a phase transition in 2D was foud in 1944\cite{onsager_crystal_1944} at the critical temperature 
@@ -639,8 +638,8 @@ The renormalization group approaches have a deep connexion with the Ising model 
 \begin{align}
     T_{3D,C} \simeq 4.51 \frac{J}{k_B}
 \end{align}
-}
-{\color{red}
+
+
 By doing the transformation\cite{goldenfeld_lectures_2018} 
 \begin{align}
     n_i =  \frac{\sigma_i +1}{2}
@@ -656,9 +655,9 @@ where the constant term $\sum_{< i j >}  J_{ij}$ does not change the partition f
 \end{align}
 where we have set $J_{ij} = J$ constant and defined the chemical potential for a liquid-gas system as $\mu=4Jc$, with  $c$ the number of nearest neighbours. A positive magnetic phase is thus analogous to a high density state such a liquid, while the negative magnetic phase is equal to a low density state such as a gas. The model also describes adsorption of a gas in a lattice or binary fluids between particles $A$ and $B$.
 The chemical potential $\mu$ is the conjugate variable to the total number of particles $\sum_i n_i$ in the grand-canonical ensemble, while the magnetic field $h$ is the conjugate variable to the total magnetisation $\sum_i \sigma_i$.
-}
 
-{\color{purple}
+
+
 By imposing $+-$ boundary conditions in the $z$ direction, we force the existence of an interface Those BC can be fixed, imposing  $\sigma(z=0) = -1$ and $\sigma(z=L)=+1$, or free but with a local external field $V(z) = h (\delta(z)-\delta(z-L))$.
 An interface is characterized by its mean and its width. The easiest way to do so is to fit the magnetization profile
 \begin{align}
@@ -684,7 +683,7 @@ By diagonalization of the transfer matrix (which we will define later), we find 
 \begin{align}
     \sigma = 2 \beta J + \log(\tanh(\beta J))    
 \end{align}
-}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
 \newpage	
     \subsection{The Solid-On-Solid Model}
@@ -692,15 +691,19 @@ By diagonalization of the transfer matrix (which we will define later), we find 
 
 
 {\color{red} 
-
-The Ising model allows the study of numerous properties, such as bulk behaviour, coarsening dynamics or interface statistics. In the latter, it is not needed to have the bulk's informations. As we have gone from mean-field dynamics for model A and B to Edwards-Wilkinson equation, we follow the same procedure for lattice models.
-At low temperature there are few overhangs from phase 1 into phase 2, making for a smooth interface. In this limit, we define the interface at site $i$ by its height $h_i$, and every spin of the lattice take the value
-\begin{align*}
+In order to get the Edwards-Wilkinson equation of an interface from statistical field theory, we have used the approximation 
+\begin{align}
+\phi(\bx,t) = f(z-h(\br,t))
+\end{align}
+We translate the same approximation in order to study interfaces in lattice models by
+\begin{align}
 \sigma_{i,j} = \sgn(h_i-j)
-\end{align*}
-where $\sgn(x \less 0) = -1$ and $\sgn(x \greater 0) = 1$ . In Fig \ref{figure-sos}, we show one possible configuration of this model. In the literature, the SOS model is always represented with multiple spins below and over the interface \cite{van_leeuwen_pinning_1981}. We believe this representation to be wrong, and will discuss in chapter \ref{chap-pop} the distinction we introduce. 
-This is the same as considering that the bond energy between sites is highly anisotropic, with $J_\perp \gg J_\parallel$.
+\label{approx-sos}
+\end{align}
+where $\sgn(x \less 0) = -1$ and $\sgn(x \greater 0) = 1$, and $h_i$ is the height of the interface at site $i$. 
+This is the low temperature approximation of the Ising model, where there are no overhangs from the $+$ phase into the $-$ phase and vice versa. If we note $J_\perp$ the vertical bond energy between two Ising spins and $J_\parallel$ the horizontal bond energy, this approximation becomes equivalent to a highly anisotropic Ising model where $J_\perp \gg J_\parallel$ \cite{swendsen_roughening_1977}.
 
+In a slab or semi-infinite geometry as seen in Fig \ref{figure-sos}, the height of the interface corresponds to the number of spins $-$ in the column $i$, while for an infinite geometry, we define $h_i$ as the number of excess spins $-$ with respect to the mean height, set in the figure at $=0$ \cite{van_leeuwen_pinning_1981}. In this representation, height profiles represent an interface height and not a number of particles, since there is no entropy term associated with the number of ways that the $h_i$ particles on each site can be chosen from the $N$ particles available. In chapter \ref{chap-pop}, we will address a model with those characteristics.
 Using the identities
 \begin{align}
 \min(a,b) &= \frac{|a+b| - |a-b|}{2} \\
@@ -715,20 +718,33 @@ For a 2-D Ising model of size $L'\times L$, the Ising Hamiltonian \eqref{hamil-i
 H = 2 J L' (1-L) +2 J \sum_{i=0}^{L'} |h_i-h_{i+1}| + \sum_{i=0}^{L'} V(h_i)
 \label{energie-sos-ising}
 \end{align}
-with the external potential 
+with external potential 
 \begin{align}
 V(h_i) = \sum_{j=0}^L V(\sgn(h_i-j))
 \end{align}
 For periodic boundary conditions, we set $h_{L'}=h_0$.
 
 \begin{figure}
-\centering
-\includegraphics[scale=1]{int-dyn/sos-indiscernable.png}
-\caption{Possible configuration of the SOS model. In the $i$-th column the interface is at height $h_i$. Particles under the interface are from the Ising $+$ phase, while particles over it are from the $-$ phase.}
-\label{figure-sos}
+    \begin{minipage}[t]{0.5\linewidth}
+        \includegraphics[width=0.9\linewidth]{int-dyn/sos-indiscernable.png}
+    \end{minipage}
+    \begin{minipage}[t]{0.5\linewidth}
+        \includegraphics[width=0.9\linewidth]{int-dyn/sos-indiscernable-inf.png}        
+    \end{minipage}    
+    \caption{Possible configuration of the SOS model for a semi-infinite geometry (left) and infinite geometry (right). The red line shows the origin $z=0$. In the $i$-th column the interface is at height $h_i$. Particles under the interface are from the Ising $-$ phase, while particles over it are from the $+$ phase.}
+    \label{figure-sos}
 \end{figure}
 
-We can also compute this energy directly from a SOS configuration. There exists $L$ vertical bonds per column, where all except one have an energy $-J$, and the last link passing though the interface an energy $+J$. The total contribution to energy from vertical bonds is thus $E_y = - J L_X ( L_Y-2)$. In the same fashion for horizontal links, there exist $L' \times L$ bonds in total, while $\sum_i |h_i-h_{i+1}|$ bonds have an energy $+J$, which gives the horizontal contribution to energy $E_x = - J L_X L_Y + 2 \sum_i |h_i-h_{i+1}|$. By addition both, we find \eqref{energie-sos-ising}.
+Another way to compute this energy for a SOS configuration is to directly count the number of energy bonds for a $L'\times L$ Ising model under the approximation \eqref{approx-sos}. There are $L-1$ vertical bonds per column, where all have an energy of $-J$, while the link that goes though the interface has an energy of $+J$. The total contribution to energy from vertical bonds is thus 
+\begin{equation}
+    E_\perp = - J L' ( L-2)
+\end{equation}
+There are $L'\times L$ horizontal bonds. In a pure phase system, the horizontal energy would be $-JL'L$. Neverthelesss, there are $\sum_i |h_i-h_{i+1}|$ bonds which have an energy of $+J$, which gives the horizontal energy  contribution 
+\begin{equation}
+    E_\parallel = - J L' L + 2 \sum_i |h_i-h_{i+1}|
+\end{equation}
+By adding both, we find back Eq \eqref{energie-sos-ising}.
+
 By setting $2J=J$ and getting rid of the bulk energy, we obtain the \textbf{Solid-On-Solid Hamiltonian} 
 \begin{align}
 H = J \sum_{i=0}^{L'} |h_i-h_{i+1}| + \frac{V(h_i)+V(h_{i+1})}{2}
@@ -737,20 +753,20 @@ H = J \sum_{i=0}^{L'} |h_i-h_{i+1}| + \frac{V(h_i)+V(h_{i+1})}{2}
 }
 
 
-{\color{blue}
+
 The first system where the SOS model has been applied was crystals' growth in 1972 \cite{gilmer_simulation_1972}. Since then, the model has been used with some success in naphthalene cristals\cite{elwenspoek_kinetic_1987}, experimental expitaxial growth\cite{wilby_scaling_1992}, polymer membranes \cite{gompper_steric_1989}, or interfacial wetting \cite{fisher_walks_1983}.
 
 In the SOS model, the sites $i$ of height $h_i$ can take any value in $[0,L]$. The Restrictied Solid-On-Solid model (RSOS) is a variation where sites can only take the value $h_{i+1} \in [h_i-1,h_i,h_i+1]$\cite{privman_transfer-matrix_1989}. This approximation works for very low temperatures or very smooth interfaces \cite{kim_conserved_1994,vaysburd_critical_1995}. 
 
-Another model, closer to the continuous model of Hamiltonian \eqref{heff} has the following gaussian interaction
+Another model, closer to the continuous model of Hamiltonian \eqref{heff} is the Discrete Gaussian model which has the following gaussian interaction
 \begin{align}
 H = J \sum_{i=0}^{L'} (h_i-h_{i+1})^2 + \frac{V(h_i)+V(h_{i+1})}{2}
 \label{hamil-gsos}
 \end{align} 
-which also has a restricted version. The SOS model has an exact relation with the $XY$ model \cite{knops_exact_1977}, no matter the power law used for the interaction. With a generalization of this model to continuous heights, it has been shown that extreme deviations statistics of the interface is described by a scaling function \cite{schehr_universal_2006}.
-}
+and also has a restricted version. The SOS model has an exact relation with the $XY$ model \cite{knops_exact_1977}, no matter the power law used for the interaction. With a generalization of this model to continuous heights, it has been shown that extreme deviations statistics of the interface is described by a scaling function \cite{schehr_universal_2006}. Since the energy costs of height differences $0,\pm 1$ are the same in every SOS model no matter the exponent  in the energy costs of height differences, one expects the qualitative freatures of all those models to be the same at low temperature, since height differences are typically small \cite{swendsen_monte_1977}.
 
-{\color{red}
+
+
 Since the dimensionality of the system has been reduced in only taking into account the height interface $h_i$ at site $i$ instead of the position of all particles, we can think of an interface as a partially self-avoiding walk. This idea, which will be developed in section \ref{sec-continuous-model}, has proven quiet powerfull in finding exact solutions of the generating function \cite{owczarek_exact_1993} or the extreme deviations statistics of the interface \cite{majumdar_airy_2005,schehr_universal_2006}.
 
 In the canonical ensemble, the height interface is fixed to $N$, which is translated in the partition function as
@@ -769,7 +785,7 @@ where
 H_{eff} = J \sum_{i=0}^{L'} |h_i-h_{i+1}|+ \sum_{i=0}^{L'} V(h_i)-\mu h_i
 \end{align}
 In Fig \ref{hauteur-mu}, we plot the mean number of particles per site with respect to the chemical potential, for different size of the system, in the thermodynamic limit $L' \to \infty$. When the chemical potential is too small, the Lagrange's multiplier of the mean height is negligible, allowing the interface to fluctuate freely. Since the height of the interface is then evenly spread over all possible configurations, the mean value for $\mu=0$ becomes $\frac{L}{2}$.
-}
+
 
 \begin{figure}
 \centering
@@ -782,7 +798,7 @@ In Fig \ref{hauteur-mu}, we plot the mean number of particles per site with resp
 \subsection{Matrice de Transfert}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-{\color{blue}
+
 In a more general fashion, we can rewrite the Hamiltonian as
 \begin{align*}
 H = \sum_{i=0}^{L'} f(h_i,h_{i+1}) + V(h_i,h_{i+1}) 
@@ -877,7 +893,7 @@ The correlation function has an exponential decay at large distances, which allo
 \xi = - \frac{1}{\ln(\frac{\lambda_1}{\lambda_0})}
 \label{longueur-correl-thermo}
 \end{align}
-}
+
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %	\subsection{États libres dans un système SOS infini}
@@ -939,28 +955,6 @@ The correlation function has an exponential decay at large distances, which allo
     \section{Systems driven by imposed hydrodynamic flows}
 %%%%%%%%%%%%%%%%%%%%%%
 
-
-Here we consider what happens when a system is driven out of equilibrium. By driven we mean that energy is injected into the system by a laser \cite{girot_conical_2019}, by inducing a hydrodynamics flow, for instance a shear flow induced in a Couette cell in liquids \cite{derks_confocal_2004,derks_suppression_2006} {\color{purple}or in glassy materials} \cite{berthier_nonequilibrium_2002,berthier_shearing_2002}. In principle we should analyse this system with model H dynamics which couples diffusive model B dynamics to hydrodynamics in the low Reynolds number Stokes flow regime. In these dynamics the order parameter field will itself induce a hydrodynamics flow which will modify
-the imposed one. However this full situation is very difficult to analyse and to a first approximation we can assume that the back reaction of the order parameter field on the hydrodynamic flow is small with respect to the imposed hydrodynamic flow and so we can simply write
-\begin{equation}
-\frac{\partial \phi (\bx,t)}{\partial t} + \nabla\cdot({\bf v}(\bx)\phi(\bx,t)) =- L\frac{\delta H}{\delta \phi(\bx)} + \eta(\bx,t),
-\label{drive}
-\end{equation}
-where $L$ is given by the underlying model A or B dynamical operator and the noise has the correlation function as given by Eq. \eqref{gnoise}, and ${\bf v}(\bx)$ is the imposed (time independent) hydrodynamic flow or can equally well be an external drive imposed on the colloidal particles, due to the gravitational or electric field for example. 
-
-The simplest case one can consider is where the driving field ${\bf v}(\bx) ={\bf v}_0$ is uniform \cite{leung_field_1986.bray_coarsening_2000}. Unfortunately this simple driving does not lead to a new steady state. Basically all of the colloidal particles acquire an average velocity ${\bf v}$ and so move along at the same speed relative to each other. Mathematically this can be seen by making the Galilean transformation
-\begin{equation}
-\phi (\bx,t)= \phi(\bx-{\bf v}_0t,t) = \phi({\bf y},t)
-\end{equation}
-This transformation eliminates the driving from the evolution equation \eqref{drive} and so we find an equilibrium system. 
-
-The most studied example is where the driving is a shear flow \cite{derks_suppression_2006,thiebaud_nonequilibrium_2010}. The effective dynamics of the surface term in the presence of a shear flow, parallel to the interface \cite{bray_interface_2001,bray_interface_2001-1,}, is written as
-\begin{equation}
-{\bf v}(\bx) = \gamma z {\bf e}_x
-\label{eq-cisaillement}
-\end{equation}
-and was studied using the method explained in section (\ref{heightd}). The addition of a shear flow leads to the appearance of a nonlinear term in $h$ and the interface statistics thus become non-Gaussian. {\color{purple}In Fig \ref{snap-ising-shear} we show the influence of such a shear flow in numerical simulations, which is exactly the behaviour to be seen in capillary waves in polymer melts \cite{derks_confocal_2004,derks_suppression_2006}, see Fig \ref{snap-derks-shear} . The shear has a confining effect on the interface \cite{smith_driven_2010,smith_interfaces_2008-1,smith_interfaces_2008}, thus increasing the effective surface tension of the system.}
-
 \begin{figure}
 \centering
 \includegraphics[width=0.7\linewidth]{int-dyn/derks.png}
@@ -977,16 +971,38 @@ and was studied using the method explained in section (\ref{heightd}). The addit
 \begin{minipage}[t]{0.5\linewidth}
 \includegraphics[width=\linewidth]{intro/cis-ising-f-066.pdf}
 \end{minipage}
-\caption{Snapshot of an Ising model with respect to the shear \eqref{eq-cisaillement} with Kawasaki dynamics.}
+\caption{Snapshot of a 2D Ising model with respect to the shear \eqref{eq-cisaillement} with Kawasaki dynamics at $T=0.9 T_{2D,C}$.}
 \label{snap-ising-shear} 
 \end{figure} 
+
+Here we consider what happens when a system is driven out of equilibrium. By driven we mean that energy is injected into the system by a laser \cite{girot_conical_2019}, by inducing a hydrodynamics flow, for instance a shear flow induced in a Couette cell in liquids \cite{derks_confocal_2004,derks_suppression_2006} or in glassy materials \cite{berthier_nonequilibrium_2002,berthier_shearing_2002}. In principle we should analyse this system with model H dynamics which couples diffusive model B dynamics to hydrodynamics in the low Reynolds number Stokes flow regime. In these dynamics the order parameter field will itself induce a hydrodynamics flow which will modify
+the imposed one. However this full situation is very difficult to analyse and to a first approximation we can assume that the back reaction of the order parameter field on the hydrodynamic flow is small with respect to the imposed hydrodynamic flow and so we can simply write
+\begin{equation}
+\frac{\partial \phi (\bx,t)}{\partial t} + \nabla\cdot({\bf v}(\bx)\phi(\bx,t)) =- L\frac{\delta H}{\delta \phi(\bx)} + \eta(\bx,t),
+\label{drive}
+\end{equation}
+where $L$ is given by the underlying model A or B dynamical operator and the noise has the correlation function as given by Eq. \eqref{gnoise}, and ${\bf v}(\bx)$ is the imposed (time independent) hydrodynamic flow or can equally well be an external drive imposed on the colloidal particles, due to the gravitational or electric field for example. 
+
+The simplest case one can consider is where the driving field ${\bf v}(\bx) ={\bf v}_0$ is uniform \cite{leung_field_1986.bray_coarsening_2000}. Unfortunately this simple driving does not lead to a new steady state. Basically all of the colloidal particles acquire an average velocity ${\bf v_0}$ and so move along at the same speed relative to each other. Mathematically this can be seen by making the Galilean transformation
+\begin{equation}
+\phi (\bx,t)= \phi(\bx-{\bf v}_0t,t) = \phi({\bf y},t)
+\end{equation}
+This transformation eliminates the driving from the evolution equation \eqref{drive} and so we find an equilibrium system. 
+
+The most studied example is where the driving is a shear flow \cite{derks_suppression_2006,thiebaud_nonequilibrium_2010}. The effective dynamics of the surface term in the presence of a shear flow, parallel to the interface \cite{bray_interface_2001,bray_interface_2001-1,}, is written as
+\begin{equation}
+{\bf v}(\bx) = \gamma z {\bf e}_x
+\label{eq-cisaillement}
+\end{equation}
+and was studied using the method explained in section (\ref{heightd}). The addition of a shear flow leads to the appearance of a nonlinear term in $h$ and the interface statistics thus become non-Gaussian. In Fig \ref{snap-ising-shear} we show the influence of such a shear flow in numerical simulations, which is exactly the behaviour to be seen in capillary waves in polymer melts \cite{derks_confocal_2004,derks_suppression_2006}, see Fig \ref{snap-derks-shear} . The shear has a confining effect on the interface \cite{smith_driven_2010,smith_interfaces_2008-1,smith_interfaces_2008}, thus increasing the effective surface tension of the system.
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%
 \section{Conclusion}
 %%%%%%%%%%%%%%%%%%%% 
-{\color{purple}
+
 Statistical field theory \cite{bray_theory_1994} gives us a method to study the dynamics of equilibrium fields \cite{bellac_equilibrium_2004}. The surface tension of such a system is then defined as the difference of free energy between the bulk and the interface \cite{cahn_free_1958,abraham_transfer_1973}. The two main models are model A and model B \cite{hohenberg_theory_1977}, which decribe the dynamics of a field respectively in grand-canonical and the canonical ensemble. From those equations, we have defined what is an interface and have derived the Edwards-Wilkinson equation \cite{edwards_surface_1982} for both ensembles.
 The Ising model \cite{niss_history_2005,niss_history_2006} provides a good way to study the bahviour of the field by discretization, which is easier to compute in numerical simulations \cite{newman_monte_1999}. The same kind of dimensional reduction can be done in order to get an interface lattice model which is called the Solid-On-Solid model \cite{gilmer_simulation_1972}. This model allows the use of the transfer method in an easier way than the Ising model\cite{privman_asymptotic_1989}. 
 Also, the presence of out-of-equilibrum hydrodynamic flows tend to present interesting features. One such example is thee Couette shear \cite{derks_suppression_2006}, which has been found to smoothen the interface \cite{smith_interfaces_2008-1}.
-}

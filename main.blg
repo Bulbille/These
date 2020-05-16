@@ -6,6 +6,7 @@ Database file #1: biblio.bib
 Warning--I didn't find a database entry for "onsager_crystal_1944"
 Warning--I didn't find a database entry for "leung_field_1986.bray_coarsening_2000"
 Warning--I didn't find a database entry for ""
+Warning--I didn't find a database entry for "niss_history_2006"
 Warning--I didn't find a database entry for "derks2006"
 Warning--I didn't find a database entry for "smith2008"
 Warning--I didn't find a database entry for "smith2010"
@@ -34,45 +35,45 @@ Warning--I didn't find a database entry for "dean2016"
 Warning--I didn't find a database entry for "gros2015"
 Warning--I didn't find a database entry for "lu2015"
 Warning--empty publisher in l_landau_physique_1990
-You've used 63 entries,
+You've used 67 entries,
             1791 wiz_defined-function locations,
-            839 strings with 13823 characters,
-and the built_in function-call counts, 13806 in all, are:
-= -- 1262
-> -- 547
+            857 strings with 14421 characters,
+and the built_in function-call counts, 14818 in all, are:
+= -- 1362
+> -- 577
 < -- 0
-+ -- 209
-- -- 146
-* -- 1146
-:= -- 2203
-add.period$ -- 189
-call.type$ -- 63
-change.case$ -- 59
++ -- 221
+- -- 154
+* -- 1237
+:= -- 2357
+add.period$ -- 201
+call.type$ -- 67
+change.case$ -- 63
 chr.to.int$ -- 0
-cite$ -- 64
-duplicate$ -- 548
-empty$ -- 1373
-format.name$ -- 146
-if$ -- 2963
+cite$ -- 68
+duplicate$ -- 584
+empty$ -- 1475
+format.name$ -- 154
+if$ -- 3179
 int.to.chr$ -- 0
-int.to.str$ -- 63
-missing$ -- 63
-newline$ -- 317
-num.names$ -- 62
-pop$ -- 106
+int.to.str$ -- 67
+missing$ -- 67
+newline$ -- 337
+num.names$ -- 66
+pop$ -- 110
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 220
+skip$ -- 233
 stack$ -- 0
-substring$ -- 1096
-swap$ -- 63
+substring$ -- 1214
+swap$ -- 67
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 145
-width$ -- 65
-write$ -- 686
-(There were 31 warnings)
+while$ -- 157
+width$ -- 69
+write$ -- 730
+(There were 32 warnings)

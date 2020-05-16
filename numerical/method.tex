@@ -99,8 +99,8 @@ We thus have
 \end{align}
 Is it possible to choose any acceptance rate $A(C\to C')$ which satisfies detailed balance. A Metropolis algorithm is an algorithm which has the following acceptance rate
 \begin{align}
-A(C\to C') = \begin{cases} \exp(-\beta (E(C')-E(C)) &\text{ si } E(C')-E(C) \greater 0 \\
-1 &\text{ sinon} \end{cases}
+A(C\to C') = \begin{cases} \exp(-\beta (E(C')-E(C)) &\text{ if } E(C')-E(C) \greater 0 \\
+1 &\text{ otherwise} \end{cases}
 \label{taux-transition-metropolis}
 \end{align}
 In practice, if $\Delta E \greater 0$, we randomly choose an integer uniformly in $r\in[0,1]$. If $r\less A(C\to C') $ then the transition is accepted. Otherwise, the transition is rejected and the system stays in the configuration $C$.
@@ -112,9 +112,9 @@ Since $\sum_i h_i$ is not conserved over time, Glauber dynamics corresponds to m
 \includegraphics[scale=1]{numerical/sos-glau-eq-cor.pdf}
 \caption{Plot of the energy per site (top) and the autocorrelation function (bottom) with Glauber dynamics from an initial state where $h_i=0$, for different temperatures.}
 \label{eq-glau}
-\includegraphics[scale=0.5]{example-image-a}
-\caption{Mean height value per site with respect to $\mu$ different system size $L$ both by Glauber dynamics and diagonalization of the transfer matrix.}
-\label{eq-glau} 
+\includegraphics[scale=0.5]{numerical/comp-mc-tm-mu.pdf}
+\caption{Mean height value per site with respect to $\mu$ different system size $L$ both by Glauber dynamics and diagonalization of the transfer matrix (which has already been shown in Fig \ref{hauteur-mu}) for $\beta=1$ and $L' = 256$.}
+\label{tm-mc-equalt} 
 \end{figure}
 The energy difference between two configurations is
 \begin{align}
@@ -128,7 +128,7 @@ We can do the same for $\sum_i h_i^2$, which gives us the interface's width, or 
 
 In order to accelerate the equilibration process, we can directly start from the total height computed by the transfer matrix. We then get the equilibrium time by looking at $E(t)$. It is better practice to choose study the equilibration time by taking the total energy instead of the magnetization, since without external potential, the interface is delocalised and magnetization is only bounded by the boundary conditions. In Fig \ref{eq-glau}, we show the energy with respect to time and the autocorrelation function of the system in absence of chemical potential from a ground state $h_i=0$ for all $i$. The very small correlation and equilibration times means that numerical simulations reach the equilibrium distribution after $10^3$ MC steps, and that only $10^7$ MC steps will give accurate results.
 
-In the SOS model, we expect to have the results from the Glauber dynamics to be exactly the same as the transfer matrix method, as shown in Fig \ref{tm-mc-equalt}, Since we can get exact results from the transfer matrix, the Glauber dynamics presents little interest for SOS models in the grand-canonical ensemble. Nevertheless, because there does not exist a transfer matrix formulation of the canonical ensemble, Monte Carlo simulations become interesting.
+In the SOS model, we expect to have the results from the Glauber dynamics to be exactly the same as the transfer matrix method, as shown in Fig \ref{tm-mc-equalt}. Since the interface is not localised for small $\mu$, even though we reach thermal equilibrium fast, the mean height  fluctuates a lot, making its measurement irrelevant in the delocalised limit. Since we can get exact results from the transfer matrix, the Glauber dynamics presents little interest for SOS models in the grand-canonical ensemble. Nevertheless, because there does not exist a transfer matrix formulation of the canonical ensemble, Monte Carlo simulations become interesting.
 
 %%%%%%%%%%%%%%
 \subsection{Kawasaki dynamics}
@@ -228,7 +228,7 @@ Since the Layer method does not work for our models, we have to look to other wa
 \end{align} 
 If we integrate over the chemical potential, we have
 \begin{align}
-\Delta \Omega(\mu_1,\mu_2) = \Omega(\mu_1,L) - \Omega(\mu_2,L) = - \int_{\mu_1}^{\mu_2} <\sum_i h_i>(\mu,L) dh
+\Delta \Omega(\mu_1,\mu_2) = \Omega(\mu_1,L) - \Omega(\mu_2,L) = - \int_{\mu_1}^{\mu_2} <h> d\mu
 \label{integration-cardozo}
 \end{align}
 In the case where we know the analytical forme of the free energy in the limits $\mu_2 \to \infty$ or $\mu_1 \to 0$, this method provides a way to directly measure the free energy of the system for any temperature or size by integrating over the chemical potential.
@@ -256,7 +256,7 @@ Lastly, the easiest way to gain real time is to make the code parallel. We can d
 \section{Conclusion}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In this chapter, we have explained how to compute expectation values of observables in our system, thanks to the Monte Carlo Metropolis algorithm. For that, we need to suppose that the system is in thermal equilibrium with a heat bath, and that it respects detailed balance. We have two different possible algorithms : the Glauber dynamics allows to study the systems in the grand-canonical ensemble, while the Kawasaki dynamics is for canonical ones. Nevertheless, since the transfer matrix method gives exact results for the grand-canonical ensemble, only the Kawasaki dynamics is relevant for SOS models. 
+In this chapter, we have explained how to compute expectation values of observables in our system \cite{newman_monte_1999}, thanks to the Monte Carlo Metropolis algorithm \cite{metropolis_monte_1949}. For that, we need to suppose that the system is in thermal equilibrium with a heat bath, and that it respects detailed balance. We have two different possible algorithms : the Glauber dynamics \cite{glauber_timedependent_1963} allows to study the systems in the grand-canonical ensemble, while the Kawasaki dynamics \cite{kawasaki_diffusion_1966} is for canonical ones. Nevertheless, since the transfer matrix method gives exact results for the grand-canonical ensemble, only the Kawasaki dynamics is relevant for SOS models. 
 
-In addition to that, measuring the free energy of the system is not an easy task, as we can only compute its derivative. The first method we have presented is about progressively decoupling a layer of the system, even though for SOS models, which do not possess a bulk energy, the method does not work. Another method is to integrate over the conjugate variable coupled to the total height, which is the chemical potential. This method does not work for Kawasaki algorithms. 
-Since as we have discussed Glauber simulations are not relevant for our models, we find that we have no way to compute the free energy in Monte Carlo methods for the only relevant ensemble which is the canonical one. In a latter chapter, we will see how to fix this issue.
+In addition to that, measuring the free energy of the system is not an easy task, as we can only compute its derivative. The first method we have presented is about progressively decoupling a layer of the system \cite{vasilyev_universal_2009}, even though for SOS models, which do not possess a bulk energy, the method does not work. Another method is to integrate over the conjugate variable coupled to the total height \cite{lopes_cardozo_critical_2014}, which is the chemical potential. This method does not work for Kawasaki algorithms. 
+Since as we have discussed Glauber simulations are not relevant for our models, we find that we have no way to compute the free energy in Monte Carlo methods for the only relevant ensemble which is the canonical one. In a latter chapter, we will see how to fix this issue.c

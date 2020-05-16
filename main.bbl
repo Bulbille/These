@@ -161,17 +161,17 @@ J.~Stecki, A.~Maciol/ek, and K.~Olaussen.
   \textit{d} =2 {Ising} strip.
 \newblock {\em Physical Review B}, 49(2):1092--1103, January 1994.
 
-\bibitem{abraham_interface_1976}
-D.~B. Abraham and P.~Reed.
-\newblock Interface profile of the {Ising} ferromagnet in two dimensions.
-\newblock {\em Communications in Mathematical Physics}, 49(1):35--46, February
-  1976.
-
 \bibitem{richards_numerical_1993}
 Howard~L. Richards, M.~A. Novotny, and Per~Arne Rikvold.
 \newblock Numerical transfer-matrix study of surface-tension anisotropy in
   {Ising} models on square and cubic lattices.
 \newblock {\em Physical Review B}, 48(19):14584--14598, November 1993.
+
+\bibitem{abraham_interface_1976}
+D.~B. Abraham and P.~Reed.
+\newblock Interface profile of the {Ising} ferromagnet in two dimensions.
+\newblock {\em Communications in Mathematical Physics}, 49(1):35--46, February
+  1976.
 
 \bibitem{abraham_transfer_1973}
 D.~B. Abraham and A.~Martin-L{\"o}f.
@@ -179,6 +179,11 @@ D.~B. Abraham and A.~Martin-L{\"o}f.
   model.
 \newblock {\em Communications in Mathematical Physics}, 32(3):245--268,
   September 1973.
+
+\bibitem{swendsen_roughening_1977}
+Robert~H. Swendsen.
+\newblock Roughening transition in the solid-on-solid model.
+\newblock {\em Physical Review B}, 15(2):689--692, January 1977.
 
 \bibitem{van_leeuwen_pinning_1981}
 J.~M.~J. van Leeuwen and H.~J. Hilhorst.
@@ -236,6 +241,17 @@ H.~J.~F. Knops.
   \${\textbackslash}mathrm\{{XY}\}\$ {Model}.
 \newblock {\em Physical Review Letters}, 39(12):766--769, September 1977.
 
+\bibitem{schehr_universal_2006}
+Gr{\'e}gory Schehr and Satya~N. Majumdar.
+\newblock Universal asymptotic statistics of maximal relative height in
+  one-dimensional solid-on-solid models.
+\newblock {\em Physical Review E}, 73(5):056103, May 2006.
+
+\bibitem{swendsen_monte_1977}
+Robert~H. Swendsen.
+\newblock Monte {Carlo} studies of the interface roughening transition.
+\newblock {\em Physical Review B}, 15(11):5421--5431, June 1977.
+
 \bibitem{owczarek_exact_1993}
 Aleksander~L. Owczarek and Thomas Prellberg.
 \newblock Exact solution of the discrete (1+1)-dimensional {SOS} model with
@@ -248,12 +264,6 @@ Satya~N. Majumdar and Alain Comtet.
   {Brownian} {Excursion} to the {Maximal} {Height} of {Fluctuating}
   {Interfaces}.
 \newblock {\em Journal of Statistical Physics}, 119(3-4):777--826, May 2005.
-
-\bibitem{schehr_universal_2006}
-Gr{\'e}gory Schehr and Satya~N. Majumdar.
-\newblock Universal asymptotic statistics of maximal relative height in
-  one-dimensional solid-on-solid models.
-\newblock {\em Physical Review E}, 73(5):056103, May 2006.
 
 \bibitem{siegert_scaling_1993}
 Martin Siegert and Michael Plischke.
@@ -271,6 +281,13 @@ A.~Girot, J.~Petit, R.~Saiseau, T.~Gu{\'e}rin, H.~Chraibi, U.~Delabre, and
 \newblock Conical {Interfaces} between {Two} {Immiscible} {Fluids} {Induced} by
   an {Optical} {Laser} {Beam}.
 \newblock {\em Physical Review Letters}, 122(17), May 2019.
+
+\bibitem{derks_confocal_2004}
+Didi Derks, Hans Wisman, Alfons~van Blaaderen, and Arnout Imhof.
+\newblock Confocal microscopy of colloidal dispersions in shear flow using a
+  counter-rotating cone{\textendash}plate shear cell.
+\newblock {\em Journal of Physics: Condensed Matter}, 16(38):S3917--S3927,
+  September 2004.
 
 \bibitem{derks_suppression_2006}
 Didi Derks, Dirk G. A.~L. Aarts, Daniel Bonn, Henk N.~W. Lekkerkerker, and
@@ -318,6 +335,18 @@ Thomas H~R Smith, Oleg Vasilyev, Douglas~B Abraham, Anna Macio{\l }ek, and
 \newblock {\em Journal of Physics: Condensed Matter}, 20(49):494237, December
   2008.
 
+\bibitem{newman_monte_1999}
+M.~E.~J. Newman and G.~T. Barkema.
+\newblock {\em Monte {Carlo} {Methods} in {Statistical} {Physics}}.
+\newblock Oxford University Press, Oxford, New York, February 1999.
+
+\bibitem{privman_asymptotic_1989}
+V.~Privman and N.~M. {\v S}vraki{\'c}.
+\newblock Asymptotic degeneracy of the transfer matrix spectrum for systems
+  with interfaces: {Relation} to surface stiffness and step free energy.
+\newblock {\em Journal of Statistical Physics}, 54(3-4):735--754, February
+  1989.
+
 \bibitem{metropolis_monte_1949}
 Nicholas Metropolis and S.~Ulam.
 \newblock The {Monte} {Carlo} {Method}.
@@ -328,11 +357,6 @@ Nicholas Metropolis and S.~Ulam.
 {Paul Gersberg}.
 \newblock Github with all my programs, 2020.
 \newblock https://github.com/Bulbille/Curta.
-
-\bibitem{newman_monte_1999}
-M.~E.~J. Newman and G.~T. Barkema.
-\newblock {\em Monte {Carlo} {Methods} in {Statistical} {Physics}}.
-\newblock Oxford University Press, Oxford, New York, February 1999.
 
 \bibitem{wansleben_monte_1991}
 S.~Wansleben and D.~P. Landau.
