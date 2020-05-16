@@ -3,7 +3,6 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: main.aux
 The style file: unsrt.bst
 Database file #1: biblio.bib
-Warning--I didn't find a database entry for "onsager_crystal_1944"
 Warning--I didn't find a database entry for "leung_field_1986.bray_coarsening_2000"
 Warning--I didn't find a database entry for ""
 Warning--I didn't find a database entry for "niss_history_2006"
@@ -35,45 +34,45 @@ Warning--I didn't find a database entry for "dean2016"
 Warning--I didn't find a database entry for "gros2015"
 Warning--I didn't find a database entry for "lu2015"
 Warning--empty publisher in l_landau_physique_1990
-You've used 67 entries,
+You've used 68 entries,
             1791 wiz_defined-function locations,
-            857 strings with 14421 characters,
-and the built_in function-call counts, 14818 in all, are:
-= -- 1362
-> -- 577
+            866 strings with 14568 characters,
+and the built_in function-call counts, 15042 in all, are:
+= -- 1385
+> -- 581
 < -- 0
-+ -- 221
-- -- 154
-* -- 1237
-:= -- 2357
-add.period$ -- 201
-call.type$ -- 67
-change.case$ -- 63
++ -- 223
+- -- 155
+* -- 1256
+:= -- 2391
+add.period$ -- 204
+call.type$ -- 68
+change.case$ -- 64
 chr.to.int$ -- 0
-cite$ -- 68
-duplicate$ -- 584
-empty$ -- 1475
-format.name$ -- 154
-if$ -- 3179
+cite$ -- 69
+duplicate$ -- 593
+empty$ -- 1499
+format.name$ -- 155
+if$ -- 3227
 int.to.chr$ -- 0
-int.to.str$ -- 67
-missing$ -- 67
-newline$ -- 337
-num.names$ -- 66
-pop$ -- 110
+int.to.str$ -- 68
+missing$ -- 68
+newline$ -- 342
+num.names$ -- 67
+pop$ -- 111
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 233
+skip$ -- 236
 stack$ -- 0
-substring$ -- 1214
-swap$ -- 67
+substring$ -- 1239
+swap$ -- 68
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 157
-width$ -- 69
-write$ -- 730
-(There were 32 warnings)
+while$ -- 160
+width$ -- 70
+write$ -- 741
+(There were 31 warnings)

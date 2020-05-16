@@ -13,12 +13,18 @@ M{\'e}socentre de {Calcul} {Intensif} {Aquitain}.
 \bibitem{hohenberg_theory_1977}
 P.~C. Hohenberg and B.~I. Halperin.
 \newblock Theory of dynamic critical phenomena.
-\newblock {\em Reviews of Modern Physics}, 49(3):435--479, July 1977.
+\newblock {\em Rev. Mod. Phys.}, 49(3):435--479, July 1977.
 
 \bibitem{bray_theory_1994}
 A.~J. Bray.
 \newblock Theory of phase-ordering kinetics.
 \newblock {\em Advances in Physics}, 43(3):357--459, June 1994.
+
+\bibitem{onsager_crystal_1944}
+Lars Onsager.
+\newblock Crystal {Statistics}. {I}. {A} {Two}-{Dimensional} {Model} with an
+  {Order}-{Disorder} {Transition}.
+\newblock {\em Physical Review}, 65(3-4):117--149, February 1944.
 
 \bibitem{l_landau_physique_1990}
 {L. Landau} and {E. Lifchitz}.
@@ -52,7 +58,7 @@ Javier Atencia and David~J. Beebe.
 \bibitem{bray_interface_2001}
 Alan~J. Bray, Andrea Cavagna, and Rui D.~M. Travasso.
 \newblock Interface fluctuations under shear.
-\newblock {\em Physical Review E}, 64(1):012102, June 2001.
+\newblock {\em Phys. Rev. E}, 64(1):012102, June 2001.
 
 \bibitem{bray_interface_2001-1}
 Alan~J. Bray, Andrea Cavagna, and Rui D.~M. Travasso.
@@ -87,14 +93,13 @@ David~A. Huse.
 Martin Niss.
 \newblock History of the {Lenz}-{Ising} {Model} 1920{\textendash}1950: {From}
   {Ferromagnetic} to {Cooperative} {Phenomena}.
-\newblock {\em Archive for History of Exact Sciences}, 59(3):267--318, March
-  2005.
+\newblock {\em Arch. Hist. Exact Sci.}, 59(3):267--318, March 2005.
 
 \bibitem{niss_history_2009}
 Martin Niss.
 \newblock History of the {Lenz}{\textendash}{Ising} {Model}
   1950{\textendash}1965: from irrelevance to relevance.
-\newblock {\em Archive for History of Exact Sciences}, 63(3):243, May 2009.
+\newblock {\em Arch. Hist. Exact Sci.}, 63(3):243, May 2009.
 
 \bibitem{gupta_phase_1988}
 Rajan Gupta, Jerry DeLapp, George~G. Batrouni, Geoffrey~C. Fox, Clive~F.
@@ -165,20 +170,18 @@ J.~Stecki, A.~Maciol/ek, and K.~Olaussen.
 Howard~L. Richards, M.~A. Novotny, and Per~Arne Rikvold.
 \newblock Numerical transfer-matrix study of surface-tension anisotropy in
   {Ising} models on square and cubic lattices.
-\newblock {\em Physical Review B}, 48(19):14584--14598, November 1993.
+\newblock {\em Phys. Rev. B}, 48(19):14584--14598, November 1993.
 
 \bibitem{abraham_interface_1976}
 D.~B. Abraham and P.~Reed.
 \newblock Interface profile of the {Ising} ferromagnet in two dimensions.
-\newblock {\em Communications in Mathematical Physics}, 49(1):35--46, February
-  1976.
+\newblock {\em Commun.Math. Phys.}, 49(1):35--46, February 1976.
 
 \bibitem{abraham_transfer_1973}
 D.~B. Abraham and A.~Martin-L{\"o}f.
 \newblock The transfer matrix for a pure phase in the two-dimensional {Ising}
   model.
-\newblock {\em Communications in Mathematical Physics}, 32(3):245--268,
-  September 1973.
+\newblock {\em Commun.Math. Phys.}, 32(3):245--268, September 1973.
 
 \bibitem{swendsen_roughening_1977}
 Robert~H. Swendsen.
@@ -206,7 +209,7 @@ M~Elwenspoek and J~P van~der Eerden.
 \bibitem{wilby_scaling_1992}
 M.~R. Wilby, D.~D. Vvedensky, and A.~Zangwill.
 \newblock Scaling in a solid-on-solid model of epitaxial growth.
-\newblock {\em Physical Review B}, 46(19):12896--12898, November 1992.
+\newblock {\em Phys. Rev. B}, 46(19):12896--12898, November 1992.
 
 \bibitem{gompper_steric_1989}
 G~Gompper and D.~M Kroll.
@@ -222,13 +225,12 @@ Michael~E Fisher.
 \bibitem{privman_transfer-matrix_1989}
 V.~Privman and N.~M. {\v S}vraki{\'c}.
 \newblock Transfer-{Matrix} {Spectrum} for {Systems} with {Interfaces}.
-\newblock {\em Physical Review Letters}, 62(6):633--636, February 1989.
+\newblock {\em Phys. Rev. Lett.}, 62(6):633--636, February 1989.
 
 \bibitem{kim_conserved_1994}
 Yup Kim, D.~K. Park, and Jin~Min Kim.
 \newblock Conserved growth in a restricted solid-on-solid model.
-\newblock {\em Journal of Physics A: Mathematical and General}, 27(15):L533,
-  1994.
+\newblock {\em J. Phys. A: Math. Gen.}, 27(15):L533, 1994.
 
 \bibitem{vaysburd_critical_1995}
 I.~Vaysburd.
@@ -239,13 +241,13 @@ I.~Vaysburd.
 H.~J.~F. Knops.
 \newblock Exact {Relation} between the {Solid}-on-{Solid} {Model} and the
   \${\textbackslash}mathrm\{{XY}\}\$ {Model}.
-\newblock {\em Physical Review Letters}, 39(12):766--769, September 1977.
+\newblock {\em Phys. Rev. Lett.}, 39(12):766--769, September 1977.
 
 \bibitem{schehr_universal_2006}
 Gr{\'e}gory Schehr and Satya~N. Majumdar.
 \newblock Universal asymptotic statistics of maximal relative height in
   one-dimensional solid-on-solid models.
-\newblock {\em Physical Review E}, 73(5):056103, May 2006.
+\newblock {\em Phys. Rev. E}, 73(5):056103, May 2006.
 
 \bibitem{swendsen_monte_1977}
 Robert~H. Swendsen.
@@ -256,24 +258,31 @@ Robert~H. Swendsen.
 Aleksander~L. Owczarek and Thomas Prellberg.
 \newblock Exact solution of the discrete (1+1)-dimensional {SOS} model with
   field and surface interactions.
-\newblock {\em Journal of Statistical Physics}, 70(5-6):1175--1194, March 1993.
+\newblock {\em J Stat Phys}, 70(5-6):1175--1194, March 1993.
 
 \bibitem{majumdar_airy_2005}
 Satya~N. Majumdar and Alain Comtet.
 \newblock Airy {Distribution} {Function}: {From} the {Area} {Under} a
   {Brownian} {Excursion} to the {Maximal} {Height} of {Fluctuating}
   {Interfaces}.
-\newblock {\em Journal of Statistical Physics}, 119(3-4):777--826, May 2005.
+\newblock {\em J Stat Phys}, 119(3-4):777--826, May 2005.
 
 \bibitem{siegert_scaling_1993}
 Martin Siegert and Michael Plischke.
 \newblock Scaling behavior of driven solid-on-solid models with diffusion.
-\newblock {\em Journal de Physique I}, 3(6):1371--1376, June 1993.
+\newblock {\em J. Phys. I France}, 3(6):1371--1376, June 1993.
 
 \bibitem{pearce_exact_1989}
 Paul~A Pearce and Katherine~A Seaton.
 \newblock Exact solution of cyclic solid-on-solid lattice models.
 \newblock {\em Annals of Physics}, 193(2):326--366, August 1989.
+
+\bibitem{derks_suppression_2006}
+Didi Derks, Dirk G. A.~L. Aarts, Daniel Bonn, Henk N.~W. Lekkerkerker, and
+  Arnout Imhof.
+\newblock Suppression of {Thermally} {Excited} {Capillary} {Waves} by {Shear}
+  {Flow}.
+\newblock {\em Physical Review Letters}, 97(3), July 2006.
 
 \bibitem{girot_conical_2019}
 A.~Girot, J.~Petit, R.~Saiseau, T.~Gu{\'e}rin, H.~Chraibi, U.~Delabre, and
@@ -288,13 +297,6 @@ Didi Derks, Hans Wisman, Alfons~van Blaaderen, and Arnout Imhof.
   counter-rotating cone{\textendash}plate shear cell.
 \newblock {\em Journal of Physics: Condensed Matter}, 16(38):S3917--S3927,
   September 2004.
-
-\bibitem{derks_suppression_2006}
-Didi Derks, Dirk G. A.~L. Aarts, Daniel Bonn, Henk N.~W. Lekkerkerker, and
-  Arnout Imhof.
-\newblock Suppression of {Thermally} {Excited} {Capillary} {Waves} by {Shear}
-  {Flow}.
-\newblock {\em Physical Review Letters}, 97(3), July 2006.
 
 \bibitem{berthier_nonequilibrium_2002}
 Ludovic Berthier and Jean-Louis Barrat.
@@ -325,7 +327,7 @@ Thomas H.~R. Smith, Oleg Vasilyev, Douglas~B. Abraham, Anna Macio{\l }ek, and
   Matthias Schmidt.
 \newblock Interfaces in {Driven} {Ising} {Models}: {Shear} {Enhances}
   {Confinement}.
-\newblock {\em Physical Review Letters}, 101(6):067203, August 2008.
+\newblock {\em Phys. Rev. Lett.}, 101(6):067203, August 2008.
 
 \bibitem{smith_interfaces_2008}
 Thomas H~R Smith, Oleg Vasilyev, Douglas~B Abraham, Anna Macio{\l }ek, and
@@ -344,8 +346,7 @@ M.~E.~J. Newman and G.~T. Barkema.
 V.~Privman and N.~M. {\v S}vraki{\'c}.
 \newblock Asymptotic degeneracy of the transfer matrix spectrum for systems
   with interfaces: {Relation} to surface stiffness and step free energy.
-\newblock {\em Journal of Statistical Physics}, 54(3-4):735--754, February
-  1989.
+\newblock {\em J Stat Phys}, 54(3-4):735--754, February 1989.
 
 \bibitem{metropolis_monte_1949}
 Nicholas Metropolis and S.~Ulam.
