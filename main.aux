@@ -1,9 +1,5 @@
 \relax 
 \providecommand\hyper@newdestlabel[2]{}
-\catcode `:\active 
-\catcode `;\active 
-\catcode `!\active 
-\catcode `?\active 
 \providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
 \HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
 \global\let\oldcontentsline\contentsline
@@ -21,7 +17,6 @@
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
 \bibstyle{unsrt}
-\babel@aux{french}{}
 \@writefile{toc}{\contentsline {chapter}{Introduction}{iii}{chapter*.2}\protected@file@percent }
 \citation{dean_effect_2020}
 \citation{noauthor_mesocentre_nodate}
@@ -106,6 +101,7 @@
 \citation{swendsen_roughening_1977}
 \citation{van_leeuwen_pinning_1981}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.3.2}The Solid-On-Solid Model}{24}{subsection.1.3.2}\protected@file@percent }
+\newlabel{sec-sos}{{1.3.2}{24}{The Solid-On-Solid Model}{subsection.1.3.2}{}}
 \newlabel{approx-sos}{{1.117}{24}{The Solid-On-Solid Model}{equation.1.3.117}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1.5}{\ignorespaces Possible configuration of the SOS model for a semi-infinite geometry (left) and infinite geometry (right). The red line shows the origin $z=0$. In the $i$-th column the interface is at height $h_i$. Particles under the interface are from the Ising $-$ phase, while particles over it are from the $+$ phase.\relax }}{25}{figure.caption.7}\protected@file@percent }
 \newlabel{figure-sos}{{1.5}{25}{Possible configuration of the SOS model for a semi-infinite geometry (left) and infinite geometry (right). The red line shows the origin $z=0$. In the $i$-th column the interface is at height $h_i$. Particles under the interface are from the Ising $-$ phase, while particles over it are from the $+$ phase.\relax }{figure.caption.7}{}}
@@ -186,6 +182,7 @@
 \citation{newman_monte_1999}
 \citation{glauber_timedependent_1963}
 \newlabel{p-eq-mc}{{2.11}{38}{Monte Carlo Metropolis algorithm}{equation.2.2.11}{}}
+\newlabel{acceptance-mc}{{2.14}{38}{Monte Carlo Metropolis algorithm}{equation.2.2.14}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}Glauber dynamics}{38}{subsection.2.2.1}\protected@file@percent }
 \newlabel{taux-transition-metropolis}{{2.17}{39}{Glauber dynamics}{equation.2.2.17}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces Plot of the energy per site (top) and the autocorrelation function (bottom) with Glauber dynamics from an initial state where $h_i=0$, for different temperatures.\relax }}{40}{figure.caption.12}\protected@file@percent }
@@ -290,10 +287,22 @@
 \@writefile{toc}{\contentsline {chapter}{\numberline {5}Beyond Solid-On-Solid : the Particles-Over-Particles model}{89}{chapter.5}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Evaluating Fourier integrals}{93}{appendix.A}\protected@file@percent }
+\newlabel{chap-pop}{{5}{89}{Beyond Solid-On-Solid : the Particles-Over-Particles model}{chapter.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}The Single-type Particles-Over-Particles model}{89}{section.5.1}\protected@file@percent }
+\citation{burkhardt_localisation-delocalisation_1981,chui_pinning_1981}
+\newlabel{stirling-pop}{{5.10}{91}{The Single-type Particles-Over-Particles model}{equation.5.1.10}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}$M$-particles POP system}{92}{section.5.2}\protected@file@percent }
+\newlabel{ham-pop-c}{{5.11}{92}{$M$-particles POP system}{equation.5.2.11}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Mean height of the POP model with respect to chemical potential $\mu $ through transfer matrix with different maximal heights in the thermodynamic limit $L'\to \infty $, compared to the Striling's approximation Eq \textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {stirling-pop}\unskip \@@italiccorr )}},at $\beta =1$. {\color  {red} add MC sim}\relax }}{93}{figure.caption.15}\protected@file@percent }
+\newlabel{haut-tm-pop}{{5.1}{93}{Mean height of the POP model with respect to chemical potential $\mu $ through transfer matrix with different maximal heights in the thermodynamic limit $L'\to \infty $, compared to the Striling's approximation Eq \eqref {stirling-pop},at $\beta =1$. {\color {red} add MC sim}\relax }{figure.caption.15}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Comparison of the internal mean total energy of the Ising, SOS, RSOS and POP models with respect to temperature in absence of external field and $\mu =0$, from Monte Carlo simulations at $L'=126$ and $L=30$ with Glauber dynamics. We used Eq \ref  {energie-sos-ising} to compare energies between the interface models and the Ising one. {\color  {red} redo sims for Ising, need MCIA, takes too long otherwise}\relax }}{93}{figure.caption.15}\protected@file@percent }
+\newlabel{comp-models}{{5.2}{93}{Comparison of the internal mean total energy of the Ising, SOS, RSOS and POP models with respect to temperature in absence of external field and $\mu =0$, from Monte Carlo simulations at $L'=126$ and $L=30$ with Glauber dynamics. We used Eq \ref {energie-sos-ising} to compare energies between the interface models and the Ising one. {\color {red} redo sims for Ising, need MCIA, takes too long otherwise}\relax }{figure.caption.15}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Possible POP configuration with two types of particles $p_1$ and $p_2$. The red line shows the origin $z=0$. In the $i$-th column the interface is at height $h_i$, with $n_{p_0,i}$ particles of type $p_0$ at site $i$, and same for particles $p_2$. Over the interface, there are no particles. \relax }}{94}{figure.caption.16}\protected@file@percent }
+\newlabel{fig-pop}{{5.3}{94}{Possible POP configuration with two types of particles $p_1$ and $p_2$. The red line shows the origin $z=0$. In the $i$-th column the interface is at height $h_i$, with $n_{p_0,i}$ particles of type $p_0$ at site $i$, and same for particles $p_2$. Over the interface, there are no particles. \relax }{figure.caption.16}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Evaluating Fourier integrals}{95}{appendix.A}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{key}{{A.4}{93}{Evaluating Fourier integrals}{equation.A.0.4}{}}
+\newlabel{key}{{A.4}{95}{Evaluating Fourier integrals}{equation.A.0.4}{}}
 \bibdata{biblio.bib}
 \bibcite{dean_effect_2020}{{1}{}{{}}{{}}}
 \bibcite{noauthor_mesocentre_nodate}{{2}{}{{}}{{}}}
@@ -305,62 +314,65 @@
 \bibcite{cahn_free_1958}{{8}{}{{}}{{}}}
 \bibcite{hennequin_drop_2006}{{9}{}{{}}{{}}}
 \bibcite{atencia_controlled_2005}{{10}{}{{}}{{}}}
-\bibcite{bray_interface_2001}{{11}{}{{}}{{}}}
-\bibcite{bray_interface_2001-1}{{12}{}{{}}{{}}}
-\bibcite{edwards_surface_1982}{{13}{}{{}}{{}}}
-\bibcite{halpin-healy_kinetic_1995}{{14}{}{{}}{{}}}
-\bibcite{paul_domain_2005}{{15}{}{{}}{{}}}
-\bibcite{huse_corrections_1986}{{16}{}{{}}{{}}}
-\bibcite{niss_history_2005}{{17}{}{{}}{{}}}
-\bibcite{niss_history_2009}{{18}{}{{}}{{}}}
-\bibcite{gupta_phase_1988}{{19}{}{{}}{{}}}
-\bibcite{bellac_equilibrium_2004}{{20}{}{{}}{{}}}
-\bibcite{aizenman_proof_1981}{{21}{}{{}}{{}}}
-\bibcite{de_jongh_experiments_1974}{{22}{}{{}}{{}}}
-\bibcite{wp_wold_ising_2000}{{23}{}{{}}{{}}}
-\bibcite{ikeda_neutron_1973}{{24}{}{{}}{{}}}
-\bibcite{frohlich_triviality_1981}{{25}{}{{}}{{}}}
-\bibcite{goldenfeld_lectures_2018}{{26}{}{{}}{{}}}
-\bibcite{talapov_magnetization_1996}{{27}{}{{}}{{}}}
-\bibcite{preis_gpu_2009}{{28}{}{{}}{{}}}
-\bibcite{stecki_magnetization_1994}{{29}{}{{}}{{}}}
-\bibcite{richards_numerical_1993}{{30}{}{{}}{{}}}
-\bibcite{abraham_interface_1976}{{31}{}{{}}{{}}}
-\bibcite{abraham_transfer_1973}{{32}{}{{}}{{}}}
-\bibcite{swendsen_roughening_1977}{{33}{}{{}}{{}}}
-\bibcite{van_leeuwen_pinning_1981}{{34}{}{{}}{{}}}
-\bibcite{gilmer_simulation_1972}{{35}{}{{}}{{}}}
-\bibcite{elwenspoek_kinetic_1987}{{36}{}{{}}{{}}}
-\bibcite{wilby_scaling_1992}{{37}{}{{}}{{}}}
-\bibcite{gompper_steric_1989}{{38}{}{{}}{{}}}
-\bibcite{fisher_walks_1983}{{39}{}{{}}{{}}}
-\bibcite{privman_transfer-matrix_1989}{{40}{}{{}}{{}}}
-\bibcite{kim_conserved_1994}{{41}{}{{}}{{}}}
-\bibcite{vaysburd_critical_1995}{{42}{}{{}}{{}}}
-\bibcite{knops_exact_1977}{{43}{}{{}}{{}}}
-\bibcite{schehr_universal_2006}{{44}{}{{}}{{}}}
-\bibcite{swendsen_monte_1977}{{45}{}{{}}{{}}}
-\bibcite{owczarek_exact_1993}{{46}{}{{}}{{}}}
-\bibcite{majumdar_airy_2005}{{47}{}{{}}{{}}}
-\bibcite{siegert_scaling_1993}{{48}{}{{}}{{}}}
-\bibcite{pearce_exact_1989}{{49}{}{{}}{{}}}
-\bibcite{derks_suppression_2006}{{50}{}{{}}{{}}}
-\bibcite{girot_conical_2019}{{51}{}{{}}{{}}}
-\bibcite{derks_confocal_2004}{{52}{}{{}}{{}}}
-\bibcite{berthier_nonequilibrium_2002}{{53}{}{{}}{{}}}
-\bibcite{berthier_shearing_2002}{{54}{}{{}}{{}}}
-\bibcite{thiebaud_nonequilibrium_2010}{{55}{}{{}}{{}}}
-\bibcite{smith_driven_2010}{{56}{}{{}}{{}}}
-\bibcite{smith_interfaces_2008-1}{{57}{}{{}}{{}}}
-\bibcite{smith_interfaces_2008}{{58}{}{{}}{{}}}
-\bibcite{newman_monte_1999}{{59}{}{{}}{{}}}
-\bibcite{privman_asymptotic_1989}{{60}{}{{}}{{}}}
-\bibcite{metropolis_monte_1949}{{61}{}{{}}{{}}}
-\bibcite{paul_gersberg_github_2020}{{62}{}{{}}{{}}}
-\bibcite{wansleben_monte_1991}{{63}{}{{}}{{}}}
-\bibcite{glauber_timedependent_1963}{{64}{}{{}}{{}}}
-\bibcite{kawasaki_diffusion_1966}{{65}{}{{}}{{}}}
-\bibcite{vasilyev_universal_2009}{{66}{}{{}}{{}}}
-\bibcite{lopes_cardozo_critical_2014}{{67}{}{{}}{{}}}
-\bibcite{martin_ankerl_fast_nodate}{{68}{}{{}}{{}}}
+\bibcite{diehl_interface_1980}{{11}{}{{}}{{}}}
+\bibcite{bray_interface_2001}{{12}{}{{}}{{}}}
+\bibcite{bray_interface_2001-1}{{13}{}{{}}{{}}}
+\bibcite{edwards_surface_1982}{{14}{}{{}}{{}}}
+\bibcite{halpin-healy_kinetic_1995}{{15}{}{{}}{{}}}
+\bibcite{paul_domain_2005}{{16}{}{{}}{{}}}
+\bibcite{huse_corrections_1986}{{17}{}{{}}{{}}}
+\bibcite{niss_history_2005}{{18}{}{{}}{{}}}
+\bibcite{niss_history_2009}{{19}{}{{}}{{}}}
+\bibcite{gupta_phase_1988}{{20}{}{{}}{{}}}
+\bibcite{bellac_equilibrium_2004}{{21}{}{{}}{{}}}
+\bibcite{aizenman_proof_1981}{{22}{}{{}}{{}}}
+\bibcite{de_jongh_experiments_1974}{{23}{}{{}}{{}}}
+\bibcite{wp_wold_ising_2000}{{24}{}{{}}{{}}}
+\bibcite{ikeda_neutron_1973}{{25}{}{{}}{{}}}
+\bibcite{frohlich_triviality_1981}{{26}{}{{}}{{}}}
+\bibcite{goldenfeld_lectures_2018}{{27}{}{{}}{{}}}
+\bibcite{talapov_magnetization_1996}{{28}{}{{}}{{}}}
+\bibcite{preis_gpu_2009}{{29}{}{{}}{{}}}
+\bibcite{stecki_magnetization_1994}{{30}{}{{}}{{}}}
+\bibcite{richards_numerical_1993}{{31}{}{{}}{{}}}
+\bibcite{abraham_interface_1976}{{32}{}{{}}{{}}}
+\bibcite{abraham_transfer_1973}{{33}{}{{}}{{}}}
+\bibcite{swendsen_roughening_1977}{{34}{}{{}}{{}}}
+\bibcite{van_leeuwen_pinning_1981}{{35}{}{{}}{{}}}
+\bibcite{gilmer_simulation_1972}{{36}{}{{}}{{}}}
+\bibcite{elwenspoek_kinetic_1987}{{37}{}{{}}{{}}}
+\bibcite{wilby_scaling_1992}{{38}{}{{}}{{}}}
+\bibcite{gompper_steric_1989}{{39}{}{{}}{{}}}
+\bibcite{fisher_walks_1983}{{40}{}{{}}{{}}}
+\bibcite{privman_transfer-matrix_1989}{{41}{}{{}}{{}}}
+\bibcite{kim_conserved_1994}{{42}{}{{}}{{}}}
+\bibcite{vaysburd_critical_1995}{{43}{}{{}}{{}}}
+\bibcite{knops_exact_1977}{{44}{}{{}}{{}}}
+\bibcite{schehr_universal_2006}{{45}{}{{}}{{}}}
+\bibcite{swendsen_monte_1977}{{46}{}{{}}{{}}}
+\bibcite{owczarek_exact_1993}{{47}{}{{}}{{}}}
+\bibcite{majumdar_airy_2005}{{48}{}{{}}{{}}}
+\bibcite{siegert_scaling_1993}{{49}{}{{}}{{}}}
+\bibcite{pearce_exact_1989}{{50}{}{{}}{{}}}
+\bibcite{derks_suppression_2006}{{51}{}{{}}{{}}}
+\bibcite{girot_conical_2019}{{52}{}{{}}{{}}}
+\bibcite{derks_confocal_2004}{{53}{}{{}}{{}}}
+\bibcite{berthier_nonequilibrium_2002}{{54}{}{{}}{{}}}
+\bibcite{berthier_shearing_2002}{{55}{}{{}}{{}}}
+\bibcite{thiebaud_nonequilibrium_2010}{{56}{}{{}}{{}}}
+\bibcite{smith_driven_2010}{{57}{}{{}}{{}}}
+\bibcite{smith_interfaces_2008-1}{{58}{}{{}}{{}}}
+\bibcite{smith_interfaces_2008}{{59}{}{{}}{{}}}
+\bibcite{newman_monte_1999}{{60}{}{{}}{{}}}
+\bibcite{privman_asymptotic_1989}{{61}{}{{}}{{}}}
+\bibcite{metropolis_monte_1949}{{62}{}{{}}{{}}}
+\bibcite{paul_gersberg_github_2020}{{63}{}{{}}{{}}}
+\bibcite{wansleben_monte_1991}{{64}{}{{}}{{}}}
+\bibcite{glauber_timedependent_1963}{{65}{}{{}}{{}}}
+\bibcite{kawasaki_diffusion_1966}{{66}{}{{}}{{}}}
+\bibcite{vasilyev_universal_2009}{{67}{}{{}}{{}}}
+\bibcite{lopes_cardozo_critical_2014}{{68}{}{{}}{{}}}
+\bibcite{martin_ankerl_fast_nodate}{{69}{}{{}}{{}}}
+\bibcite{burkhardt_localisation-delocalisation_1981}{{70}{}{{}}{{}}}
+\bibcite{chui_pinning_1981}{{71}{}{{}}{{}}}
 \providecommand\NAT@force@numbers{}\NAT@force@numbers

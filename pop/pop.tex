@@ -1,30 +1,101 @@
 \chapter{Beyond Solid-On-Solid : the Particles-Over-Particles model}
+\label{chap-pop}
 
-In fact, if the height profiles represent particle numbers, if we fix the total number of particles to be $N$ and take them to be identical the partition function is given by
+In Sec \ref{sec-sos} we introduced the Solid-On-Solid model with Hamiltonian
+\begin{align}
+H_{SOS} = \sum_i |h_i-h_{i+1}| + \frac{V(h_i)+V(h_{i+1})}{2}
+\end{align}
+We discuss in this chapter a variant the model which is formed distinct particle types, and explain the numerical algorithm it obeys. For a single particle type, numerical simulations show that it is a better approximation to the Ising model than the SOS model for temperatures lower than $T_C$. This model allows for model C dynamics where particle types belong to different thermodynamic ensembles and have different kinetic of diffusive coefficients.
+In the multiple particles systems, we show that driving one of the particles types leads to an increase in surface fluctuations. We theoretically explain these results in terms of stochastic functional theory.
+
+%%%%%%%%%%%%%%%%%
+\section{The Single-type Particles-Over-Particles model}
+%%%%%%%%%%%%%%%%%
+
+\begin{figure}[!htb]
+\centering
+\includegraphics{pop/hauteur-tm-pop.pdf}
+\caption{Mean height of the POP model with respect to chemical potential $\mu$ through transfer matrix with different maximal heights in the thermodynamic limit $L'\to \infty$, compared to the Striling's approximation Eq \eqref{stirling-pop},at $\beta=1$. {\color{red} add MC sim}}
+\label{haut-tm-pop} 
+\includegraphics{pop/comparaison-modeles.pdf}
+\caption{Comparison of the internal mean total energy of the Ising, SOS, RSOS and POP models with respect to temperature in absence of external field and $\mu=0$, from Monte Carlo simulations at $L'=126$ and $L=30$ with Glauber dynamics. We used Eq \ref{energie-sos-ising} to compare energies between the interface models and the Ising one.
+{\color{red} redo sims for Ising, need MCIA, takes too long otherwise}}
+\label{comp-models}
+\end{figure}
+
+The SOS Hamiltonian is directly derived from the Ising model thanks to the overhangs' absence approximation. Even though, while doing numerical simulations in both systems, it is striking to see that simulations do not behave identically. In the Ising model, if there are $n_{+,i}$ positive spins and $n_{-,i}$ negative spins at column $i$, in Monte Carlo simulations for each spin can be randomly chosen with a uniform probability for a spin-flip attempt. On the contrary, in the SOS model as we described in Chapter \ref{chap-sim}, we randomly choose a column $i$ with a uniform probability. We see that even though the Hamiltonian is the same, the dynamic is different.
+
+If the height profiles represent particle numbers, fixing the total number of particles to be $N$ and taking them to be identical, the partition function is given by
 \begin{equation}
-    Z_N = \frac{1}{N!}\sum_{h_1,h_2\cdots h_L} \delta_{\sum_{i=1}^L h_i, N}\frac{N!}{\prod_{i=1}^L h_i!} \exp\left(-\beta \sigma \sum_{i=1}^L |h_{i+1}-h_i| -\beta\sum_{i=1}^L V(h_i)\right).
+Z_{POP}(N) = \frac{1}{N!}\sum_{h_1,h_2\cdots h_{L'}} \delta_{\sum_{i=1}^L h_i, N}\frac{N!}{\prod_{i=1}^{L'} h_i!} \exp\left(-\beta J \sum_{i=1}^{L'} |h_{i+1}-h_i| -\beta\sum_{i=1}^{L'} V(h_i)\right)
 \end{equation}
-Here the combinatorial term $\frac{N!}{\prod_{i=1}^L h_i!}$ represents the number of ways that the $h_i$ particles on each site can be chosen from the $N$ particles available. The constraint on the particle number makes the computation of the partition function at fixed $N$ complicated both analytically and numerically. However if we change to the grand canonical ensemble using
+Here the combinatorial term $\frac{N!}{\prod_{i=1}^L h_i!}$ represents the number of ways that the $h_i$ particles on each site can be chosen from the $N$ particles available. In the same fashion as the Solid-On-Molid, we call this model the \textbf{Particles-Over-Particles model}, since we stack particles in columns of height $h_i$ .The constraint on the particle number makes the computation of the partition function at fixed $N$ complicated both analytically and numerically. However, if we change to the grand canonical ensemble using
 the formula
 \begin{equation}
-    \Theta = \sum_{N} \exp(\beta\mu N) Z_N,
+\Xi = \sum_{N} \exp(\beta\mu N) Z_N
 \end{equation}
-where $\Theta$ is the grand partition function and $\mu$ the chemical potential, we find
+where $\Xi$ is the grand partition function and $\mu$ the chemical potential, we find
 \begin{equation}
-    \Theta = \sum_{h_1,h_2\cdots h_L} \frac{1}{\prod_{i=1}^L h_i!} \exp\left(-\beta \sigma \sum_{i=1}^L |h_{i+1}-h_i| -\beta\sum_{i=1}^L[ V(h_i)-\mu h_i]\right).
+\Xi_{POP} = \sum_{h_1,h_2\cdots h_{L'}} \frac{1}{\prod_{i=1}^{L'} h_i!} \exp\left(-\beta J \sum_{i=1}^{L'} |h_{i+1}-h_i| -\beta\sum_{i=1}^{L'}[ V(h_i)-\mu h_i]\right)
 \end{equation}
-The grand partition function can then be written as 
+The model differs from the usual solid on solid model in that a number of particle configurations give rise to the same height configurations. The grand partition function can then be written as 
 \begin{equation}
-    \Theta = \sum_{h_1,h_2\cdots h_L} \exp\left(-\beta H_{eff}(h_1,h_2\cdots h_L)\right)
+\Xi = \sum_{h_1,h_2\cdots h_{L'}} \exp\left(-\beta H_{eff}(h_1,h_2\cdots h_{L'})\right)
 \end{equation}
 where 
 \begin{equation}
-    H_{eff}= \sigma \sum_{i=1}^L |h_{i+1}-h_i| +\sum_{i=1}^L [V(h_i)-\mu h_i +\frac{1}{\beta}\ln(h_i !)].
+H_{eff}= J \sum_{i=1}^{L'} |h_{i+1}-h_i| +\sum_{i=1}^{L'} [V(h_i)-\mu h_i +\frac{1}{\beta}\ln(h_i !)].
 \end{equation}
 
+The transfer matrix is
+\begin{align}
+T_{POP}(h,h') = T_{SOS}(h,h') \exp \left( \frac{\ln(h)+\ln(h')}{2} \right)
+\end{align}
+
+The Monte Carlo implementation is as follows. Each particle is labeled with the site $i$ in which it is, and $h_i$ is the number of particles numbered at that site. 
+In the Glauber dynamics, particles can be exchanged with a reservoir. With a probability $1/2$ one attempts to add a particle and with probability $1/2$ one attempts to takeaway a particle. In the first case, a site $i$ is chosen with a uniform distribution, and we attempt to create a new particle labeled at site $i$ with probability $min(1,\exp(-\beta \Delta E))$. In the latter, a particle is selected uniformly between all existing particles, and an attempt to remove it is done
+\footnote{In C++, we can use a $std::vector$ in which we add or remove particles. After each success attempt, we rebuild the distribution $std::uniform\_int\_distribution(0,N-1)$, where N is the number of particles. This operation is lightweight and should not cause any slowing down.}.
+Kawasaki dynamics is implemented by randomly choosing a particle $n$ with probability $\frac{1}{N}$ at each Monte Carlo step, then trying to move the particle to the left or right using Metropolis acceptance rate. 
+
+In Fig \ref{comp-models}, we plot the internal energy of the Ising, SOS, RSOS and POP models with respect to temperature in absence of external fields and $\mu=0$ wtih non-conserved dynamics. {\color{red} discuss the graph once plots are better}
+
+Contrary to the SOS model where there needs to be a confining external field in order to localize the interface \cite{burkhardt_localisation-delocalisation_1981,chui_pinning_1981}, the entropic term gives a stable position for the interface. In absence of external field, the effective potential is given by
+\begin{align} 
+    V_{eff}(h) = - \mu h + \frac{1}{\beta}\ln(h!)
+\end{align}
+If the chemical potential is large enough, the number of particles $N$ is large enough, so we can use Striling's formula and approximate a continuous derivative with the finite-difference in $h$, so we have
+\begin{align} 
+    V_{eff}(h)' = - \mu +\frac{1}{\beta} \ln(h)
+\end{align}which gives the mean height 
+\begin{align} 
+    <h> = \exp(\beta \mu) 
+\label{stirling-pop}
+    \end{align}
+    In Fig \ref{haut-tm-pop}, we show the mean height \eqref{stirling-pop} compared to the transfer matrix diagonalisation with different matrix size and the Monte Carlo simulations at$\beta=1$. We see that when $ \gg 1$, the Stirling's formula becomes valid and Eq \eqref{stirling-pop} becomes accurate. Since $<h>$ cannot exceed the maximum size of the system, saturation occurs at large $\mu$. 
+
+
+%%%%%%%%%%%%%%%%%%%%
+    \section{$M$-particles POP system}
+%%%%%%%%%%%%%%%%%%%%
+
+
 \begin{figure}
-    \includegraphics{pop/comparaison-modeles.pdf}
+    \centering
+    \includegraphics[width=0.7\linewidth]{pop/figure-pop.pdf}
+    \caption{Possible POP configuration with two types of particles $p_1$ and $p_2$. The red line shows the origin $z=0$. In the $i$-th column the interface is at height $h_i$, with $n_{p_0,i}$ particles of type $p_0$ at site $i$, and same for particles $p_2$. Over the interface, there are no particles. }
+    \label{fig-pop}
 \end{figure}
-\begin{figure}
-    \includegraphics{pop/figure-pop.pdf}
-\end{figure}
+
+We consider a model of a surface delimiting a bulk phase of $L'$  sites which contains $M$ different particle types $p_1 ... p_M$, and $n_{m,i}$ denote the number of particles of type $m$ at site $i$, and the interface height is $h_i = \sum_m n_{m,i}$. Taking into account the entropic contribution, the effective Hamiltonian for the model is
+\begin{align}
+    H[M] = J \sum_i |h_i-h_{i+1}| + \sum_i V(h_i) - \sum_m \mu_m \sum_i n_{m,i} + \frac{1}{\beta} \sum_m \sum_i \ln(n_{m,i})
+    \label{ham-pop-c}
+\end{align}
+We assume that the particles in each column are demixed, i.e. the permitted particle configurations are taken to be stacked vertically such that the stack of $p_{m+1}$ particles lies on top  of the $p_m$ particles, as seen in Fig \ref{fig-pop} for $M=2$. The first term in the Hamiltonian corresponds to the surface tension with a gas phase above the stacks of particles. As disccused with the SOS model, we can have a restricted or gaussian version of Eq \ref{ham-pop-c}. 
+
+The grand partition function is given by
+\begin{align}
+    \Xi = \sum_{p_1...p_M} \exp(-\beta H[M])
+\end{align}
+
+The motivation for a $M$ particle theory is that when one develops a continuous, off latice theory, based on Brownian dynamics, any single particle theory is insensitive to constant driving due to Galilean invariance, the presence of two or more different particle types breaks this invariance and yields non-equilibrum effects.

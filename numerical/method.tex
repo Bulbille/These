@@ -78,9 +78,10 @@ We can show that this relation is equivalent to \cite{newman_monte_1999}
 \frac{\rho(C'\to C)}{\rho(C \to C')} = \frac{p(C)}{p(C')} = \frac{\exp(-\beta E(C))}{\exp(-\beta E(C'))}
 \end{align} 
 By adopting the detailed balance, we easily see that the equilibrium distribution computed by Eq \eqref{p-eq-mc} gives back the Gibbs-Boltzmann distribution. 
-During a Metropolis step, the transition probability of $C\to C'$ depends of the probability $g(C\to C')$ that this transition would be chosen amongst all the other possible transitions, and the acceptance rate $A(C \to C')$, which gives
+During a Metropolis step, the transition probability of $C\to C'$ depends of the probability $g(C\to C')$ that this transition would be chosen amongst all the other possible transitions, and the acceptance rate ${A(C \to C')}$, which gives
 \begin{align}
-\rho(C\to C') = g(C\to C') A(C \to C')
+    \rho(C\to C') = g(C\to C') A(C \to C')
+    \label{acceptance-mc}
 \end{align}
 For a lattice model site $L'$ sites, we say that a Monte Carlo time step is done when we have proceeded to $L'$ transition tries.
 %%%%%%%%%%%%%%

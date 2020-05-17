@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.3.19)  16 MAY 2020 05:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.3.19)  17 MAY 2020 07:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -27,59 +27,6 @@ File: bk11.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
 Package: inputenc 2018/08/11 v1.3c Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
-)
-(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2019/06/03 3.32 The Babel package
-
-(/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
-File: switch.def 2019/06/03 3.32 Babel switching mechanism
-)
-(/usr/share/texlive/texmf-dist/tex/generic/babel-french/frenchb.ldf
-Language: frenchb 2019/03/30 v3.5e French support from the babel system
-
-
-Package babel-french Warning: Option `frenchb' for Babel is *deprecated*,
-(babel-french)                it might be removed sooner or later. Please
-(babel-french)                use `french' instead; reported on input line 35.
-
-(/usr/share/texlive/texmf-dist/tex/generic/babel-french/french.ldf
-Language: french 2019/03/30 v3.5e French support from the babel system
-
-(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2019/06/03 3.32 Babel common definitions
-\babel@savecnt=\count89
-\U@D=\dimen103
-
-(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
-\bbl@dirlevel=\count90
-)
-\l@acadian = a dialect from \language\l@french 
-\FB@nonchar=\count91
-Package babel Info: Making : an active character on input line 414.
-Package babel Info: Making ; an active character on input line 415.
-Package babel Info: Making ! an active character on input line 416.
-Package babel Info: Making ? an active character on input line 417.
-\FBguill@level=\count92
-\FBold@everypar=\toks16
-\FB@Mht=\dimen104
-\mc@charclass=\count93
-\mc@charfam=\count94
-\mc@charslot=\count95
-\std@mcc=\count96
-\dec@mcc=\count97
-\c@FBcaption@count=\count98
-\listindentFB=\dimen105
-\descindentFB=\dimen106
-\labelindentFB=\dimen107
-\labelwidthFB=\dimen108
-\leftmarginFB=\dimen109
-\parindentFFN=\dimen110
-\FBfnindent=\dimen111
-)))
-(/usr/share/texlive/texmf-dist/tex/latex/carlisle/scalefnt.sty)
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks17
 )
 (/usr/share/texmf/tex/latex/lm/lmodern.sty
 Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
@@ -180,6 +127,10 @@ Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
 Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
 Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
 )
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
 (/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
@@ -189,16 +140,16 @@ Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
-\@linkdim=\dimen112
-\Hy@linkcounter=\count99
-\Hy@pagecounter=\count100
+\@linkdim=\dimen103
+\Hy@linkcounter=\count89
+\Hy@pagecounter=\count90
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2018/11/30 v6.88e Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count101
+\Hy@SavedSpaceFactor=\count91
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -210,17 +161,17 @@ Package hyperref Info: Plain pages OFF on input line 4534.
 Package hyperref Info: Backreferencing OFF on input line 4539.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4772.
-\c@Hy@tempcnt=\count102
+\c@Hy@tempcnt=\count92
 
 (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5125.
-\XeTeXLinkMargin=\dimen113
-\Fld@menulength=\count103
-\Field@Width=\dimen114
-\Fld@charsize=\dimen115
+\XeTeXLinkMargin=\dimen104
+\Fld@menulength=\count93
+\Field@Width=\dimen105
+\Fld@charsize=\dimen106
 Package hyperref Info: Hyper figures OFF on input line 6380.
 Package hyperref Info: Link nesting OFF on input line 6385.
 Package hyperref Info: Hyper index ON on input line 6388.
@@ -230,16 +181,16 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6405.
 Package hyperref Info: PDF/A mode OFF on input line 6410.
 LaTeX Info: Redefining \ref on input line 6450.
 LaTeX Info: Redefining \pageref on input line 6454.
-\Hy@abspage=\count104
-\c@Item=\count105
-\c@Hfootnote=\count106
+\Hy@abspage=\count94
+\c@Item=\count95
+\c@Hfootnote=\count96
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2018/11/30 v6.88e Hyperref driver for pdfTeX
-\Fld@listcount=\count107
-\c@bookmark@seq@number=\count108
+\Fld@listcount=\count97
+\c@bookmark@seq@number=\count98
 
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
@@ -261,68 +212,68 @@ Package: amstext 2000/06/29 v2.01 AMS text
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks18
-\ex@=\dimen116
+\@emptytoks=\toks17
+\ex@=\dimen107
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen117
+\pmbraise@=\dimen108
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count109
+\inf@bad=\count99
 LaTeX Info: Redefining \frac on input line 223.
-\uproot@=\count110
-\leftroot@=\count111
+\uproot@=\count100
+\leftroot@=\count101
 LaTeX Info: Redefining \overline on input line 385.
-\classnum@=\count112
-\DOTSCASE@=\count113
+\classnum@=\count102
+\DOTSCASE@=\count103
 LaTeX Info: Redefining \ldots on input line 482.
 LaTeX Info: Redefining \dots on input line 485.
 LaTeX Info: Redefining \cdots on input line 606.
 \Mathstrutbox@=\box27
 \strutbox@=\box28
-\big@size=\dimen118
+\big@size=\dimen109
 LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
-\macc@depth=\count114
-\c@MaxMatrixCols=\count115
+\macc@depth=\count104
+\c@MaxMatrixCols=\count105
 \dotsspace@=\muskip11
-\c@parentequation=\count116
-\dspbrk@lvl=\count117
-\tag@help=\toks19
-\row@=\count118
-\column@=\count119
-\maxfields@=\count120
-\andhelp@=\toks20
-\eqnshift@=\dimen119
-\alignsep@=\dimen120
-\tagshift@=\dimen121
-\tagwidth@=\dimen122
-\totwidth@=\dimen123
-\lineht@=\dimen124
-\@envbody=\toks21
+\c@parentequation=\count106
+\dspbrk@lvl=\count107
+\tag@help=\toks18
+\row@=\count108
+\column@=\count109
+\maxfields@=\count110
+\andhelp@=\toks19
+\eqnshift@=\dimen110
+\alignsep@=\dimen111
+\tagshift@=\dimen112
+\tagwidth@=\dimen113
+\totwidth@=\dimen114
+\lineht@=\dimen115
+\@envbody=\toks20
 \multlinegap=\skip45
 \multlinetaggap=\skip46
-\mathdisplay@stack=\toks22
+\mathdisplay@stack=\toks21
 LaTeX Info: Redefining \[ on input line 2844.
 LaTeX Info: Redefining \] on input line 2845.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2018/04/16 v5.8 Page Geometry
-\Gm@cnth=\count121
-\Gm@cntv=\count122
-\c@Gm@tempcnt=\count123
-\Gm@bindingoffset=\dimen125
-\Gm@wd@mp=\dimen126
-\Gm@odd@mp=\dimen127
-\Gm@even@mp=\dimen128
-\Gm@layoutwidth=\dimen129
-\Gm@layoutheight=\dimen130
-\Gm@layouthoffset=\dimen131
-\Gm@layoutvoffset=\dimen132
-\Gm@dimlist=\toks23
+\Gm@cnth=\count111
+\Gm@cntv=\count112
+\c@Gm@tempcnt=\count113
+\Gm@bindingoffset=\dimen116
+\Gm@wd@mp=\dimen117
+\Gm@odd@mp=\dimen118
+\Gm@even@mp=\dimen119
+\Gm@layoutwidth=\dimen120
+\Gm@layoutheight=\dimen121
+\Gm@layouthoffset=\dimen122
+\Gm@layoutvoffset=\dimen123
+\Gm@dimlist=\toks22
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
@@ -356,8 +307,8 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
 )
-\Gin@req@height=\dimen133
-\Gin@req@width=\dimen134
+\Gin@req@height=\dimen124
+\Gin@req@width=\dimen125
 )
 (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2018/05/01 v1.1-162 Sub-captions (AR)
@@ -368,20 +319,20 @@ Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 64.
-\captionmargin=\dimen135
-\captionmargin@=\dimen136
-\captionwidth=\dimen137
-\caption@tempdima=\dimen138
-\caption@indent=\dimen139
-\caption@parindent=\dimen140
-\caption@hangindent=\dimen141
+\captionmargin=\dimen126
+\captionmargin@=\dimen127
+\captionwidth=\dimen128
+\caption@tempdima=\dimen129
+\caption@indent=\dimen130
+\caption@parindent=\dimen131
+\caption@hangindent=\dimen132
 )
-\c@caption@flags=\count124
-\c@ContinuedFloat=\count125
+\c@caption@flags=\count114
+\c@ContinuedFloat=\count115
 Package caption Info: hyperref package is loaded.
 )
-\c@subfigure=\count126
-\c@subtable=\count127
+\c@subfigure=\count116
+\c@subtable=\count117
 )
 (/usr/share/texlive/texmf-dist/tex/latex/mwe/mwe.sty
 Package: mwe 2018/03/30 v0.5 Package to support minimal working examples (MWE)
@@ -392,24 +343,24 @@ Package: expl3 2019-07-01 L3 programming layer (loader)
 
 (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3-code.tex
 Package: expl3 2019-07-01 L3 programming layer (code)
-\c_max_int=\count128
-\l_tmpa_int=\count129
-\l_tmpb_int=\count130
-\g_tmpa_int=\count131
-\g_tmpb_int=\count132
-\g__kernel_prg_map_int=\count133
-\c__ior_term_ior=\count134
-\c_log_iow=\count135
-\l_iow_line_count_int=\count136
-\l__iow_line_target_int=\count137
-\l__iow_one_indent_int=\count138
-\l__iow_indent_int=\count139
-\c_zero_dim=\dimen142
-\c_max_dim=\dimen143
-\l_tmpa_dim=\dimen144
-\l_tmpb_dim=\dimen145
-\g_tmpa_dim=\dimen146
-\g_tmpb_dim=\dimen147
+\c_max_int=\count118
+\l_tmpa_int=\count119
+\l_tmpb_int=\count120
+\g_tmpa_int=\count121
+\g_tmpb_int=\count122
+\g__kernel_prg_map_int=\count123
+\c__ior_term_ior=\count124
+\c_log_iow=\count125
+\l_iow_line_count_int=\count126
+\l__iow_line_target_int=\count127
+\l__iow_one_indent_int=\count128
+\l__iow_indent_int=\count129
+\c_zero_dim=\dimen133
+\c_max_dim=\dimen134
+\l_tmpa_dim=\dimen135
+\l_tmpb_dim=\dimen136
+\g_tmpa_dim=\dimen137
+\g_tmpb_dim=\dimen138
 \c_zero_skip=\skip47
 \c_max_skip=\skip48
 \l_tmpa_skip=\skip49
@@ -422,102 +373,102 @@ Package: expl3 2019-07-01 L3 programming layer (code)
 \l_tmpb_muskip=\muskip15
 \g_tmpa_muskip=\muskip16
 \g_tmpb_muskip=\muskip17
-\l_keys_choice_int=\count140
-\l__intarray_loop_int=\count141
-\c__intarray_sp_dim=\dimen148
-\g__intarray_font_int=\count142
-\c__fp_leading_shift_int=\count143
-\c__fp_middle_shift_int=\count144
-\c__fp_trailing_shift_int=\count145
-\c__fp_big_leading_shift_int=\count146
-\c__fp_big_middle_shift_int=\count147
-\c__fp_big_trailing_shift_int=\count148
-\c__fp_Bigg_leading_shift_int=\count149
-\c__fp_Bigg_middle_shift_int=\count150
-\c__fp_Bigg_trailing_shift_int=\count151
-\c__kernel_randint_max_int=\count152
-\g__fp_array_int=\count153
-\l__fp_array_loop_int=\count154
-\l__sort_length_int=\count155
-\l__sort_min_int=\count156
-\l__sort_top_int=\count157
-\l__sort_max_int=\count158
-\l__sort_true_max_int=\count159
-\l__sort_block_int=\count160
-\l__sort_begin_int=\count161
-\l__sort_end_int=\count162
-\l__sort_A_int=\count163
-\l__sort_B_int=\count164
-\l__sort_C_int=\count165
-\l__str_internal_int=\count166
-\c__str_replacement_char_int=\count167
-\l__tl_analysis_normal_int=\count168
-\l__tl_analysis_index_int=\count169
-\l__tl_analysis_nesting_int=\count170
-\l__tl_analysis_type_int=\count171
-\l__regex_internal_a_int=\count172
-\l__regex_internal_b_int=\count173
-\l__regex_internal_c_int=\count174
-\l__regex_balance_int=\count175
-\l__regex_group_level_int=\count176
-\l__regex_mode_int=\count177
-\c__regex_cs_in_class_mode_int=\count178
-\c__regex_cs_mode_int=\count179
-\l__regex_catcodes_int=\count180
-\l__regex_default_catcodes_int=\count181
-\c__regex_catcode_D_int=\count182
-\c__regex_catcode_S_int=\count183
-\c__regex_catcode_L_int=\count184
-\c__regex_catcode_O_int=\count185
-\c__regex_catcode_A_int=\count186
-\c__regex_all_catcodes_int=\count187
-\l__regex_show_lines_int=\count188
-\l__regex_min_state_int=\count189
-\l__regex_max_state_int=\count190
-\l__regex_left_state_int=\count191
-\l__regex_right_state_int=\count192
-\l__regex_capturing_group_int=\count193
-\l__regex_min_pos_int=\count194
-\l__regex_max_pos_int=\count195
-\l__regex_curr_pos_int=\count196
-\l__regex_start_pos_int=\count197
-\l__regex_success_pos_int=\count198
-\l__regex_curr_char_int=\count199
-\l__regex_curr_catcode_int=\count266
-\l__regex_last_char_int=\count267
-\l__regex_case_changed_char_int=\count268
-\l__regex_curr_state_int=\count269
-\l__regex_step_int=\count270
-\l__regex_min_active_int=\count271
-\l__regex_max_active_int=\count272
-\l__regex_replacement_csnames_int=\count273
-\l__regex_match_count_int=\count274
-\l__regex_min_submatch_int=\count275
-\l__regex_submatch_int=\count276
-\l__regex_zeroth_submatch_int=\count277
-\g__regex_trace_regex_int=\count278
+\l_keys_choice_int=\count130
+\l__intarray_loop_int=\count131
+\c__intarray_sp_dim=\dimen139
+\g__intarray_font_int=\count132
+\c__fp_leading_shift_int=\count133
+\c__fp_middle_shift_int=\count134
+\c__fp_trailing_shift_int=\count135
+\c__fp_big_leading_shift_int=\count136
+\c__fp_big_middle_shift_int=\count137
+\c__fp_big_trailing_shift_int=\count138
+\c__fp_Bigg_leading_shift_int=\count139
+\c__fp_Bigg_middle_shift_int=\count140
+\c__fp_Bigg_trailing_shift_int=\count141
+\c__kernel_randint_max_int=\count142
+\g__fp_array_int=\count143
+\l__fp_array_loop_int=\count144
+\l__sort_length_int=\count145
+\l__sort_min_int=\count146
+\l__sort_top_int=\count147
+\l__sort_max_int=\count148
+\l__sort_true_max_int=\count149
+\l__sort_block_int=\count150
+\l__sort_begin_int=\count151
+\l__sort_end_int=\count152
+\l__sort_A_int=\count153
+\l__sort_B_int=\count154
+\l__sort_C_int=\count155
+\l__str_internal_int=\count156
+\c__str_replacement_char_int=\count157
+\l__tl_analysis_normal_int=\count158
+\l__tl_analysis_index_int=\count159
+\l__tl_analysis_nesting_int=\count160
+\l__tl_analysis_type_int=\count161
+\l__regex_internal_a_int=\count162
+\l__regex_internal_b_int=\count163
+\l__regex_internal_c_int=\count164
+\l__regex_balance_int=\count165
+\l__regex_group_level_int=\count166
+\l__regex_mode_int=\count167
+\c__regex_cs_in_class_mode_int=\count168
+\c__regex_cs_mode_int=\count169
+\l__regex_catcodes_int=\count170
+\l__regex_default_catcodes_int=\count171
+\c__regex_catcode_D_int=\count172
+\c__regex_catcode_S_int=\count173
+\c__regex_catcode_L_int=\count174
+\c__regex_catcode_O_int=\count175
+\c__regex_catcode_A_int=\count176
+\c__regex_all_catcodes_int=\count177
+\l__regex_show_lines_int=\count178
+\l__regex_min_state_int=\count179
+\l__regex_max_state_int=\count180
+\l__regex_left_state_int=\count181
+\l__regex_right_state_int=\count182
+\l__regex_capturing_group_int=\count183
+\l__regex_min_pos_int=\count184
+\l__regex_max_pos_int=\count185
+\l__regex_curr_pos_int=\count186
+\l__regex_start_pos_int=\count187
+\l__regex_success_pos_int=\count188
+\l__regex_curr_char_int=\count189
+\l__regex_curr_catcode_int=\count190
+\l__regex_last_char_int=\count191
+\l__regex_case_changed_char_int=\count192
+\l__regex_curr_state_int=\count193
+\l__regex_step_int=\count194
+\l__regex_min_active_int=\count195
+\l__regex_max_active_int=\count196
+\l__regex_replacement_csnames_int=\count197
+\l__regex_match_count_int=\count198
+\l__regex_min_submatch_int=\count199
+\l__regex_submatch_int=\count266
+\l__regex_zeroth_submatch_int=\count267
+\g__regex_trace_regex_int=\count268
 \c_empty_box=\box29
 \l_tmpa_box=\box30
 \l_tmpb_box=\box31
 \g_tmpa_box=\box32
 \g_tmpb_box=\box33
-\l__box_top_dim=\dimen149
-\l__box_bottom_dim=\dimen150
-\l__box_left_dim=\dimen151
-\l__box_right_dim=\dimen152
-\l__box_top_new_dim=\dimen153
-\l__box_bottom_new_dim=\dimen154
-\l__box_left_new_dim=\dimen155
-\l__box_right_new_dim=\dimen156
+\l__box_top_dim=\dimen140
+\l__box_bottom_dim=\dimen141
+\l__box_left_dim=\dimen142
+\l__box_right_dim=\dimen143
+\l__box_top_new_dim=\dimen144
+\l__box_bottom_new_dim=\dimen145
+\l__box_left_new_dim=\dimen146
+\l__box_right_new_dim=\dimen147
 \l__box_internal_box=\box34
 \l__coffin_internal_box=\box35
-\l__coffin_internal_dim=\dimen157
-\l__coffin_offset_x_dim=\dimen158
-\l__coffin_offset_y_dim=\dimen159
-\l__coffin_x_dim=\dimen160
-\l__coffin_y_dim=\dimen161
-\l__coffin_x_prime_dim=\dimen162
-\l__coffin_y_prime_dim=\dimen163
+\l__coffin_internal_dim=\dimen148
+\l__coffin_offset_x_dim=\dimen149
+\l__coffin_offset_y_dim=\dimen150
+\l__coffin_x_dim=\dimen151
+\l__coffin_y_dim=\dimen152
+\l__coffin_x_prime_dim=\dimen153
+\l__coffin_y_prime_dim=\dimen154
 \c_empty_coffin=\box36
 \l__coffin_aligned_coffin=\box37
 \l__coffin_aligned_internal_coffin=\box38
@@ -525,37 +476,37 @@ Package: expl3 2019-07-01 L3 programming layer (code)
 \l_tmpb_coffin=\box40
 \g_tmpa_coffin=\box41
 \g_tmpb_coffin=\box42
-\l__coffin_bounding_shift_dim=\dimen164
-\l__coffin_left_corner_dim=\dimen165
-\l__coffin_right_corner_dim=\dimen166
-\l__coffin_bottom_corner_dim=\dimen167
-\l__coffin_top_corner_dim=\dimen168
-\l__coffin_scaled_total_height_dim=\dimen169
-\l__coffin_scaled_width_dim=\dimen170
+\l__coffin_bounding_shift_dim=\dimen155
+\l__coffin_left_corner_dim=\dimen156
+\l__coffin_right_corner_dim=\dimen157
+\l__coffin_bottom_corner_dim=\dimen158
+\l__coffin_top_corner_dim=\dimen159
+\l__coffin_scaled_total_height_dim=\dimen160
+\l__coffin_scaled_width_dim=\dimen161
 \c__coffin_empty_coffin=\box43
 \l__coffin_display_coffin=\box44
 \l__coffin_display_coord_coffin=\box45
 \l__coffin_display_pole_coffin=\box46
-\l__coffin_display_offset_dim=\dimen171
-\l__coffin_display_x_dim=\dimen172
-\l__coffin_display_y_dim=\dimen173
+\l__coffin_display_offset_dim=\dimen162
+\l__coffin_display_x_dim=\dimen163
+\l__coffin_display_y_dim=\dimen164
 \g__file_internal_ior=\read1
-\l__seq_internal_a_int=\count279
-\l__seq_internal_b_int=\count280
-\c__deprecation_minus_one=\count281
+\l__seq_internal_a_int=\count269
+\l__seq_internal_b_int=\count270
+\c__deprecation_minus_one=\count271
 )
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2019-04-06 v L3 Experimental backend support: PDF m
 ode
-\l__kernel_color_stack_int=\count282
+\l__kernel_color_stack_int=\count272
 \l__pdf_internal_box=\box47
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2019-05-28 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count283
-\g__xparse_grabber_int=\count284
-\l__xparse_m_args_int=\count285
-\l__xparse_v_nesting_int=\count286
+\l__xparse_current_arg_int=\count273
+\g__xparse_grabber_int=\count274
+\l__xparse_m_args_int=\count275
+\l__xparse_v_nesting_int=\count276
 )
 Package: lipsum 2019/01/02 v2.2 150 paragraphs of Lorem Ipsum dummy text
 
@@ -568,24 +519,24 @@ Package: blindtext 2012/01/06 V2.0 blindtext-Package
 (/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
-\c@blindtext=\count287
-\c@Blindtext=\count288
-\c@blind@countparstart=\count289
-\blind@countxx=\count290
-\blindtext@numBlindtext=\count291
-\blind@countyy=\count292
-\c@blindlist=\count293
-\c@blindlistlevel=\count294
-\c@blindlist@level=\count295
-\blind@listitem=\count296
-\c@blind@listcount=\count297
-\c@blind@levelcount=\count298
-\blind@mathformula=\count299
-\blind@Mathformula=\count300
-\c@blind@randomcount=\count301
-\c@blind@randommax=\count302
-\c@blind@pangramcount=\count303
-\c@blind@pangrammax=\count304
+\c@blindtext=\count277
+\c@Blindtext=\count278
+\c@blind@countparstart=\count279
+\blind@countxx=\count280
+\blindtext@numBlindtext=\count281
+\blind@countyy=\count282
+\c@blindlist=\count283
+\c@blindlistlevel=\count284
+\c@blindlist@level=\count285
+\blind@listitem=\count286
+\c@blind@listcount=\count287
+\c@blind@levelcount=\count288
+\blind@mathformula=\count289
+\blind@Mathformula=\count290
+\c@blind@randomcount=\count291
+\c@blind@randommax=\count292
+\c@blind@pangramcount=\count293
+\c@blind@pangrammax=\count294
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/comment/comment.sty
 \CommentStream=\write3
@@ -596,8 +547,8 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/epsfig.sty
 Package: epsfig 2017/06/25 v1.7b (e)psfig emulation (SPQR)
-\epsfxsize=\dimen174
-\epsfysize=\dimen175
+\epsfxsize=\dimen165
+\epsfysize=\dimen166
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/latexsym.sty
 Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
@@ -614,7 +565,7 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip53
 \bibsep=\skip54
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count305
+\c@NAT@ctr=\count295
 ) (./main.aux
 
 LaTeX Warning: Label `bstep2' multiply defined.
@@ -625,50 +576,37 @@ LaTeX Warning: Label `ffs' multiply defined.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 68.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 69.
  (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Info: Redefining \degres on input line 68.
-LaTeX Info: Redefining \dots on input line 68.
-
-
-Package french.ldf Warning: Please load the "natbib" package
-(french.ldf)                BEFORE babel/french; reported on input line 68.
-
-LaTeX Info: Redefining \up on input line 68.
-
-Package french.ldf Warning: OT1 encoding should not be used for French.
-(french.ldf)                Add \usepackage[T1]{fontenc} to the preamble
-(french.ldf)                of your document; reported on input line 68.
-
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count306
-\scratchdimen=\dimen176
+\scratchcounter=\count296
+\scratchdimen=\dimen167
 \scratchbox=\box48
-\nofMPsegments=\count307
-\nofMParguments=\count308
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count309
-\MPscratchDim=\dimen177
-\MPnumerator=\count310
-\makeMPintoPDFobject=\count311
-\everyMPtoPDFconversion=\toks25
+\nofMPsegments=\count297
+\nofMParguments=\count298
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count299
+\MPscratchDim=\dimen168
+\MPnumerator=\count300
+\makeMPintoPDFobject=\count301
+\everyMPtoPDFconversion=\toks24
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -687,7 +625,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box49
-Package hyperref Info: Link coloring OFF on input line 68.
+Package hyperref Info: Link coloring OFF on input line 69.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -695,11 +633,11 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count312
+\c@section@level=\count302
 )
-LaTeX Info: Redefining \ref on input line 68.
-LaTeX Info: Redefining \pageref on input line 68.
-LaTeX Info: Redefining \nameref on input line 68.
+LaTeX Info: Redefining \ref on input line 69.
+LaTeX Info: Redefining \pageref on input line 69.
+LaTeX Info: Redefining \nameref on input line 69.
 
 (./main.out) (./main.out)
 \@outlinefile=\write4
@@ -742,44 +680,44 @@ LaTeX Info: Redefining \nameref on input line 68.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 74.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 75.
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 74.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 75.
 
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 74.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 75.
 
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 74.
+(Font)              <12> on input line 75.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 74.
+(Font)              <8> on input line 75.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 74.
-LaTeX Font Info:    Try loading font information for U+msa on input line 74.
+(Font)              <6> on input line 75.
+LaTeX Font Info:    Try loading font information for U+msa on input line 75.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 74.
+LaTeX Font Info:    Try loading font information for U+msb on input line 75.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 74.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 75.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for U+bbold on input line 74.
+LaTeX Font Info:    Try loading font information for U+bbold on input line 75.
 
 (/usr/share/texlive/texmf-dist/tex/latex/bbold/Ubbold.fd)
 
@@ -792,7 +730,7 @@ LaTeX Warning: No \author given.
 
 ] (./main.toc
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 4.
+(Font)              <10.95> on input line 3.
  [1
 
 ])
@@ -802,9 +740,17 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 (./intro/intro.tex [2] [3
 
-]) [4] (./int-dyn/chap1.tex
-Chapitre 1.
-<intro/clusterization.pdf, id=286, 462.52798pt x 346.89601pt>
+]
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 15.
+ (/usr/share/texmf/tex/latex/lm/omslmr.fd
+File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 15.
+) [4]
+(./int-dyn/chap1.tex
+Chapter 1.
+<intro/clusterization.pdf, id=296, 462.52798pt x 346.89601pt>
 File: intro/clusterization.pdf Graphic file (type pdf)
 <use intro/clusterization.pdf>
 Package pdftex.def Info: intro/clusterization.pdf  used on input line 14.
@@ -836,7 +782,7 @@ Underfull \vbox (badness 6493) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [6]
-<intro/double-puit-en-fonction-temp.pdf, id=372, 462.52798pt x 346.89601pt>
+<intro/double-puit-en-fonction-temp.pdf, id=381, 462.52798pt x 346.89601pt>
 File: intro/double-puit-en-fonction-temp.pdf Graphic file (type pdf)
 <use intro/double-puit-en-fonction-temp.pdf>
 Package pdftex.def Info: intro/double-puit-en-fonction-temp.pdf  used on input 
@@ -844,7 +790,7 @@ line 151.
 (pdftex.def)             Requested size: 258.00539pt x 193.5141pt.
 
 [7 <./intro/double-puit-en-fonction-temp.pdf>] [8] [9]
-<int-dyn/tension-superficielle.pdf, id=468, 462.52798pt x 346.89601pt>
+<int-dyn/tension-superficielle.pdf, id=477, 462.52798pt x 346.89601pt>
 File: int-dyn/tension-superficielle.pdf Graphic file (type pdf)
 <use int-dyn/tension-superficielle.pdf>
 Package pdftex.def Info: int-dyn/tension-superficielle.pdf  used on input line 
@@ -857,11 +803,6 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 3635) has occurred while \output is active []
 
  [11 <./int-dyn/tension-superficielle.pdf>]
-
-Package natbib Warning: Citation `diehl_interface_1980' on page 12 undefined on
- input line 319.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [12]
@@ -896,12 +837,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [19]
-<int-dyn/inte07.pdf, id=628, 462.52798pt x 346.89601pt>
+<int-dyn/inte07.pdf, id=639, 462.52798pt x 346.89601pt>
 File: int-dyn/inte07.pdf Graphic file (type pdf)
 <use int-dyn/inte07.pdf>
 Package pdftex.def Info: int-dyn/inte07.pdf  used on input line 611.
 (pdftex.def)             Requested size: 215.0023pt x 161.25204pt.
-<int-dyn/inte09.pdf, id=629, 462.52798pt x 346.89601pt>
+<int-dyn/inte09.pdf, id=640, 462.52798pt x 346.89601pt>
 File: int-dyn/inte09.pdf Graphic file (type pdf)
 <use int-dyn/inte09.pdf>
 Package pdftex.def Info: int-dyn/inte09.pdf  used on input line 614.
@@ -920,27 +861,23 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 pdfTeX warning: /usr/bin/pdflatex (file ./int-dyn/inte09.pdf): PDF inclusion: m
 ultiple pdfs with page group included in a single page
 >] [22] [23]
-
-LaTeX Warning: Reference `chap-pop' on page 24 undefined on input line 706.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [24]
-<int-dyn/sos-indiscernable.png, id=746, 462.528pt x 346.896pt>
+<int-dyn/sos-indiscernable.png, id=758, 462.528pt x 346.896pt>
 File: int-dyn/sos-indiscernable.png Graphic file (type png)
 <use int-dyn/sos-indiscernable.png>
-Package pdftex.def Info: int-dyn/sos-indiscernable.png  used on input line 729.
+Package pdftex.def Info: int-dyn/sos-indiscernable.png  used on input line 730.
 
 (pdftex.def)             Requested size: 193.50075pt x 145.12894pt.
-<int-dyn/sos-indiscernable-inf.png, id=748, 462.528pt x 346.896pt>
+<int-dyn/sos-indiscernable-inf.png, id=760, 462.528pt x 346.896pt>
 File: int-dyn/sos-indiscernable-inf.png Graphic file (type png)
 <use int-dyn/sos-indiscernable-inf.png>
 Package pdftex.def Info: int-dyn/sos-indiscernable-inf.png  used on input line 
-732.
+733.
 (pdftex.def)             Requested size: 193.50075pt x 145.12894pt.
 
-Overfull \hbox (2.43332pt too wide) in paragraph at lines 728--734
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 729--735
 [][] [] 
  []
 
@@ -951,17 +888,17 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 2376) has occurred while \output is active []
 
  [26]
-<int-dyn/hauteur-tm-sos.pdf, id=797, 462.52798pt x 346.89601pt>
+<int-dyn/hauteur-tm-sos.pdf, id=809, 462.52798pt x 346.89601pt>
 File: int-dyn/hauteur-tm-sos.pdf Graphic file (type pdf)
 <use int-dyn/hauteur-tm-sos.pdf>
-Package pdftex.def Info: int-dyn/hauteur-tm-sos.pdf  used on input line 792.
+Package pdftex.def Info: int-dyn/hauteur-tm-sos.pdf  used on input line 793.
 (pdftex.def)             Requested size: 301.00192pt x 225.76027pt.
 
 
-LaTeX Warning: Command \textexclamdown invalid in math mode on input line 810.
+LaTeX Warning: Command \textexclamdown invalid in math mode on input line 811.
 
 
-LaTeX Warning: Command \textexclamdown invalid in math mode on input line 810.
+LaTeX Warning: Command \textexclamdown invalid in math mode on input line 811.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -970,35 +907,35 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 5878) has occurred while \output is active []
 
  [28 <./int-dyn/hauteur-tm-sos.pdf>]
-<int-dyn/freeene-thermo-libre.pdf, id=856, 462.52798pt x 346.89601pt>
+<int-dyn/freeene-thermo-libre.pdf, id=868, 462.52798pt x 346.89601pt>
 File: int-dyn/freeene-thermo-libre.pdf Graphic file (type pdf)
 <use int-dyn/freeene-thermo-libre.pdf>
 Package pdftex.def Info: int-dyn/freeene-thermo-libre.pdf  used on input line 8
-60.
+61.
 (pdftex.def)             Requested size: 301.00192pt x 225.76027pt.
  [29]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [30 <./int-dyn/freeene-thermo-libre.pdf>]
-<int-dyn/derks.png, id=924, 1139.25626pt x 819.06pt>
+<int-dyn/derks.png, id=937, 1139.25626pt x 819.06pt>
 File: int-dyn/derks.png Graphic file (type png)
 <use int-dyn/derks.png>
-Package pdftex.def Info: int-dyn/derks.png  used on input line 960.
+Package pdftex.def Info: int-dyn/derks.png  used on input line 961.
 (pdftex.def)             Requested size: 301.00192pt x 216.39998pt.
-<intro/cis-ising-f-000.pdf, id=927, 406.37096pt x 191.01828pt>
+<intro/cis-ising-f-000.pdf, id=940, 406.37096pt x 191.01828pt>
 File: intro/cis-ising-f-000.pdf Graphic file (type pdf)
 <use intro/cis-ising-f-000.pdf>
-Package pdftex.def Info: intro/cis-ising-f-000.pdf  used on input line 965.
+Package pdftex.def Info: intro/cis-ising-f-000.pdf  used on input line 966.
 (pdftex.def)             Requested size: 215.0023pt x 101.06432pt.
-<intro/cis-ising-f-033.pdf, id=928, 406.37096pt x 191.01828pt>
+<intro/cis-ising-f-033.pdf, id=941, 406.37096pt x 191.01828pt>
 File: intro/cis-ising-f-033.pdf Graphic file (type pdf)
 <use intro/cis-ising-f-033.pdf>
-Package pdftex.def Info: intro/cis-ising-f-033.pdf  used on input line 968.
+Package pdftex.def Info: intro/cis-ising-f-033.pdf  used on input line 969.
 (pdftex.def)             Requested size: 215.0023pt x 101.06432pt.
-<intro/cis-ising-f-066.pdf, id=929, 406.37096pt x 191.01828pt>
+<intro/cis-ising-f-066.pdf, id=942, 406.37096pt x 191.01828pt>
 File: intro/cis-ising-f-066.pdf Graphic file (type pdf)
 <use intro/cis-ising-f-066.pdf>
-Package pdftex.def Info: intro/cis-ising-f-066.pdf  used on input line 972.
+Package pdftex.def Info: intro/cis-ising-f-066.pdf  used on input line 973.
 (pdftex.def)             Requested size: 215.0023pt x 101.06432pt.
  [31] [32 <./int-dyn/derks.png> <./intro/cis-ising-f-000.pdf> <./intro/cis-isin
 g-f-033.pdf
@@ -1012,30 +949,29 @@ sion: multiple pdfs with page group included in a single page
 >]
 
 Package natbib Warning: Citation `leung_field_1986.bray_coarsening_2000' on pag
-e 33 undefined on input line 986.
+e 33 undefined on input line 987.
 
 
-Package natbib Warning: Citation `' on page 33 undefined on input line 992.
+Package natbib Warning: Citation `' on page 33 undefined on input line 993.
 
 
-LaTeX Warning: Reference `heightd' on page 33 undefined on input line 997.
+LaTeX Warning: Reference `heightd' on page 33 undefined on input line 998.
 
 
 Package natbib Warning: Citation `niss_history_2006' on page 33 undefined on in
-put line 1007.
+put line 1008.
 
 ) (./numerical/method.tex [33] [34]
-Chapitre 2.
-LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 16.
-
-(/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
-File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
+Chapter 2.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <9> on input line 16.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 16.
- [35
+LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 16.
+
+(/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
+File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) [35
 
 ]
 Underfull \vbox (badness 3849) has occurred while \output is active []
@@ -1045,16 +981,16 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [37]
 [38]
-<numerical/sos-glau-eq-cor.pdf, id=1095, 462.52798pt x 346.89601pt>
+<numerical/sos-glau-eq-cor.pdf, id=1106, 462.52798pt x 346.89601pt>
 File: numerical/sos-glau-eq-cor.pdf Graphic file (type pdf)
 <use numerical/sos-glau-eq-cor.pdf>
-Package pdftex.def Info: numerical/sos-glau-eq-cor.pdf  used on input line 112.
+Package pdftex.def Info: numerical/sos-glau-eq-cor.pdf  used on input line 113.
 
 (pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
-<numerical/comp-mc-tm-mu.pdf, id=1096, 462.52798pt x 346.89601pt>
+<numerical/comp-mc-tm-mu.pdf, id=1107, 462.52798pt x 346.89601pt>
 File: numerical/comp-mc-tm-mu.pdf Graphic file (type pdf)
 <use numerical/comp-mc-tm-mu.pdf>
-Package pdftex.def Info: numerical/comp-mc-tm-mu.pdf  used on input line 115.
+Package pdftex.def Info: numerical/comp-mc-tm-mu.pdf  used on input line 116.
 (pdftex.def)             Requested size: 231.26341pt x 173.44757pt.
 
 Underfull \vbox (badness 4291) has occurred while \output is active []
@@ -1065,32 +1001,34 @@ Underfull \vbox (badness 4291) has occurred while \output is active []
 pdfTeX warning: /usr/bin/pdflatex (file ./numerical/comp-mc-tm-mu.pdf): PDF inc
 lusion: multiple pdfs with page group included in a single page
 >]
-<numerical/sos-kaw-eq-cor.pdf, id=1163, 462.52798pt x 346.89601pt>
+<numerical/sos-kaw-eq-cor.pdf, id=1174, 462.52798pt x 346.89601pt>
 File: numerical/sos-kaw-eq-cor.pdf Graphic file (type pdf)
 <use numerical/sos-kaw-eq-cor.pdf>
-Package pdftex.def Info: numerical/sos-kaw-eq-cor.pdf  used on input line 152.
+Package pdftex.def Info: numerical/sos-kaw-eq-cor.pdf  used on input line 153.
 (pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
  [41]
-<numerical/cross-h0.pdf, id=1173, 325.215pt x 271.0125pt>
+<numerical/cross-h0.pdf, id=1184, 325.215pt x 271.0125pt>
 File: numerical/cross-h0.pdf Graphic file (type pdf)
 <use numerical/cross-h0.pdf>
-Package pdftex.def Info: numerical/cross-h0.pdf  used on input line 170.
+Package pdftex.def Info: numerical/cross-h0.pdf  used on input line 171.
 (pdftex.def)             Requested size: 137.60461pt x 114.6722pt.
-<numerical/cross-hlambda.pdf, id=1174, 325.215pt x 271.7352pt>
+<numerical/cross-hlambda.pdf, id=1185, 325.215pt x 271.7352pt>
 File: numerical/cross-hlambda.pdf Graphic file (type pdf)
 <use numerical/cross-hlambda.pdf>
-Package pdftex.def Info: numerical/cross-hlambda.pdf  used on input line 174.
+Package pdftex.def Info: numerical/cross-hlambda.pdf  used on input line 175.
 (pdftex.def)             Requested size: 137.60461pt x 114.978pt.
-<numerical/cross-h1.pdf, id=1175, 324.4923pt x 271.0125pt>
+<numerical/cross-h1.pdf, id=1186, 324.4923pt x 271.0125pt>
 File: numerical/cross-h1.pdf Graphic file (type pdf)
 <use numerical/cross-h1.pdf>
-Package pdftex.def Info: numerical/cross-h1.pdf  used on input line 179.
+Package pdftex.def Info: numerical/cross-h1.pdf  used on input line 180.
 (pdftex.def)             Requested size: 137.60461pt x 114.92445pt.
 
 Underfull \vbox (badness 1436) has occurred while \output is active []
 
- [42 <./numerical/sos-kaw-eq-cor.pdf>] [43 <./numerical/cross-h0.pdf> <./numeri
-cal/cross-hlambda.pdf
+ [42 <./numerical/sos-kaw-eq-cor.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [43 <./numerical/cross-h0.pdf> <./numerical/cross-hlambda.pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ./numerical/cross-hlambda.pdf): PDF inc
 lusion: multiple pdfs with page group included in a single page
@@ -1099,12 +1037,12 @@ lusion: multiple pdfs with page group included in a single page
 pdfTeX warning: /usr/bin/pdflatex (file ./numerical/cross-h1.pdf): PDF inclusio
 n: multiple pdfs with page group included in a single page
 >]
-Overfull \hbox (49.43785pt too wide) detected at line 219
+Overfull \hbox (49.43785pt too wide) detected at line 220
 []
  []
 
 [44] [45]) (./finite-size/chap2.tex [46]
-Chapitre 3.
+Chapter 3.
 [47
 
 ]
@@ -1117,9 +1055,9 @@ Package amsmath Warning: Foreign command \over;
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Overfull \hbox (36.27844pt too wide) has occurred while \output is active
-\OT1/lmr/m/n/10.95 48 \OT1/lmr/m/sl/10.95 CHAPITRE 3.  EQUILIBRIUM INTERFACE MO
-DELS AND THEIR FINITE SIZE EFFECTS
+Overfull \hbox (34.34492pt too wide) has occurred while \output is active
+\OT1/lmr/m/n/10.95 48 \OT1/lmr/m/sl/10.95 CHAPTER 3.  EQUILIBRIUM INTERFACE MOD
+ELS AND THEIR FINITE SIZE EFFECTS
  []
 
 [48]
@@ -1129,15 +1067,15 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Overfull \hbox (36.27844pt too wide) has occurred while \output is active
-\OT1/lmr/m/n/10.95 50 \OT1/lmr/m/sl/10.95 CHAPITRE 3.  EQUILIBRIUM INTERFACE MO
-DELS AND THEIR FINITE SIZE EFFECTS
+Overfull \hbox (34.34492pt too wide) has occurred while \output is active
+\OT1/lmr/m/n/10.95 50 \OT1/lmr/m/sl/10.95 CHAPTER 3.  EQUILIBRIUM INTERFACE MOD
+ELS AND THEIR FINITE SIZE EFFECTS
  []
 
 [50] [51]
-Overfull \hbox (36.27844pt too wide) has occurred while \output is active
-\OT1/lmr/m/n/10.95 52 \OT1/lmr/m/sl/10.95 CHAPITRE 3.  EQUILIBRIUM INTERFACE MO
-DELS AND THEIR FINITE SIZE EFFECTS
+Overfull \hbox (34.34492pt too wide) has occurred while \output is active
+\OT1/lmr/m/n/10.95 52 \OT1/lmr/m/sl/10.95 CHAPTER 3.  EQUILIBRIUM INTERFACE MOD
+ELS AND THEIR FINITE SIZE EFFECTS
  []
 
 [52]
@@ -1147,27 +1085,27 @@ Underfull \vbox (badness 4608) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Overfull \hbox (36.27844pt too wide) has occurred while \output is active
-\OT1/lmr/m/n/10.95 54 \OT1/lmr/m/sl/10.95 CHAPITRE 3.  EQUILIBRIUM INTERFACE MO
-DELS AND THEIR FINITE SIZE EFFECTS
+Overfull \hbox (34.34492pt too wide) has occurred while \output is active
+\OT1/lmr/m/n/10.95 54 \OT1/lmr/m/sl/10.95 CHAPTER 3.  EQUILIBRIUM INTERFACE MOD
+ELS AND THEIR FINITE SIZE EFFECTS
  []
 
 [54] [55]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Overfull \hbox (36.27844pt too wide) has occurred while \output is active
-\OT1/lmr/m/n/10.95 56 \OT1/lmr/m/sl/10.95 CHAPITRE 3.  EQUILIBRIUM INTERFACE MO
-DELS AND THEIR FINITE SIZE EFFECTS
+Overfull \hbox (34.34492pt too wide) has occurred while \output is active
+\OT1/lmr/m/n/10.95 56 \OT1/lmr/m/sl/10.95 CHAPTER 3.  EQUILIBRIUM INTERFACE MOD
+ELS AND THEIR FINITE SIZE EFFECTS
  []
 
 [56]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [57]
-Overfull \hbox (36.27844pt too wide) has occurred while \output is active
-\OT1/lmr/m/n/10.95 58 \OT1/lmr/m/sl/10.95 CHAPITRE 3.  EQUILIBRIUM INTERFACE MO
-DELS AND THEIR FINITE SIZE EFFECTS
+Overfull \hbox (34.34492pt too wide) has occurred while \output is active
+\OT1/lmr/m/n/10.95 58 \OT1/lmr/m/sl/10.95 CHAPTER 3.  EQUILIBRIUM INTERFACE MOD
+ELS AND THEIR FINITE SIZE EFFECTS
  []
 
 [58]
@@ -1182,18 +1120,18 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 1742) has occurred while \output is active []
 
 
-Overfull \hbox (36.27844pt too wide) has occurred while \output is active
-\OT1/lmr/m/n/10.95 60 \OT1/lmr/m/sl/10.95 CHAPITRE 3.  EQUILIBRIUM INTERFACE MO
-DELS AND THEIR FINITE SIZE EFFECTS
+Overfull \hbox (34.34492pt too wide) has occurred while \output is active
+\OT1/lmr/m/n/10.95 60 \OT1/lmr/m/sl/10.95 CHAPTER 3.  EQUILIBRIUM INTERFACE MOD
+ELS AND THEIR FINITE SIZE EFFECTS
  []
 
 [60]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [61]
-Overfull \hbox (36.27844pt too wide) has occurred while \output is active
-\OT1/lmr/m/n/10.95 62 \OT1/lmr/m/sl/10.95 CHAPITRE 3.  EQUILIBRIUM INTERFACE MO
-DELS AND THEIR FINITE SIZE EFFECTS
+Overfull \hbox (34.34492pt too wide) has occurred while \output is active
+\OT1/lmr/m/n/10.95 62 \OT1/lmr/m/sl/10.95 CHAPTER 3.  EQUILIBRIUM INTERFACE MOD
+ELS AND THEIR FINITE SIZE EFFECTS
  []
 
 [62]
@@ -1203,9 +1141,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Overfull \hbox (36.27844pt too wide) has occurred while \output is active
-\OT1/lmr/m/n/10.95 64 \OT1/lmr/m/sl/10.95 CHAPITRE 3.  EQUILIBRIUM INTERFACE MO
-DELS AND THEIR FINITE SIZE EFFECTS
+Overfull \hbox (34.34492pt too wide) has occurred while \output is active
+\OT1/lmr/m/n/10.95 64 \OT1/lmr/m/sl/10.95 CHAPTER 3.  EQUILIBRIUM INTERFACE MOD
+ELS AND THEIR FINITE SIZE EFFECTS
  []
 
 [64]
@@ -1220,9 +1158,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Overfull \hbox (36.27844pt too wide) has occurred while \output is active
-\OT1/lmr/m/n/10.95 66 \OT1/lmr/m/sl/10.95 CHAPITRE 3.  EQUILIBRIUM INTERFACE MO
-DELS AND THEIR FINITE SIZE EFFECTS
+Overfull \hbox (34.34492pt too wide) has occurred while \output is active
+\OT1/lmr/m/n/10.95 66 \OT1/lmr/m/sl/10.95 CHAPTER 3.  EQUILIBRIUM INTERFACE MOD
+ELS AND THEIR FINITE SIZE EFFECTS
  []
 
 [66pdfTeX warning (ext4): destination with the same identifier (name{equation.3
@@ -1235,9 +1173,9 @@ l.653 \end{equation}
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [67]
-Overfull \hbox (36.27844pt too wide) has occurred while \output is active
-\OT1/lmr/m/n/10.95 68 \OT1/lmr/m/sl/10.95 CHAPITRE 3.  EQUILIBRIUM INTERFACE MO
-DELS AND THEIR FINITE SIZE EFFECTS
+Overfull \hbox (34.34492pt too wide) has occurred while \output is active
+\OT1/lmr/m/n/10.95 68 \OT1/lmr/m/sl/10.95 CHAPTER 3.  EQUILIBRIUM INTERFACE MOD
+ELS AND THEIR FINITE SIZE EFFECTS
  []
 
 [68]
@@ -1247,9 +1185,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Overfull \hbox (36.27844pt too wide) has occurred while \output is active
-\OT1/lmr/m/n/10.95 70 \OT1/lmr/m/sl/10.95 CHAPITRE 3.  EQUILIBRIUM INTERFACE MO
-DELS AND THEIR FINITE SIZE EFFECTS
+Overfull \hbox (34.34492pt too wide) has occurred while \output is active
+\OT1/lmr/m/n/10.95 70 \OT1/lmr/m/sl/10.95 CHAPTER 3.  EQUILIBRIUM INTERFACE MOD
+ELS AND THEIR FINITE SIZE EFFECTS
  []
 
 [70]
@@ -1257,13 +1195,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [71])
 (./drivenC/chap4.tex
-Overfull \hbox (36.27844pt too wide) has occurred while \output is active
-\OT1/lmr/m/n/10.95 72 \OT1/lmr/m/sl/10.95 CHAPITRE 3.  EQUILIBRIUM INTERFACE MO
-DELS AND THEIR FINITE SIZE EFFECTS
+Overfull \hbox (34.34492pt too wide) has occurred while \output is active
+\OT1/lmr/m/n/10.95 72 \OT1/lmr/m/sl/10.95 CHAPTER 3.  EQUILIBRIUM INTERFACE MOD
+ELS AND THEIR FINITE SIZE EFFECTS
  []
 
 [72]
-Chapitre 4.
+Chapter 4.
 
 Package natbib Warning: Citation `derks2006' on page 73 undefined on input line
  11.
@@ -1576,90 +1514,112 @@ Underfull \vbox (badness 7777) has occurred while \output is active []
 [87] [88
 
 ]
-Chapitre 5.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [89]
-<pop/comparaison-modeles.pdf, id=1670, 462.52798pt x 346.89601pt>
+Chapter 5.
+<pop/hauteur-tm-pop.pdf, id=1675, 462.52798pt x 346.89601pt>
+File: pop/hauteur-tm-pop.pdf Graphic file (type pdf)
+<use pop/hauteur-tm-pop.pdf>
+Package pdftex.def Info: pop/hauteur-tm-pop.pdf  used on input line 17.
+(pdftex.def)             Requested size: 284.52756pt x 213.40594pt.
+<pop/comparaison-modeles.pdf, id=1678, 462.52798pt x 346.89601pt>
 File: pop/comparaison-modeles.pdf Graphic file (type pdf)
 <use pop/comparaison-modeles.pdf>
-Package pdftex.def Info: pop/comparaison-modeles.pdf  used on input line 26.
+Package pdftex.def Info: pop/comparaison-modeles.pdf  used on input line 20.
 (pdftex.def)             Requested size: 284.52756pt x 213.40594pt.
-<pop/figure-pop.pdf, id=1671, 578.16pt x 433.62pt>
+
+LaTeX Warning: Float too large for page by 0.13535pt on input line 24.
+
+[89]
+Underfull \vbox (badness 1484) has occurred while \output is active []
+
+
+Overfull \hbox (37.3909pt too wide) has occurred while \output is active
+\OT1/lmr/m/n/10.95 90 \OT1/lmr/m/sl/10.95 CHAPTER 5.  BEYOND SOLID-ON-SOLID : T
+HE PARTICLES-OVER-PARTICLES MODEL
+ []
+
+[90] [91]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 78.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 78.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 78.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 78.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 78.
+
+<pop/figure-pop.pdf, id=1719, 462.52798pt x 346.89601pt>
 File: pop/figure-pop.pdf Graphic file (type pdf)
 <use pop/figure-pop.pdf>
-Package pdftex.def Info: pop/figure-pop.pdf  used on input line 29.
-(pdftex.def)             Requested size: 284.52756pt x 213.39536pt.
-)
-(./appendix.tex
-Overfull \hbox (39.32442pt too wide) has occurred while \output is active
-\OT1/lmr/m/n/10.95 90 \OT1/lmr/m/sl/10.95 CHAPITRE 5.  BEYOND SOLID-ON-SOLID : 
-THE PARTICLES-OVER-PARTICLES MODEL
+Package pdftex.def Info: pop/figure-pop.pdf  used on input line 84.
+(pdftex.def)             Requested size: 301.00192pt x 225.76027pt.
+) (./appendix.tex
+Overfull \hbox (37.3909pt too wide) has occurred while \output is active
+\OT1/lmr/m/n/10.95 92 \OT1/lmr/m/sl/10.95 CHAPTER 5.  BEYOND SOLID-ON-SOLID : T
+HE PARTICLES-OVER-PARTICLES MODEL
  []
 
-[90 <./pop/comparaison-modeles.pdf>] [91 <./pop/figure-pop.pdf>]
-Overfull \hbox (39.32442pt too wide) has occurred while \output is active
-\OT1/lmr/m/n/10.95 92 \OT1/lmr/m/sl/10.95 CHAPITRE 5.  BEYOND SOLID-ON-SOLID : 
-THE PARTICLES-OVER-PARTICLES MODEL
+[92] [93 <./pop/hauteur-tm-pop.pdf> <./pop/comparaison-modeles.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./pop/comparaison-modeles.pdf): PDF inc
+lusion: multiple pdfs with page group included in a single page
+>]
+Overfull \hbox (37.3909pt too wide) has occurred while \output is active
+\OT1/lmr/m/n/10.95 94 \OT1/lmr/m/sl/10.95 CHAPTER 5.  BEYOND SOLID-ON-SOLID : T
+HE PARTICLES-OVER-PARTICLES MODEL
  []
 
-[92
-
-]
-Annexe A.
+[94 <./pop/figure-pop.pdf>]
+Appendix A.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [93])
-(./main.bbl [94] [95
+ [95
+
+])
+(./main.bbl [96] [97
 
 ]
-LaTeX Font Info:    Try loading font information for OML+lmr on input line 119.
+LaTeX Font Info:    Try loading font information for OML+lmr on input line 126.
 
  (/usr/share/texmf/tex/latex/lm/omllmr.fd
 File: omllmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OML/lmr/m/n' in size <10.95> not available
-(Font)              Font shape `OML/lmm/m/it' tried instead on input line 119.
- [96] [97]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 243.
-
-
-(/usr/share/texmf/tex/latex/lm/omslmr.fd
-File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 243.
-
-Underfull \hbox (badness 1028) in paragraph at lines 241--245
-[]\OT1/lmr/m/n/10.95 H. J. F. Knops.  Exact Re-la-tion bet-ween the Solid-on-So
-lid Mo-del and the
+(Font)              Font shape `OML/lmm/m/it' tried instead on input line 126.
+ [98] [99]
+Underfull \hbox (badness 1028) in paragraph at lines 248--252
+[]\OT1/lmr/m/n/10.95 H. J. F. Knops.  Ex-act Re-la-tion be-tween the Solid-on-S
+olid Model and the
  []
 
-[98] [99]
-Underfull \hbox (badness 7468) in paragraph at lines 358--361
-[]\OT1/lmr/m/n/10.95 Paul Gers-berg.  Gi-thub with all my pro-grams, 2020.  htt
-ps ://gi-
+[100] [101]
+Underfull \hbox (badness 10000) in paragraph at lines 365--368
+[]\OT1/lmr/m/n/10.95 Paul Gers-berg.  Github with all my pro-grams, 2020.
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 392--395
-[]\OT1/lmr/m/n/10.95 Martin An-kerl.  Fast ran-dom bool in C++.
+[102]
+Underfull \hbox (badness 10000) in paragraph at lines 399--402
+[]\OT1/lmr/m/n/10.95 Martin Ankerl.  Fast ran-dom bool in C++.
  []
 
 )
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 101.
-[100]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 101.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 102.
+[103]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 102.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 101.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 101.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 102.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 102.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: CC7F9CF5F0A3AF9BD7DB969EBC4D9579;3602.
+(rerunfilecheck)             Checksum: FBB56BF8AF8168A96C5A013D44B0F00B;3764.
 
 
 LaTeX Warning: There were undefined references.
@@ -1667,49 +1627,51 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 101.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 102.
  ) 
 Here is how much of TeX's memory you used:
- 21404 strings out of 492609
- 373740 string characters out of 6131462
- 595045 words of memory out of 5000000
- 24410 multiletter control sequences out of 15000+600000
- 611195 words of font info for 97 fonts, out of 8000000 for 9000
+ 20230 strings out of 492609
+ 356672 string characters out of 6131462
+ 565451 words of memory out of 5000000
+ 23238 multiletter control sequences out of 15000+600000
+ 626290 words of font info for 124 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 47i,20n,65p,1112b,720s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exi
+ 47i,20n,65p,1112b,690s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exi
 st, replaced by a fixed one
 
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-rmtt.enc}{/usr/share/texmf/fonts/enc/dv
-ips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share
-/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
--mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rmsc.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbsy10.pfb></usr
-/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/pub
-lic/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx8.pfb></usr/share
-/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/l
-m/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/tex
-mf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi
-8.pfb></usr/share/texmf/fonts/type1/public/lm/lmmib10.pfb></usr/share/texmf/fon
-ts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb>
-</usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1
-/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/shar
-e/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/
-lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmro10.pfb></usr/share/texmf
-/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6
-.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/
-type1/public/lm/lmtt9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helveti
-c/uhvr8a.pfb>
-Output written on main.pdf (106 pages, 1940885 bytes).
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
+, replaced by a fixed one
+
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/
+dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/sha
+re/texmf/fonts/enc/dvips/lm/lm-rmtt.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
+-mathex.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi1
+2.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fon
+ts/type1/public/lm/lmbsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx10.p
+fb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/t
+ype1/public/lm/lmbx8.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></u
+sr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/p
+ublic/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/sha
+re/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/l
+m/lmmi9.pfb></usr/share/texmf/fonts/type1/public/lm/lmmib10.pfb></usr/share/tex
+mf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr1
+2.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts
+/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></us
+r/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/publ
+ic/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmro10.pfb></usr/share
+/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm
+/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/
+fonts/type1/public/lm/lmsy9.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pf
+b>
+Output written on main.pdf (109 pages, 1875452 bytes).
 PDF statistics:
- 2053 PDF objects out of 2073 (max. 8388607)
- 1654 compressed objects within 17 object streams
- 638 named destinations out of 1000 (max. 500000)
- 490 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2089 PDF objects out of 2487 (max. 8388607)
+ 1715 compressed objects within 18 object streams
+ 654 named destinations out of 1000 (max. 500000)
+ 511 words of extra memory for PDF output out of 10000 (max. 10000000)
 
