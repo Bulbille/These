@@ -2,24 +2,23 @@
 \chapter{Equilibrium Interface models and their finite size effects}
 %%%%%%%%%%%%%%%%%%%%
 
-Models for interfaces arise naturally in phase separated systems to describe the region between the two phases. They also arise naturally as descriptions of artificial and biological membranes. Systems undergoing a continuous phase separation exhibit finite size corrections which are manifested by a long range critical Casimir interaction which we describe in the next section. In the sections after we examine finite size effects in interface models in one dimension, and show that while they have similar long range interactions, the forces induced by interface confinement are quite different.
+Models for interfaces arise naturally in phase separated systems, as explained in \ref{chap-int-dyn}.  Finite size corrections are manifested when the correlation length becomes of the order of magnitude of the system's size. When undergoing a continuous phase separation, the system exhibits finite size corrections which are manifested by a long range critical Casimir interaction, which we describe in the first section. In the second section we examine finite size effects in continuous interface models in one dimension, and show that while they have similar long range interactions, the forces induced by interface confinement are quite different, and wille be compared to the GSOS model. In  the last section, we compute the size-dependent eigenvalues of the transfer matrix for the free SOS model, and compare the results with previous works.
 
 %%%%%%%%%%%%%%%%%%%%
     \section{The Casimir effect}
 %%%%%%%%%%%%%%%%%%%%
     
-Here we explain the critical Casimir effect. For completeness we start by explaining the quantum Casimir effect as it was in the quantum context that the effect was first observed.
+Here we explain the critical Casimir effect. For completeness we start by explaining the quantum Casimir effect as it was in the quantum context that the effect was first observed \cite{h_b_g_casimir_attraction_1948}.
 We also describe the basis of the Lifshitz theory that generalises Casimir's contribution to 
 general dielectric materials beyond the perfectly conducting plate paradigm.
     
 %%%%%%%%%%%%%%%%%%%%    
     \subsection{Quantum Casimir effect}
 %%%%%%%%%%%%%%%%%%%%
-A perfectly  conducting plate in the $(x,y)$ plane imposes boundary conditions on the electromagnetic field
+In an ideal conductor, the free charges can move artibrarily quickly to cancel out any electric in the plane \cite{richard_feynman_feynman_1963}. Thus, a perfectly  conducting plate in the $(x,y)$ plane imposes boundary conditions on the electromagnetic field
 \begin{equation}
-    {\bf E}\times {\bf n} = {\bf 0};\ {\bf B}\cdot {\bf n} = 0,
+    {\bf E}\times {\bf n} = {\bf 0};\ {\bf B}\cdot {\bf n} = 0
 \end{equation}
-as in an ideal conductor the free charges can move arbitrarily quickly to cancel out any electric field within the plane. 
 The quantum Hamiltonian for the electromagnetic field is given by 
 \begin{equation}
     H = \sum_{\bk,\lambda}\hbar \omega(\bk,\lambda)\left[a^\dagger(\bk,\lambda)a(\bk,\lambda) + {1\over 2}\right]
@@ -29,7 +28,7 @@ relation for photons is
 \begin{equation}
     \omega(\bk,\lambda) = |\bk|c.
 \end{equation}
-The ground state energy of the electromagnetic field is given by
+The ground state energy of the electromagnetic field \cite{h_b_g_casimir_attraction_1948} is given by
 \begin{equation}
     E_0 = < 0|H|0> = H = \sum_{\bk,\lambda}{1\over 2}\hbar \omega(\bk,\lambda)= \sum_\bk\hbar |\bk|c
 \end{equation}
@@ -49,12 +48,12 @@ The problem with the above expression is that it is clearly divergent. However i
 \begin{equation}
     E_0(L) = {\hbar c A\over (2\pi)}\sum_{n=0}^\infty  \int_0^\infty  kdk \left(\bk^2 + {n^2\pi^2\over L^2}\right)^{1\over 2} f\left((\bk^2 + {n^2\pi^2\over L^2})^{1\over 2}\right)
 \end{equation}
-where $f$ is a smooth function such that $f(p)=1$ for $p\ll\Lambda$ and $f(p)=0$ for $p\gg\Lambda$ where $\Lambda$ is an ultraviolet cut-off and $f$ thus only counts the contribution of photons with a momentum less than $\hbar\Lambda$. For this sort of calculation to make physical sense the physical result we get at the end should be independent of both the choice of $f$ and $\Lambda$. 
+where $f$ is a smooth function such that $f(p)=1$ for $p\ll\Lambda$ and $f(p)=0$ for $p\gg\Lambda$. Here, $\Lambda$ is an ultraviolet cut-off and $f$ thus only counts the contribution of photons with a momentum less than $\hbar\Lambda$. For this sort of calculation to make physical sense the physical result we get at the end should be independent of both the choice of $f$ and $\Lambda$. 
 
 
 
 
-In the list $L\to\infty$ we can replace the sum over discrete modes by an integral, as usual in statistical physics, 
+In the limit $L\to\infty$ we can replace the sum over discrete modes by an integral, as usual in statistical physics, 
 \begin{equation}
     E_0(L) = {\hbar c A\over (2\pi)}\int_{0}^\infty  {L\over \pi}d\nu \int_0^\infty   kdk \left(\bk^2 + \nu^2\right)^{1\over 2}f\left((\bk^2 + \nu^2)^{1\over 2}\right)
 \end{equation}
@@ -62,42 +61,38 @@ where we have used $d\nu = \pi/L$. We thus see that for large $L$ we have
 \begin{equation}
     E_0(L) = AL \epsilon_{bulk}
 \end{equation}
-where $\epsilon_{bulk}$ is a bulk energy density per unit of volume. Clearly when two the plates are moved this bulk free energy is not changed as the volume of the system both
-interior and exterior to the plates does not change. This is basically the idea of a disjoining pressure in colloidal science where to compute the effective interaction the bulk pressure has to be removed. The computation above only calculates the energy of the EM field between the plates, if the physical system has and extent $L'\gg L$ then the total energy is
+where $\epsilon_{bulk}$ is a bulk energy density per unit of volume. Clearly {\color{red} the bulk free energy is intensive, since it counts both the volume interior and exterior to the plates.} This is basically the idea of a disjoining pressure in colloidal science \cite{stubenrauch_disjoining_2003} where to compute the effective interaction the bulk pressure has to be removed. The computation above only calculates the energy of the EM field between the plates. If the physical system extends up to $L'\gg L$, then the total energy of {\color{red} both the interior and the exterior of the plates} is
 given by
 \begin{equation}
     E_{total}(L) = E_0(L) + A(L'-L)\epsilon_{bulk}
 \end{equation}
-so we see that the part of the energy that depends on $L$ is given by
+We see that the part of the energy that depends on $L$ is given by
 \begin{equation}
     U(L) = E_0(L)- AL\epsilon_{bulk}
 \end{equation}
 Now we simply write 
 \begin{equation}
-    AL\epsilon_{bulk} = {\hbar c A\over (2\pi)}\int_{0}^\infty  dn \int_0^\infty   kdk \left(\bk^2 + {n^2\pi^2\over L^2}\right)^{1\over 2} f\left((\bk^2 + {n^2\pi^2\over L^2})^{1\over 2}\right),
+    AL\epsilon_{bulk} = {\hbar c A\over (2\pi)}\int_{0}^\infty  dn \int_0^\infty   kdk \left(\bk^2 + {n^2\pi^2\over L^2}\right)^{1\over 2} f\left((\bk^2 + {n^2\pi^2\over L^2})^{1\over 2}\right)
 \end{equation}
-putting the $L$ dependence in the integral. This then gives
+where we have put the $L$ dependence in the integral. This then gives
 \begin{equation}
-    U(L) = {\hbar c A\over (2\pi)}\left[\sum_{n=0}^\infty g(n) -\int_0^\infty dn \ g(n)\right],
+    U(L) = {\hbar c A\over (2\pi)}\left[\sum_{n=0}^\infty g(n) -\int_0^\infty dn \ g(n)\right]
 \end{equation}
  
 where
 \begin{equation}
-    g(n) = \int_0^\infty   kdk \left(\bk^2 + {n^2\pi^2\over L^2}\right)^{1\over 2} f\left((\bk^2 + {n^2\pi^2\over L^2})^{1\over 2}\right) = {1\over 2}\int_{n^2\pi^2\over L^2}^\infty du u^{1\over 2} f(u^{1\over 2}).
+    g(n) = \int_0^\infty   kdk \left(\bk^2 + {n^2\pi^2\over L^2}\right)^{1\over 2} f\left((\bk^2 + {n^2\pi^2\over L^2})^{1\over 2}\right) = {1\over 2}\int_{n^2\pi^2\over L^2}^\infty du u^{1\over 2} f(u^{1\over 2})
 \end{equation}
 We now use the Euler-Mauclarin formula
 \begin{equation}
-    \sum_{n=0}^\infty g(n) -\int_0^\infty dn \ g(n) = -B_1g(0) -{1\over 2} B_2 g'(0) - {1\over 24} B_4 g'''(0) - \cdots,
+    \sum_{n=0}^\infty g(n) -\int_0^\infty dn \ g(n) = -B_1g(0) -{1\over 2} B_2 g'(0) - {1\over 24} B_4 g'''(0) - \cdots
 \end{equation}
-where $B_n$ are the Bernoulli numbers. The first Bernoulli numbers are explicitly given by
-\begin{equation}
-    B_1 =1\ , B_2 = {1\over 2} ,\ B_4 = -{1\over 30}
-\end{equation}
+where $B_n$ are the Bernoulli numbers\footnote{The first Bernoulli numbers are explicitly given by $B_1 =1\ , B_2 = {1\over 2} ,\ B_4 = -{1\over 30}$}.
 We find that
 \begin{equation}
     g'(n) = -{\pi^3\over L^3} n^2 f({n\pi\over L})
 \end{equation}
-and noticing than in the region around $n=0$ we have $f=1$ is a constant shows that
+and noticing than in the region around $n=0$, $f=1$ is a constant, we show that
 \begin{eqnarray}
 g'(0) &=& 0 \\
 g''(0) &=& 0 \\
@@ -111,7 +106,7 @@ The first term independent of $L$ can be interpreted as a surface energy. The ef
 \begin{equation}
     U_{int}(L) = -{\hbar \pi^2 c A\over 720 L^3}
 \end{equation}
-We see that the effective interaction is attractive. Interestingly Casimir thought that his calculation could explain the stability of the electron. The model of the electron is one of a perfectly conducting shell carrying an electric charge $e$. If the radius of the shell is $a$ then the electrostatic energy of due to the charge is given by
+We see that the effective interaction is attractive. Interestingly Casimir thought that his calculation could explain the stability of the electron \cite{h_b_g_casimir_attraction_1948,carazza_casimir_1986} The model of the electron is one of a perfectly conducting shell carrying an electric charge $e$. If the radius of the shell is $a$ then the electrostatic energy of due to the charge is given by
 \begin{equation}
     E_{Charge} = {e^2\over 8\pi a\epsilon_0}
 \end{equation}
@@ -124,24 +119,18 @@ The balance of the Casimir and electric forces would then require
 \begin{equation}
     Z = {e^2\over 8\pi \hbar c}.
 \end{equation}
-However T. Boyer showed, in 1968, that $Z = -0.040618$, this surprising result was later confirmed by a number of authors. A calculation for a cylindrical geometry however predicts
-an attractive force. 
+However, in the case of conducting spherical shell, the constant $Z \simeq -0.046175$ is negative \cite{boyer_quantum_1968,milton_casimir_1978,bowers_casimir_1998}, while the same calculation for a cylindrical geometry predicts an attractive force \cite{milton_casimir_1978-1}. 
 
 %%%%%%%%%%%%%%%%%%%%
 \subsection{Lifshitz Theory}
 %%%%%%%%%%%%%%%%%%%%
-
+{\color{red} I've retouched some phrases and removed the names, instead just citing the papers, since I feel you've said the names so I could find the papers. }
 The Casimir calculation is based on the boundary conditions imposed on the EM field 
-due to a conductor. However this is an ideal mathematical limit, conductors are conductors because free charges can move to cancel out the electric field in the conducting surface.
-The Casimir force can also be seen as due to correlations induced in the charge fluctuations in each plate - Schwinger devised an alternative method based on sources which recovers the Casimir force. In a sense therefore the effect can be interpreted without reference to
-the zero point energy of the vacuum and the Casimir calculation works due to the fact that the mathematical limit in going to a perfect conductor works. Lifshitz and collaborators 
-generalized the Casimir calculation for interactions between arbitrary electrical bodies, characterized by their local electric and magnetic response. They used a stochastic formulation of electrodynamics developed by Rytov. This theory is very general but the microscopic justification is not completely rigorous, source terms (random currents and 
-dipole fluctuations) are introduced to Maxwell's equations to give a Langevin formulation
-of Maxwell's equations in the presence of dielectric bodies. The correlation functions of
-the white noise terms depend on the temperature of the system and are determined via the 
-quantum fluctuation dissipation theorem. The Lifshitz theory is computationally difficult to work with and it was reformulated by Van Kampen and later Ninham and Parsegian in a 
-way more useful for practical calculations and that can be applied to experimental set ups.
-The Rytov formulation has the advantage that it can be used to treat out of equilibrium situations where different bodies at held at different temperatures interact. This allows both the  computation of out of equilibrium forces and radiative  heat transfer. 
+due to a conductor. However this is an ideal mathematical limit, conductors being conductors because free charges can move to cancel out the electric field in the conducting surface.
+The Casimir force can also be seen as due to correlations induced in the charge fluctuations in each plate, which allows for an alternative method based on sources which recovers the Casimir force \cite{julian_schwinger_casimir_1978,schwinger_casimir_1992}. In a sense therefore the effect can be interpreted without reference to the zero point energy of the vacuum and the Casimir calculation works due to the fact that the mathematical limit in going to a perfect conductor works. 
+Using a stochastic formulation of electrodynamics by Rytov \cite{sm_rytov_principles_1989}, the Casimir calculation was generalized by Lifshitz for interactions between arbitrary electrical bodies, characterized by their local electric and magnetic response\cite{lifshits_theory_1955}. 
+Even though this theory is very general, the microscopic justification is not completely rigorous, source terms (random currents and dipole fluctuations) are introduced to Maxwell's equations to give a Langevin formulation of Maxwell's equations in the presence of dielectric bodies. The correlation functions of the white noise terms depend on the temperature of the system and are determined via the quantum fluctuation dissipation theorem. The Lifshitz theory is computationally difficult to work with and it was reformulated  in a way more useful for practical calculations and that can be applied to experimental setups \cite{van_kampen_macroscopic_1968,ninham_van_1970}.
+Rytov's formulation has the advantage that it can be used to treat out of equilibrium situations where different bodies at held at different temperatures interact. This allows both the  computation of out of equilibrium forces and radiative  heat transfer. 
 
 The theory in the presence of electromagnetic media is written in terms of the electric and magnetic fields ${\bf E}$ and ${\bf B}$ and the displacement and magnetizing fields ${\bf D}$ and ${\bf H}$ which are assumed to obey local relations in real space and Fourier space
 \begin{equation}
@@ -169,7 +158,7 @@ In media Maxwells equations are
 \nabla \cdot {\bf B} &=& 0 
 \end{eqnarray}
 
-In a dielectric medium or conductor where there are no applied external fields there is no free charge or current as such the average values of ${\bf E}$ and ${\bf B}$ are zero. Rytov's idea was to add a random current to induce both thermal and quantum fluctuations
+In a dielectric medium or conductor where there are no applied external fields there is no free charge or current . As such, the average values of ${\bf E}$ and ${\bf B}$ are zero. Rytov's idea was to add a random current to induce both thermal and quantum fluctuations
 into the problem. If we assume that the only contribution to the current comes from a fluctuating polarization density ${\bf P}$ we can write
 \begin{equation}
     {\partial \rho\over \partial t} +\nabla \cdot {\bf J}= 0\implies\nabla\cdot \left[-{\partial {\bf P}\over \partial t} +{\bf J}\right] = 0
@@ -180,7 +169,7 @@ where we have used
 \end{equation}
 This means that the current is given by
 \begin{equation}
-    {\bf J}={\partial {\bf P}\over \partial t} ,
+    {\bf J}={\partial {\bf P}\over \partial t} 
 \end{equation}
 or in Fourier space
 \begin{equation}
@@ -202,8 +191,8 @@ Now if we assume that the fluctuations in the polarization density are uncorrela
 &+&\left[ 1-{(s_1+p\varepsilon_1)(s_2+p\varepsilon_2)\over (s_1-p\varepsilon_1)(s_2-p\varepsilon_2)}\exp(-{2p\omega_n L\over c})\right]
 \end{eqnarray}
 where $\epsilon = \epsilon_0\varepsilon$, $s_i = \sqrt{\epsilon_i -1 +p^2}$,
-$\omega = {2\pi nk_BT \over \hbar}$ are the Mastubara frequencies and $\varepsilon_i
-=\varepsilon_i(i\omega_n)$. Note that the integral over real frequencies has become a sum over discrete Matsubara frequencies, they come from the poles in the hyperbolic cotangent.
+$\omega = {2\pi nk_BT \over \hbar}$ are the Mastubara frequencies \cite{matsubara_new_1955} and ${\varepsilon_i
+=\varepsilon_i(i\omega_n)}$. Note that the integral over real frequencies has become a sum over discrete Matsubara frequencies, they come from the poles in the hyperbolic cotangent.
 
 One needs to know the dielectric response at imaginary frequency, this is done using the Kramers-Kronig relation
 \begin{equation}
@@ -214,6 +203,10 @@ One needs to know the dielectric response at imaginary frequency, this is done u
 %%%%%%%%%%%%%%%%%%%%
     \subsection{Critical Casimir effect}
 %%%%%%%%%%%%%%%%%%%%
+
+{\color{red}
+Critical systems have a macropscopic correlation length, which leads to finite-size effects in the free energy. Following De Gennes and Fisher steps \cite{gambassi_casimir_2009}, we transpose the Casimir effect into critical systems. We consider a system of $N$ spins.
+}
 %%%%%%%%%%%%%%%%%%%%
     \subsubsection{Bulk scaling for near critical systems}
 %%%%%%%%%%%%%%%%%%%%
@@ -221,19 +214,19 @@ The free energy for a system consisting of $N$  spins has a singular part at a c
 \begin{equation}
     F(t,h) = N f(t,h)
 \end{equation}
-where $t = (T-T_c)/ T_c$ measures the distance from the critical point and $h$ is the external applied magnetic field. We assume that we are in a systems where the only relevant parameters are $T$ and $h$ (equivalently the concentration or chemical potential 
-of a binary mixture). For $d<4$ these are the only relevant fields.
+where $t = (T-T_c)/ T_c$ measures the distance from the critical point and $h$ is the external applied magnetic field. We assume that we are in a system where the only relevant parameters are $T$ and $h$ (equivalently the concentration or chemical potential of a binary mixture), which is true for $d\less 4$ \cite{amit_field_2005}.
 Now if we carry out a renormalisation group transformation
 blocking spins in blocks of linear size $b$ into new effective spins, the RG transformation
 gives
 \begin{equation}
     N f(t,h) = N'f(t',h')
 \end{equation}
-Clearly the number of spins in the blocked system is given by $b^d N'=N$ and the RG transformation for $t$ and $h$ are given by $t' = b^{y_1} t$ and $h' = b^{y_2}h$ where $y_1$ and $y_2$ are positive and are the RG exponents for the fields $t$ and $h$ (from which all critical exponents can be deduced). This then means that
+Clearly the number of spins in the blocked system is given by $b^d N'=N$ and the RG transformation for $t$ and $h$ are given by $t' = b^{y_1} t$ and $h' = b^{y_2}h$, where $y_1$ and $y_2$ are positive and are the RG exponents for the fields $t$ and $h$ (from which all critical exponents can be deduced). This then means that
 \begin{equation}
-    f(t,h) = {1\over b^d}f(b^{y_1} t,  b^{y_2} h)\label{rg}
+    f(t,h) = {1\over b^d}f(b^{y_1} t,  b^{y_2} h) 
+    \label{rg}
 \end{equation}
-We begin by working  with $t>0$ but the arguments here are trivially generalisable to the case $t<0$. In Eq. (\ref{rg}) is we choose $b$ such that $b^{y_1}t=1$, then, at the critical field $h=0$, we find
+We begin by working  with $t\greater 0$ but the arguments here are trivially generalisable to the case $t\less 0$. In Eq. (\ref{rg}) is we choose $b$ such that $b^{y_1}t=1$, then, at the critical field $h=0$, we find
 \begin{equation}
     f(t,0) = t^{d\over y_1} f(1,0)
 \end{equation}
@@ -278,45 +271,46 @@ Consider a system which is finite in one direction with either periodic boundary
 two surfaces. While the critical system has $h=0$ there can be local surface fields at each surface $a$ and $b$. This represents a preference of the surfaces for one phase or the other. 
 The finite scaling hypothesis for a slab  system of large area $A$ but with finite width $L$ can be stated as
 \begin{equation}
-    f(t,h_a,h_b,L^{-1}) = {1\over b^{d}}f(b^{y_1}t, b^{y_a} h_a, b^{y_b} h_b, bL^{-1}), \label{ffs}
+    f(t,h_a,h_b,L^{-1}) = {1\over b^{d}}f(b^{y_1}t, b^{y_a} h_a, b^{y_b} h_b, bL^{-1}) \label{ffs}
 \end{equation}
-we thus see that the field $L^{-1}$ is a relevant field with RG exponent $y_L=1$. 
-The surface fields are not necessarily relevant so we han have $y_a$ and $y_b$ positive or negative. The important point about finite size scaling is that when $L$ is finite the singularity due to the thermodynamique phase transition is smoothed out by the system's finite size (note that we assume that the system has no two dimensional phase transition in the region we are looking at). First we see that when $L$ is large there should be a bulk contribution to the free energy plus a surface term (so we are considering the limit $L\to\infty$ before $\xi\to\infty$)
-\begin{eqnarray}
-f(t,h_a,h_b,L^{-1})&=& f(t,h_a,h_b,0) + L^{-1}{\partial f(t,h_a,h_b,0)\over \partial x_4} \nonumber\\&=& {1\over  b^d} f(b^{y_1}t, b^{y_a} h_a, b^{y_b} h_b,0)+{1\over  b^{d-1}}L^{-1}{\partial f(b^{y_1}t, b^{y_a} h_a, b^{y_b} h_b, 0)\over \partial x_4},
-\end{eqnarray}
+We thus see that the field $L^{-1}$ is a relevant field with RG exponent $y_L=1$. 
+The surface fields are not necessarily relevant so we can have $y_a$ and $y_b$ positive or negative. The important point about finite size scaling is that when $L$ is finite the singularity due to the thermodynamic phase transition is smoothed out by the system's finite size (note that we assume that the system has no two dimensional phase transition in the region we are looking at). First we see that when $L$ is large there should be a bulk contribution to the free energy plus a surface term (so we are considering the limit $L\to\infty$ before $\xi\to\infty$)
+\begin{align}
+    f(t,h_a,h_b,L^{-1}) =& f(t,h_a,h_b,0) + L^{-1}{\partial f(t,h_a,h_b,0)\over \partial x_4} \nn
+    =& {1\over  b^d} f(b^{y_1}t, b^{y_a} h_a, b^{y_b} h_b,0)+{1\over  b^{d-1}}L^{-1}{\partial f(b^{y_1}t, b^{y_a} h_a, b^{y_b} h_b, 0)\over \partial x_4}
+\end{align}
 where we have carried out the Taylor expansion for $L^{-1}$ small using both versions of Eq. (\ref{ffs}) and ${\partial \over \partial x_n}$ indicates the partial derivative with respect to the $n^{th}$ argument. 
 The second term gives a total contribution to the singular part of the free energy of the order $AL \times L^{-1}$ and is thus a surface tension $\gamma$  and so we have
 \begin{equation}
-    \gamma= {1\over  b^{d-1}}{\partial f(b^{y_1}t, b^{y_a} h_a, b^{y_b} h_b, 0)\over \partial x_4}.
+    \gamma= {1\over  b^{d-1}}{\partial f(b^{y_1}t, b^{y_a} h_a, b^{y_b} h_b, 0)\over \partial x_4}
 \end{equation}
 
 
 Setting $bt^{y_1}=1$ then gives close to the critical point
 \begin{equation}
-    \gamma \sim t^{d-1\over y_1}{\partial f(1,\lim_{t\to 0}  t^{-\frac{y_a}{y_1}}h_a, \lim_{t\to 0}  t^{-\frac{y_a}{y_1}}h_b,0)\over \partial x_4} = t^{(d-1)\nu}C' = \xi^{-(d-1)}C',
+    \gamma \sim t^{d-1\over y_1}{\partial f(1,\lim_{t\to 0}  t^{-\frac{y_a}{y_1}}h_a, \lim_{t\to 0}  t^{-\frac{y_a}{y_1}}h_b,0)\over \partial x_4} = t^{(d-1)\nu}C' = \xi^{-(d-1)}C'
 \end{equation}
-the formula relating the surface tension and the correlation length, in the above $C'$ is a constant depending on the universality class. 
+The formula relating the surface tension and the correlation length, in the above $C'$ is a constant depending on the universality class. 
 
 Now if we keep $L$ finite and set $b^{y_1}t=1$ in Eq. (\ref{ffs}) we find
 \begin{equation}
-    f(t,h_a,h_b,L^{-1}) = t^{d\over y_1}f(1, t^{-{y_a\over y_1}} h_a, t^{-{y_b\over y_1}} h_b, t^{-{1\over y_1}}L^{-1}), 
+    f(t,h_a,h_b,L^{-1}) = t^{d\over y_1}f(1, t^{-{y_a\over y_1}} h_a, t^{-{y_b\over y_1}} h_b, t^{-{1\over y_1}}L^{-1})
     \label{ffs}
 \end{equation}
 which can be written as
 \begin{equation}
-    f(t,h_a,h_b,L^{-1}) = {1\over \xi^d}f(1,\xi^{y_a} h_a, \xi^{y_b} h_b, \xi/L),
+    f(t,h_a,h_b,L^{-1}) = {1\over \xi^d}f(1,\xi^{y_a} h_a, \xi^{y_b} h_b, \xi/L)
 \end{equation}
 This can then be written as
 \begin{equation}
-    f(t,h_a,h_b,L^{-1}) = {1\over L^d}\theta({L\over \xi}, \xi^{y_a} h_a, \xi^{y_b} h_b).
+    f(t,h_a,h_b,L^{-1}) = {1\over L^d}\theta({L\over \xi}, \xi^{y_a} h_a, \xi^{y_b} h_b)
 \end{equation}
 Now crucially as $\xi \to \infty$ the function $\theta$ is analytic so we can take the limit $\xi\to\infty$ without any problems to find
 \begin{equation}
     f(0,h_a,h_b,L^{-1}) = {1\over L^d}\theta(0, \lim_{\xi\to \infty} \xi^{y_a} h_a,\lim_{\xi\to \infty}  \xi^{y_b} h_b)
 \end{equation}
 Clearly for each surface we have 3 possibilities: $\lim_{\xi\to \infty} \xi^{y_a} h_a = \pm \infty$, if the surface fields are relevant, as well as $\lim_{\xi\to \infty} \xi^{y_a} h_a = 0$ if the surface fields are irrelevant. There is clearly also a similar argument when the system has periodic boundary conditions and there are no surface fields. Near the critical point depending on the boundary conditions there should be scaling functions  when the surface fields attract the same phase $\theta_{++}(x)$, where they attract different phases and
-$\theta_{+-}(x)$, and $\theta_{pbc}(x)$ when the boundary conditions are periodic. There should also be a zero surface field case $\theta_{00}$ when the surfaces fields are irrelevant or zero (this is however unlikely). Fisher and de Gennes argued, without proof, that the force for $++$ boundary conditions should be attractive where as the $+-$ case should produce repulsive forces.   
+$\theta_{+-}(x)$, and $\theta_{pbc}(x)$ when the boundary conditions are periodic. There should also be a zero surface field case $\theta_{00}$ when the surfaces fields are irrelevant or zero (this is however unlikely). Fisher and de Gennes argued, without proof, that the force for $(++)$ boundary conditions should be attractive where as the $(+-$) case should produce repulsive forces \cite{gambassi_casimir_2009,gambassi_critical_2009} .   
 
 The total singular part of the free energy is thus given by
 \begin{equation}
@@ -334,46 +328,47 @@ where $C$ is a constant depending on the surface universality class.
 
 %%%%%%%%%%%%%%%%%%%%
     \section{Finite size scaling in one dimensional interface models}
-    \label{sec-continuous-model}
 %%%%%%%%%%%%%%%%%%%%
-
+{\color{red}
+Confinement forces appear wherever the correlation length of the fluctuations is close to the minimum size of the system, be it for perfect conductor plates in vacuum or in confined critical systems. The free energy of interfaces behaves in a similar way. Using the interface model defined in Sec \eqref{sec-continuous}, we derive a general method to study the disjoining pressure for any potential, and present the solutions for the two specific cases.
+}
 %%%%%%%%%%%%%%%%%%%%
 \subsection{Continuous models in one dimension}
 %%%%%%%%%%%%%%%%%%%%
 
-In one dimension the partition function for a surface model of the type discussed above can be written as a functional integral  
+In one dimension the partition function for a surface model of the type discussed in Sec \ref{sec-continuous} can be written as a functional integral  
 \begin{equation}
-    Z(L)  = \int d[h]\exp\left(-\frac{\beta\sigma}{2}\int_0^L h'^2(x) dx -\beta\int_0^L  V(h(x)) dx\right).
+    Z(L)  = \int d[h]\exp\left(-\frac{\beta\sigma}{2}\int_0^L h'^2(x) dx -\beta\int_0^L  V(h(x)) dx\right)
 \end{equation}
 It is convenient to fix both the starting point $h(0)=x$ and the end point $h(L)=x$ and define what is known as the propagator
 \begin{equation}
-    K(h,h',L)=\int_{h(0)=h} d[h] \delta(h' -h(L)) \exp\left(-\frac{\beta}{2}\int_0^L \sigma h'^2(x) dx -\beta \int_0^L  V(h(x)) dx\right).
+    K(h,h',L)=\int_{h(0)=h} d[h] \delta(h' -h(L)) \exp\left(-\frac{\beta}{2}\int_0^L \sigma h'^2(x) dx -\beta \int_0^L  V(h(x)) dx\right)
     \label{prog}
 \end{equation}
 The propagator is an example of a path integral and is the sum over all paths going between 
-$h$ and $h'$ in what can be taken to be the time $L$.  It can be shown that the path integral obeys an imaginary time Schr\"odinger equation
+$h$ and $h'$ in what can be taken to be the time $L$.  It can be shown \cite{matsubara_new_1955,h_arthur_weldon_scalar_1989} that the path integral obeys an imaginary time Schr\"odinger equation
 \begin{equation}
-    \frac{\partial  K(h,h',L)}{\partial L} = -\hat H K(h,h',L),
+    \frac{\partial  K(h,h',L)}{\partial L} = -\hat H K(h,h',L)
 \end{equation}
 where $\hat H$ is the Hamiltonian operator
 \begin{equation}
-    \hat H = -\frac{1}{2\sigma\beta}\frac{\partial^2 }{\partial h^2} + \beta V(h),
+    \hat H = -\frac{1}{2\sigma\beta}\frac{\partial^2 }{\partial h^2} + \beta V(h)
 \end{equation}
 and, with a suitable normalisation, the initial condition
 \begin{equation}
-    K(h,h',L)=\delta(h-h').
+    K(h,h',L)=\delta(h-h')
 \end{equation}
 If the Hamiltonian operator $\hat H$ has eigenfunctions $\psi_n$, normalised so that
 \begin{equation}
-    \int dh \ \psi^2_n(h) = 1,
+    \int dh \ \psi^2_n(h) = 1
 \end{equation}
  and with eigenvalues $\epsilon_n$, it is easy to see that the propagator can be written as
 \begin{equation}
-    K(h,h',L)= \sum_n \exp(-L\epsilon_n)\psi_n(h)\psi_n(h').
+    K(h,h',L)= \sum_n \exp(-L\epsilon_n)\psi_n(h)\psi_n(h')1
 \end{equation}
 If we take a system with periodic boundary conditions but otherwise leave the initial value $h(0)$ of the height to be free, then using the normalisation of the eigenfunctions, we find
 \begin{equation}
-    Z(L) = \int dh K(h,h',L) = \sum_n \exp(-L\epsilon_n).
+    Z(L) = \int dh K(h,h',L) = \sum_n \exp(-L\epsilon_n)
 \end{equation}
 Now in the thermodynamic limit $L\to\infty$ if there is a gap between the ground state energy
 $\epsilon_0$ and the first excited state, $g=\epsilon_1-\epsilon_0$ which is non-zero, we can apply ground state dominance 
@@ -382,34 +377,36 @@ $\epsilon_0$ and the first excited state, $g=\epsilon_1-\epsilon_0$ which is non
 \end{equation}
 which gives the free energy per unit length as
 \begin{equation}
-    f=\frac{1}{\beta}\epsilon_0.
+    f=\frac{1}{\beta}\epsilon_0
 \end{equation}
-As well as the free energy we are interested in the probability distribution of the height at a single point (which is independent of the point choses due to invariance by translation of the system). For instance the probability distribution of $h(0)$ is given by
-\begin{eqnarray}
-p_1(h)&=& \frac{\int d[h]\delta(h(0)-h)\exp\left(-\frac{\beta}{2}\int_0^L h'^2(x) dx -\beta\int_0^L  V(h(x)) dx\right)}{Z(L)}\\
-&=& \frac{K(h,h,L)}{Z(L)}=\frac{\sum_n \exp(-L\epsilon_n)\psi_n^2(h)}{\sum_n \exp(-L\epsilon_n)}
-\end{eqnarray}
+As well as the free energy we are interested in the probability distribution of the height at a single point (which is independent of the point chosen due to invariance by translation of the system). For instance the probability distribution of $h$ is given by
+\begin{align}
+p_1(h)=& \frac{\int d[h]\delta(h(0)-h)\exp\left(-\frac{\beta}{2}\int_0^L h'^2(x) dx -\beta\int_0^L  V(h(x)) dx\right)}{Z(L)}\nn
+=& \frac{K(h,h,L)}{Z(L)} \nn
+=& \frac{\sum_n \exp(-L\epsilon_n)\psi_n^2(h)}{\sum_n \exp(-L\epsilon_n)}
+\end{align}
 and so as $L\to\infty$, ground state dominance gives
 \begin{equation}
-    p_1(h)= \psi_0^2(h).
+    p_1(h)= \psi_0^2(h)
 \end{equation}
 We see that the normalisation of the probability density function for $h$ follows from the 
 normalisation of the wave functions.
 
 The joint probability density function for two heights separated by a time or distance $x$ is given by
-\begin{eqnarray}
-p_2(h,h',x)&=& \frac{\int d[h]\delta(h(0)-h)\delta(h(x)-h')\exp\left(-\frac{\beta}{2}\int_0^L h'^2(x) dx -\beta\int_0^L  V(h(x)) dx\right)}{Z(L)}\\
-&=& \frac{K(h,h',x)K(h',h,L-x)}{Z(L)} = \frac{\sum_{nm} \exp(-x\epsilon_n)\psi_n(h)\psi_n(h')\exp(-[L-x]\epsilon_m)\psi_m(h')\psi_m(h)}{\sum_n \exp(-L\epsilon_n)}.
-\end{eqnarray}
-Due to ground state dominance only the term with $m=0$ survives in the sum above (as
-as $x$ is taken such that $x\ll L$) as we find
-\begin{eqnarray}
-p_2(h,h',x) &=& \sum_{n} \psi_0(h')\psi_0(h)\psi_n(h')\psi_n(h)\exp(-x[\epsilon_n-\epsilon_0]))\\
-&=& p_1(h)p_1(h') + \sum_{n>0} \psi_0(h')\psi_0(h)\psi_n(h')\psi_n(h)\exp(-x[\epsilon_n-\epsilon_0])).
-\end{eqnarray}
-From this we see that when $x[\epsilon_n-\epsilon_0] \gg1 $ for all $n$ and so in particular $x[\epsilon_1-\epsilon_0] \gg1$ we have 
+\begin{align}
+p_2(h,h',x)=& \frac{\int d[h]\delta(h(0)-h)\delta(h(x)-h')\exp\left(-\frac{\beta}{2}\int_0^L h'^2(x) dx -\beta\int_0^L  V(h(x)) dx\right)}{Z(L)}\nn
+=& \frac{K(h,h',x)K(h',h,L-x)}{Z(L)} \nn
+=& \frac{\sum_{nm} \exp(-x\epsilon_n)\psi_n(h)\psi_n(h')\exp(-[L-x]\epsilon_m)\psi_m(h')\psi_m(h)}{\sum_n \exp(-L\epsilon_n)}.
+\end{align}
+Due to ground state dominance only the term with $m=0$ survives in the sum above (
+as $x$ is taken such that $x\ll L$) and we find
+\begin{align}
+p_2(h,h',x) =& \sum_{n} \psi_0(h')\psi_0(h)\psi_n(h')\psi_n(h)\exp(-x[\epsilon_n-\epsilon_0]))\nn
+=& p_1(h)p_1(h') + \sum_{n\greater0} \psi_0(h')\psi_0(h)\psi_n(h')\psi_n(h)\exp(-x[\epsilon_n-\epsilon_0]))
+\end{align}
+From this we see that when $x[\epsilon_n-\epsilon_0] \gg1 $ for all $n$, and in particular when $x[\epsilon_1-\epsilon_0] \gg1$, we have 
 \begin{equation}
-    p_2(h,h',x) \sim p_1(h)p_2(h'),
+    p_2(h,h',x) \sim p_1(h)p_2(h')
 \end{equation}
 so that the height at large distances are uncorrelated or equivalently are independent random variables. This gives a correlation length
 \begin{equation}
@@ -420,33 +417,33 @@ so that the height at large distances are uncorrelated or equivalently are indep
     \subsection{The confined elastic line}
 %%%%%%%%%%%%%%%%%%%%
     
-Here we consider the case where $V(h)= 0$ for $0<h<\ell$ and $V(h)=\infty$ otherwise. This corresponds to a one dimensional elastic line confined between two impenetrable walls separated by a distance $\ell$. The Hamiltonian $\hat H$ is that for a quantum well of width $\ell$ and the eigenfunctions can be found in any elementary textbook on quantum mechanics. The are
+Here we consider the case where $V(h)= 0$ for $0\less h \less \ell$ and $V(h)=+\infty$ otherwise. This corresponds to a one dimensional elastic line confined between two impenetrable walls separated by a distance $\ell$. The Hamiltonian $\hat H$ is that for a quantum well of width $\ell$, whose solutions are \cite{claude_cohen-tannoudji_mecanique_2018}
 \begin{equation}
     \psi(h) = \sqrt{\frac{2}{\ell}}\sin(\frac{\pi(n+1)h}{\ell})
 \end{equation}
 where $n\geq 0$ are integers. From this we see that
 \begin{equation}
-    \epsilon_0 = \frac{1}{2\sigma\beta}\frac{\pi^2}{\ell^2},
+    \epsilon_0 = \frac{1}{2\sigma\beta}\frac{\pi^2}{\ell^2}
 \end{equation}
 and so
 \begin{equation}
-    f = \frac{1}{2\sigma\beta^2}\frac{\pi^2}{\ell^2}= \frac{T^2\pi^2}{2\sigma\ell^2}.
+    f = \frac{1}{2\sigma\beta^2}\frac{\pi^2}{\ell^2}= \frac{T^2\pi^2}{2\sigma\ell^2}
 \end{equation}
 Here the pressure (in this case pressure in a force per unit length) is given by
 \begin{equation}
-    P = -\frac{\partial f}{\partial \ell} = \frac{\pi^2 T^2}{\sigma\ell^3},
+    P = -\frac{\partial f}{\partial \ell} = \frac{\pi^2 T^2}{\sigma\ell^3}
     \label{pfree}
 \end{equation}
-and we see that it is repulsive, physically the fluctuations of the surface repel the walls. 
-The pressure has the Casimir like characteristic that it behaves as a long range power law type interaction, however a two dimensional critical Casimir system (see \eqref{casfreeenergy}) would have a free energy per unit length $f=CT/\ell$. We also see that the free energy scales  a $T^2$ rather than $T$ (as is the case for the Casimir interaction).Having said this, a critical system has zero surface tension and so using a model with a finite
+and we see that it is repulsive. Physically, the fluctuations of the surface repel the walls. 
+The pressure has the Casimir like characteristic that it behaves as a long range power law type interaction. However a two dimensional critical Casimir system (see Eq \eqref{casfreeenergy}) would have a free energy per unit length $f=CT/\ell$. We also see that the free energy scales  a $T^2$ rather than $T$ (as is the case for the Casimir interaction).Having said this, a critical system has zero surface tension and so using a model with a finite
 surface tension for the interface is clearly not appropriate.
 
 Here, using Eq. (\ref{clq}) we find that  the correlation length is given by
 \begin{equation}
-    \xi = \frac{2}{3}\frac{\sigma \ell^2}{T\pi^2},
+    \xi = \frac{2}{3}\frac{\sigma \ell^2}{T\pi^2}
     \label{corel}
 \end{equation}
-thus it increases as the surface tension is increased or the temperature is lower, this makes physical sense as the surface should become {\em flatter} under these conditions. Also as the system becomes more confined the correlation length increases, again as  confinement  
+thus it increases as the surface tension is increased or the temperature is lower, which makes physical sense as the surface should become {\em flatter} under these conditions. Also as the system becomes more confined the correlation length increases, again as  confinement  
 kills fluctuations. The correlation length tells us that if we wanted to simulate this system then we need to take
 \begin{equation}
     L\gg \xi ,
