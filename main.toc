@@ -1,4 +1,4 @@
-\contentsline {chapter}{Introduction}{iii}{chapter*.2}% 
+\contentsline {chapter}{Introduction}{v}{chapter*.2}% 
 \contentsline {chapter}{\numberline {1}Equilibrium interface dynamics}{1}{chapter.1}% 
 \contentsline {section}{\numberline {1.1}Models for equilibrium fields}{3}{section.1.1}% 
 \contentsline {subsection}{\numberline {1.1.1}Statics of systems with a finite number of degrees of freedom}{3}{subsection.1.1.1}% 
@@ -22,7 +22,7 @@
 \contentsline {subsection}{\numberline {2.2.2}Kawasaki dynamics}{41}{subsection.2.2.2}% 
 \contentsline {section}{\numberline {2.3}Computing size dependent free energy}{42}{section.2.3}% 
 \contentsline {subsection}{\numberline {2.3.1}The Layer method}{42}{subsection.2.3.1}% 
-\contentsline {subsection}{\numberline {2.3.2}The Lopes Cardozo method}{44}{subsection.2.3.2}% 
+\contentsline {subsection}{\numberline {2.3.2}The Lopes method}{44}{subsection.2.3.2}% 
 \contentsline {section}{\numberline {2.4}Tips and tricks}{45}{section.2.4}% 
 \contentsline {section}{\numberline {2.5}Conclusion}{46}{section.2.5}% 
 \contentsline {chapter}{\numberline {3}Equilibrium Interface models and their finite size effects}{47}{chapter.3}% 
@@ -35,20 +35,21 @@
 \contentsline {section}{\numberline {3.2}Finite size scaling in one dimensional interface models}{58}{section.3.2}% 
 \contentsline {subsection}{\numberline {3.2.1}Continuous models in one dimension}{58}{subsection.3.2.1}% 
 \contentsline {subsection}{\numberline {3.2.2}The confined elastic line}{61}{subsection.3.2.2}% 
-\contentsline {subsection}{\numberline {3.2.3}The Airy line}{62}{subsection.3.2.3}% 
-\contentsline {section}{\numberline {3.3}The confined solid on solid model}{65}{section.3.3}% 
-\contentsline {subsection}{\numberline {3.3.1}Numerical tests of finite size dependence}{73}{subsection.3.3.1}% 
-\contentsline {chapter}{\numberline {4}Driven model C interfaces}{75}{chapter.4}% 
-\contentsline {section}{\numberline {4.1}Introduction}{75}{section.4.1}% 
-\contentsline {section}{\numberline {4.2}The underling two field model}{77}{section.4.2}% 
-\contentsline {section}{\numberline {4.3}Effective interface dynamics}{80}{section.4.3}% 
-\contentsline {section}{\numberline {4.4}A model of active interfaces}{85}{section.4.4}% 
-\contentsline {section}{\numberline {4.5}Conclusions}{87}{section.4.5}% 
-\contentsline {chapter}{\numberline {5}Beyond Solid-On-Solid : the Particles-Over-Particles model}{91}{chapter.5}% 
-\contentsline {section}{\numberline {5.1}The Single-type Particles-Over-Particles model}{91}{section.5.1}% 
-\contentsline {section}{\numberline {5.2}$M$-particles POP system}{95}{section.5.2}% 
-\contentsline {section}{\numberline {5.3}Continuum Theory}{97}{section.5.3}% 
-\contentsline {section}{\numberline {5.4}Dynamics of the continuum model for two particles}{98}{section.5.4}% 
-\contentsline {subsection}{\numberline {5.4.1}Conserved diffusive dynamics}{98}{subsection.5.4.1}% 
-\contentsline {subsection}{\numberline {5.4.2}Non conserved dynamics}{102}{subsection.5.4.2}% 
-\contentsline {chapter}{\numberline {A}Evaluating Fourier integrals}{105}{appendix.A}% 
+\contentsline {subsection}{\numberline {3.2.3}The Airy line}{63}{subsection.3.2.3}% 
+\contentsline {section}{\numberline {3.3}The generalized Lopes Method}{66}{section.3.3}% 
+\contentsline {section}{\numberline {3.4}The confined solid on solid model}{69}{section.3.4}% 
+\contentsline {subsection}{\numberline {3.4.1}Numerical tests of finite size dependence}{77}{subsection.3.4.1}% 
+\contentsline {chapter}{\numberline {4}Driven model C interfaces}{79}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Introduction}{79}{section.4.1}% 
+\contentsline {section}{\numberline {4.2}The underling two field model}{81}{section.4.2}% 
+\contentsline {section}{\numberline {4.3}Effective interface dynamics}{84}{section.4.3}% 
+\contentsline {section}{\numberline {4.4}A model of active interfaces}{89}{section.4.4}% 
+\contentsline {section}{\numberline {4.5}Conclusions}{91}{section.4.5}% 
+\contentsline {chapter}{\numberline {5}Beyond Solid-On-Solid : the Particles-Over-Particles model}{95}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}The Single-type Particles-Over-Particles model}{95}{section.5.1}% 
+\contentsline {section}{\numberline {5.2}$M$-particles POP system}{99}{section.5.2}% 
+\contentsline {section}{\numberline {5.3}Continuum Theory}{101}{section.5.3}% 
+\contentsline {section}{\numberline {5.4}Dynamics of the continuum model for two particles}{102}{section.5.4}% 
+\contentsline {subsection}{\numberline {5.4.1}Conserved diffusive dynamics}{102}{subsection.5.4.1}% 
+\contentsline {subsection}{\numberline {5.4.2}Non conserved dynamics}{106}{subsection.5.4.2}% 
+\contentsline {chapter}{\numberline {A}Evaluating Fourier integrals}{109}{appendix.A}% 

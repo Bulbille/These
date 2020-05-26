@@ -22,7 +22,7 @@
 \BOOKMARK [2][-]{subsection.2.2.2}{Kawasaki dynamics}{section.2.2}% 22
 \BOOKMARK [1][-]{section.2.3}{Computing size dependent free energy}{chapter.2}% 23
 \BOOKMARK [2][-]{subsection.2.3.1}{The Layer method}{section.2.3}% 24
-\BOOKMARK [2][-]{subsection.2.3.2}{The Lopes Cardozo method}{section.2.3}% 25
+\BOOKMARK [2][-]{subsection.2.3.2}{The Lopes method}{section.2.3}% 25
 \BOOKMARK [1][-]{section.2.4}{Tips and tricks}{chapter.2}% 26
 \BOOKMARK [1][-]{section.2.5}{Conclusion}{chapter.2}% 27
 \BOOKMARK [0][-]{chapter.3}{Equilibrium Interface models and their finite size effects}{}% 28
@@ -36,19 +36,20 @@
 \BOOKMARK [2][-]{subsection.3.2.1}{Continuous models in one dimension}{section.3.2}% 36
 \BOOKMARK [2][-]{subsection.3.2.2}{The confined elastic line}{section.3.2}% 37
 \BOOKMARK [2][-]{subsection.3.2.3}{The Airy line}{section.3.2}% 38
-\BOOKMARK [1][-]{section.3.3}{The confined solid on solid model}{chapter.3}% 39
-\BOOKMARK [2][-]{subsection.3.3.1}{Numerical tests of finite size dependence}{section.3.3}% 40
-\BOOKMARK [0][-]{chapter.4}{Driven model C interfaces}{}% 41
-\BOOKMARK [1][-]{section.4.1}{Introduction}{chapter.4}% 42
-\BOOKMARK [1][-]{section.4.2}{The underling two field model}{chapter.4}% 43
-\BOOKMARK [1][-]{section.4.3}{Effective interface dynamics}{chapter.4}% 44
-\BOOKMARK [1][-]{section.4.4}{A model of active interfaces}{chapter.4}% 45
-\BOOKMARK [1][-]{section.4.5}{Conclusions}{chapter.4}% 46
-\BOOKMARK [0][-]{chapter.5}{Beyond Solid-On-Solid : the Particles-Over-Particles model}{}% 47
-\BOOKMARK [1][-]{section.5.1}{The Single-type Particles-Over-Particles model}{chapter.5}% 48
-\BOOKMARK [1][-]{section.5.2}{M-particles POP system}{chapter.5}% 49
-\BOOKMARK [1][-]{section.5.3}{Continuum Theory}{chapter.5}% 50
-\BOOKMARK [1][-]{section.5.4}{Dynamics of the continuum model for two particles}{chapter.5}% 51
-\BOOKMARK [2][-]{subsection.5.4.1}{Conserved diffusive dynamics}{section.5.4}% 52
-\BOOKMARK [2][-]{subsection.5.4.2}{Non conserved dynamics}{section.5.4}% 53
-\BOOKMARK [0][-]{appendix.A}{Evaluating Fourier integrals}{}% 54
+\BOOKMARK [1][-]{section.3.3}{The generalized Lopes Method}{chapter.3}% 39
+\BOOKMARK [1][-]{section.3.4}{The confined solid on solid model}{chapter.3}% 40
+\BOOKMARK [2][-]{subsection.3.4.1}{Numerical tests of finite size dependence}{section.3.4}% 41
+\BOOKMARK [0][-]{chapter.4}{Driven model C interfaces}{}% 42
+\BOOKMARK [1][-]{section.4.1}{Introduction}{chapter.4}% 43
+\BOOKMARK [1][-]{section.4.2}{The underling two field model}{chapter.4}% 44
+\BOOKMARK [1][-]{section.4.3}{Effective interface dynamics}{chapter.4}% 45
+\BOOKMARK [1][-]{section.4.4}{A model of active interfaces}{chapter.4}% 46
+\BOOKMARK [1][-]{section.4.5}{Conclusions}{chapter.4}% 47
+\BOOKMARK [0][-]{chapter.5}{Beyond Solid-On-Solid : the Particles-Over-Particles model}{}% 48
+\BOOKMARK [1][-]{section.5.1}{The Single-type Particles-Over-Particles model}{chapter.5}% 49
+\BOOKMARK [1][-]{section.5.2}{M-particles POP system}{chapter.5}% 50
+\BOOKMARK [1][-]{section.5.3}{Continuum Theory}{chapter.5}% 51
+\BOOKMARK [1][-]{section.5.4}{Dynamics of the continuum model for two particles}{chapter.5}% 52
+\BOOKMARK [2][-]{subsection.5.4.1}{Conserved diffusive dynamics}{section.5.4}% 53
+\BOOKMARK [2][-]{subsection.5.4.2}{Non conserved dynamics}{section.5.4}% 54
+\BOOKMARK [0][-]{appendix.A}{Evaluating Fourier integrals}{}% 55

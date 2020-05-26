@@ -362,16 +362,16 @@ If the Hamiltonian operator $\hat H$ has eigenfunctions $\psi_n$, normalised so 
 \begin{equation}
     \int dh \ \psi^2_n(h) = 1
 \end{equation}
- and with eigenvalues $\epsilon_n$, it is easy to see that the propagator can be written as
+ and with eigenvalues $\epsilon_n$. It is easy to see that the propagator can be written as
 \begin{equation}
-    K(h,h',L)= \sum_n \exp(-L\epsilon_n)\psi_n(h)\psi_n(h')1
+    K(h,h',L)= \sum_n \exp(-L\epsilon_n)\psi_n(h)\psi_n(h')
 \end{equation}
 If we take a system with periodic boundary conditions but otherwise leave the initial value $h(0)$ of the height to be free, then using the normalisation of the eigenfunctions, we find
 \begin{equation}
     Z(L) = \int dh K(h,h',L) = \sum_n \exp(-L\epsilon_n)
 \end{equation}
 Now in the thermodynamic limit $L\to\infty$ if there is a gap between the ground state energy
-$\epsilon_0$ and the first excited state, $g=\epsilon_1-\epsilon_0$ which is non-zero, we can apply ground state dominance 
+$\epsilon_0$ and the first excited state, $g=\epsilon_1-\epsilon_0$, which is non-zero, we can apply ground state dominance 
 \begin{equation}
     Z(L) =\exp(-L\epsilon_0)
 \end{equation}
@@ -379,6 +379,10 @@ which gives the free energy per unit length as
 \begin{equation}
     f=\frac{1}{\beta}\epsilon_0
 \end{equation}
+{\color{red} We remark that the energy of the ground and excited states are related to the transfer matrix by
+\begin{align}
+    \epsilon_n  = - \ln(\lambda_n)
+\end{align}}
 As well as the free energy we are interested in the probability distribution of the height at a single point (which is independent of the point chosen due to invariance by translation of the system). For instance the probability distribution of $h$ is given by
 \begin{align}
 p_1(h)=& \frac{\int d[h]\delta(h(0)-h)\exp\left(-\frac{\beta}{2}\int_0^L h'^2(x) dx -\beta\int_0^L  V(h(x)) dx\right)}{Z(L)}\nn
@@ -416,31 +420,34 @@ so that the height at large distances are uncorrelated or equivalently are indep
 %%%%%%%%%%%%%%%%%%%%
     \subsection{The confined elastic line}
 %%%%%%%%%%%%%%%%%%%%
+    {\color{red} for coherence, changed notations from $\ell$ to$L$. I didn't find any reference to compare this results, do you have any ?}
     
-Here we consider the case where $V(h)= 0$ for $0\less h \less \ell$ and $V(h)=+\infty$ otherwise. This corresponds to a one dimensional elastic line confined between two impenetrable walls separated by a distance $\ell$. The Hamiltonian $\hat H$ is that for a quantum well of width $\ell$, whose solutions are \cite{claude_cohen-tannoudji_mecanique_2018}
+    
+Here we consider the case where $V(h)= 0$ for $0\less h \less L$ and $V(h)=+\infty$ otherwise. This corresponds to a one dimensional elastic line confined between two impenetrable walls separated by a distance $L$. The Hamiltonian $\hat H$ is that for a quantum well of width $L$, whose solutions are \cite{claude_cohen-tannoudji_mecanique_2018}
 \begin{equation}
-    \psi(h) = \sqrt{\frac{2}{\ell}}\sin(\frac{\pi(n+1)h}{\ell})
+    \psi_n(h) = \sqrt{\frac{2}{L}}\sin\left(\frac{\pi(n+1)h}{L}\right)
 \end{equation}
-where $n\geq 0$ are integers. From this we see that
+
+where $n\geq 0$ are integers. From this we see that {\color{red}the ground state energy is}
 \begin{equation}
-    \epsilon_0 = \frac{1}{2\sigma\beta}\frac{\pi^2}{\ell^2}
+    \epsilon_0 = \frac{1}{2\sigma\beta}\frac{\pi^2}{L^2}
 \end{equation}
-and so
+and so {\color{red}in the thermodynamic limit}
 \begin{equation}
-    f = \frac{1}{2\sigma\beta^2}\frac{\pi^2}{\ell^2}= \frac{T^2\pi^2}{2\sigma\ell^2}
+    f = \frac{1}{2\sigma\beta^2}\frac{\pi^2}{L^2}= \frac{T^2\pi^2}{2\sigma L^2}
 \end{equation}
 Here the pressure (in this case pressure in a force per unit length) is given by
 \begin{equation}
-    P = -\frac{\partial f}{\partial \ell} = \frac{\pi^2 T^2}{\sigma\ell^3}
+    P = -\frac{\partial f}{\partial L} = \frac{\pi^2 T^2}{\sigma L^3}
     \label{pfree}
 \end{equation}
 and we see that it is repulsive. Physically, the fluctuations of the surface repel the walls. 
-The pressure has the Casimir like characteristic that it behaves as a long range power law type interaction. However a two dimensional critical Casimir system (see Eq \eqref{casfreeenergy}) would have a free energy per unit length $f=CT/\ell$. We also see that the free energy scales  a $T^2$ rather than $T$ (as is the case for the Casimir interaction).Having said this, a critical system has zero surface tension and so using a model with a finite
+The pressure has the Casimir like characteristic that it behaves as a long range power law type interaction. However a two dimensional critical Casimir system (see Eq \eqref{casfreeenergy}) would have a free energy per unit length $f=CT/L$. We also see that the free energy scales  a $T^2$ rather than $T$ (as is the case for the Casimir interaction).Having said this, a critical system has zero surface tension and so using a model with a finite
 surface tension for the interface is clearly not appropriate.
 
 Here, using Eq. (\ref{clq}) we find that  the correlation length is given by
 \begin{equation}
-    \xi = \frac{2}{3}\frac{\sigma \ell^2}{T\pi^2}
+    \xi = \frac{2}{3}\frac{\sigma L^2}{T\pi^2}
     \label{corel}
 \end{equation}
 thus it increases as the surface tension is increased or the temperature is lower, which makes physical sense as the surface should become {\em flatter} under these conditions. Also as the system becomes more confined the correlation length increases, again as  confinement  
@@ -448,15 +455,15 @@ kills fluctuations. The correlation length tells us that if we wanted to simulat
 \begin{equation}
     L\gg \xi ,
 \end{equation}
-in order to be in the thermodynamics limit and so $L \gg \frac{\sigma \ell^2}{T\pi^2}$, thus for 
-$\ell$ large, in general we would need to simulate rather large systems.
+in order to be in the thermodynamics limit and so $L \gg \frac{\sigma L^2}{T\pi^2}$, thus for 
+$L$ large, in general we would need to simulate rather large systems.
 The probability distribution function of the height at a single point is given by
 \begin{equation}
-    p_1(h) =\frac{2}{\ell}\sin^2(\frac{\pi h}{\ell})
+    p_1(h) =\frac{2}{L}\sin^2(\frac{\pi h}{L})
 \end{equation}
 and from this we find 
 \begin{equation}
-    < h> = \frac{\ell}{2},  
+    < h> = \frac{L}{2},  
 \end{equation}
 which is rather obvious. The width of the interface is given by 
 \begin{equation}
@@ -464,8 +471,9 @@ which is rather obvious. The width of the interface is given by
 \end{equation}
 and here it is given by
 \begin{equation}
-    w= \ell\sqrt{\frac{1}{12}-\frac{1}{2\pi^2}}= 0.0326727\  \ell
+    w= L\sqrt{\frac{1}{12}-\frac{1}{2\pi^2}}= 0.0326727\  L
 \end{equation}
+
 
 %%%%%%%%%%%%%%%%%%%%
     \subsection{The Airy line}
@@ -574,6 +582,115 @@ must hold- this surprising identity can be verified numerically. Here we find th
     w= 0.697089 \ \mu
 \end{equation}
 
+%%%%%%%%%%%%%%%%%%%%
+    \section{The generalized Lopes Method}
+%%%%%%%%%%%%%%%%%%%%
+
+In Sec \ref{sec-lopes}, we have shown a way to numerically compute the free energy of a ssytem at a chemical potential $\mu$ in absence of another potential. Here we generalise the method for any kind of external potential. We will explain the method for the Ising model, but the derivation for the SOS model is straigthforward.
+
+The Hamiltonian of the SOS model is
+\begin{align}
+    H = - J \sum_{<ij>} \sigma_i \sigma_j - \mu \sum_i V(\sigma_i)
+\end{align}
+
+where $V(\sigma)$ is an external potential taking any form. The mean value of the external potential is
+\begin{align}
+    <  \sum_i V(\sigma_i) > =&  \sum_{\bf h} \sum_i V(\sigma_i) \exp(-\beta H) \nn
+    =& \frac{1}{ \beta} \frac{\partial \Omega(\mu)}{\partial \mu}
+\end{align}
+where $\Omega$ is the free energy of the system. We see that for any potential of the form \eqref{lopes-gen}, we can integrate the previous equation to find
+\begin{align}
+   \Omega(\mu_1) - \Omega(\mu_2) = \beta \int_{\mu_1}^{\mu_2} d\mu'  < \sum_i V(\sigma_i) >_{\mu'} 
+   \label{lopes-gen}
+\end{align}
+
+In the case where we know the analytical form of the free energy in the limits $\mu_2 \to \infty$ or $\mu_1 \to 0$, this method provides a way to directly measure it for any temperature or size by integrating over the chemical potential.
+
+In the case of the classical chemical potential, $V(h)=h$, all spins tend to align to $+1$ in the limit $\mu\to +\infty$, which means there is only one possible configuration. The free energy is thus $\Omega(\beta,\mu = \infty) = 0$. Thanks to Eq \eqref{lopes-gen}, by integration over the chemical potential $\mu$, we can directly measure in Glauber simulations the free energy for any finite $\mu$. 
+
+In the SOS model, Eq \eqref{lopes-gen} writes as
+\begin{align}
+   \Omega(\mu_1) - \Omega(\mu_2) = \beta \int_{\mu_1}^{\mu_2} d\mu'  < \sum_i V(h_i) >_{\mu'} 
+\end{align}
+which can be directly be checked with the transfer matrix.
+Nevertheless, the integrand is constant in the Kawasaki dynamics, so we have to find another way. 
+
+In the limit $\mu_2 \to \infty$, the correlation length at the reference state will be small so that the reference free energy will be essentially that of the bulk. As a consequence, it should contain all the information of the Casimir force \eqref{casmir-mc}. That derivative force can then be computed by 
+\begin{align}
+\delta L \frac{\partial \Omega(\mu_1,L)}{\partial L} = \Delta \Omega(\mu_1,\mu_2,L)-\Delta \Omega(\mu_1,\mu_2,L-\delta L)
+\end{align}
+where $\delta L$ is the difference thickness between two systems, and which is then independent of $\mu_2$ in the large chemical potential limit as the free energy $\Omega(\mu_2,L)$ converges to the bulk energy.
+
+Since in Kawasaki dynamics the total height is constant, this method does work only for model A.
+
+
+
+{\color{red} on saute de potentiel à champ à chaque fois
+généralisation de la méthode de David pour n'importe quel observable
+Contexte de David, appliqué au modèle d'Ising, dans son contexte.
+PUIS traduire dans le contexte -> particule -> molécuilaire. 
+ Si l'aimantation doit être conservée ça doit être adapté. Utilisation de plusieurs types de champ magnétique, nouveauté.}
+Pour un système d'Hamiltonien 
+\begin{align}
+    H = J \sum_i |h_i-h_{i+1}| + \mu \frac{V(h_i)+V(h_{i+1})}{2}
+    \label{potentiel-integration-param}
+\end{align}
+on a la différence d'énergie le long d'une isotherme entre un état de référence $(T,\mu_0)$ et $(T,\mu)$ \cite{lopes_cardozo_critical_2014}
+
+{\color{red} expliquer un petit peu plus en détail d'où vient l'équation}
+Dans les modèles d'interface SOS, il est assez simple de calculer analytiquement $\Omega(\beta,L,\infty)$ par dénombrement de tous les états possibles. Cela nous permet d'obtenir via les simulations numériques l'énergie libre d'un système soumis à un potentiel quelconque de la forme \ref{potentiel-integration-param} lorsque l'on intègre le système dans la limite $\mu \to \infty$.
+
+Dans le cas où on a un potentiel chimique normal, c'est-à-dire $V(h_i)= h_i$, alors l'intégration se fait directement sur le paramètre d'ordre $<\sum_i h_i>$. Dans ce cas, dans la limite $\mu \to \infty$, la seule configuration possible est celle où $h_i=0$ pour tout $i$, ce qui mène à l'énergie libre $\Omega(\beta,L,\infty) = 0$. 
+
+Si l'on désire mesurer l'énergie libre d'un tel système dans le cas d'une dynamique de Kawasaki, cette méthode ne donnera rien puisque par définition, $<\sum_i h_i>$ est une constante. L'étude d'un Hamiltonien au chapitre \ref{sec_laser} nous a conduit à un champ $V(h_i)$ possédant la même limite à $\mu \to \infty$. Considérons le champ suivant
+\begin{align}
+    V(h_i) = - |h_i-\frac{L}{2}|
+    \label{neggstaged}
+\end{align}
+Ce champ a tendance à plaquer l'interface loin de $\frac{L}{2}$, c'est-à-dire en $h=0$ et $h=L$ pour un système de taille $L\times L'$, contrairement à un potentiel chimique classique où l'interface est plaquée en $h=0$. Proche des limites du système, on observe que les deux champs sont équivalents à une constante près de l'énergie. Il existe donc deux positions d'équilibre stables de l'interface d'énergie équivalente au potentiel classique. Il y a ici une compétition entre l'énergie qui essaie de conserver l'interface lisse, et l'entropie, qui rend l'interface extrêmement rugueuse, comme dans la figure \ref{comp-potentiels-chimiques}.
+
+%\begin{figure}
+%	\begin{minipage}[t]{0.4\linewidth}
+%		\includegraphics[width=\linewidth]{chap4/comp-potentiels-chimiques.pdf}
+%	\end{minipage}%Cyclin
+%	\begin{minipage}[t]{0.4\linewidth}
+%		\includegraphics[width=\linewidth]{chap4/free-ene-potentiels.pdf}
+%	\end{minipage}
+%	\centering
+%	\begin{minipage}{0.4\linewidth}
+%    	\includegraphics[width=\linewidth]{chap4/simu-tm-negstagged-l20.pdf}
+%	\end{minipage}
+%	\caption{Configuration possible du système à $\beta=1$ et $\mu$ élevé ($\mu=2$) pour les deux types de potentiel (gauche) ; énergie libre en fonction de $\mu$ à laquelle on a retiré l'énergie libre de la configuration limite pour les deux types de potentiel (droite) ; comparaison de l'observable $<\sum_i |h_i-\frac{L}{2}|>$ en fonction de $\mu$ entre la matrice de transfert et une simulation numérique avec $L=20$ pour $10^7$ étapes de Monte Carlo avec une dynamique de Glauber (bas). 
+%	{\color{red} pas clair, hyper vague. Insister sur la méthode numérique qui marche, proof of concept. Méthode, résultats originaux et proof of concept sont tout mélangés. Séparer}}
+%    \label{comp-potentiels-chimiques}
+%\end{figure}  
+
+Dnas la limite $\mu \rightarrow \infty$, on a donc un système éparpillé à $h=0$ et $h=L$. On a la matrice de transfert
+\begin{align}
+T= e^{\beta \mu \frac{L}{2}}
+  \begin{pmatrix}
+    1 & e^{-\beta  J L} \\
+    e^{-\beta  J L} & 1
+  \end{pmatrix}
+\end{align}
+Les valeurs propres sont $\lambda_\pm = e^{ \beta \mu \frac{L}{2}}( 1 \pm e^{-\beta J L})$, ce qui nous donne dans la limite thermodynamique l'énergie libre 
+\begin{align}
+  \Omega(\mu \rightarrow \infty) = - \mu \frac{L}{2}
+\end{align}
+Il est donc aisé de calculer l'énergie libre pour un champ donné grâce à l'intégration
+\begin{align}
+        \Omega(\beta,L,\mu) = \Omega(\beta,L,\infty) + \int_{\mu}^\infty d\mu'  < \sum_i V(h_i) >_{\beta,L,\mu'} 
+\end{align}
+Cette méthode d'intégration est particulièrement adaptée aux modèles sur réseau où l'on connait la limite du système soumis à un potentiel extrême. Dans le cas du modèle SOS, on pourrait avoir envie de diagonaliser directement la matrice de transfert pour $\mu=0$, et ainsi obtenir
+\begin{align}
+        \Omega(\beta,L,\mu) =\Omega(\beta,L,0) + \int_{0}^\mu d\mu'  < \sum_i V(h_i) >_{\beta,L,\mu'} 
+\end{align}
+{\color{red} les longueurs de corrélation sont zéro, dans une limite est donnée uniquement par omega bulk+omefa surface.  fluctuations divergentes. Le système critique est $\mu \to 0$}
+Pour petits champs, cette intégration est certes plus rapide, mais possède une limite divergente à $\mu=0$, qui correspond à une interface libre dont la magnétisation moyenne est une valeur sans intérêt, ce qui nous oblige à garder la limite $\mu \to \infty$.
+
+ {\color{red} mettre en valeur figure 4.4, ÇA MARCHE avec le numérique, PLUS DE CONTEXTE !!}
+
+{\color{red} Besoin MCIA pour faire Casimir Kawasaki, ajouter cisaillement }
 
 %%%%%%%%%%%%%%%%%%%%
 \section{The confined solid on solid model}
