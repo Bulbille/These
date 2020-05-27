@@ -7,7 +7,7 @@ In this chapter we will analyse the dynamics of statistical systems. The analysi
 In the high temperature phase, the system is homogeneous and its total magnetization is zero. Below the critical temperature, when the order parameter is conserved (for example with a Kawasaki dynamic or Model B), the system will locally separate into two phases of opposite mean magnetization separated by and interface, this interface minimizing the surface energy between both phases.
 When the order parameter is not conserved (for example Glauber dynamics or Model A), a spontaneous symmetry breaking will make one of the two phases take over the whole system. In a continuous phase transition where the critical point is reached from the disordered state to the ordered stated, the domain size, which is equal to the system's correlation length, diverges close to the critical temperature $T_C$. In a thermodynamical system, it becomes infinite, implying that the system takes an infinite amount of time to reach equilibrium : it's the critical slowing down. The process of domain growth is known as coarsening and phase ordering kinetics is the theory that has been developed to understand the phenomenon of coarsening\cite{bray_theory_1994}.  In Fig \ref{clusterization}, we show an example of coarsening in the Ising model with respect to time.
 
-Furthermore, for systems with a conserved order parameter which separate into two phases, the two phases will be separated by an interface. This interface will be characterised by a surface tension, its average position will be fixed but it will exhibit fluctuations. Later we will see how model of phase ordering kinetics and be used to determine the static and dynamical properties of interfaces between two coexisting phases. 
+Furthermore, for systems with a conserved order parameter which separate into two phases, the two phases will be separated by an interface. This interface will be characterised by a surface tension, its average position will be fixed but it will exhibit fluctuations. Later we will see how models of phase ordering kinetics can be used to determine the static and dynamical properties of interfaces between two coexisting phases. 
 
 \begin{figure}[t]
     \centering
@@ -603,8 +603,8 @@ We take a system of size $L'\times L' \times L$, composed of $N$ sites $i$. At e
 	H =  - \sum_{<ij>} J \sigma_i \sigma_j + \frac{V(\sigma_i)+V(\sigma_j)}{2}
 	\label{hamil-ising}
 \end{equation}
-where $\sum_{< ij >}$ is a sum over all pairs of nearest neighbours, and the external field $V(\sigma_i)$ has been symmetrized. The Ising model\cite{niss_history_2005,niss_history_2009} is therefore a lattice model with short interactions between particles. Since all particles $\sigma_i$ in the system are equal to $\pm!$, this system is called a lattice based spin model. When $\sigma_i$ is continuous, it is called the XY model \cite{gupta_phase_1988}.
-$J$ is called the coupling parameter of the system, and can be non-uniform, with the nearest neighbours interaction being $J = J_{ij}$. If $ J_{ij} =0$, the system favorises homogeneous phases and is called ferromagnetic. Otherwise, the system favorises configurations where each spin has an opposite sign with respect to all of their neighbours, which modelises antiferromagnetic materials. We will pose $J=1$.
+where $\sum_{< ij >}$ is a sum over all pairs of nearest neighbours, and the external field $V(\sigma_i)$ has been symmetrized. The Ising model\cite{niss_history_2005,niss_history_2009} is therefore a lattice model with short interactions between particles. Since all particles $\sigma_i$ in the system are equal to $\pm 1$, this system is called a lattice based spin model. When $\sigma_i$ is continuous, it is called the XY model \cite{gupta_phase_1988}.
+$J$ is called the coupling parameter of the system, and can be non-uniform, with the nearest neighbours interaction being $J = J_{ij}$. If $ J_{ij} >0$, the system favorises homogeneous phases and is called ferromagnetic. Otherwise, the system favorises configurations where each spin has an opposite sign with respect to all of their neighbours, which modelises antiferromagnetic materials. We will pose $J=1$.
 
 \begin{figure}[t]
 	\begin{minipage}[t]{0.5\linewidth}
@@ -629,7 +629,7 @@ where we've set the distance between two sites to $1$.
 From this we easily see some bulk energy to which we add the sites' nearest neighbours interactions in an Ising-like fashion.
 %%%%%%%%%%%%%
 
-This model precisely describes  phase transitions in uniaxial magnetic systems\cite{de_jongh_experiments_1974,wp_wold_ising_2000,ikeda_neutron_1973}. It is also the simplest model of its eponymous universality class, which also contains liquid/gas transitions and binary fluids.This model does not have a phase transition in 1D, but a phase transition in 2D was foumd in 1944\cite{onsager_crystal_1944} at the critical temperature 
+This model precisely describes  phase transitions in uniaxial magnetic systems\cite{de_jongh_experiments_1974,wp_wold_ising_2000,ikeda_neutron_1973}. It is also the simplest model of its eponymous universality class, which also contains liquid/gas transitions and binary fluids. {\textcolor{red}{In these mappings, $n_i=\frac{1}{2}(1-\sigma_i)=0,1$ represents occupation of a cell of a lattice fluid or $\sigma_i$ gives the label of a binary species $A$ or $B$.}} This model does not have a phase transition in 1D, but a phase transition in 2D was foumd in 1944\cite{onsager_crystal_1944} at the critical temperature 
 \begin{align}
      T_{2D,C} = \frac{2J}{k_B \ln(1 + \sqrt{2})} \simeq 2.27 \frac{J}{k_B}
 \end{align}
@@ -651,10 +651,10 @@ so that $n_i(\sigma_i = 1) = 1$ and $n_i(\sigma_i = -1) = 0$, we obtain
 where the constant term $\sum_{< i j >}  J_{ij}$ does not change the partition function behaviour. We have then
 \begin{align}
 	H_{LG} &=  - 4 \sum_{< i j >}  J_{ij}  n_i n_j  + 2 \sum_{< i j >}  J_{ij}  (n_i+n_j) + \sum_{< i j >}  J_{ij} \frac{V(\sigma_i)+V(\sigma_j)}{2}  \nn
-       &=  - 4 J \sum_{< i j >}  J n_i n_j  + \mu \sum_i  n_i + \sum_{< i j >}  J \frac{V(\sigma_i)+V(\sigma_j)}{2}  
+       &=  - 4 J \sum_{< i j >}  J n_i n_j  + \mu_c \sum_i  n_i + \sum_{< i j >}  J \frac{V(\sigma_i)+V(\sigma_j)}{2}  
 \end{align}
-where we have set $J_{ij} = J$ constant and defined the chemical potential for a liquid-gas system as $\mu=4Jc$, with  $c$ the number of nearest neighbours. A positive magnetic phase is thus analogous to a high density state such a liquid, while the negative magnetic phase is equal to a low density state such as a gas. The model also describes adsorption of a gas in a lattice or binary fluids between particles $A$ and $B$.
-The chemical potential $\mu$ is the conjugate variable to the total number of particles $\sum_i n_i$ in the grand-canonical ensemble, while the magnetic field $h$ is the conjugate variable to the total magnetisation $\sum_i \sigma_i$.
+where we have set $J_{ij} = J$ constant and defined the {\textcolor{red}{intrinsic chemical potential for a liquid-gas system as $\mu_c=4J c$,}} with  $c$ the number of nearest neighbours. A positive magnetic phase is thus analogous to a high density state such a liquid, while the negative magnetic phase is equal to a low density state such as a gas. {\textcolor{red}{An onsite potential $V(\sigma_i)$ further modifies the chemical potential, $\mu=\mu_c+\delta\mu[V(\sigma_i)]$.
+The chemical potential $\mu$ is the conjugate variable to the total number of particles $\sum_i n_i$, while the magnetic field $B$ is the conjugate variable to the total magnetisation $\sum_i \sigma_i$. The two are connected through the mapping such that $B\sim \mu-\mu_c$, so that liquid-gas and Ising model systems share common thermodynamic features such as the universality class for critical fluctuations. For the fluid the grand canonical ensemble corresponds to the Gibbs ensemble with fixed $T$ and $\mu$ and canonical ensemble with fixed $T$ and $N$ . In the magnetic system these ensembles correspond to fixed $T, B$ and $T,M$ respectively. The model also describes adsorption of a gas in a lattice or binary fluids between particles of different species $A$ and $B$.}}
 
 
 
@@ -740,7 +740,7 @@ Another way to compute this energy for a SOS configuration is to directly count 
 \begin{equation}
     E_\perp = - J L' ( L-2)
 \end{equation}
-There are $L'\times L$ horizontal bonds. In a pure phase system, the horizontal energy would be $-JL'L$. Neverthelesss, there are $\sum_i |h_i-h_{i+1}|$ bonds which have an energy of $+J$, which gives the horizontal energy  contribution 
+There are $L'\times L$ horizontal bonds. In a single phase system, the horizontal energy would be $-JL'L$. Neverthelesss, there are $\sum_i |h_i-h_{i+1}|$ bonds which have an energy of $+J$, which gives the horizontal energy  contribution 
 \begin{equation}
     E_\parallel = - J L' L + 2 \sum_i |h_i-h_{i+1}|
 \end{equation}
@@ -755,7 +755,7 @@ H = J \sum_{i=0}^{L'} |h_i-h_{i+1}| + \frac{V(h_i)+V(h_{i+1})}{2}
 
 
 
-The first system where the SOS model has been applied was crystals' growth in 1972 \cite{gilmer_simulation_1972}. Since then, the model has been used with some success in naphthalene cristals\cite{elwenspoek_kinetic_1987}, experimental expitaxial growth\cite{wilby_scaling_1992}, polymer membranes \cite{gompper_steric_1989}, or interfacial wetting \cite{fisher_walks_1983}.
+The first system where the SOS model has been applied was that of crystals growth in 1972 \cite{gilmer_simulation_1972}. Since then, the model has been used with some success in naphthalene cristals\cite{elwenspoek_kinetic_1987}, experimental expitaxial growth\cite{wilby_scaling_1992}, polymer membranes \cite{gompper_steric_1989}, or interfacial wetting \cite{fisher_walks_1983}.
 
 In the SOS model, the sites $i$ of height $h_i$ can take any value in $[0,L]$. The Restrictied Solid-On-Solid model (RSOS) is a variation where sites can only take the value $h_{i+1} \in [h_i-1,h_i,h_i+1]$\cite{privman_transfer-matrix_1989}. This approximation works for very low temperatures or very smooth interfaces \cite{kim_conserved_1994,vaysburd_critical_1995}. 
 
@@ -768,7 +768,7 @@ and also has a restricted version. The SOS model has an exact relation with the 
 
 
 
-Since the dimensionality of the system has been reduced in only taking into account the height interface $h_i$ at site $i$ instead of the position of all particles, we can think of an interface as a partially self-avoiding walk. This idea, which will be developed in section \ref{sec-continuous-model}, has proven quiet powerfull in finding exact solutions of the generating function \cite{owczarek_exact_1993} or the extreme deviations statistics of the interface \cite{majumdar_airy_2005,schehr_universal_2006}.
+Since the dimensionality of the system has been reduced in only taking into account the height interface $h_i$ at site $i$ instead of the position of all particles, we can think of an interface {\textcolor{red}{in a two dimensional system}} as a partially self-avoiding walk. This idea, which will be developed in section \ref{sec-continuous-model}, has proven quiet powerfull in finding exact solutions of the generating function \cite{owczarek_exact_1993} or the extreme deviations statistics of the interface \cite{majumdar_airy_2005,schehr_universal_2006}.
 
 In the canonical ensemble, the height interface is fixed to $N$, which is translated in the partition function as
 \begin{align}
@@ -796,7 +796,7 @@ In Fig \ref{hauteur-mu}, we plot the mean number of particles per site with resp
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Matrice de Transfert}
+\subsection{Transfer Matrix}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -815,7 +815,7 @@ T(h_i,h_j) = e^{-\beta H(h_i,h_j)}
 \label{matric-transfert}
 \end{align}
 In Fig \ref{mat-inf}, we have represented an infinite matrix corresponding the limit $L\to \infty$, where each site can take any value in $[-\infty,\infty]$. To diagonalize numerically such matrices, we translate the whole system with $h_i \to h_i - \frac{L}{2}$, where $L$ is the matrix's size, which me make tend to $\infty$.
-The constraint \eqref{hamil-sos-cano} cannot be expressed in the transfer matrix formalism, which induces a change in properties from this ensemble with respect to the transfer matric results \cite{siegert_scaling_1993}.
+The constraint \eqref{hamil-sos-cano} cannot be expressed in the transfer matrix formalism, which induces a change in properties from this ensemble with respect to the transfer matrix results \cite{siegert_scaling_1993}.
 
 Since the system has periodic boundary conditions $h_{L+1} = h_1$, we have $T(h_L,h_{L+1}) = T(h_L,h_1)$ \cite{pearce_exact_1989}. The matrix is thus symmetric, which means it can be diagonalized with eigenvectors and eigenvalues 
 \begin{align}
