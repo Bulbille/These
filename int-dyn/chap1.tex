@@ -632,7 +632,9 @@ where we've set the distance between two sites to $1$.
 From this we easily see some bulk energy to which we add the sites' nearest neighbours interactions in an Ising-like fashion.
 %%%%%%%%%%%%%
 
-This model precisely describes  phase transitions in uniaxial magnetic systems\cite{de_jongh_experiments_1974,wp_wold_ising_2000,ikeda_neutron_1973}. It is also the simplest model of its eponymous universality class, which also contains liquid/gas transitions and binary fluids.This model does not have a phase transition in 1D, but a phase transition in 2D was foumd in 1944\cite{onsager_crystal_1944} at the critical temperature 
+This model precisely describes  phase transitions in uniaxial magnetic systems\cite{de_jongh_experiments_1974,wp_wold_ising_2000,ikeda_neutron_1973}. It is also the simplest model of its eponymous universality class, which also contains liquid/gas transitions and binary fluids.
+In these mappings, $n_i=\frac{1}{2}(1-\sigma_i)=0,1$ represents occupation of a cell of a lattice fluid or $\sigma_i$ gives the label of a binary species $A$ or $B$.
+This model does not have a phase transition in 1D, but a phase transition in 2D was foumd in 1944\cite{onsager_crystal_1944} at the critical temperature 
 \begin{align}
      T_{2D,C} = \frac{2J}{k_B \ln(1 + \sqrt{2})} \simeq 2.27 \frac{J}{k_B}
 \end{align}
@@ -656,8 +658,8 @@ where the constant term $\sum_{< i j >}  J_{ij}$ does not change the partition f
 	H_{LG} &=  - 4 \sum_{< i j >}  J_{ij}  n_i n_j  + 2 \sum_{< i j >}  J_{ij}  (n_i+n_j) + \sum_{< i j >}  J_{ij} \frac{V(\sigma_i)+V(\sigma_j)}{2}  \nn
        &=  - 4 J \sum_{< i j >}  J n_i n_j  + \mu \sum_i  n_i + \sum_{< i j >}  J \frac{V(\sigma_i)+V(\sigma_j)}{2}  
 \end{align}
-where we have set $J_{ij} = J$ constant and defined the chemical potential for a liquid-gas system as $\mu=4Jc$, with  $c$ the number of nearest neighbours. A positive magnetic phase is thus analogous to a high density state such a liquid, while the negative magnetic phase is equal to a low density state such as a gas. The model also describes adsorption of a gas in a lattice or binary fluids between particles $A$ and $B$.
-The chemical potential $\mu$ is the conjugate variable to the total number of particles $\sum_i n_i$ in the grand-canonical ensemble, while the magnetic field $h$ is the conjugate variable to the total magnetisation $\sum_i \sigma_i$.
+where we have set $J_{ij} = J$ constant and defined the intrinsic chemical potential for a liquid-gas system as $\mu_c=4J c$, with  $c$ the number of nearest neighbours. A positive magnetic phase is thus analogous to a high density state such a liquid, while the negative magnetic phase is equal to a low density state such as a gas. An onsite potential $V(\sigma_i)$ further modifies the chemical potential, $\mu=\mu_c+\delta\mu[V(\sigma_i)]$.
+The chemical potential $\mu$ is the conjugate variable to the total number of particles $\sum_i n_i$, while the magnetic field $B$ is the conjugate variable to the total magnetisation $\sum_i \sigma_i$. The two are connected through the mapping such that $B\sim \mu-\mu_c$, so that liquid-gas and Ising model systems share common thermodynamic features such as the universality class for critical fluctuations. For the fluid the grand canonical ensemble corresponds to the Gibbs ensemble with fixed $T$ and $\mu$ and canonical ensemble with fixed $T$ and $N$ . In the magnetic system these ensembles correspond to fixed $T, B$ and $T,M$ respectively. The model also describes adsorption of a gas in a lattice or binary fluids between particles of different species $A$ and $B$.
 
 
 
@@ -694,7 +696,6 @@ By diagonalization of the transfer matrix (which we will define later), we find 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
 
 
-{\color{red} 
 In order to get the Edwards-Wilkinson equation of an interface from statistical field theory, we have used the approximation 
 \begin{align}
 \phi(\bx,t) = f(z-h(\br,t))
@@ -754,7 +755,6 @@ By setting $2J=J$ and getting rid of the bulk energy, we obtain the \textbf{Soli
 H = J \sum_{i=0}^{L'} |h_i-h_{i+1}| + \frac{V(h_i)+V(h_{i+1})}{2}
 \label{hamil-sos}
 \end{align}
-}
 
 
 
