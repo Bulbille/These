@@ -6,6 +6,7 @@ Models for interfaces arise naturally in phase separated systems, as explained i
 
 %%%%%%%%%%%%%%%%%%%%
     \section{The Casimir effect}
+    \label{sec-casimir}
 %%%%%%%%%%%%%%%%%%%%
     
 Here we explain the critical Casimir effect. For completeness we start by explaining the quantum Casimir effect as it was in the quantum context that the effect was first observed \cite{h_b_g_casimir_attraction_1948}.
@@ -453,9 +454,9 @@ Here, using Eq. (\ref{clq}) we find that  the correlation length is given by
 thus it increases as the surface tension is increased or the temperature is lower, which makes physical sense as the surface should become {\em flatter} under these conditions. Also as the system becomes more confined the correlation length increases, again as  confinement  
 kills fluctuations. The correlation length tells us that if we wanted to simulate this system then we need to take
 \begin{equation}
-    L\gg \xi ,
+    L'\gg \xi ,
 \end{equation}
-in order to be in the thermodynamics limit and so $L \gg \frac{\sigma L^2}{T\pi^2}$, thus for 
+in order to be in the thermodynamics limit and so $L' \gg \frac{\sigma L^2}{T\pi^2}$, thus for 
 $L$ large, in general we would need to simulate rather large systems.
 The probability distribution function of the height at a single point is given by
 \begin{equation}
@@ -478,9 +479,10 @@ and here it is given by
 %%%%%%%%%%%%%%%%%%%%
     \subsection{The Airy line}
 %%%%%%%%%%%%%%%%%%%%
+{\color{red} can we rename $P_0$ as $\mu$, since it's the chemical potential ? And in the paragraph then, rename $\mu$ as another thing ?}
 In the  above well known example we confine the surface and then compute the pressure. This is an example of the constant volume ensemble. Physically we could also consider the case of a system which is confined softly by an externally imposed pressure $P_0$ the constant pressure ensemble. In this case the potential is given by
 \begin{equation}
-    V(h) = P_0 h \ {\rm for }\ h>0\ ; =\infty \ {\rm for}\ h\leq 0. 
+    V(h) = P_0 h \ {\rm for }\ h \greater 0\ ; =\infty \ {\rm for}\ h\leq 0. 
 \end{equation}
 The time independent Schr\"odinger equation for the eigenfunctions here is
 \begin{equation}
@@ -585,7 +587,7 @@ must hold- this surprising identity can be verified numerically. Here we find th
 %%%%%%%%%%%%%%%%%%%%
     \section{The generalized Lopes Method}
 %%%%%%%%%%%%%%%%%%%%
-
+{\color{blue}
 In Sec \ref{sec-lopes}, we have shown a way to numerically compute the free energy of a ssytem at a chemical potential $\mu$ in absence of another potential. Here we generalise the method for any kind of external potential. We will explain the method for the Ising model, but the derivation for the SOS model is straigthforward.
 
 The Hamiltonian of the SOS model is
@@ -596,76 +598,79 @@ The Hamiltonian of the SOS model is
 where $V(\sigma)$ is an external potential taking any form. The mean value of the external potential is
 \begin{align}
     <  \sum_i V(\sigma_i) > =&  \sum_{\bf h} \sum_i V(\sigma_i) \exp(-\beta H) \nn
-    =& \frac{1}{ \beta} \frac{\partial \Omega(\mu)}{\partial \mu}
+    =&  - \frac{\partial F(\mu)}{\partial \mu}
 \end{align}
-where $\Omega$ is the free energy of the system. We see that for any potential of the form \eqref{lopes-gen}, we can integrate the previous equation to find
+where $F$ is the free energy of the system. We see that for any potential of the form \eqref{lopes-gen}, we can integrate the previous equation to find
 \begin{align}
-   \Omega(\mu_1) - \Omega(\mu_2) = \beta \int_{\mu_1}^{\mu_2} d\mu'  < \sum_i V(\sigma_i) >_{\mu'} 
+   F(\mu_1) - F(\mu_2) = - \int_{\mu_1}^{\mu_2} d\mu'  < \sum_i V(\sigma_i) >_{\mu'} 
    \label{lopes-gen}
 \end{align}
 
 In the case where we know the analytical form of the free energy in the limits $\mu_2 \to \infty$ or $\mu_1 \to 0$, this method provides a way to directly measure it for any temperature or size by integrating over the chemical potential.
-
-In the case of the classical chemical potential, $V(h)=h$, all spins tend to align to $+1$ in the limit $\mu\to +\infty$, which means there is only one possible configuration. The free energy is thus $\Omega(\beta,\mu = \infty) = 0$. Thanks to Eq \eqref{lopes-gen}, by integration over the chemical potential $\mu$, we can directly measure in Glauber simulations the free energy for any finite $\mu$. 
-
-In the SOS model, Eq \eqref{lopes-gen} writes as
+From the total free energy, we recover the Casimir form through Eq \eqref{cas-lopes}.
+The limit $\mu_1 \to 0$ is the free system limit, and the free energy can not be computed analytically.However, when $\mu_2 \to \infty$, for  the majority of external fields $V(\sigma)$ in which we are interested, there is often a configuration limit which whose free energy can be computed analytically. For example, if $V(\sigma)=\sigma$ is the chemical potential, the configuration limit is the one where all spins point towards the same direction, leading to a free energy of $0$. Thus, we have
 \begin{align}
-   \Omega(\mu_1) - \Omega(\mu_2) = \beta \int_{\mu_1}^{\mu_2} d\mu'  < \sum_i V(h_i) >_{\mu'} 
+   F(\mu_1) - F_{analytic}(\infty) = - \int_{\mu_1}^{\infty} d\mu'  < \sum_i V(\sigma_i) >_{\mu'} 
+   \label{lopes-gen}
 \end{align}
-which can be directly be checked with the transfer matrix.
-Nevertheless, the integrand is constant in the Kawasaki dynamics, so we have to find another way. 
-
-In the limit $\mu_2 \to \infty$, the correlation length at the reference state will be small so that the reference free energy will be essentially that of the bulk. As a consequence, it should contain all the information of the Casimir force \eqref{casmir-mc}. That derivative force can then be computed by 
+In numerical simulations, it is not possible to range over infinity, and a criterion has to be defined to know the error made between the analytic case $\mu_2 = \infty$ and the maximal $\mu_2$ achieved in simulations. As in Eq \eqref{function-d}, we define the function
 \begin{align}
-\delta L \frac{\partial \Omega(\mu_1,L)}{\partial L} = \Delta \Omega(\mu_1,\mu_2,L)-\Delta \Omega(\mu_1,\mu_2,L-\delta L)
+    D(\mu,L_1,L_2) =  < M^\ast(L_1)-M^\ast(L_1-1) - (M^\ast(L_2)-M^\ast(L_2-1) >
 \end{align}
-where $\delta L$ is the difference thickness between two systems, and which is then independent of $\mu_2$ in the large chemical potential limit as the free energy $\Omega(\mu_2,L)$ converges to the bulk energy.
-
-Since in Kawasaki dynamics the total height is constant, this method does work only for model A.
+with the generalized magnetization $M^\ast = \sum_i V(\sigma_i)$, which gives us a suitable upper limit of integration if we want to get the Casimir force.
 
 
-
-{\color{red} on saute de potentiel à champ à chaque fois
-généralisation de la méthode de David pour n'importe quel observable
-Contexte de David, appliqué au modèle d'Ising, dans son contexte.
-PUIS traduire dans le contexte -> particule -> molécuilaire. 
- Si l'aimantation doit être conservée ça doit être adapté. Utilisation de plusieurs types de champ magnétique, nouveauté.}
-Pour un système d'Hamiltonien 
+For the SOS Hamiltonian
 \begin{align}
-    H = J \sum_i |h_i-h_{i+1}| + \mu \frac{V(h_i)+V(h_{i+1})}{2}
-    \label{potentiel-integration-param}
+    H =  J \sum_i |h_i -h_{i+1}|  + \mu \sum_i V(h_i)
 \end{align}
-on a la différence d'énergie le long d'une isotherme entre un état de référence $(T,\mu_0)$ et $(T,\mu)$ \cite{lopes_cardozo_critical_2014}
+we define the generalised mean height as
+\begin{align}
+    h^\ast = < \sum_i V(h_i) >
+\end{align}
+quation \eqref{lopes-gen} writes as
+\begin{align}
+   F(\mu_1) - F(\mu_2) = -  \int_{\mu_1}^{\mu_2} d\mu' h^\ast(\mu')
+   \label{diff-gene}
+\end{align}
+which can be directly be verified with the transfer matrix. 
+In the limit $\mu \to \infty$, the generalised height is zero, while the free energy $F(\infty)$ can often be computed analytically. 
+To minimize the error between the analytical limit and the numerical simulations, a suitable choice of the upper integration's limit $\mu_2$ is given by
+\begin{align}
+    \int_{\mu_2}^\infty  d\mu' h^\ast(\mu')) \ll \int_{\mu_1}^{\mu_2}  d\mu' h^\ast(\mu')
+\end{align}
+An heuristic argument to find a suitable upper limit for integration is when $h^\ast(\mu_2) \ll h^\ast(\mu_1)$.
+In Fig \ref{integration-free-ene}, we see the free energy computed from the matrix transfer, compared to the integration procedure \eqref{lopes-gen} for the SOS model for the chemical potential $V(h_i)=h_i$ in Monte Carlo simulations, where we see the agreement for $\mu_2$ large enough.
 
-{\color{red} expliquer un petit peu plus en détail d'où vient l'équation}
-Dans les modèles d'interface SOS, il est assez simple de calculer analytiquement $\Omega(\beta,L,\infty)$ par dénombrement de tous les états possibles. Cela nous permet d'obtenir via les simulations numériques l'énergie libre d'un système soumis à un potentiel quelconque de la forme \ref{potentiel-integration-param} lorsque l'on intègre le système dans la limite $\mu \to \infty$.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.7\linewidth]{int-dyn/integration-free-ene.pdf}
+    \caption{Difference in free energy directly computed from transfer matrix, compared to numerical integration over the generalized height, for different upper limit $\mu_2$. The parameters are $L' = 256$, $L=200$ and $\beta=1$ for $10^7$ Monte Carlo steps.
+    {\color{red} refaire à 1e7}}
+    \label{integration-free-ene}
+\end{figure}
 
-Dans le cas où on a un potentiel chimique normal, c'est-à-dire $V(h_i)= h_i$, alors l'intégration se fait directement sur le paramètre d'ordre $<\sum_i h_i>$. Dans ce cas, dans la limite $\mu \to \infty$, la seule configuration possible est celle où $h_i=0$ pour tout $i$, ce qui mène à l'énergie libre $\Omega(\beta,L,\infty) = 0$. 
-
-Si l'on désire mesurer l'énergie libre d'un tel système dans le cas d'une dynamique de Kawasaki, cette méthode ne donnera rien puisque par définition, $<\sum_i h_i>$ est une constante. L'étude d'un Hamiltonien au chapitre \ref{sec_laser} nous a conduit à un champ $V(h_i)$ possédant la même limite à $\mu \to \infty$. Considérons le champ suivant
+Since the order parameter is conserved in model B, the generalized Lopes method can be used to compute the free energy for Kawasaki dynamics, for potentials different from the chemical potential. 
+As a proof of concept, we take a potential of the form
 \begin{align}
     V(h_i) = - |h_i-\frac{L}{2}|
     \label{neggstaged}
 \end{align}
-Ce champ a tendance à plaquer l'interface loin de $\frac{L}{2}$, c'est-à-dire en $h=0$ et $h=L$ pour un système de taille $L\times L'$, contrairement à un potentiel chimique classique où l'interface est plaquée en $h=0$. Proche des limites du système, on observe que les deux champs sont équivalents à une constante près de l'énergie. Il existe donc deux positions d'équilibre stables de l'interface d'énergie équivalente au potentiel classique. Il y a ici une compétition entre l'énergie qui essaie de conserver l'interface lisse, et l'entropie, qui rend l'interface extrêmement rugueuse, comme dans la figure \ref{comp-potentiels-chimiques}.
+Such potential will press the interface along $h=0$ and $h=L$ compared to the classical chemical potential which presses the interface at $h=0$, as seen in Fig \ref{fig-negstagged}. Far away from $\frac{L}{2}$, both potentials are equivalent to a factor {\color{red} à un facteur près ? } , and shall behave similarly for large $\mu$, because the free energy only depends on the interface fluctuations and not the mean height. 
 
-%\begin{figure}
-%	\begin{minipage}[t]{0.4\linewidth}
-%		\includegraphics[width=\linewidth]{chap4/comp-potentiels-chimiques.pdf}
-%	\end{minipage}%Cyclin
-%	\begin{minipage}[t]{0.4\linewidth}
-%		\includegraphics[width=\linewidth]{chap4/free-ene-potentiels.pdf}
-%	\end{minipage}
-%	\centering
-%	\begin{minipage}{0.4\linewidth}
-%    	\includegraphics[width=\linewidth]{chap4/simu-tm-negstagged-l20.pdf}
-%	\end{minipage}
-%	\caption{Configuration possible du système à $\beta=1$ et $\mu$ élevé ($\mu=2$) pour les deux types de potentiel (gauche) ; énergie libre en fonction de $\mu$ à laquelle on a retiré l'énergie libre de la configuration limite pour les deux types de potentiel (droite) ; comparaison de l'observable $<\sum_i |h_i-\frac{L}{2}|>$ en fonction de $\mu$ entre la matrice de transfert et une simulation numérique avec $L=20$ pour $10^7$ étapes de Monte Carlo avec une dynamique de Glauber (bas). 
-%	{\color{red} pas clair, hyper vague. Insister sur la méthode numérique qui marche, proof of concept. Méthode, résultats originaux et proof of concept sont tout mélangés. Séparer}}
-%    \label{comp-potentiels-chimiques}
-%\end{figure}  
 
-Dnas la limite $\mu \rightarrow \infty$, on a donc un système éparpillé à $h=0$ et $h=L$. On a la matrice de transfert
+\begin{figure}
+    \centering
+	\includegraphics[width=0.7\linewidth]{int-dyn/comp-potentiels-chimiques.pdf}
+	\caption{Snapshots of systems for the potential \eqref{neggstaged} and the chemical potential for $\beta=1$ and $\mu=2$ with $L=40$ and $L'=256$}
+    \label{fig-negstagged}	
+    \centering
+   	\includegraphics[width=0.7\linewidth]{int-dyn/simu-tm-negstagged-l20.pdf}
+    \caption{Difference in free energy directly computed from transfer matrix with the potential \eqref{neggstaged}, compared to numerical integration over the generalized height. The parameters are $L' = 256$, $L=20$ and $\beta=1$, $\mu_2 = 1$for $10^7$ Monte Carlo steps. {\color{red} uniformiser les tailles de systèmes, galbuer+kawasaki}} 
+   	\label{fig-int-negstagged}    
+\end{figure}  
+
+In the $\mu \rightarrow \infty$ limit, the system has two equilibrium positions $h=0$ et $h=L$, which gives the transfer matrix
 \begin{align}
 T= e^{\beta \mu \frac{L}{2}}
   \begin{pmatrix}
@@ -673,25 +678,14 @@ T= e^{\beta \mu \frac{L}{2}}
     e^{-\beta  J L} & 1
   \end{pmatrix}
 \end{align}
-Les valeurs propres sont $\lambda_\pm = e^{ \beta \mu \frac{L}{2}}( 1 \pm e^{-\beta J L})$, ce qui nous donne dans la limite thermodynamique l'énergie libre 
+The eigenvalues are $\lambda_\pm = e^{ \beta \mu \frac{L}{2}}( 1 \pm e^{-\beta J L})$, which gives us the free energy 
 \begin{align}
-  \Omega(\mu \rightarrow \infty) = - \mu \frac{L}{2}
+  F(\mu \rightarrow \infty) = - \mu \frac{L}{2}
 \end{align}
-Il est donc aisé de calculer l'énergie libre pour un champ donné grâce à l'intégration
-\begin{align}
-        \Omega(\beta,L,\mu) = \Omega(\beta,L,\infty) + \int_{\mu}^\infty d\mu'  < \sum_i V(h_i) >_{\beta,L,\mu'} 
-\end{align}
-Cette méthode d'intégration est particulièrement adaptée aux modèles sur réseau où l'on connait la limite du système soumis à un potentiel extrême. Dans le cas du modèle SOS, on pourrait avoir envie de diagonaliser directement la matrice de transfert pour $\mu=0$, et ainsi obtenir
-\begin{align}
-        \Omega(\beta,L,\mu) =\Omega(\beta,L,0) + \int_{0}^\mu d\mu'  < \sum_i V(h_i) >_{\beta,L,\mu'} 
-\end{align}
-{\color{red} les longueurs de corrélation sont zéro, dans une limite est donnée uniquement par omega bulk+omefa surface.  fluctuations divergentes. Le système critique est $\mu \to 0$}
-Pour petits champs, cette intégration est certes plus rapide, mais possède une limite divergente à $\mu=0$, qui correspond à une interface libre dont la magnétisation moyenne est une valeur sans intérêt, ce qui nous oblige à garder la limite $\mu \to \infty$.
+We plotted in Fig \ref{fig-int-negstagged} the difference of free energy computed from the transfer matrix between $\mu_1$ finite and $\mu=\infty$, and the integration procedure \eqref{diff-gene} with the generalized height with the matrix transfer and Monte Carlo simulations, both for Glauber and Kawasaki dynamics. {\color{red} commenter un peu plus}
 
- {\color{red} mettre en valeur figure 4.4, ÇA MARCHE avec le numérique, PLUS DE CONTEXTE !!}
-
-{\color{red} Besoin MCIA pour faire Casimir Kawasaki, ajouter cisaillement }
-
+This new method could prove useful in studying the free energy of non-uniform external fields \cite{bissacot_phase_2010}.
+}
 %%%%%%%%%%%%%%%%%%%%
 \section{The confined solid on solid model}
 %%%%%%%%%%%%%%%%%%%%
@@ -956,4 +950,10 @@ As pointed out above this result gives the high temperature entropy but it also 
 
 %%%%%%%%%%%%%%%%
 \subsection{Numerical tests of finite size dependence}
+%%%%%%%%%%%%%%
+
 %%%%%%%%%%%%%%%%
+   \section{Conclusion}
+%%%%%%%%%%%%%%%%
+
+{\color{red}slk}   

@@ -23,8 +23,8 @@
 \contentsline {section}{\numberline {2.3}Computing size dependent free energy}{44}{section.2.3}% 
 \contentsline {subsection}{\numberline {2.3.1}The Layer method}{44}{subsection.2.3.1}% 
 \contentsline {subsection}{\numberline {2.3.2}The Lopes method}{47}{subsection.2.3.2}% 
-\contentsline {section}{\numberline {2.4}Tips and tricks}{47}{section.2.4}% 
-\contentsline {section}{\numberline {2.5}Conclusion}{48}{section.2.5}% 
+\contentsline {section}{\numberline {2.4}Tips and tricks}{48}{section.2.4}% 
+\contentsline {section}{\numberline {2.5}Conclusion}{49}{section.2.5}% 
 \contentsline {chapter}{\numberline {3}Equilibrium Interface models and their finite size effects}{51}{chapter.3}% 
 \contentsline {section}{\numberline {3.1}The Casimir effect}{51}{section.3.1}% 
 \contentsline {subsection}{\numberline {3.1.1}Quantum Casimir effect}{52}{subsection.3.1.1}% 
@@ -37,8 +37,9 @@
 \contentsline {subsection}{\numberline {3.2.2}The confined elastic line}{65}{subsection.3.2.2}% 
 \contentsline {subsection}{\numberline {3.2.3}The Airy line}{67}{subsection.3.2.3}% 
 \contentsline {section}{\numberline {3.3}The generalized Lopes Method}{70}{section.3.3}% 
-\contentsline {section}{\numberline {3.4}The confined solid on solid model}{73}{section.3.4}% 
-\contentsline {subsection}{\numberline {3.4.1}Numerical tests of finite size dependence}{81}{subsection.3.4.1}% 
+\contentsline {section}{\numberline {3.4}The confined solid on solid model}{75}{section.3.4}% 
+\contentsline {subsection}{\numberline {3.4.1}Numerical tests of finite size dependence}{82}{subsection.3.4.1}% 
+\contentsline {section}{\numberline {3.5}Conclusion}{82}{section.3.5}% 
 \contentsline {chapter}{\numberline {4}Driven model C interfaces}{83}{chapter.4}% 
 \contentsline {section}{\numberline {4.1}Introduction}{83}{section.4.1}% 
 \contentsline {section}{\numberline {4.2}The underling two field model}{85}{section.4.2}% 

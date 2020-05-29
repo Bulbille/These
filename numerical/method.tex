@@ -184,11 +184,28 @@ This dynamic describes the diffusion of particles at the interface. It is thus p
 \label{decouplage}
 \end{figure}
 
-It is not possible to compute from Monte Carlo simulations the free energy of a system, since it is not a derivative of the partition function. However, we can compute its derivative with respect to the system. This is useful to compute the Casimir force {\textcolor{red}{This is the total thermodynamic force - not the Casimir force !The extraction of the Casimir force is not discussed for either of the methods - you need to complete this}} 
+It is not possible to compute from Monte Carlo simulations the free energy of a system, since it is not a derivative of the partition function. However, we can compute its derivative with respect to the system. This is useful to compute {\color{red}the thermodynamic force
 \begin{align}
-F(t,h,L) = - \frac{\partial \Omega}{\partial L}
+P(t,h,L) = - \frac{\partial F}{\partial L}
 \label{casmir-mc}
 \end{align}
+As detailed later in Sec \ref{sec-casimir}, the total free energy of the confined system has a bulk and a singular part
+\begin{align}
+    F(t,h,L) = L'^2 \left( L f_{bulk} + \beta^{-1} f_{ex} \right)
+    \label{dec-free-ene}
+\end{align}
+where $f_{ex}$ is the excess free energy, related to the Casimir force per unit area by
+\begin{align}
+    F_{casimir} = - \frac{\partial  f_{ex}}{\partial L}
+\end{align}
+In the limit $L\to \infty$, the excess free energy due to the confinement is zero, so we can can substract the bulk free energy from Eq \eqref{dec-free-ene} with respect to the inifinite system. For two systems of size $L_1$  and $L_2$, where $ \left( \frac{L_1}{L_2} \right)^d \ll 1$, at first order the Casimir force is thus
+\begin{align}
+    f_{ex}(L_1) \simeq - \frac{\partial F(L_1)}{\partial L} + \frac{\partial F(L_2)}{\partial L}
+    \label{cas-diff}
+\end{align}
+
+}
+
 To achieve that, Vasilyec \cite{vasilyev_universal_2009} developed a method to compute this derivative thanks to a dummy coupling parameter. Even though the system's size is discrete, it is possible to obtain a continuous-like size of the system thanks to the progressive decoupling the $k$-th layer of the system. If $H_0$ is the Hamiltonian of size $L$ and $H_1$ the Hamiltonian of size $L-1$ (see Fig \ref{decouplage}), then we define the crossover Hamiltonian as
 \begin{align}
 H_{cr}(\lambda) = (1-\lambda) H_0 + \lambda H_1
@@ -197,19 +214,19 @@ H_{cr}(\lambda) = (1-\lambda) H_0 + \lambda H_1
 with $\lambda \in [0,1]$, which interpolates from $H_0$ to $H_1$ when $\lambda$ goes from $0$ to $1$. As $\lambda$ goes on, we gradually decouple the $k$-th layer of the system, which means that the interaction energy of all vertical bonds between layer $k$ and layers $k-1$ and $k+1$ are now equal to $(1-\lambda)\beta J$, while we gradually couple the layers $k+1$ and $k-1$ with an energy $\lambda \beta J$.
 The crossover Hamitlonian $H_{tr}(\lambda)$ also depends from the position of the decoupled layer $k \in {1,2,...,L}$ . The free energy associated to this system is
 \begin{align}
-\Omega_{cr}(\lambda) = -k_B T \ln \left( \sum_{h_1 ... h_L} \exp(-\beta H_{tr}(\lambda)) \right)
+F_{cr}(\lambda) = -k_B T \ln \left( \sum_{h_1 ... h_L} \exp(-\beta H_{tr}(\lambda)) \right)
 \end{align}
 From the derivative of the free energy with respect to $\lambda$, we find
 \begin{align}
-\frac{\Omega_{cr}(\lambda)}{d\lambda} = < H_1 - H_0>_{H_{cr}(\lambda)}
+\frac{F_{cr}(\lambda)}{d\lambda} = < H_1 - H_0>_{H_{cr}(\lambda)}
 \end{align}
 where $< \cdot >_{H_{cr}(\lambda)}$ represents the statistical mean value in the crossover system, easily computable in numerical simulations. By integrating over the coupling constant, we have
 \begin{align}
-\Omega_1 - \Omega_0 = \int_0^1 d\lambda < H_1 - H_0>_{H_{cr}(\lambda)}
+F_1 - F_0 = \int_0^1 d\lambda < H_1 - H_0>_{H_{cr}(\lambda)}
 \end{align}
 Finally, in the thick limit where $L\gg1$, we find
 \begin{align}
-- \frac{\partial \Omega(t,h,L)}{\partial L} \simeq \int_0^1 d\lambda < H_1 - H_0>_{H_{cr}(\lambda)}
+- \frac{\partial F(t,h,L)}{\partial L} \simeq \int_0^1 d\lambda < H_1 - H_0>_{H_{cr}(\lambda)}
 \end{align}
 Even though $H_{cr}(\lambda)$ depends of which layer we decided to decouple, and by transition $H_1-H_0$ and $< H_1 - H_0>_{H_{cr}(\lambda)}$, the integrand $\int_0^1 d\lambda < H_1 - H_0>_{H_{tr}(\lambda)}$ should be independent of this choice, as long as boundary conditions are not affect by the $k$-th layer.
 
@@ -218,7 +235,7 @@ For the SOS model, it is possible to exactly compute the energy variation produc
 &H_{cr,SOS}(\lambda) = H_{0,SOS} - \nn
 &\frac{\lambda J}{2} \sum_x \left[ \sgn(k-1-h(x)) \sgn(k+1-h(x)) - \sgn(k-h(x)) \left( \sgn(k-1-h(x))+\sgn(k+1-h(x)) \right) \right]
 \end{align}
-where the prefactor $\frac{1}{2}$ take into account the prefactor between Ising and SOS models in Hamiltonian \eqref{energie-sos-ising}. By doing the ?? {\color{red} Table of values } , we notice that every term in the sum is equal to $-1$ independently of $k$, since contrary to Ising models, SOS models do not possess any bulk energy. We {\textcolor{red}{You need to explain how you extract the Casimir force from this by looking at two different L values}}
+where the prefactor $\frac{1}{2}$ take into account the prefactor between Ising and SOS models in Hamiltonian \eqref{energie-sos-ising}. By doing the table of values , we notice that every term in the sum is equal to $-1$ independently of $k$, since contrary to Ising models, SOS models do not possess any bulk energy. {\color{red}We thus have to find another method to compute the thermodynamic force in the SOS model.}
 
 %%%%%%%%%%%%%%%%%%% 
 \subsection{The Lopes method}
@@ -226,22 +243,31 @@ where the prefactor $\frac{1}{2}$ take into account the prefactor between Ising 
 %%%%%%%%%%%%%%%%%%% 
 Since the Layer method does not work for our models, we have to look to other ways. In the case of a chemical potential conjugated with the total height, we see that \cite{lopes_cardozo_critical_2014}
 \begin{align}
-<\sum_i h_i>(\mu,L) = - \frac{\delta \Omega(\mu,L)}{\delta \mu}
+<\sum_i h_i>(\mu,L) = - \frac{\delta F(\mu,L)}{\delta \mu}
 \end{align} 
 If we integrate over the chemical potential, we have
 \begin{align}
-\Delta \Omega(\mu_1,\mu_2) = \Omega(\mu_1,L) - \Omega(\mu_2,L) = - \int_{\mu_1}^{\mu_2} <h> d\mu
+\Delta F(\mu_1,\mu_2) = F(\mu_1,L) - F(\mu_2,L) = - \int_{\mu_1}^{\mu_2} d\mu' <\sum_i h_i>_{\mu'}
 \label{integration-cardozo}
 \end{align}
 In the case where we know the analytical forme of the free energy in the limits $\mu_2 \to \infty$ or $\mu_1 \to 0$, this method provides a way to directly measure the free energy of the system for any temperature or size by integrating over the chemical potential.
 
 In the limit $\mu_2 \to \infty$, the correlation length at the reference state will be small so that the reference free energy will be essentially that of the bulk. As a consequence, it should contain all the information of the Casimir force \eqref{casmir-mc}. That derivative force can then be computed by 
 \begin{align}
-\delta L \frac{\partial \Omega(\mu_1,L)}{\partial L} = \Delta \Omega(\mu_1,\mu_2,L)-\Delta \Omega(\mu_1,\mu_2,L-\delta L)
+    \delta L \frac{\partial F(\mu_1,L)}{\partial L} = \Delta F(\mu_1,\mu_2,L)-\Delta F(\mu_1,\mu_2,L-\delta L)
+    \label{cas-lopes}
 \end{align}
-where $\delta L$ is the difference thickness between two systems, and which is then independent of $\mu_2$ in the large chemical potential limit as the free energy $\Omega(\mu_2,L)$ converges to the bulk energy.
-
+where $\delta L$ is the difference thickness between two systems, and which is then independent of $\mu_2$ in the large chemical potential limit as the free energy $F(\mu_2,L)$ converges to the bulk energy.
 Since in Kawasaki dynamics the total height is constant, this method does work only for model A.
+
+{\color{red}
+The computation of the difference of free energy depends largely of the chemical potential $\mu_2$. However, since we are interested in the Casimir force \eqref{cas-diff}, it is sufficient to chose a suitable chemical potential $\mu_2$ for which the excess free energy can be safely considered negligible \cite{lopes_cardozo_critical_2014} . We define the function
+\begin{align}
+    D(\mu,L_1,L_2) =  < M(L_1)-M(L_1-1) - (M(L_2)-M(L_2-1) >
+    \label{function-d}
+\end{align}
+where all mean magnetizations per site $M$ are taken at the same temperature and magnetic field, omitted in the notation for the sake of lightness. The contribution of high $\mu$ becomes negligible to the Casimir force when the dunction $D$ becomes null.
+}
 
 %%%%%%%%%%%%%%%%%%% 
 \section{Tips and tricks}

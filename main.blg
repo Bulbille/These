@@ -35,45 +35,45 @@ Warning--I didn't find a database entry for "gros2015"
 Warning--I didn't find a database entry for "lu2015"
 Warning--empty publisher in l_landau_physique_1990
 Warning--empty journal in ninham_van_1970
-You've used 91 entries,
+You've used 92 entries,
             1791 wiz_defined-function locations,
-            977 strings with 17846 characters,
-and the built_in function-call counts, 20106 in all, are:
-= -- 1858
-> -- 769
+            982 strings with 18019 characters,
+and the built_in function-call counts, 20348 in all, are:
+= -- 1882
+> -- 777
 < -- 2
-+ -- 296
-- -- 205
-* -- 1645
-:= -- 3190
-add.period$ -- 273
-call.type$ -- 91
-change.case$ -- 85
++ -- 299
+- -- 207
+* -- 1666
+:= -- 3227
+add.period$ -- 276
+call.type$ -- 92
+change.case$ -- 86
 chr.to.int$ -- 0
-cite$ -- 93
-duplicate$ -- 802
-empty$ -- 2009
-format.name$ -- 205
-if$ -- 4331
+cite$ -- 94
+duplicate$ -- 811
+empty$ -- 2033
+format.name$ -- 207
+if$ -- 4383
 int.to.chr$ -- 0
-int.to.str$ -- 91
-missing$ -- 93
-newline$ -- 456
-num.names$ -- 90
-pop$ -- 156
+int.to.str$ -- 92
+missing$ -- 94
+newline$ -- 461
+num.names$ -- 91
+pop$ -- 157
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 319
+skip$ -- 323
 stack$ -- 0
-substring$ -- 1646
-swap$ -- 96
+substring$ -- 1671
+swap$ -- 97
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
-while$ -- 215
-width$ -- 93
-write$ -- 992
+while$ -- 218
+width$ -- 94
+write$ -- 1003
 (There were 32 warnings)
