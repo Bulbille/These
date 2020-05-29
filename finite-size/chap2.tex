@@ -479,7 +479,7 @@ and here it is given by
 %%%%%%%%%%%%%%%%%%%%
     \subsection{The Airy line}
 %%%%%%%%%%%%%%%%%%%%
-{\color{red} can we rename $P_0$ as $\mu$, since it's the chemical potential ? And in the paragraph then, rename $\mu$ as another thing ?}
+{\color{red} can we rename $P_0$ as $\mu$, since it's the chemical potential ? And in the paragraph then, rename $\mu$ as another thing ? Since it's the correlation then, set $\mu = \xi$.}
 In the  above well known example we confine the surface and then compute the pressure. This is an example of the constant volume ensemble. Physically we could also consider the case of a system which is confined softly by an externally imposed pressure $P_0$ the constant pressure ensemble. In this case the potential is given by
 \begin{equation}
     V(h) = P_0 h \ {\rm for }\ h \greater 0\ ; =\infty \ {\rm for}\ h\leq 0. 
@@ -498,7 +498,7 @@ This equation has solutions ${\rm Ai}(x)$ which decay as
 \begin{equation}
     {\rm Ai}(x) \sim \frac{\exp(-\frac{2}{3} x^{\frac{3}{2}}) \Gamma(\frac{5}{6})\Gamma(\frac{1}{6})}{4\pi^{\frac{3}{2}} x^{\frac{1}{4}}},
 \end{equation}
-as $x\to\infty$ and so are normalizable as eigenfunctions. For $x<0$ the Airy function  oscillates and has an 
+as $x\to\infty$ and so are normalizable as eigenfunctions. For $ x \less 0$ the Airy function  oscillates and has an 
 infinite number of negative zeros $-\alpha_n$ such that ${\rm Ai}(-\alpha_n)=0$. 
 
 We make the change of variable $h=\mu z'$ to find
@@ -529,6 +529,7 @@ where $c_n$ is a normalisation constant. This means that in terms of the origina
 \begin{equation}
     \psi_n(h)= c_n {\rm Ai}(\frac{h}{\mu}-\varepsilon_n).
 \end{equation}
+{\color{red} BC are $\psi_n'(0)=0$, which makes $\varepsilon_n=\alpha_n$ with $\alpha_0=1.0187$ the first zero of $Ai'$.}
 The boundary condition $\psi_n(h)$ then show that we must choose $\varepsilon_n=\alpha_{n+1}$. This means that the ground state energy is
 \begin{equation}
     \epsilon_0 = \alpha_1P_0\beta\mu= \frac{\alpha_1P_0\beta}{(2\sigma\beta^2P_0)^\frac{1}{3}}= \frac{\alpha_1 P_0^\frac{2}{3}\beta^\frac{1}{3}}{2^\frac{1}{3} \sigma^\frac{1}{3}},
@@ -560,8 +561,14 @@ The probability density function for the height of the interface at a single poi
 by
 \begin{equation}
     p_1(h) = \frac{{\rm Ai}^2(\frac{h}{\mu}-\alpha_0)}{\int_0^\infty dh' {\rm Ai}^2(\frac{h'}{\mu}-\alpha_0)}
+    \label{p-airy}
 \end{equation}
 However if we write the height variable in terms of the length scale $\mu$, $h(x)= \mu z(x)$ we find that $z$ has the single point probability density function
+{\color{red}
+\begin{align}
+    p(z) = \sum_n c_n^2 \psi_n(h)^2
+\end{align}
+which due to ground state dominance gives }
 \begin{equation}
     p(z)= \frac{{\rm Ai}^2(z-\alpha_0)}{\int_0^\infty dz' {\rm Ai}^2(z'-\alpha_0)}.
 \end{equation}
@@ -577,9 +584,9 @@ where
 \end{equation}
 Interestingly comparison with the thermodynamic calculation giving Eq. (\ref{h1}) shows that the identity
 \begin{equation}
-    z_0 = \frac{2}{3}\alpha_0,
+    z_0 = \frac{2}{3}\alpha_0 = 0.67919
 \end{equation}
-must hold- this surprising identity can be verified numerically. Here we find that the width is given by
+must hold, which can be verified numerically. Here we find that the width is given by
 \begin{equation}
     w= 0.697089 \ \mu
 \end{equation}
@@ -617,7 +624,7 @@ In numerical simulations, it is not possible to range over infinity, and a crite
 \begin{align}
     D(\mu,L_1,L_2) =  < M^\ast(L_1)-M^\ast(L_1-1) - (M^\ast(L_2)-M^\ast(L_2-1) >
 \end{align}
-with the generalized magnetization $M^\ast = \sum_i V(\sigma_i)$, which gives us a suitable upper limit of integration if we want to get the Casimir force.
+with the generalized magnetization $M^\ast = \sum_i V(\sigma_i)$. A suitable upper limit of integration if we want to get the Casimir force is when the function $D$ reaches $0$ within the precision of the simulation.
 
 
 For the SOS Hamiltonian
@@ -628,7 +635,7 @@ we define the generalised mean height as
 \begin{align}
     h^\ast = < \sum_i V(h_i) >
 \end{align}
-quation \eqref{lopes-gen} writes as
+Eqquation \eqref{lopes-gen} writes as
 \begin{align}
    F(\mu_1) - F(\mu_2) = -  \int_{\mu_1}^{\mu_2} d\mu' h^\ast(\mu')
    \label{diff-gene}
@@ -650,7 +657,7 @@ In Fig \ref{integration-free-ene}, we see the free energy computed from the matr
     \label{integration-free-ene}
 \end{figure}
 
-Since the order parameter is conserved in model B, the generalized Lopes method can be used to compute the free energy for Kawasaki dynamics, for potentials different from the chemical potential. 
+Since the order parameter is conserved in model B, the generalized Lopes method can be used to compute the free energy for Kawasaki dynamics for potentials different from the chemical potential. 
 As a proof of concept, we take a potential of the form
 \begin{align}
     V(h_i) = - |h_i-\frac{L}{2}|

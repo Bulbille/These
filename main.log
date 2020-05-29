@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.3.19)  29 MAY 2020 06:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.3.19)  29 MAY 2020 19:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1142,7 +1142,7 @@ ELS AND THEIR FINITE SIZE EFFECTS
  []
 
 [66]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 3049) has occurred while \output is active []
 
  [67]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1153,10 +1153,7 @@ Overfull \hbox (34.34492pt too wide) has occurred while \output is active
 ELS AND THEIR FINITE SIZE EFFECTS
  []
 
-[68]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [69]
+[68] [69]
 Overfull \hbox (34.34492pt too wide) has occurred while \output is active
 \OT1/lmr/m/n/10.95 70 \OT1/lmr/m/sl/10.95 CHAPTER 3.  EQUILIBRIUM INTERFACE MOD
 ELS AND THEIR FINITE SIZE EFFECTS
@@ -1166,14 +1163,14 @@ ELS AND THEIR FINITE SIZE EFFECTS
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [71]
-<int-dyn/integration-free-ene.pdf, id=1599, 462.52798pt x 346.89601pt>
+<int-dyn/integration-free-ene.pdf, id=1600, 462.52798pt x 346.89601pt>
 File: int-dyn/integration-free-ene.pdf Graphic file (type pdf)
 <use int-dyn/integration-free-ene.pdf>
 Package pdftex.def Info: int-dyn/integration-free-ene.pdf  used on input line 6
-47.
+54.
 (pdftex.def)             Requested size: 301.00192pt x 225.76027pt.
 
-Underfull \vbox (badness 3078) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \hbox (34.34492pt too wide) has occurred while \output is active
@@ -1186,13 +1183,13 @@ ELS AND THEIR FINITE SIZE EFFECTS
 File: int-dyn/comp-potentiels-chimiques.pdf Graphic file (type pdf)
 <use int-dyn/comp-potentiels-chimiques.pdf>
 Package pdftex.def Info: int-dyn/comp-potentiels-chimiques.pdf  used on input l
-ine 664.
+ine 671.
 (pdftex.def)             Requested size: 301.00192pt x 225.76027pt.
 <int-dyn/simu-tm-negstagged-l20.pdf, id=1664, 462.52798pt x 346.89601pt>
 File: int-dyn/simu-tm-negstagged-l20.pdf Graphic file (type pdf)
 <use int-dyn/simu-tm-negstagged-l20.pdf>
 Package pdftex.def Info: int-dyn/simu-tm-negstagged-l20.pdf  used on input line
- 668.
+ 675.
 (pdftex.def)             Requested size: 301.00192pt x 225.76027pt.
  [73]
 Overfull \hbox (34.34492pt too wide) has occurred while \output is active
@@ -1206,7 +1203,7 @@ ELS AND THEIR FINITE SIZE EFFECTS
 pdfTeX warning: /usr/bin/pdflatex (file ./int-dyn/simu-tm-negstagged-l20.pdf): 
 PDF inclusion: multiple pdfs with page group included in a single page
 >]
-Overfull \hbox (54.87556pt too wide) in alignment at lines 708--716
+Overfull \hbox (54.87556pt too wide) in alignment at lines 715--723
  [][][] []
  []
 
@@ -1223,11 +1220,11 @@ ELS AND THEIR FINITE SIZE EFFECTS
  []
 
 [76pdfTeX warning (ext4): destination with the same identifier (name{equation.3
-.4.128}) has been already used, duplicate ignored
+.4.129}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.761 \end{equation}
+l.768 \end{equation}
                     ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1575,12 +1572,12 @@ Underfull \vbox (badness 7777) has occurred while \output is active []
 ]
 Chapter 5.
 [99]
-<pop/hauteur-tm-pop.pdf, id=1979, 462.52798pt x 346.89601pt>
+<pop/hauteur-tm-pop.pdf, id=1980, 462.52798pt x 346.89601pt>
 File: pop/hauteur-tm-pop.pdf Graphic file (type pdf)
 <use pop/hauteur-tm-pop.pdf>
 Package pdftex.def Info: pop/hauteur-tm-pop.pdf  used on input line 42.
 (pdftex.def)             Requested size: 284.52756pt x 213.40594pt.
-<pop/comparaison-modeles.pdf, id=1982, 462.52798pt x 346.89601pt>
+<pop/comparaison-modeles.pdf, id=1983, 462.52798pt x 346.89601pt>
 File: pop/comparaison-modeles.pdf Graphic file (type pdf)
 <use pop/comparaison-modeles.pdf>
 Package pdftex.def Info: pop/comparaison-modeles.pdf  used on input line 45.
@@ -1627,7 +1624,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 79.
 
-<pop/figure-pop.pdf, id=2058, 462.52798pt x 346.89601pt>
+<pop/figure-pop.pdf, id=2059, 462.52798pt x 346.89601pt>
 File: pop/figure-pop.pdf Graphic file (type pdf)
 <use pop/figure-pop.pdf>
 Package pdftex.def Info: pop/figure-pop.pdf  used on input line 85.
@@ -1838,10 +1835,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 102.
  ) 
 Here is how much of TeX's memory you used:
- 20459 strings out of 492609
- 361634 string characters out of 6131462
+ 20461 strings out of 492609
+ 361658 string characters out of 6131462
  566451 words of memory out of 5000000
- 23349 multiletter control sequences out of 15000+600000
+ 23350 multiletter control sequences out of 15000+600000
  626290 words of font info for 124 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  47i,20n,65p,1112b,792s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1879,10 +1876,10 @@ lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/
 fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy9.p
 fb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (131 pages, 1983034 bytes).
+Output written on main.pdf (131 pages, 1983455 bytes).
 PDF statistics:
- 2496 PDF objects out of 2984 (max. 8388607)
- 2013 compressed objects within 21 object streams
- 765 named destinations out of 1000 (max. 500000)
+ 2497 PDF objects out of 2984 (max. 8388607)
+ 2014 compressed objects within 21 object streams
+ 766 named destinations out of 1000 (max. 500000)
  574 words of extra memory for PDF output out of 10000 (max. 10000000)
 
