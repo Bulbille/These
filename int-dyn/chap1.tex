@@ -297,7 +297,7 @@ $h(\br)$ is a single-valued function of $\br$. Given this one can write
 \begin{equation}
 H[h] = \sigma A[h]
 \end{equation}
-where $A_h$ is the area of the interface. However, the interface area is given by
+where $A[h]$ is the area of the interface. The interface area is given by
 \begin{equation}
 A[h] = \int_A d\br\sqrt{1+[\nabla h]^2}
 \end{equation}
@@ -315,11 +315,7 @@ The basic model describing the height of an interface at $z=h(\br)$ above a plan
 \begin{equation}
 H[h] = \int d\bx\frac{\sigma}{2} [\nabla h(\bx)]^2 + V(h(\bx))
 \end{equation}
-The first term corresponds to the surface energy for a surface of size $A_s$ 
-\begin{equation}
-H_s[h] = \sigma A_s =\sigma\int d\bx \sqrt{1+[\nabla h(\br)]^2}\approx \sigma A + \frac{\sigma}{2}\int d\br [\nabla h(\br)]^2 
-\end{equation}
-Here $A$ is the area of the projected plane below the surface which is taken to be constant and thus does not change the statistical mechanics of the system. In principle surfaces can also have bending energies, while surface energies correspond to stretching the surface to increase its size, bending energies correspond to curving the surface. The standard bending energy for small surface energies \cite{diehl_interface_1980} is given by
+The first term corresponds to the surface energy. In principle surfaces can also have bending energies, while surface energies correspond to stretching the surface to increase its size, bending energies correspond to curving the surface. The standard bending energy for small surface energies \cite{diehl_interface_1980} is given by
 \begin{equation}
 H_b[h] = \int d\br \frac{\kappa_b}{2}[\nabla^2 h(\br)]^2
 \end{equation} 
