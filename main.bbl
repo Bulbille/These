@@ -519,6 +519,24 @@ Rodrigo Bissacot and Leandro Cioletti.
   {Non}-uniform {External} {Magnetic} {Fields}.
 \newblock {\em Journal of Statistical Physics}, 139(5):769--778, June 2010.
 
+\bibitem{guyer_sine-gordon_1979}
+R.~A. Guyer.
+\newblock Sine-{Gordon} chain as a model for a two-dimensional interface.
+\newblock {\em Physical Review B}, 20(10):4375--4381, November 1979.
+
+\bibitem{svrakic_finite-size_1988}
+N.~M. Svraki{\'c}, V.~Privman, and D.~B. Abraham.
+\newblock Finite-size corrections for inclined interfaces in two dimensions:
+  {Exact} results for {Ising} and solid-on-solid models.
+\newblock {\em Journal of Statistical Physics}, 53(5-6):1041--1059, December
+  1988.
+
+\bibitem{privman_finite-size_1988}
+V.~Privman and N.~M. S?vraki{\'c}.
+\newblock Finite-size scaling for the restricted solid-on-solid model of the
+  two-dimensional wetting transition.
+\newblock {\em Physical Review B}, 37(7):3713--3715, March 1988.
+
 \bibitem{burkhardt_localisation-delocalisation_1981}
 T.~W. Burkhardt.
 \newblock Localisation-delocalisation transition in a solid-on-solid model with

@@ -38,19 +38,18 @@
 \contentsline {subsection}{\numberline {3.2.3}The Airy line}{67}{subsection.3.2.3}% 
 \contentsline {section}{\numberline {3.3}The generalized Lopes Method}{70}{section.3.3}% 
 \contentsline {section}{\numberline {3.4}The confined solid on solid model}{75}{section.3.4}% 
-\contentsline {subsection}{\numberline {3.4.1}Numerical tests of finite size dependence}{82}{subsection.3.4.1}% 
-\contentsline {section}{\numberline {3.5}Conclusion}{82}{section.3.5}% 
-\contentsline {chapter}{\numberline {4}Driven model C interfaces}{83}{chapter.4}% 
-\contentsline {section}{\numberline {4.1}Introduction}{83}{section.4.1}% 
-\contentsline {section}{\numberline {4.2}The underling two field model}{85}{section.4.2}% 
-\contentsline {section}{\numberline {4.3}Effective interface dynamics}{88}{section.4.3}% 
-\contentsline {section}{\numberline {4.4}A model of active interfaces}{93}{section.4.4}% 
-\contentsline {section}{\numberline {4.5}Conclusions}{95}{section.4.5}% 
-\contentsline {chapter}{\numberline {5}Beyond Solid-On-Solid : the Particles-Over-Particles model}{99}{chapter.5}% 
-\contentsline {section}{\numberline {5.1}The Single-type Particles-Over-Particles model}{99}{section.5.1}% 
-\contentsline {section}{\numberline {5.2}$M$-particles POP system}{103}{section.5.2}% 
-\contentsline {section}{\numberline {5.3}Continuum Theory}{105}{section.5.3}% 
-\contentsline {section}{\numberline {5.4}Dynamics of the continuum model for two particles}{106}{section.5.4}% 
-\contentsline {subsection}{\numberline {5.4.1}Conserved diffusive dynamics}{106}{subsection.5.4.1}% 
-\contentsline {subsection}{\numberline {5.4.2}Non conserved dynamics}{110}{subsection.5.4.2}% 
-\contentsline {chapter}{\numberline {A}Evaluating Fourier integrals}{113}{appendix.A}% 
+\contentsline {section}{\numberline {3.5}Conclusion}{84}{section.3.5}% 
+\contentsline {chapter}{\numberline {4}Driven model C interfaces}{85}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Introduction}{85}{section.4.1}% 
+\contentsline {section}{\numberline {4.2}The underling two field model}{87}{section.4.2}% 
+\contentsline {section}{\numberline {4.3}Effective interface dynamics}{90}{section.4.3}% 
+\contentsline {section}{\numberline {4.4}A model of active interfaces}{95}{section.4.4}% 
+\contentsline {section}{\numberline {4.5}Conclusions}{97}{section.4.5}% 
+\contentsline {chapter}{\numberline {5}Beyond Solid-On-Solid : the Particles-Over-Particles model}{101}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}The Single-type Particles-Over-Particles model}{101}{section.5.1}% 
+\contentsline {section}{\numberline {5.2}$M$-particles POP system}{105}{section.5.2}% 
+\contentsline {section}{\numberline {5.3}Continuum Theory}{107}{section.5.3}% 
+\contentsline {section}{\numberline {5.4}Dynamics of the continuum model for two particles}{108}{section.5.4}% 
+\contentsline {subsection}{\numberline {5.4.1}Conserved diffusive dynamics}{108}{subsection.5.4.1}% 
+\contentsline {subsection}{\numberline {5.4.2}Non conserved dynamics}{112}{subsection.5.4.2}% 
+\contentsline {chapter}{\numberline {A}Evaluating Fourier integrals}{115}{appendix.A}% 
