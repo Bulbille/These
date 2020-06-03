@@ -22,7 +22,7 @@
 \BOOKMARK [2][-]{subsection.2.2.2}{Kawasaki dynamics}{section.2.2}% 22
 \BOOKMARK [1][-]{section.2.3}{Computing size dependent free energy}{chapter.2}% 23
 \BOOKMARK [2][-]{subsection.2.3.1}{The Layer method}{section.2.3}% 24
-\BOOKMARK [2][-]{subsection.2.3.2}{The Lopes method}{section.2.3}% 25
+\BOOKMARK [2][-]{subsection.2.3.2}{The Lopes-Jacquin-Holdsworth method}{section.2.3}% 25
 \BOOKMARK [1][-]{section.2.4}{Tips and tricks}{chapter.2}% 26
 \BOOKMARK [1][-]{section.2.5}{Conclusion}{chapter.2}% 27
 \BOOKMARK [0][-]{chapter.3}{Equilibrium Interface models and their finite size effects}{}% 28
@@ -36,7 +36,7 @@
 \BOOKMARK [2][-]{subsection.3.2.1}{Continuous models in one dimension}{section.3.2}% 36
 \BOOKMARK [2][-]{subsection.3.2.2}{The confined elastic line}{section.3.2}% 37
 \BOOKMARK [2][-]{subsection.3.2.3}{The Airy line}{section.3.2}% 38
-\BOOKMARK [1][-]{section.3.3}{The generalized Lopes Method}{chapter.3}% 39
+\BOOKMARK [1][-]{section.3.3}{The generalized Lopes-Jacquin-Holdsworth Method}{chapter.3}% 39
 \BOOKMARK [1][-]{section.3.4}{The confined solid on solid model}{chapter.3}% 40
 \BOOKMARK [1][-]{section.3.5}{Conclusion}{chapter.3}% 41
 \BOOKMARK [0][-]{chapter.4}{Driven model C interfaces}{}% 42

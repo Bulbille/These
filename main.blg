@@ -6,7 +6,6 @@ Database file #1: biblio.bib
 Warning--I didn't find a database entry for "leung_field_1986.bray_coarsening_2000"
 Warning--I didn't find a database entry for ""
 Warning--I didn't find a database entry for "niss_history_2006"
-Warning--I didn't find a database entry for "then"
 Warning--I didn't find a database entry for "derks2006"
 Warning--I didn't find a database entry for "smith2008"
 Warning--I didn't find a database entry for "smith2010"
@@ -35,46 +34,48 @@ Warning--I didn't find a database entry for "dean2016"
 Warning--I didn't find a database entry for "gros2015"
 Warning--I didn't find a database entry for "lu2015"
 Warning--empty publisher in l_landau_physique_1990
+Warning--empty journal in boal_mechanics_nodate
+Warning--empty year in boal_mechanics_nodate
 Warning--empty journal in ninham_van_1970
-You've used 95 entries,
+You've used 96 entries,
             1791 wiz_defined-function locations,
-            997 strings with 18512 characters,
-and the built_in function-call counts, 21123 in all, are:
-= -- 1959
-> -- 800
+            1001 strings with 18642 characters,
+and the built_in function-call counts, 21245 in all, are:
+= -- 1969
+> -- 797
 < -- 2
 + -- 308
-- -- 213
-* -- 1736
-:= -- 3344
-add.period$ -- 285
-call.type$ -- 95
-change.case$ -- 89
+- -- 212
+* -- 1735
+:= -- 3360
+add.period$ -- 288
+call.type$ -- 96
+change.case$ -- 91
 chr.to.int$ -- 0
-cite$ -- 97
-duplicate$ -- 838
-empty$ -- 2111
-format.name$ -- 213
-if$ -- 4549
+cite$ -- 100
+duplicate$ -- 854
+empty$ -- 2126
+format.name$ -- 212
+if$ -- 4583
 int.to.chr$ -- 0
-int.to.str$ -- 95
-missing$ -- 97
-newline$ -- 476
-num.names$ -- 94
-pop$ -- 160
+int.to.str$ -- 96
+missing$ -- 98
+newline$ -- 481
+num.names$ -- 95
+pop$ -- 166
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 333
+skip$ -- 343
 stack$ -- 0
-substring$ -- 1764
-swap$ -- 100
+substring$ -- 1748
+swap$ -- 106
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 2
-while$ -- 227
-width$ -- 97
-write$ -- 1036
-(There were 33 warnings)
+warning$ -- 4
+while$ -- 228
+width$ -- 98
+write$ -- 1046
+(There were 34 warnings)

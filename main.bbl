@@ -221,6 +221,11 @@ M.~R. Wilby, D.~D. Vvedensky, and A.~Zangwill.
 \newblock Scaling in a solid-on-solid model of epitaxial growth.
 \newblock {\em Physical Review B}, 46(19):12896--12898, November 1992.
 
+\bibitem{boal_mechanics_nodate}
+David Boal.
+\newblock Mechanics of the {Cell}: {Second} edition.
+\newblock page 624.
+
 \bibitem{gompper_steric_1989}
 G~Gompper and D.~M Kroll.
 \newblock Steric {Interactions} in {Multimembrane} {Systems}: {A} {Monte}
@@ -503,15 +508,17 @@ A.~Gambassi, A.~Macio{\l }ek, C.~Hertlein, U.~Nellen, L.~Helden, C.~Bechinger,
 \newblock Critical {Casimir} effect in classical binary liquid mixtures.
 \newblock {\em Physical Review E}, 80(6), December 2009.
 
-\bibitem{h_arthur_weldon_scalar_1989}
-{H. Arthur Weldon}.
-\newblock Scalar {Field} {Propagators} in the {Microcanonical} {Ensemble}.
-\newblock {\em Annals of Physics}, 193:166--179, 1989.
+\bibitem{h_kleinert_path_2009}
+{H. Kleinert}.
+\newblock {\em Path {Integrals} in {Quantum} {Mechanics}, {Statistics},
+  {Polymer} {Physics}, and {Financial} {Markets}}.
+\newblock World Scientific, Singapore, 5th edition, 2009.
 
-\bibitem{claude_cohen-tannoudji_mecanique_2018}
-{Claude Cohen-Tannoudji}, {Bernard Diu}, and {Franck Lalo{\"e}}.
-\newblock {\em M{\'e}canique quantique}, volume~1.
-\newblock EDP-Sciences, 2018.
+\bibitem{privman_finite-size_1988-1}
+Vladimir Privman.
+\newblock Finite-{Size} {Properties} of the {Angle}-{Dependent} {Surface}
+  {Tension} of {Rough} {Interfaces}.
+\newblock {\em PHYSICAL REVIEW LETTERS}, 61(2):4, 1988.
 
 \bibitem{bissacot_phase_2010}
 Rodrigo Bissacot and Leandro Cioletti.

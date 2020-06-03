@@ -184,23 +184,26 @@ This dynamic describes the diffusion of particles at the interface. It is thus p
 \label{decouplage}
 \end{figure}
 
-It is not possible to compute from Monte Carlo simulations the free energy of a system, since it is not a derivative of the partition function. However, we can compute its derivative with respect to the system. This is useful to compute {\color{red}the thermodynamic force
-\begin{align}
-P(t,h,L) = - \frac{\partial F}{\partial L}
-\label{casmir-mc}
-\end{align}
-As detailed later in Sec \ref{sec-casimir}, the total free energy of the confined system has a bulk and a singular part
+It is not possible to compute from Monte Carlo simulations the free energy of a system, since it is not a derivative of the partition function. However, we can compute its derivative with respect to the system. This is useful to compute 
+{\color{brown} As detailed later in Sec \ref{sec-casimir}, the total free energy of the confined system has a bulk and a singular part
 \begin{align}
     F(t,h,L) = L'^2 \left( L f_{bulk} + \beta^{-1} f_{ex} \right)
     \label{dec-free-ene}
 \end{align}
-where $f_{ex}$ is the excess free energy, related to the Casimir force per unit area by
+where $f_{bulk}$ is a bulk term, and $f_{ex}$ the excess free energy due to boundary conditions. 
+The thermodynamic force per unit area is defined as 
 \begin{align}
-    F_{casimir} = - \frac{\partial  f_{ex}}{\partial L}
+p(t,h,L) = - \frac{1}{L'^2 }\frac{\partial F}{\partial L} = - f_{bulk} - \beta^{-1} \frac{\partial f_{ex}}{\partial L}
+\label{casmir-mc}
+\end{align}
+We see that this force is composed of a bulk term and an excess term, which is the Casimir force, defined as
+The related to the Casimir force per unit area by
+\begin{align}
+   f_{casimir} = - \beta^{-1} \frac{\partial  f_{ex}}{\partial L}
 \end{align}
 In the limit $L\to \infty$, the excess free energy due to the confinement is zero, so we can can substract the bulk free energy from Eq \eqref{dec-free-ene} with respect to the inifinite system. For two systems of size $L_1$  and $L_2$, where $ \left( \frac{L_1}{L_2} \right)^d \ll 1$, at first order the Casimir force is thus
 \begin{align}
-    f_{ex}(L_1) \simeq - \frac{\partial F(L_1)}{\partial L} + \frac{\partial F(L_2)}{\partial L}
+    f_{ex}(L_1) \simeq - \frac{1}{L'^2} \frac{\partial F(L_1)}{\partial L} + \frac{1}{L'^2} \frac{\partial F(L_2)}{\partial L}
     \label{cas-diff}
 \end{align}
 
@@ -238,7 +241,7 @@ For the SOS model, it is possible to exactly compute the energy variation produc
 where the prefactor $\frac{1}{2}$ take into account the prefactor between Ising and SOS models in Hamiltonian \eqref{energie-sos-ising}. By doing the table of values , we notice that every term in the sum is equal to $-1$ independently of $k$, since contrary to Ising models, SOS models do not possess any bulk energy. {\color{red}We thus have to find another method to compute the thermodynamic force in the SOS model.}
 
 %%%%%%%%%%%%%%%%%%% 
-\subsection{The Lopes method}
+\subsection{The Lopes-Jacquin-Holdsworth method}
     \label{sec-lopes}
 %%%%%%%%%%%%%%%%%%% 
 Since the Layer method does not work for our models, we have to look to other ways. In the case of a chemical potential conjugated with the total height, we see that \cite{lopes_cardozo_critical_2014}
@@ -266,8 +269,9 @@ The computation of the difference of free energy depends largely of the chemical
     D(\mu,L_1,L_2) =  < M(L_1)-M(L_1-1) - (M(L_2)-M(L_2-1) >
     \label{function-d}
 \end{align}
-where all mean magnetizations per site $M$ are taken at the same temperature and magnetic field, omitted in the notation for the sake of lightness. The contribution of high $\mu$ becomes negligible to the Casimir force when the dunction $D$ becomes null.
+where all mean magnetizations per site $M$ are taken at the same temperature and magnetic field, omitted in the notation for the sake of lightness. The contribution of high $\mu$ becomes negligible to the Casimir force when the function $D$ becomes null.
 }
+{\color{red} The method only makes sense in the Glauber dynamics. In the Kawasaki dynamics, since $\sum_i \sigma_i$ is set to a constant, the integration is done over a constant. We will see in Sec \ref{gen-lopes} a generalized method to bypass this problem.}
 
 %%%%%%%%%%%%%%%%%%% 
 \section{Tips and tricks}
