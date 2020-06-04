@@ -1,13 +1,13 @@
 \chapter{Numerical methods}
 \label{chap-sim}
 
-In 1949, Metropolis \cite{metropolis_monte_1949} discovers a method to compute, through Monte Carlo simulations, the expectation value of statistical quantities. If $Q$ is an observable quantity of a statistical system, such as the total energy or density of particles per site, then the expectation value is computed by weighting its value over all configurations $C$ with respect to their statistical weight. If we consider the system to be at thermodynamic equilibrium, then every configuration $C$ follows the Gibbs-Boltzmann distribution, and the mean value $<Q>$ is
+In 1949, Metropolis {\it et.al} \cite{metropolis_monte_1949} presented a method to compute, through Monte Carlo simulations, the expectation value of statistical quantities. If $Q$ is an observable quantity of a statistical system, such as the total energy or density of particles per site, then the expectation value is computed by weighting its value over all configurations $C$ with respect to their statistical weight. If we consider the system to be at thermodynamic equilibrium, then every configuration $C$ follows the Gibbs-Boltzmann distribution, and the mean value $<Q>$ is
 \begin{align}
     <Q> = \frac{\sum_{C} Q(C) \exp(-\beta E(C))}{\sum_{C} \exp(-\beta E(C))}
 \end{align}
 For example, in a SOS system of size $100\times100$ - which is small compared to the thermodynamic limit as discussed in figure \ref{fig-thermo-libre} - there exist $100^{100}$ different possible configurations. In comparison, numerical simulations can explore up to $10^9$ configurations in a reasonable amount of CPU time.
 
-Nevertheless, lattice models are well fitted for Monte Carlo simulations, where the goal is to compute is to compute such quantities. In the SOS model, all observables (and even quantities not observable such as the free energy) can be directly computed thanks to the matrix transfer in the grand-canonical ensemble. Nevertheless, as stated prior, the canonical ensemble stays out of reach of that method.
+Nevertheless, lattice models are well fitted for Monte Carlo simulations, where the goal is to compute such quantities. In the SOS model, all observables (and even quantities not observable such as the free energy) can be directly computed thanks to the matrix transfer in the grand-canonical ensemble. Nevertheless, as stated prior, the canonical ensemble stays out of reach of that method.
 
 In this chapter, we start by explaining how Monte Carlo Metropolis algorithm works based upon the statistical ensemble we're interested in, at or out of equilibrium.
 At last, I will give some technical considerations about optimizing numerical simulations.
@@ -19,7 +19,7 @@ All the code I've produced can be found on Github \cite{paul_gersberg_github_202
     \section{Estimator}
 %%%%%%%%%%%%%%%%%%%%%%%%%
 
-Monte Carlo simulations explore the configurations' space in a random fashion \cite{newman_monte_1999} with a probability $p(C)$ which we will define later one. By choosing $M$ states ${C_0,...,C_M}$, the estimator $Q_M$ of $Q$ is given by
+Monte Carlo simulations explore the configurations' space in a random fashion \cite{newman_monte_1999} with a probability $p(C)$ which we will define later. By choosing $M$ states ${C_0,...,C_M}$, the estimator $Q_M$ of $Q$ is given by
 \begin{align}
     Q_M = \frac{\sum_{i=0}^M Q(C_i) p(C_i)^{-1} \exp(-\beta E(C_i))}{\sum_{i=0}^M  p(C_i)^{-1} \exp(-\beta E(C_i))}
 \end{align}
@@ -49,7 +49,7 @@ Similarly, the measurement of the correlation length $\xi$ is given at first ord
     \section{Monte Carlo Metropolis algorithm}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-We know want to know how to choose configurations, so all of them has the good equilibrium probability.
+We now want to know how to choose configurations with the correct  equilibrium probability.
 
 A dynamic for systems with a discrete configuration state can be built using Markov chains. Let the dynamic evolve in a discrete time $n$, and $p_n(C)$ the probability that the system is in configuration $C$ at time $n$. On the time step, if the system is in state $C$, it can jump to another state $C'$ with a transition probability $\rho(C\to C')$. The system at time $n+1$ thus only depends of the state at time $n$ : that's a Markovian process. The probability $p_{n+1}(C)$ to be in state $C$ at time $n+1$ is equal to the probability that the system was already in state $C$ at time $n$ and stays put with a transition probability $\rho(C\to C)$ , plus the probability that it was in state $C'$ and jumps towards $C$ with a transition probability $\rho(C'\to C)$. The master equation of such a dynamic is
 \begin{align}
@@ -69,15 +69,18 @@ with $Z$ the partition function. Since the equilibrium distribution is also stat
 p_{eq}(C) = \rho(C\to C) p_{eq}(C) + \sum_{C'\neq C} \rho(C'\to C)p_{eq}(C')
 \label{p-eq-mc}
 \end{align}
-Another condition that we need in order to generate Gibbs-Boltmanzz states, is that it complies with detailed balance. To comply with detailed balance, the transition rate from a state to another one is equal to the rate from the reciprocal transition, which gives
+The emergence of equilibrium probability densities ensures that the transition rate from a state to another one is equal to the rate from the reciprocal transition
+%Another condition that we need in order to generate Gibbs-Boltmanzz states, is that it complies with detailed balance. To comply with detailed balance, the transition rate from a state to another one is equal to the rate from the reciprocal transition, which gives
 \begin{align}
-\sum_{C'} p(C) \rho(C \to C') = \sum_{C'} p(C') \rho(C' \to C)
+\sum_{C'} p(C) \rho(C \to C') = \sum_{C'} p(C') \rho(C' \to C),
 \end{align}
-We can show that this relation is equivalent to \cite{newman_monte_1999} 
+which leads to the detailed balance condition
+%We can show that this relation is equivalent to 
+\cite{newman_monte_1999} 
 \begin{align}
 \frac{\rho(C'\to C)}{\rho(C \to C')} = \frac{p(C)}{p(C')} = \frac{\exp(-\beta E(C))}{\exp(-\beta E(C'))}
 \end{align} 
-By adopting the detailed balance, we easily see that the equilibrium distribution computed by Eq \eqref{p-eq-mc} gives back the Gibbs-Boltzmann distribution. 
+Hence by adopting the detailed balance condition for the transition probabilities, the steady state distribution computed by Eq \eqref{p-eq-mc} corresponds to the equilibrium Gibbs-Boltzmann distribution. 
 During a Metropolis step, the transition probability of $C\to C'$ depends of the probability $g(C\to C')$ that this transition would be chosen amongst all the other possible transitions, and the acceptance rate ${A(C \to C')}$, which gives
 \begin{align}
     \rho(C\to C') = g(C\to C') A(C \to C')
@@ -127,7 +130,7 @@ It is not needed to compute the total height at each time step. We can stock $\s
 \end{align}
 We can do the same for $\sum_i h_i^2$, which gives us the interface's width, or the total energy of the system with $\sum_i |h_i - h_{i+1}$.
 
-In order to accelerate the equilibration process, we can directly start from the total height computed by the transfer matrix. We then get the equilibrium time by looking at $E(t)$. It is better practice to choose study the equilibration time by taking the total energy instead of the magnetization, since without external potential, the interface is delocalised and magnetization is only bounded by the boundary conditions. In Fig \ref{eq-glau}, we show the energy with respect to time and the autocorrelation function of the system in absence of chemical potential from a ground state $h_i=0$ for all $i$. The very small correlation and equilibration times means that numerical simulations reach the equilibrium distribution after $10^3$ MC steps, and that only $10^7$ MC steps will give accurate results.
+In order to accelerate the equilibration process, we can directly start from the total height computed by the transfer matrix. We then get the equilibrium correlation time by looking at $E(t)$. It is better practice to study the equilibration time by taking the total energy rather than the number density, or magnetization, since without an external potential, the interface is delocalised and total number of particles is only bounded by the boundary conditions. In Fig \ref{eq-glau}, we show the energy with respect to time and the autocorrelation function of the system in absence of chemical potential from a ground state $h_i=0$ for all $i$. The very small correlation and equilibration times means that numerical simulations reach the equilibrium distribution after $10^3$ MC steps, so that $10^7$ MC steps will give accurate results.
 
 In the SOS model, we expect to have the results from the Glauber dynamics to be exactly the same as the transfer matrix method, as shown in Fig \ref{tm-mc-equalt}. Since the interface is not localised for small $\mu$, even though we reach thermal equilibrium fast, the mean height  fluctuates a lot, making its measurement irrelevant in the delocalised limit. Since we can get exact results from the transfer matrix, the Glauber dynamics presents little interest for SOS models in the grand-canonical ensemble. Nevertheless, because there does not exist a transfer matrix formulation of the canonical ensemble, Monte Carlo simulations become interesting.
 
@@ -154,9 +157,9 @@ Here, the total height is obviously conserved. In the case that we transfer a pa
 \caption{Plot of the energy per site (top) and the autocorrelation function (bottom) with Kawasaki dynamics from an initial state where $h_i=0$, for different temperatures.}
 \label{eq-kaw}
 \end{figure}
-In Fig \ref{eq-kaw}, we remark that both the equilibration and the correlation time are larger than for non-conserved dynamics, which is normal since the correlation length during coarsening goas as $t^\frac{1}{2}$ in model A and as $t^\frac{1}{3}$ in model B. Nevertheless they are of the same order of magnitude, which means that numerical simulations will take the same CPU time.
+In Fig \ref{eq-kaw}, we remark that both the equilibration and the correlation times are larger than for non-conserved dynamics, which is normal since the correlation length during coarsening goas as $t^\frac{1}{2}$ in model A and as $t^\frac{1}{3}$ in model B. Nevertheless they are of the same order of magnitude, which means that numerical simulations will take up CPU times on the same scale.
 
-This dynamic describes the diffusion of particles at the interface. It is thus possible to add some hydrodynamic flow which breaks equilibrium. Since we have supposed that our configurations obeys the Gibbs-Boltzmann distribution, the Metropolis method stays pertinent if we assume that the dynamic is slow compared to the heat exchange with the reservoir.
+This dynamics describes the diffusion of particles at the interface. It is thus possible to add some hydrodynamic flow which breaks equilibrium. Since we have supposed that our configurations obeys the Gibbs-Boltzmann distribution, the Metropolis method stays pertinent if we assume that the dynamic is slow compared to the heat exchange with the reservoir.
 
 %%%%%%%%%%%%%%%%%%% 
 \section{Computing size dependent free energy}
@@ -184,13 +187,13 @@ This dynamic describes the diffusion of particles at the interface. It is thus p
 \label{decouplage}
 \end{figure}
 
-It is not possible to compute from Monte Carlo simulations the free energy of a system, since it is not a derivative of the partition function. However, we can compute its derivative with respect to the system. This is useful to compute 
+It is not possible to compute from Monte Carlo simulations the free energy of a system, since it is not a derivative of the partition function. However, we can compute its derivative with respect to the system size. This is useful to compute.
 {\color{brown} As detailed later in Sec \ref{sec-casimir}, the total free energy of the confined system has a bulk and a singular part
 \begin{align}
     F(t,h,L) = L'^2 \left( L f_{bulk} + \beta^{-1} f_{ex} \right)
     \label{dec-free-ene}
 \end{align}
-where $f_{bulk}$ is a bulk term, and $f_{ex}$ the excess free energy due to boundary conditions. 
+where $f_{bulk}$ is a bulk term, and $f_{ex}$ the excess free energy due to boundary conditions and to system spanning correlations. 
 The thermodynamic force per unit area is defined as 
 \begin{align}
 p(t,h,L) = - \frac{1}{L'^2 }\frac{\partial F}{\partial L} = - f_{bulk} - \beta^{-1} \frac{\partial f_{ex}}{\partial L}
@@ -215,13 +218,13 @@ H_{cr}(\lambda) = (1-\lambda) H_0 + \lambda H_1
 \label{hamil-trans}
 \end{align}
 with $\lambda \in [0,1]$, which interpolates from $H_0$ to $H_1$ when $\lambda$ goes from $0$ to $1$. As $\lambda$ goes on, we gradually decouple the $k$-th layer of the system, which means that the interaction energy of all vertical bonds between layer $k$ and layers $k-1$ and $k+1$ are now equal to $(1-\lambda)\beta J$, while we gradually couple the layers $k+1$ and $k-1$ with an energy $\lambda \beta J$.
-The crossover Hamitlonian $H_{tr}(\lambda)$ also depends from the position of the decoupled layer $k \in {1,2,...,L}$ . The free energy associated to this system is
+The crossover Hamitlonian $H_{tr}(\lambda)$ also depends on the position of the decoupled layer $k \in {1,2,...,L}$ . The free energy associated with this system is
 \begin{align}
 F_{cr}(\lambda) = -k_B T \ln \left( \sum_{h_1 ... h_L} \exp(-\beta H_{tr}(\lambda)) \right)
 \end{align}
 From the derivative of the free energy with respect to $\lambda$, we find
 \begin{align}
-\frac{F_{cr}(\lambda)}{d\lambda} = < H_1 - H_0>_{H_{cr}(\lambda)}
+\frac{\partial F_{cr}(\lambda)}{\partial\lambda} = < H_1 - H_0>_{H_{cr}(\lambda)}
 \end{align}
 where $< \cdot >_{H_{cr}(\lambda)}$ represents the statistical mean value in the crossover system, easily computable in numerical simulations. By integrating over the coupling constant, we have
 \begin{align}
@@ -269,9 +272,12 @@ The computation of the difference of free energy depends largely of the chemical
     D(\mu,L_1,L_2) =  < M(L_1)-M(L_1-1) - (M(L_2)-M(L_2-1) >
     \label{function-d}
 \end{align}
-where all mean magnetizations per site $M$ are taken at the same temperature and magnetic field, omitted in the notation for the sake of lightness. The contribution of high $\mu$ becomes negligible to the Casimir force when the function $D$ becomes null.
+where $M=\sum_i h_i$ 
+%all mean magnetizations per site $M$ 
+are taken at the same temperature and chemical potential, 
+omitted in the notation for the sake of lightness. The contribution of high $\mu$ becomes negligible to the Casimir force when the function $D$ becomes null.
 }
-{\color{red} The method only makes sense in the Glauber dynamics. In the Kawasaki dynamics, since $\sum_i \sigma_i$ is set to a constant, the integration is done over a constant. We will see in Sec \ref{gen-lopes} a generalized method to bypass this problem.}
+{\color{red} The method only makes sense in the Glauber dynamics. In the Kawasaki dynamics, since $\sum_i h_i$ is set to a constant, the integration is done over a constant. We will see in Sec \ref{gen-lopes} a generalized method to bypass this problem.}
 
 %%%%%%%%%%%%%%%%%%% 
 \section{Tips and tricks}

@@ -30,14 +30,14 @@ While the phase diagram of a system can be determined via its Hamiltonian and eq
 
 Thermodynamic systems are naturally described in terms of fields, for example densities. 
 
-Measuring observables in experimental setups means to measure the derivative of the partition function $Z$ with respect to its conjugate variable. This measure is done with a certain degree of spatial and temporal resolution, which means in a statistical language that they measure the average of the observable over some space and time. If $\Phi(\bx,t)$ is the physical field of our system, our device having a temporal resolution of $dt$ and a spatial resolutoin over a volume $V$ will measure
+Measuring observables in experimental setups means to measure the derivative of the partition function $Z$ with respect to its conjugate variable. This measure is done with a certain degree of spatial and temporal resolution, which means in a statistical language that they measure the average of the observable over some space and time. If $\Phi(\bx,t)$ is the physical field of our system, our device having a temporal resolution of $\Delta t$ and a spatial resolution over a volume $V$ will measure
 \begin{align}
-\phi(\bx,t) = \frac{1}{V dt} \int_{t-dt}^{t} dt' \int_V \bx' \Phi(\bx',t')
+\phi(\bx,t) = \frac{1}{V \Delta t} \int_{t-\Delta t}^{t} dt' \int_V d\bx' \Phi(\bx',t')
 \label{renormalisation}
 \end{align}
 
 
-This means that one is naturally lead to consider statistical field theories where the system is described in terms of a local field $\phi(\bx)$. Statistical field theories can be applied to both statics, to understand phase diagrams, and dynamics to understand phase ordering. However to start with we will examine the case of systems with a finite number of degrees of freedom. 
+This means that one is naturally lead to consider statistical field theories where the system is described in terms of a local field $\phi(\bx,t)$. Statistical field theories can be applied to both statics, to understand phase diagrams, and dynamics to understand phase ordering. However to start with we will examine the case of systems with a finite number of degrees of freedom. 
 
 Consider a system in the canonical ensemble with a Hamiltonian $H(\bq)$ where $q_i$ for 
 $1\leq i\leq N$ represent a finite number of continuous spatial degrees of freedom and where in a classical system we have already integrated over the corresponding momenta. The partition function for the system is given by
@@ -277,7 +277,7 @@ From Fig \ref{tension-xi} we see that the bigger the correlation length of the s
 \begin{figure}
 \centering
 \includegraphics[width=0.7\linewidth]{int-dyn/tension-superficielle.pdf}
-\caption{Superificial tension \eqref{CHST} with respect to $\xi$ for the $\phi^4$ solution \eqref{profil-interface-glauber}.}
+\caption{Surface tension \eqref{CHST} versus $\xi$ for the $\phi^4$ solution \eqref{profil-interface-glauber}.}
 \label{tension-xi}
 \end{figure}
 
@@ -641,18 +641,18 @@ The renormalization group approaches have a deep connexion with the Ising model 
 \end{align}
 
 
-By doing the transformation\cite{goldenfeld_lectures_2018} 
+By making the transformation\cite{goldenfeld_lectures_2018} 
 \begin{align}
     n_i =  \frac{\sigma_i +1}{2}
 \end{align}
 so that $n_i(\sigma_i = 1) = 1$ and $n_i(\sigma_i = -1) = 0$, we obtain
 \begin{equation}
-	H =  - \sum_{< i j >}  J_{ij} \left( 4 n_i n_j -2 ( n_i+n_j) + 1 \right)+ \sum_{< i j >}  J_{ij} \frac{V(\sigma_i)+V(\sigma_j)}{2}  
+	H =  - \sum_{< i j >}  J_{ij} \left( 4 n_i n_j -2 ( n_i+n_j) + 1 \right)+ \sum_{< i j >}  \frac{V(\sigma_i)+V(\sigma_j)}{2}  
 \end{equation}
 where the constant term $\sum_{< i j >}  J_{ij}$ does not change the partition function behaviour. We have then
 \begin{align}
-	H_{LG} &=  - 4 \sum_{< i j >}  J_{ij}  n_i n_j  + 2 \sum_{< i j >}  J_{ij}  (n_i+n_j) + \sum_{< i j >}  J_{ij} \frac{V(\sigma_i)+V(\sigma_j)}{2}  \nn
-       &=  - 4 J \sum_{< i j >}  J n_i n_j  + \mu \sum_i  n_i + \sum_{< i j >}  J \frac{V(\sigma_i)+V(\sigma_j)}{2}  
+	H_{LG} &=  - 4 \sum_{< i j >}  J_{ij}  n_i n_j  + 2 \sum_{< i j >}  J_{ij}  (n_i+n_j) + \sum_{< i j >}  \frac{V(\sigma_i)+V(\sigma_j)}{2}  \nn
+       &=  - 4 J \sum_{< i j >}  J n_i n_j  + \mu \sum_i  n_i + \sum_{< i j >}   \frac{V(\sigma_i)+V(\sigma_j)}{2}  
 \end{align}
 where we have set $J_{ij} = J$ constant and defined the intrinsic chemical potential for a liquid-gas system as $\mu_c=4J c$, with  $c$ the number of nearest neighbours. A positive magnetic phase is thus analogous to a high density state such a liquid, while the negative magnetic phase is equal to a low density state such as a gas. An onsite potential $V(\sigma_i)$ further modifies the chemical potential, $\mu=\mu_c+\delta\mu[V(\sigma_i)]$.
 The chemical potential $\mu$ is the conjugate variable to the total number of particles $\sum_i n_i$, while the magnetic field $B$ is the conjugate variable to the total magnetisation $\sum_i \sigma_i$. The two are connected through the mapping such that $B\sim \mu-\mu_c$, so that liquid-gas and Ising model systems share common thermodynamic features such as the universality class for critical fluctuations. For the fluid the grand canonical ensemble corresponds to the Gibbs ensemble with fixed $T$ and $\mu$ and canonical ensemble with fixed $T$ and $N$ . In the magnetic system these ensembles correspond to fixed $T, B$ and $T,M$ respectively. The model also describes adsorption of a gas in a lattice or binary fluids between particles of different species $A$ and $B$.
