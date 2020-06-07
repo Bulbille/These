@@ -1,48 +1,51 @@
 \documentclass[11pt]{book}
-
-\usepackage[utf8]{inputenc} % accents    
-
-
-\usepackage{lmodern}
-\usepackage{xcolor} % pour colorier
-\usepackage[hidelinks]{hyperref} % pour mettre les liens cliquants
-%\usepackage [latin1]{inputenc}
-
-\usepackage{setspace}
-\onehalfspacing
-
-% Maths
-\usepackage{amsmath}
-\usepackage{geometry}
-\usepackage{amssymb}
-\usepackage{bm}
-
-% Figures
-\usepackage[final]{graphicx}
-\usepackage{subcaption}
-\usepackage{mwe}
-\setkeys{Gin}{width=10cm} %% largeur par défaut
-%\geometry{hmargin=2.5cm,vmargin=2cm}
-
-\usepackage{comment}
-
-%Pour mettre une page en paysage
-\usepackage{lscape}
-
-\usepackage{epsfig}
-\usepackage{bm}
-\usepackage{latexsym}
-\usepackage{graphicx}
-\usepackage[section]{placeins}
-\usepackage{comment}
-
-\usepackage{graphicx,color}
- \graphicspath{{./}{./figures/}}
-\usepackage{ams math}
-\usepackage{mathbbol}
-\usepackage{amsfonts}
-\usepackage{natbib}
-\usepackage{bm}
+%
+%\usepackage[utf8]{inputenc} % accents    
+%
+%
+%\usepackage{lmodern}
+%\usepackage{xcolor} % pour colorier
+%\usepackage[hidelinks]{hyperref} % pour mettre les liens cliquants
+%%\usepackage [latin1]{inputenc}
+%
+%\usepackage{setspace}
+%\onehalfspacing
+%
+%% Maths
+%\usepackage{amsmath}
+%\usepackage{geometry}
+%\usepackage{amssymb}
+%\usepackage{bm}
+%
+%% Figures
+%\usepackage[final]{graphicx}
+%\usepackage{subcaption}
+%\usepackage{mwe}
+%\setkeys{Gin}{width=10cm} %% largeur par défaut
+%%\geometry{hmargin=2.5cm,vmargin=2cm}
+%
+%\usepackage{comment}
+%
+%%Pour mettre une page en paysage
+%\usepackage{lscape}
+%
+%\usepackage{epsfig}
+%\usepackage{bm}
+%\usepackage{latexsym}
+%\usepackage{graphicx}
+%\usepackage[section]{placeins}
+%\usepackage{comment}
+%
+%\usepackage{graphicx,color}
+% \graphicspath{{./}{./figures/}}
+%\usepackage{ams math}
+%\usepackage{mathbbol}
+%\usepackage{amsfonts}
+%\usepackage{natbib}
+%\usepackage{bm}
+\input{Preambule}		% Liste des packages et de leurs options
+\input{CommandesPerso}	% Commandes et environnements perso
+\input{PageDeGarde}
 
 
 %%% Commandes personnalisées  %%%
@@ -65,22 +68,51 @@
 \relpenalty=5000
 \binoppenalty=5000
 
+
+% Infos de la page de garde
+\author{Paul Gersberg}
+\title{Confinement and driving effects on continuous and discrete model interfaces}
+\specialite{Laser, Matière, Nanosciences}
+\directeur{David S. Dean}
+\encadrant{Peter C.W. Holdsworth}
+\date{20 juillet 2020}
+\jurya{Steve Bramwell, Imperial London}{Professeur}{Rapporteur}
+\juryb{Jorge Kurchan, ENS Paris}{Directeur de recherche}{Rapporteur}
+\juryc{Pierre Pujol, LPT Toulouse }{Professeur}{Examinateur}
+\juryd{Jérôme Cayssol, LOMA}{Professeur}{Examinateur}
+\ecole{Université de Bordeaux}
+
+% Méta-données du PDF
+\hypersetup{
+    pdfauthor={Dorian Depriester},
+    pdfsubject={Manuscrit de thèse de doctorat},
+    pdftitle={Fluotournage à froid de tubes en TA6V},
+    pdfkeywords={Fluotournage, déformation plastique, titane, TA6V}
+}
+
 %%%%%%% Début du document %%%%%
 \begin{document}
 
-\bibliographystyle{unsrt}
+% Préambule
+	\pagenumbering{roman}
+	\pagedegarde
 
-\title{Confinement and driving effects on model interfaces}                                        
-\maketitle
+\newpage
+\input{intro/abstract}
+\newpage
 
-\frontmatter
-
-\setcounter{tocdepth}{4}
-\setcounter{secnumdepth}{4}
-
-\tableofcontents
- 
-
+	\cleardoublepage
+		% Table des matières
+			\setcounter{tocdepth}{1}	% Pas besoin de trop détailler le sommaire ici (chapitres/sections)
+			\dominitoc						% Génération des mini-toc	\pagenumbering{arabic}
+			\setcounter{tocdepth}{4}
+			\setcounter{secnumdepth}{4}
+			\tableofcontents
+		% Liste des figures
+			\renewcommand*\listfigurename{Liste des figures}
+			%\listoffigures
+		% Liste des tableaux
+		%\listoftables
 
 \input{intro/intro}
 
