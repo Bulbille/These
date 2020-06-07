@@ -134,7 +134,7 @@ and $f(z)\to \psi_2$ as $z\to -\infty$ and $f(z)\to \psi_2$ as  $z\to \infty$, a
 We also assume that the driving is in the ${\bf r}=(x,y)$. The dynamical evolution for the field $\psi$ in Eq. (\ref{dyn1}) is first written as
 \begin{equation}
 \nabla^{-2}\left[\frac{\partial \psi(\bx,t)}{\partial t}+{\bf v}\cdot\nabla\psi(\bx, t)\right] -\lambda D\int_{-\infty}^t dt'
-\exp(-\alpha\lambda(t-t')) \frac{\partial \psi(\bx,t')}{\partial t'}=D  \mu(\bx,t') + \nabla^{-2} \zeta(\bx,t.\label{eqpsi}
+\exp(-\alpha\lambda(t-t')) \frac{\partial \psi(\bx,t')}{\partial t'}=D  \mu(\bx,t') + \nabla^{-2} \zeta(\bx,t).\label{eqpsi}
 \end{equation}
 Using the relations \eqref{triple-interface} and \eqref{fdhdt}, where $V(\psi(\bx)) = V(\psi(\bx))-gz \psi(\bx)$, multiplying both sides by  $f'(z-h(\br,t))$ and integrating over $z$ as in Eq \eqref{int-potentiel-phi}, we obtain
 \begin{eqnarray}
@@ -356,12 +356,12 @@ Implementing a shear $v |L/2-y|$  as in Fig \ref{snap-ising-shear} is tricky, be
 
 Under periodic boundary conditions, the direction of the flow should not alter the steady state. The average total energy has thus to be an even function with respect to the drive $v$, ie
 \begin{align}
-    <E(v)> = <E_{eq}> + \sum_{n=1}^\infty  \frac{v^{2n}}{(2n!)} \frac{d^{2n} <E_{eq}>}{d v^{2n}} 
+    <E(v)> = <E_{eq}> + \sum_{n=1}^\infty  \frac{v^{2n}}{(2n!)} \frac{d^{2n} <E>}{d v^{2n}} 
 \end{align}
 and same goes for the surface tension $\sigma(v)$.
 From Eq \eqref{CHST} and \eqref{profil-interface-glauber}, we have the surface tension
 \begin{align}
-    \sigma(v) = \int_{-\infty}^{\infty} dz J \left( \frac{d \tanh \left(\frac{z}{\xi(v)} \right)}{dz} \right)^2
+    \sigma(v) = \int_{-\infty}^{\infty} dz J\  \left( \frac{d \tanh \left(\frac{z}{\xi(v)} \right)}{dz} \right)^2
 \end{align}
 where $\xi(v)$ is the correlation function of the system. This integration can be easily done after we have computed the correlation length during numerical simulations. 
 
