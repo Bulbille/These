@@ -6,76 +6,50 @@ Database file #1: biblio.bib
 Warning--I didn't find a database entry for "leung_field_1986.bray_coarsening_2000"
 Warning--I didn't find a database entry for ""
 Warning--I didn't find a database entry for "niss_history_2006"
-Warning--I didn't find a database entry for "derks2006"
-Warning--I didn't find a database entry for "smith2008"
-Warning--I didn't find a database entry for "smith2010"
-Warning--I didn't find a database entry for "hem1996"
-Warning--I didn't find a database entry for "netz2003"
-Warning--I didn't find a database entry for "dzub2002"
-Warning--I didn't find a database entry for "chak2003"
-Warning--I didn't find a database entry for "chak2004"
-Warning--I didn't find a database entry for "lowe2009"
-Warning--I didn't find a database entry for "glan2012"
-Warning--I didn't find a database entry for "klym2016"
-Warning--I didn't find a database entry for "dem2016"
-Warning--I didn't find a database entry for "pon2017"
-Warning--I didn't find a database entry for "dean1996"
-Warning--I didn't find a database entry for "katz1984"
-Warning--I didn't find a database entry for "zia1991"
-Warning--I didn't find a database entry for "leun1993"
-Warning--I didn't find a database entry for "schm1995"
-Warning--I didn't find a database entry for "schm1998"
-Warning--I didn't find a database entry for "bray2001"
-Warning--I didn't find a database entry for "bray2002"
-Warning--I didn't find a database entry for "thie2010"
-Warning--I didn't find a database entry for "thie2014"
-Warning--I didn't find a database entry for "hohe1977"
-Warning--I didn't find a database entry for "dean2016"
-Warning--I didn't find a database entry for "gros2015"
-Warning--I didn't find a database entry for "lu2015"
+Warning--I didn't find a database entry for "milton_casimir_1978-1"
 Warning--empty publisher in l_landau_physique_1990
 Warning--empty journal in boal_mechanics_nodate
 Warning--empty year in boal_mechanics_nodate
 Warning--empty journal in ninham_van_1970
-You've used 96 entries,
+You've used 116 entries,
             1791 wiz_defined-function locations,
-            1001 strings with 18642 characters,
-and the built_in function-call counts, 21245 in all, are:
-= -- 1969
-> -- 797
-< -- 2
-+ -- 308
-- -- 212
-* -- 1735
-:= -- 3360
-add.period$ -- 288
-call.type$ -- 96
-change.case$ -- 91
+            1072 strings with 21799 characters,
+and the built_in function-call counts, 25615 in all, are:
+= -- 2332
+> -- 1031
+< -- 4
++ -- 393
+- -- 277
+* -- 2114
+:= -- 4089
+add.period$ -- 348
+call.type$ -- 116
+change.case$ -- 110
 chr.to.int$ -- 0
-cite$ -- 100
-duplicate$ -- 854
-empty$ -- 2126
-format.name$ -- 212
-if$ -- 4583
+cite$ -- 120
+duplicate$ -- 1029
+empty$ -- 2532
+format.name$ -- 277
+if$ -- 5513
 int.to.chr$ -- 0
-int.to.str$ -- 96
-missing$ -- 98
-newline$ -- 481
-num.names$ -- 95
-pop$ -- 166
+int.to.str$ -- 116
+missing$ -- 120
+newline$ -- 581
+num.names$ -- 115
+pop$ -- 195
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 343
+skip$ -- 415
 stack$ -- 0
-substring$ -- 1748
-swap$ -- 106
-text.length$ -- 2
+substring$ -- 2000
+swap$ -- 128
+text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 4
-while$ -- 228
-width$ -- 98
-write$ -- 1046
-(There were 34 warnings)
+while$ -- 265
+width$ -- 119
+write$ -- 1267
+(There were 8 warnings)

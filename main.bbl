@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{100}
 
 \bibitem{dean_effect_2020}
 David~S Dean, Paul Gersberg, and Peter C~W Holdsworth.
@@ -13,7 +13,7 @@ M{\'e}socentre de {Calcul} {Intensif} {Aquitain}.
 \bibitem{hohenberg_theory_1977}
 P.~C. Hohenberg and B.~I. Halperin.
 \newblock Theory of dynamic critical phenomena.
-\newblock {\em Reviews of Modern Physics}, 49(3):435--479, July 1977.
+\newblock {\em Rev. Mod. Phys.}, 49(3):435--479, July 1977.
 
 \bibitem{bray_theory_1994}
 A.~J. Bray.
@@ -65,7 +65,7 @@ H.~W. Diehl, D.~M. Kroll, and H.~Wagner.
 \bibitem{bray_interface_2001}
 Alan~J. Bray, Andrea Cavagna, and Rui D.~M. Travasso.
 \newblock Interface fluctuations under shear.
-\newblock {\em Physical Review E}, 64(1):012102, June 2001.
+\newblock {\em Phys. Rev. E}, 64(1):012102, June 2001.
 
 \bibitem{bray_interface_2001-1}
 Alan~J. Bray, Andrea Cavagna, and Rui D.~M. Travasso.
@@ -100,14 +100,13 @@ David~A. Huse.
 Martin Niss.
 \newblock History of the {Lenz}-{Ising} {Model} 1920{\textendash}1950: {From}
   {Ferromagnetic} to {Cooperative} {Phenomena}.
-\newblock {\em Archive for History of Exact Sciences}, 59(3):267--318, March
-  2005.
+\newblock {\em Arch. Hist. Exact Sci.}, 59(3):267--318, March 2005.
 
 \bibitem{niss_history_2009}
 Martin Niss.
 \newblock History of the {Lenz}{\textendash}{Ising} {Model}
   1950{\textendash}1965: from irrelevance to relevance.
-\newblock {\em Archive for History of Exact Sciences}, 63(3):243, May 2009.
+\newblock {\em Arch. Hist. Exact Sci.}, 63(3):243, May 2009.
 
 \bibitem{gupta_phase_1988}
 Rajan Gupta, Jerry DeLapp, George~G. Batrouni, Geoffrey~C. Fox, Clive~F.
@@ -178,20 +177,18 @@ J.~Stecki, A.~Maciol/ek, and K.~Olaussen.
 Howard~L. Richards, M.~A. Novotny, and Per~Arne Rikvold.
 \newblock Numerical transfer-matrix study of surface-tension anisotropy in
   {Ising} models on square and cubic lattices.
-\newblock {\em Physical Review B}, 48(19):14584--14598, November 1993.
+\newblock {\em Phys. Rev. B}, 48(19):14584--14598, November 1993.
 
 \bibitem{abraham_interface_1976}
 D.~B. Abraham and P.~Reed.
 \newblock Interface profile of the {Ising} ferromagnet in two dimensions.
-\newblock {\em Communications in Mathematical Physics}, 49(1):35--46, February
-  1976.
+\newblock {\em Commun.Math. Phys.}, 49(1):35--46, February 1976.
 
 \bibitem{abraham_transfer_1973}
 D.~B. Abraham and A.~Martin-L{\"o}f.
 \newblock The transfer matrix for a pure phase in the two-dimensional {Ising}
   model.
-\newblock {\em Communications in Mathematical Physics}, 32(3):245--268,
-  September 1973.
+\newblock {\em Commun.Math. Phys.}, 32(3):245--268, September 1973.
 
 \bibitem{swendsen_roughening_1977}
 Robert~H. Swendsen.
@@ -219,7 +216,7 @@ M~Elwenspoek and J~P van~der Eerden.
 \bibitem{wilby_scaling_1992}
 M.~R. Wilby, D.~D. Vvedensky, and A.~Zangwill.
 \newblock Scaling in a solid-on-solid model of epitaxial growth.
-\newblock {\em Physical Review B}, 46(19):12896--12898, November 1992.
+\newblock {\em Phys. Rev. B}, 46(19):12896--12898, November 1992.
 
 \bibitem{boal_mechanics_nodate}
 David Boal.
@@ -240,13 +237,12 @@ Michael~E Fisher.
 \bibitem{privman_transfer-matrix_1989}
 V.~Privman and N.~M. {\v S}vraki{\'c}.
 \newblock Transfer-{Matrix} {Spectrum} for {Systems} with {Interfaces}.
-\newblock {\em Physical Review Letters}, 62(6):633--636, February 1989.
+\newblock {\em Phys. Rev. Lett.}, 62(6):633--636, February 1989.
 
 \bibitem{kim_conserved_1994}
 Yup Kim, D.~K. Park, and Jin~Min Kim.
 \newblock Conserved growth in a restricted solid-on-solid model.
-\newblock {\em Journal of Physics A: Mathematical and General}, 27(15):L533,
-  1994.
+\newblock {\em J. Phys. A: Math. Gen.}, 27(15):L533, 1994.
 
 \bibitem{vaysburd_critical_1995}
 I.~Vaysburd.
@@ -257,13 +253,13 @@ I.~Vaysburd.
 H.~J.~F. Knops.
 \newblock Exact {Relation} between the {Solid}-on-{Solid} {Model} and the
   \${\textbackslash}mathrm\{{XY}\}\$ {Model}.
-\newblock {\em Physical Review Letters}, 39(12):766--769, September 1977.
+\newblock {\em Phys. Rev. Lett.}, 39(12):766--769, September 1977.
 
 \bibitem{schehr_universal_2006}
 Gr{\'e}gory Schehr and Satya~N. Majumdar.
 \newblock Universal asymptotic statistics of maximal relative height in
   one-dimensional solid-on-solid models.
-\newblock {\em Physical Review E}, 73(5):056103, May 2006.
+\newblock {\em Phys. Rev. E}, 73(5):056103, May 2006.
 
 \bibitem{swendsen_monte_1977}
 Robert~H. Swendsen.
@@ -274,19 +270,19 @@ Robert~H. Swendsen.
 Aleksander~L. Owczarek and Thomas Prellberg.
 \newblock Exact solution of the discrete (1+1)-dimensional {SOS} model with
   field and surface interactions.
-\newblock {\em Journal of Statistical Physics}, 70(5-6):1175--1194, March 1993.
+\newblock {\em J Stat Phys}, 70(5-6):1175--1194, March 1993.
 
 \bibitem{majumdar_airy_2005}
 Satya~N. Majumdar and Alain Comtet.
 \newblock Airy {Distribution} {Function}: {From} the {Area} {Under} a
   {Brownian} {Excursion} to the {Maximal} {Height} of {Fluctuating}
   {Interfaces}.
-\newblock {\em Journal of Statistical Physics}, 119(3-4):777--826, May 2005.
+\newblock {\em J Stat Phys}, 119(3-4):777--826, May 2005.
 
 \bibitem{siegert_scaling_1993}
 Martin Siegert and Michael Plischke.
 \newblock Scaling behavior of driven solid-on-solid models with diffusion.
-\newblock {\em Journal de Physique I}, 3(6):1371--1376, June 1993.
+\newblock {\em J. Phys. I France}, 3(6):1371--1376, June 1993.
 
 \bibitem{pearce_exact_1989}
 Paul~A Pearce and Katherine~A Seaton.
@@ -343,7 +339,7 @@ Thomas H.~R. Smith, Oleg Vasilyev, Douglas~B. Abraham, Anna Macio{\l }ek, and
   Matthias Schmidt.
 \newblock Interfaces in {Driven} {Ising} {Models}: {Shear} {Enhances}
   {Confinement}.
-\newblock {\em Physical Review Letters}, 101(6):067203, August 2008.
+\newblock {\em Phys. Rev. Lett.}, 101(6):067203, August 2008.
 
 \bibitem{smith_interfaces_2008}
 Thomas H~R Smith, Oleg Vasilyev, Douglas~B Abraham, Anna Macio{\l }ek, and
@@ -362,8 +358,7 @@ M.~E.~J. Newman and G.~T. Barkema.
 V.~Privman and N.~M. {\v S}vraki{\'c}.
 \newblock Asymptotic degeneracy of the transfer matrix spectrum for systems
   with interfaces: {Relation} to surface stiffness and step free energy.
-\newblock {\em Journal of Statistical Physics}, 54(3-4):735--754, February
-  1989.
+\newblock {\em J Stat Phys}, 54(3-4):735--754, February 1989.
 
 \bibitem{metropolis_monte_1949}
 Nicholas Metropolis and S.~Ulam.
@@ -449,11 +444,6 @@ M.~E. Bowers and C.~R. Hagen.
 \newblock Casimir energy of a spherical shell.
 \newblock {\em Physical Review D}, 59(2), December 1998.
 
-\bibitem{milton_casimir_1978-1}
-Kimball~A. Milton, Lester~L. DeRaad, and Julian Schwinger.
-\newblock Casimir self-stress on a perfectly conducting spherical shell.
-\newblock {\em Annals of Physics}, 115(2):388--403, October 1978.
-
 \bibitem{julian_schwinger_casimir_1978}
 {Julian Schwinger}, {Lester L DeRaad}, and {Kimball A. Milton}.
 \newblock Casimir {Effect} in {Dielectrics}.
@@ -508,28 +498,39 @@ A.~Gambassi, A.~Macio{\l }ek, C.~Hertlein, U.~Nellen, L.~Helden, C.~Bechinger,
 \newblock Critical {Casimir} effect in classical binary liquid mixtures.
 \newblock {\em Physical Review E}, 80(6), December 2009.
 
-\bibitem{h_kleinert_path_2009}
-{H. Kleinert}.
-\newblock {\em Path {Integrals} in {Quantum} {Mechanics}, {Statistics},
-  {Polymer} {Physics}, and {Financial} {Markets}}.
-\newblock World Scientific, Singapore, 5th edition, 2009.
-
 \bibitem{privman_finite-size_1988-1}
 Vladimir Privman.
 \newblock Finite-{Size} {Properties} of the {Angle}-{Dependent} {Surface}
   {Tension} of {Rough} {Interfaces}.
 \newblock {\em PHYSICAL REVIEW LETTERS}, 61(2):4, 1988.
 
+\bibitem{h_kleinert_path_2009}
+{H. Kleinert}.
+\newblock {\em Path {Integrals} in {Quantum} {Mechanics}, {Statistics},
+  {Polymer} {Physics}, and {Financial} {Markets}}.
+\newblock World Scientific, Singapore, 5th edition, 2009.
+
+\bibitem{claude_cohen-tannoudji_mecanique_2018}
+{Claude Cohen-Tannoudji}, {Bernard Diu}, and {Franck Lalo{\"e}}.
+\newblock {\em M{\'e}canique quantique}, volume~1.
+\newblock EDP-Sciences, 2018.
+
+\bibitem{albright_integrals_1977}
+J~R Albright.
+\newblock Integrals of products of {Airy} functions.
+\newblock {\em Journal of Physics A: Mathematical and General}, 10(4):485--490,
+  April 1977.
+
 \bibitem{bissacot_phase_2010}
 Rodrigo Bissacot and Leandro Cioletti.
 \newblock Phase {Transition} in {Ferromagnetic} {Ising} {Models} with
   {Non}-uniform {External} {Magnetic} {Fields}.
-\newblock {\em Journal of Statistical Physics}, 139(5):769--778, June 2010.
+\newblock {\em J Stat Phys}, 139(5):769--778, June 2010.
 
 \bibitem{guyer_sine-gordon_1979}
 R.~A. Guyer.
 \newblock Sine-{Gordon} chain as a model for a two-dimensional interface.
-\newblock {\em Physical Review B}, 20(10):4375--4381, November 1979.
+\newblock {\em Phys. Rev. B}, 20(10):4375--4381, November 1979.
 
 \bibitem{svrakic_finite-size_1988}
 N.~M. Svraki{\'c}, V.~Privman, and D.~B. Abraham.
@@ -544,17 +545,131 @@ V.~Privman and N.~M. S?vraki{\'c}.
   two-dimensional wetting transition.
 \newblock {\em Physical Review B}, 37(7):3713--3715, March 1988.
 
+\bibitem{lars_onsager_collected_1996}
+{Lars Onsager}, {Hemmer P.C.}, and {Holden H.}
+\newblock {\em The {Collected} {Works} of {Lars} {Onsager}: {With}
+  {Commentary}}, volume~17.
+\newblock World Scientific, world scientific series in 20th century physics
+  edition, 1996.
+
+\bibitem{dzubiella_lane_2002}
+J.~Dzubiella, G.~P. Hoffmann, and H.~L{\"o}wen.
+\newblock Lane formation in colloidal mixtures driven by an external field.
+\newblock {\em Physical Review E}, 65(2), January 2002.
+
+\bibitem{chakrabarti_dynamical_2003}
+J~Chakrabarti, J~Dzubiella, and H~L{\"o}wen.
+\newblock Dynamical instability in driven colloids.
+\newblock {\em Europhysics Letters (EPL)}, 61(3):415--421, February 2003.
+
+\bibitem{chakrabarti_reentrance_2004}
+J.~Chakrabarti, J.~Dzubiella, and H.~L{\"o}wen.
+\newblock Reentrance effect in the lane formation of driven colloids.
+\newblock {\em Physical Review E}, 70(1), July 2004.
+
+\bibitem{sutterlin_dynamics_2009}
+K.~R. S{\"u}tterlin, A.~Wysocki, A.~V. Ivlev, C.~R{\"a}th, H.~M. Thomas,
+  M.~Rubin-Zuzic, W.~J. Goedheer, V.~E. Fortov, A.~M. Lipaev, V.~I. Molotkov,
+  O.~F. Petrov, G.~E. Morfill, and H.~L{\"o}wen.
+\newblock Dynamics of {Lane} {Formation} in {Driven} {Binary} {Complex}
+  {Plasmas}.
+\newblock {\em Physical Review Letters}, 102(8), February 2009.
+
+\bibitem{glanz_nature_2012}
+T~Glanz and H~L{\"o}wen.
+\newblock The nature of the laning transition in two dimensions.
+\newblock {\em Journal of Physics: Condensed Matter}, 24(46):464114, November
+  2012.
+
+\bibitem{klymko_microscopic_2016}
+Katherine Klymko, Phillip~L. Geissler, and Stephen Whitelam.
+\newblock Microscopic origin and macroscopic implications of lane formation in
+  mixtures of oppositely driven particles.
+\newblock {\em Physical Review E}, 94(2), August 2016.
+
+\bibitem{demery_conductivity_2016}
+V.~D{\'e}mery and D.~S. Dean.
+\newblock The conductivity of strong electrolytes from stochastic density
+  functional theory.
+\newblock {\em J. Stat. Mech.}, 2016(2):023106, 2016.
+
+\bibitem{poncet_universal_2017}
+Alexis Poncet, Olivier B{\'e}nichou, Vincent D{\'e}mery, and Gleb Oshanin.
+\newblock Universal {Long} {Ranged} {Correlations} in {Driven} {Binary}
+  {Mixtures}.
+\newblock {\em Physical Review Letters}, 118(11), March 2017.
+
+\bibitem{dean_renormalization_1996}
+D~S Dean, I~T Drummond, and R~R Horgan.
+\newblock Renormalization of drift and diffusivity in random gradient flows.
+\newblock {\em Journal of Physics A: Mathematical and General},
+  29(24):7867--7879, December 1996.
+
+\bibitem{katz_nonequilibrium_1984}
+Sheldon Katz, Joel~L. Lebowitz, and Herbert Spohn.
+\newblock Nonequilibrium steady states of stochastic lattice gas models of fast
+  ionic conductors.
+\newblock {\em Journal of Statistical Physics}, 34(3-4):497--537, February
+  1984.
+
+\bibitem{zia_interfacial_1991}
+R~K~P Zia and K~T Leung.
+\newblock Interfacial correlation and dispersion in a non-equilibrium steady
+  state system.
+\newblock {\em Journal of Physics A: Mathematical and General},
+  24(24):L1399--L1404, December 1991.
+
+\bibitem{leung_anomalous_1993}
+K~T Leung and R~K~P Zia.
+\newblock Anomalous interfacial correlations in non-equilibrium anisotropic
+  systems.
+\newblock {\em Journal of Physics A: Mathematical and General},
+  26(16):L737--L741, August 1993.
+
+\bibitem{schmittmann_driven_1998}
+B~Schmittmann and R.K.P Zia.
+\newblock Driven diffusive systems. {An} introduction and recent developments.
+\newblock {\em Physics Reports}, 301(1-3):45--64, July 1998.
+
+\bibitem{smith_lateral_2010}
+Thomas H.~R. Smith, Oleg Vasilyev, Anna Macio{\l }ek, and Matthias Schmidt.
+\newblock Lateral transport of thermal capillary waves.
+\newblock {\em EPL}, 89(1):10006, 2010.
+
+\bibitem{thiebaud_nonlinear_2014}
+Marine Thi{\'e}baud, Yacine Amarouchene, and Thomas Bickel.
+\newblock Nonlinear {Brownian} dynamics of interfacial fluctuations in a shear
+  flow.
+\newblock {\em Journal of Statistical Mechanics: Theory and Experiment},
+  2014(12):P12011, December 2014.
+
+\bibitem{dean_nonequilibrium_2016}
+David~S. Dean, Bing-Sui Lu, A.~C. Maggs, and Rudolf Podgornik.
+\newblock Nonequilibrium {Tuning} of the {Thermal} {Casimir} {Effect}.
+\newblock {\em Physical Review Letters}, 116(24), June 2016.
+
+\bibitem{grosberg_nonequilibrium_2015}
+A.~Y. Grosberg and J.-F. Joanny.
+\newblock Nonequilibrium statistical mechanics of mixtures of particles in
+  contact with different thermostats.
+\newblock {\em Physical Review E}, 92(3), September 2015.
+
+\bibitem{lu_out--equilibrium_2015}
+B.-S. Lu, D.~S. Dean, and R.~Podgornik.
+\newblock Out-of-equilibrium thermal {Casimir} effect between {Brownian}
+  conducting plates.
+\newblock {\em EPL (Europhysics Letters)}, 112(2):20001, October 2015.
+
 \bibitem{burkhardt_localisation-delocalisation_1981}
 T.~W. Burkhardt.
 \newblock Localisation-delocalisation transition in a solid-on-solid model with
   a pinning potential.
-\newblock {\em Journal of Physics A: Mathematical and General}, 14(3):L63,
-  1981.
+\newblock {\em J. Phys. A: Math. Gen.}, 14(3):L63, 1981.
 
 \bibitem{chui_pinning_1981}
 S.~T. Chui and John~D. Weeks.
 \newblock Pinning and roughening of one-dimensional models of interfaces and
   steps.
-\newblock {\em Physical Review B}, 23(5):2438--2441, March 1981.
+\newblock {\em Phys. Rev. B}, 23(5):2438--2441, March 1981.
 
 \end{thebibliography}

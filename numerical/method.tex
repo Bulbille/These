@@ -136,6 +136,7 @@ In the SOS model, we expect to have the results from the Glauber dynamics to be 
 
 %%%%%%%%%%%%%%
 \subsection{Kawasaki dynamics}
+\label{algo-kawasaki}
 %%%%%%%%%%%%%%
 
 Now we would like to have an algorithm for the canonical ensemble, where the total height stays constant. In the Kawasaki's algorithm \cite{kawasaki_diffusion_1966}, we randomly choose a site $i$ with probability $\frac{1}{L'}$, and one of its two neares neighboors $i-1$ or $i+1$ with probability $\frac{1}{2}$. For example, if we take the neighboor site $i-1$ (it holds the same for the site $i+1$), we generate a new configuration with Hamiltonian $H(h_0,...,h_{i-1}+1,h_i-1,...h_{L'})$, where we have taken a particle from site $i$ to diffuse it to the other site.
