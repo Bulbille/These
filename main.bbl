@@ -54,6 +54,18 @@ M.~E.~J. Newman and G.~T. Barkema.
 \newblock {\em Monte {Carlo} {Methods} in {Statistical} {Physics}}.
 \newblock Oxford University Press, Oxford, New York, February 1999.
 
+\bibitem{vasilyev_universal_2009}
+O.~Vasilyev, A.~Gambassi, A.~Macio{\l }ek, and S.~Dietrich.
+\newblock Universal scaling functions of critical {Casimir} forces obtained by
+  {Monte} {Carlo} simulations.
+\newblock {\em Physical Review E}, 79(4), April 2009.
+
+\bibitem{lopes_cardozo_critical_2014}
+David Lopes~Cardozo, Hugo Jacquin, and Peter C.~W. Holdsworth.
+\newblock Critical {Casimir} forces in a magnetic system: {An} experimental
+  protocol.
+\newblock {\em Physical Review B}, 90(18), November 2014.
+
 \bibitem{kimball_a_milton_casimir_2001}
 {Kimball A. Milton}.
 \newblock {\em The {Casimir} effect: {Physical} manifestation of zero-point
@@ -422,18 +434,6 @@ Kyozi Kawasaki.
 \newblock Diffusion {Constants} near the {Critical} {Point} for
   {Time}-{Dependent} {Ising} {Models}. {I}.
 \newblock {\em Physical Review}, 145(1):224--230, May 1966.
-
-\bibitem{vasilyev_universal_2009}
-O.~Vasilyev, A.~Gambassi, A.~Macio{\l }ek, and S.~Dietrich.
-\newblock Universal scaling functions of critical {Casimir} forces obtained by
-  {Monte} {Carlo} simulations.
-\newblock {\em Physical Review E}, 79(4), April 2009.
-
-\bibitem{lopes_cardozo_critical_2014}
-David Lopes~Cardozo, Hugo Jacquin, and Peter C.~W. Holdsworth.
-\newblock Critical {Casimir} forces in a magnetic system: {An} experimental
-  protocol.
-\newblock {\em Physical Review B}, 90(18), November 2014.
 
 \bibitem{martin_ankerl_fast_nodate}
 {Martin Ankerl}.
