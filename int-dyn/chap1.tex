@@ -599,10 +599,10 @@ where $\mu(\bx)=\delta H_{eff}/\delta h(\bx) $, $\tilde L(k) = D/Q(k)$ and
 
 We take a system of size $L'\times L' \times L$, composed of $N$ sites $i$. At each site corresponds a value $\sigma_i =\pm1$. The Hamiltonian of the Ising model is 
 \begin{equation}
-	H =  - \sum_{<ij>} J \sigma_i \sigma_j + \frac{V(\sigma_i)+V(\sigma_j)}{2}
+	H =  - \sum_{<ij>} J \sigma_i \sigma_j + B \frac{V(\sigma_i)+V(\sigma_j)}{2}
 	\label{hamil-ising}
 \end{equation}
-where $\sum_{< ij >}$ is a sum over all pairs of nearest neighbours, and the external field $V(\sigma_i)$ has been symmetrized. The Ising model\cite{niss_history_2005,niss_history_2009} is therefore a lattice model with short interactions between particles. Since all particles $\sigma_i$ in the system are equal to $\pm!$, this system is called a lattice based spin model. When $\sigma_i$ is continuous, it is called the XY model \cite{gupta_phase_1988}.
+where $\sum_{< ij >}$ is a sum over all pairs of nearest neighbours, and the external parameter $B$ having the energy dimension is applied to the funcion of the internal variables $V(\sigma_i)$ which has been symmetrized. The Ising model\cite{niss_history_2005,niss_history_2009} is therefore a lattice model with short interactions between particles. Since all particles $\sigma_i$ in the system are equal to $\pm!$, this system is called a lattice based spin model. When $\sigma_i$ is continuous, it is called the XY model \cite{gupta_phase_1988}.
 $J$ is called the coupling parameter of the system, and can be non-uniform, with the nearest neighbours interaction being $J = J_{ij}$. If $ J_{ij} =0$, the system favorises homogeneous phases and is called ferromagnetic. Otherwise, the system favorises configurations where each spin has an opposite sign with respect to all of their neighbours, which modelises antiferromagnetic materials. We will pose $J=1$.
 
 \begin{figure}[t]
@@ -647,12 +647,12 @@ By making the transformation\cite{goldenfeld_lectures_2018}
 \end{align}
 so that $n_i(\sigma_i = 1) = 1$ and $n_i(\sigma_i = -1) = 0$, we obtain
 \begin{equation}
-	H =  - \sum_{< i j >}  J_{ij} \left( 4 n_i n_j -2 ( n_i+n_j) + 1 \right)+ \sum_{< i j >}  \frac{V(\sigma_i)+V(\sigma_j)}{2}  
+	H =  - \sum_{< i j >}  J_{ij} \left( 4 n_i n_j -2 ( n_i+n_j) + 1 \right)+ B \sum_{< i j >}  \frac{V(\sigma_i)+V(\sigma_j)}{2}  
 \end{equation}
 where the constant term $\sum_{< i j >}  J_{ij}$ does not change the partition function behaviour. We have then
 \begin{align}
-	H_{LG} &=  - 4 \sum_{< i j >}  J_{ij}  n_i n_j  + 2 \sum_{< i j >}  J_{ij}  (n_i+n_j) + \sum_{< i j >}  \frac{V(\sigma_i)+V(\sigma_j)}{2}  \nn
-       &=  - 4 J \sum_{< i j >}  J n_i n_j  + \mu \sum_i  n_i + \sum_{< i j >}   \frac{V(\sigma_i)+V(\sigma_j)}{2}  
+	H_{LG} &=  - 4 \sum_{< i j >}  J_{ij}  n_i n_j  + 2 \sum_{< i j >}  J_{ij}  (n_i+n_j) + B \sum_{< i j >}  \frac{V(\sigma_i)+V(\sigma_j)}{2}  \nn
+       &=  - 4 J \sum_{< i j >}  J n_i n_j  + \mu_c \sum_i  n_i + B \sum_{< i j >}   \frac{V(\sigma_i)+V(\sigma_j)}{2}  
 \end{align}
 where we have set $J_{ij} = J$ constant and defined the intrinsic chemical potential for a liquid-gas system as $\mu_c=4J c$, with  $c$ the number of nearest neighbours. A positive magnetic phase is thus analogous to a high density state such a liquid, while the negative magnetic phase is equal to a low density state such as a gas. An onsite potential $V(\sigma_i)$ further modifies the chemical potential, $\mu=\mu_c+\delta\mu[V(\sigma_i)]$.
 The chemical potential $\mu$ is the conjugate variable to the total number of particles $\sum_i n_i$, while the magnetic field $B$ is the conjugate variable to the total magnetisation $\sum_i \sigma_i$. The two are connected through the mapping such that $B\sim \mu-\mu_c$, so that liquid-gas and Ising model systems share common thermodynamic features such as the universality class for critical fluctuations. For the fluid the grand canonical ensemble corresponds to the Gibbs ensemble with fixed $T$ and $\mu$ and canonical ensemble with fixed $T$ and $N$ . In the magnetic system these ensembles correspond to fixed $T, B$ and $T,M$ respectively. The model also describes adsorption of a gas in a lattice or binary fluids between particles of different species $A$ and $B$.
@@ -716,12 +716,12 @@ we have
 \end{align}
 For a 2-D Ising model of size $L'\times L$, the Ising Hamiltonian \eqref{hamil-ising} is rewrtiten as
 \begin{align}
-H = 2 J L' (1-L) +2 J \sum_{i=0}^{L'} |h_i-h_{i+1}| + \sum_{i=0}^{L'} V(h_i)
+H = 2 J L' (1-L) +2 J \sum_{i=0}^{L'} |h_i-h_{i+1}| + B \sum_{i=0}^{L'} V(h_i)
 \label{energie-sos-ising}
 \end{align}
 with external potential 
 \begin{align}
-V(h_i) = \sum_{j=0}^L V(\sgn(h_i-j))
+B V(h_i) = B \sum_{j=0}^L V(\sgn(h_i-j))
 \end{align}
 For periodic boundary conditions, we set $h_{L'}=h_0$.
 
@@ -742,13 +742,13 @@ Another way to compute this energy for a SOS configuration is to directly count 
 \end{equation}
 There are $L'\times L$ horizontal bonds. In a pure phase system, the horizontal energy would be $-JL'L$. Neverthelesss, there are $\sum_i |h_i-h_{i+1}|$ bonds which have an energy of $+J$, which gives the horizontal energy  contribution 
 \begin{equation}
-    E_\parallel = - J L' L + 2 \sum_i |h_i-h_{i+1}|
+    E_\parallel = - J L' L + 2 J \sum_i |h_i-h_{i+1}|
 \end{equation}
 By adding both, we find back Eq \eqref{energie-sos-ising}.
 
 By setting $2J=J$ and getting rid of the bulk energy, we obtain the \textbf{Solid-On-Solid Hamiltonian} 
 \begin{align}
-H = J \sum_{i=0}^{L'} |h_i-h_{i+1}| + \frac{V(h_i)+V(h_{i+1})}{2}
+H = J \sum_{i=0}^{L'} |h_i-h_{i+1}| + B \frac{V(h_i)+V(h_{i+1})}{2}
 \label{hamil-sos}
 \end{align}
 
@@ -760,7 +760,7 @@ In the SOS model, the sites $i$ of height $h_i$ can take any value in $[0,L]$. T
 
 Another model, closer to the continuous model of Hamiltonian \eqref{heff} is the Discrete Gaussian model which has the following gaussian interaction
 \begin{align}
-H = J \sum_{i=0}^{L'} (h_i-h_{i+1})^2 + \frac{V(h_i)+V(h_{i+1})}{2}
+H = J \sum_{i=0}^{L'} (h_i-h_{i+1})^2 + B \frac{V(h_i)+V(h_{i+1})}{2}
 \label{hamil-gsos}
 \end{align} 
 and also has a restricted version. The SOS model has an exact relation with the $XY$ model \cite{knops_exact_1977}, no matter the power law used for the interaction. With a generalization of this model to continuous heights, it has been shown that extreme deviations statistics of the interface is described by a scaling function \cite{schehr_universal_2006}. Since the energy costs of height differences $0,\pm 1$ are the same in every SOS model no matter the exponent  in the energy costs of height differences, one expects the qualitative freatures of all those models to be the same at low temperature, since height differences are typically small \cite{swendsen_monte_1977}.
@@ -782,7 +782,7 @@ In the grand-canonical ensemble, the conjugate variable to the height interface 
 \end{align}
 where
 \begin{align}
-H_{eff} = J \sum_{i=0}^{L'} |h_i-h_{i+1}|+ \sum_{i=0}^{L'} V(h_i)-\mu h_i
+H_{eff} = J \sum_{i=0}^{L'} |h_i-h_{i+1}|+ \sum_{i=0}^{L'} B V(h_i)-\mu h_i
 \end{align}
 In Fig \ref{hauteur-mu}, we plot the mean number of particles per site with respect to the chemical potential, for different size of the system, in the thermodynamic limit $L' \to \infty$. When the chemical potential is too small, the Lagrange's multiplier of the mean height is negligible, allowing the interface to fluctuate freely. Since the height of the interface is then evenly spread over all possible configurations, the mean value for $\mu=0$ becomes $\frac{L}{2}$.
 
@@ -801,9 +801,9 @@ In Fig \ref{hauteur-mu}, we plot the mean number of particles per site with resp
 
 In a more general fashion, we can rewrite the Hamiltonian as
 \begin{align*}
-H = \sum_{i=0}^{L'} f(h_i,h_{i+1}) + V(h_i,h_{i+1}) 
+H = \sum_{i=0}^{L'} f(h_i,h_{i+1}) + B V(h_i,h_{i+1}) 
 \end{align*}
-where $f(h_i,h_j)$ is the energy interaction between two nearest neighbours and $V(h_i,h_j)=\frac{V(h_i)+V(h_j)}{2}$ is the external potential. We can rewrite the partition function as 
+where $f(h_i,h_j)$ is the energy interaction between two nearest neighbours and $B V(h_i,h_j)= B\frac{V(h_i)+V(h_j)}{2}$ is the external potential. We can rewrite the partition function as 
 \begin{align}
 Z = \sum_{h_1=0}^{L} \sum_{h_2=0}^{L}... \sum_{h_{L'}=0}^{L} \exp(- \beta \sum_{i=0}^{L'} H(h_i,h_{i+1}))
 = \sum_{h_1 h_2 ... h_{L'}} \prod_{i=_0}^{L'} \exp(-\beta H(h_i,h_{i+1}))

@@ -382,11 +382,11 @@ which gives the free energy per unit length as
 f=\frac{1}{\beta}\epsilon_0
 \end{equation}
 As well as the free energy we are interested in the probability distribution of the height at a single point (which is independent of the point chooses due to invariance by translation of the system). For instance the probability distribution of $h(0)$ is given by
-\begin{eqnarray}
+\begin{align}
 p_1(h)=& \frac{\int d[h]\delta(h(0)-h)\exp\left(-\frac{\beta}{2}\int_0^t h'^2(x) dx -\beta\int_0^t  V(h(x)) dx\right)}{Z(t)}\nn
-=& \frac{K(h,h,t)}{Z(t)}
+=& \frac{K(h,h,t)}{Z(t)} \nn
 =& \frac{\sum_n \exp(-t\epsilon_n)\psi_n^2(h)}{\sum_n \exp(-t\epsilon_n)}
-\end{eqnarray}
+\end{align}
 and so as $t\to\infty$, ground state dominance gives
 \begin{equation}
 p_1(h)= \psi_0^2(h)
@@ -677,38 +677,38 @@ In terms of the average height this then gives
 
 In Sec \ref{sec-lopes}, we have shown a way to numerically compute the free energy of a system at a chemical potential $\mu$ in absence of another potential. Here we generalise the method for any kind of external potential. We will explain the method for the Ising model, but the derivation for the SOS model is straightforward.
 
-For any external field which can be written as $\mu V(\sigma)$, where $V(\sigma)$ is a function of the internal microscopic variables $\sigma_i$,  the Hamiltonian of the Ising model is
+For any external field which can be written as $B V(\sigma)$, where $V(\sigma)$ is a function of the internal microscopic variables $\sigma_i$,  the Hamiltonian of the Ising model is
 \begin{align}
-H = - J \sum_{} \sigma_i \sigma_j - \mu \sum_i V(\sigma_i)
+H = - J \sum_{} \sigma_i \sigma_j - B \sum_i V(\sigma_i)
 \end{align}
 The mean value of the external potential is
 \begin{align}
     <  \sum_i V(\sigma_i) > =&  \sum_{\bf h} \sum_i V(\sigma_i) \exp(-\beta H) \nn
-    =&  - \frac{\partial F(\mu)}{\partial \mu}
+    =&  - \frac{\partial F(\mu)}{\partial B}
 \end{align}
 where $F$ is the free energy of the system. We see that for any potential of the form \eqref{lopes-gen}, we can integrate the previous equation to find
 \begin{align}
-   F(\mu_1) - F(\mu_2) = - \int_{\mu_1}^{\mu_2} d\mu'  < \sum_i V(\sigma_i) >_{\mu'} 
+   F(B_1) - F(B_2) = - \int_{B_1}^{B_2} d B'  < \sum_i V(\sigma_i) >_{B'} 
    \label{lopes-gen}
 \end{align}
 
-In the case where we know the analytical form of the free energy in the limits $\mu_2 \to \infty$ or $\mu_1 \to 0$, this method provides a way to directly measure it for any temperature or size by integrating over the chemical potential.
+In the case where we know the analytical form of the free energy in the limits $B_2 \to \infty$ or $B_1 \to 0$, this method provides a way to directly measure it for any temperature or size by integrating over the chemical potential.
 From the total free energy, we recover the Casimir form through Eq \eqref{cas-lopes}.
-The limit $\mu_1 \to 0$ is the free system limit, and the free energy can not be computed analytically. However, when $\mu_2 \to \infty$, for  the majority of external fields $V(\sigma)$ in which we are interested, there is often a configuration limit whose free energy can be computed analytically. For example, if $V(\sigma)=\sigma$, the configuration limit is the one where all spins point towards the same direction, leading to a free energy of $0$. Thus, we have
+The limit $B_1 \to 0$ is the free system limit, and the free energy can not be computed analytically. However, when $B_2 \to \infty$, for  the majority of external fields $B V(\sigma)$ in which we are interested, there is often a configuration limit whose free energy can be computed analytically. For example, if $V(\sigma)=\sigma$, the configuration limit is the one where all spins point towards the same direction, leading to a free energy of $0$. Thus, we have
 \begin{align}
-   F(\mu_1) - F_{analytic}(\infty) = - \int_{\mu_1}^{\infty} d\mu'  < \sum_i V(\sigma_i) >_{\mu'} 
+   F(B_1) - F_{analytic}(\infty) = - \int_{B_1}^{\infty} d B'  < \sum_i V(\sigma_i) >_{B'} 
    \label{lopes-gen}
 \end{align}
 In numerical simulations, it is not possible to range over infinity, and a criterion has to be defined to know the error made between the analytic case $\mu_2 = \infty$ and the maximal $\mu_2$ achieved in simulations. As in Eq \eqref{function-d}, we define the function
 \begin{align}
-    D(\mu,L_1,L_2) =  < M^\ast(L_1)-M^\ast(L_1-1) - (M^\ast(L_2)-M^\ast(L_2-1) >
+    D(B,L_1,L_2) =  < M^\ast(L_1)-M^\ast(L_1-1) - (M^\ast(L_2)-M^\ast(L_2-1) >
 \end{align}
 with the generalized magnetization $M^\ast = \sum_i V(\sigma_i)$. A suitable upper limit of integration if we want to get the Casimir force is when the function $D$ reaches $0$ within the precision of the simulation.
 
 
 For the SOS Hamiltonian
 \begin{align}
-    H =  J \sum_i |h_i -h_{i+1}|  + \mu \sum_i V(h_i)
+    H =  J \sum_i |h_i -h_{i+1}|  + B \sum_i V(h_i)
 \end{align}
 we define the generalised mean height as
 \begin{align}
@@ -716,22 +716,22 @@ we define the generalised mean height as
 \end{align}
 Eqquation \eqref{lopes-gen} writes as
 \begin{align}
-   F(\mu_1) - F(\mu_2) = -  \int_{\mu_1}^{\mu_2} d\mu' h^\ast(\mu')
+   F(B_1) - F(B_2) = -  \int_{B_1}^{B_2} d\mu' h^\ast(B')
    \label{diff-gene}
 \end{align}
 which can be directly be verified with the transfer matrix. 
-In the limit $\mu \to \infty$, the generalised height is zero, while the free energy $F(\infty)$ can often be computed analytically. 
-To minimize the error between the analytical limit and the numerical simulations, a suitable choice of the upper integration's limit $\mu_2$ is given by
+In the limit $B \to \infty$, the generalised height is zero, while the free energy $F(\infty)$ can often be computed analytically. 
+To minimize the error between the analytical limit and the numerical simulations, a suitable choice of the upper integration's limit $B_2$ is given by
 \begin{align}
-    \int_{\mu_2}^\infty  d\mu' h^\ast(\mu')) \ll \int_{\mu_1}^{\mu_2}  d\mu' h^\ast(\mu')
+    \int_{B_2}^\infty  d B' h^\ast(B')) \ll \int_{B_1}^{B_2}  dB' h^\ast(B')
 \end{align}
-An heuristic argument to find a suitable upper limit for integration is when $h^\ast(\mu_2) \ll h^\ast(\mu_1)$.
-In Fig \ref{integration-free-ene}, we see the free energy computed from the matrix transfer, compared to the integration procedure \eqref{lopes-gen} for the SOS model for the chemical potential $V(h_i)=h_i$ in Monte Carlo simulations, where we see the agreement for $\mu_2$ large enough.
+An heuristic argument to find a suitable upper limit for integration is when $h^\ast(B_2) \ll h^\ast(B_1)$.
+In Fig \ref{integration-free-ene}, we see the free energy computed from the matrix transfer, compared to the integration procedure \eqref{lopes-gen} for the SOS model for the chemical potential $V(h_i)=h_i$ in Monte Carlo simulations, where we see the agreement for $B_2$ large enough.
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.7\linewidth]{int-dyn/integration-free-ene.pdf}
-    \caption{Difference in free energy directly computed from transfer matrix, compared to numerical integration over the generalized height, for different upper limit $\mu_2$. The parameters are $L' = 256$, $L=200$ and $\beta=1$ for $5e7$ Monte Carlo steps.}
+    \includegraphics[width=0.7\linewidth]{finite-size/integration-free-ene.pdf}
+    \caption{Difference in free energy directly computed from transfer matrix, compared to numerical integration over the generalized height, for different upper limit $B_2$. The parameters are $L' = 256$, $L=200$ and $\beta=1$ for $5e7$ Monte Carlo steps.}
     \label{integration-free-ene}
 \end{figure}
 
@@ -741,35 +741,35 @@ As a proof of concept, we take a potential of the form
     V(h_i) = - |h_i-\frac{L}{2}|
     \label{neggstaged}
 \end{align}
-Such potential will press the interface along $h=0$ and $h=L$ compared to the classical chemical potential which presses the interface at $h=0$, as seen in Fig \ref{fig-negstagged}. Far away from $\frac{L}{2}$, both potentials are equivalent in symmetric fashion, and shall behave similarly for large $\mu$, because the free energy only depends on the interface fluctuations and not the mean height. 
+Such potential will press the interface along $h=0$ and $h=L$ compared to the classical chemical potential which presses the interface at $h=0$, as seen in Fig \ref{fig-negstagged}. Far away from $\frac{L}{2}$, both potentials are equivalent in symmetric fashion, and shall behave similarly for large $B$, because the free energy only depends on the interface fluctuations and not the mean height. 
 
 
 \begin{figure}
     \centering
 	\includegraphics[width=0.7\linewidth]{int-dyn/comp-potentiels-chimiques.pdf}
-	\caption{Snapshots of systems for the potential \eqref{neggstaged} and the chemical potential for $\beta=1$ and $\mu=2$ with $L=40$ and $L'=256$}
+	\caption{Snapshots of systems for the potential \eqref{neggstaged} and the chemical potential for $\beta=1$ and $B=2$ with $L=40$ and $L'=256$}
     \label{fig-negstagged}	
     \centering
-   	\includegraphics[width=0.7\linewidth]{int-dyn/integration-free-ene-negstagged.pdf}
-    \caption{Difference in free energy directly computed from transfer matrix with the potential \eqref{neggstaged}, compared to numerical integration over the generalized height. The parameters are $L' = 256$, $L=20$ and $\beta=1$, $\mu_2 = 1$for $10^7$ Monte Carlo steps. } 
+   	\includegraphics[width=0.7\linewidth]{finite-size/integration-free-ene-neg.pdf}
+    \caption{Difference in free energy directly computed from transfer matrix with the potential \eqref{neggstaged}, compared to numerical integration over the generalized height. The parameters are $L' = 256$, $L=20$ and $\beta=1$, $B_2 = 1$for $10^7$ Monte Carlo steps. } 
    	\label{fig-int-negstagged}    
 \end{figure}  
 
-In the $\mu \rightarrow \infty$ limit, the system has two equilibrium positions $h=0$ et $h=L$, which gives the transfer matrix
+In the $B \rightarrow \infty$ limit, the system has two equilibrium positions $h=0$ et $h=L$, which gives the transfer matrix
 \begin{align}
-T= e^{\beta \mu \frac{L}{2}}
+T= e^{\beta B \frac{L}{2}}
   \begin{pmatrix}
     1 & e^{-\beta  J L} \\
     e^{-\beta  J L} & 1
   \end{pmatrix}
 \end{align}
-The eigenvalues are $\lambda_\pm = e^{ \beta \mu \frac{L}{2}}( 1 \pm e^{-\beta J L})$, which gives us the free energy 
+The eigenvalues are $\lambda_\pm = e^{ \beta B \frac{L}{2}}( 1 \pm e^{-\beta J L})$, which gives us the free energy 
 \begin{align}
-  F(\mu \rightarrow \infty) = - \mu \frac{L}{2}
+  F(B \rightarrow \infty) = - B \frac{L}{2}
 \end{align}
-We plotted in Fig \ref{fig-int-negstagged} the difference of free energy computed from the transfer matrix between $\mu_1$ finite and $\mu_2=1$, and the integration procedure \eqref{diff-gene} with the generalized height with the matrix transfer and Monte Carlo simulations, both for Glauber and Kawasaki dynamics. The disagreement between the expected value and the simulation results are from a $\mu_2$ too small, which we also see in the integration of the generalized height from the transfer matrix. We can convince ourselves by doing the integration from the transfer matrix for a larger $\mu_2$. Also, it is worth noting that for this system, there is no significant difference in results for the two different dynamics.
+We plotted in Fig \ref{fig-int-negstagged} the difference of free energy computed from the transfer matrix between $B_1$ finite and $B_2=1$, and the integration procedure \eqref{diff-gene} with the generalized height with the matrix transfer and Monte Carlo simulations, both for Glauber and Kawasaki dynamics. The disagreement between the expected value and the simulation results are from a $B_2$ too small, which we also see in the integration of the generalized height from the transfer matrix. We can convince ourselves by doing the integration from the transfer matrix for a larger $B_2$. Also, it is worth noting that for this system, there is no significant difference in results for the two different dynamics.
 
-This method opens a new way to compute the free energy for any kind of external potential of the form $\mu V(h)$, or $\mu V(\sigma)$ in the case of the Ising or SOS models for conserved and non-conserved dynamics, such as non-uniform external fields \cite{bissacot_phase_2010}. 
+This method opens a new way to compute the free energy for any kind of external potential of the form $B V(h)$, or $B V(\sigma)$ in the case of the Ising or SOS models for conserved and non-conserved dynamics, such as non-uniform external fields \cite{bissacot_phase_2010}. 
 
 
 
@@ -1080,6 +1080,6 @@ The path integral method \cite{matsubara_new_1955} is well suited to the study o
 Applying this framework to the confined elastic line, we find that the free energy per unit length goes as $f = \frac{T^2 \pi^2}{2 \sigma L^2}$, where $\sigma$ is the surface tension of the interface or the stiffness of the interface. Using a conjecture \cite{privman_finite-size_1988-1} about the finite-size corrections on the surface tension, and setting, we have shown that the Casimir effect as predicted by Fisher and de Gennes can be recovered in these interface models. 
 Another example where we have applied ths framework is the one where we apply a constant pressure to the interface with a hard wall below at $h=0$ but with non above as the applied pressure is sufficient to localise the interface. In this case the probability density function of the height distribution is given by $p(h) \propto Ai^2(\frac{h}{\ell}-\alpha_1)$, where $\ell$ is the characteristic length scale of the interface, and we  find the average height $<h> = \frac{2}{3}\frac{\alpha_1}{\left(2\sigma \beta^2 P_0 \right)^\frac{1}{3}}$.
 
-For discrete  Solid-On-Solid models, the path integral cannot be directly applied, and methods adapted to discrete systems must be used. The first method is to compute the free energy through numerical simulations. By defining the generalized magnetization $M^\ast = \sum_i V(\sigma_i)$ in the Ising model, and the generalized height $h^\ast = \sum_i V(h_i)$ in the SOS model, we generalized the Lopes-Jacquin-Holdsworth method \cite{lopes_cardozo_critical_2014} for the direct computation of the free energy, when one of the limit configurations of the system with respect to their conjugated variable $\mu$ is. Since the LJH does not work for Kawasaki dynamics where the order parameter is conserved, we applied our generalized method for the potential $V(h) = - | h - \frac{L}{2}|$, showing that numerically that this generalisation allows on to  compute the thermodynamic force for more complex fields than the uniform magnetic field in the Ising model.
+For discrete  Solid-On-Solid models, the path integral cannot be directly applied, and methods adapted to discrete systems must be used. The first method is to compute the free energy through numerical simulations. By defining the generalized magnetization $M^\ast = \sum_i V(\sigma_i)$ in the Ising model, and the generalized height $h^\ast = \sum_i V(h_i)$ in the SOS model, we generalized the Lopes-Jacquin-Holdsworth method \cite{lopes_cardozo_critical_2014} for the direct computation of the free energy, when one of the limit configurations of the system with respect to their conjugated variable $B$ is. Since the LJH does not work for Kawasaki dynamics where the order parameter is conserved, we applied our generalized method for the potential $V(h) = - | h - \frac{L}{2}|$, showing that numerically that this generalisation allows on to  compute the thermodynamic force for more complex fields than the uniform magnetic field in the Ising model.
 
 For the confined SOS interface, we followed \cite{svrakic_finite-size_1988} to obtain the exact eigenvalues and eigenvectors of the transfer matrix. This gives us the free energy $f = -\frac{1}{\beta} \left( f_{bulk} - \frac{\pi^2}{4 \sinh^2(\frac{\beta J}{2} L^2 } \right)$, which has the same form as the continuous confined elastic line. 
