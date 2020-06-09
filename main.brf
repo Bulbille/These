@@ -97,6 +97,7 @@
 \backcite {hohenberg_theory_1977}{{23}{1.5}{section.1.5}}
 \backcite {edwards_surface_1982}{{23}{1.5}{section.1.5}}
 \backcite {niss_history_2005}{{23}{1.5}{section.1.5}}
+\backcite {niss_history_2009}{{23}{1.5}{section.1.5}}
 \backcite {newman_monte_1999}{{23}{1.5}{section.1.5}}
 \backcite {gilmer_simulation_1972}{{23}{1.5}{section.1.5}}
 \backcite {privman_asymptotic_1989}{{23}{1.5}{section.1.5}}
@@ -130,6 +131,7 @@
 \backcite {boyer_quantum_1968}{{37}{3.1.1}{equation.3.1.25}}
 \backcite {milton_casimir_1978}{{37}{3.1.1}{equation.3.1.25}}
 \backcite {bowers_casimir_1998}{{37}{3.1.1}{equation.3.1.25}}
+\backcite {milton_casimir_1978}{{37}{3.1.1}{equation.3.1.25}}
 \backcite {julian_schwinger_casimir_1978}{{38}{3.1.2}{subsection.3.1.2}}
 \backcite {schwinger_casimir_1992}{{38}{3.1.2}{subsection.3.1.2}}
 \backcite {sm_rytov_principles_1989}{{38}{3.1.2}{subsection.3.1.2}}
@@ -160,8 +162,8 @@
 \backcite {amit_field_2005}{{59}{3.5}{section.3.5}}
 \backcite {gambassi_casimir_2009}{{59}{3.5}{section.3.5}}
 \backcite {matsubara_new_1955}{{59}{3.5}{section.3.5}}
-\backcite {privman_finite-size_1988-1}{{59}{3.5}{section.3.5}}
-\backcite {lopes_cardozo_critical_2014}{{59}{3.5}{section.3.5}}
+\backcite {privman_finite-size_1988-1}{{60}{3.5}{section.3.5}}
+\backcite {lopes_cardozo_critical_2014}{{60}{3.5}{section.3.5}}
 \backcite {svrakic_finite-size_1988}{{60}{3.5}{section.3.5}}
 \backcite {burkhardt_localisation-delocalisation_1981}{{62}{4.1}{equation.4.1.7}}
 \backcite {chui_pinning_1981}{{62}{4.1}{equation.4.1.7}}

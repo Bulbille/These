@@ -189,7 +189,7 @@ This dynamics describes the diffusion of particles at the interface. It is thus 
 \end{figure}
 
 It is not possible to compute from Monte Carlo simulations the free energy of a system, since it is not a derivative of the partition function. However, we can compute its derivative with respect to the system size. This is useful to compute.
-{\color{brown} As detailed later in Sec \ref{sec-casimir}, the total free energy of the confined system has a bulk and a singular part
+As detailed later in Sec \ref{sec-casimir}, the total free energy of the confined system has a bulk and a singular part
 \begin{align}
     F(t,h,L) = L'^2 \left( L f_{bulk} + \beta^{-1} f_{ex} \right)
     \label{dec-free-ene}
@@ -211,7 +211,7 @@ In the limit $L\to \infty$, the excess free energy due to the confinement is zer
     \label{cas-diff}
 \end{align}
 
-}
+
 
 To achieve that, Vasilyev \cite{vasilyev_universal_2009} developed a method to compute this derivative thanks to a dummy coupling parameter. Even though the system's size is discrete, it is possible to obtain a continuous-like size of the system thanks to the progressive decoupling the $k$-th layer of the system. If $H_0$ is the Hamiltonian of size $L$ and $H_1$ the Hamiltonian of size $L-1$ (see Fig \ref{decouplage}), then we define the crossover Hamiltonian as
 \begin{align}
@@ -242,7 +242,7 @@ For the SOS model, it is possible to exactly compute the energy variation produc
 &H_{cr,SOS}(\lambda) = H_{0,SOS} - \nn
 &\frac{\lambda J}{2} \sum_x \left[ \sgn(k-1-h(x)) \sgn(k+1-h(x)) - \sgn(k-h(x)) \left( \sgn(k-1-h(x))+\sgn(k+1-h(x)) \right) \right]
 \end{align}
-where the prefactor $\frac{1}{2}$ take into account the prefactor between Ising and SOS models in Hamiltonian \eqref{energie-sos-ising}. By doing the table of values , we notice that every term in the sum is equal to $-1$ independently of $k$, since contrary to Ising models, SOS models do not possess any bulk energy. {\color{red}We thus have to find another method to compute the thermodynamic force in the SOS model.}
+where the prefactor $\frac{1}{2}$ take into account the prefactor between Ising and SOS models in Hamiltonian \eqref{energie-sos-ising}. By doing the table of values , we notice that every term in the sum is equal to $-1$ independently of $k$, since contrary to Ising models, SOS models do not possess any bulk energy. We thus have to find another method to compute the thermodynamic force in the SOS model.
 
 %%%%%%%%%%%%%%%%%%% 
 \subsection{The Lopes-Jacquin-Holdsworth method}
@@ -267,7 +267,7 @@ In the limit $\mu_2 \to \infty$, the correlation length at the reference state w
 where $\delta L$ is the difference thickness between two systems, and which is then independent of $\mu_2$ in the large chemical potential limit as the free energy $F(\mu_2,L)$ converges to the bulk energy.
 Since in Kawasaki dynamics the total height is constant, this method does work only for model A.
 
-{\color{red}
+
 The computation of the difference of free energy depends largely of the chemical potential $\mu_2$. However, since we are interested in the Casimir force \eqref{cas-diff}, it is sufficient to chose a suitable chemical potential $\mu_2$ for which the excess free energy can be safely considered negligible \cite{lopes_cardozo_critical_2014} . We define the function
 \begin{align}
     D(\mu,L_1,L_2) =  < M(L_1)-M(L_1-1) - (M(L_2)-M(L_2-1) >
@@ -277,8 +277,9 @@ where $M=\sum_i h_i$
 %all mean magnetizations per site $M$ 
 are taken at the same temperature and chemical potential, 
 omitted in the notation for the sake of lightness. The contribution of high $\mu$ becomes negligible to the Casimir force when the function $D$ becomes null.
-}
-{\color{red} The method only makes sense in the Glauber dynamics. In the Kawasaki dynamics, since $\sum_i h_i$ is set to a constant, the integration is done over a constant. We will see in Sec \ref{gen-lopes} a generalized method to bypass this problem.}
+
+
+The method only makes sense in the Glauber dynamics. In the Kawasaki dynamics, since $\sum_i h_i$ is set to a constant, the integration is done over a constant. We will see in Sec \ref{gen-lopes} a generalized method to bypass this problem.
 
 %%%%%%%%%%%%%%%%%%% 
 \section{Tips and tricks}

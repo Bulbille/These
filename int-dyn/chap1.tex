@@ -754,7 +754,7 @@ H = J \sum_{i=0}^{L'} |h_i-h_{i+1}| + \frac{V(h_i)+V(h_{i+1})}{2}
 
 
 
-The first system where the SOS model has been applied was crystals' growth in 1972 \cite{gilmer_simulation_1972}. Since then, the model has been used with some success in naphthalene cristals\cite{elwenspoek_kinetic_1987}, experimental expitaxial growth\cite{wilby_scaling_1992}, polymer membranes \cite{boal_mechanics_nodate,gompper_steric_1989}, or interfacial wetting \cite{fisher_walks_1983}.
+The first system where the SOS model has been applied was crystals' growth in 1972 \cite{gilmer_simulation_1972}. Since then, the model has been used with some success in naphthalene cristals\cite{elwenspoek_kinetic_1987}, experimental expitaxial growth\cite{wilby_scaling_1992}, polymer membranes \cite{boal_mechanics_2012,gompper_steric_1989}, or interfacial wetting \cite{fisher_walks_1983}.
 
 In the SOS model, the sites $i$ of height $h_i$ can take any value in $[0,L]$. The Restrictied Solid-On-Solid model (RSOS) is a variation where sites can only take the value $h_{i+1} \in [h_i-1,h_i,h_i+1]$\cite{privman_transfer-matrix_1989}. This approximation works for very low temperatures or very smooth interfaces \cite{kim_conserved_1994,vaysburd_critical_1995}. 
 
@@ -767,7 +767,7 @@ and also has a restricted version. The SOS model has an exact relation with the 
 
 
 
-Since the dimensionality of the system has been reduced in only taking into account the height interface $h_i$ at site $i$ instead of the position of all particles, we can think of an interface as a partially self-avoiding walk. This idea, which will be developed in section \ref{sec-continuous-model}, has proven quiet powerfull in finding exact solutions of the generating function \cite{owczarek_exact_1993} or the extreme deviations statistics of the interface \cite{majumdar_airy_2005,schehr_universal_2006}.
+Since the dimensionality of the system has been reduced in only taking into account the height interface $h_i$ at site $i$ instead of the position of all particles, we can think of an interface as a partially self-avoiding walk. This idea, which will be developed in section \ref{sec-continuous-interface}, has proven quiet powerfull in finding exact solutions of the generating function \cite{owczarek_exact_1993} or the extreme deviations statistics of the interface \cite{majumdar_airy_2005,schehr_universal_2006}.
 
 In the canonical ensemble, the height interface is fixed to $N$, which is translated in the partition function as
 \begin{align}
@@ -983,19 +983,19 @@ the imposed one. However this full situation is very difficult to analyse and to
 \end{equation}
 where $L$ is given by the underlying model A or B dynamical operator and the noise has the correlation function as given by Eq. \eqref{gnoise}, and ${\bf v}(\bx)$ is the imposed (time independent) hydrodynamic flow or can equally well be an external drive imposed on the colloidal particles, due to the gravitational or electric field for example. 
 
-The simplest case one can consider is where the driving field ${\bf v}(\bx) ={\bf v}_0$ is uniform \cite{leung_field_1986.bray_coarsening_2000}. Unfortunately this simple driving does not lead to a new steady state. Basically all of the colloidal particles acquire an average velocity ${\bf v_0}$ and so move along at the same speed relative to each other. Mathematically this can be seen by making the Galilean transformation
+The simplest case one can consider is where the driving field ${\bf v}(\bx) ={\bf v}_0$ is uniform \cite{leung_field_1986,bray_coarsening_2000}. Unfortunately this simple driving does not lead to a new steady state. Basically all of the colloidal particles acquire an average velocity ${\bf v_0}$ and so move along at the same speed relative to each other. Mathematically this can be seen by making the Galilean transformation
 \begin{equation}
 \phi (\bx,t)= \phi(\bx-{\bf v}_0t,t) = \phi({\bf y},t)
 \end{equation}
 This transformation eliminates the driving from the evolution equation \eqref{drive} and so we find an equilibrium system. 
 
-The most studied example is where the driving is a shear flow \cite{derks_suppression_2006,thiebaud_nonequilibrium_2010}. The effective dynamics of the surface term in the presence of a shear flow, parallel to the interface \cite{bray_interface_2001,bray_interface_2001-1,}, is written as
+The most studied example is where the driving is a shear flow \cite{derks_suppression_2006,thiebaud_nonequilibrium_2010}. The effective dynamics of the surface term in the presence of a shear flow, parallel to the interface \cite{bray_interface_2001,bray_interface_2001-1}, is written as
 \begin{equation}
 {\bf v}(\bx) = \gamma z {\bf e}_x
 \label{eq-cisaillement}
 \end{equation}
-and was studied using the method explained in section (\ref{heightd}). The addition of a shear flow leads to the appearance of a nonlinear term in $h$ and the interface statistics thus become non-Gaussian. In Fig \ref{snap-ising-shear} we show the influence of such a shear flow in numerical simulations, which is exactly the behaviour to be seen in capillary waves in polymer melts \cite{derks_confocal_2004,derks_suppression_2006}, see Fig \ref{snap-derks-shear} . The shear has a confining effect on the interface \cite{smith_driven_2010,smith_interfaces_2008-1,smith_interfaces_2008}, thus increasing the effective surface tension of the system.
-
+ The addition of a shear flow leads to the appearance of a nonlinear term in $h$ and the interface statistics thus become non-Gaussian. In Fig \ref{snap-ising-shear} we show the influence of such a shear flow in numerical simulations, which is exactly the behaviour to be seen in capillary waves in polymer melts \cite{derks_confocal_2004,derks_suppression_2006}, see Fig \ref{snap-derks-shear} . The shear has a confining effect on the interface \cite{smith_driven_2010,smith_interfaces_2008-1,smith_interfaces_2008}, thus increasing the effective surface tension of the system.
+In Chap \ref{chap-driven} we study the effect of a uniform driving $v(\bx) = \gamma {\bf e}_c$.
 
 
 
@@ -1004,5 +1004,5 @@ and was studied using the method explained in section (\ref{heightd}). The addit
 %%%%%%%%%%%%%%%%%%%% 
 
 Statistical field theory \cite{bray_theory_1994} gives us a method to study the dynamics of equilibrium fields \cite{bellac_equilibrium_2004}. The surface tension of such a system is then defined as the difference of free energy between the bulk and the interface \cite{cahn_free_1958,abraham_transfer_1973}. The two main models are model A and model B \cite{hohenberg_theory_1977}, which decribe the dynamics of a field respectively in grand-canonical and the canonical ensemble. From those equations, we have defined what is an interface and have derived the Edwards-Wilkinson equation \cite{edwards_surface_1982} for both ensembles.
-The Ising model \cite{niss_history_2005,niss_history_2006} provides a good way to study the bahviour of the field by discretization, which is easier to compute in numerical simulations \cite{newman_monte_1999}. The same kind of dimensional reduction can be done in order to get an interface lattice model which is called the Solid-On-Solid model \cite{gilmer_simulation_1972}. This model allows the use of the transfer method in an easier way than the Ising model\cite{privman_asymptotic_1989}. 
+The Ising model \cite{niss_history_2005,niss_history_2009} provides a good way to study the bahviour of the field by discretization, which is easier to compute in numerical simulations \cite{newman_monte_1999}. The same kind of dimensional reduction can be done in order to get an interface lattice model which is called the Solid-On-Solid model \cite{gilmer_simulation_1972}. This model allows the use of the transfer method in an easier way than the Ising model\cite{privman_asymptotic_1989}. 
 Also, the presence of out-of-equilibrum hydrodynamic flows tend to present interesting features. One such example is thee Couette shear \cite{derks_suppression_2006}, which has been found to smoothen the interface \cite{smith_interfaces_2008-1}.
