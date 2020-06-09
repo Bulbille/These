@@ -28,34 +28,33 @@ appropriate to study diffusive dynamics and driving.
 \\ \\
 {\bf Keywords : }  Interface models, phase ordering dynamics, Ising model, Solid-On-Solid model, Casimir force, driven nonequilibrium steady states
 
-\cleardoublepage
-{\bf \huge Résumé en français} \\
+%\cleardoublepage
+\chapter*{Résumé en français} 
 
 La majorité des systèmes statistiques peuvent être décrits par un paramètre d'ordre, comme la magnétisation moyenne dans les systèmes magnétiques, la densité dans un fluide ou l'orientation moyenne des polymères dans les cristaux liquides. Les propriétés statiques et dynamiques de tels systèmes est bien décrite par la théorie statistique des champs. Dans cette théorie, le champ $\phi$ est soumis à un hamiltonien $H(\phi)$, et ses propriétés peuvent être dérivée de la fonction de partition $Z$.
 Lorsque ces systèmes possèdent une transition de phase au point critique, il y a une discontinuité de l'énergie libre due à la modification des micro-configurations possibles. 
 Dans les systèmes magnétiques, on passe ainsi d'une magnétisation nulle à une magnétisation finie, les liquides qui étaient auparavant mélangés se séparent, et les polymères adoptent une direction moyenne commune. Dans la phase ordonnée on retrouve alors des composantes connexes où la valeur de $\phi$ est quasi-constante. Entre ces composantes connexes se situe l'interface entre les phases. 
-Dans cette thèse, nous nous intéressons particulièrement aux propriétés statiques et dynamiques des interfaces dans des modèles continus et discrets avec des contraintes telles que le confinement ou le cisaillement. \\
+Dans cette thèse, nous nous intéressons particulièrement aux propriétés statiques et dynamiques des interfaces dans des modèles continus et discrets avec des contraintes telles que le confinement ou le cisaillement. 
 
-
-{\bf \large Description d'une interface} \\
+\section*{Description d'une interface} 
 
 La première partie de cette thèse est consacrée à la description des interfaces à partir de la théorie statistique des champs. L'utilisant un champ externe $\phi^4$ dans l'Hamiltonien induit une séparation de phase en dessous de la température critique, ce qui donne une interface dont le profil peut-être calculé grâce aux équations dynamiques du modèle A dans le cas stationnaire. L'énergie libre associée à cette interface est directement reliée à la tension superficielle $\sigma$ par la relation de Cahn-Hilliard.
 Depuis les équations de théorie statistique des champs, en considérant une interface d'épaisseur nulle, on retrouve les équations d'Edwards-Wilkinson pour le modèle A et le modèle B. La réduction du nombre de degrés de liberté par cette transformation d'un volume en surface permet leur étude grâce à des intégrales de chemin, qui seront détaillées plus tard.
 
 Ensuite nous expliquons le modèle le plus simple sur réseaux, le modèle d'Ising, qui décrit un réseau orthogonal de spins avec une interaction uniquement entre les plus proches voisins et un champ externe. Ce modèle, où chaque site du réseau prend la valeur $\sigma_1 = \pm1$, permet également de modéliser un système de gaz sur réseau ou de liquides binaires en faisant un changement de variable sur $\sigma_i$. En appliquant la même approximation d'interface d'épaisseur nulle que précédemment, on trouve cette fois-ci le modèle Solid-On-Solid. La fonction de partition SOS a l'avantage d'être diagonalisée grâce à la matrice de transfert, dont le formalisme est développé. Dans la limite thermodynamique, seul l'état fondamental (qui possède la plus grande valeur propre de la matrice de transfert) est nécessaire pour obtenir toutes les observables du système. 
 
-Dans ce premier chapitre, une grande importance est également donnée quant à la différence entre les différents ensembles statistiques. La complexité de l'ensemble canonique provient de la contrainte sur la hauteur totale de l'interface qui ne peut être intégrée au formalisme des matrices de transfert. Pour étudier ces différences, il faut donc utiliser des méthodes numériques. Dans l'ensemble canonique, il est également possible d'introduire des états stationnaires hors-équilibre grâce à l'advection d'un champ de vitesse, que nous introduisons ici mais discuterons dans le dernier chapitre.\\
+Dans ce premier chapitre, une grande importance est également donnée quant à la différence entre les différents ensembles statistiques. La complexité de l'ensemble canonique provient de la contrainte sur la hauteur totale de l'interface qui ne peut être intégrée au formalisme des matrices de transfert. Pour étudier ces différences, il faut donc utiliser des méthodes numériques. Dans l'ensemble canonique, il est également possible d'introduire des états stationnaires hors-équilibre grâce à l'advection d'un champ de vitesse, que nous introduisons ici mais discuterons dans le dernier chapitre.
 
 
-{\bf \large Méthodes numériques} \\
+\section*{Méthodes numériques}
 
 Dans ce chapitre, nous développons le fonctionnement des simulations de Monte Carlo Métropolis, qui permettent d'explorer l'espace des configurations et ainsi obtenir les valeurs moyennes d'observables. Ces méthodes sont particulièrement adaptées aux systèmes sur réseau comme le modèle d'Ising ou Solid-On-Solid, et on utilise alors l'algorithme de Glauber ou de Kawasaki selon l'ensemble thermodynamique dans lequel on se place. 
 
 Néanmoins, l'énergie libre n'est pas une valeur mesurable directement dans les simulations de Monte Carlo, et il faut alors utiliser des méthodes indirectes. La méthode de Vasilyev consiste à découpler progressivement une rangée du système afin d'obtenir la dérivée de l'énergie libre par rapport à la taille du système. Cette méthode ne fonctionnant pas dans le cas du modèle SOS à cause de l'absence de terme de volume dans son hamiltonien, on utilise alors la méthode Lopes-Jacquin-Holdsworth, qui a été développée dans le cas d'un champ magnétique uniforme. Puisque l'intensité du champ magnétique est la valeur conjuguée de la magnétisation totale, on calcule alors l'intégrale de la magnétisation entre deux intensités afin d'obtenir la différence entre l'énergie libre des deux systèmes. Puisque cette méthode utilise la magnétisation, elle ne peut donc pas être utilisée lorsque le paramètre d'ordre est conservé, ce qui nous mène à une conclusion : il n'existe pas de méthode pour la mesure de l'énergie libre dans des simulations numériques de Kawasaki pour le modèle SOS.
 
-Le chapitre se termine avec une petite liste d'astuces à connaître pour celui qui désirerait reproduire mes résultats numériques, principalement sur l'optimisation du code et la parallélisation.\\
+Le chapitre se termine avec une petite liste d'astuces à connaître pour celui qui désirerait reproduire mes résultats numériques, principalement sur l'optimisation du code et la parallélisation.
 
-{\bf \large Interfaces à l'équilibre et effets de taille finie} \\
+\section*{Interfaces à l'équilibre et effets de taille finie}
 
 Lorsque la longueur de corrélation est du même ordre de grandeur que la taille du système, la contrainte imposée sur les modes mous de fluctuations ajoute une partie singulière à l'énergie libre. Cette dépendance de l'énergie libre en fonction de la taille du système implique une force thermodynamique qui s'appelle force de Casimir dans le cas des fluctuations du champ électromagnétique entre deux plaques diélectriques parfaitement conductrices, ou effet Casimir critique dans les systèmes critiques. Après avoir exposé ces deux effets grâce à la mécanique quantique et le groupe de renormalisation, nous étudions cette force de confinement dans le cas des interfaces confinées. 
 
@@ -63,13 +62,13 @@ En utilisant le formalisme de Matsubara pour l'équation du propagateur de l'ham
 
 Puisque la méthode Lopes-Jacquin-Holdsworth de calcul de l'énergie libre dans les simulations de Monte Carlo n'est pas utilisable dans la dynamique de Kawasaki et que la méthode de Vasilyev ne l'est pas non plus pour les modèles SOS, nous généralisons la méthode LJH pour des champs externes non-uniformes, ce qui permet l'intégration sur une magnétisation généralisée qui n'est plus conservée dans une dynamique de Kawasaki. Nous montrons que cette généralisation est en accord avec la matrice de transfert SOS, et observons le même comportement de l'énergie libre pour les dynamiques de Glauber et de Kawasaki.
 
-Ce troisième chapitre s'achève par la diagonalisation exacte de la matrice de transfert du modèle SOS en absence de potentiel externe, généralisant ainsi les résultats de Privman, et nous étudions les limites à faible et haute température ainsi que dans la limite thermodynamique.\\
+Ce troisième chapitre s'achève par la diagonalisation exacte de la matrice de transfert du modèle SOS en absence de potentiel externe, généralisant ainsi les résultats de Privman, et nous étudions les limites à faible et haute température ainsi que dans la limite thermodynamique.
 
-{\bf \large Le modèle Particles-Over-Particles} \\
+\section*{Le modèle Particles-Over-Particles}
 
-Le modèle SOS est un modèle d'interface provenant de l'approximation à basse température du modèle d'Ising. Nous développons dans ce quatrième chapitre un nouveau modèle : le modèle POP. Ce nouveau modèle prend en compte le terme d'entropie associé au modèle d'Ising et qui se retrouve aisément lorsque l'on fait des simulations numériques sur Ising, mais qui font défaut dans SOS. Ce terme d'entropie apparaît lorsque l'on considère non plus juste la hauteur de l'interface (comme dans SOS), mais également le nombre de particules en dessous. En labellisant ainsi les particules, il devient possible de créer des modèles avec $M$ types différents de particules, chacune étant régie par un coefficient cinétique ou un coefficient de diffusion dans le cas où elles appartiennent à des ensembles thermodynamiques différents. Nous finissons le chapitre en montrant comment procéder aux simulations numériques dans ce modèle, que nous comparons à la matrice de transfert. \\
+Le modèle SOS est un modèle d'interface provenant de l'approximation à basse température du modèle d'Ising. Nous développons dans ce quatrième chapitre un nouveau modèle : le modèle POP. Ce nouveau modèle prend en compte le terme d'entropie associé au modèle d'Ising et qui se retrouve aisément lorsque l'on fait des simulations numériques sur Ising, mais qui font défaut dans SOS. Ce terme d'entropie apparaît lorsque l'on considère non plus juste la hauteur de l'interface (comme dans SOS), mais également le nombre de particules en dessous. En labellisant ainsi les particules, il devient possible de créer des modèles avec $M$ types différents de particules, chacune étant régie par un coefficient cinétique ou un coefficient de diffusion dans le cas où elles appartiennent à des ensembles thermodynamiques différents. Nous finissons le chapitre en montrant comment procéder aux simulations numériques dans ce modèle, que nous comparons à la matrice de transfert. 
 
-{\bf \large Interfaces stationnaires hors-équilibre} \\
+\section*{Interfaces stationnaires hors-équilibre} 
 
 Lorsqu'une interface est advectée par un champ de vitesse, sa largeur et sa longueur de corrélation sont modifiées. Le cinquième et dernier chapitre s'intéresse à un écoulement uniforme et constant. 
 

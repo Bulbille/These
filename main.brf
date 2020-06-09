@@ -23,7 +23,7 @@
 \backcite {noauthor_mesocentre_nodate}{{xiii}{(document)}{Doc-Start}}
 \backcite {hohenberg_theory_1977}{{1}{1}{chapter.1}}
 \backcite {bray_theory_1994}{{1}{1}{chapter.1}}
-\backcite {onsager_crystal_1944}{{2}{1.1}{figure.caption.3}}
+\backcite {onsager_crystal_1944}{{2}{1.1}{figure.caption.9}}
 \backcite {l_landau_physique_1990}{{4}{1.1.2}{equation.1.1.17}}
 \backcite {hohenberg_theory_1977}{{6}{1.1.2}{equation.1.1.29}}
 \backcite {tuszynski_exact_1984}{{6}{1.1.2}{equation.1.1.35}}
@@ -41,8 +41,8 @@
 \backcite {niss_history_2005}{{14}{1.3.1}{equation.1.3.102}}
 \backcite {niss_history_2009}{{14}{1.3.1}{equation.1.3.102}}
 \backcite {gupta_phase_1988}{{14}{1.3.1}{equation.1.3.102}}
-\backcite {bellac_equilibrium_2004}{{14}{1.3.1}{figure.caption.6}}
-\backcite {aizenman_proof_1981}{{14}{1.3.1}{figure.caption.6}}
+\backcite {bellac_equilibrium_2004}{{14}{1.3.1}{figure.caption.12}}
+\backcite {aizenman_proof_1981}{{14}{1.3.1}{figure.caption.12}}
 \backcite {de_jongh_experiments_1974}{{14}{1.3.1}{equation.1.3.103}}
 \backcite {wp_wold_ising_2000}{{14}{1.3.1}{equation.1.3.103}}
 \backcite {ikeda_neutron_1973}{{14}{1.3.1}{equation.1.3.103}}
@@ -75,12 +75,12 @@
 \backcite {siegert_scaling_1993}{{20}{1.3.3}{equation.1.3.130}}
 \backcite {pearce_exact_1989}{{20}{1.3.3}{equation.1.3.130}}
 \backcite {abraham_transfer_1973}{{20}{1.3.3}{equation.1.3.132}}
-\backcite {derks_suppression_2006}{{22}{1.9}{figure.caption.11}}
-\backcite {girot_conical_2019}{{23}{1.4}{figure.caption.11}}
-\backcite {derks_confocal_2004}{{23}{1.4}{figure.caption.11}}
-\backcite {derks_suppression_2006}{{23}{1.4}{figure.caption.11}}
-\backcite {berthier_nonequilibrium_2002}{{23}{1.4}{figure.caption.11}}
-\backcite {berthier_shearing_2002}{{23}{1.4}{figure.caption.11}}
+\backcite {derks_suppression_2006}{{22}{1.9}{figure.caption.17}}
+\backcite {girot_conical_2019}{{23}{1.4}{figure.caption.17}}
+\backcite {derks_confocal_2004}{{23}{1.4}{figure.caption.17}}
+\backcite {derks_suppression_2006}{{23}{1.4}{figure.caption.17}}
+\backcite {berthier_nonequilibrium_2002}{{23}{1.4}{figure.caption.17}}
+\backcite {berthier_shearing_2002}{{23}{1.4}{figure.caption.17}}
 \backcite {derks_suppression_2006}{{23}{1.4}{equation.1.4.145}}
 \backcite {thiebaud_nonequilibrium_2010}{{23}{1.4}{equation.1.4.145}}
 \backcite {bray_interface_2001}{{23}{1.4}{equation.1.4.145}}
@@ -112,7 +112,7 @@
 \backcite {glauber_timedependent_1963}{{27}{2.2.1}{subsection.2.2.1}}
 \backcite {kawasaki_diffusion_1966}{{29}{2.2.2}{subsection.2.2.2}}
 \backcite {vasilyev_universal_2009}{{31}{2.3.1}{equation.2.3.25}}
-\backcite {vasilyev_universal_2009}{{31}{2.4}{figure.caption.14}}
+\backcite {vasilyev_universal_2009}{{31}{2.4}{figure.caption.20}}
 \backcite {lopes_cardozo_critical_2014}{{32}{2.3.2}{subsection.2.3.2}}
 \backcite {lopes_cardozo_critical_2014}{{33}{2.3.2}{equation.2.3.34}}
 \backcite {martin_ankerl_fast_nodate}{{33}{2.4}{section.2.4}}
