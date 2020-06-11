@@ -320,8 +320,7 @@ The first term corresponds to the surface energy. In principle surfaces can also
 H_b[h] = \int d\br \frac{\kappa_b}{2}[\nabla^2 h(\br)]^2
 \end{equation} 
 where $\kappa_b$ is called the bending rigidity.
-
-The term $V(h)$ is taken to represent the potential energy of the surface. For instance if the surface interacts via an infinite hard-core potential with a solid surface at $z=0$, this can be modelled by the potential $V(z) =0$ for $z \greater 0$ and $V(z)=\infty$ for $z\leq 0$. Another example is where the surface describes the surface of a liquid such as water, again with a solid surface at $z=0$, in the presence of gravity the potential energy of the water column above the area 
+The term $V(h)$  represents the potential energy of the surface per unit area. For instance if the surface interacts via an infinite hard-core potential with a solid surface at $z=0$, this can be modelled by the potential $V(z) =0$ for $z \greater 0$ and $V(z)=\infty$ for $z\leq 0$. Another example is where the surface describes the surface of a liquid such as water, again with a solid surface at $z=0$, in the presence of gravity the potential energy of the water column above the area 
 element $d\bx$ is given by
 \begin{equation}
 \delta V = \int_0^{h(\br)} dz\ \rho g z = \frac{1}{2}\rho g h^2(\br)
@@ -704,7 +703,7 @@ We translate the same approximation in order to study interfaces in lattice mode
 where $\sgn(x \less 0) = -1$ and $\sgn(x \greater 0) = 1$, and $h_i$ is the height of the interface at site $i$. 
 This is the low temperature approximation of the Ising model, where there are no overhangs from the $+$ phase into the $-$ phase and vice versa. If we note $J_\perp$ the vertical bond energy between two Ising spins and $J_\parallel$ the horizontal bond energy, this approximation becomes equivalent to a highly anisotropic Ising model where $J_\perp \gg J_\parallel$ \cite{swendsen_roughening_1977}.
 
-In a slab or semi-infinite geometry as seen in Fig \ref{figure-sos}, the height of the interface corresponds to the number of spins $-$ in the column $i$, while for an infinite geometry, we define $h_i$ as the number of excess spins $-$ with respect to the mean height, set in the figure at $=0$ \cite{van_leeuwen_pinning_1981}. In this representation, height profiles represent an interface height and not a number of particles, since there is no entropy term associated with the number of ways that the $h_i$ particles on each site can be chosen from the $N$ particles available. In chapter \ref{chap-pop}, we will address a model with those characteristics.
+In a slab or semi-infinite geometry as seen in Fig \ref{figure-sos}, the height of the interface corresponds to the number of spins $-$ in the column $i$, while for an infinite geometry, we define $h_i$ as the number of excess spins $-$ with respect to the mean height, set in the figure at $z=0$ \cite{van_leeuwen_pinning_1981}. In this representation, height profiles represent an interface height and not a number of particles, since there is no entropy term associated with the number of ways that the $h_i$ particles on each site can be chosen from the $N$ particles available. In chapter \ref{chap-pop}, we will address a model with those characteristics.
 Using the identities
 \begin{align}
 \min(a,b) &= \frac{|a+b| - |a-b|}{2} \\

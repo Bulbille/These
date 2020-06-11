@@ -2,14 +2,19 @@
 \chapter{Driven interfaces}
 \label{chap-driven}
 %%%%%%%%%%%%%%%%
-We consider the effect of uniform driving on the interface between two phases which are described by model C dynamics. The non-driven system has a classical Gaussian interface described by capillary wave theory. The model under driving retains Gaussian statistics but the interface statistics are modified by driving, notably the height fluctuations are suppressed and  the correlation length of the fluctuations is increased.
+
+One of the most natural ways of creating a non-equilibrium steady state is by applying
+external driving forces, as shown in Fig \ref{fig-driven}. Driving arises naturally in sedimenting systems due to gravity, in systems with free charges under the action of an electric field, and also due to the radiation pressure exerted by a laser. Experiments where a phase separated colloidal system is sheared parallel to the interface show that driving due to shear tends to suppress surface fluctuations \cite{derks_suppression_2006}, and similar results are found where Ising models are numerically sheared \cite{smith_interfaces_2008,smith_lateral_2010}. These results are somewhat surprising, for instance they
+are contrary to the observation that wind generates waves on the ocean. One may think that the precise nature of the driving plays a role, for instance uniformly driving a system may be intrinsically diferent to applying a shear field which is manifestly nonuniform. 
+
+In this capter we investigate driving using three different methos. 
+In the first section - which is almost a verbatim of a paper we have published \cite{dean_effect_2020} -  we develop model C interfaces (model B interface is invariant under galilian transformation under driving) and find that the height fluctuations are suppressed and the correlation length of the fluctuations is increased. 
+In the second section, we discuss driving in the SOS model, where the galilean invariance is broken by the discrete-time nature of numerical simulations.
+In the last section, we use a similar approach than in the paper (which is the approach that gaves us the idea of the paper) for the Particles-Over-Particles model in the case of two different particles type.
 
 %%%%%%%%%%%%%%%%
-    \section{Introduction}
+    \section{The effect of driving on model C interfaces}
 %%%%%%%%%%%%%%%%
-
-The model we introduce can also be used as a model for the effect of activity on interface dynamics.
-One of the most natural ways of creating a non-equilibrium steady state is by applying external  driving forces. Driving arises naturally in sedimenting systems due to gravity, in systems with free charges under the action of an electric field and also  due to the radiation pressure exerted by a laser. Experiments where a phase separated colloidal system is sheared parallel to the interface show that  driving due to shear tends to suppress surface fluctuations \cite{derks_suppression_2006}, and similar results are found where Ising models are numerically sheared  \cite{smith_interfaces_2008-1,smith_driven_2010}. These results are somewhat surprising, for instance they are contrary to the  observation that wind generates waves on the ocean. One may think that the precise nature of the driving plays a role, for instance uniformly driving a system may be intrinsically different to applying a shear field which is manifestly nonuniform. In this paper we investigate analytically the effect of uniform driving on a simple interface model. We find that the effect of this type of  driving is also to reduce surface fluctuations.
 
 Constructing a continuum model which is analytically tractable and is also affected by uniform driving is straightforward but contains some subtleties. In a continuum system it is clear that uniform driving can only move a system away from equilibrium when the driving acts differently on different particle types. For instance, consider  a system of identical interacting Brownian particles driven by a uniform  force. The force will induce the same average velocity on all the particles, consequently, in the frame moving with this average velocity, we will recover the unmodified equilibrium state. However, when multiple particle types are present, the mean velocity induced on different species are different and no Galilean transformation is possible. Perhaps the first such study of this phenomenon was due to Onsager \cite{lars_onsager_collected_1996}, who studied the conductivity of electrolytes and in doing so showed how the correlation functions in the steady state were modified by the electric field. 
 Recently there have been many studies of driven multi-particle Brownian systems \cite{dzubiella_lane_2002,chakrabarti_dynamical_2003,chakrabarti_reentrance_2004,sutterlin_dynamics_2009,glanz_nature_2012, klymko_microscopic_2016}, including the electrolyte problem,  and rich new physics has been found, even in the case of purely Gaussian theories \cite{demery_conductivity_2016,poncet_universal_2017} based on stochastic density functional theory \cite{dean_renormalization_1996}. 
@@ -19,16 +24,11 @@ Taking random driving in a given direction also leads to non-equilibrium steady 
 
 Driving can also be deterministic but space dependent, for instance if one considers applied shear flows, the spatial dependence of the flow means no Galilean transformation to an equilibrium steady state is possible and this therefore leads to non-equilibrium steady states. The effect of shear on interfaces in these type of systems yields interface equations of the stochastic Burgers type and the statistics are no thus longer Gaussian due to the presence of nonlinearities \cite{bray_interface_2001,bray_interface_2001-1,smith_interfaces_2008,smith_lateral_2010,thiebaud_nonequilibrium_2010,thiebaud_nonlinear_2014}
 
-
-In this paper we analyse what is known, in the classification of Hohenberg and Halperin \cite{hohenberg_theory_1977}, as model C type dynamics for two fields, one with conserved model B type dynamics, which is in addition convected at a uniform velocity to mimic driving. We refer to this first field as the colloid field.
+In this chapter we analyse what is known, in the classification of Hohenberg and Halperin \cite{hohenberg_theory_1977}, as model C type dynamics for two fields, one with conserved model B type dynamics, which is in addition convected at a uniform velocity to mimic driving. We refer to this first field as the colloid field.
 This colloid field is coupled to an additional field which undergoes model A non-conserved dynamics and which is not subjected to the driving. The model A field can be thought of a passive solvent and its coupling to the model B field is chosen in such a way that it has no influence on the non-driven equilibrium steady state. We then derive the effective dynamics between two separated low temperature phases by using a
 method introduced in \cite{bray_interface_2001,bray_interface_2001-1} for the study of interfaces under shear flow. This method yields a Gaussian theory for the interface statistics and driving introduces interesting new physics, notably we find that the effective surface tension of the system is increased but also the correlation length of interface fluctuations (due to an effective gravitational term) are increased. These observations are in qualitative agreement with experimental results on sheared low tension interfaces in phase separated colloidal systems \cite{derks_suppression_2006}. In this experimental system the interface fluctuations were also found to be well described by Gaussian statistics and this is our principal motivation for studying theories which remain Gaussian but are  modified by driving. While the long wavelength theory we find is of a capillary type, we also find new, higher derivative terms, which  are generated in the spectrum of the height fluctuations. 
 
 As an aside, we also show how the model introduced here can be used to analyse the effect of activity on the dynamics of the surface between two phases of active colloids. The activity is implemented by taking a different temperature for the colloid and solvent fields, this difference in temperatures leads to significantly modified surface statistics which again develop dependencies on static and dynamical variables of the model which otherwise remain hidden for the equilibrium version of the problem.
-
-%%%%%%%%%%%%%%%%
-    \section{Driven model C interfaces}
-%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%
     \subsection{The underling two field  model}
@@ -72,7 +72,7 @@ We now consider the dynamics of the fields. We take local diffusive model B dyna
 \frac{\partial \phi(\bx,t)}{\partial t} &=& -\alpha\frac{\delta H}{\delta \phi(\bx)}+ \sqrt{2\alpha T}{ \eta}_2(\bx,t).
 \end{eqnarray}
 The first equation corresponds to standard model B dynamics but with an advection term by a constant velocity field $\bf v$. 
-{\color{red} In Fig \ref{fig-driven}, we show the effect of that advection term in the presence of an interface. Since phase 1 is more diluted than phase 2, there are less particles which are driven at constant velocity $\bv$.}
+In Fig \ref{fig-driven}, we show the effect of that advection term in the presence of an interface. Since phase 1 is more diluted than phase 2, there are less particles which are driven at constant velocity $\bv$.
 The second equation has no advection term and is simple model A dynamics. In principle we can also treat the case where the dynamics of the field $\phi$ is also diffusive and thus of model $B$ type, the analysis given here can be extended to this case but the analysis of the resulting equations is considerably more complicated. The use of model A dynamics for the solvent is justified by assuming that its dynamics is faster than that of the colloids and that the volume fraction can vary due to local conformational changes rather than  diffusive transport.
 
 The noise terms above 
@@ -121,7 +121,7 @@ Inverting the temporal Fourier transform then gives the effective evolution equa
 %%%%%%%%%%%%
 \subsection{Effective interface dynamics}
 %%%%%%%%%%%%
-{\color{red}
+
 Following Sec \ref{sec-heightd}, we derive the dynamical equation for the interface $h(\br)$, where
 \begin{equation}
     \psi(\bx,t) = f(z-h({\bf r},t))
@@ -148,7 +148,7 @@ By using the Cahn-Hilliard estimate of the surface tension \eqref{CHST}, we thus
     \int_{-\infty}^\infty dz f'(z-h({\bf r},t)\mu(\bx,t) = \sigma[\nabla^2 h({\bf r},t)-m^2 h({\bf r},t)]
 \end{equation}
 where $m^2 = \Delta\psi g /\sigma$. 
-}
+
 
 We now carry out the same operation on the left hand side of Eq. (\ref{eqpsi}). First we have
 \begin{align}
@@ -189,7 +189,7 @@ The correlation function of this noise is most easily evaluated in terms of its 
 \end{equation}
 Using the relations Eqs. \eqref{CHST} and \eqref{eqdelta} one  can show that
 \begin{equation}
-    < \hat \xi({\bf q},\omega)\hat \xi({\bf q}',\omega')> =2T(2\pi)^d \delta(\omega +\omega') \delta({\bf q}+{\bf q}') \left[ \frac{\sigma}{\kappa}\frac{\alpha D^2\lambda^2}{\omega^2 +\alpha^2\lambda^2} + \frac{D\Delta\psi^2}{2q}\right].
+    < \hat \xi({\bf q},\omega)\hat \xi({\bf q}',\omega')> =2T(2\pi)^d \delta(\omega +\omega') \delta({\bf q}+{\bf q}') \left[ \frac{\sigma}{\kappa}\frac{\alpha D^2\lambda^2}{\omega^2 +\alpha^2\lambda^2} + \frac{D\Delta\psi^2}{2q}\right]
 \end{equation}
 In full Fourier space the equation of motion for the field $\psi$ then reads
 \begin{equation}
@@ -200,14 +200,55 @@ In full Fourier space the equation of motion for the field $\psi$ then reads
 From this, the full Fourier transform of the correlation function of the interface height is given by
 \begin{equation}
     \hat C({\bf q},\omega)  = 2TD \frac{\left[ \frac{\Delta\psi^2}{2q}(\omega^2+\alpha^2 \lambda^2) + \frac{\sigma\alpha D\lambda^2}{\kappa}\right]}{\left|i[\frac{\alpha\lambda\Delta\psi^2}{2 q}(\omega + {\bf q}\cdot{\bf v}) + \frac{\lambda \sigma D}{\kappa}\omega + D\sigma(q^2+m^2)\omega]
-+[\alpha\lambda D\sigma(q^2+m^2) -\frac{\Delta\psi^2}{2q}\omega(\omega+{\bf q}\cdot{\bf v})]\right|^2}.
++[\alpha\lambda D\sigma(q^2+m^2) -\frac{\Delta\psi^2}{2q}\omega(\omega+{\bf q}\cdot{\bf v})]\right|^2}
 \end{equation}
 Using the above we can extract the equal time height-height correlation function in the steady states. Its spatial Fourier transform can shown to be given by
+\begin{align}
+    \tilde C_s({\bf q}) = \frac{1}{2\pi} \int d\omega \hat C({\bf q}, \omega)
+    \label{fourier-steady-state}
+\end{align}
+
+This integral has the same form as 
+\begin{equation}
+I(f(\omega)) = \int \frac{d\omega}{2\pi} \frac{f(\omega)}{\left|i(A\omega + B) + (C-D\omega-E \omega^2)\right|}
+\end{equation}
+so we see that the integral we need to evaluate can be written in the form
+\begin{equation}
+I = a I(\omega^2) + b I(1)
+\end{equation}
+The calculation of Eq. \eqref{fourier-steady-state} can be carried out in the presence of a forcing term on the height profile in order to compute the response function for the surface which has a denominator of the form
+\begin{equation}
+{\rm Den} = i(A\omega + B) + (C-D\omega-E \omega^2)
+\end{equation}
+and due to causality the above only has poles in the upper complex plane (due to the convention of Fourier transforms used here). Consequently we find that
+\begin{equation}
+    \int \frac{d\omega}{2\pi} \frac{1}{i(A\omega + B) + (C-D\omega-E \omega^2)} = 0
+    \label{key}
+\end{equation}
+as one may close the integration contour in the lower half of the complex plane. Taking the real and imaginary part of Eq. (\ref{key}) leads to
 \begin{eqnarray}
-\tilde C_s({\bf q}) &=& \frac{1}{2\pi} \int d\omega \hat C({\bf q}, \omega)\nonumber\\
-&=&T \frac{\left(2 D\sigma q(\kappa[q^2+m^2]+\lambda)+\alpha\kappa\lambda\Delta\psi^2\right)^2 +\kappa^2 \Delta\psi^4 ({\bf q}\cdot{\bf v})^2}{\sigma[q^2+m^2]\left(2D q\sigma (\kappa[q^2+m^2]+\lambda)+\alpha \kappa\lambda \Delta\psi^2\right)^2 + \kappa\left(\kappa\sigma[q^2+m^2] + \lambda\sigma\right)\Delta\psi^4({\bf q}\cdot{\bf v})^2}.\label{eqmaind}
+C I(1) -D I(\omega) - E I(\omega^2) = 0 \\
+AI(\omega) + B I(1) = 0
 \end{eqnarray}
-An outline of the derivation of this result is given in the Appendix to the paper.
+Using this we can express $I(\omega^2)$ as a function of $I(1)$, and explicitly we have 
+\begin{equation}
+I(\omega^2) = \frac{I(1)}{E}[C+ \frac{DB}{A}]
+\end{equation}
+
+To evaluate $I(1)$ we now use
+\begin{equation}
+I(1) = -{\rm Im} \int \frac{d\omega}{2\pi}\frac{1}{A\omega +B} \frac{1}{i(A\omega + B) + (C-D\omega-E \omega^2)}
+\end{equation}
+The integrand above has no poles in the lower half of the complex plane but has a {\em half pole} at $\omega=-B/A$ on the real axis, thus using standard complex analysis we find
+\begin{equation}
+I(1) = \frac{1}{2(CA + BD - \frac{EB^2}{A})}
+\end{equation}
+
+Then after some laborious, but straightforward algebra, we obtain that 
+\begin{align}
+\tilde C_s({\bf q} = T \frac{\left(2 D\sigma q(\kappa[q^2+m^2]+\lambda)+\alpha\kappa\lambda\Delta\psi^2\right)^2 +\kappa^2 \Delta\psi^4 ({\bf q}\cdot{\bf v})^2}{\sigma[q^2+m^2]\left(2D q\sigma (\kappa[q^2+m^2]+\lambda)+\alpha \kappa\lambda \Delta\psi^2\right)^2 + \kappa\left(\kappa\sigma[q^2+m^2] + \lambda\sigma\right)\Delta\psi^4({\bf q}\cdot{\bf v})^2}\label{eqmaind}
+\end{align}
+
 In the absence of driving, {\em i.e.} when ${\bf v}={\bf 0}$ we recover the equilibrium correlation function
 \begin{equation}
     \tilde C_s({\bf q})= \tilde C_{eq}({\bf q})= \frac{T}{\sigma[q^2+m^2]},
@@ -313,9 +354,10 @@ and thus at the largest length scales of the problem there is a qualitative depa
 The above result should be compared with that obtained in \cite{zia_interfacial_1991} for 
 systems with anisotropic thermal white noise, which breaks detailed balance and mimics random driving of the system parallel to the interface; for free interfaces it was found that $C_s(q)\sim 1/q$.
 
-%%%%%%%%%%%%%%%%
-    \subsection{Conclusions}
-%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%
+    \subsection{Conclusion}
+%%%%%%%%%%%%%%%%%%%%
+
 We have presented a model to analyse the effect of uniform driving on the dynamics of the interface in a two phase system. In order to generate a non-equilibrium state a second {\em hidden} order parameter was introduced. This models the behaviour of a local or solvent degree of freedom which is not influenced by the driving field. In this way, we obtain out of equilibrium interface fluctuations which are described by Gaussian statistics as found in the experimental study of \cite{derks_suppression_2006}. The agreement with this experimental study also extends to qualitative agreement with the increase of the effective surface tension in the direction of driving and also an increase in the correlation length of the height fluctuations with respect to a non-driven equilibrium interface. However, we  note that numerical simulations of a sheared Ising interface \cite{smith_interfaces_2008-1,smith_lateral_2010} also reveal a reduction of interface fluctuations but the lateral correlation length is found to be reduced.
 
 The basic idea underlying this study would be interesting to apply to a number of possible variants of this model, for instance both the dynamics
@@ -340,48 +382,49 @@ This model can then be driven in a number of ways, for instance using conserved 
 could be implemented. It would be interesting to see to what extent this modification of the driven lattice gas model affects the non-equilibrium driven states that arise. 
 
 It is also clear that this lattice model can be used to simulate the effect of activity where the Ising spins $S_1$ corresponding to the colloid field undergo  Kawasaki dynamics at the temperature $T_1$ where as the link variables $\sigma_{(ij)}$ undergo single spin flip non-conserved dynamics
-at the temperature $T_2$.
+at the temperature $T_2$.   
 
 %%%%%%%%%%%%%%%%%%
     \section{Driven SOS model}
 %%%%%%%%%%%%%%%%%%
-{\color{red}
-In the previous section, coupling of a model B field with a model A one was done in order to break the Galilean transformation, leading to out-of-equilibrium steady state. In lattice based numerical simulations, the invariance is broken because of the discrete-time nature of the algorithm.
-In a SOS model under Kawasaki dynamics, the implementation of a constant driving flow is as follows. From the configuration $C$ we choose a configuration $C'$ as explained is Sec \ref{algo-kawasaki}, meaning we chose a random site $i$ and a nearest neighboor $i\pm1 $ to which give one of its particles. Under a flow, the difference of energy between both states is
-\begin{align}
-    \Delta E_d = \Delta E_{eq} \pm v
-\end{align}
-where $v$ is the intensity of the drive, and the sign depends on the direction of the flow . For example, if the flow goes to the right, then every configuration which moves a particle to the right will have an additional energy $+v$, while if the particle goes against the flow, it will have an additional energy $-v$.
-
-Implementing a shear $v |L/2-y|$  as in Fig \ref{snap-ising-shear} is tricky, because it requires to know the height of the particle, and thus have access to bulk information. In SOS models, we consider that only the particle at the interface moves and changes height accordingly to the interface's height of the neighbooring site. The vertical movement of the particle, couple to the horizontal one, is what makes the SOS model different to the Ising one, and physical arguments forbids the use $h_i$, $h_{i+1}$ or even the average $\frac{h_i+h_{i+1}}{2}$ as the shear contribution might be zero depending of the configuration, even though it should always be present. 
-
-Under periodic boundary conditions, the direction of the flow should not alter the steady state. The average total energy has thus to be an even function with respect to the drive $v$, ie
-\begin{align}
-    <E(v)> = <E_{eq}> + \sum_{n=1}^\infty  \frac{v^{2n}}{(2n!)} \frac{d^{2n} <E>}{d v^{2n}} 
-\end{align}
-and same goes for the surface tension $\sigma(v)$.
-From Eq \eqref{CHST} and \eqref{profil-interface-glauber}, we have the surface tension
-\begin{align}
-    \sigma(v) = \int_{-\infty}^{\infty} dz J\  \left( \frac{d \tanh \left(\frac{z}{\xi(v)} \right)}{dz} \right)^2
-\end{align}
-where $\xi(v)$ is the correlation function of the system. This integration can be easily done after we have computed the correlation length during numerical simulations. 
-
-In Fig \ref{fig-correl-drive} we show the correlation length $\xi(v)$, and in Fig \ref{fig-sigma-drive} the surface tension. 
-
-\begin{figure}
-    \centering
-    \includegraphics[width=0.5\linewidth]{example-image-a}
-    \caption{Correlation function $\xi(v)$ with respect to the drive $v$, for a system of size $256 \times 20$, with $<h> = 10$, at $\beta = J = 1$.{\color{red}do simulation}}
-    \label{fig-correl-drive}    
-    \includegraphics[width=0.5\linewidth]{example-image-b}
-    \caption{Surface tension $\sigma(v)$ with respect to the drive $v$, for a system of size $256 \times 20$, with $<h> = 10$, at $\beta = J = 1$.{\color{red}do simulation}}    
-    \label{fig-sigma-drive}
-\end{figure}
-}
+%
+%{\color{red}
+%In the previous section, coupling of a model B field with a model A one was done in order to break the Galilean transformation, leading to out-of-equilibrium steady state. In lattice based numerical simulations, the invariance is broken because of the discrete-time nature of the algorithm.
+%In a SOS model under Kawasaki dynamics, the implementation of a constant driving flow is as follows. From the configuration $C$ we choose a configuration $C'$ as explained is Sec \ref{algo-kawasaki}, meaning we chose a random site $i$ and a nearest neighboor $i\pm1 $ to which give one of its particles. Under a flow, the difference of energy between both states is
+%\begin{align}
+%    \Delta E_d = \Delta E_{eq} \pm v
+%\end{align}
+%where $v$ is the intensity of the drive, and the sign depends on the direction of the flow . For example, if the flow goes to the right, then every configuration which moves a particle to the right will have an additional energy $+v$, while if the particle goes against the flow, it will have an additional energy $-v$.
+%
+%Implementing a shear $v |L/2-y|$  as in Fig \ref{snap-ising-shear} is tricky, because it requires to know the height of the particle, and thus have access to bulk information. In SOS models, we consider that only the particle at the interface moves and changes height accordingly to the interface's height of the neighbooring site. The vertical movement of the particle, couple to the horizontal one, is what makes the SOS model different to the Ising one, and physical arguments forbids the use $h_i$, $h_{i+1}$ or even the average $\frac{h_i+h_{i+1}}{2}$ as the shear contribution might be zero depending of the configuration, even though it should always be present. 
+%
+%Under periodic boundary conditions, the direction of the flow should not alter the steady state. The average total energy has thus to be an even function with respect to the drive $v$, ie
+%\begin{align}
+%    <E(v)> = <E_{eq}> + \sum_{n=1}^\infty  \frac{v^{2n}}{(2n!)} \frac{d^{2n} <E>}{d v^{2n}} 
+%\end{align}
+%and same goes for the surface tension $\sigma(v)$.
+%From Eq \eqref{CHST} and \eqref{profil-interface-glauber}, we have the surface tension
+%\begin{align}
+%    \sigma(v) = \int_{-\infty}^{\infty} dz J\  \left( \frac{d \tanh \left(\frac{z}{\xi(v)} \right)}{dz} \right)^2
+%\end{align}
+%where $\xi(v)$ is the correlation function of the system. This integration can be easily done after we have computed the correlation length during numerical simulations. 
+%
+%In Fig \ref{fig-correl-drive} we show the correlation length $\xi(v)$, and in Fig \ref{fig-sigma-drive} the surface tension. 
+%
+%\begin{figure}
+%    \centering
+%    \includegraphics[width=0.5\linewidth]{example-image-a}
+%    \caption{Correlation function $\xi(v)$ with respect to the drive $v$, for a system of size $256 \times 20$, with $<h> = 10$, at $\beta = J = 1$.{\color{red}do simulation}}
+%    \label{fig-correl-drive}    
+%    \includegraphics[width=0.5\linewidth]{example-image-b}
+%    \caption{Surface tension $\sigma(v)$ with respect to the drive $v$, for a system of size $256 \times 20$, with $<h> = 10$, at $\beta = J = 1$.{\color{red}do simulation}}    
+%    \label{fig-sigma-drive}
+%\end{figure}
+%}
 %%%%%%%%%%%%%%%%%%
     \section{Driven POP model}
 %%%%%%%%%%%%%%%%%%
-%
+
     \subsection{Conserved diffusive dynamics}
 %%%%%%%%%%%%%%%
 We now study a system of two particle types $A$ and $B$, where one is a a solvent and the other one a particle in suspension, for example.
@@ -545,4 +588,8 @@ For the (entropic) potential in question here we have
 \end{equation}
 we thus see that the average height of the interface is increased due to fluctuations. The non-equilibrium fluctuations are stronger an thus the height increases under driving. 
 
-              
+
+%%%%%%%%%%%%%%%%
+    \section{Conclusions}
+%%%%%%%%%%%%%%%%
+           
