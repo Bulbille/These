@@ -70,13 +70,11 @@ p_{eq}(C) = \rho(C\to C) p_{eq}(C) + \sum_{C'\neq C} \rho(C'\to C)p_{eq}(C')
 \label{p-eq-mc}
 \end{align}
 The emergence of equilibrium probability densities ensures that the transition rate from a state to another one is equal to the rate from the reciprocal transition
-%Another condition that we need in order to generate Gibbs-Boltmanzz states, is that it complies with detailed balance. To comply with detailed balance, the transition rate from a state to another one is equal to the rate from the reciprocal transition, which gives
+
 \begin{align}
 \sum_{C'} p(C) \rho(C \to C') = \sum_{C'} p(C') \rho(C' \to C),
 \end{align}
-which leads to the detailed balance condition
-%We can show that this relation is equivalent to 
-\cite{newman_monte_1999} 
+which leads to the detailed balance condition \cite{newman_monte_1999} 
 \begin{align}
 \frac{\rho(C'\to C)}{\rho(C \to C')} = \frac{p(C)}{p(C')} = \frac{\exp(-\beta E(C))}{\exp(-\beta E(C'))}
 \end{align} 
@@ -99,7 +97,7 @@ g(C\to C') = \frac{1}{2L'}
 \end{align}
 We thus have
 \begin{align}
-\frac{\rho(C\to C')}{\rho(C' \to C)} = \frac{A(C\to C')}{A(C'\to C)} = \exp(-\beta (E(C')-E(C'))
+\frac{\rho(C\to C')}{\rho(C' \to C)} = \frac{A(C\to C')}{A(C'\to C)} = \exp(-\beta (E(C')-E(C))
 \end{align}
 Is it possible to choose any acceptance rate $A(C\to C')$ which satisfies detailed balance. A Metropolis algorithm is an algorithm which has the following acceptance rate
 \begin{align}
