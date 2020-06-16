@@ -68,12 +68,27 @@ If the chemical potential is large enough, the number of particles $N$ is large 
     \end{align}
     In Fig \ref{haut-tm-pop}, we show the mean height \eqref{stirling-pop} compared to the transfer matrix diagonalisation with different matrix size and the Monte Carlo simulations at $\beta=1$. We see that when $ <h> \gg 1$, the Stirling's formula becomes valid and Eq \eqref{stirling-pop} becomes accurate. Since $<h>$ cannot exceed the maximum size of the system, saturation occurs at large $\mu$. SOS mean height is also plotted as a reference, where we see that even in the limit $\mu=0$, the mean height is equal to $<h>(\mu=0) = \frac{L}{2}$.
 
+The Kawasaki implementation is straigthforward, we choose a particle $n$ with probability $\frac{1}{N}$ at each Monte Carlo step, then we attempt to move the particle to the left or right using Metropolis acceptance rate.
 
-The Monte Carlo implementation is as follows. Each particle is labeled with the site $i$ in which it is, and $h_i$ is the number of particles pertaining to that site. 
-In the Glauber dynamics, particles can be exchanged with a reservoir. With a probability $1/2$ one attempts to add a particle and with probability $1/2$ one attempts to takeaway a particle. In the first case, a site $i$ is chosen with a uniform distribution, and we attempt to create a new particle labeled at site $i$ with probability $min(1,\exp(-\beta \Delta E))$. In the latter, a particle is selected uniformly between all existing particles, and an attempt to remove it is done
-\footnote{In C++, we can use a $std::vector$ in which we add or remove particles. After each success attempt, we rebuild the distribution $std::uniform\_int\_distribution(0,N-1)$, where N is the number of particles. This operation is lightweight and should not cause any slowing down. For the next section's algorithm with multiple particle types, we use $std::discrete\_distribution<>$. }. In the case that there is no particle in the system, we skip that phase and we immeidately proceed to attempt to add a new particle.
-Kawasaki dynamics is implemented by randomly choosing a particle $n$ with probability $\frac{1}{N}$ at each Monte Carlo step, then trying to move the particle to the left or right using Metropolis acceptance rate. 
+The Glauber case is trickier. At equilibrium, we expect that as many particles are added as substracted, so we attempt with probability $0.5$ to add a particle, and to remove one with the same probability. When adding a particle, we choose a site $i$ with uniform probability $1/L'$, so the selection rate is 
+\begin{align}
+    g(h_i \to h_i+1) = \frac{1}{2L'}
+\end{align}
+To remove a particle \footnote{In C++, we can use a $std::vector$ in which we add or remove particles. After each success attempt, we rebuild the distribution $std::uniform\_int\_distribution(0,N-1)$, where N is the number of particles. This operation is lightweight and should not cause any slowing down. For the next section's algorithm with multiple particle types, we use $std::discrete\_distribution<>$. }, we choose a particle $n$ with uniform probability $1/N$, meaning that the selection probability is 
+\begin{align}
+    g(h_i \to h_i-1) = \frac{h_i}{2N}
+\end{align}
+In the case that there is no particle in the system, we skip that phase and we immeidately proceed to attempt to add a new particle.
+In order to satisfy detailed balance, we thus need acceptance rates such that verify
+\begin{align}
+    \frac{g(h_i \to h_i+1)}{g(h_i+1 \to h_i)} \frac{A(h_i \to h_i+1)}{A(h_i \to h_i+1)}
+    =& \frac{N}{L' (h_i+1)} \frac{A(h_i \to h_i+1)}{A(h_i \to h_i+1)} \nn
+     =& \exp(-\beta (E(h_i+1)-E(h_i)) 
+\end{align}
+Chosing an acceptance rate that satisfies this condition is not as easy as the Metropolis acceptance rate \cite{metropolis_monte_1949}, and we provide no clear answer as to how solve this problem. Using the Metropolis acceptance rate ($A(\mu \to \nu) = 1$ if $\Delta_E < 0$) does not to provide the correct equilibrium averages expected by the transfer matrix.
 
+Here, the combinatoric term is directly taken into account in the selection probability, which is why it is difficult to find a good acceptance rate. Nevertheless, it is posible to use uniform selection probability as with SOS and introduce the combinatoric term in the energy. 
+ 
 In Fig \ref{comp-models}, we plot the internal energy of the Ising, SOS, RSOS and POP models with respect to temperature in absence of external fields and $\mu=0$ wtih non-conserved dynamics. {\color{red} discuss the graph once plots are better}
 
 %%%%%%%%%%%%%%%%%%%%
@@ -118,17 +133,22 @@ The total partition function is then
 \begin{align}
     \Xi = \sum_h \exp \left( -\beta H_{eff}(h_1,h_2...h_{L'}) \right) \prod_{m \in \bar{M}}  \delta_{\sum_{i=1}^{L'} h_i,N_m}
 \end{align}
-
-Mixing Glauber and Kawasaki dynamics for different particle types is implemented using the following algorithm. Each non-conserved particle type possess a kinetic coefficient $\alpha_m$, while each conserved particle type has a diffusive coefficient $D_m$. We set $p_m = \alpha_m$ if the particle is non-conserved, and $p_m = D_m$ otherwise, and we normalize it in order to have $\sum_m p_m = 1$. At each Monte Carlo step, a particle of type $m$ is chosen with probability $p_m$, and then we proceed with Glauber or Kawasaki dynamics for a single-type particle system, as described in the previous section.
-To test the algorithm with a view to studying the driven system, we have implemented it in for two particles types both in the grand-canonical ensemble for the case of no driving and have compared the results with the equilibrium transfer matrix which we carried out numerically. In the case where the dynamics is conserved we compared them to the non-conserved case.
-
-In order to compare the equilibrium calculation to the numerical simulations, we fix the average number of particles $<n_{m,i}>$ per site by
+with the average number of particles $<n_{m,i}>$ per site being
 \begin{align}
     < n_m > =& \frac{1}{\beta L'} \frac{\partial}{\partial \mu_m} \ln(\Xi) \nn
     =& \frac{1}{\beta L'} \frac{\partial \mu_e}{\partial \mu_m} \frac{\partial}{\partial \mu_e} \ln(\Xi) \nn
     =& \frac{\exp(\beta \mu_m)}{\sum_m \exp(\beta \mu_m)} <h>
 \end{align}
 where $<h> = <\sum_m n_m>$. 
+
+
+Mixing Glauber and Kawasaki dynamics for different particle types could be implemented using the following algorithm. Each non-conserved particle type possess a kinetic coefficient $\alpha_m$, while each conserved particle type has a diffusive coefficient $D_m$. We set $p_m = \alpha_m$ if the particle is non-conserved, and $p_m = D_m$ otherwise, and we normalize it in order to have $\sum_m p_m = 1$. At each Monte Carlo step, a particle of type $m$ is chosen with probability $p_m$, and then we proceed with Glauber or Kawasaki dynamics for a single-type particle system, as described in the previous section.
+To satisfy detailed balance, we have to understand how this coefficient $p_m$ changes the selection probability $g$, and we get the same difficulties as in the single-particle type Glauber case.
+
+Nevertheless, when all particles are under Kawasaki dynamics and $p_m = 1/M$ is a constant, then the ratio between selection rates is equal, which solves all the issues. 
+
+This algorithm could prove usefull for studying multi-particle systems where each particle type is under different potentials (think of an ion in a neutral solvent under magnetic field) or different temperature \cite{grosberg_nonequilibrium_2015}, some of them which are under non-equilibrium forces like shearing.
+
 
 %%%%%%%%%%%%%%%%%%%%%%
     \section{Continuum Theory}    
