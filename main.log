@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.3.19)  18 JUN 2020 19:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.3.19)  18 JUN 2020 19:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2245,24 +2245,7 @@ Overfull \hbox (4.72198pt too wide) in paragraph at lines 43--44
  [][] 
  []
 
-<pop/comparaison-modeles.pdf, id=2043, 462.52798pt x 346.89601pt>
-File: pop/comparaison-modeles.pdf Graphic file (type pdf)
-<use pop/comparaison-modeles.pdf>
-Package pdftex.def Info: pop/comparaison-modeles.pdf  used on input line 46.
-(pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
-
-Overfull \hbox (4.72198pt too wide) in paragraph at lines 46--48
- [][] 
- []
-
-
-LaTeX Warning: Float too large for page by 131.85771pt on input line 50.
-
-[62] [63 <./pop/hauteur-tm-pop-sos.pdf> <./pop/comparaison-modeles.pdf
-
-pdfTeX warning: /usr/bin/pdflatex (file ./pop/comparaison-modeles.pdf): PDF inc
-lusion: multiple pdfs with page group included in a single page
->]
+[62] [63 <./pop/hauteur-tm-pop-sos.pdf>]
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
 (Font)              scaled to size 13.24796pt on input line 95.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
@@ -2280,7 +2263,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 95.
 
-<pop/figure-pop.pdf, id=2119, 462.52798pt x 346.89601pt>
+<pop/figure-pop.pdf, id=2105, 462.52798pt x 346.89601pt>
 File: pop/figure-pop.pdf Graphic file (type pdf)
 <use pop/figure-pop.pdf>
 Package pdftex.def Info: pop/figure-pop.pdf  used on input line 100.
@@ -2297,7 +2280,7 @@ utm/m/n/10.95 Å \FML/futm/m/it/10.95 h[] \FMS/futm/m/n/10.95 ^^@ \FML/futm/m/it
 ]
 Chapter 5.
 [69] [70]
-<drivenC/driven.pdf, id=2269, 462.52798pt x 346.89601pt>
+<drivenC/driven.pdf, id=2255, 462.52798pt x 346.89601pt>
 File: drivenC/driven.pdf Graphic file (type pdf)
 <use drivenC/driven.pdf>
 Package pdftex.def Info: drivenC/driven.pdf  used on input line 64.
@@ -2313,7 +2296,7 @@ Overfull \hbox (9.19359pt too wide) detected at line 161
  []
 
 [73] [74] [75] [76] [77] [78]
-<drivenC/tension-drive.pdf, id=2407, 462.52798pt x 346.89601pt>
+<drivenC/tension-drive.pdf, id=2393, 462.52798pt x 346.89601pt>
 File: drivenC/tension-drive.pdf Graphic file (type pdf)
 <use drivenC/tension-drive.pdf>
 Package pdftex.def Info: drivenC/tension-drive.pdf  used on input line 420.
@@ -2423,14 +2406,9 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 87.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 87.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: C45F0FF087A0158C7D8DE758DD8F08B1;4281.
+Package rerunfilecheck Info: File `main.brf' has not changed.
+(rerunfilecheck)             Checksum: 568D5D5D1FEAE4D55AC85D4C5CC7391C;15742.
 
-
-Package rerunfilecheck Warning: File `main.brf' has changed.
-(rerunfilecheck)                Rerun to get bibliographical references right.
-
-Package rerunfilecheck Info: Checksums for `main.brf':
-(rerunfilecheck)             Before: EBD9BD45B067B527E32F9524C326C096;15742
-(rerunfilecheck)             After:  568D5D5D1FEAE4D55AC85D4C5CC7391C;15742.
 
 LaTeX Warning: There were undefined references.
 
@@ -2439,10 +2417,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 48845 strings out of 492609
- 1094218 string characters out of 6131462
- 1235734 words of memory out of 5000000
- 50889 multiletter control sequences out of 15000+600000
+ 48839 strings out of 492609
+ 1094031 string characters out of 6131462
+ 1235307 words of memory out of 5000000
+ 50884 multiletter control sequences out of 15000+600000
  727649 words of font info for 211 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,21n,96p,1732b,1317s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2462,10 +2440,10 @@ hare/texlive/texmf-dist/fonts/type1/adobe/utopia/putb8a.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/adobe/utopia/putr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 adobe/utopia/putri8a.pfb>
-Output written on main.pdf (106 pages, 2003045 bytes).
+Output written on main.pdf (106 pages, 1997374 bytes).
 PDF statistics:
- 2999 PDF objects out of 3580 (max. 8388607)
- 2426 compressed objects within 25 object streams
+ 2985 PDF objects out of 3580 (max. 8388607)
+ 2414 compressed objects within 25 object streams
  820 named destinations out of 1000 (max. 500000)
- 652 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 647 words of extra memory for PDF output out of 10000 (max. 10000000)
 
