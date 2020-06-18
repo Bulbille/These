@@ -41,7 +41,7 @@ where
 \begin{figure}
 \centering
 \includegraphics{pop/hauteur-tm-pop-sos.pdf}
-\caption{Mean height of the SOS (for reference) and POP model with respect the chemical potential $\mu$ through transfer matrix with different maximal heights in the thermodynamic limit $L'\to \infty$, compared to the Striling's approximation Eq \eqref{stirling-pop},at $\beta=1$. {\color{red} add MC sim}}
+\caption{Mean height of the SOS (for reference) and POP model with respect the chemical potential $\mu$ through transfer matrix with different maximal heights in the thermodynamic limit $L'\to \infty$, compared to the Striling's approximation Eq \eqref{stirling-pop},at $\beta=1$. }
 \label{haut-tm-pop} 
 \includegraphics{pop/comparaison-modeles.pdf}
 \caption{Comparison of the internal mean total energy of the Ising, SOS, RSOS and POP models with respect to temperature in absence of external field and $\mu=0$, from Monte Carlo simulations at $L'=126$ and $L=30$ with Glauber dynamics. We used Eq \ref{energie-sos-ising} to compare energies between the interface models and the Ising one.
@@ -191,4 +191,5 @@ where $\overline h= \sum_m \overline n_m$.
     \section{Conclusion}
 %%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%
+There are two ways of interpreting the interface's descritpion throught its height $\{h_i\}$. The first one is to only see the height as the interface's degrees of freedom \cite{gilmer_computer_1972,gilmer_simulation_1972}, while the second one is to interpret that height as a number of particles of type A which are below the interface with particles of type B, which is the physical phenomenon happening in crystal growth. This interpretation requires the addition of an etropic term \cite{temperley_statistical_1952}, which localises the free interface in a semi-infinite geometry, contrary to SOS models \cite{chui_pinning_1981}. The system can also be composed of multiple layers of different particles [multilayer], and this new model can take that into account for numerical simulations. 
+The problem lies in the numerical algorithm. Taking a height with non-uniform probability is tricky, as it changes the selection probability $g(C\to C')$, so the acceptance probability $A(C\to C')$ is not as simple as the Metropolis one \cite{metropolis_monte_1949,newman_monte_1999}. We let the resolution of this problem - and as such the study of new physics through numerical simulations of this model - to the community. 

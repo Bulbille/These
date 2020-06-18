@@ -266,7 +266,8 @@ For small $q$ we find
 where $\theta$ is the angle between the wave vector ${\bf q}$ and the direction of the driving. 
 This thus gives a direction dependent surface tension 
 \begin{equation}
-    \sigma_s(\theta) = \sigma(1+ \frac{v^2\cos^2(\theta)}{v^2_0}),
+    \sigma_s(\theta) = \sigma(1+ \frac{v^2\cos^2(\theta)}{v^2_0})
+    \label{direction-surface-tension}
 \end{equation}
 where we have introduced the intrinsic velocity $v_0 = \sqrt{\alpha^2\lambda\kappa}$ which depends on the microscopic {\em dynamical} quantity $\alpha$ associated with the model A dynamics of the field $\phi$, as well as the microscopic static quantities $\kappa$ (which generates the surface tension) and $\lambda$ the coupling between the field $\psi$ and $\phi$. This appearance of dynamical and static quantities that are otherwise hidden in equal time correlation functions in equilibrium is already implicit in the works of Onsager \cite{lars_onsager_collected_1996} where it is used to compute the conductivity of Brownian electrolytes and the explicit expressions were derived using stochastic density functional theory in \cite{demery_conductivity_2016}. We also note that the universal thermal Casimir effect between model Brownian electrolyte systems  driven by an electric field 
 exhibits similar features, developing a dependency on both additional static and dynamical variables with respect to the equilibrium case \cite{dean_nonequilibrium_2016}
@@ -387,40 +388,40 @@ at the temperature $T_2$.
 %%%%%%%%%%%%%%%%%%
     \section{Driven SOS model}
 %%%%%%%%%%%%%%%%%%
-%
-%{\color{red}
-%In the previous section, coupling of a model B field with a model A one was done in order to break the Galilean transformation, leading to out-of-equilibrium steady state. In lattice based numerical simulations, the invariance is broken because of the discrete-time nature of the algorithm.
-%In a SOS model under Kawasaki dynamics, the implementation of a constant driving flow is as follows. From the configuration $C$ we choose a configuration $C'$ as explained is Sec \ref{algo-kawasaki}, meaning we chose a random site $i$ and a nearest neighboor $i\pm1 $ to which give one of its particles. Under a flow, the difference of energy between both states is
-%\begin{align}
-%    \Delta E_d = \Delta E_{eq} \pm v
-%\end{align}
-%where $v$ is the intensity of the drive, and the sign depends on the direction of the flow . For example, if the flow goes to the right, then every configuration which moves a particle to the right will have an additional energy $+v$, while if the particle goes against the flow, it will have an additional energy $-v$.
-%
-%Implementing a shear $v |L/2-y|$  as in Fig \ref{snap-ising-shear} is tricky, because it requires to know the height of the particle, and thus have access to bulk information. In SOS models, we consider that only the particle at the interface moves and changes height accordingly to the interface's height of the neighbooring site. The vertical movement of the particle, couple to the horizontal one, is what makes the SOS model different to the Ising one, and physical arguments forbids the use $h_i$, $h_{i+1}$ or even the average $\frac{h_i+h_{i+1}}{2}$ as the shear contribution might be zero depending of the configuration, even though it should always be present. 
-%
-%Under periodic boundary conditions, the direction of the flow should not alter the steady state. The average total energy has thus to be an even function with respect to the drive $v$, ie
-%\begin{align}
-%    <E(v)> = <E_{eq}> + \sum_{n=1}^\infty  \frac{v^{2n}}{(2n!)} \frac{d^{2n} <E>}{d v^{2n}} 
-%\end{align}
-%and same goes for the surface tension $\sigma(v)$.
-%From Eq \eqref{CHST} and \eqref{profil-interface-glauber}, we have the surface tension
-%\begin{align}
-%    \sigma(v) = \int_{-\infty}^{\infty} dz J\  \left( \frac{d \tanh \left(\frac{z}{\xi(v)} \right)}{dz} \right)^2
-%\end{align}
-%where $\xi(v)$ is the correlation function of the system. This integration can be easily done after we have computed the correlation length during numerical simulations. 
-%
-%In Fig \ref{fig-correl-drive} we show the correlation length $\xi(v)$, and in Fig \ref{fig-sigma-drive} the surface tension. 
-%
-%\begin{figure}
-%    \centering
-%    \includegraphics[width=0.5\linewidth]{example-image-a}
-%    \caption{Correlation function $\xi(v)$ with respect to the drive $v$, for a system of size $256 \times 20$, with $<h> = 10$, at $\beta = J = 1$.{\color{red}do simulation}}
-%    \label{fig-correl-drive}    
-%    \includegraphics[width=0.5\linewidth]{example-image-b}
-%    \caption{Surface tension $\sigma(v)$ with respect to the drive $v$, for a system of size $256 \times 20$, with $<h> = 10$, at $\beta = J = 1$.{\color{red}do simulation}}    
-%    \label{fig-sigma-drive}
-%\end{figure}
-%}
+
+In the previous section, coupling of a model B field with a model A one was done in order to break the Galilean transformation, leading to out-of-equilibrium steady state. In lattice based numerical simulations, the invariance is broken because of the discrete-time nature of the algorithm.
+In a SOS model under Kawasaki dynamics, the implementation of a constant driving flow is as follows. From the configuration $C$ we choose a configuration $C'$ as explained is Sec \ref{algo-kawasaki}, meaning we chose a random site $i$ and a nearest neighboor $i\pm1 $ to which give one of its particles. Under a flow, the difference of energy between both states is
+\begin{align}
+    \Delta E_d = \Delta E_{eq} \pm v
+\end{align}
+where $v$ is the intensity of the drive, and the sign depends on the direction of the flow . For example, if the flow goes to the right, then every configuration which moves a particle to the right will have an additional energy $+v$, while if the particle goes against the flow, it will have an additional energy $-v$.
+
+Implementing a shear $v |L/2-y|$  as in Fig \ref{snap-ising-shear} is tricky, because it requires to know the height of the particle, and thus have access to bulk information. In SOS models, we consider that only the particle at the interface moves and changes height accordingly to the interface's height of the neighbooring site. The vertical movement of the particle, couple to the horizontal one, is what makes the SOS model different to the Ising one, and physical arguments forbids the use $h_i$, $h_{i+1}$ or even the average $\frac{h_i+h_{i+1}}{2}$ as the shear contribution might be zero depending of the configuration, even though it should always be present. 
+
+Under periodic boundary conditions, the direction of the flow should not alter the steady state. The average total energy has thus to be an even function with respect to the drive $v$, ie
+\begin{align}
+    <E(v)> = <E(-v)>
+\end{align}
+and same goes for the surface tension $\sigma(v)$.
+From Eq \eqref{CHST} and \eqref{profil-interface-glauber}, we have the surface tension
+\begin{align}
+    \sigma(v) = \int_{-\infty}^{\infty} dz J\  \left( \frac{d \tanh \left(\frac{z}{\xi_\perp(v)} \right)}{dz} \right)^2 = \int_{-\infty}^{\infty} dz  J \frac{1}{\cosh^4(\frac{x}{\xi_\perp(v)}) \xi_\perp^2}
+    \label{int-sigma}
+\end{align}
+where $\xi_\perp(v)$ is the interfacial correlation length. This interface width has the same qualitative behaviour as the interface width $<w> = \sqrt{<h^2>-<h>^2}$. 
+
+In Fig \ref{fig-correl-drive} we show the interface width and the surface tension with respect to the drive computed through Kawasaki dynamics. The first thing we notice is that the interface width increases with the imposed driving in an almost linear way, as does the mean height of wind generated waves with respect to the wind surface velocity \cite{maat_roughness_1991}.
+The second thing we notice is that there are a change of regime at $v=2J$ and $v=4J$, with a net change in the derivative. The change of energy $\Delta E$ has values in $[-4,-2,0,2,4]$, so we see that there are three regimes : the weak driving regime for $v \less 2J$ , the middle regime for $2J \less v \less 4J$ where some moves with adding energy to the system are always accepted, and the strong driving regime for $v \greater 4J$ where all moves adding energy are accepted, ending with a saturation when the bond energy becomes negligible with respect to the driving. 
+ 
+While this result is in direct contradiction with Eq. \eqref{1dpot} in the model C and Ising simulations \cite{smith_interfaces_2008-1,smith_lateral_2010} where the surface tension increases with $v$, we provide no formal physical theory explaining why there is a diference between those two interface models. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.7\linewidth]{drivenC/tension-drive.pdf}
+    \caption{Interface width $w=\sqrt{<h^2>-<h>^2}$ and surface tension $\sigma$ computed from the integral \eqref{int-sigma} with respect to the drive $v$,  with $L'=256$, $L=200$, $<h> = 4.5$, and $\beta = J = 1$ for $5 \cdot 10^7$ MC steps.}
+    \label{fig-correl-drive}    
+\end{figure}
+
 %%%%%%%%%%%%%%%%%%
     \section{Driven POP model}
 %%%%%%%%%%%%%%%%%%
@@ -477,7 +478,7 @@ where
 and 
 \begin{equation}
 \tilde A(k) =\sigma\begin{pmatrix}& D_A\overline n_A k^2(k^2 + m_A^2) -i\frac{D_A k f}{\sigma} & 
-D_A\overline n_A k^4 \\ & D_B\overline n_B k^4 & D_B \overline n_B k^2(k^2 + m_B^2).\end{pmatrix}
+D_A\overline n_A k^4 \\ & D_B\overline n_B k^4 & D_B \overline n_B k^2(k^2 + m_B^2)\end{pmatrix}
 \end{equation}
 The Fourier transform steady state correlation function matrix defined by
 \begin{equation}
@@ -486,7 +487,7 @@ The Fourier transform steady state correlation function matrix defined by
 \end{equation}
 is then given by the solution to the Lyapounov equation
 \begin{equation}
-\tilde A(k)\tilde C(k) + \tilde C(k)\tilde A^T(-k) = 2T \tilde R(k).
+\tilde A(k)\tilde C(k) + \tilde C(k)\tilde A^T(-k) = 2T \tilde R(k)
 \end{equation}
 Solving this we find that
 \begin{equation}

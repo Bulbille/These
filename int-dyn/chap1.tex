@@ -359,17 +359,19 @@ where $f(z)=\phi_K(z)$ is the kink solution from mean field theory.
 %%%%%%%%%%%%%%%%%%
 
 For model A dynamics, we substitute Eq. \eqref{hans} into Eq. \eqref{MA} and make use of the following results
-\begin{align*}
+\begin{align}
 \frac{\partial f(z-h(\br,t))}{\partial t} =& -f'(z-h(\br,t))\frac{\partial h(\br,t)}{\partial t}\\
 \nabla f(z-h(\br,t) =& [{\bf e}_z-\nabla h(\br,t)]f'(z-h(\br,t)) \\
 \nabla^2 f(z-h(\br,t))=& f''(z-h(\br,t))- \nabla^2 h(\br,t)f'(z-h(\br,t))+ [\nabla h(\br,t)]^2 f''(z-h(\br,t))
-\end{align*}
+\label{triple-interface}
+\end{align}
 and thus find
-\begin{align*}
+\begin{align}
 -f'(z-h(\br,t))\frac{\partial h(\br,t)}{\partial t}=& \alpha\kappa 
 \left[ f''(z-h(\br,t))- \nabla^2 h(\br,t)f'(z-h(\br,t))+ [\nabla h(\br,t)]^2 f''(z-h(\br,t))\right] \\
 & - \alpha V'(f'(z-h(\br,t))) + \eta(\br,z,t)
-\end{align*}
+\label{fdhdt}
+\end{align}
 We now multiply both sides of this equation by $f'(z-h(\br,t))$ and defining $\zeta=z-h(\br,t)$, we integrate $\zeta$ over $[-\infty,\infty]$ while using the following identities
 \begin{align*}
 \int_{-\infty}^\infty d\zeta f'(\zeta)f''(\zeta) =& [\frac{1}{2}f'^2(\zeta)]_{-\infty}^\infty =0 \\

@@ -6,45 +6,45 @@ Database file #1: biblio.bib
 Warning--empty publisher in l_landau_physique_1990
 Warning--empty journal in boal_mechanics_2012
 Warning--empty journal in ninham_van_1970
-You've used 128 entries,
+You've used 129 entries,
             1791 wiz_defined-function locations,
-            1121 strings with 23331 characters,
-and the built_in function-call counts, 28472 in all, are:
-= -- 2608
-> -- 1133
+            1127 strings with 23451 characters,
+and the built_in function-call counts, 28718 in all, are:
+= -- 2631
+> -- 1144
 < -- 4
-+ -- 432
-- -- 304
-* -- 2352
-:= -- 4535
-add.period$ -- 384
-call.type$ -- 128
-change.case$ -- 122
++ -- 436
+- -- 307
+* -- 2375
+:= -- 4574
+add.period$ -- 387
+call.type$ -- 129
+change.case$ -- 123
 chr.to.int$ -- 0
-cite$ -- 131
-duplicate$ -- 1138
-empty$ -- 2816
-format.name$ -- 304
-if$ -- 6129
+cite$ -- 132
+duplicate$ -- 1147
+empty$ -- 2839
+format.name$ -- 307
+if$ -- 6181
 int.to.chr$ -- 0
-int.to.str$ -- 128
-missing$ -- 133
-newline$ -- 641
-num.names$ -- 127
-pop$ -- 211
+int.to.str$ -- 129
+missing$ -- 134
+newline$ -- 646
+num.names$ -- 128
+pop$ -- 212
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 455
+skip$ -- 458
 stack$ -- 0
-substring$ -- 2280
-swap$ -- 140
+substring$ -- 2302
+swap$ -- 141
 text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 3
-while$ -- 298
-width$ -- 131
-write$ -- 1400
+while$ -- 301
+width$ -- 132
+write$ -- 1411
 (There were 3 warnings)
