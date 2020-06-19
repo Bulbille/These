@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.3.19)  19 JUN 2020 10:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.3.19)  19 JUN 2020 11:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2283,15 +2283,15 @@ Chapter 5.
 <drivenC/driven.pdf, id=2255, 462.52798pt x 346.89601pt>
 File: drivenC/driven.pdf Graphic file (type pdf)
 <use drivenC/driven.pdf>
-Package pdftex.def Info: drivenC/driven.pdf  used on input line 64.
+Package pdftex.def Info: drivenC/driven.pdf  used on input line 63.
 (pdftex.def)             Requested size: 320.46199pt x 240.35892pt.
  [71 <./drivenC/driven.pdf>] [72]
 
 LaTeX Warning: Reference `int-potentiel-phi' on page 73 undefined on input line
- 140.
+ 139.
 
 
-Overfull \hbox (9.19359pt too wide) detected at line 161
+Overfull \hbox (9.19359pt too wide) detected at line 160
 []
  []
 
@@ -2299,116 +2299,42 @@ Overfull \hbox (9.19359pt too wide) detected at line 161
 <drivenC/tension-drive.pdf, id=2393, 462.52798pt x 346.89601pt>
 File: drivenC/tension-drive.pdf Graphic file (type pdf)
 <use drivenC/tension-drive.pdf>
-Package pdftex.def Info: drivenC/tension-drive.pdf  used on input line 420.
+Package pdftex.def Info: drivenC/tension-drive.pdf  used on input line 419.
 (pdftex.def)             Requested size: 320.46199pt x 240.35892pt.
- [79] [80 <./drivenC/tension-drive.pdf>]
-
-LaTeX Font Warning: Command \boldmath invalid in math mode on input line 464.
-
-
-LaTeX Font Warning: Command \mathversion invalid in math mode on input line 464
-.
-
-
-LaTeX Font Warning: Command \boldmath invalid in math mode on input line 464.
-
-
-LaTeX Font Warning: Command \mathversion invalid in math mode on input line 464
-.
-
-
-LaTeX Font Warning: Command \boldmath invalid in math mode on input line 464.
-
-
-LaTeX Font Warning: Command \mathversion invalid in math mode on input line 464
-.
-
-
-LaTeX Font Warning: Command \boldmath invalid in math mode on input line 464.
-
-
-LaTeX Font Warning: Command \mathversion invalid in math mode on input line 464
-.
-
-
-LaTeX Font Warning: Command \boldmath invalid in math mode on input line 468.
-
-
-LaTeX Font Warning: Command \mathversion invalid in math mode on input line 468
-.
-
-
-LaTeX Font Warning: Command \boldmath invalid in math mode on input line 472.
-
-
-LaTeX Font Warning: Command \mathversion invalid in math mode on input line 472
-.
-
-
-LaTeX Font Warning: Command \boldmath invalid in math mode on input line 472.
-
-
-LaTeX Font Warning: Command \mathversion invalid in math mode on input line 472
-.
-
-
-LaTeX Font Warning: Command \boldmath invalid in math mode on input line 472.
-
-
-LaTeX Font Warning: Command \mathversion invalid in math mode on input line 472
-.
-
-
-LaTeX Font Warning: Command \boldmath invalid in math mode on input line 472.
-
-
-LaTeX Font Warning: Command \mathversion invalid in math mode on input line 472
-.
-
-
-LaTeX Font Warning: Command \boldmath invalid in math mode on input line 485.
-
-
-LaTeX Font Warning: Command \mathversion invalid in math mode on input line 485
-.
-
-
-LaTeX Font Warning: Command \boldmath invalid in math mode on input line 485.
-
-
-LaTeX Font Warning: Command \mathversion invalid in math mode on input line 485
-.
-
-[81] [82]
-Overfull \hbox (8.84279pt too wide) in paragraph at lines 589--591
-\T1/futs/m/n/10.95 we thus see that the av-er-age height of the in-ter-face is 
-in-creased due to fluc-tu-a-tions. The non-equilibrium
- []
-
-) (./main.bbl (./main.brf)
+ [79]) (./main.bbl (./main.brf)
 \tf@brf=\write8
 \openout8 = `main.brf'.
 
- [83] [84
+ [80 <./drivenC/tension-drive.pdf>] [81
 
-] [85] [86] [87] [88] [89] [90] [91])
+] [82] [83] [84] [85] [86] [87])
 Package minitoc Info: I0009
 (minitoc)             Listing minitoc auxiliary files. 
 (minitoc)             Creating the main.maf file.
 \openout4 = `main.maf'.
 
-
-[92]
+ [88]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 87.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 87.
  (./main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 87.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 87.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: C45F0FF087A0158C7D8DE758DD8F08B1;4281.
-Package rerunfilecheck Info: File `main.brf' has not changed.
-(rerunfilecheck)             Checksum: 761ACE7541AA2C4E2D5AA6F54D476589;16025.
 
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: C45F0FF087A0158C7D8DE758DD8F08B1;4281
+(rerunfilecheck)             After:  7B5F7911CD621E8EE40BA9C727A8D7A6;4060.
+
+Package rerunfilecheck Warning: File `main.brf' has changed.
+(rerunfilecheck)                Rerun to get bibliographical references right.
+
+Package rerunfilecheck Info: Checksums for `main.brf':
+(rerunfilecheck)             Before: 761ACE7541AA2C4E2D5AA6F54D476589;16025
+(rerunfilecheck)             After:  001194F101B3F0CECAEA96870C1AB9F0;16025.
 
 LaTeX Warning: There were undefined references.
 
@@ -2417,33 +2343,42 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 48839 strings out of 492609
- 1094031 string characters out of 6131462
+ 48803 strings out of 492609
+ 1093523 string characters out of 6131462
  1235307 words of memory out of 5000000
  50884 multiletter control sequences out of 15000+600000
  727649 words of font info for 211 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,21n,96p,1732b,1317s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmtt9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/fourier/
-fourier-mcl.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/fourier/fouri
-er-mex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/fourier/fourier-ml
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/fourier/fourier-mlb.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/fourier/fourier-ms.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/adobe/utopia/putb8a.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/adobe/utopia/putr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-adobe/utopia/putri8a.pfb>
-Output written on main.pdf (106 pages, 1998623 bytes).
+pdfTeX warning (dest): name{section.5.4} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.5.3.2} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.5.3.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmtt9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/fourier/fo
+urier-mcl.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/fourier/fourier
+-mex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/fourier/fourier-ml.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/fourier/fourier-mlb.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/fourier/fourier-ms.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/adobe/utopia/putb8a.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/adobe/utopia/putr8a.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/adobe/utopia/putr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/ad
+obe/utopia/putri8a.pfb>
+Output written on main.pdf (102 pages, 1982638 bytes).
 PDF statistics:
- 2995 PDF objects out of 3580 (max. 8388607)
- 2424 compressed objects within 25 object streams
- 820 named destinations out of 1000 (max. 500000)
+ 2937 PDF objects out of 2984 (max. 8388607)
+ 2371 compressed objects within 24 object streams
+ 784 named destinations out of 1000 (max. 500000)
  647 words of extra memory for PDF output out of 10000 (max. 10000000)
 
