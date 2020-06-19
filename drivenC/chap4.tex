@@ -9,8 +9,7 @@ are contrary to the observation that wind generates waves on the ocean. One may 
 
 In this capter we investigate driving using three different methos. 
 In the first section - which is almost a verbatim of a paper we have published \cite{dean_effect_2020} -  we develop model C interfaces (model B interface is invariant under galilian transformation under driving) and find that the height fluctuations are suppressed and the correlation length of the fluctuations is increased. 
-In the second section, we discuss driving in the SOS model, where the galilean invariance is broken by the discrete-time nature of numerical simulations.
-In the last section, we use a similar approach than in the paper (which is the approach that gaves us the idea of the paper) for the Particles-Over-Particles model in the case of two different particles type.
+In the second section, we discuss driving in the SOS model, where the galilean invariance is broken by the discrete-time nature of numerical simulations, and find an increase of the interface width with respect to driving.
 
 %%%%%%%%%%%%%%%%
     \section{The effect of driving on model C interfaces}
@@ -422,172 +421,172 @@ While this result is in direct contradiction with Eq. \eqref{1dpot} in the model
     \label{fig-correl-drive}    
 \end{figure}
 
-%%%%%%%%%%%%%%%%%%
-    \section{Driven POP model}
-%%%%%%%%%%%%%%%%%%
-
-    \subsection{Conserved diffusive dynamics}
-%%%%%%%%%%%%%%%
-We now study a system of two particle types $A$ and $B$, where one is a a solvent and the other one a particle in suspension, for example.
-Assuming Brownian dynamics for the particles, the stochastic density functional equations for the continuum fields $n_A$ and $n_B$ are
-given by
-\begin{equation}
-\frac{\partial n_A(x)}{\partial t} = \frac{\partial}{\partial x} \beta D_A n_A(x)\frac{\partial}{\partial x} \frac{\delta H}{\delta n_A(x)} + \frac{\partial}{\partial x} \sqrt{2D_A n_A(x)} \eta_A(x,t)
-\end{equation}
-and 
-\begin{equation}
-\frac{\partial n_B(x)}{\partial t} = \frac{\partial}{\partial x} \beta D_B n_B(x)\frac{\partial}{\partial x} \frac{\delta H}{\delta n_B(x)} + \frac{\partial}{\partial x} \sqrt{2D_Bn_B(x)} \eta_B(x,t)
-\end{equation}
-where $D_A$ and $D_B$ are the diffusion constants of the particles. The noise terms are independent , zero mean, spatiotemporal Gaussian white noise with
-\begin{eqnarray}
-\langle \eta_A(x,t) \eta_A(x',t')\rangle = \langle \eta_B(x,t) \eta_B(x',t')\rangle =\delta(x-x')\delta(t-t').
-\end{eqnarray}
-As we are interested in what happens when one of the species is driven, we add a term
-\begin{equation}
-H_D = -\int dx xf n_A(x)
-\end{equation}
-to the Hamiltonian, this corresponds to a force which pushes the particles of type $A$ to the right. We also assume periodic boundary conditions, and thus a current will exist in the resulting steady state.
-This introduces term in the equation for $n_A(x)$ which becomes
-\begin{equation}
-\frac{\partial n_A(x)}{\partial t}+ \frac{\partial}{\partial x}D_A\beta f n_A(x) = \frac{\partial}{\partial x} \beta D_A n_A(x)\frac{\partial}{\partial x} \frac{\delta H}{\delta n_A(x)} + \frac{\partial}{\partial x} \sqrt{2D_A n_A(x)} \eta_A(x,t).
-\end{equation}
-It is important to note that in the absence of the particles of type $B$, the resulting equation for the field $n_A(x,t)$ can be rendered independent of
-the force $f$ via the Galilean transformation
-\begin{equation}
-n(x,t) = n(x-vt,t)
-\end{equation}
-where $v= D_A\beta f$ is the induced drift on the particles of type $A$.
-Note that the Galilean invariance can also be broken if the force $f$ acts on both particle types but the diffusion coefficients $D_A$ and $D_B$ are different.
-
-We now expand the deterministic part of the two equations to first order in the density fluctuations about its mean value and the noise terms to zeroth order. This approximation respects detailed balance for the effective quadratic Hamiltonian and has been used with accuracy in a wide variety of contexts. The resulting dynamics of of a model B and Fourier transforming in space gives
-\begin{equation}
-\frac{\partial \tilde{\boldmath \Phi}(k,t)}{\partial t}= -\beta \tilde A(k){\boldmath \Phi}(k,t) + {\boldmath \tilde\eta}(k,t),
-\end{equation}
-where
-\begin{equation}
-{\boldmath \Phi}(k,t) =\begin{pmatrix} &\tilde \phi_A(k,t) \\ &\tilde \phi_B(k,t)\end{pmatrix}
-\end{equation}
-The noise correlation function is given by
-\begin{equation}
-\langle {\tilde\boldmath\eta}^{T}(k,t) {\tilde\boldmath{\eta}}(k',t')\rangle = 4\pi\tilde R(k) \delta(t-t')\delta(k+k')
-\end{equation}
-where 
-\begin{equation}\tilde R(k)= 2\begin{pmatrix} & D_A\overline n_A k^2 & 0\\
-& 0 & D_B\overline n_B k^2\end{pmatrix},
-\end{equation}
-and 
-\begin{equation}
-\tilde A(k) =\sigma\begin{pmatrix}& D_A\overline n_A k^2(k^2 + m_A^2) -i\frac{D_A k f}{\sigma} & 
-D_A\overline n_A k^4 \\ & D_B\overline n_B k^4 & D_B \overline n_B k^2(k^2 + m_B^2)\end{pmatrix}
-\end{equation}
-The Fourier transform steady state correlation function matrix defined by
-\begin{equation}
-\langle {\boldmath\tilde\Phi}^T(k){\boldmath\tilde\Phi}(k')\rangle =
-2\pi \delta(k+k') \tilde C(k)
-\end{equation}
-is then given by the solution to the Lyapounov equation
-\begin{equation}
-\tilde A(k)\tilde C(k) + \tilde C(k)\tilde A^T(-k) = 2T \tilde R(k)
-\end{equation}
-Solving this we find that
-\begin{equation}
-\tilde C_{hh}(k)= \frac{T}{\sigma}\frac{k^2(m_A^2+m_B^2)(D_A\overline n_A[k^2+m_A^2] +D_B\overline n_B[k^2+m_B^2] )^2 +\frac{f^2 }{\sigma^2}D_A^2(2k^2+m_A^2 + m_B^2)}{k^2(D_A\overline n_A[k^2+m_A^2] +D_B\overline n_B[k^2+m_B^2] )^2(m_A^2 m_B^2 + k^2(m_A^2 +m_B^2))
-+\frac{f^2 }{\sigma^2}D_A^2(k^2+m_A^2)(k^2+m_B^2)}.
-\end{equation}
-In the equilibrium or non-driven system where $f=0$ the above formula
-yields the static result Eq. (\ref{stat}). Of particular interest is the strong driving limit where we find that as $f\to\infty$ the result
-\begin{equation}
-\tilde C_{hh}(k)=\frac{T}{\sigma}\left[\frac{1}{k^2+m_A^2}
-+\frac{1}{k^2+m_B^2}\right]
-\end{equation}
-The effect of strong  driving is to decouple the fluctuations of $n_A$ and $n_B$ and we see that the total height fluctuation is that of the sum two independent interfaces. The height variance is then given by
-\begin{equation}
-\langle h^2\rangle_s = \frac{T}{2\sigma m_d}
-\end{equation}
-where 
-\begin{equation}
-m_d = \frac{m_A m_B}{m_A+m_B}
-\end{equation}
-From this we find that
-\begin{equation}
-\frac{\langle h^2\rangle_s }{\langle h^2\rangle_{eq}}=\frac{m_A+m_B}{\sqrt{m_A^2 + m_B^2}}.
-\end{equation}
-We also see that, as $m_A$ and $m_B$ are positive, the fluctuations in limit of infinite driving are always larger than in the equilibrium state. 
-
-
-Imagine now that the $B$ particles constitute the bottom layer and that $D_B\ll D_A$ this mimics the solid on solid dynamics where only the top layer of the particles participate in the dynamics. This gives
-\begin{equation}
-\tilde C_{hh}(k)= \frac{T}{\sigma}\frac{k^2(m_A^2+m_B^2)(\overline n_A[k^2+m_A^2] )^2 +\frac{f^2 }{\sigma^2}(2k^2+m_A^2 + m_B^2)}{k^2(\overline n_A[k^2+m_A^2]  )^2(m_A^2 m_B^2 + k^2(m_A^2 +m_B^2))
-+\frac{f^2 }{\sigma^2}(k^2+m_A^2)(k^2+m_B^2)}.
-\end{equation}
-Assuming the $A$ layer is thinner that the $B$ layer so $m_B\ll m_A$ gives
-\begin{equation}
-\tilde C_{hh}(k)= \frac{T}{\sigma}\frac{k^2 m_A^2(\overline n_A[k^2+m_A^2] )^2 +\frac{f^2 }{\sigma^2}(2k^2+m_A^2 )}{k^2(\overline n_A[k^2+m_A^2]  )^2(m_A^2 m_B^2 + k^2 m_A^2)
-+\frac{f^2 }{\sigma^2}(k^2+m_A^2)(k^2+m_B^2)}.
-\end{equation}
-which simplifies to give
-\begin{eqnarray}
-\tilde C_{hh}(k)&=& \frac{T}{\sigma}\frac{k^2 m_A^2(\overline n_A[k^2+m_A^2] )^2 +\frac{f^2 }{\sigma^2}(2k^2+m_A^2 )}{(k^2+m_A^2)(k^2 + m_B^2)[(n_A^2m_A^2 k^2(k^2+m_A^2)
-+\frac{f^2 }{\sigma^2}]} \\
-\tilde C_{hh}(k)&=& \frac{T}{\sigma}\frac{1}{k^2 + m_B^2}
-+\frac{T}{\sigma}\frac{\frac{f^2 }{\sigma^2}k^2}{(k^2+m_A^2)(k^2 + m_B^2)[(n_A^2m_A^2 k^2(k^2+m_A^2)
-+\frac{f^2 }{\sigma^2}]} 
-\\
-&=&\frac{T}{\sigma}\left[\frac{1}{(k^2 + m_B^2)}
-+\frac{ f^2 }{\sigma^2\overline n_A^2 m_A^2}\frac{k^2}{(k^2+m_A^2)(k^2 + m_B^2)(k^4+m_A^2 k^2 +\frac{f^2 }{\sigma^2n_A^2 m_A^2})}\right]
-\end{eqnarray}
-The height fluctuations are then given by
-\begin{equation}
-\langle h^2\rangle = \frac{T}{2\sigma m_B} +  \frac{T}{2\sigma}\frac{ f^2 }{\sigma^2\overline n_A^2 m_A^2}\frac{m_A + m_B+ m_++ m_-}{(m_A+m_B) (m_++m_B)(m_-+m_B)(m_A+m_+)(m_A+m_+)(m_++m_-)},
-\end{equation}
-where 
-\begin{equation}
-m_\pm = \sqrt{\frac{m_A^2\pm\sqrt{m_A^4 -\frac{4f^2 }{\sigma^2n_A^2 m_A^2}}}{2}}
-\end{equation}
-
-%%%%%%%%%%%%%%%
-    \subsection{Non conserved dynamics}
-%%%%%%%%%%%%%%%
-We now consider the case where the particles of type $B$ are in contact with 
-a reservoir of the same particles in a vapour phase. To model this we modify the dynamics of the B phase by introducing a component of non-conserved dynamics for these particles
-\begin{equation}
-\frac{\partial n_B(x)}{\partial t} = \frac{\partial}{\partial x} \beta D_B n_B(x)\frac{\partial}{\partial x} \frac{\delta H}{\delta n_B(x)} + \frac{\partial}{\partial x} \sqrt{2D_Bn_B(x)} \eta_B(x,t)
--K_B\beta \frac{\delta H}{\delta n_B(x)} + \sqrt{2K_B}\eta'_B(x,t),
-\end{equation}
-here if $\eta'_B(x,t)$ is a new spatio-temporal white noise independent of the 
-others, the undriven system obeys detailed balance.  Now the average value of the $n_B$ is determined by taking the average in the steady state. As the system is invariant under translation, the average of the first diffusive term on the right-hand-side is zero and so we find
-\begin{equation}
-\langle \frac{\delta H}{\delta n_B(x)}\rangle=0,
-\end{equation}
-where the averaging is over the system in the steady state. Again invariance by translation in space can be applied to write
-\begin{equation}
-\langle \frac{\partial V(n_A,n_B)}{\partial n_A}\rangle  =0
-\end{equation}
-Here we have $V(n_A,n_B)= U(n_A) + U(n_B)$ where $U(x) = Tx(\ln(x)-1)-\mu x$ and so expanding about $\overline n_A$ we find to second order that 
-\begin{equation}
-\langle U'(\overline n_A) + U''(\overline n_A)\phi_A +\frac{1}{2}U'''(\overline n_A)\phi_A ^2 \rangle =0,
-\end{equation}
-the equation to first order gives 
-\begin{equation}
-U'(\overline n_A)=0
-\end{equation}
-which gives $\overline n_A= n_m$ where $n_m$ is the value for which $U$ attains its minimum. However if we keep the next order term we find 
-\begin{equation}
-U'(\overline n_A)+\frac{1}{2} U'''(\overline n_A)\langle\phi_A ^2 \rangle=0.
-\end{equation}
-If the renormalization of the average value of $\overline n_A$ is assumed to be small we can write
-\begin{equation}
-\overline n_A= n_m +\delta,
-\end{equation}
-which gives
-\begin{equation}
-\delta = -\frac{1}{2} \frac{U'''(n_m)}{U''(n_m)}\langle\phi_A ^2 \rangle.
-\end{equation}
-For the (entropic) potential in question here we have
-\begin{equation}
-\delta = \frac{1}{2n_m} \langle\phi_A ^2 \rangle,
-\end{equation}
-we thus see that the average height of the interface is increased due to fluctuations. The non-equilibrium fluctuations are stronger an thus the height increases under driving. 
+%%%%%%%%%%%%%%%%%%%
+%    \section{Driven POP model}
+%%%%%%%%%%%%%%%%%%%
+%
+%    \subsection{Conserved diffusive dynamics}
+%%%%%%%%%%%%%%%%
+%We now study a system of two particle types $A$ and $B$, where one is a a solvent and the other one a particle in suspension, for example.
+%Assuming Brownian dynamics for the particles, the stochastic density functional equations for the continuum fields $n_A$ and $n_B$ are
+%given by
+%\begin{equation}
+%\frac{\partial n_A(x)}{\partial t} = \frac{\partial}{\partial x} \beta D_A n_A(x)\frac{\partial}{\partial x} \frac{\delta H}{\delta n_A(x)} + \frac{\partial}{\partial x} \sqrt{2D_A n_A(x)} \eta_A(x,t)
+%\end{equation}
+%and 
+%\begin{equation}
+%\frac{\partial n_B(x)}{\partial t} = \frac{\partial}{\partial x} \beta D_B n_B(x)\frac{\partial}{\partial x} \frac{\delta H}{\delta n_B(x)} + \frac{\partial}{\partial x} \sqrt{2D_Bn_B(x)} \eta_B(x,t)
+%\end{equation}
+%where $D_A$ and $D_B$ are the diffusion constants of the particles. The noise terms are independent , zero mean, spatiotemporal Gaussian white noise with
+%\begin{eqnarray}
+%\langle \eta_A(x,t) \eta_A(x',t')\rangle = \langle \eta_B(x,t) \eta_B(x',t')\rangle =\delta(x-x')\delta(t-t').
+%\end{eqnarray}
+%As we are interested in what happens when one of the species is driven, we add a term
+%\begin{equation}
+%H_D = -\int dx xf n_A(x)
+%\end{equation}
+%to the Hamiltonian, this corresponds to a force which pushes the particles of type $A$ to the right. We also assume periodic boundary conditions, and thus a current will exist in the resulting steady state.
+%This introduces term in the equation for $n_A(x)$ which becomes
+%\begin{equation}
+%\frac{\partial n_A(x)}{\partial t}+ \frac{\partial}{\partial x}D_A\beta f n_A(x) = \frac{\partial}{\partial x} \beta D_A n_A(x)\frac{\partial}{\partial x} \frac{\delta H}{\delta n_A(x)} + \frac{\partial}{\partial x} \sqrt{2D_A n_A(x)} \eta_A(x,t).
+%\end{equation}
+%It is important to note that in the absence of the particles of type $B$, the resulting equation for the field $n_A(x,t)$ can be rendered independent of
+%the force $f$ via the Galilean transformation
+%\begin{equation}
+%n(x,t) = n(x-vt,t)
+%\end{equation}
+%where $v= D_A\beta f$ is the induced drift on the particles of type $A$.
+%Note that the Galilean invariance can also be broken if the force $f$ acts on both particle types but the diffusion coefficients $D_A$ and $D_B$ are different.
+%
+%We now expand the deterministic part of the two equations to first order in the density fluctuations about its mean value and the noise terms to zeroth order. This approximation respects detailed balance for the effective quadratic Hamiltonian and has been used with accuracy in a wide variety of contexts. The resulting dynamics of of a model B and Fourier transforming in space gives
+%\begin{equation}
+%\frac{\partial \tilde{\boldmath \Phi}(k,t)}{\partial t}= -\beta \tilde A(k){\boldmath \Phi}(k,t) + {\boldmath \tilde\eta}(k,t),
+%\end{equation}
+%where
+%\begin{equation}
+%{\boldmath \Phi}(k,t) =\begin{pmatrix} &\tilde \phi_A(k,t) \\ &\tilde \phi_B(k,t)\end{pmatrix}
+%\end{equation}
+%The noise correlation function is given by
+%\begin{equation}
+%\langle {\tilde\boldmath\eta}^{T}(k,t) {\tilde\boldmath{\eta}}(k',t')\rangle = 4\pi\tilde R(k) \delta(t-t')\delta(k+k')
+%\end{equation}
+%where 
+%\begin{equation}\tilde R(k)= 2\begin{pmatrix} & D_A\overline n_A k^2 & 0\\
+%& 0 & D_B\overline n_B k^2\end{pmatrix},
+%\end{equation}
+%and 
+%\begin{equation}
+%\tilde A(k) =\sigma\begin{pmatrix}& D_A\overline n_A k^2(k^2 + m_A^2) -i\frac{D_A k f}{\sigma} & 
+%D_A\overline n_A k^4 \\ & D_B\overline n_B k^4 & D_B \overline n_B k^2(k^2 + m_B^2)\end{pmatrix}
+%\end{equation}
+%The Fourier transform steady state correlation function matrix defined by
+%\begin{equation}
+%\langle {\boldmath\tilde\Phi}^T(k){\boldmath\tilde\Phi}(k')\rangle =
+%2\pi \delta(k+k') \tilde C(k)
+%\end{equation}
+%is then given by the solution to the Lyapounov equation
+%\begin{equation}
+%\tilde A(k)\tilde C(k) + \tilde C(k)\tilde A^T(-k) = 2T \tilde R(k)
+%\end{equation}
+%Solving this we find that
+%\begin{equation}
+%\tilde C_{hh}(k)= \frac{T}{\sigma}\frac{k^2(m_A^2+m_B^2)(D_A\overline n_A[k^2+m_A^2] +D_B\overline n_B[k^2+m_B^2] )^2 +\frac{f^2 }{\sigma^2}D_A^2(2k^2+m_A^2 + m_B^2)}{k^2(D_A\overline n_A[k^2+m_A^2] +D_B\overline n_B[k^2+m_B^2] )^2(m_A^2 m_B^2 + k^2(m_A^2 +m_B^2))
+%+\frac{f^2 }{\sigma^2}D_A^2(k^2+m_A^2)(k^2+m_B^2)}.
+%\end{equation}
+%In the equilibrium or non-driven system where $f=0$ the above formula
+%yields the static result Eq. (\ref{stat}). Of particular interest is the strong driving limit where we find that as $f\to\infty$ the result
+%\begin{equation}
+%\tilde C_{hh}(k)=\frac{T}{\sigma}\left[\frac{1}{k^2+m_A^2}
+%+\frac{1}{k^2+m_B^2}\right]
+%\end{equation}
+%The effect of strong  driving is to decouple the fluctuations of $n_A$ and $n_B$ and we see that the total height fluctuation is that of the sum two independent interfaces. The height variance is then given by
+%\begin{equation}
+%\langle h^2\rangle_s = \frac{T}{2\sigma m_d}
+%\end{equation}
+%where 
+%\begin{equation}
+%m_d = \frac{m_A m_B}{m_A+m_B}
+%\end{equation}
+%From this we find that
+%\begin{equation}
+%\frac{\langle h^2\rangle_s }{\langle h^2\rangle_{eq}}=\frac{m_A+m_B}{\sqrt{m_A^2 + m_B^2}}.
+%\end{equation}
+%We also see that, as $m_A$ and $m_B$ are positive, the fluctuations in limit of infinite driving are always larger than in the equilibrium state. 
+%
+%
+%Imagine now that the $B$ particles constitute the bottom layer and that $D_B\ll D_A$ this mimics the solid on solid dynamics where only the top layer of the particles participate in the dynamics. This gives
+%\begin{equation}
+%\tilde C_{hh}(k)= \frac{T}{\sigma}\frac{k^2(m_A^2+m_B^2)(\overline n_A[k^2+m_A^2] )^2 +\frac{f^2 }{\sigma^2}(2k^2+m_A^2 + m_B^2)}{k^2(\overline n_A[k^2+m_A^2]  )^2(m_A^2 m_B^2 + k^2(m_A^2 +m_B^2))
+%+\frac{f^2 }{\sigma^2}(k^2+m_A^2)(k^2+m_B^2)}.
+%\end{equation}
+%Assuming the $A$ layer is thinner that the $B$ layer so $m_B\ll m_A$ gives
+%\begin{equation}
+%\tilde C_{hh}(k)= \frac{T}{\sigma}\frac{k^2 m_A^2(\overline n_A[k^2+m_A^2] )^2 +\frac{f^2 }{\sigma^2}(2k^2+m_A^2 )}{k^2(\overline n_A[k^2+m_A^2]  )^2(m_A^2 m_B^2 + k^2 m_A^2)
+%+\frac{f^2 }{\sigma^2}(k^2+m_A^2)(k^2+m_B^2)}.
+%\end{equation}
+%which simplifies to give
+%\begin{eqnarray}
+%\tilde C_{hh}(k)&=& \frac{T}{\sigma}\frac{k^2 m_A^2(\overline n_A[k^2+m_A^2] )^2 +\frac{f^2 }{\sigma^2}(2k^2+m_A^2 )}{(k^2+m_A^2)(k^2 + m_B^2)[(n_A^2m_A^2 k^2(k^2+m_A^2)
+%+\frac{f^2 }{\sigma^2}]} \\
+%\tilde C_{hh}(k)&=& \frac{T}{\sigma}\frac{1}{k^2 + m_B^2}
+%+\frac{T}{\sigma}\frac{\frac{f^2 }{\sigma^2}k^2}{(k^2+m_A^2)(k^2 + m_B^2)[(n_A^2m_A^2 k^2(k^2+m_A^2)
+%+\frac{f^2 }{\sigma^2}]} 
+%\\
+%&=&\frac{T}{\sigma}\left[\frac{1}{(k^2 + m_B^2)}
+%+\frac{ f^2 }{\sigma^2\overline n_A^2 m_A^2}\frac{k^2}{(k^2+m_A^2)(k^2 + m_B^2)(k^4+m_A^2 k^2 +\frac{f^2 }{\sigma^2n_A^2 m_A^2})}\right]
+%\end{eqnarray}
+%The height fluctuations are then given by
+%\begin{equation}
+%\langle h^2\rangle = \frac{T}{2\sigma m_B} +  \frac{T}{2\sigma}\frac{ f^2 }{\sigma^2\overline n_A^2 m_A^2}\frac{m_A + m_B+ m_++ m_-}{(m_A+m_B) (m_++m_B)(m_-+m_B)(m_A+m_+)(m_A+m_+)(m_++m_-)},
+%\end{equation}
+%where 
+%\begin{equation}
+%m_\pm = \sqrt{\frac{m_A^2\pm\sqrt{m_A^4 -\frac{4f^2 }{\sigma^2n_A^2 m_A^2}}}{2}}
+%\end{equation}
+%
+%%%%%%%%%%%%%%%%
+%    \subsection{Non conserved dynamics}
+%%%%%%%%%%%%%%%%
+%We now consider the case where the particles of type $B$ are in contact with 
+%a reservoir of the same particles in a vapour phase. To model this we modify the dynamics of the B phase by introducing a component of non-conserved dynamics for these particles
+%\begin{equation}
+%\frac{\partial n_B(x)}{\partial t} = \frac{\partial}{\partial x} \beta D_B n_B(x)\frac{\partial}{\partial x} \frac{\delta H}{\delta n_B(x)} + \frac{\partial}{\partial x} \sqrt{2D_Bn_B(x)} \eta_B(x,t)
+%-K_B\beta \frac{\delta H}{\delta n_B(x)} + \sqrt{2K_B}\eta'_B(x,t),
+%\end{equation}
+%here if $\eta'_B(x,t)$ is a new spatio-temporal white noise independent of the 
+%others, the undriven system obeys detailed balance.  Now the average value of the $n_B$ is determined by taking the average in the steady state. As the system is invariant under translation, the average of the first diffusive term on the right-hand-side is zero and so we find
+%\begin{equation}
+%\langle \frac{\delta H}{\delta n_B(x)}\rangle=0,
+%\end{equation}
+%where the averaging is over the system in the steady state. Again invariance by translation in space can be applied to write
+%\begin{equation}
+%\langle \frac{\partial V(n_A,n_B)}{\partial n_A}\rangle  =0
+%\end{equation}
+%Here we have $V(n_A,n_B)= U(n_A) + U(n_B)$ where $U(x) = Tx(\ln(x)-1)-\mu x$ and so expanding about $\overline n_A$ we find to second order that 
+%\begin{equation}
+%\langle U'(\overline n_A) + U''(\overline n_A)\phi_A +\frac{1}{2}U'''(\overline n_A)\phi_A ^2 \rangle =0,
+%\end{equation}
+%the equation to first order gives 
+%\begin{equation}
+%U'(\overline n_A)=0
+%\end{equation}
+%which gives $\overline n_A= n_m$ where $n_m$ is the value for which $U$ attains its minimum. However if we keep the next order term we find 
+%\begin{equation}
+%U'(\overline n_A)+\frac{1}{2} U'''(\overline n_A)\langle\phi_A ^2 \rangle=0.
+%\end{equation}
+%If the renormalization of the average value of $\overline n_A$ is assumed to be small we can write
+%\begin{equation}
+%\overline n_A= n_m +\delta,
+%\end{equation}
+%which gives
+%\begin{equation}
+%\delta = -\frac{1}{2} \frac{U'''(n_m)}{U''(n_m)}\langle\phi_A ^2 \rangle.
+%\end{equation}
+%For the (entropic) potential in question here we have
+%\begin{equation}
+%\delta = \frac{1}{2n_m} \langle\phi_A ^2 \rangle,
+%\end{equation}
+%we thus see that the average height of the interface is increased due to fluctuations. The non-equilibrium fluctuations are stronger an thus the height increases under driving. 
 
 
 %%%%%%%%%%%%%%%%

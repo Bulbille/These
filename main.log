@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.3.19)  18 JUN 2020 19:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.3.19)  19 JUN 2020 10:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2406,14 +2406,9 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 87.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 87.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: C45F0FF087A0158C7D8DE758DD8F08B1;4281.
+Package rerunfilecheck Info: File `main.brf' has not changed.
+(rerunfilecheck)             Checksum: 761ACE7541AA2C4E2D5AA6F54D476589;16025.
 
-
-Package rerunfilecheck Warning: File `main.brf' has changed.
-(rerunfilecheck)                Rerun to get bibliographical references right.
-
-Package rerunfilecheck Info: Checksums for `main.brf':
-(rerunfilecheck)             Before: 568D5D5D1FEAE4D55AC85D4C5CC7391C;15742
-(rerunfilecheck)             After:  761ACE7541AA2C4E2D5AA6F54D476589;16025.
 
 LaTeX Warning: There were undefined references.
 
@@ -2445,10 +2440,10 @@ hare/texlive/texmf-dist/fonts/type1/adobe/utopia/putb8a.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/adobe/utopia/putr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 adobe/utopia/putri8a.pfb>
-Output written on main.pdf (106 pages, 1998457 bytes).
+Output written on main.pdf (106 pages, 1998623 bytes).
 PDF statistics:
- 2990 PDF objects out of 3580 (max. 8388607)
- 2419 compressed objects within 25 object streams
+ 2995 PDF objects out of 3580 (max. 8388607)
+ 2424 compressed objects within 25 object streams
  820 named destinations out of 1000 (max. 500000)
  647 words of extra memory for PDF output out of 10000 (max. 10000000)
 
