@@ -1,7 +1,7 @@
 \chapter{Beyond Solid-On-Solid : the Particles-Over-Particles model}
 \label{chap-pop}
 
-While Ising models describe bulk behaviour of magnetic systems \cite{niss_history_2005,niss_history_2009} but can also be used to describe interfaces between two coexisting phases \cite{abraham_interface_1976}, a direct interface lattice models exists, which is called Solid-On-Solid. This model was first studied by Gilmer and Bennema \cite{gilmer_computer_1972,gilmer_simulation_1972} as a way to compute the crystal growth, whose dynamical equation will be later known as the Edwards-Wilkinson equation \cite{edwards_surface_1982,halpin-healy_kinetic_1995} . In a second time, correspondance between SOS and the highly anisotropic Ising model at low temperature where found \cite{swendsen_roughening_1977,guyer_sine-gordon_1979}, with the exact derivation of the SOS hamiltonian from the Ising one explained in Sec \ref{sec-sos}. When using an exponent of 2 in the interaction between nearest sites, the Gaussian SOS exhibits similar behavior to fluid interfaces \cite{h_muller-krumbhaar_kinetic_1976,baillie_solid_1993}.
+While Ising models describe bulk behaviour of magnetic systems \cite{niss_history_2005,niss_history_2009} but can also be used to describe interfaces between two coexisting phases \cite{abraham_interface_1976}, a direct interface lattice models exists, which is called Solid-On-Solid. This model was first studied by Gilmer and Bennema \cite{gilmer_computer_1972,gilmer_simulation_1972} as a way to compute the crystal growth, whose dynamical equation will be later known as the Edwards-Wilkinson equation \cite{edwards_surface_1982,halpin-healy_kinetic_1995} . In a second time, correspondance between SOS and the highly anisotropic Ising model at low temperature where found \cite{swendsen_roughening_1977,guyer_sine-gordon_1979}, with the exact derivation of the SOS hamiltonian from the Ising one explained in Sec \ref{sec-sos}. When using an exponent of 2 in the interaction between nearest sites, the Gaussian SOS exhibits similar behavior to fluid interfaces \cite{muller-krumbhaar_kinetic_1976,baillie_solid_1993}.
 In Monte Carlo simulations for the Ising model, spins are taken with a uniform probability \cite{metropolis_monte_1949,newman_monte_1999}, which allows the study of interface dynamics \cite{schmittmann_driven_1998,muller_profile_2005,smith_interfaces_2008-1,smith_lateral_2010}. On the contrary in the SOS aproximation it is the heights which are taken with a uniform probability \cite{wilby_scaling_1992,siegert_scaling_1993} thus discarding bulk information. 
 
 Driven by this lack of correspondence between both models, in this chapter we modernize Temperley's model \cite{temperley_statistical_1952} with a model that we call {\bf Particles-Over-Particles} which takes into account combinatorial terms, giving rise to an entropic contribution.
@@ -132,7 +132,7 @@ The total partition function is then
 \begin{align}
 \Xi = \sum_h \exp \left( -\beta H_{eff}(h_1,h_2...h_{L'}) \right) \prod_{m \in \bar{M}} \delta_{\sum_{i=1}^{L'} h_i,N_m}
 \end{align}
-with the average number of particles $$ per site being
+with the average number of particles per site being
 \begin{align}
 < n_m > =& \frac{1}{\beta L'} \frac{\partial}{\partial \mu_m} \ln(\Xi) \nn
 =& \frac{1}{\beta L'} \frac{\partial \mu_e}{\partial \mu_m} \frac{\partial}{\partial \mu_e} \ln(\Xi) \nn

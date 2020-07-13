@@ -127,7 +127,7 @@ Therefore if a field $\phi$ maximises $H$ we must have
 \frac{\delta H}{\delta\phi(\bx)}=0
 \end{equation}
 
-We now consider the standard Landau-Ginzburg Hamiltonian \cite{l_landau_physique_1990} describing Ising like systems where
+We now consider the standard Landau-Ginzburg Hamiltonian \cite{landau_physique_1990} describing Ising like systems where
 \begin{equation}
 H[\phi] = \int d\bx \ \frac{\kappa}{2}[\nabla \phi]^2 + V(\phi)
 \label{landau-ginzburg-hamiltonian}
@@ -618,7 +618,7 @@ $J$ is called the coupling parameter of the system, and can be non-uniform, with
 \end{figure}  
 
 
-The mean-field theory with a $\phi^4$ potential has been developed from this model \cite{bellac_equilibrium_2004}. Exact relationship between both of them has been found in 4 dimensions and above \cite{aizenman_proof_1981}. A fast way to convince ourselves is to take the finite difference derivative at first order of Eq \eqref{landau-ginzburg-hamiltonian}. If we suppose the sole role of the potential is to set the field to $\pm \phi_C$ on each site, then we have
+The mean-field theory with a $\phi^4$ potential has been developed from this model \cite{le_bellac_equilibrium_2004}. Exact relationship between both of them has been found in 4 dimensions and above \cite{aizenman_proof_1981}. A fast way to convince ourselves is to take the finite difference derivative at first order of Eq \eqref{landau-ginzburg-hamiltonian}. If we suppose the sole role of the potential is to set the field to $\pm \phi_C$ on each site, then we have
 \begin{align}
     [{\boldsymbol \nabla} \phi(i)]^2 &= \left( \frac{\partial \phi(i)}{\partial x} \right)^2  + \left( \frac{\partial \phi(i)}{\partial y} \right)^2 + \left( \frac{\partial \phi({\bf i})}{\partial z} \right)^2\nn
     &= (\phi(x,y,z)-\phi(x+1,y,z))^2 + (\phi(x,y,z)-\phi(x,y+1,z))^2 + (\phi(x,y,z)-\phi(x,y,z+1))^2 \nn
@@ -629,7 +629,7 @@ where we've set the distance between two sites to $1$.
 From this we easily see some bulk energy to which we add the sites' nearest neighbours interactions in an Ising-like fashion.
 %%%%%%%%%%%%%
 
-This model precisely describes  phase transitions in uniaxial magnetic systems\cite{de_jongh_experiments_1974,wp_wold_ising_2000,ikeda_neutron_1973}. It is also the simplest model of its eponymous universality class, which also contains liquid/gas transitions and binary fluids.
+This model precisely describes  phase transitions in uniaxial magnetic systems\cite{de_jongh_experiments_1974,wold_ising_2000,ikeda_neutron_1973}. It is also the simplest model of its eponymous universality class, which also contains liquid/gas transitions and binary fluids.
 In these mappings, $n_i=\frac{1}{2}(1-\sigma_i)=0,1$ represents occupation of a cell of a lattice fluid or $\sigma_i$ gives the label of a binary species $A$ or $B$.
 This model does not have a phase transition in 1D, but a phase transition in 2D was foumd in 1944\cite{onsager_crystal_1944} at the critical temperature 
 \begin{align}
@@ -1004,6 +1004,6 @@ In Chap \ref{chap-driven} we study the effect of a uniform driving $v(\bx) = \ga
 \section{Conclusion}
 %%%%%%%%%%%%%%%%%%%% 
 
-Statistical field theory \cite{bray_theory_1994} gives us a method to study the dynamics of equilibrium fields \cite{bellac_equilibrium_2004}. The surface tension of such a system is then defined as the difference of free energy between the bulk and the interface \cite{cahn_free_1958,abraham_transfer_1973}. The two main models are model A and model B \cite{hohenberg_theory_1977}, which decribe the dynamics of a field respectively in grand-canonical and the canonical ensemble. From those equations, we have defined what is an interface and have derived the Edwards-Wilkinson equation \cite{edwards_surface_1982} for both ensembles.
+Statistical field theory \cite{bray_theory_1994} gives us a method to study the dynamics of equilibrium fields \cite{le_bellac_equilibrium_2004}. The surface tension of such a system is then defined as the difference of free energy between the bulk and the interface \cite{cahn_free_1958,abraham_transfer_1973}. The two main models are model A and model B \cite{hohenberg_theory_1977}, which decribe the dynamics of a field respectively in grand-canonical and the canonical ensemble. From those equations, we have defined what is an interface and have derived the Edwards-Wilkinson equation \cite{edwards_surface_1982} for both ensembles.
 The Ising model \cite{niss_history_2005,niss_history_2009} provides a good way to study the bahviour of the field by discretization, which is easier to compute in numerical simulations \cite{newman_monte_1999}. The same kind of dimensional reduction can be done in order to get an interface lattice model which is called the Solid-On-Solid model \cite{gilmer_simulation_1972}. This model allows the use of the transfer method in an easier way than the Ising model\cite{privman_asymptotic_1989}. 
 Also, the presence of out-of-equilibrum hydrodynamic flows tend to present interesting features. One such example is thee Couette shear \cite{derks_suppression_2006}, which has been found to smoothen the interface \cite{smith_interfaces_2008-1}.

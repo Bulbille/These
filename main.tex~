@@ -1,0 +1,87 @@
+\documentclass[11pt]{book}
+
+\input{Preambule}		% Liste des packages et de leurs options
+\input{CommandesPerso}	% Commandes et environnements perso
+\input{PageDeGarde}
+
+
+%%% Commandes personnalisées  %%%
+\newcommand{\nn}{\nonumber \\} % newline sans nombre dans align
+\newcommand{\mC}{\mathcal{C}} %pour les fonctions de corrélation
+\newcommand{\bx}{{\bf x}} %pour les vecteurs en gras
+\newcommand{\by}{{\bf y}} %pour les vecteurs en gras
+\newcommand{\bq}{{\bf q}}
+\newcommand{\bk}{{\bf k}}
+\newcommand{\br}{{\bf r}}
+\newcommand{\bv}{{\bf v}}
+\DeclareMathOperator{\sgn}{sgn}
+% Les > et < se comportent normalement si c'est pour supérieur ou inférieur, sinon se comportent comme \langle
+\mathchardef\less=\mathcode`<
+\mathchardef\greater=\mathcode`>
+\DeclareMathDelimiter{<}{\mathopen}{symbols}{"68}{largesymbols}{"0A}
+\DeclareMathDelimiter{>}{\mathclose}{symbols}{"69}{largesymbols}{"0B}
+
+%% Ne pas casser les équations inline $ $ 
+\relpenalty=5000
+\binoppenalty=5000
+
+
+% Infos de la page de garde
+\author{Paul Gersberg}
+\title{Confinement and driving effects on continuous and discrete model interfaces}
+\specialite{Laser, Matière, Nanosciences}
+\directeur{David S. Dean}
+\encadrant{Peter C.W. Holdsworth}
+\date{16 juillet 2020}
+\jurya{Steve Bramwell, University College London}{Professeur}{Rapporteur}
+\juryb{Jorge Kurchan, ENS Paris}{Directeur de recherche}{Rapporteur}
+\juryc{Pierre Pujol, LPT Toulouse }{Professeur}{Examinateur}
+\juryd{Jérôme Cayssol, LOMA}{Professeur}{Examinateur}
+\ecole{Université de Bordeaux}
+
+% Méta-données du PDF
+\hypersetup{
+    pdfauthor={Dorian Depriester},
+    pdfsubject={Manuscrit de thèse de doctorat},
+    pdftitle={Fluotournage à froid de tubes en TA6V},
+    pdfkeywords={Fluotournage, déformation plastique, titane, TA6V}
+}
+
+%%%%%%% Début du document %%%%%
+\begin{document}
+%\bibliographystyle{unrst}
+
+% Préambule
+	\pagenumbering{roman}
+	\pagedegarde
+
+	\cleardoublepage
+\input{intro/abstract}
+
+
+	\cleardoublepage
+		% Table des matières
+			\setcounter{tocdepth}{1}	% Pas besoin de trop détailler le sommaire ici (chapitres/sections)
+			\dominitoc						% Génération des mini-toc	\pagenumbering{arabic}
+			\setcounter{tocdepth}{4}
+			\setcounter{secnumdepth}{4}
+			\tableofcontents
+		% Liste des figures
+			\renewcommand*\listfigurename{Liste des figures}
+			%\listoffigures
+		% Liste des tableaux
+		%\listoftables
+
+\input{intro/intro}
+
+\mainmatter
+\input{int-dyn/chap1}
+\input{numerical/method}
+\input{finite-size/chap2}
+\input{pop/pop}
+\input{drivenC/chap4}
+%\input{intro/conclusion}
+
+\bibliographystyle{unsrt}
+\bibliography{biblio}
+\end{document}
