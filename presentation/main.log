@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.3.19)  10 JUL 2020 20:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.3.19)  15 JUL 2020 14:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -941,12 +941,12 @@ File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: includehead includefoot 
-* h-part:(L,W,R)=(9.24994pt, 345.69548pt, 9.24994pt)
-* v-part:(T,H,B)=(0.0pt, 273.14662pt, 0.0pt)
-* \paperwidth=364.19536pt
-* \paperheight=273.14662pt
-* \textwidth=345.69548pt
-* \textheight=244.6939pt
+* h-part:(L,W,R)=(9.24994pt, 436.7442pt, 9.24994pt)
+* v-part:(T,H,B)=(0.0pt, 256.0748pt, 0.0pt)
+* \paperwidth=455.24408pt
+* \paperheight=256.0748pt
+* \textwidth=436.7442pt
+* \textheight=227.62207pt
 * \oddsidemargin=-63.02005pt
 * \evensidemargin=-63.02005pt
 * \topmargin=-72.26999pt
@@ -1057,274 +1057,267 @@ Package caption Info: End \AtBeginDocument code.
 <anr.png, id=35, 1284.8pt x 525.965pt>
 File: anr.png Graphic file (type png)
 <use anr.png>
-Package pdftex.def Info: anr.png  used on input line 108.
-(pdftex.def)             Requested size: 48.85426pt x 20.0pt.
+Package pdftex.def Info: anr.png  used on input line 106.
+(pdftex.def)             Requested size: 43.67708pt x 17.87294pt.
 <loma.png, id=37, 312.16624pt x 124.465pt>
 File: loma.png Graphic file (type png)
 <use loma.png>
-Package pdftex.def Info: loma.png  used on input line 108.
-(pdftex.def)             Requested size: 50.16196pt x 20.0pt.
+Package pdftex.def Info: loma.png  used on input line 106.
+(pdftex.def)             Requested size: 43.67708pt x 17.41357pt.
 <u-bordeaux.png, id=38, 828.09375pt x 254.9525pt>
 File: u-bordeaux.png Graphic file (type png)
 <use u-bordeaux.png>
-Package pdftex.def Info: u-bordeaux.png  used on input line 108.
-(pdftex.def)             Requested size: 64.96pt x 20.0pt.
+Package pdftex.def Info: u-bordeaux.png  used on input line 106.
+(pdftex.def)             Requested size: 43.67708pt x 13.44472pt.
 <cnrs.png, id=39, 513.92pt x 513.92pt>
 File: cnrs.png Graphic file (type png)
 <use cnrs.png>
-Package pdftex.def Info: cnrs.png  used on input line 108.
-(pdftex.def)             Requested size: 29.9948pt x 30.0pt.
+Package pdftex.def Info: cnrs.png  used on input line 106.
+(pdftex.def)             Requested size: 43.67708pt x 43.67085pt.
 <logo_ENS.jpg, id=40, 72.27pt x 72.27pt>
 File: logo_ENS.jpg Graphic file (type jpg)
 <use logo_ENS.jpg>
-Package pdftex.def Info: logo_ENS.jpg  used on input line 108.
-(pdftex.def)             Requested size: 19.99947pt x 20.0pt.
+Package pdftex.def Info: logo_ENS.jpg  used on input line 106.
+(pdftex.def)             Requested size: 43.67708pt x 43.6766pt.
+LaTeX Font Info:    Try loading font information for U+msa on input line 106.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 106.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <9> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 108.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 106.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <6> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 108.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 106.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <9> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 108.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 106.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <6> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 108.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 106.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 108.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 106.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 108.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 106.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./loma.jpg> <./anr.png> <.
-/loma.png> <./u-bordeaux.png> <./cnrs.png> <./logo_ENS.jpg>]
-(./main.toc) [2
+/loma.png> <./u-bordeaux.png> <./cnrs.png> <./logo_ENS.jpg>] (./main.toc) [2
 
 ]
 <mosh-pit.png, id=113, 484.81125pt x 510.90875pt>
 File: mosh-pit.png Graphic file (type png)
 <use mosh-pit.png>
-Package pdftex.def Info: mosh-pit.png  used on input line 134.
+Package pdftex.def Info: mosh-pit.png  used on input line 132.
 (pdftex.def)             Requested size: 145.44449pt x 153.2738pt.
 <nematic-smectic.jpg, id=114, 573.14125pt x 258.9675pt>
 File: nematic-smectic.jpg Graphic file (type jpg)
 <use nematic-smectic.jpg>
-Package pdftex.def Info: nematic-smectic.jpg  used on input line 134.
-(pdftex.def)             Requested size: 345.69548pt x 156.19965pt.
+Package pdftex.def Info: nematic-smectic.jpg  used on input line 132.
+(pdftex.def)             Requested size: 349.39668pt x 157.87114pt.
  [3
 
  <./mosh-pit.png>]
 File: mosh-pit.png Graphic file (type png)
 <use mosh-pit.png>
-Package pdftex.def Info: mosh-pit.png  used on input line 134.
+Package pdftex.def Info: mosh-pit.png  used on input line 132.
 (pdftex.def)             Requested size: 145.44449pt x 153.2738pt.
 File: nematic-smectic.jpg Graphic file (type jpg)
 <use nematic-smectic.jpg>
-Package pdftex.def Info: nematic-smectic.jpg  used on input line 134.
-(pdftex.def)             Requested size: 345.69548pt x 156.19965pt.
+Package pdftex.def Info: nematic-smectic.jpg  used on input line 132.
+(pdftex.def)             Requested size: 349.39668pt x 157.87114pt.
  [4
 
  <./nematic-smectic.jpg>]
-LaTeX Font Info:    Try loading font information for U+msa on input line 181.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 181.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 181.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 166.
  [5
 
 ]
 <double-puit-en-fonction-temp.pdf, id=213, 445.18318pt x 328.1058pt>
 File: double-puit-en-fonction-temp.pdf Graphic file (type pdf)
 <use double-puit-en-fonction-temp.pdf>
-Package pdftex.def Info: double-puit-en-fonction-temp.pdf  used on input line 2
-14.
-(pdftex.def)             Requested size: 179.76312pt x 132.4866pt.
+Package pdftex.def Info: double-puit-en-fonction-temp.pdf  used on input line 1
+93.
+(pdftex.def)             Requested size: 152.86313pt x 112.66092pt.
 
-Overfull \vbox (5.28761pt too high) detected at line 214
+Overfull \vbox (2.53375pt too high) detected at line 193
  []
 
 [6
 
  <./double-puit-en-fonction-temp.pdf>]
-File: double-puit-en-fonction-temp.pdf Graphic file (type pdf)
-<use double-puit-en-fonction-temp.pdf>
-Package pdftex.def Info: double-puit-en-fonction-temp.pdf  used on input line 2
-14.
-(pdftex.def)             Requested size: 179.76312pt x 132.4866pt.
-
-Overfull \vbox (5.28761pt too high) detected at line 214
- []
-
-[7
-
-]
-<interface-profil.pdf, id=281, 462.52798pt x 346.89601pt>
+<interface-profil.pdf, id=252, 438.67891pt x 320.1561pt>
 File: interface-profil.pdf Graphic file (type pdf)
 <use interface-profil.pdf>
-Package pdftex.def Info: interface-profil.pdf  used on input line 241.
-(pdftex.def)             Requested size: 155.5619pt x 116.67271pt.
- [8
+Package pdftex.def Info: interface-profil.pdf  used on input line 220.
+(pdftex.def)             Requested size: 174.695pt x 127.49348pt.
+ [7
 
  <./interface-profil.pdf>]
-<t-85.pdf, id=2754, 266.6763pt x 263.78549pt>
+<t-85.pdf, id=290, 266.6763pt x 263.78549pt>
 File: t-85.pdf Graphic file (type pdf)
 <use t-85.pdf>
-Package pdftex.def Info: t-85.pdf  used on input line 267.
+Package pdftex.def Info: t-85.pdf  used on input line 246.
 (pdftex.def)             Requested size: 186.67213pt x 184.64857pt.
-<crystal-growth.png, id=2755, 884.30376pt x 886.31125pt>
+<crystal-growth.png, id=291, 884.30376pt x 886.31125pt>
 File: crystal-growth.png Graphic file (type png)
 <use crystal-growth.png>
-Package pdftex.def Info: crystal-growth.png  used on input line 267.
+Package pdftex.def Info: crystal-growth.png  used on input line 246.
 (pdftex.def)             Requested size: 176.85762pt x 177.25911pt.
-<binary-fluid.jpeg, id=2756, 1204.5pt x 1204.5pt>
+<binary-fluid.jpeg, id=292, 1204.5pt x 1204.5pt>
 File: binary-fluid.jpeg Graphic file (type jpg)
 <use binary-fluid.jpeg>
-Package pdftex.def Info: binary-fluid.jpeg  used on input line 267.
+Package pdftex.def Info: binary-fluid.jpeg  used on input line 246.
 (pdftex.def)             Requested size: 180.6672pt x 180.6672pt.
-<eau-huile.jpg, id=2757, 2637.855pt x 1445.4pt>
+<eau-huile.jpg, id=293, 2637.855pt x 1445.4pt>
 File: eau-huile.jpg Graphic file (type jpg)
 <use eau-huile.jpg>
-Package pdftex.def Info: eau-huile.jpg  used on input line 267.
+Package pdftex.def Info: eau-huile.jpg  used on input line 246.
 (pdftex.def)             Requested size: 263.80095pt x 144.54846pt.
- [9
+ [8
 
  <./t-85.pdf>]
 File: t-85.pdf Graphic file (type pdf)
 <use t-85.pdf>
-Package pdftex.def Info: t-85.pdf  used on input line 267.
+Package pdftex.def Info: t-85.pdf  used on input line 246.
 (pdftex.def)             Requested size: 186.67213pt x 184.64857pt.
 File: crystal-growth.png Graphic file (type png)
 <use crystal-growth.png>
-Package pdftex.def Info: crystal-growth.png  used on input line 267.
+Package pdftex.def Info: crystal-growth.png  used on input line 246.
 (pdftex.def)             Requested size: 176.85762pt x 177.25911pt.
 File: binary-fluid.jpeg Graphic file (type jpg)
 <use binary-fluid.jpeg>
-Package pdftex.def Info: binary-fluid.jpeg  used on input line 267.
+Package pdftex.def Info: binary-fluid.jpeg  used on input line 246.
 (pdftex.def)             Requested size: 180.6672pt x 180.6672pt.
 File: eau-huile.jpg Graphic file (type jpg)
 <use eau-huile.jpg>
-Package pdftex.def Info: eau-huile.jpg  used on input line 267.
+Package pdftex.def Info: eau-huile.jpg  used on input line 246.
 (pdftex.def)             Requested size: 263.80095pt x 144.54846pt.
- [10
+ [9
 
  <./crystal-growth.png>]
 File: t-85.pdf Graphic file (type pdf)
 <use t-85.pdf>
-Package pdftex.def Info: t-85.pdf  used on input line 267.
+Package pdftex.def Info: t-85.pdf  used on input line 246.
 (pdftex.def)             Requested size: 186.67213pt x 184.64857pt.
 File: crystal-growth.png Graphic file (type png)
 <use crystal-growth.png>
-Package pdftex.def Info: crystal-growth.png  used on input line 267.
+Package pdftex.def Info: crystal-growth.png  used on input line 246.
 (pdftex.def)             Requested size: 176.85762pt x 177.25911pt.
 File: binary-fluid.jpeg Graphic file (type jpg)
 <use binary-fluid.jpeg>
-Package pdftex.def Info: binary-fluid.jpeg  used on input line 267.
+Package pdftex.def Info: binary-fluid.jpeg  used on input line 246.
 (pdftex.def)             Requested size: 180.6672pt x 180.6672pt.
 File: eau-huile.jpg Graphic file (type jpg)
 <use eau-huile.jpg>
-Package pdftex.def Info: eau-huile.jpg  used on input line 267.
+Package pdftex.def Info: eau-huile.jpg  used on input line 246.
 (pdftex.def)             Requested size: 263.80095pt x 144.54846pt.
-
-[11
+ [10
 
  <./eau-huile.jpg>]
 File: t-85.pdf Graphic file (type pdf)
 <use t-85.pdf>
-Package pdftex.def Info: t-85.pdf  used on input line 267.
+Package pdftex.def Info: t-85.pdf  used on input line 246.
 (pdftex.def)             Requested size: 186.67213pt x 184.64857pt.
 File: crystal-growth.png Graphic file (type png)
 <use crystal-growth.png>
-Package pdftex.def Info: crystal-growth.png  used on input line 267.
+Package pdftex.def Info: crystal-growth.png  used on input line 246.
 (pdftex.def)             Requested size: 176.85762pt x 177.25911pt.
 File: binary-fluid.jpeg Graphic file (type jpg)
 <use binary-fluid.jpeg>
-Package pdftex.def Info: binary-fluid.jpeg  used on input line 267.
+Package pdftex.def Info: binary-fluid.jpeg  used on input line 246.
 (pdftex.def)             Requested size: 180.6672pt x 180.6672pt.
 File: eau-huile.jpg Graphic file (type jpg)
 <use eau-huile.jpg>
-Package pdftex.def Info: eau-huile.jpg  used on input line 267.
+Package pdftex.def Info: eau-huile.jpg  used on input line 246.
 (pdftex.def)             Requested size: 263.80095pt x 144.54846pt.
- [12
+ [11
 
  <./binary-fluid.jpeg>]
-<tension-superficielle.pdf, id=2875, 435.0654pt x 320.1561pt>
+<tension-superficielle.pdf, id=411, 435.0654pt x 320.1561pt>
 File: tension-superficielle.pdf Graphic file (type pdf)
 <use tension-superficielle.pdf>
-Package pdftex.def Info: tension-superficielle.pdf  used on input line 294.
-(pdftex.def)             Requested size: 155.5619pt x 114.47447pt.
- [13
+Package pdftex.def Info: tension-superficielle.pdf  used on input line 273.
+(pdftex.def)             Requested size: 157.22743pt x 115.70065pt.
+ [12
 
  <./tension-superficielle.pdf>]
-<interface-confined.pdf, id=2911, 433.62pt x 321.6015pt>
+<interface-confined.pdf, id=446, 433.62pt x 321.6015pt>
 File: interface-confined.pdf Graphic file (type pdf)
 <use interface-confined.pdf>
-Package pdftex.def Info: interface-confined.pdf  used on input line 330.
-(pdftex.def)             Requested size: 155.5619pt x 115.37405pt.
- [14
+Package pdftex.def Info: interface-confined.pdf  used on input line 311.
+(pdftex.def)             Requested size: 157.22743pt x 116.61067pt.
 
- <./interface-confined.pdf>] [15
-
-]
-<wave-0.jpg, id=2977, 4029.0525pt x 903.375pt>
-File: wave-0.jpg Graphic file (type jpg)
-<use wave-0.jpg>
-Package pdftex.def Info: wave-0.jpg  used on input line 348.
-(pdftex.def)             Requested size: 276.55743pt x 62.0021pt.
-<wave-1.jpg, id=2978, 4047.12pt x 903.375pt>
-File: wave-1.jpg Graphic file (type jpg)
-<use wave-1.jpg>
-Package pdftex.def Info: wave-1.jpg  used on input line 348.
-(pdftex.def)             Requested size: 276.55743pt x 61.72643pt.
-<wave-2.jpg, id=2979, 4041.0975pt x 903.375pt>
-File: wave-2.jpg Graphic file (type jpg)
-<use wave-2.jpg>
-Package pdftex.def Info: wave-2.jpg  used on input line 348.
-(pdftex.def)             Requested size: 276.55743pt x 61.82292pt.
- [16
-
- <./wave-0.jpg> <./wave-1.jpg> <./wave-2.jpg>]
-<snap-sos.pdf, id=3007, 432.17459pt x 317.98799pt>
-File: snap-sos.pdf Graphic file (type pdf)
-<use snap-sos.pdf>
-Package pdftex.def Info: snap-sos.pdf  used on input line 379.
-(pdftex.def)             Requested size: 172.86678pt x 127.19293pt.
- [17
-
- <./snap-sos.pdf>]
-<sos-driving-snaps0.pdf, id=3044, 416.2752pt x 315.81992pt>
-File: sos-driving-snaps0.pdf Graphic file (type pdf)
-<use sos-driving-snaps0.pdf>
-Package pdftex.def Info: sos-driving-snaps0.pdf  used on input line 398.
-(pdftex.def)             Requested size: 120.99551pt x 91.79263pt.
-<sos-driving-snaps1.pdf, id=3045, 409.77089pt x 313.65181pt>
-File: sos-driving-snaps1.pdf Graphic file (type pdf)
-<use sos-driving-snaps1.pdf>
-Package pdftex.def Info: sos-driving-snaps1.pdf  used on input line 398.
-(pdftex.def)             Requested size: 120.99551pt x 92.61263pt.
-<sos-driving-snaps3.pdf, id=3046, 414.8298pt x 317.26529pt>
-File: sos-driving-snaps3.pdf Graphic file (type pdf)
-<use sos-driving-snaps3.pdf>
-Package pdftex.def Info: sos-driving-snaps3.pdf  used on input line 398.
-(pdftex.def)             Requested size: 120.99551pt x 92.5371pt.
-<sos-driving-snaps6.pdf, id=3047, 411.939pt x 316.54259pt>
-File: sos-driving-snaps6.pdf Graphic file (type pdf)
-<use sos-driving-snaps6.pdf>
-Package pdftex.def Info: sos-driving-snaps6.pdf  used on input line 398.
-(pdftex.def)             Requested size: 120.99551pt x 92.97353pt.
-<tension-drive.pdf, id=3048, 401.82121pt x 311.4837pt>
-File: tension-drive.pdf Graphic file (type pdf)
-<use tension-drive.pdf>
-Package pdftex.def Info: tension-drive.pdf  used on input line 398.
-(pdftex.def)             Requested size: 241.09457pt x 186.89166pt.
-
-Overfull \vbox (178.0993pt too high) detected at line 398
+Overfull \vbox (2.17671pt too high) detected at line 311
  []
 
-[18
+[13
+
+ <./interface-confined.pdf>] [14
+
+]
+<wave-0.jpg, id=513, 4029.0525pt x 903.375pt>
+File: wave-0.jpg Graphic file (type jpg)
+<use wave-0.jpg>
+Package pdftex.def Info: wave-0.jpg  used on input line 328.
+(pdftex.def)             Requested size: 240.21063pt x 53.85555pt.
+<wave-1.jpg, id=514, 4047.12pt x 903.375pt>
+File: wave-1.jpg Graphic file (type jpg)
+<use wave-1.jpg>
+Package pdftex.def Info: wave-1.jpg  used on input line 328.
+(pdftex.def)             Requested size: 240.21063pt x 53.60742pt.
+<wave-2.jpg, id=515, 4041.0975pt x 903.375pt>
+File: wave-2.jpg Graphic file (type jpg)
+<use wave-2.jpg>
+Package pdftex.def Info: wave-2.jpg  used on input line 328.
+(pdftex.def)             Requested size: 240.21063pt x 53.69014pt.
+ [15
+
+ <./wave-0.jpg> <./wave-1.jpg> <./wave-2.jpg>]
+<snap-sos.pdf, id=543, 432.17459pt x 317.98799pt>
+File: snap-sos.pdf Graphic file (type pdf)
+<use snap-sos.pdf>
+Package pdftex.def Info: snap-sos.pdf  used on input line 359.
+(pdftex.def)             Requested size: 172.86678pt x 127.19293pt.
+
+Overfull \vbox (0.72418pt too high) detected at line 359
+ []
+
+[16
+
+ <./snap-sos.pdf>]
+<sos-driving-snaps0.pdf, id=579, 416.2752pt x 315.81992pt>
+File: sos-driving-snaps0.pdf Graphic file (type pdf)
+<use sos-driving-snaps0.pdf>
+Package pdftex.def Info: sos-driving-snaps0.pdf  used on input line 380.
+(pdftex.def)             Requested size: 117.92133pt x 89.46024pt.
+<sos-driving-snaps1.pdf, id=580, 409.77089pt x 313.65181pt>
+File: sos-driving-snaps1.pdf Graphic file (type pdf)
+<use sos-driving-snaps1.pdf>
+Package pdftex.def Info: sos-driving-snaps1.pdf  used on input line 380.
+(pdftex.def)             Requested size: 117.92133pt x 90.25793pt.
+<sos-driving-snaps3.pdf, id=581, 414.8298pt x 317.26529pt>
+File: sos-driving-snaps3.pdf Graphic file (type pdf)
+<use sos-driving-snaps3.pdf>
+Package pdftex.def Info: sos-driving-snaps3.pdf  used on input line 380.
+(pdftex.def)             Requested size: 117.92133pt x 90.18433pt.
+<sos-driving-snaps6.pdf, id=582, 411.939pt x 316.54259pt>
+File: sos-driving-snaps6.pdf Graphic file (type pdf)
+<use sos-driving-snaps6.pdf>
+Package pdftex.def Info: sos-driving-snaps6.pdf  used on input line 380.
+(pdftex.def)             Requested size: 117.92133pt x 90.61163pt.
+<tension-drive.pdf, id=583, 401.82121pt x 311.4837pt>
+File: tension-drive.pdf Graphic file (type pdf)
+<use tension-drive.pdf>
+Package pdftex.def Info: tension-drive.pdf  used on input line 380.
+(pdftex.def)             Requested size: 174.695pt x 135.41826pt.
+
+Overfull \vbox (19.09879pt too high) detected at line 380
+ []
+
+[17
 
  <./sos-driving-snaps0.pdf> <./sos-driving-snaps1.pdf
 
@@ -1338,105 +1331,90 @@ n: multiple pdfs with page group included in a single page
 
 pdfTeX warning: /usr/bin/pdflatex (file ./sos-driving-snaps6.pdf): PDF inclusio
 n: multiple pdfs with page group included in a single page
+> <./tension-drive.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./tension-drive.pdf): PDF inclusion: mu
+ltiple pdfs with page group included in a single page
 >]
 File: sos-driving-snaps0.pdf Graphic file (type pdf)
 <use sos-driving-snaps0.pdf>
-Package pdftex.def Info: sos-driving-snaps0.pdf  used on input line 398.
-(pdftex.def)             Requested size: 120.99551pt x 91.79263pt.
+Package pdftex.def Info: sos-driving-snaps0.pdf  used on input line 380.
+(pdftex.def)             Requested size: 117.92133pt x 89.46024pt.
 File: sos-driving-snaps1.pdf Graphic file (type pdf)
 <use sos-driving-snaps1.pdf>
-Package pdftex.def Info: sos-driving-snaps1.pdf  used on input line 398.
-(pdftex.def)             Requested size: 120.99551pt x 92.61263pt.
+Package pdftex.def Info: sos-driving-snaps1.pdf  used on input line 380.
+(pdftex.def)             Requested size: 117.92133pt x 90.25793pt.
 File: sos-driving-snaps3.pdf Graphic file (type pdf)
 <use sos-driving-snaps3.pdf>
-Package pdftex.def Info: sos-driving-snaps3.pdf  used on input line 398.
-(pdftex.def)             Requested size: 120.99551pt x 92.5371pt.
+Package pdftex.def Info: sos-driving-snaps3.pdf  used on input line 380.
+(pdftex.def)             Requested size: 117.92133pt x 90.18433pt.
 File: sos-driving-snaps6.pdf Graphic file (type pdf)
 <use sos-driving-snaps6.pdf>
-Package pdftex.def Info: sos-driving-snaps6.pdf  used on input line 398.
-(pdftex.def)             Requested size: 120.99551pt x 92.97353pt.
+Package pdftex.def Info: sos-driving-snaps6.pdf  used on input line 380.
+(pdftex.def)             Requested size: 117.92133pt x 90.61163pt.
 File: tension-drive.pdf Graphic file (type pdf)
 <use tension-drive.pdf>
-Package pdftex.def Info: tension-drive.pdf  used on input line 398.
-(pdftex.def)             Requested size: 241.09457pt x 186.89166pt.
+Package pdftex.def Info: tension-drive.pdf  used on input line 380.
+(pdftex.def)             Requested size: 174.695pt x 135.41826pt.
 
-Overfull \vbox (178.0993pt too high) detected at line 398
+Overfull \vbox (19.09879pt too high) detected at line 380
  []
 
-[19
+[18
 
- <./tension-drive.pdf>] [20
+] [19
 
 ]
-<derks-setups.png, id=3167, 398.48875pt x 490.83376pt>
+<derks-setups.png, id=700, 398.48875pt x 490.83376pt>
 File: derks-setups.png Graphic file (type png)
 <use derks-setups.png>
-Package pdftex.def Info: derks-setups.png  used on input line 434.
-(pdftex.def)             Requested size: 103.70969pt x 127.74107pt.
-<derks.png, id=3168, 1139.25626pt x 819.06pt>
+Package pdftex.def Info: derks-setups.png  used on input line 417.
+(pdftex.def)             Requested size: 131.02458pt x 161.38396pt.
+<derks.png, id=701, 1139.25626pt x 819.06pt>
 File: derks.png Graphic file (type png)
 <use derks.png>
-Package pdftex.def Info: derks.png  used on input line 434.
-(pdftex.def)             Requested size: 155.5619pt x 111.8306pt.
-<derks-results.png, id=3169, 534.99875pt x 657.45625pt>
+Package pdftex.def Info: derks.png  used on input line 417.
+(pdftex.def)             Requested size: 196.53355pt x 141.288pt.
+<derks-results.png, id=702, 534.99875pt x 657.45625pt>
 File: derks-results.png Graphic file (type png)
 <use derks-results.png>
-Package pdftex.def Info: derks-results.png  used on input line 434.
-(pdftex.def)             Requested size: 155.56189pt x 191.16905pt.
- [21
+Package pdftex.def Info: derks-results.png  used on input line 417.
+(pdftex.def)             Requested size: 147.40016pt x 181.1371pt.
+ [20
 
  <./derks-setups.png> <./derks.png>]
 File: derks-setups.png Graphic file (type png)
 <use derks-setups.png>
-Package pdftex.def Info: derks-setups.png  used on input line 434.
-(pdftex.def)             Requested size: 103.70969pt x 127.74107pt.
+Package pdftex.def Info: derks-setups.png  used on input line 417.
+(pdftex.def)             Requested size: 131.02458pt x 161.38396pt.
 File: derks.png Graphic file (type png)
 <use derks.png>
-Package pdftex.def Info: derks.png  used on input line 434.
-(pdftex.def)             Requested size: 155.5619pt x 111.8306pt.
+Package pdftex.def Info: derks.png  used on input line 417.
+(pdftex.def)             Requested size: 196.53355pt x 141.288pt.
 File: derks-results.png Graphic file (type png)
 <use derks-results.png>
-Package pdftex.def Info: derks-results.png  used on input line 434.
-(pdftex.def)             Requested size: 155.56189pt x 191.16905pt.
-
-[22
+Package pdftex.def Info: derks-results.png  used on input line 417.
+(pdftex.def)             Requested size: 147.40016pt x 181.1371pt.
+ [21
 
  <./derks-results.png>]
-<cis-ising-f-000.pdf, id=3224, 406.37096pt x 191.01828pt>
+<cis-ising-f-000.pdf, id=758, 406.37096pt x 191.01828pt>
 File: cis-ising-f-000.pdf Graphic file (type pdf)
 <use cis-ising-f-000.pdf>
-Package pdftex.def Info: cis-ising-f-000.pdf  used on input line 463.
-(pdftex.def)             Requested size: 172.84773pt x 81.25018pt.
-<cis-ising-f-033.pdf, id=3225, 406.37096pt x 191.01828pt>
+Package pdftex.def Info: cis-ising-f-000.pdf  used on input line 434.
+(pdftex.def)             Requested size: 209.63535pt x 98.5431pt.
+<cis-ising-f-033.pdf, id=759, 406.37096pt x 191.01828pt>
 File: cis-ising-f-033.pdf Graphic file (type pdf)
 <use cis-ising-f-033.pdf>
-Package pdftex.def Info: cis-ising-f-033.pdf  used on input line 463.
-(pdftex.def)             Requested size: 172.84773pt x 81.25018pt.
-<cis-ising-f-066.pdf, id=3226, 406.37096pt x 191.01828pt>
+Package pdftex.def Info: cis-ising-f-033.pdf  used on input line 434.
+(pdftex.def)             Requested size: 209.63535pt x 98.5431pt.
+<cis-ising-f-066.pdf, id=760, 406.37096pt x 191.01828pt>
 File: cis-ising-f-066.pdf Graphic file (type pdf)
 <use cis-ising-f-066.pdf>
-Package pdftex.def Info: cis-ising-f-066.pdf  used on input line 463.
-(pdftex.def)             Requested size: 172.84773pt x 81.25018pt.
-<smith-mag.png, id=3227, 120.2091pt x 90.5784pt>
-File: smith-mag.png Graphic file (type png)
-<use smith-mag.png>
-Package pdftex.def Info: smith-mag.png  used on input line 463.
-(pdftex.def)             Requested size: 155.5619pt x 117.22116pt.
-<smith-rescale.png, id=3228, 105.7551pt x 76.1244pt>
-File: smith-rescale.png Graphic file (type png)
-<use smith-rescale.png>
-Package pdftex.def Info: smith-rescale.png  used on input line 463.
-(pdftex.def)             Requested size: 155.5619pt x 111.9805pt.
-<smith-width.png, id=3229, 98.769pt x 72.7518pt>
-File: smith-width.png Graphic file (type png)
-<use smith-width.png>
-Package pdftex.def Info: smith-width.png  used on input line 463.
-(pdftex.def)             Requested size: 140.00476pt x 103.1284pt.
+Package pdftex.def Info: cis-ising-f-066.pdf  used on input line 434.
+(pdftex.def)             Requested size: 209.63535pt x 98.5431pt.
 
-Overfull \vbox (6.93185pt too high) detected at line 463
- []
-
-[23
+[22
 
  <./cis-ising-f-000.pdf> <./cis-ising-f-033.pdf
 
@@ -1447,85 +1425,124 @@ multiple pdfs with page group included in a single page
 pdfTeX warning: /usr/bin/pdflatex (file ./cis-ising-f-066.pdf): PDF inclusion: 
 multiple pdfs with page group included in a single page
 >]
-File: cis-ising-f-000.pdf Graphic file (type pdf)
-<use cis-ising-f-000.pdf>
-Package pdftex.def Info: cis-ising-f-000.pdf  used on input line 463.
-(pdftex.def)             Requested size: 172.84773pt x 81.25018pt.
-File: cis-ising-f-033.pdf Graphic file (type pdf)
-<use cis-ising-f-033.pdf>
-Package pdftex.def Info: cis-ising-f-033.pdf  used on input line 463.
-(pdftex.def)             Requested size: 172.84773pt x 81.25018pt.
-File: cis-ising-f-066.pdf Graphic file (type pdf)
-<use cis-ising-f-066.pdf>
-Package pdftex.def Info: cis-ising-f-066.pdf  used on input line 463.
-(pdftex.def)             Requested size: 172.84773pt x 81.25018pt.
+<smith-mag.png, id=834, 120.2091pt x 90.5784pt>
 File: smith-mag.png Graphic file (type png)
 <use smith-mag.png>
-Package pdftex.def Info: smith-mag.png  used on input line 463.
-(pdftex.def)             Requested size: 155.5619pt x 117.22116pt.
-File: smith-rescale.png Graphic file (type png)
-<use smith-rescale.png>
-Package pdftex.def Info: smith-rescale.png  used on input line 463.
-(pdftex.def)             Requested size: 155.5619pt x 111.9805pt.
+Package pdftex.def Info: smith-mag.png  used on input line 453.
+(pdftex.def)             Requested size: 216.18623pt x 162.90414pt.
+<smith-width.png, id=835, 98.769pt x 72.7518pt>
 File: smith-width.png Graphic file (type png)
 <use smith-width.png>
-Package pdftex.def Info: smith-width.png  used on input line 463.
-(pdftex.def)             Requested size: 140.00476pt x 103.1284pt.
+Package pdftex.def Info: smith-width.png  used on input line 453.
+(pdftex.def)             Requested size: 216.18623pt x 159.24403pt.
+<smith-rescale.png, id=836, 105.7551pt x 76.1244pt>
+File: smith-rescale.png Graphic file (type png)
+<use smith-rescale.png>
+Package pdftex.def Info: smith-rescale.png  used on input line 453.
+(pdftex.def)             Requested size: 218.3721pt x 157.19434pt.
+File: smith-rescale.png Graphic file (type png)
+<use smith-rescale.png>
+Package pdftex.def Info: smith-rescale.png  used on input line 453.
+(pdftex.def)             Requested size: 218.3721pt x 157.19434pt.
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <17.28> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 453.
+ [23
 
-Overfull \vbox (6.93185pt too high) detected at line 463
- []
+ <./smith-mag.png> <./smith-width.png>]
+File: smith-mag.png Graphic file (type png)
+<use smith-mag.png>
+Package pdftex.def Info: smith-mag.png  used on input line 453.
+(pdftex.def)             Requested size: 216.18623pt x 162.90414pt.
+File: smith-width.png Graphic file (type png)
+<use smith-width.png>
+Package pdftex.def Info: smith-width.png  used on input line 453.
+(pdftex.def)             Requested size: 216.18623pt x 159.24403pt.
+File: smith-rescale.png Graphic file (type png)
+<use smith-rescale.png>
+Package pdftex.def Info: smith-rescale.png  used on input line 453.
+(pdftex.def)             Requested size: 218.3721pt x 157.19434pt.
+File: smith-rescale.png Graphic file (type png)
+<use smith-rescale.png>
+Package pdftex.def Info: smith-rescale.png  used on input line 453.
+(pdftex.def)             Requested size: 218.3721pt x 157.19434pt.
+ [24
 
-[24
+ <./smith-rescale.png>]
+File: smith-mag.png Graphic file (type png)
+<use smith-mag.png>
+Package pdftex.def Info: smith-mag.png  used on input line 453.
+(pdftex.def)             Requested size: 216.18623pt x 162.90414pt.
+File: smith-width.png Graphic file (type png)
+<use smith-width.png>
+Package pdftex.def Info: smith-width.png  used on input line 453.
+(pdftex.def)             Requested size: 216.18623pt x 159.24403pt.
+File: smith-rescale.png Graphic file (type png)
+<use smith-rescale.png>
+Package pdftex.def Info: smith-rescale.png  used on input line 453.
+(pdftex.def)             Requested size: 218.3721pt x 157.19434pt.
+File: smith-rescale.png Graphic file (type png)
+<use smith-rescale.png>
+Package pdftex.def Info: smith-rescale.png  used on input line 453.
+(pdftex.def)             Requested size: 218.3721pt x 157.19434pt.
 
- <./smith-mag.png> <./smith-rescale.png> <./smith-width.png>]
-<raph-1k.png, id=3331, 72.27pt x 72.27pt>
-File: raph-1k.png Graphic file (type png)
-<use raph-1k.png>
-Package pdftex.def Info: raph-1k.png  used on input line 475.
-(pdftex.def)             Requested size: 103.70969pt x 103.7147pt.
-<raph-4k.png, id=3332, 48.18pt x 66.0066pt>
-File: raph-4k.png Graphic file (type png)
-<use raph-4k.png>
-Package pdftex.def Info: raph-4k.png  used on input line 475.
-(pdftex.def)             Requested size: 103.70969pt x 142.08264pt.
-<raph-10k.png, id=3333, 48.18pt x 72.27pt>
-File: raph-10k.png Graphic file (type png)
-<use raph-10k.png>
-Package pdftex.def Info: raph-10k.png  used on input line 475.
-(pdftex.def)             Requested size: 103.70969pt x 155.5649pt.
- [25
+[25
 
- <./raph-1k.png> <./raph-4k.png> <./raph-10k.png>]
-<driven.pdf, id=3365, 462.52798pt x 346.89601pt>
-File: driven.pdf Graphic file (type pdf)
-<use driven.pdf>
-Package pdftex.def Info: driven.pdf  used on input line 487.
-(pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
+]
+<Phantom_38,0cmnew_obj_x20OlyFLN_fps_1000_10K_bkup_3,2mum--00.png, id=920, 616.
+704pt x 48.18pt>
+File: Phantom_38,0cmnew_obj_x20OlyFLN_fps_1000_10K_bkup_3,2mum--00.png Graphic 
+file (type png)
+<use Phantom_38,0cmnew_obj_x20OlyFLN_fps_1000_10K_bkup_3,2mum--00.png>
+Package pdftex.def Info: Phantom_38,0cmnew_obj_x20OlyFLN_fps_1000_10K_bkup_3,2m
+um--00.png  used on input line 467.
+(pdftex.def)             Requested size: 436.7442pt x 34.12126pt.
+<02_K_70x60_70,5cm.png, id=921, 314.67563pt x 271.0125pt>
+File: 02_K_70x60_70,5cm.png Graphic file (type png)
+<use 02_K_70x60_70,5cm.png>
+Package pdftex.def Info: 02_K_70x60_70,5cm.png  used on input line 467.
+(pdftex.def)             Requested size: 131.02458pt x 112.84439pt.
+<2_K_70x60_69,4cm.png, id=922, 313.67188pt x 268.50313pt>
+File: 2_K_70x60_69,4cm.png Graphic file (type png)
+<use 2_K_70x60_69,4cm.png>
+Package pdftex.def Info: 2_K_70x60_69,4cm.png  used on input line 467.
+(pdftex.def)             Requested size: 131.02458pt x 112.16008pt.
+<32_K_70x60_71,0cm.png, id=923, 313.67188pt x 270.00874pt>
+File: 32_K_70x60_71,0cm.png Graphic file (type png)
+<use 32_K_70x60_71,0cm.png>
+Package pdftex.def Info: 32_K_70x60_71,0cm.png  used on input line 467.
+(pdftex.def)             Requested size: 131.02458pt x 112.789pt.
  [26
 
- <./driven.pdf>] [27
+ <./Phantom_38,0cmnew_obj_x20OlyFLN_fps_1000_10K_bkup_3,2mum--00.png> <./02_K_7
+0x60_70,5cm.png> <./2_K_70x60_69,4cm.png> <./32_K_70x60_71,0cm.png>]
+<driven.pdf, id=955, 462.52798pt x 346.89601pt>
+File: driven.pdf Graphic file (type pdf)
+<use driven.pdf>
+Package pdftex.def Info: driven.pdf  used on input line 479.
+(pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
 
-] [28
+[27
+
+ <./driven.pdf>] [28
 
 ] [29
 
+] [30
+
 ]
-<shear-c.pdf, id=3487, 462.52798pt x 346.89601pt>
+<shear-c.pdf, id=1078, 462.52798pt x 346.89601pt>
 File: shear-c.pdf Graphic file (type pdf)
 <use shear-c.pdf>
-Package pdftex.def Info: shear-c.pdf  used on input line 595.
-(pdftex.def)             Requested size: 155.5619pt x 116.67271pt.
-
-[30
+Package pdftex.def Info: shear-c.pdf  used on input line 588.
+(pdftex.def)             Requested size: 196.53355pt x 147.39973pt.
+ [31
 
  <./shear-c.pdf>]
 File: shear-c.pdf Graphic file (type pdf)
 <use shear-c.pdf>
-Package pdftex.def Info: shear-c.pdf  used on input line 595.
-(pdftex.def)             Requested size: 155.5619pt x 116.67271pt.
- [31
-
-] [32
+Package pdftex.def Info: shear-c.pdf  used on input line 588.
+(pdftex.def)             Requested size: 196.53355pt x 147.39973pt.
+ [32
 
 ] [33
 
@@ -1543,22 +1560,23 @@ Package pdftex.def Info: shear-c.pdf  used on input line 595.
 \tf@snm=\write8
 \openout8 = `main.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 666.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 666.
- (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 666.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 666.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 636.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 636.
+
+(./main.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 636.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 636.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 75D6FFE98E28B00199BD21B5A10CE2ED;298.
+(rerunfilecheck)             Checksum: 0C0408A8AAF20CC27FDF80320DAB38B3;315.
  ) 
 Here is how much of TeX's memory you used:
- 24414 strings out of 492609
- 468005 string characters out of 6131462
- 575767 words of memory out of 5000000
- 27665 multiletter control sequences out of 15000+600000
- 41286 words of font info for 89 fonts, out of 8000000 for 9000
+ 24423 strings out of 492609
+ 468469 string characters out of 6131462
+ 574773 words of memory out of 5000000
+ 27673 multiletter control sequences out of 15000+600000
+ 43525 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,22n,63p,980b,1061s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,20n,63p,980b,1061s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dist/
@@ -1585,14 +1603,13 @@ amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvet
 ic/uhvro8a.pfb>
-Output written on main.pdf (35 pages, 7888790 bytes).
+Output written on main.pdf (35 pages, 7653995 bytes).
 PDF statistics:
- 3786 PDF objects out of 4296 (max. 8388607)
- 2387 compressed objects within 24 object streams
+ 1346 PDF objects out of 1440 (max. 8388607)
+ 1170 compressed objects within 12 object streams
  76 named destinations out of 1000 (max. 500000)
- 320 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 325 words of extra memory for PDF output out of 10000 (max. 10000000)
 

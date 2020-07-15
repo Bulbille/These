@@ -1,5 +1,5 @@
 % UTF-8 encoding
-\documentclass[9pt, dvipsnames]{beamer} %
+\documentclass[9pt, dvipsnames,aspectratio=169]{beamer} %
 % Beamer 
 \usepackage[frenchb]{babel}
 \usetheme[secheader]{Boadilla} % Beamer ： Boadilla
@@ -77,17 +77,15 @@
 
 %%%%%%%%%%%%%%% Page de garde
 \begin{frame}
+	\begin{columns}
+	\column{0.1\linewidth}
+    \includegraphics[width=\linewidth]{anr.png}\\ \vspace{0.5cm}
+    \includegraphics[width=\linewidth]{loma.png}\\  \vspace{0.5cm}      
+    \includegraphics[width=\linewidth]{u-bordeaux.png} \vspace{0.5cm}    
+    \includegraphics[width=\linewidth]{cnrs.png} \vspace{0.5cm}
+    \includegraphics[width=\linewidth]{logo_ENS.jpg}
+    \column{0.85\linewidth}
     \centering
-    \includegraphics[height=20pt]{anr.png}
-    \hfill 
-    \includegraphics[height=20pt]{loma.png}      
-    \hfill
-    \includegraphics[height=20pt]{u-bordeaux.png}           
-    \hfill
-    \includegraphics[height=30pt]{cnrs.png}
-    \hfill
-    \includegraphics[height=20pt]{logo_ENS.jpg}        
-    \vfill
     {École doctorale 209 : Sciences physiques et de l'ingénieur}\\
     \vfill
     { THESIS}\\
@@ -99,12 +97,12 @@
     {\scriptsize on July 16th 2020} \\
     \vfill
     {\huge \color[rgb]{0,0,1} \bfseries{Confinement and driving effects on continuous and discrete model interfaces}} \\
-    \vfill
+    \vspace{2cm}
     \raggedright
     {\bf PhD director :} David S. Dean, LOMA \\
     {\bf PhD co-director :} Peter C.W. Holdsworth, ENS Lyon \\
     \textbf{\scriptsize Université de Bordeaux, Laboratoire Onde Matière d'Aquitaine, 351 Cours de la Libération, Talence, France}
-
+	\end{columns}
 \end{frame}
 
 \begin{frame}
@@ -127,29 +125,16 @@
 	    
 	    \onslide<2>
 	    \centering
-	   \includegraphics[width=\linewidth]{nematic-smectic.jpg} \\
-	   {\it Schematics of liquid crystals [Chem.libretext.org] }\\[1cm]
+	   \includegraphics[width=0.8\linewidth]{nematic-smectic.jpg} \\
+	   {\it Schematics of liquid crystals [Chem.libretext.org] }\\
 	   Order parameter : mean liquid crystal's orientation (non-conserved)
    \end{overprint}
 \end{frame}
-%
-%\subsection{Ising model}
-%\begin{frame}
-%    \frametitle{Ising model}
-%    Discrete lattice model, each site has value $\sigma_i = \pm1$ \\
-%    \centering
-%    \includegraphics[scale=0.7]{ising.pdf} \\
-%    {\it 2D Monte Carlo simulation at $T=0.8T_C$ } during coarsening\\[1cm]
-%    Order parameter : mean magnetization $M = \frac{1}{N} \sum_i \sigma_i$ \\
-%    Conserved (canonical) or non-conserved (grand-canonical) \\
-%    Mapping to liquid/gaz, gaz adsorption, binary fluids
-%\end{frame}
-
 
 \begin{frame}
-    \frametitle{Statistical field theory}
-    Continuous field $\phi(\bx,t)$  : density, magnetization, orientation... {\footnotesize [Hohenberg et Halperin 1977 (18),Bray 1994 (22)]} \\
-    Total order parameter : $\Phi(t) = \int d\bx \phi(\bx,t)$ 
+    \frametitle{Statistical field theory [Hohenberg et Halperin 1977 (18),Bray 1994 (22)]}
+    Continuous field $\phi(\bx,t)$  : density, magnetization, orientation...  \\
+
     \begin{block}{Brownian field dynamics}
 		\begin{align}
     		\frac{\partial \phi(\bx)}{\partial t} = - L \frac{\delta H}{\delta \phi(\bx)} + \eta(\bx,t)  &~,~  < \eta(\bx,t)\eta(\bx',t)> =\delta(t-t')\Gamma(\bx,{\bf x'}) \\
@@ -158,8 +143,8 @@
     \end{block}
     \begin{columns}
     \column{0.45\linewidth}
-    \begin{block}{Grand Canonical ensemble : \\ {\bf model A}} 
-         $\Phi(t) \neq cte$ \\
+    \begin{block}{Grand Canonical ensemble :  {\bf model A}} 
+         $ \int d\bx \phi(\bx,t) \neq cte$ \\
         $L(\bx,\bx')=\textcolor{blue}{\alpha}\delta(\bx-\bx')$,
 		\begin{equation}
     		\frac{\partial \phi(\bx)}{\partial t}= -\textcolor{blue}{\alpha} \frac{\delta H}{\delta \phi(\bx)} + \eta(\bx,t) 
@@ -169,8 +154,8 @@
 
     \column{0.45\linewidth}
 %    \vspace{-0.45cm}
-    \begin{block}{Canonical ensemble : \\ {\bf model B}}
-        $\Phi(t) = cte$ \\
+    \begin{block}{Canonical ensemble :  {\bf model B}}
+         $ \int d\bx \phi(\bx,t) = cte$ \\
         $L(\bx-\bx')= -\textcolor{blue}{D\nabla^2} \delta(\bx-{\bf x'})$
 		\begin{equation}
     		\frac{\partial \phi(\bx)}{\partial t}= \textcolor{blue}{\nabla}\cdot[ \textcolor{blue}{D\nabla } \frac{\delta H}{\delta \phi(\bx)} + {\boldsymbol\eta}(\bx,t)]
@@ -194,19 +179,13 @@
        	\begin{block}{$\phi^4$ potential}
 			\begin{columns}
 			\column{0.4\linewidth}
-			\begin{overprint}
-			\onslide<1>
        		\begin{align}
-       			V(\phi) = \frac{1}{2} (T-T_C) \phi^2 + \frac{\lambda}{4!} \phi^4
-       		\end{align}
-       		\onslide<2>
-       		\begin{align}
-       			V(\phi) = \frac{1}{2} (T-T_C) \phi^2 &+ \frac{\lambda}{4!} \phi^4 \nn 
-       			&{\color{gray} \bf + B \phi}
-       		\end{align}       		
-       		\end{overprint}
-       		
-			\column{0.52\linewidth}       		
+       			V(\phi) = \frac{1}{2} (T-T_C) \phi^2 + \frac{\lambda}{4!} \phi^4       			{\color{gray} \bf + B \phi}
+       		\end{align}     
+       		$T-T_C \less 0 $ : two stable phases $\phi_1$ and $\phi_2$ \\
+       		$T-T_C \greater 0$ : on stable phase $\phi = 0$ \\
+       		External uniform field : metastable phases
+			\column{0.35\linewidth}       		
        	\centering
         \includegraphics[width=\linewidth]{double-puit-en-fonction-temp.pdf}
         \end{columns}
@@ -217,7 +196,7 @@
 	\frametitle{Interface between two coexisting phases}
 	\begin{block}{Mean-field equilibrium system (dynamic independent)}
 		\begin{align}
-			\cancel{\frac{\partial \phi(\bx)}{\partial t}} = - L \frac{\delta H}{\delta \phi(\bx)} + \cancel{\eta(\bx,t)}  \implies  \frac{\delta H}{\delta \phi(\bx)} = 0 
+			p(\phi_{MF}) = \exp(-\beta H[\phi_{MF}]) \greater p(\phi_{nMF}) \implies \frac{\delta H}{\delta \phi(\bx)} = 0 
 		\end{align}
 	\end{block}
 	\begin{columns}
@@ -233,7 +212,7 @@
             \phi_K(z) &= f(z) 
         \end{align}
     \end{block}
-    \column{0.45\linewidth}	
+    \column{0.4\linewidth}	
     	\centering
 		\includegraphics[width=\linewidth]{interface-profil.pdf}
 		Interface schematics
@@ -274,7 +253,7 @@
         \end{align}
     \end{block}
     \begin{columns}
-    \column{0.45\linewidth}
+    \column{0.5\linewidth}
     \begin{block}{Cahn-Hilliard estimate \newline [Cahn et Hilliard 58 (25)]}
         \begin{equation}
             \sigma= \int dz\ {\kappa}\left(\frac{d\phi_K(z)}{dz}\right)^2 
@@ -287,9 +266,9 @@
     	\end{itemize}
     \end{block}
     \column{0.45\linewidth}
-    \begin{block}{    Surface tension with respect to interface width $\xi_\perp$}
-    \includegraphics[width=\linewidth]{tension-superficielle.pdf} \\    
-    \end{block}
+    \centering
+    \includegraphics[width=0.8\linewidth]{tension-superficielle.pdf} \\    
+	\small Surface tension with respect to interface width $\xi_\perp$
     \end{columns}
 \end{frame}
 
@@ -299,14 +278,15 @@
     \frametitle{Confinement forces [chapter 3]}
     \begin{block}{Excess free energy and Casimir force [Gambassi 09 (3)]}
     \begin{columns}
-    \column{0.45\linewidth}
+    \column{0.4\linewidth}
 		\begin{align}
 		F(t,h,L) = L'^2 \left( L f_{bulk} + \beta^{-1} f_{ex} \right)
 		\end{align}
-    \column{0.45\linewidth}    
+    \column{0.3\linewidth}
 		\begin{align}
 		 f_{casimir} = - \beta^{-1} \frac{\partial  f_{ex}}{\partial L}
 		\end{align}
+	\column{0.25\linewidth}		
     \end{columns}
     \end{block}
     \begin{block}{1D Confined elastic line  $0 \less h(\br,t) \less L$}
@@ -315,7 +295,7 @@
 	    \begin{align}
 		   f = \frac{T^2\pi^2}{2\sigma L^2} 
 	    \end{align}
-	    Finite-size effects surface tension [Privman 1988 (16)] 
+	    Finite-size effects surface tension \\ ~ [Privman 1988 (16)] 
 	    \begin{align}
 	    	\sigma(L) \simeq \sigma_{bulk}+\frac{Ta}{L}
     	\end{align}
@@ -323,7 +303,8 @@
 	        f_c= \frac{T\pi^2}{2 a L} 
 	    \end{align}
 	    \column{0.45\linewidth}
-	    \includegraphics[width=\linewidth]{interface-confined.pdf}
+	    \centering
+	    \includegraphics[width=0.8\linewidth]{interface-confined.pdf}\\
 	    {\footnotesize Confined interface for $L_Y=30$ schematics}
 	    \end{columns}
 	\end{block}
@@ -337,14 +318,13 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Driving at the interface}
+    \frametitle{Driving at the interface : wind generated waves}
     \centering
-    \includegraphics[width=0.8\linewidth]{wave-0.jpg}  \\
+    \includegraphics[width=0.55\linewidth]{wave-0.jpg}  \\
     \vspace{0.5cm}
-    \includegraphics[width=0.8\linewidth]{wave-1.jpg} \\
+    \includegraphics[width=0.55\linewidth]{wave-1.jpg} \\
     \vspace{0.5cm}    
-    \includegraphics[width=0.8\linewidth]{wave-2.jpg} \\ 
-	Home-made wind generated waves (from a hair dryer)
+    \includegraphics[width=0.55\linewidth]{wave-2.jpg} 
 \end{frame}
 
 \begin{frame}
@@ -380,23 +360,24 @@
 
 \begin{frame}
 	\frametitle{Driving at the interface}
-		Driving : $\Delta E_{d} = \Delta E_{eq} \pm v$ in Kawasaki dynamics \\
-		\begin{overprint}
-		\onslide<1>
+		Driving : $\Delta H_{d} = \Delta H_{eq} \pm v$ in Kawasaki dynamics \\
+		\vspace{0.3cm}
+		\begin{columns}
+		\column{0.6\linewidth}
 		\begin{figure}
-			\includegraphics[width=0.35\linewidth]{sos-driving-snaps0.pdf}		
-			\includegraphics[width=0.35\linewidth]{sos-driving-snaps1.pdf}		
-			\includegraphics[width=0.35\linewidth]{sos-driving-snaps3.pdf}		
-			\includegraphics[width=0.35\linewidth]{sos-driving-snaps6.pdf}										\end{figure}				
+			\includegraphics[width=0.45\linewidth]{sos-driving-snaps0.pdf}		
+			\includegraphics[width=0.45\linewidth]{sos-driving-snaps1.pdf}	\\
+			\includegraphics[width=0.45\linewidth]{sos-driving-snaps3.pdf}		
+			\includegraphics[width=0.45\linewidth]{sos-driving-snaps6.pdf}										\end{figure}				
 			\centering
 			$\beta = 1, L_Y = 200, \frac{1}{L'}\sum h_i = 4.51$
-		\onslide<2>
+		\column{0.4\linewidth}
+		\pause
 		\centering
-	    \includegraphics[scale=0.6]{tension-drive.pdf} \\
+	    \includegraphics[width=\linewidth]{tension-drive.pdf} \\
 	    {\small Monte Carlo driving of SOS interface at $\beta=1$ and $\frac{1}{L'}\sum h_i = 4.51$ }
-	    \end{overprint}
+		\end{columns}
 \end{frame}
-
 
 \begin{frame}
 	\centering
@@ -404,29 +385,31 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{PMMA polymers in polystyrene solvent under shear \newline [Derks et al. 2006]}
+    \frametitle{PMMA polymers in polystyrene solvent under shear \newline [Derks et al. 2004+2006]}
     \begin{overprint}
     \onslide<1> 
+    	\centering
 	    \begin{columns}
 	    \column{0.3\linewidth}
-	    \includegraphics[width=\linewidth]{derks-setups.png}
-	    Experimental setup [Derks et al. 2004]
+	    \includegraphics[width=\linewidth]{derks-setups.png} \\
+    	\centering	    
+	    Experimental setup 
 	    \column{0.45\linewidth}
-	    \includegraphics[width=\linewidth]{derks.png} 
-	    Interface snapshots under shear [Derks at al. 2006]
+	    \includegraphics[width=\linewidth]{derks.png}  \\
+    	\centering	    
+	    Interface snapshots under shear 
 	    \end{columns}
 	\onslide<2>
 	    \begin{columns}
+	    \column{0.45\linewidth}
+	    \centering	    
+	    \includegraphics[width=0.75\linewidth]{derks-results.png} \\
+		{\footnotesize  Effective interfacial tension and correlation length}
 	    \column{0.5\linewidth}
-	    \includegraphics[width=0.9\linewidth]{derks-results.png}
-	    \centering
-		{\footnotesize  Effective interfacial tension and correlation length \\ along the interface}
-	    \column{0.4\linewidth}
 	    \begin{block}{Phenomenolocial model}
 	    Modes slower than shear rate  no longer contribute to the entropy of the interface
 			\begin{align}
-			&\sigma_{eff}(\dot{\gamma}) = \nn
-			&\sigma + \frac{3 k_B T}{4 \pi} \frac{\dot{\gamma} \tau_{cap}}{L^2_{cap}} \sqrt{(\dot{\gamma}\tau_{cap})^2-1}
+			\sigma_{eff}(\dot{\gamma}) = \sigma + \frac{3 k_B T}{4 \pi} \frac{\dot{\gamma} \tau_{cap}}{L^2_{cap}} \sqrt{(\dot{\gamma}\tau_{cap})^2-1}
 			\end{align}
 		\end{block}
 	    \end{columns}	
@@ -434,31 +417,38 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{2D sheared or driven Ising model [T.H.R. Smith 2010 (71)]}
-    \begin{overprint} 
-    \onslide<1>
+    \frametitle{2D sheared Ising model}
     	\begin{figure}
-		\begin{minipage}[t]{0.5\linewidth}
+		\begin{minipage}[t]{0.48\linewidth}
 		\includegraphics[width=\linewidth]{cis-ising-f-000.pdf}
 		\end{minipage}%
-		\begin{minipage}[t]{0.5\linewidth}
+		\begin{minipage}[t]{0.48\linewidth}
 		\includegraphics[width=\linewidth]{cis-ising-f-033.pdf}
 		\end{minipage}
-		\begin{minipage}[c]{0.5\linewidth}
+		\begin{minipage}[c]{0.48\linewidth}
 		\includegraphics[width=\linewidth]{cis-ising-f-066.pdf} 
 		\end{minipage}
     \end{figure}  
     \centering
-	Snapshots of 2D Ising driven systems for $T=0.9 T_C$
+	\small Snapshots of 2D Ising driven systems for $T=0.9 T_C$
+\end{frame}
+\begin{frame}
+    \frametitle{2D driven Ising model [T.H.R. Smith 2010 (71)]}
+    \begin{overprint}
+	\onslide<1>
+		\centering
+		\includegraphics[width=0.495\linewidth]{smith-mag.png}
+		\includegraphics[width=0.495\linewidth]{smith-width.png} 	\\	
+	    Magnetisation profiles and interfacial width with respect to shear for different $L_Y$ 
 	\onslide<2>
-	\begin{columns}
-	\column{0.45\linewidth}
-		\includegraphics[width=\linewidth]{smith-mag.png} \\
-		\includegraphics[width=\linewidth]{smith-rescale.png}
-	\column{0.45\linewidth}
-		\includegraphics[width=0.9\linewidth]{smith-width.png}
-	    Magnetisation profiles, rescaled magnetisation profiles, interfacial width with respect to shear for different $L_Y$
-	\end{columns}
+	    \centering
+		\includegraphics[width=0.5\linewidth]{smith-rescale.png} \\	    
+		{\small Rescaled magnetisation profiles} \\
+	\onslide<3>
+	    \centering
+		\includegraphics[width=0.5\linewidth]{smith-rescale.png} \\	    
+		{\small Rescaled magnetisation profiles} \\
+		{\Huge \bf Driving Ising systems exhibit equilibrium  effective properties !	    }		
     \end{overprint}       
 \end{frame}
 
@@ -467,9 +457,11 @@
     \frametitle{Binary mixture under laser radiation pressure [Delville et al. 08 (J. Opt. A)]}
     \centering
     \begin{figure}
-    	\includegraphics[width=0.3\linewidth]{raph-1k.png}
-    	\includegraphics[width=0.3\linewidth]{raph-4k.png}
-    	\includegraphics[width=0.3\linewidth]{raph-10k.png}    	    	
+    	\includegraphics[width=\linewidth]{Phantom_38,0cmnew_obj_x20OlyFLN_fps_1000_10K_bkup_3,2mum--00.png} \\    
+    	\includegraphics[width=0.3\linewidth]{02_K_70x60_70,5cm.png}
+    	\includegraphics[width=0.3\linewidth]{2_K_70x60_69,4cm.png}
+    	\includegraphics[width=0.3\linewidth]{32_K_70x60_71,0cm.png}  \\
+    	{\footnotesize Bublles sizes $\simeq 20\mu m$, from R. Saiseau}  	    	
     \end{figure}
     {\small Quaternary liquid mixture made of toluene, sodium dodecyl sulfate (SDS), n-butanol and water gives 2 separate micellar phases } \\
 \end{frame}
@@ -487,7 +479,7 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{The effect of driving on model C interfaces [Dean, Gersberg,Holdsworth 2020 (17)]}
+    \frametitle{The effect of driving on model C interfaces \newline [Dean, Gersberg,Holdsworth 2020 (17)]}
     $\textcolor{blue}{\psi}$ : colloid field under model B dynamics \\
     $\textcolor{OliveGreen}{\phi}$ : passive solvent under model A dynamics \\    
 
@@ -517,7 +509,7 @@
 	   \underbrace{\frac{\partial \textcolor{blue}{\psi}(\bx,t)}{\partial t}}_{\text{evolution}} -
 	    \underbrace{\textcolor{Bittersweet}{\lambda} D\nabla^2\int_{-\infty}^t dt'
 	\exp(-\alpha\textcolor{Bittersweet}{\lambda}(t-t')) \frac{\partial \textcolor{blue}{\psi}(\bx,t')}{\partial t}}_{\text{coupling term}}
-	+ \underbrace{\textcolor{Red}{\bf v}\cdot\nabla\textcolor{blue}{\psi}(\bx, t)}_{\text{advection}} =  \nn
+	+ \underbrace{\textcolor{Red}{\bf v}\cdot\nabla\textcolor{blue}{\psi}(\bx, t)}_{\text{advection}} =  
 	\underbrace{D\nabla^2  \mu(\bx,t')}_{\text{model B}} +  \underbrace{\zeta(\bx,t)}_{\text{thermal noise}} 
 	\end{align}	
 	where 
@@ -533,7 +525,8 @@
  
 \begin{frame}
     \frametitle{Model C interface dynamics}
-	    Interface approximation $\textcolor{blue}{\psi}(\bx,t)=f(z-h(\br,t))$ using method of Bray et al. 2001 (9,29)] at first order in $h$
+	    Interface approximation $\textcolor{blue}{\psi}(\bx,t)=f(z-h(\br,t))$ using Bray et al. 2001 (9,29)] 's method
+	    
 	\begin{align}
 	    \textcolor{BlueViolet}{\Delta \psi}^2 \int d{\bf r} G(0,{\bf r}-{\bf r}') [\frac{\partial h({\bf r},t)}{\partial t}    
 	    +\textcolor{Red}{\bf v}\cdot\nabla h({\bf r},t)] & =  \textcolor{VioletRed}{\sigma}[\nabla^2 h({\bf r},t) -\textcolor{BurntOrange}{m}^2 h({\bf r},t)] + \xi({\bf r},t) \nn
@@ -594,62 +587,40 @@
 
 \end{frame} 
 
-\section{Conclusion}
+\section{Conclusion and Perspectives}
 
 \begin{frame}
-    \frametitle{Presentation's conclusion}
-    \begin{block}{Driven Solid-On-Solid model}
-    \begin{itemize}
-    	\item Explanation of the model 
-        \item Driven does increase interface width, as in wind generated waves
-    \end{itemize}
-    \end{block}    
-    \begin{block}{Driven Model C}
+	\frametitle{Conclusion}
+	\begin{block}{{\bf Chapter 3 :} Equilibrium Interface models and their finite size effects}
+	\begin{itemize}
+		\item General method to compute free energy and probability distribution functions of continuous gaussian interfaces with path integral method
+		\item Casimir-type effect have an interesting manifestation in interface physics		
+		\item Generalization the Lopes Cardozo-Jacquin-Holdsworth method to compute free energy in numerical Monte Carlo lattice systems for any type of external potentials, useful for Kawasaki dynamics
+		\item Exact diagonalization of the finite Solid-On-Solid transfer matrix
+	\end{itemize}
+	\end{block}
+	\begin{block}{{\bf Chapter 4 :} Beyond Solid-On-Solid : the Particles-Over-Particles model}
+	\begin{itemize}
+		\item New model generated from SOS with entropic term
+		\item Multi-particles formulation  allow for particles coupling with different temperatures or thermodynamical ensembles (model C) and different hydrodynamical flows (which gaves us the idea for model C' paper)
+		\item Numerical Monte Carlo issues : corner case of Metropolis algorithm
+	\end{itemize}
+	\end{block}	
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Conclusion}
+    \begin{block}{{\bf Chapter 5 :} Driven interfaces}
     \begin{itemize}
     	\item Similarities between shearing and driving
     	\item Steady-state out-of-equilibrium driving needs a coupling between two fields due to Galilean invariance (model C)
         \item Increase of the effective surface tension in the direction of driving and also an increase in the correlation length of the height fluctuations with respect to a non-driven equilibrium interface
         \item Uniform driving leads to effective equilibrium statistics
+        \item Driving at the interface in SOS model does increase interface width, as in wind generated waves        
     \end{itemize}
     \end{block}
 \end{frame} 
-
-\begin{frame}
-	\frametitle{Thesis' conclusion}
-	\begin{block}{Chapter 3 : Equilibrium Interface models and their finite size effects}
-	\begin{itemize}
-		\item General method to compute free energy and probability distribution functions of continuous gaussian interfaces with path integral method
-		\item Generalization the Lopes Cardozo-Jacquin-Holdsworth method to compute free energy in numerical Monte Carlo lattice systems for any type of external potentials, useful for Kawasaki dynamics
-		\item Exact diagonalization of the finite Solid-On-Solid transfer matrix
-	\end{itemize}
-	\end{block}
-	\begin{block}{Chapter 4 : Beyond Solid-On-Solid : the Particles-Over-Particles model}
-	\begin{itemize}
-		\item New model generated from SOS with entropic term
-		\item Multi-particles formulation 
-		\item Numerical Monte Carlo issues : corner case of Metropolis algorithm
-		\item Actually is the model that gaves us the computational idea for model C (the paper)
-	\end{itemize}
-	\end{block}	
-	\begin{block}{Chapter 5 : Driven interfaces}
-	\begin{itemize}
-		\item Presentation's conclusion
-	\end{itemize}	
-	\end{block}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Overall conclusion}
-	\begin{itemize}
-		\item Relationship between continuous gaussian and discrete solid-on-solid models (Eq. 3.84 and 3.184), with surface tension computations
-		\item Casimir-type effect have an interesting manifestation in interface physics, 
-		\item Interface models have no bulk free energy, only excess free energy due to confinement 
-		\item Casimir-like effect is seen in interface models in the critical regime $\sigma \to 0$
-		\item POP systems allow for particles coupling with different temperatures or thermodynamical ensembles (model C) and different hydrodynamical flows
-		\item SFT explanation as to why driving increases surface tension and correlation length along the interface
-		\item Driven steady-states do have equilibrium properties
-	\end{itemize}
-\end{frame}
 
 \begin{frame}
     \frametitle{Perspectives}
@@ -661,7 +632,6 @@
     	\item Do out-of-equilibrium confined interfaces have different physics than equilibrium confined ones ?
     \end{itemize}
 \end{frame}
-
 
 \end{document}
 
